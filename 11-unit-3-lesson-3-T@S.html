@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ ३ – सञ्चार (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #1a1a2e;
+            color: #e8e4de;
+            padding: 16px 12px 30px;
+            line-height: 1.9;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #f5f0ea;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.5);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #b8a99a;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #c4450c;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1f7a4a;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.05rem;
+        }
+
+        .credit-bar .email {
+            color: #a0522d;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #e8dfd4;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #c9bdb0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #c4450c;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #1a3a5c;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 3px 0 3px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #c4450c;
+            border-bottom-color: #c4450c;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #c4450c;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.82rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #c4450c;
+            margin: 42px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 4px solid #d9cec0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+        }
+
+        .section-head i {
+            font-size: 1.4rem;
+            color: #c4450c;
+        }
+
+        .section-head .mark-badge {
+            background: #0b2b4a;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+        }
+
+        .section-head .mark-badge.gold {
+            background: #b45309;
+        }
+
+        .section-head .mark-badge.green {
+            background: #1f7a4a;
+        }
+
+        .section-head .mark-badge.purple {
+            background: #6b3fa0;
+        }
+
+        .section-head .mark-badge.pink {
+            background: #a03a5a;
+        }
+
+        .sub-head {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1a5a7a;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #c4450c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #c4450c;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #1a5a7a;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #c4450c;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            font-weight: 400;
+            font-size: 1.02rem;
+        }
+
+        .content-box.blue {
+            border-left-color: #2a6b8a;
+            background: #f4faff;
+        }
+
+        .content-box.green {
+            border-left-color: #1f7a4a;
+            background: #f4fcf8;
+        }
+
+        .content-box.purple {
+            border-left-color: #6b3fa0;
+            background: #f8f4ff;
+        }
+
+        .content-box.gold {
+            border-left-color: #b45309;
+            background: #fefaf5;
+        }
+
+        .content-box.orange {
+            border-left-color: #d97706;
+            background: #fef8ef;
+        }
+
+        .content-box.pink {
+            border-left-color: #c44a6b;
+            background: #fdf4f8;
+        }
+
+        .content-box.teal {
+            border-left-color: #0f7a7a;
+            background: #f0fafa;
+        }
+
+        .content-box p {
+            margin-bottom: 8px;
+            font-weight: 400;
+            font-size: 1.02rem;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 26px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+            font-weight: 400;
+            font-size: 1.02rem;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 800;
+        }
+
+        .content-box .quote {
+            font-style: italic;
+            font-weight: 500;
+            color: #1a3a5c;
+            background: #f0ece6;
+            padding: 12px 18px;
+            border-radius: 12px;
+            margin: 8px 0;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #ddd4c8;
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1rem;
+        }
+
+        td {
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+        }
+
+        .qa-block .q {
+            font-weight: 800;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.05rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #c4450c;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 400;
+            font-size: 1.02rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 800;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #6b3fa0;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.05rem;
+            font-weight: 800;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 0.95rem;
+            color: #2d3a4a;
+            font-weight: 400;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #c4450c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(196, 69, 12, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #a0360a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(196, 69, 12, 0.55);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #c9bdb0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #c9bdb0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1a5a7a;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- CASE STUDY BOX ----- */
+        .case-box {
+            background: #f0f4f0;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #6b8a6b;
+            margin: 12px 0;
+        }
+
+        .case-box .case-title {
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.08rem;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.3rem;
+            }
+
+            .section-head {
+                font-size: 1.2rem;
+            }
+
+            .sub-head {
+                font-size: 1.05rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 0.96rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.82rem;
+                padding: 10px 16px;
+            }
+
+            table {
+                font-size: 0.82rem;
+            }
+
+            th,
+            td {
+                padding: 6px 8px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+                font-size: 0.95rem;
+            }
+
+            .content-box li {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-comment-dots"></i>
+                    एकाइ ३, पाठ ३: सञ्चार
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> पूर्ण शैक्षिक नोट</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ ३, पाठ ३
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची (Compact)</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> अवधारणात्मक परिचय</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> सञ्चारका ७ तत्त्वहरू</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> सञ्चारका विधिहरू</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> सञ्चारका अवरोधहरू</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> मामिला अध्ययन</a>
+                <a href="#section6"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section7"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section8"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+                <a href="#section9"><i class="fas fa-chevron-right"></i> प्राविधिक शब्दावली</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. अवधारणात्मक परिचय ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-lightbulb"></i>
+            १. पाठको अवधारणात्मक परिचय
+            <span class="mark-badge">Core Concept</span>
+        </div>
+
+        <div class="content-box blue">
+            <p><strong>सञ्चार (Communication) भनेको के हो?</strong></p>
+            <p>दुई वा दुईभन्दा बढी पक्षहरूबीच सूचना, जानकारी, विचार, तथ्य, र भावनाहरूको आदानप्रदान गर्ने र त्यसको अर्थ सही रूपमा बुझ्ने व्यवस्थित प्रक्रियालाई <strong>सञ्चार</strong> भनिन्छ <span class="ref">[१२]</span>। सञ्चार केवल सन्देश पठाउनु मात्र होइन, बरु पठाइएको सन्देशलाई प्रापक (पाउने व्यक्ति) ले सोही अर्थ र सन्दर्भमा बुझ्नु पनि हो <span class="ref">[१२]</span>। सञ्चारअन्तर्गत बोल्ने, सुन्ने, पढ्ने, लेख्ने, र शारीरिक हाउभाउ प्रदर्शन गर्ने जस्ता विविध मानव क्रियाकलापहरू पर्दछन् <span class="ref">[१२]</span>।</p>
+        </div>
+
+        <div class="content-box gold">
+            <div class="quote">
+                <i class="fas fa-quote-left" style="margin-right:6px;"></i>
+                <strong>प्रसिद्ध विद्वान एल. ए. एलेन (L.A. Allen) का अनुसार:</strong><br>
+                "सञ्चार भन्नाले अर्को मानिसको मस्तिष्कसँग समझदारी कायम गर्नका लागि व्यक्तिले गर्ने सबै कार्यको योग हो। यसमा भन्ने, सुन्ने र तात्पर्य बुझ्ने एक व्यवस्थित र निरन्तर प्रक्रिया पर्दछ।" <span class="ref">[१२]</span>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. सञ्चारका ७ तत्त्वहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-list-ol"></i>
+            २. सञ्चार सम्बन्ध स्थापनाका ७ आधारभूत तत्त्वहरू
+            <span class="mark-badge gold">7 Elements</span>
+        </div>
+
+        <div class="content-box purple">
+            <p>सञ्चार प्रक्रियालाई पूर्ण र प्रभावकारी बनाउन निम्नलिखित सातवटा तत्त्वहरू आवश्यक पर्दछन्:</p>
+            <ol>
+                <li><strong>दुई वा दुईभन्दा बढी पक्ष वा व्यक्तिहरू:</strong> सञ्चारका लागि कम्तीमा एक जना पठाउने र एक जना पाउने व्यक्ति आवश्यक हुन्छ <span class="ref">[१२]</span>।</li>
+                <li><strong>प्रेषक (Sender):</strong> सञ्चारको सुरुवात गर्ने र सूचना वा सन्देश पठाउने व्यक्ति <span class="ref">[१२]</span>।</li>
+                <li><strong>सञ्चारको माध्यम (Medium/Channel):</strong> सन्देश प्रवाह हुने बाटो वा साधन (जस्तै: टेलिफोन, इन्टरनेट, चिठीपत्र, प्रत्यक्ष भेटघाट आदि) <span class="ref">[१२]</span>।</li>
+                <li><strong>प्रापक (Receiver):</strong> प्रेषकले पठाएको सूचना वा सन्देश प्राप्त गर्ने व्यक्ति <span class="ref">[१२]</span>।</li>
+                <li><strong>प्राप्त सूचना स्वीकार गर्नु (Receiving/Acceptance):</strong> प्रापकले प्रेषकको सन्देशलाई ग्रहण गर्नु <span class="ref">[१२]</span>।</li>
+                <li><strong>सूचनालाई सही रूपमा बुझ्नु (Understanding):</strong> सन्देशको वास्तविक अर्थ र मर्मलाई प्रापकले स्पष्ट रूपमा बुझ्नु <span class="ref">[१२]</span>।</li>
+                <li><strong>सूचनाको प्रतिक्रिया जनाउनु (Feedback):</strong> सन्देश बुझिसकेपछि प्रापकले प्रेषकलाई दिने जवाफ वा प्रतिक्रिया, जसले सञ्चार चक्रलाई पूरा गर्दछ <span class="ref">[१२]</span>।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. सञ्चारका ३ विधिहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-pencil-alt"></i>
+            ३. सञ्चारका तीन प्रमुख विधिहरू
+            <span class="mark-badge green">Methods</span>
+        </div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: सञ्चारका विधि, विशेषता र माध्यमहरू</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:18%;">सञ्चारको विधि</th>
+                        <th style="width:42%;">परिचय र विशेषताहरू</th>
+                        <th style="width:40%;">प्रमुख माध्यमहरू</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. मौखिक सञ्चार<br><span style="font-weight:400; font-size:0.8rem;">(Oral)</span></strong></td>
+                        <td>• मानव समाजमा सबैभन्दा बढी गुडिने, प्रचलित र सरल विधि हो <span class="ref">[१२]</span>।<br>• यसमा भाषाको प्रयोग गरी बोलेर विचार र सूचना आदानप्रदान गरिन्छ <span class="ref">[१२]</span>।<br>• प्रत्यक्ष भेटघाटमार्फत गरिने मौखिक सञ्चार बढी प्रभावकारी र भरपर्दो हुन्छ <span class="ref">[१२]</span>।</td>
+                        <td>प्रत्यक्ष कुराकानी, टेलिफोन, रेडियो, भिडियो कल, सामूहिक छलफल, वक्तृत्वकला आदि <span class="ref">[१२]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. लिखित सञ्चार<br><span style="font-weight:400; font-size:0.8rem;">(Written)</span></strong></td>
+                        <td>• यो एक औपचारिक र अत्यन्तै भरपर्दो सञ्चार विधि हो <span class="ref">[१२]</span>।<br>• यसमा शब्द वा अक्षरहरूको प्रयोग गरी लिखित रूपमा सन्देश पठाइन्छ <span class="ref">[१२]</span>।<br>• यसलाई भविष्यका लागि सुरक्षित अभिलेख र कानुनी प्रमाणका रूपमा पेस गर्न सकिन्छ <span class="ref">[१२]</span>।</td>
+                        <td>चिठीपत्र, इमेल, सामाजिक सञ्जालका सन्देशहरू, प्रतिवेदन, ऐन-कानुन, बुलेटिन, पत्रपत्रिका आदि <span class="ref">[१२]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. साङ्केतिक सञ्चार<br><span style="font-weight:400; font-size:0.8rem;">(Non-verbal)</span></strong></td>
+                        <td>• यसमा कुनै भाषा वा शब्दको प्रयोग नगरी सङ्केत, इसारा र शारीरिक हाउभाउको सहायता लिइन्छ <span class="ref">[१२]</span>।<br>• यो छोटो समयमा तत्काल सन्देश प्रवाह गर्न निकै सहयोगी हुन्छ <span class="ref">[१२]</span>।</td>
+                        <td>ट्राफिक लाइट, इसारा, शारीरिक हाउभाउ, अनुहारको अभिव्यक्ति, नक्सा, विभिन्न चिह्न र रङहरू <span class="ref">[१२]</span>।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. सञ्चारका अवरोधहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-ban"></i>
+            ४. प्रभावकारी सञ्चारका अवरोधहरू
+            <span class="mark-badge pink">Barriers</span>
+        </div>
+
+        <div class="content-box pink">
+            <p>सञ्चार प्रक्रियामा बाधा पुर्‍याई सन्देशको वास्तविक अर्थ तोडमरोड गर्ने वा प्रापकसम्म सन्देश नपुर्‍याउने तत्त्वहरूलाई सञ्चारका अवरोध भनिन्छ <span class="ref">[१२]</span>। मुख्य अवरोधहरू निम्नानुसार छन्:</p>
+        </div>
+
+        <!-- (क) मनोवैज्ञानिक -->
+        <div class="sub-head-sm"><i class="fas fa-brain"></i> (क) मनोवैज्ञानिक अवरोध (Psychological Barriers)</div>
+        <div class="content-box blue">
+            <p>सञ्चारमा संलग्न व्यक्तिहरूको मानसिक अवस्था, सोच र दृष्टिकोणका कारण सिर्जना हुने अवरोधहरू यसअन्तर्गत पर्दछन् <span class="ref">[१२]</span>।</p>
+            <ul>
+                <li><strong>सूचना छनोटको प्रवृत्ति:</strong> प्रापकले आफूलाई मन पर्ने वा स्वार्थ अनुकूलका कुरा मात्र सुन्ने र बाँकीलाई उपेक्षा गर्ने बानी <span class="ref">[१२]</span>।</li>
+                <li><strong>सूचनाको बोझ (Information Overload):</strong> क्षमताभन्दा बढी वा धेरै लामो सूचना एकैपटक प्रवाह हुँदा महत्त्वपूर्ण कुराहरू छुट्नु <span class="ref">[१२]</span>।</li>
+                <li><strong>तीव्र संवेग र आवेग:</strong> रिस, डर, चिन्ता वा उत्तेजनाको अवस्थामा सन्देशको अर्थ गलत लाग्न सक्छ <span class="ref">[१२]</span>।</li>
+                <li><strong>लैङ्गिक शैली र आवाज:</strong> महिला र पुरुषको आवाजको प्राकृतिक भिन्नता तथा सञ्चार गर्ने आ-आफ्नो शैलीका कारण कहिलेकाहीँ बुझाइमा फरक पर्नु <span class="ref">[१२]</span>।</li>
+                <li><strong>अनावश्यक थपघट:</strong> सन्देश एक ठाउँबाट अर्को ठाउँमा सर्दै जाँदा बीचका मानिसले आफ्नो विचार मिसाएर अर्थको अनर्थ बनाउनु <span class="ref">[१२]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- (ख) भाषिक -->
+        <div class="sub-head-sm"><i class="fas fa-language"></i> (ख) भाषिक अवरोध (Semantic Barriers)</div>
+        <div class="content-box orange">
+            <p>भाषा, शब्द वा व्याकरणको गलत प्रयोग र बुझाइका कारण उत्पन्न हुने बाधाहरू <span class="ref">[१२]</span>:</p>
+            <ul>
+                <li>फरक-फरक समाज र संस्कृतिमा एउटै शब्दको अर्थ फरक लाग्नु <span class="ref">[१२]</span>।</li>
+                <li>प्रेषकले गाह्रो वा प्राविधिक शब्दावली (Technical Jargon) र छोटकरी शब्दहरू प्रयोग गर्दा प्रापकले नबुझ्नु <span class="ref">[१२]</span>।</li>
+                <li>अस्पष्ट उच्चारण र अस्पष्ट व्याकरणको प्रयोग <span class="ref">[१२]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- (ग) भौतिक -->
+        <div class="sub-head-sm"><i class="fas fa-wifi"></i> (ग) भौतिक अवरोध (Physical Barriers)</div>
+        <div class="content-box gold">
+            <p>वातावरणीय वा भौतिक परिस्थितिले गर्दा सञ्चारमा आउने अवरोधहरू <span class="ref">[१२]</span>:</p>
+            <ul>
+                <li><strong>कोलाहल र ध्वनि प्रदूषण:</strong> वरपरको चर्को आवाजका कारण प्रेषकको कुरा प्रापकले स्पष्ट नसुन्नु <span class="ref">[१२]</span>।</li>
+                <li><strong>दूरीको समस्या:</strong> प्रेषक र प्रापक धेरै टाढा हुनु र उपयुक्त सञ्चार संयन्त्र नहुनु <span class="ref">[१२]</span>।</li>
+                <li><strong>भौतिक पूर्वाधारको अभाव:</strong> इन्टरनेट वा नेटवर्क डाउन हुनु, बिजुली काटिनु, वा बिग्रिएका सञ्चार उपकरणहरू <span class="ref">[१२]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- (घ) सङ्गठनात्मक -->
+        <div class="sub-head-sm"><i class="fas fa-building"></i> (घ) सङ्गठनात्मक अवरोध (Organizational Barriers)</div>
+        <div class="content-box purple">
+            <p>कुनै संस्था वा सङ्गठनको संरचनागत जटिलताका कारण उत्पन्न हुने बाधाहरू <span class="ref">[१२]</span>:</p>
+            <ul>
+                <li><strong>जटिल सङ्गठनात्मक संरचना:</strong> धेरै तह (Levels) भएको सङ्गठनमा सूचना तलदेखि माथिसम्म पुग्न ढिलाइ र परिमार्जन हुनु <span class="ref">[१२]</span>।</li>
+                <li><strong>अहम्ता (Ego) र मर्यादा:</strong> उच्च ओहोदाका हाकिमहरूले साना कर्मचारीका कुरा नसुन्नु वा परामर्श लिन नचाहनु <span class="ref">[१२]</span>।</li>
+                <li><strong>खराब योजना तर्जुमा र सञ्चार माध्यमको अभाव:</strong> संस्थामा सञ्चारको स्पष्ट नीति र उपयुक्त साधन नहुनु <span class="ref">[१२]</span>।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. मामिला अध्ययन ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-book-reader"></i>
+            ५. पाठ्यपुस्तकका मामिला अध्ययन (Case Studies)
+            <span class="mark-badge green">Case Studies</span>
+        </div>
+
+        <div class="case-box">
+            <p class="case-title"><i class="fas fa-user-graduate" style="color:#1a5a7a; margin-right:6px;"></i> अवस्था १: अनिसाको सामाजिक सञ्जालको सदुपयोग</p>
+            <p>अनिसा कक्षा ११ मा पढ्ने एक मिलनसार र सहयोगी विद्यार्थी हुन् <span class="ref">[१२]</span>। उनका बुबाले उनलाई पढ्न र सम्पर्क गर्न मोबाइल फोन किनिदिएका छन् <span class="ref">[१२]</span>। उनले यसको दुरुपयोग नगरी आफ्ना सहपाठी, साथीभाइ र शिक्षकहरूसँग जोडिन प्रयोग गरेकी छन् <span class="ref">[१२]</span>। समूह (Group) बनाएर नजानेका कुराहरू सोध्ने, शैक्षिक सामग्रीहरू, चित्र तथा भिडियोहरू आदानप्रदान गर्ने गर्छिन् <span class="ref">[१२]</span>।</p>
+            <p style="font-weight:700; color:#0b2b4a; margin-top:6px;">निष्कर्ष:</p>
+            <p>अनिसाले सञ्चार प्रविधिलाई 'खुला सिकाइ' र 'सहकार्य सीप' को रूपमा प्रयोग गरेर आफ्नो शैक्षिक स्तर सुधारेकी छन् <span class="ref">[१२]</span>।</p>
+        </div>
+
+        <div class="case-box" style="border-color:#b45309; background:#fefaf5;">
+            <p class="case-title"><i class="fas fa-store" style="color:#b45309; margin-right:6px;"></i> अवस्था २: रामभरोसको व्यावसायिक सञ्चार सीप</p>
+            <p>रामभरोस एक दैनिक उपभोग्य वस्तुको पसल चलाउने व्यापारी हुन् <span class="ref">[१२]</span>। उनी ग्राहकसँग सधैँ मिठो बोली बोल्छन्, उनीहरूका कुरा ध्यान दिएर सुन्छन्, र सामानको विशेषता स्पष्टसँग बुझाउँछन् <span class="ref">[१२]</span>। कसैलाई समस्या पर्दा सहयोग गर्न अघि सर्छन् र अन्य व्यापारीहरूसँग पनि राम्रो सम्बन्ध राख्छन् <span class="ref">[१२]</span>। उनले इन्टरनेट र फेसबुकको प्रयोग गरी आफ्नो व्यवसायको विज्ञापन र होम डेलिभरी सेवा पनि सुरु गरेका छन् <span class="ref">[१२]</span>।</p>
+            <p style="font-weight:700; color:#0b2b4a; margin-top:6px;">निष्कर्ष:</p>
+            <p>रामभरोसको व्यापार सफल हुनुमा उनको 'सक्रिय सुनाइ', 'सभ्य मौखिक सञ्चार' र 'डिजिटल विज्ञापन' को उत्कृष्ट प्रयोग नै मुख्य कारण हो <span class="ref">[१२]</span>।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ६. क्रियाकलाप समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section6">
+            <i class="fas fa-hands"></i>
+            ६. पाठका क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge gold">Activities</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-table"></i> क्रियाकलाप २: सञ्चारका साधन र सामाजिक सञ्जालको प्रयोग</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: दैनिक जीवन र सिकाइमा सञ्चार साधनको प्रयोग <span class="ref">[१२]</span></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:25%;">सञ्चारको साधन</th>
+                        <th style="width:37%;">दैनिक जीवनमा प्रयोग</th>
+                        <th style="width:38%;">सिकाइ (Education) मा प्रयोग</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. मोबाइल र इन्टरनेट</strong></td>
+                        <td>• परिवार र साथीभाइसँग कुराकानी गर्न।<br>• अनलाइन बिलहरू तिर्न।</td>
+                        <td>• विभिन्न शैक्षिक वेबसाइटहरू खोज्न।<br>• युट्युबमा कठिन पाठहरूको व्याख्या हेर्न।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. जिमेल (Gmail)</strong></td>
+                        <td>• जागिर वा अन्य ठाउँमा आधिकारिक आवेदन दिन।</td>
+                        <td>• शिक्षकलाई गृहकार्य र परियोजना कार्य बुझाउन।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. फेसबुक / मेसेन्जर</strong></td>
+                        <td>• चाडपर्वमा शुभकामना आदानप्रदान गर्न।</td>
+                        <td>• कक्षाको समूह (Class Group) बनाएर सूचना र नोट शेयर गर्न।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४. भिडियो कल (Zoom/Teams)</strong></td>
+                        <td>• विदेशमा रहेका आफन्तसँग प्रत्यक्ष गफ गर्न।</td>
+                        <td>• विद्यालय बन्द भएको समयमा अनलाइन कक्षा लिन।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-clipboard-list"></i> क्रियाकलाप ३: व्यक्तिगत, सामाजिक र पेसागत जीवनमा प्रभावकारी सञ्चार</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: विभिन्न क्षेत्रमा सञ्चारको महत्त्व <span class="ref">[१२]</span></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:33%;">व्यक्तिगत जीवनमा</th>
+                        <th style="width:33%;">सामाजिक जीवनमा</th>
+                        <th style="width:34%;">पेसागत/व्यावसायिक जीवनमा</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>१. परिवारमा आफ्ना कुरा स्पष्ट बुझाउन र सुमधुर सम्बन्ध राख्न <span class="ref">[१२]</span>।</td>
+                        <td>१. साथीभाइसँग सम्बन्ध विस्तार गर्न र सामाजिक कार्यमा जुट्न <span class="ref">[१२]</span>।</td>
+                        <td>१. व्यवसाय वा उत्पादनको प्रभावकारी विज्ञापन र प्रचारप्रसार गर्न <span class="ref">[१२]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td>२. आफ्नो भावना, आवेग र तनावलाई सन्तुलित रूपमा व्यक्त गर्न।</td>
+                        <td>२. समाजमा हुने असमझदारी र द्वन्द्वलाई छलफलद्वारा समाधान गर्न।</td>
+                        <td>२. ग्राहकका गुनासा र चाहनाहरू धैर्यपूर्वक सुनेर सोहीअनुसार सेवा दिन।</td>
+                    </tr>
+                    <tr>
+                        <td>३. आत्मविश्वास बढाउन र सही समयमा सही निर्णय लिन।</td>
+                        <td>३. समाजमा नेतृत्वदायी भूमिका निर्वाह गर्न र जनचेतना फैलाउन।</td>
+                        <td>३. कार्यालयका कर्मचारीहरूबीच सहकार्य र समन्वय बलियो बनाउन।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ७. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section7">
+            <i class="fas fa-check-double"></i>
+            ७. पाठ्यपुस्तकका अभ्यासहरूको समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">प्रश्न १:</span> सञ्चार भनेको के हो? सञ्चार कति प्रकारका हुन्छन्? सञ्चारका तत्त्वहरूको सूची बनाउनुहोस्। <span class="ref">[१२]</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> दुई वा दुईभन्दा बढी पक्षहरूबीच आपसी समझदारीका साथ सूचना, जानकारी र भावनाहरू आदानप्रदान गर्ने व्यवस्थित र निरन्तर प्रक्रियालाई सञ्चार भनिन्छ <span class="ref">[१२]</span>।</p>
+                <p>सञ्चार मुख्यतया <strong>तीन प्रकारका</strong> हुन्छन्:</p>
+                <ol>
+                    <li><strong>मौखिक सञ्चार:</strong> बोलेर गरिने सञ्चार <span class="ref">[१२]</span>।</li>
+                    <li><strong>लिखित सञ्चार:</strong> लेखेर वा अक्षरमार्फत गरिने सञ्चार <span class="ref">[१२]</span>।</li>
+                    <li><strong>साङ्केतिक सञ्चार:</strong> इसारा, हाउभाउ र चिह्नको प्रयोग गरिने सञ्चार <span class="ref">[१२]</span>।</li>
+                </ol>
+                <p><strong>सञ्चारका ७ प्रमुख तत्त्वहरूको सूची:</strong></p>
+                <ol>
+                    <li>दुई वा दुईभन्दा बढी पक्षहरू</li>
+                    <li>सञ्चारको माध्यम</li>
+                    <li>प्रेषक</li>
+                    <li>प्रापक</li>
+                    <li>प्राप्त सूचना स्वीकार गर्नु</li>
+                    <li>सूचनालाई सही रूपमा बुझ्नु</li>
+                    <li>सूचनाको प्रतिक्रिया (पृष्ठपोषण) <span class="ref">[१२]</span></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">प्रश्न २:</span> प्रभावकारी सञ्चारका अवरोधहरू उल्लेख गर्नुहोस्। <span class="ref">[१२]</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> प्रभावकारी सञ्चारमा बाधा पुर्‍याउने मुख्य अवरोधहरू निम्नलिखित चार प्रकारका छन्:</p>
+                <ol>
+                    <li><strong>मनोवैज्ञानिक अवरोध:</strong> रिस, डर, पूर्वाग्रह, सूचनाको बोझ, र अनावश्यक थपघट गर्ने मानसिक प्रवृत्ति <span class="ref">[१२]</span>।</li>
+                    <li><strong>भाषिक अवरोध:</strong> गाह्रो र प्राविधिक भाषाको प्रयोग, फरक सांस्कृतिक अर्थ, र अस्पष्ट उच्चारण <span class="ref">[१२]</span>।</li>
+                    <li><strong>भौतिक अवरोध:</strong> टाढाको दूरी, चर्को हल्ला (कोलाहल), र कमजोर इन्टरनेट वा प्रविधि <span class="ref">[१२]</span>।</li>
+                    <li><strong>सङ्गठनात्मक अवरोध:</strong> संस्थाभित्रको जटिल संरचना, हाकिमहरूको अहम्ता (Ego), र सञ्चार साधनहरूको अभाव <span class="ref">[१२]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">प्रश्न ३:</span> सञ्चारका माध्यमहरू उल्लेख गरी तिनीहरूले तपाईँको जीवनमा पारेको प्रभाव विश्लेषण गर्नुहोस्। <span class="ref">[१२]</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सञ्चारका प्रमुख माध्यमहरूमा प्रत्यक्ष भेटघाट, टेलिफोन, इन्टरनेट, सामाजिक सञ्जाल (फेसबुक, युट्युब), इमेल, पत्रपत्रिका, र रेडियो-टिभी आदि पर्दछन् <span class="ref">[१२]</span>।</p>
+                <p><strong>मेरो जीवनमा परेको प्रभाव विश्लेषण:</strong></p>
+                <ul>
+                    <li><strong>सकारात्मक प्रभाव:</strong> इन्टरनेट र सामाजिक सञ्जालको मद्दतले गर्दा कठिन गृहकार्यहरू सहजै समाधान गर्न सकिएको छ। अनलाइन सामग्रीहरू अध्ययन गरेर ज्ञानको दायरा फराकिलो भएको छ। टाढा रहेका साथीहरू र आफन्तहरूसँग सधैँ सम्पर्कमा रहन सकिएको छ।</li>
+                    <li><strong>नकारात्मक प्रभाव (सचेत हुनुपर्ने पक्ष):</strong> धेरै समय मोबाइल स्क्रिनमा बिताउँदा समयको बर्बादी हुने र पढाइमा ध्यान बाँडिने जोखिम हुन्छ। कहिलेकाहीँ इन्टरनेटमा पाइने गलत सूचनाले अन्योल सिर्जना गर्न सक्छ। तसर्थ, मैले सञ्चार साधनको प्रयोग समय तालिका बनाएर सन्तुलित रूपमा गर्ने गरेको छु।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">प्रश्न ४:</span> प्रभावकारी सञ्चारले प्रभावकारी सम्बन्ध स्थापना गर्न सहयोग पुर्‍याउँछ भन्ने तथ्यलाई उदाहरणसहित पुष्टि गर्नुहोस्। <span class="ref">[१२]</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानिस एक सामाजिक प्राणी भएकाले समाजमा असल सम्बन्ध कायम राख्न सञ्चार सबैभन्दा महत्त्वपूर्ण कडी हो। प्रभावकारी सञ्चारले दुई व्यक्ति वा समूहबीचको अविश्वास र असमझदारीलाई हटाई घनिष्ठता बढाउँछ।</p>
+                <p><strong>उदाहरणसहित पुष्टि:</strong></p>
+                <ol>
+                    <li><strong>व्यापारिक क्षेत्रको उदाहरण:</strong> पाठ्यपुस्तकका पात्र <strong>रामभरोस</strong> ग्राहकका कुरा ध्यान दिएर सुन्छन् र मिठो बोली बोल्छन् <span class="ref">[१२]</span>। उनको यो प्रभावकारी मौखिक र सक्रिय सुनाइको सञ्चार शैलीकै कारण ग्राहकहरूसँग उनको प्रगाढ र भरपर्दो सम्बन्ध स्थापित भएको छ, जसले उनको व्यापारलाई सफल बनाएको छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>घरायसी र सामाजिक सम्बन्धको उदाहरण:</strong> जब परिवार वा समाजमा कुनै विवाद उत्पन्न हुन्छ, तब रिसाएर वा कराएरभन्दा शान्त भई दोहोरो सञ्चार (आफ्नो कुरा भन्ने र अर्काको कुरा सुन्ने) गर्दा समस्या सजिलै समाधान हुन्छ।</li>
+                    <li><strong>शैक्षिक क्षेत्रको उदाहरण:</strong> विद्यार्थी <strong>अनिसा</strong> ले शिक्षक र साथीहरूसँग निरन्तर सभ्य र प्रभावकारी सञ्चार गरेकाले उनको सिकाइ बलियो बनेको छ र सबैसँग सुमधुर सम्बन्ध कायम भएको छ <span class="ref">[१२]</span>।</li>
+                </ol>
+                <p>अतः 'हामी कसरी बोल्छौँ र अरूका कुरा कसरी सुन्छौँ' भन्ने कुराले नै हाम्रो सम्बन्धको गहिराइ निर्धारण गर्ने भएकाले प्रभावकारी सञ्चार प्रभावकारी सम्बन्धको मुख्य आधारशिला हो।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ८. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section8">
+            <i class="fas fa-bullseye"></i>
+            ८. परीक्षा उपयोगी सम्भावित प्रश्नोत्तरहरू
+            <span class="mark-badge gold">Exam-oriented</span>
+        </div>
+
+        <!-- अति संक्षिप्त (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (१ अङ्क भार)</div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">१.</span> सञ्चार प्रक्रियामा 'पृष्ठपोषण' (Feedback) को के महत्त्व छ?</div>
+            <div class="a"><strong>उत्तर:</strong> पृष्ठपोषणले प्रेषकलाई प्रापकले सन्देश सही रूपमा बुझ्यो वा बुझेन भन्ने कुराको जानकारी दिई सञ्चार प्रक्रियालाई पूर्ण बनाउँछ <span class="ref">[१२]</span>।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">२.</span> प्राविधिक भाषा वा छोटकरी शब्दको प्रयोग कुन अवरोधभित्र पर्दछ?</div>
+            <div class="a"><strong>उत्तर:</strong> यो सञ्चारको <strong>भाषिक अवरोध (Semantic Barrier)</strong> भित्र पर्दछ <span class="ref">[१२]</span>।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">३.</span> सञ्चार सीपलाई जीवनोपयोगी सीपका रूपमा किन लिइन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> यसले दैनिक जीवनमा आपसी सम्बन्ध सुमधुर बनाउन र समस्या समाधान गर्न मद्दत गर्ने भएकाले यसलाई एक अनिवार्य जीवनोपयोगी सीपका रूपमा लिइन्छ <span class="ref">[१२]</span>।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">४.</span> 'लिखित सञ्चार' मौखिक सञ्चारभन्दा किन बढी भरपर्दो मानिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> लिखित सञ्चारलाई भविष्यका लागि सुरक्षित अभिलेख र कानुनी प्रमाणका रूपमा सुरक्षित राख्न सकिने भएकाले यो बढी भरपर्दो मानिन्छ <span class="ref">[१२]</span>।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">५.</span> अहम्ता (Ego) कुन प्रकारको सञ्चार अवरोध हो?</div>
+            <div class="a"><strong>उत्तर:</strong> अहम्ता मुख्यतया <strong>सङ्गठनात्मक</strong> र कहिलेकाहीँ <strong>मनोवैज्ञानिक अवरोध</strong> अन्तर्गत पर्दछ <span class="ref">[१२]</span>।</div>
+        </div>
+
+        <!-- संक्षिप्त (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तरहरू (५ अङ्क भार)</div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">१.</span> सञ्चारका अवरोधहरूलाई हटाएर सञ्चारलाई कसरी प्रभावकारी बनाउन सकिन्छ? उपायहरू लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सञ्चारलाई प्रभावकारी र बाधारहित बनाउन निम्नलिखित उपायहरू अपनाउनुपर्छ:</p>
+                <ul>
+                    <li><strong>सक्रिय सुनाइ (Active Listening):</strong> अर्काको कुरा नसकिँदै बीचैमा काट्ने बानी छोडेर धैर्यपूर्वक सुन्ने र बुझ्ने गर्नुपर्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>सरल र स्पष्ट भाषाको प्रयोग:</strong> कुराकानी गर्दा जटिल प्राविधिक शब्द र कठिन व्याकरणको सट्टा प्रापकले बुझ्न सक्ने सरल भाषा प्रयोग गर्नुपर्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>दोहोरो सञ्चारको प्रोत्साहन:</strong> सञ्चार एकतर्फी नभई दोहोरो हुनुपर्छ, जसमा प्रापकलाई निर्धक्कसँग प्रश्न सोध्ने वा पृष्ठपोषण दिने वातावरण मिलाइनुपर्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>उपयुक्त माध्यमको छनोट:</strong> सन्देशको प्रकृति र दूरीअनुसार उपयुक्त माध्यम (जस्तै: जरुरी कुरा भए फोन वा प्रत्यक्ष भेट, लामो विवरण भए लिखित इमेल) छनोट गर्नुपर्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>अनुकूल वातावरण निर्माण:</strong> कोलाहलमुक्त, शान्त र उपयुक्त भौतिक पूर्वाधार भएको स्थानमा सञ्चार गर्दा वातावरणीय अवरोध हट्छ <span class="ref">[१२]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">२.</span> "सञ्चार द्वन्द्व सिर्जना गर्ने र समाधान गर्ने दुवैको सशक्त माध्यम हो।" यस भनाइको समीक्षा गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> यो भनाइ पूर्ण रूपमा सत्य हो। सञ्चारको सही वा गलत प्रयोगले समाजमा ठुलो असर पार्छ:</p>
+                <ul>
+                    <li><strong>द्वन्द्व सिर्जना गर्ने माध्यमका रूपमा:</strong> जब सञ्चारमा अस्पष्टता हुन्छ, गलत शब्दको प्रयोग गरिन्छ, वा प्रेषक र प्रापकबीच मनोवैज्ञानिक पूर्वाग्रह हुन्छ, तब असमझदारी बढ्छ। आधा अधुरो सूचना, हल्ला (रुमर), र नकारात्मक शारीरिक हाउभाउले गर्दा व्यक्ति, परिवार र समाजमा द्वन्द्व सिर्जना हुन पुग्छ।</li>
+                    <li><strong>द्वन्द्व समाधान गर्ने माध्यमका रूपमा:</strong> अर्कोतर्फ, जस्तोसुकै जटिल द्वन्द्व पनि प्रभावकारी र शान्तिपूर्ण सञ्चारद्वारा समाधान गर्न सकिन्छ। दुवै पक्ष सँगै बसेर, आपसी मतभेदका बुँदाहरूमा छलफल गरेर, एकले अर्काको कुरा धैर्यतापूर्वक सुनेर (सक्रिय सुनाइ) र सहानुभूति प्रकट गरेर द्वन्द्वलाई सधैँका लागि रूपान्तरण गर्न सकिन्छ।</li>
+                </ul>
+                <p>अतः सञ्चारलाई सचेत र जिम्मेवार रूपमा प्रयोग गरेमा यसले सम्बन्ध बिगार्ने नभई सदैव जोड्ने काम गर्छ।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो विश्लेषणात्मक प्रश्न (८ अङ्क भार)</div>
+
+        <div class="qa-block" style="border-left-color:#1f7a4a;">
+            <div class="q"><span class="qnum">प्रश्न:</span> आधुनिक युगमा सामाजिक सञ्जाल र डिजिटल सञ्चारको प्रयोग अपरिहार्य बनेको छ। यसका फाइदा र चुनौतीहरूलाई विश्लेषण गर्दै उत्तरदायी डिजिटल सञ्चारकर्तामा हुनुपर्ने गुणहरूको विवेचना गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> आजको २१औँ शताब्दी सञ्चार र सूचना प्रविधिको युग हो। डिजिटल सञ्चार र सामाजिक सञ्जाल (फेसबुक, मेसेन्जर, युट्युब, इमेल आदि) बिना आजको मानव जीवनको कल्पना गर्न कठिन भइसकेको छ <span class="ref">[१२]</span>। यसले संसारलाई एउटा सानो विश्वग्राम (Global Village) मा परिणत गरिदिएको छ।</p>
+
+                <p><strong>डिजिटल सञ्चारका फाइदाहरू:</strong></p>
+                <ol>
+                    <li><strong>द्रुत सूचना प्रवाह:</strong> संसारको जुनसुकै कुनामा घटेका घटनाहरू सेकेन्डभरमै थाहा पाउन र सन्देश पठाउन सकिन्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>शैक्षिक विकास र खुला सिकाइ:</strong> विद्यार्थीहरूले अनिसाले जस्तै विभिन्न शैक्षिक ग्रुपहरू बनाएर, नोट र उपयोगी भिडियोहरू शेयर गरेर घरमै बसीबसी ज्ञान हासिल गर्न सक्छन् <span class="ref">[१२]</span>।</li>
+                    <li><strong>व्यावसायिक प्रवर्द्धन:</strong> रामभरोसले जस्तै साना तथा ठुला व्यवसायीले आफ्नो सामानको अनलाइन विज्ञापन गरी होम डेलिभरीमार्फत व्यवसाय फस्टाउन सक्छन् <span class="ref">[१२]</span>।</li>
+                    <li><strong>सस्तो र सहज माध्यम:</strong> परम्परागत चिठीपत्रको तुलनामा इन्टरनेटमार्फत गरिने सञ्चार निकै सस्तो र समय बचत गर्ने खालको हुन्छ <span class="ref">[१२]</span>।</li>
+                </ol>
+
+                <p><strong>डिजिटल सञ्चारका चुनौतीहरू:</strong></p>
+                <ol>
+                    <li><strong>गलत र भ्रमपूर्ण सूचनाको बाढी:</strong> सामाजिक सञ्जालमा बिना पुष्टि आउने अफवाहले समाजमा सामाजिक सद्भाव भङ्ग गर्ने खतरा हुन्छ।</li>
+                    <li><strong>डिजिटल लत र समयको बर्बादी:</strong> विद्यार्थी र युवापुस्तामा सामाजिक सञ्जालको अत्यधिक प्रयोगले मानसिक तनाव र अध्ययनमा बाधा पुर्‍याएको छ।</li>
+                    <li><strong>साइबर अपराधको जोखिम:</strong> डाटा चोरी हुनु, सामाजिक सञ्जाल ह्याक हुनु, र अनलाइन ठगी जस्ता चुनौतीहरू बढेका छन्।</li>
+                </ol>
+
+                <p><strong>उत्तरदायी डिजिटल सञ्चारकर्तामा हुनुपर्ने मुख्य गुणहरू:</strong></p>
+                <p>हामी डिजिटल संसारमा रहँदा सधैँ उत्तरदायी र नैतिक हुनुपर्छ। एक असल र जिम्मेवार डिजिटल सञ्चारकर्तामा निम्न गुणहरू हुनु आवश्यक छ:</p>
+                <ul>
+                    <li><strong>तथ्यको सत्यता जाँच गर्ने बानी:</strong> कुनै पनि समाचार वा पोस्ट शेयर गर्नुअघि त्यो आधिकारिक हो कि होइन भनी जाँच्ने क्षमता हुनुपर्छ।</li>
+                    <li><strong>सभ्य भाषा र बोलीको प्रयोग:</strong> अनलाइनमा कसैलाई गालीगलौज, नकारात्मक कमेन्ट वा साइबर बुलिङ (Cyber Bullying) गर्नुहुँदैन। सधैँ शिष्ट र मर्यादित भाषा प्रयोग गर्नुपर्छ।</li>
+                    <li><strong>गोपनियताको सम्मान:</strong> अरूको व्यक्तिगत तस्बिर, भिडियो वा सूचना उनीहरूको अनुमतिबिना अनलाइनमा राख्नुहुँदैन र आफ्नो प्राइभेसी सेटिङ पनि बलियो बनाउनुपर्छ।</li>
+                    <li><strong>सकारात्मक सञ्चारको प्रवर्द्धन:</strong> समाजमा उपयोगी, उत्प्रेरक र शिक्षामूलक सामग्री मात्र प्रकाशन वा शेयर गर्नुपर्छ।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> डिजिटल सञ्चार आधुनिक मानवका लागि बरदान साबित भएको छ। यसको सही र उत्तरदायी प्रयोगले हाम्रो सिकाइ, सम्बन्ध र पेसालाई नयाँ उचाइ दिन्छ भने यसको गैरजिम्मेवार प्रयोगले साइबर सजाय र सामाजिक पतन निम्त्याउन सक्छ। तसर्थ, हामीले प्रविधिको प्रयोग गर्दा विवेकशील बन्नु जरुरी छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ९. प्राविधिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section9">
+            <i class="fas fa-book-open"></i>
+            ९. पारिभाषिक र प्राविधिक शब्दावली
+            <span class="mark-badge purple">Technical Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> सञ्चार (Communication)</strong>
+                <p>दुई वा दुईभन्दा बढी व्यक्ति वा पक्षहरूबीच सूचना, विचार वा भावनाहरूको आदानप्रदान गर्ने र सोही रूपमा बुझ्ने प्रक्रिया <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> प्रेषक (Sender)</strong>
+                <p>सञ्चार प्रक्रियाको थालनी गर्ने र सन्देश वा सूचना पठाउने मुख्य व्यक्ति वा पक्ष <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> प्रापक (Receiver)</strong>
+                <p>प्रेषकद्वारा पठाइएको सन्देश प्राप्त गर्ने र त्यसलाई बुझ्ने व्यक्ति वा पक्ष <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> पृष्ठपोषण (Feedback)</strong>
+                <p>प्राप्त सन्देश बुझेपछि प्रापकले प्रेषकलाई दिने प्रतिक्रिया वा जवाफ, जसले सञ्चार पूरा भएको सङ्केत गर्छ <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> सक्रिय सुनाइ (Active Listening)</strong>
+                <p>वक्ता वा प्रेषकका कुराहरूलाई विचलित नभई पूर्ण ध्यान, धैर्यता र सम्मानका साथ सुन्ने र बुझ्ने जीवनोपयोगी सीप।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> साङ्केतिक सञ्चार (Non-verbal)</strong>
+                <p>शब्द वा भाषाको प्रयोग नगरी इसारा, शारीरिक हाउभाउ, र रङहरूको माध्यमबाट गरिने तत्काल प्रभावकारी सञ्चार <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> मनोवैज्ञानिक अवरोध</strong>
+                <p>मानिसको रिस, डर, पूर्वाग्रह वा मानसिक तनावका कारण सिर्जना हुने सञ्चारको बाधा <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> भाषिक अवरोध (Semantic)</strong>
+                <p>भाषाको फरक बुझाइ, कठिन प्राविधिक शब्दहरू वा अस्पष्ट व्याकरणका कारण उत्पन्न हुने सञ्चारको बाधा <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> अहम्ता (Ego)</strong>
+                <p>आफूलाई अरूभन्दा श्रेष्ठ ठान्ने भावना, जसले सङ्गठन वा सम्बन्धमा दोहोरो र खुला सञ्चार हुन दिँदैन <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> खुला सिकाइ (Open Learning)</strong>
+                <p>निश्चित कक्षाकोठा वा पाठ्यपुस्तक बाहिर रहेर प्रविधि, समाज र परिवेशको व्यावहारिक प्रयोगद्वारा ज्ञान प्राप्त गर्ने निरन्तर प्रक्रिया <span class="ref">[१२]</span>।</p>
+            </div>
+        </div>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#b45309; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> सञ्चार मानव सम्बन्धको पुल हो। सक्रिय सुनाइ र स्पष्ट बोलीले नै सफलता प्राप्त गर्न सकिन्छ। डिजिटल संसारमा सधैँ सभ्य, नैतिक र उत्तरदायी बन्नुहोस्।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ३, पाठ ३</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

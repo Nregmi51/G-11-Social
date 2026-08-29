@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ २, पाठ १ – डिजिटल साक्षरता (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #eeebe6;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.07);
+            padding: 24px 18px 36px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d9cfc0;
+            padding-bottom: 14px;
+            margin-bottom: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #c4450c;
+            margin-right: 8px;
+        }
+
+        .main-header .subtitle {
+            font-size: 0.95rem;
+            color: #4d5f72;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1f7a4a;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 4px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #fcf7f0;
+            border-radius: 60px;
+            padding: 12px 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #e6dccf;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+        }
+
+        .credit-bar .email {
+            color: #a0522d;
+        }
+
+        .credit-bar i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #f6f2ec;
+            border-radius: 20px;
+            padding: 20px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #e0d6c8;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-section h3 i {
+            color: #c4450c;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 20px;
+        }
+
+        .toc-grid a {
+            color: #1a3a5c;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-grid a:hover {
+            color: #c4450c;
+            border-bottom-color: #c4450c;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #c4450c;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 550px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #c4450c;
+            margin: 40px 0 16px;
+            padding-bottom: 6px;
+            border-bottom: 4px solid #f0e0d0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+        }
+
+        .section-head i {
+            font-size: 1.4rem;
+            color: #c4450c;
+        }
+
+        .section-head .mark-badge {
+            background: #0b2b4a;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+        }
+
+        .section-head .mark-badge.gold {
+            background: #b45309;
+        }
+
+        .section-head .mark-badge.green {
+            background: #1f7a4a;
+        }
+
+        .section-head .mark-badge.purple {
+            background: #6b3fa0;
+        }
+
+        .sub-head {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #1a5a7a;
+            margin: 28px 0 12px;
+            padding-left: 12px;
+            border-left: 6px solid #c4450c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #c4450c;
+            font-size: 1.1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+        }
+
+        .content-box.blue {
+            border-left-color: #2a6b8a;
+        }
+
+        .content-box.green {
+            border-left-color: #1f7a4a;
+        }
+
+        .content-box.purple {
+            border-left-color: #6b3fa0;
+        }
+
+        .content-box p {
+            margin-bottom: 6px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .content-box li {
+            margin-bottom: 4px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #d9d0c4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 10px 14px;
+            border: 1px solid #d9d0c4;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #e8dfd4;
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        .table-caption {
+            background: #f4efe8;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #d9d0c4;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+        }
+
+        .qa-block .q {
+            font-weight: 800;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.02rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #c4450c;
+            font-weight: 900;
+            min-width: 28px;
+        }
+
+        .qa-block .a {
+            margin-top: 4px;
+            padding-left: 44px;
+            color: #1e2a3a;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 4px;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 12px 16px;
+            border-left: 5px solid #6b3fa0;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1rem;
+        }
+
+        .glossary-item p {
+            margin-top: 2px;
+            font-size: 0.92rem;
+            color: #2d3a4a;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #c4450c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            font-size: 1.6rem;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(196, 69, 12, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #a0360a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 24px rgba(196, 69, 12, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #e0d6c8;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 24px;
+            font-weight: 500;
+        }
+
+        .footer-copy i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #d7cec0;
+            margin: 28px 0 10px;
+        }
+
+        .ref-note {
+            font-size: 0.85rem;
+            color: #5f6f80;
+            background: #f0ece6;
+            padding: 4px 14px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.2rem;
+            }
+
+            .section-head {
+                font-size: 1.15rem;
+            }
+
+            .sub-head {
+                font-size: 1.02rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 0.92rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.8rem;
+                padding: 10px 16px;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th,
+            td {
+                padding: 6px 8px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 48px;
+                height: 48px;
+                font-size: 1.2rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .toc-grid a {
+                font-size: 0.82rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 32px 42px 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-laptop"></i>
+                    एकाइ २, पाठ १: डिजिटल साक्षरता
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> पूर्ण नोट</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Regmi Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">regminarayan983@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ २, पाठ १
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची (Table of Contents)</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> १. पाठको अवधारणात्मक परिचय</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> २. कम्प्युटर प्रणाली र हार्डवेयर वर्गीकरण</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> ३. माइक्रोसफ्ट वर्ड र प्रिन्ट गर्ने विधि</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> ४. क्रियाकलापहरूको समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> ५. अभ्यासहरूको पूर्ण समाधान</a>
+                <a href="#section6"><i class="fas fa-chevron-right"></i> ६. परीक्षा उपयोगी प्रश्नोत्तर</a>
+                <a href="#section7"><i class="fas fa-chevron-right"></i> ७. प्राविधिक शब्दावली</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पाठको अवधारणात्मक परिचय ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-lightbulb"></i>
+            १. पाठको अवधारणात्मक परिचय
+            <span class="mark-badge">Core Concepts</span>
+        </div>
+
+        <div class="content-box">
+            <p><strong>सूचना तथा सञ्चार प्रविधि (ICT) र डिजिटल साक्षरता:</strong> एक्काइसौँ शताब्दी विज्ञान र प्रविधिको युग हो। सूचना तथा सञ्चार प्रविधि (ICT) भन्नाले कम्प्युटर, इन्टरनेट तथा अन्य विद्युतीय माध्यमको प्रयोग गरेर निम्न कार्यहरू गर्ने प्रविधिलाई बुझिन्छ:</p>
+            <ul>
+                <li>तथ्याङ्क (Data) सङ्कलन गर्ने।</li>
+                <li>सङ्कलित तथ्याङ्कलाई प्रशोधन (Processing) गरी सूचनामा परिवर्तन गर्ने।</li>
+                <li>प्रशोधित सूचनालाई भविष्यका लागि भण्डारण (Storage) गर्ने।</li>
+                <li>आवश्यक परेको समयमा सूचना प्रयोगकर्तालाई उपलब्ध गराउने।</li>
+            </ul>
+        </div>
+
+        <div class="content-box blue">
+            <p><strong>डिजिटल साक्षरता:</strong> सूचना तथा सञ्चार प्रविधि प्रयोग गरी कुनै पनि सूचना प्राप्त गर्ने, त्यसको सत्यता मूल्याङ्कन गर्ने, नयाँ सामग्री सिर्जना गर्ने र प्रभावकारी रूपमा सञ्चार गर्ने क्षमतालाई <strong>'डिजिटल साक्षरता'</strong> भनिन्छ।</p>
+        </div>
+
+        <!-- ===== नेपालमा कम्प्युटरको इतिहास ===== -->
+        <div class="sub-head"><i class="fas fa-history"></i> नेपालमा कम्प्युटरको इतिहास (Timeline)</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: नेपालमा कम्प्युटरको विकासक्रम</div>
+            <table>
+                <thead>
+                    <tr><th>समय (वि.सं.)</th><th>समय (सन्)</th><th>मुख्य घटना</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>२०२८</strong></td>
+                        <td><strong>१९७२</strong></td>
+                        <td>जनगणनाको तथ्याङ्क प्रशोधनका लागि पहिलोपटक <strong>IBM 1401</strong> (Mainframe Computer) भित्र्याइएको।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२०४७</strong></td>
+                        <td><strong>१९९०</strong></td>
+                        <td>प्रजातन्त्रको पुनर्स्थापना पछि निजी क्षेत्र र विद्यालयहरूमा सूचना तथा सञ्चार प्रविधिको द्रुत विकास भएको।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== प्रो. हिल्लर स्पाइडर्स ===== -->
+        <div class="sub-head"><i class="fas fa-user-graduate"></i> प्रो. हिल्लर स्पाइडर्स (Hiller Spires) का तीन पक्षहरू</div>
+
+        <div class="content-box green">
+            <p>डिजिटल साक्षरताका तीनवटा मुख्य स्तम्भहरूलाई निम्न बमोजिम व्याख्या गरिएको छ:</p>
+            <ol>
+                <li><strong>डिजिटल सामग्री प्राप्त र उपयोग गर्ने:</strong> अनलाइन वा अफलाइन माध्यमबाट सूचना खोज्ने, बुझ्ने र त्यसको सही प्रयोग गर्ने क्षमता।</li>
+                <li><strong>डिजिटल सामग्री सिर्जना गर्ने:</strong> कम्प्युटर सफ्टवेयर प्रयोग गरेर नयाँ लेख, डकुमेन्ट, फोटो वा भिडियोहरू डिजिटल रूपमा तयार पार्ने।</li>
+                <li><strong>डिजिटल सामग्री सञ्चार वा वितरण गर्ने:</strong> तयार पारिएका सामग्रीहरू इमेल, सामाजिक सञ्जाल वा वेबसाइट मार्फत अरूसम्म सुरक्षित रूपमा पुर्‍याउने।</li>
+            </ol>
+            <p style="margin-top:8px;">कम्प्युटर र ICT बीचको अभिन्न सम्बन्ध छ; कम्प्युटर एउटा भौतिक यन्त्र हो भने ICT त्यस यन्त्र र इन्टरनेटको माध्यमबाट सूचना व्यवस्थापन गर्ने समग्र प्रक्रिया हो।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. कम्प्युटर प्रणाली र हार्डवेयर वर्गीकरण ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-microchip"></i>
+            २. कम्प्युटर प्रणाली र हार्डवेयर वर्गीकरण
+            <span class="mark-badge gold">Hardware &amp; Software</span>
+        </div>
+
+        <div class="content-box">
+            <p>कम्प्युटर प्रणाली हार्डवेयर र सफ्टवेयरको संयुक्त रूप हो। यिनीहरू बीचको भिन्नता तलको तालिकामा प्रस्तुत गरिएको छ:</p>
+        </div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: हार्डवेयर र सफ्टवेयर बीचको भिन्नता</div>
+            <table>
+                <thead>
+                    <tr><th>पक्ष</th><th>हार्डवेयर (Hardware)</th><th>सफ्टवेयर (Software)</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>परिभाषा</strong></td>
+                        <td>कम्प्युटरका ती भौतिक अङ्गहरू जसलाई प्रत्यक्ष देख्न र छुन सकिन्छ।</td>
+                        <td>कम्प्युटरलाई सञ्चालन गर्न कम्प्युटरले बुझ्ने भाषामा तयार पारिएको निर्देशनहरूको प्याकेज।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>उदाहरण</strong></td>
+                        <td>मनिटर, माउस, किबोर्ड, CPU, हार्ड डिस्क, प्रिन्टर।</td>
+                        <td>माइक्रोसफ्ट वर्ड, विन्डोज (OS), वेब ब्राउजर, एन्टिभाइरस।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>प्रकृति</strong></td>
+                        <td>यो विद्युतीय शक्तिबाट चल्ने भौतिक यन्त्र वा पाटपुर्जा हो।</td>
+                        <td>यो कम्प्युटरको अदृश्य प्रोग्राम हो, जसले हार्डवेयरलाई निर्देशन दिन्छ।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== हार्डवेयरको वर्गीकरण ===== -->
+        <div class="sub-head"><i class="fas fa-sitemap"></i> हार्डवेयरको वर्गीकरण</div>
+
+        <div class="content-box blue">
+            <p>कार्य र प्रयोगका आधारमा हार्डवेयरलाई मुख्य <strong>चार</strong> भागमा वर्गीकरण गरिएको छ:</p>
+
+            <ol>
+                <li>
+                    <strong>इनपुट उपकरण (Input Device):</strong> कम्प्युटरमा तथ्याङ्क वा निर्देशन प्रविष्ट गराउन प्रयोग हुने उपकरण।
+                    <ul>
+                        <li>उदाहरण: माउस, किबोर्ड, क्यामेरा, माइक्रोफोन, स्क्यानर।</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>प्रशोधन उपकरण (Processing Device):</strong> प्रविष्ट भएका तथ्याङ्कलाई निर्देशन अनुसार गणना वा प्रशोधन गर्ने उपकरण।
+                    <ul>
+                        <li>उदाहरण: Central Processing Unit (CPU)।</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>आउटपुट उपकरण (Output Device):</strong> प्रशोधित नतिजा वा सूचना प्रयोगकर्तालाई देखाउन प्रयोग हुने उपकरण।
+                    <ul>
+                        <li>उदाहरण: मनिटर, प्रोजेक्टर, स्पिकर, प्रिन्टर।</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>भण्डारण उपकरण (Storage Device):</strong> सूचनालाई भविष्यमा पुनः प्रयोग गर्नका लागि सुरक्षित राख्ने उपकरण।
+                    <ul>
+                        <li>उदाहरण: हार्ड डिस्क, पेनड्राइभ, मेमोरी कार्ड, सीडी/डिभिडी।</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. माइक्रोसफ्ट वर्ड र प्रिन्ट गर्ने विधि ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-file-word"></i>
+            ३. माइक्रोसफ्ट वर्ड र प्रिन्ट गर्ने व्यावहारिक विधि
+            <span class="mark-badge green">MS Word Guide</span>
+        </div>
+
+        <div class="content-box">
+            <p><strong>MS Word मा डकुमेन्ट तयार गर्ने र सुरक्षित (Save) गर्ने चरणहरू:</strong></p>
+            <ol>
+                <li>कम्प्युटरको Start Menu मा क्लिक गर्ने।</li>
+                <li>Microsoft Office Word खोजेर Blank Document मा क्लिक गर्ने।</li>
+                <li>फाइल सेभ गर्न File Tab मा जाने र Save वा Save As मा क्लिक गर्ने।</li>
+                <li><strong>महत्त्वपूर्ण चरण:</strong> अब This PC मा क्लिक गरी आफ्नो फाइल कुन लोकेशन (जस्तै: Local Disk D: वा Desktop) मा राख्ने हो सो छनोट गर्ने।</li>
+                <li>File Name भएको ठाउँमा फाइलको नाम टाइप गर्ने र Save बटनमा क्लिक गर्ने।</li>
+                <li>टाइप गर्दा आवश्यकता अनुसार नेपाली फन्ट (Preeti, Sagarmatha) वा अङ्ग्रेजी फन्ट छनोट गर्ने।</li>
+            </ol>
+        </div>
+
+        <!-- ===== प्रिन्ट गर्ने प्रक्रिया ===== -->
+        <div class="sub-head"><i class="fas fa-print"></i> प्रिन्ट गर्ने प्रक्रिया</div>
+
+        <div class="content-box blue">
+            <p>कागजात प्रिन्ट गर्न फाइल मेनुमा गई निम्न सेटिङहरू मिलाउनुपर्छ:</p>
+            <ul>
+                <li><strong>File Menu</strong> मा गएर <strong>Print</strong> अप्सनमा क्लिक गर्ने।</li>
+                <li><strong>Print Preview</strong> हेर्ने (कागजमा कस्तो देखिन्छ भनेर चेक गर्ने)।</li>
+                <li><strong>Printer Selection:</strong> उपलब्ध प्रिन्टरहरूको सूचीबाट उपयुक्त प्रिन्टर छनोट गर्ने।</li>
+                <li><strong>Pages (पेज सेटिङ):</strong>
+                    <ul>
+                        <li>लगातार पेजहरू निकाल्न <strong>'हाइफन' (-)</strong> प्रयोग गर्ने (जस्तै: 1-5 भन्नाले १ देखि ५ सम्मका सबै पेज)।</li>
+                        <li>छुटाइएका वा निश्चित पेजहरू मात्र निकाल्न <strong>'कमा' (,)</strong> प्रयोग गर्ने (जस्तै: 1, 3, 5 भन्नाले १, ३ र ५ नम्बरका पेज मात्र)।</li>
+                    </ul>
+                </li>
+                <li><strong>Paper Size:</strong> सामान्यतया <strong>A4</strong> साइज छनोट गर्ने।</li>
+                <li><strong>Copies:</strong> कति प्रति (कपी) निकाल्ने हो सो सङ्ख्या टाइप गर्ने र <strong>Print</strong> बटन थिच्ने।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. क्रियाकलापहरूको समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-hands"></i>
+            ४. पाठका क्रियाकलापहरूको समाधान
+            <span class="mark-badge gold">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-checklist"></i> क्रियाकलाप १: प्रिन्ट गर्ने छिटो चेकलिस्ट</div>
+
+        <div class="content-box green">
+            <p>कम्प्युटरमा भएका डकुमेन्ट प्रिन्ट गर्न निम्न <strong>५ चरणहरू</strong> पालना गर्नुहोस्:</p>
+            <ol>
+                <li>प्रिन्टर कम्प्युटरमा जोडिएको र 'अन' भएको सुनिश्चित गर्नुहोस्।</li>
+                <li>प्रिन्ट गर्नुपर्ने फाइल खोली <strong>Ctrl + P</strong> थिच्नुहोस्।</li>
+                <li>Print Preview मा मार्जिन र फन्ट सही छ/छैन जाँच गर्नुहोस्।</li>
+                <li>आवश्यक पेज सङ्ख्या (जस्तै: १, ४, ६ वा १-१०) र कपी सङ्ख्या सेट गर्नुहोस्।</li>
+                <li>प्रिन्टरको नाम छनोट गरी <strong>Print</strong> बटन क्लिक गर्नुहोस्।</li>
+            </ol>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-software"></i> क्रियाकलाप २: मुख्य सफ्टवेयरहरूको प्रयोग</div>
+
+        <div class="content-box blue">
+            <ul>
+                <li><strong>माइक्रोसफ्ट वर्ड:</strong> चिठीपत्र, रिपोर्ट र विभिन्न डकुमेन्टहरू टाइप गर्न र फर्म्याट गर्न।</li>
+                <li><strong>एक्सेल:</strong> आर्थिक हिसाब-किताब, बजेट निर्माण र तालिका व्यवस्थापन गर्न।</li>
+                <li><strong>पावरपोइन्ट:</strong> शिक्षण वा व्यावसायिक मिटिङका लागि आकर्षक प्रस्तुतीकरण (Presentation) तयार पार्न।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. अभ्यासहरूको पूर्ण समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-check-double"></i>
+            ५. पाठका अभ्यासहरूको पूर्ण समाधान
+            <span class="mark-badge">Exercise</span>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">(क)</span> कम्प्युटरको प्रयोग भइरहेका दुई क्षेत्र लेख्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> शिक्षा (अनलाइन कक्षा) र बैङ्किङ (कारोबार व्यवस्थापन)।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">(ख)</span> डिजिटल साक्षरता भन्नाले के बुझिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> डिजिटल माध्यमबाट सूचना प्राप्त गर्ने, मूल्याङ्कन गर्ने, सिर्जना गर्ने र सञ्चार गर्ने समग्र क्षमतालाई बुझिन्छ।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">(ग)</span> सूचना तथा सञ्चार प्रविधि भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> तथ्याङ्क सङ्कलन, प्रशोधन, भण्डारण र उपलब्ध गराउने कार्यमा प्रयोग हुने समग्र प्रविधिलाई ICT भनिन्छ।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">(घ)</span> कम्प्युटर हार्डवेयरको वर्गीकरण गर्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> इनपुट (किबोर्ड), प्रशोधन (CPU), आउटपुट (मनिटर) र भण्डारण (पेनड्राइभ)।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">(ङ)</span> 'कम्प्युटरको प्रयोग आज विश्वव्यापी भएको छ' पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> आजको युगमा मानिसको बिहानदेखि बेलुकासम्मका हरेक क्रियाकलाप कम्प्युटरसँग जोडिएका छन्। शिक्षा, स्वास्थ्य, सञ्चार, यातायात, र सरकारी सेवाहरूमा कम्प्युटरको अनिवार्य प्रयोग भएकाले यो विश्वव्यापी भएको हो।
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">(च)</span> Microsoft Word मा के के काम गर्न सकिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> यसमा डकुमेन्ट टाइप गर्न, चिठीपत्र लेख्न, टेवल र फोटो समावेश गर्न, फाइल सुरक्षित राख्न र प्रिन्ट गर्न सकिन्छ।</div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ६. परीक्षा उपयोगी प्रश्नोत्तर ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section6">
+            <i class="fas fa-bullseye"></i>
+            ६. परीक्षा उपयोगी सम्भावित प्रश्नोत्तरहरू
+            <span class="mark-badge gold">Exam-oriented</span>
+        </div>
+
+        <!-- अति संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तर (१ अङ्क)</div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">१.</span> नेपालमा पहिलोपटक भित्रिएको कम्प्युटर कुन हो?</div>
+            <div class="a"><strong>उत्तर:</strong> IBM 1401</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">२.</span> सफ्टवेयरको परिभाषा के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> कम्प्युटर सञ्चालन गर्न तयार पारिएको निर्देशनहरूको प्याकेज।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">३.</span> डिजिटल साक्षरताका तीन स्तम्भ कसले प्रतिपादन गरेका हुन्?</div>
+            <div class="a"><strong>उत्तर:</strong> प्रो. हिल्लर स्पाइडर्स।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">४.</span> प्रिन्ट गर्दा निश्चित पेजहरू छुट्याएर निकाल्न कुन चिह्न प्रयोग गरिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> कमा ( , )</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">५.</span> नेपाली टाइपका लागि प्रचलित एउटा फन्टको नाम लेख्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> Preeti</div>
+        </div>
+
+        <!-- संक्षिप्त (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तर (५ अङ्क)</div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">प्रश्न:</span> डिजिटल साक्षरताको महत्त्व उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> आधुनिक युगमा सफल हुन डिजिटल साक्षरता अनिवार्य छ। यसले:</p>
+                <ul>
+                    <li>इन्टरनेटको माध्यमबाट सही सूचनाको पहिचान गर्न,</li>
+                    <li>अनलाइन सेवाहरू (इ-बैङ्किङ, सरकारी फाराम) सुरक्षित रूपमा उपयोग गर्न,</li>
+                    <li>नयाँ सिप सिक्न र</li>
+                    <li>सुरक्षित अनलाइन सञ्चार गर्न मद्दत गर्दछ।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तरात्मक प्रश्न (८ अङ्क)</div>
+
+        <div class="qa-block" style="border-left-color:#1f7a4a;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "२१औँ शताब्दीमा डिजिटल साक्षरता किन अनिवार्य जीवनोपयोगी सिप हो?" तार्किक उत्तर दिनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> २१औँ शताब्दी प्रविधिको युग हो। आजको समयमा व्यक्तिगत र व्यावसायिक सफलताका लागि डिजिटल साक्षरता अनिवार्य भइसकेको छ। यसलाई निम्न बुँदाका आधारमा पुष्टि गर्न सकिन्छ:</p>
+
+                <ol>
+                    <li><strong>व्यावसायिक सक्षमता (Professional Competency):</strong> हाल जुनसुकै रोजगारीका लागि कम्प्युटर र इन्टरनेटको आधारभूत ज्ञान अनिवार्य सर्त बनेको छ। अनलाइन फाराम भर्न, जागिर खोज्न र कार्यस्थलमा इमेल तथा सफ्टवेयर चलाउन डिजिटल साक्षरता नभई हुँदैन।</li>
+
+                    <li><strong>सूचनामा पहुँच (Access to Information):</strong> विश्वभरका पुस्तकालय, अनुसन्धान र समाचारहरू अहिले एक क्लिकमा उपलब्ध छन्। डिजिटल रूपमा साक्षर व्यक्तिले मात्र यी सूचनाको सही मूल्याङ्कन गरी आफ्नो शैक्षिक र बौद्धिक विकासमा प्रयोग गर्न सक्छ।</li>
+
+                    <li><strong>सुरक्षित सञ्चार र वित्तीय कारोबार (Safe Communication & Finance):</strong> अनलाइन भुक्तानी, इ-बैङ्किङ र सामाजिक सञ्जालको प्रयोग बढ्दो छ। डिजिटल रूपमा साक्षर व्यक्तिले मात्र आफ्नो गोप्य पासवर्ड सुरक्षित राख्न र 'साइबर अपराध' बाट बच्न सक्छ।</li>
+                </ol>
+
+                <p><strong>निष्कर्ष:</strong> सूचनाको पहुँचबाट वञ्चित नहुन र आधुनिक विश्वसँग प्रतिस्पर्धा गर्न डिजिटल साक्षरता एक अपरिहार्य जीवनोपयोगी सिप हो।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ७. प्राविधिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section7">
+            <i class="fas fa-book-open"></i>
+            ७. प्राविधिक शब्दावली
+            <span class="mark-badge purple">Technical Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> ICT</strong>
+                <p>सूचना प्राप्त गर्ने, प्रशोधन गर्ने र सञ्चार गर्ने प्रविधि।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> Hardware</strong>
+                <p>कम्प्युटरका भौतिक र छुन सकिने अङ्गहरू।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> Software</strong>
+                <p>कम्प्युटर चलाउन दिइने डिजिटल निर्देशन वा प्रोग्राम।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> CPU</strong>
+                <p>कम्प्युटरको मस्तिष्क, जसले सबै तथ्याङ्क प्रशोधन गर्छ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> Mainframe Computer</strong>
+                <p>धेरै ठुलो परिमाणमा तथ्याङ्क प्रशोधन (Large scale data processing) गर्न प्रयोग गरिने शक्तिशाली कम्प्युटर।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> Input Device</strong>
+                <p>कम्प्युटरभित्र तथ्याङ्क पठाउने उपकरण (जस्तै: माउस)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> Output Device</strong>
+                <p>प्रशोधित नतिजा देखाउने उपकरण (जस्तै: प्रिन्टर)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> Storage Device</strong>
+                <p>सूचना सुरक्षित राख्ने उपकरण (जस्तै: हार्ड डिस्क)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> Print Preview</strong>
+                <p>प्रिन्ट गर्नुअघि डकुमेन्टको बनावट कस्तो छ भनेर हेर्ने सुविधा।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> Digital Literacy</strong>
+                <p>डिजिटल माध्यमबाट सूचना सङ्कलन, मूल्याङ्कन र सञ्चार गर्ने क्षमता।</p>
+            </div>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Regmi Sir</span></span>
+            <span><i class="fas fa-envelope"></i> regminarayan983@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ २, पाठ १</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

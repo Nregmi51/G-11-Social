@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>कक्षा ११ - एकाई ३: जीवनोपयोगी सीप (१२ लामो प्रश्नोत्तर)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a2463;
+            --primary-dark: #061a4a;
+            --primary-light: #1a3a7a;
+            --secondary: #2d3436;
+            --accent1: #f9ca24;
+            --accent2: #00b894;
+            --accent3: #6c5ce7;
+            --bg-light: #f0f2f7;
+            --bg-card: #ffffff;
+            --shadow: 0 6px 24px rgba(10, 36, 99, 0.12);
+            --radius: 14px;
+            --transition: 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', sans-serif;
+            background: var(--bg-light);
+            color: var(--secondary);
+            line-height: 1.8;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, #0a2463 0%, #061a4a 60%, #040f2e 100%);
+            color: #fff;
+            padding: 22px 16px 26px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 24px rgba(10, 36, 99, 0.4);
+            border-bottom: 4px solid var(--accent1);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .header-title {
+            font-size: clamp(1.1rem, 4vw, 2rem);
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .header-title .badge {
+            background: var(--accent1);
+            color: var(--primary-dark);
+            font-size: 0.45em;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-weight: 800;
+        }
+
+        .header-badge {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(4px);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-badge .count {
+            background: var(--accent1);
+            color: var(--primary-dark);
+            padding: 0 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-bar {
+            background: #fff;
+            padding: 12px 14px;
+            position: sticky;
+            top: 72px;
+            z-index: 998;
+            box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+            border-bottom: 2px solid #eef0f3;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .nav-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 8px;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            min-width: max-content;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+            background: #f1f2f6;
+            border: 2px solid transparent;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent1);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(10, 36, 99, 0.3);
+            border-color: var(--primary);
+        }
+
+        .nav-btn .qty {
+            background: rgba(0, 0, 0, 0.08);
+            padding: 0 10px;
+            border-radius: 20px;
+            font-size: 0.6rem;
+            margin-left: 6px;
+            font-weight: 800;
+        }
+
+        .nav-btn.active .qty {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* ===== MAIN ===== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 18px 14px 100px;
+        }
+
+        /* ===== SECTION HEADER ===== */
+        .section-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            padding: 20px 26px;
+            border-radius: var(--radius);
+            margin: 32px 0 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(10, 36, 99, 0.3);
+            scroll-margin-top: 150px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.2rem, 3.2vw, 1.8rem);
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .section-header .icon {
+            font-size: 1.8rem;
+        }
+
+        .section-header .count {
+            background: rgba(255, 255, 255, 0.18);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .section-header .sub {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* ===== CARDS — always open ===== */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+            overflow: visible;
+            transition: var(--transition);
+            border-left: 6px solid var(--primary);
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 38px rgba(10, 36, 99, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            padding: 20px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: #fafbfc;
+            border-bottom: 2px solid #eef0f3;
+        }
+
+        .card-header .num {
+            font-weight: 900;
+            font-size: 1.3rem;
+            min-width: 44px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(10, 36, 99, 0.25);
+        }
+
+        .card-header .q-text {
+            font-weight: 800;
+            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            flex: 1;
+            line-height: 1.7;
+            color: var(--primary-dark);
+        }
+
+        .card-body {
+            padding: 22px 24px 28px;
+            background: #fff;
+        }
+
+        .card-body .answer {
+            font-size: clamp(1rem, 1.7vw, 1.15rem);
+            font-weight: 500;
+            line-height: 2.1;
+            color: #1a1a2e;
+        }
+
+        .card-body .answer b,
+        .card-body .answer strong {
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .card-body .answer .highlight {
+            background: var(--accent1);
+            padding: 0 8px;
+            border-radius: 4px;
+            font-weight: 800;
+        }
+
+        .card-body .answer ul,
+        .card-body .answer ol {
+            padding-left: 32px;
+            margin: 10px 0 16px;
+        }
+
+        .card-body .answer li {
+            margin-bottom: 8px;
+        }
+
+        .card-body .answer .section-title {
+            font-weight: 800;
+            font-size: 1.1em;
+            color: var(--primary);
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 6px;
+            border-bottom: 2px solid var(--accent1);
+            padding-bottom: 4px;
+        }
+
+        .card-body .answer .sub-title {
+            font-weight: 800;
+            color: var(--primary-dark);
+            font-size: 1.05em;
+        }
+
+        /* ===== TABLE inside answer ===== */
+        .answer-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(0.85rem, 1.4vw, 1rem);
+            margin: 14px 0 12px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #dce1ec;
+        }
+
+        .answer-table th {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 800;
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .answer-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #eef0f3;
+            vertical-align: top;
+            background: #fafbfc;
+        }
+
+        .answer-table tr:nth-child(even) td {
+            background: #f5f6fa;
+        }
+
+        .answer-table tr:hover td {
+            background: #eef4ff;
+        }
+
+        .answer-table td:first-child {
+            font-weight: 700;
+            color: var(--primary);
+            width: 28%;
+        }
+
+        /* ===== SCROLL TOP ===== */
+        .scroll-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--primary);
+            color: #fff;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.8rem;
+            box-shadow: 0 6px 28px rgba(10, 36, 99, 0.4);
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        .scroll-top:hover {
+            transform: scale(1.08) translateY(-4px);
+            box-shadow: 0 8px 36px rgba(10, 36, 99, 0.5);
+        }
+
+        /* ===== SEARCH ===== */
+        .search-box {
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px 12px 50px;
+            border-radius: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(4px);
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
+        }
+
+        .search-box input:focus {
+            background: rgba(255, 255, 255, 0.20);
+            border-color: #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+            opacity: 0.7;
+        }
+
+        .highlight-match {
+            background: var(--accent1);
+            padding: 0 6px;
+            border-radius: 4px;
+            font-weight: 900;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 1.2rem;
+            color: #999;
+            display: none;
+            font-weight: 700;
+        }
+
+        .no-results.show {
+            display: block;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header {
+                padding: 14px 12px 18px;
+            }
+            .header-title {
+                font-size: 1rem;
+            }
+            .header-badge {
+                font-size: 0.65rem;
+                padding: 4px 12px;
+            }
+            .header-badge .count {
+                font-size: 0.6rem;
+            }
+            .nav-bar {
+                top: 62px;
+                padding: 8px 10px;
+            }
+            .nav-btn {
+                font-size: 0.7rem;
+                padding: 8px 14px;
+            }
+            .search-box input {
+                font-size: 0.8rem;
+                padding: 10px 16px 10px 44px;
+            }
+            .search-box .search-icon {
+                font-size: 1rem;
+                left: 14px;
+            }
+            .section-header {
+                padding: 14px 18px;
+                margin: 22px 0 14px;
+            }
+            .section-header h2 {
+                font-size: 1rem;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .card-header {
+                padding: 14px 16px;
+                gap: 12px;
+            }
+            .card-header .num {
+                width: 38px;
+                height: 38px;
+                font-size: 0.9rem;
+                min-width: 38px;
+            }
+            .card-header .q-text {
+                font-size: 0.95rem;
+            }
+            .card-body {
+                padding: 16px 16px 22px;
+            }
+            .card-body .answer {
+                font-size: 0.9rem;
+            }
+            .container {
+                padding: 12px 10px 80px;
+            }
+            .scroll-top {
+                width: 50px;
+                height: 50px;
+                font-size: 1.4rem;
+                bottom: 18px;
+                right: 18px;
+            }
+            .answer-table {
+                font-size: 0.75rem;
+                min-width: 320px;
+            }
+            .answer-table th,
+            .answer-table td {
+                padding: 8px 10px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .header-title {
+                font-size: 0.85rem;
+            }
+            .nav-btn {
+                font-size: 0.6rem;
+                padding: 6px 10px;
+            }
+            .card-header .q-text {
+                font-size: 0.85rem;
+            }
+            .card-body .answer {
+                font-size: 0.82rem;
+            }
+            .section-header h2 {
+                font-size: 0.85rem;
+            }
+            .card-header .num {
+                width: 32px;
+                height: 32px;
+                font-size: 0.75rem;
+                min-width: 32px;
+            }
+            .search-box input {
+                font-size: 0.7rem;
+                padding: 8px 12px 8px 36px;
+            }
+            .search-box .search-icon {
+                font-size: 0.9rem;
+                left: 12px;
+            }
+            .card-body .answer ul,
+            .card-body .answer ol {
+                padding-left: 20px;
+            }
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            .nav-bar,
+            .scroll-top,
+            .search-box {
+                display: none !important;
+            }
+            .header {
+                position: static !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .card {
+                break-inside: avoid;
+                border-left-width: 4px;
+            }
+            .section-header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background: #0a2463 !important;
+            }
+            .answer-table th {
+                background: #0a2463 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .card-header .num {
+                background: #0a2463 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* ===== ANIMATION ===== */
+        .fade-in {
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== LARGE SCREEN ===== */
+        @media (min-width: 1400px) {
+            .container {
+                padding: 30px 24px 120px;
+                max-width: 1300px;
+            }
+            .card-header {
+                padding: 26px 34px;
+            }
+            .card-header .q-text {
+                font-size: 1.5rem;
+            }
+            .card-body {
+                padding: 28px 34px 36px;
+            }
+            .card-body .answer {
+                font-size: 1.2rem;
+            }
+            .section-header {
+                padding: 28px 36px;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .nav-btn {
+                font-size: 1rem;
+                padding: 14px 28px;
+            }
+            .header-title {
+                font-size: 2.2rem;
+            }
+            .scroll-top {
+                width: 72px;
+                height: 72px;
+                font-size: 2.2rem;
+            }
+            .card-header .num {
+                width: 56px;
+                height: 56px;
+                font-size: 1.4rem;
+                min-width: 56px;
+            }
+        }
+
+        /* ===== HELPER ===== */
+        .mt-2 {
+            margin-top: 12px;
+        }
+        .mb-1 {
+            margin-bottom: 6px;
+        }
+        .fw-800 {
+            font-weight: 800;
+        }
+        .text-primary {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="top">
+        <div class="header-inner">
+            <div class="header-title">
+                📘 कक्षा ११
+                <span class="badge">एकाई ३</span>
+            </div>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="प्रश्न खोज्नुहोस्..." aria-label="Search">
+            </div>
+            <div class="header-badge">
+                🎯 <span class="count">१२</span> लामो प्रश्न
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav-bar" id="mainNav">
+        <div class="nav-inner">
+            <button class="nav-btn active" data-target="section-top" onclick="scrollToSection('section-top')">
+                📖 सबै प्रश्न <span class="qty">१२</span>
+            </button>
+            <button class="nav-btn" data-target="q1" onclick="scrollToSection('q1')">#१</button>
+            <button class="nav-btn" data-target="q2" onclick="scrollToSection('q2')">#२</button>
+            <button class="nav-btn" data-target="q3" onclick="scrollToSection('q3')">#३</button>
+            <button class="nav-btn" data-target="q4" onclick="scrollToSection('q4')">#४</button>
+            <button class="nav-btn" data-target="q5" onclick="scrollToSection('q5')">#५</button>
+            <button class="nav-btn" data-target="q6" onclick="scrollToSection('q6')">#६</button>
+            <button class="nav-btn" data-target="q7" onclick="scrollToSection('q7')">#७</button>
+            <button class="nav-btn" data-target="q8" onclick="scrollToSection('q8')">#८</button>
+            <button class="nav-btn" data-target="q9" onclick="scrollToSection('q9')">#९</button>
+            <button class="nav-btn" data-target="q10" onclick="scrollToSection('q10')">#१०</button>
+            <button class="nav-btn" data-target="q11" onclick="scrollToSection('q11')">#११</button>
+            <button class="nav-btn" data-target="q12" onclick="scrollToSection('q12')">#१२</button>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="container" id="mainContainer">
+
+        <!-- ===== SECTION HEADER ===== -->
+        <div class="section-header" id="section-top">
+            <h2><span class="icon">📚</span> एकाई ३: जीवनोपयोगी सीप <span class="count">१२ लामो प्रश्न</span></h2>
+            <span class="sub">८ अङ्क भार</span>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न १ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q1" data-search="निर्णय निर्माण Decision Making">
+            <div class="card-header">
+                <span class="num">१</span>
+                <span class="q-text"><b>निर्णय निर्माण (Decision Making) भनेको के हो? यसका प्रकारहरू उल्लेख गर्दै निर्णय गर्दा ध्यान दिनुपर्ने आन्तरिक र बाह्य वातावरणीय पक्षहरूको विस्तृत विवेचना गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. निर्णय निर्माणको परिचय</span></p>
+                    <p>हामीले कुनै पनि काम गर्नुपूर्व आफ्नो उमेर, योग्यता, अनुभव र क्षमताअनुसार कामको सम्बन्धमा आफ्नो सोच वा विचार बनाएका हुन्छौँ। 'के गर्ने, किन गर्ने, कसरी गर्ने, कहाँ गर्ने, कहिले गर्ने' भन्ने प्रश्नहरूको समाधान खोज्दै हामी जुन निष्कर्षमा पुग्छौँ, त्यसलाई <b>निर्णय</b> भनिन्छ [१२]। निर्णय गर्ने कार्यलाई धेरै सम्भावना वा विकल्पहरूमध्येबाट एउटा उत्कृष्ट विकल्पको छनौट गर्ने कार्यका रूपमा बुझिन्छ [१२]।</p>
+                    <p>विभिन्न विकल्पहरूबाट उत्तम विकल्प छनोट गर्ने निश्चित र व्यवस्थित प्रक्रियालाई <b>निर्णय निर्माण (Decision Making)</b> भनिन्छ [१२]। यो केवल एउटा तात्कालिक कार्य मात्र नभएर दूरगामी प्रभाव पार्ने एक मानसिक र बौद्धिक प्रक्रिया हो।</p>
+
+                    <p><span class="section-title">२. निर्णयका प्रकारहरू</span></p>
+                    <p>दैनिक जीवन र संस्थागत कार्य सञ्चालनका क्रममा विभिन्न प्रकारका निर्णयहरू लिइन्छ, जसलाई मुख्यतया ६ भागमा वर्गीकरण गर्न सकिन्छ [१२]:</p>
+                    <ul>
+                        <li><b>(क) सङ्गठनात्मक निर्णय (Organizational Decision):</b> कुनै कार्यालय वा सङ्घसंस्थाको उद्देश्य प्राप्ति वा समस्या समाधानका लागि त्यहाँका पदाधिकारी र कर्मचारीले संस्थाको कामका सन्दर्भमा लिने निर्णयहरू यस अन्तर्गत पर्दछन् [१२]।</li>
+                        <li><b>(ख) व्यक्तिगत निर्णय (Personal Decision):</b> व्यक्तिले आफ्नो दैनिक जीवनयापनका सिलसिलामा आफ्नो इच्छाअनुसार आफैँले लिने निर्णय व्यक्तिगत निर्णय हो [१२]। यसको प्रभाव र असर निर्णय लिने व्यक्तिमा मात्र सीमित रहन्छ [१२]।</li>
+                        <li><b>(ग) सामूहिक निर्णय (Group Decision):</b> आपसी हित वा भलाइका लागि सम्बन्धित व्यक्तिहरू एकआपसमा मिली सामूहिक रूपमा लिने निर्णय सामूहिक निर्णय हो [१२]। यसमा सहभागिता बढी हुने भएकाले कार्यान्वयनमा सहजता हुन्छ [१२]।</li>
+                        <li><b>(घ) विवेकशील निर्णय (Rational Decision):</b> उपलब्ध विकल्पहरूको पहिचान गरी तथ्य र प्रमाणहरूको विश्लेषणबाट प्राप्त निष्कर्षका आधारमा लिइने सर्वोत्तम निर्णय नै विवेकशील निर्णय हो [१२]।</li>
+                        <li><b>(ङ) बढोत्तरी निर्णय (Incremental Decision):</b> यसअघि गरिएका निर्णयहरूलाई आधार मानी भइरहेका कामहरूमा थप परिमार्जन वा सुधार गर्ने गरी लिइने निर्णय बढोत्तरी निर्णय हो [१२]।</li>
+                        <li><b>(च) सहभागितामूलक निर्णय (Participative Decision):</b> लक्षित वर्ग, लाभग्राही वा सरोकारवालाहरूलाई निर्णय प्रक्रियामा सहभागी गराई सबैको हित अनुकूल गरिने निर्णय यस अन्तर्गत पर्दछ [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">३. निर्णय गर्दा ध्यान दिनुपर्ने आन्तरिक र बाह्य पक्षहरू</span></p>
+                    <p>निर्णय प्रक्रियालाई सफल र कार्यान्वयन योग्य बनाउन विभिन्न आन्तरिक र बाह्य वातावरणीय पक्षहरूमा विचार पुर्‍याउनु अपरिहार्य हुन्छ [१२]:</p>
+
+                    <p><b class="sub-title">क) आन्तरिक वातावरणीय पक्षहरू:</b> यी पक्षहरू व्यक्ति वा संस्थाको आन्तरिक नियन्त्रणभित्र रहन्छन् [१२]।</p>
+                    <ul>
+                        <li><b>मानवीय स्रोतसाधन:</b> निर्णय कार्यान्वयन गर्न योग्य, दक्ष र पर्याप्त जनशक्ति उपलब्ध छ वा छैन भन्ने पक्ष [१२]।</li>
+                        <li><b>वित्तीय स्रोतसाधन:</b> निर्णय कार्यान्वयनका लागि आवश्यक बजेट वा आर्थिक लगानीको उपलब्धता [१२]।</li>
+                        <li><b>भौतिक तथा प्राविधिक स्रोतसाधन:</b> आवश्यक उपकरण, प्रविधि र भौतिक पूर्वाधारको अवस्था [१२]।</li>
+                        <li><b>समय सीमा:</b> निर्णय कति समयभित्र कार्यान्वयन गरिसक्नुपर्ने हो भन्ने समयको उपलब्धता [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">ख) बाह्य वातावरणीय पक्षहरू:</b> यी पक्षहरू व्यक्ति वा संस्थाको प्रत्यक्ष नियन्त्रण बाहिर हुन्छन् र निर्णयलाई गहिरो प्रभाव पार्छन् [१२]।</p>
+                    <ul>
+                        <li><b>मुलुकको नीति तथा कानुनी व्यवस्था:</b> देशको विद्यमान ऐन, कानुन, नियम र नीतिहरूसँग निर्णय बाझिनु हुँदैन [१२]।</li>
+                        <li><b>भौगोलिक र सामाजिक-सांस्कृतिक पक्ष:</b> सम्बन्धित क्षेत्रको भूगोल, समाजको संस्कृति, मूल्यमान्यता र परम्परा अनुकूल निर्णय हुनुपर्छ [१२]।</li>
+                        <li><b>आर्थिक र प्रशासनिक पक्ष:</b> बजारको आर्थिक अवस्था र देशको प्रशासनिक संरचना [१२]।</li>
+                        <li><b>प्रतिस्पर्धीको अवस्था र प्रविधिको विकास:</b> बजारमा रहेका प्रतिस्पर्धीहरूको रणनीति र उपलब्ध अत्याधुनिक प्रविधिको अवस्था [१२]।</li>
+                        <li><b>दबाब समूहहरू:</b> विभिन्न राजनीतिक, सामाजिक वा व्यावसायिक दबाब समूहहरूको प्रभाव [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>निर्णय निर्माण एक अत्यन्त संवेदनशील र व्यावहारिक काम हो [१२]। आन्तरिक र बाह्य वातावरणका सबै पक्षहरूको सन्तुलित विश्लेषण नगरी हतारमा लिइने निर्णयले स्रोतसाधन र समयको दुरुपयोग मात्र गराउँछ [१२]। त्यसैले, सफल जीवनयापन र संस्थागत विकासका लागि आन्तरिक क्षमता र बाह्य अवसरहरूको सही लेखाजोखा गरी विवेकशील निर्णय लिनु आवश्यक हुन्छ [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न २ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q2" data-search="निर्णय प्रक्रिया ७ चरण">
+            <div class="card-header">
+                <span class="num">२</span>
+                <span class="q-text"><b>निर्णय प्रक्रियाका ७ वटा क्रमिक चरणहरू के-के हुन्? एक व्यावहारिक उदाहरण प्रस्तुत गर्दै यस प्रक्रियाको विश्लेषण गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. निर्णय प्रक्रिया (Decision Making Process) को परिचय</span></p>
+                    <p>निर्णय गर्नु एक आकस्मिक घटना नभएर विभिन्न चरणहरू पार गर्दै निष्कर्षमा पुग्ने एक व्यवस्थित र वैज्ञानिक चक्र हो [१२]। कुनै पनि साना वा ठुला समस्याहरूको दीर्घकालीन समाधानका लागि निर्णय प्रक्रियाका निर्धारित चरणहरू क्रमिक रूपमा अवलम्बन गर्नुपर्छ [१२]।</p>
+
+                    <p><span class="section-title">२. निर्णय प्रक्रियाका ७ क्रमिक चरणहरू</span></p>
+                    <p>निर्णय प्रक्रिया चक्रमा निम्नलिखित सातवटा चरणहरू समावेश हुन्छन् [१२]:</p>
+                    <ol>
+                        <li><b>समस्याको पहिचान गर्ने (Identifying the Problem):</b> निर्णय लिनुपर्ने मुख्य विषय वा समस्या के हो भनी स्पष्ट रूपमा पहिचान गर्ने पहिलो र प्रस्थान विन्दु हो [१२]।</li>
+                        <li><b>समस्याको विश्लेषण गर्ने (Analyzing the Problem):</b> पहिचान गरिएको समस्या किन उत्पन्न भयो, यसको गम्भीरता कति छ र यसका प्रभावहरू के-के हुन् भनी गहिरो अध्ययन गर्ने [१२]।</li>
+                        <li><b>विकल्पको पहिचान गर्ने (Identifying Alternatives):</b> समस्या समाधानका लागि सम्भाव्य उपाय वा विकल्पहरूको खोजी गरी सूची तयार गर्ने [१२]।</li>
+                        <li><b>विकल्पको विश्लेषण गर्ने (Analyzing Alternatives):</b> पहिचान गरिएका प्रत्येक विकल्पका फाइदा, बेफाइदा, लागत, र भविष्यमा पर्न सक्ने असरको लेखाजोखा गर्ने [१२]।</li>
+                        <li><b>सबैभन्दा राम्रो विकल्प छनोट गर्ने (Selecting the Best Alternative):</b> उपलब्ध विकल्पहरूमध्ये सबैभन्दा कम जोखिमपूर्ण, बढी प्रभावकारी र व्यावहारिक उत्तम विकल्पको छनोट गर्ने [१२]।</li>
+                        <li><b>निर्णय कार्यान्वयन गर्ने (Implementing the Decision):</b> छनोट गरिएको सर्वोत्तम विकल्पलाई व्यवहारमा लागू गर्ने वा कार्यरूप दिने [१२]।</li>
+                        <li><b>पुनरावलोकन तथा मूल्याङ्कन गर्ने (Review and Evaluation):</b> कार्यान्वयन गरिएको निर्णयले लक्ष्य प्राप्त भयो कि भएन र त्यसबाट के परिणाम आयो भनी लेखाजोखा गर्ने [१२]।</li>
+                    </ol>
+
+                    <p><span class="section-title">३. व्यावहारिक उदाहरणसहित विश्लेषण (एस.इ.इ. पछिको अध्ययन छनोट)</span></p>
+                    <p>हामी यस प्रक्रियालाई कक्षा ११ मा अध्ययनरत विद्यार्थी जुनसुकै अवस्थामा पनि आइपर्ने <b>"एस.इ.इ. (SEE) पछि कुन विषय र कस्तो विद्यालयमा अध्ययन गर्ने?"</b> भन्ने व्यावहारिक समस्यामार्फत विश्लेषण गर्न सक्छौँ [१२]:</p>
+                    <ul>
+                        <li><b>चरण १: समस्याको पहिचान गर्ने:</b> एस.इ.इ. उत्तीर्ण भएपछि आफ्नो रुचि र क्षमता अनुकूल कुन विषय पढ्ने र कहाँ पढ्ने भन्ने अन्योल हुनु [१२]।</li>
+                        <li><b>चरण २: समस्याको विश्लेषण गर्ने:</b> आफ्ना रुचिहरू (विज्ञान, व्यवस्थापन, मानविकी वा प्राविधिक शिक्षा) बुझ्ने र आफ्नो पारिवारिक आर्थिक अवस्था र अङ्कको विश्लेषण गर्ने [१२]।</li>
+                        <li><b>चरण ३: विकल्पको पहिचान गर्ने:</b> मुख्यतया तीनवटा विकल्प पहिचान गर्ने: क) हाल अध्ययन गरिरहेकै विद्यालयमा व्यवस्थापन वा मानविकी पढ्ने, ख) सहरको नयाँ सुविधासम्पन्न विद्यालयमा विज्ञान संकाय पढ्ने, वा ग) प्राविधिक शिक्षालयमा कृषि वा कम्प्युटर इन्जिनियरिङ पढ्ने [१२]।</li>
+                        <li><b>चरण ४: विकल्पको विश्लेषण गर्ने:</b>
+                            <ul>
+                                <li><i>हालकै विद्यालय:</i> खर्च कम लाग्ने, घरपायक हुने तर शैक्षिक सुविधा र नयाँ अवसर सीमित हुने [१२]।</li>
+                                <li><i>सहरको विद्यालय:</i> विज्ञान पढ्न पाइने, भविष्यमा डाक्टर/इन्जिनियर बन्ने बाटो खुल्ने तर शुल्क महँगो हुने र डेरा बस्नुपर्ने [१२]।</li>
+                                <li><i>प्राविधिक शिक्षालय:</i> छिट्टै रोजगारी पाइने तर उच्च शिक्षाको बाटो साँघुरो हुन सक्ने [१२]।</li>
+                            </ul>
+                        </li>
+                        <li><b>चरण ५: सबैभन्दा राम्रो विकल्प छनोट गर्ने:</b> आफ्नो रुचि चिकित्सा क्षेत्रमा भएको र परिवारले खर्च धान्न सक्ने अवस्था रहेको खण्डमा छात्रवृत्तिको समेत प्रयास गर्ने गरी "सहरको विद्यालयमा विज्ञान पढ्ने" विकल्प छनोट गर्ने [१२]।</li>
+                        <li><b>चरण ६: निर्णय कार्यान्वयन गर्ने:</b> सहरको विद्यालयमा भर्ना भएर नियमित र व्यवस्थित रूपमा अध्ययन सुरु गर्ने [१२]।</li>
+                        <li><b>चरण ७: पुनरावलोकन तथा मूल्याङ्कन गर्ने:</b> विद्यालयको वातावरण कस्तो रह्यो, पठनपाठन सोचे जस्तै छ कि छैन र परीक्षामा उत्कृष्ट नतिजा ल्याउन सकियो कि सकिएन भनी नियमित समीक्षा गर्ने [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>यसरी चरणबद्ध रूपमा गरिएको निर्णय सधैँ तथ्यपरक, व्यावहारिक र त्रुटिरहित हुन्छ [१२]। जीवनका हरेक मोडमा आइपर्ने साना-ठुला निर्णयहरूमा यो ७-चरणीय निर्णय निर्माणको सीप प्रयोग गरेमा दुर्घटना वा असफलताबाट बच्न सकिन्छ [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न ३ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q3" data-search="अनिर्णित अवस्था Indecision">
+            <div class="card-header">
+                <span class="num">३</span>
+                <span class="q-text"><b>अनिर्णित अवस्था (Indecision) भनेको के हो? मानिसहरू अनिर्णित बन्ने मुख्य कारणहरू स्पष्ट पार्दै यसका सम्भावित जोखिम र न्यूनीकरणका उपायहरू व्याख्या गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. अनिर्णित अवस्थाको अवधारणा</span></p>
+                    <p>कुनै समस्या वा परिस्थिति आइपर्दा धेरै विकल्पहरूमध्ये कुन विकल्प रोज्ने भन्ने द्विविधा भई समयमै सही निष्कर्षमा पुग्न नसक्ने मानसिक अलमल वा अन्योलको अवस्थालाई <b>अनिर्णित अवस्था (Indecision)</b> भनिन्छ [१२]। निर्णय गर्ने उपयुक्त अवसर र समय घर्किसक्दा पनि कुनै निर्णय लिन नसक्नु अनिर्णित अवस्था हो [१२]।</p>
+
+                    <p><span class="section-title">२. मानिसहरू अनिर्णित बन्ने ८ मुख्य कारणहरू</span></p>
+                    <p>पाठ्यपुस्तकका आधारमा मानिसहरू अलमल र अनिर्णित बन्नुका प्रमुख कारणहरू निम्नलिखित छन् [१२]:</p>
+                    <ol>
+                        <li><b>पर्याप्त सूचनाको अभाव:</b> निर्णय लिनका लागि आवश्यक पर्ने तथ्य, तथ्याङ्क वा पर्याप्त जानकारी नहुँदा मानिस सही वा गलत छुट्ट्याउन नसकी अनिर्णित बन्छ [१२]।</li>
+                        <li><b>तत्कालको परिस्थिति वा वातावरण:</b> विषम वा असहज परिस्थितिका कारण तत्कालै के कदम चाल्ने भन्ने कुरा ठम्याउन नसक्नु [१२]।</li>
+                        <li><b>दबाब समूह:</b> परिवार, साथीभाइ, समाज वा राजनीतिक दल जस्ता बाह्य दबाब समूहहरूको दबाबका कारण आफ्नो विवेक प्रयोग गर्न नसक्नु [१२]।</li>
+                        <li><b>भविष्यको असर वा प्रभाव:</b> आफूले गरेको निर्णयले भविष्यमा कस्तो नकारात्मक परिणाम वा क्षति ल्याउन सक्छ भन्ने डर र आशङ्का [१२]।</li>
+                        <li><b>स्रोतसाधनको उपलब्धता:</b> आर्थिक, मानवीय वा भौतिक स्रोतसाधनको अभावले गर्दा सोचेअनुसार निर्णय लिन नसक्नु [१२]।</li>
+                        <li><b>निर्णय गर्ने अधिकार:</b> आफूसँग निर्णय लिने पूर्ण कानुनी वा व्यावहारिक अधिकार नहुँदा अन्योल हुनु [१२]।</li>
+                        <li><b>समय सीमा (Time Limit):</b> निर्णय लिनका लागि निकै छोटो वा संकुचित समय हुनु, जसले गर्दा हतारमा सोच्न नसकिनु [१२]।</li>
+                        <li><b>विद्यमान नीति र कानुन:</b> कडा नीतिगत र कानुनी बाधाहरूका कारण कस्तो बाटो रोज्ने भन्ने द्विविधा हुनु [१२]।</li>
+                    </ol>
+
+                    <p><span class="section-title">३. अनिर्णित अवस्थाका सम्भावित जोखिमहरू</span></p>
+                    <p>समयमै निर्णय लिन नसक्दा व्यक्ति र समाजले ठुलो क्षति बेहोर्नुपर्ने हुन्छ:</p>
+                    <ul>
+                        <li><b>अवसर गुम्नु:</b> उचित समयमा निर्णय नगर्दा महत्त्वपूर्ण शैक्षिक, व्यावसायिक वा व्यक्तिगत अवसरहरू सधैँका लागि गुम्न सक्छन्।</li>
+                        <li><b>समय र स्रोतको बर्बादी:</b> अलमलमै धेरै समय बित्ने हुनाले उत्पादकत्व घट्छ र वित्तीय नोक्सानी हुन सक्छ [१२]।</li>
+                        <li><b>मानसिक तनाव र निराशा:</b> लामो समयसम्म द्विविधामा रहँदा मनमा बेचैनी, छटपटी र डिप्रेसन जस्ता मानसिक समस्याहरू उत्पन्न हुन सक्छन् [१२]।</li>
+                        <li><b>विश्वासको सङ्कट:</b> ढुलमुल चरित्रका कारण समाज वा सङ्गठनमा व्यक्तिको विश्वसनीयता र नेतृत्व क्षमतामाथि प्रश्न उठ्छ।</li>
+                    </ul>
+
+                    <p><span class="section-title">४. अनिर्णित अवस्था न्यूनीकरणका उपायहरू</span></p>
+                    <ul>
+                        <li><b>सूचनाको सङ्कलन र विश्लेषण:</b> निर्णय गर्नुअघि सम्बन्धित विषयमा सत्य र विश्वसनीय सूचनाहरू सङ्कलन गर्ने [१२]।</li>
+                        <li><b>विकल्पहरूको तुलनात्मक मूल्याङ्कन:</b> सबै विकल्पहरूको सकारात्मक र नकारात्मक पक्षको स्पष्ट सूची बनाएर हेर्ने [१२]।</li>
+                        <li><b>समय व्यवस्थापन:</b> निर्णयका लागि आफैँले एउटा अन्तिम समय सीमा (Deadline) तोक्ने।</li>
+                        <li><b>विज्ञ तथा शुभचिन्तकसँग सल्लाह:</b> अन्योल बढेको अवस्थामा परिवारका अग्रज वा सम्बन्धित विषयका विज्ञहरूसँग सरसल्लाह लिने।</li>
+                        <li><b>जोखिम वहन गर्ने क्षमताको विकास:</b> सबै निर्णय शतप्रतिशत अनुकूल हुँदैनन् भन्ने यथार्थ स्वीकार गरी थोरै जोखिम मोल्ने हिम्मत राख्ने।</li>
+                    </ul>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>अनिर्णित अवस्था मानसिक कमजोरी र आत्मविश्वासको कमीको सूचक हो। जीवनोपयोगी सीपहरू जस्तै समालोचनात्मक सोच र समस्या विश्लेषणको सही प्रयोग गरेर अनिर्णित अवस्थाबाट मुक्त भई समयमै विवेकपूर्ण निर्णय लिनु आवश्यक हुन्छ [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न ४ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q4" data-search="समस्या समाधान सीप Problem Solving Skills">
+            <div class="card-header">
+                <span class="num">४</span>
+                <span class="q-text"><b>समस्या समाधान सीप (Problem Solving Skills) भनेको के हो? यसका प्रमुख अङ्गहरू उल्लेख गर्दै समस्या समाधानका ६ वटा क्रमिक चरणहरूलाई उपयुक्त उदाहरणसहित विवेचना गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. समस्या समाधान सीपको अवधारणा</span></p>
+                    <p>मानिसको भित्री सोच, आदत, उमेर, अनुभव वा परिवेशअनुसार कुनै घटना, विचार वा बुझाइमा कठिनाइ उत्पन्न भएको अवस्था नै <b>समस्या</b> हो [१२]। यसरी उत्पन्न हुने व्यवधान वा अप्ठ्यारो परिस्थितिलाई सही ढङ्गले विश्लेषण गरी उपयुक्त विकल्पको माध्यमबाट पार पाउने क्षमतालाई <b>समस्या समाधान सीप (Problem Solving Skill)</b> भनिन्छ [१२]। यो जीवनलाई सहज र सफल बनाउन नभई नहुने एक महत्त्वपूर्ण जीवनोपयोगी सीप हो [१२]।</p>
+
+                    <p><span class="section-title">२. समस्या समाधान सीपका प्रमुख अङ्गहरू</span></p>
+                    <p>समस्या समाधान गर्ने प्रक्रियालाई प्रभावकारी बनाउन निम्नलिखित अन्तरसम्बन्धित सीप वा अङ्गहरूको आवश्यकता पर्दछ [१२]:</p>
+                    <ul>
+                        <li><b>सक्रिय सुनाइ (Active Listening):</b> समस्याको जरो बुझ्न अरूका कुरा ध्यान दिएर सुन्नु।</li>
+                        <li><b>समस्या विश्लेषण (Problem Analysis):</b> समस्या के हो, किन र कसरी उत्पन्न भयो भनी छुट्टाछुट्टै केलाउनु।</li>
+                        <li><b>समाधानको खोज (Research for Solutions):</b> समाधानका विभिन्न विकल्पहरूको अनुसन्धान गर्नु।</li>
+                        <li><b>सिर्जनात्मकता (Creativity):</b> परम्परागत भन्दा भिन्न र नयाँ प्रभावकारी उपायहरूको परिकल्पना गर्नु।</li>
+                        <li><b>सञ्चार (Communication):</b> समाधानका उपायहरू सम्बन्धित पक्षसँग आदानप्रदान गर्नु।</li>
+                        <li><b>स्वनिर्णय (Self-Decision):</b> सही समयमा दृढतापूर्वक निर्णय लिन सक्नु।</li>
+                        <li><b>सामूहिक भावना (Teamwork):</b> सबैलाई मिलाएर सामूहिक प्रयासबाट समस्या सुल्झाउनु।</li>
+                        <li><b>कार्यदक्षता (Efficiency):</b> उपलब्ध स्रोतसाधन र समयको सही सदुपयोग गर्नु।</li>
+                    </ul>
+
+                    <p><span class="section-title">३. समस्या समाधानका ६ क्रमिक चरणहरू र व्यावहारिक विश्लेषण</span></p>
+                    <p>पाठ्यपुस्तकका अनुसार समस्या समाधानका ६ वटा क्रमिक चरणहरू रहेका छन्, जसलाई हामी <b>"विद्यालयमा विद्यार्थीहरूको नियमित अनलाइन कक्षा उपस्थितिमा कमी"</b> भन्ने समस्यामार्फत विश्लेषण गर्न सक्छौँ [१२]:</p>
+
+                    <table class="answer-table">
+                        <thead>
+                            <tr>
+                                <th>क्र.सं.</th>
+                                <th>चरण</th>
+                                <th>प्रक्रियाको विवरण [१२]</th>
+                                <th>व्यावहारिक उदाहरण (अनलाइन कक्षा समस्या)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>१.</td>
+                                <td><b>समस्या पहिचान र परिभाषा</b></td>
+                                <td>समस्या के हो, कसरी सिर्जना भयो र यसको मूल कारण के हो भनी स्पष्ट पार्ने [१२]।</td>
+                                <td>विद्यार्थीहरू अनलाइन कक्षामा अनुपस्थित हुनुको मूल कारण प्राविधिक हो कि आर्थिक हो भनी पत्ता लगाउनु।</td>
+                            </tr>
+                            <tr>
+                                <td>२.</td>
+                                <td><b>परिकल्पना</b></td>
+                                <td>समस्या समाधानका लागि उपयुक्त विकल्पहरूको खोजी र सम्भावित परिणामको पूर्वअनुमान गर्ने [१२]।</td>
+                                <td>इन्टरनेट सेवा प्रदायकसँग समन्वय गर्ने वा इन्टरनेट खर्चका लागि सहुलियत प्याकेज वा विद्यालयबाटै डाटा प्याक दिने परिकल्पना गर्नु।</td>
+                            </tr>
+                            <tr>
+                                <td>३.</td>
+                                <td><b>तथ्य सङ्कलन</b></td>
+                                <td>पहिचान गरिएको विकल्पसँग सम्बन्धित आवश्यक तथ्य तथा जानकारीहरू खोज्ने र सङ्कलन गर्ने [१२]।</td>
+                                <td>कति विद्यार्थीसँग मोबाइल/ल्यापटप छैन, कतिसँग इन्टरनेट छैन र कतिको घरमा बत्ती जाँदा समस्या भएको हो भन्ने तथ्याङ्क सङ्कलन गर्ने।</td>
+                            </tr>
+                            <tr>
+                                <td>४.</td>
+                                <td><b>विश्लेषण</b></td>
+                                <td>प्राप्त तथ्य र सूचनाहरूको गहिरो वर्गीकरण र मूल्याङ्कन गर्ने [१२]।</td>
+                                <td>सङ्कलित तथ्याङ्कका आधारमा ६०% विद्यार्थीसँग इन्टरनेट नभएको र ४०% सँग उपकरणको अभाव रहेको निष्कर्ष निकाल्नु।</td>
+                            </tr>
+                            <tr>
+                                <td>५.</td>
+                                <td><b>निष्कर्ष</b></td>
+                                <td>तथ्यहरूको विश्लेषणका आधारमा सबैभन्दा व्यावहारिक र उत्कृष्ट समाधानको विकल्प चयन गर्ने [१२]।</td>
+                                <td>अति गरिब विद्यार्थीलाई विद्यालयले सहयोग गर्ने र स्थानीय टेलिकम कम्पनीसँग सहकार्य गरी सस्तो विद्यार्थी इन्टरनेट प्याकेज व्यवस्था गर्ने निष्कर्ष निकाल्नु [१२]।</td>
+                            </tr>
+                            <tr>
+                                <td>६.</td>
+                                <td><b>प्रयोग</b></td>
+                                <td>समस्या समाधानका लागि छनोट गरिएको निष्कर्ष वा विकल्पलाई व्यवहारमा लागू गर्ने [१२]।</td>
+                                <td>सबै विद्यार्थीलाई सिम कार्ड र इन्टरनेट प्याकेज वितरण गरी नियमित अनलाइन कक्षा सञ्चालनमा ल्याउनु [१२]।</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>समस्याहरू जीवनका अकाट्य पाटा हुन्। तर, समस्यासँग डराएर वा भागेर होइन, माथि उल्लिखित ६ वटा चरणहरू व्यवस्थित रूपमा अवलम्बन गरेमा जुनसुकै जटिल समस्याको पनि दिगो समाधान निकाल्न सकिन्छ [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न ५ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q5" data-search="लागू औषध दुर्व्यसन समस्या समाधान">
+            <div class="card-header">
+                <span class="num">५</span>
+                <span class="q-text"><b>"लागू औषध दुर्व्यसन" जस्तो गम्भीर सामाजिक समस्यालाई समाधान गर्न समस्या समाधानका चरणहरू कसरी प्रयोग गर्न सकिन्छ? विस्तृत योजना र विश्लेषण प्रस्तुत गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. पृष्ठभूमि</span></p>
+                    <p>युवा वर्गमा लागू पदार्थको दुर्व्यसन एक भयावह सामाजिक समस्याको रूपमा देखा परेको छ [१२]। यसले व्यक्तिलाई मात्र नभएर परिवार, समाज र सिंगो राष्ट्रलाई बर्बादीतर्फ लैजान्छ [१२]। यस गम्भीर समस्यालाई लहडका भरमा नभई जीवनोपयोगी सीपअन्तर्गतको <b>समस्या समाधानका ६ चरणहरू</b> प्रयोग गरेर व्यवस्थित रूपमा समाधान गर्न सकिन्छ [१२]।</p>
+
+                    <p><span class="section-title">२. लागू औषध दुर्व्यसन समाधानमा ६ चरणको प्रयोग योजना</span></p>
+
+                    <p><b class="sub-title">चरण १: समस्या पहिचान र परिभाषा</b></p>
+                    <ul>
+                        <li><b>कार्य:</b> हाम्रो टोल वा विद्यालयमा युवाहरू लागू औषधको कुलतमा फस्नुको मुख्य समस्या के हो भनी पहिचान गर्ने [१२]।</li>
+                        <li><b>परिभाषा:</b> "युवाहरू गलत सङ्गत, मानसिक तनाव, घरायसी झगडा वा चेतनाको कमीले गर्दा लागू पदार्थको दुर्व्यसनमा फसेका छन्, जसले गर्दा समाजमा चोरी-डकैती, डिप्रेसन र असुरक्षा बढेको छ [१२]।"</li>
+                    </ul>
+
+                    <p><b class="sub-title">चरण २: परिकल्पना</b></p>
+                    <ul>
+                        <li><b>कार्य:</b> यो समस्या सुल्झाउन के-के विकल्पहरू हुन सक्छन् भनी सम्भाव्य उपायहरूको परिकल्पना गर्ने [१२]।</li>
+                        <li><b>परिकल्पनाका विकल्पहरू:</b>
+                            <ul>
+                                <li>विकल्प क: कुलतमा फसेकाहरूलाई प्रहरी लगाएर थुन्ने र सजाय दिने [१२]।</li>
+                                <li>विकल्प ख: टोलमा सचेतना अभियान चलाउने र सुधार केन्द्र (Rehabilitation Center) मा पठाउने [१२]।</li>
+                                <li>विकल्प ग: खेलकुद तथा सिर्जनात्मक क्रियाकलापमा युवाहरूलाई व्यस्त राख्ने र रोजगारीमूलक सीप दिने [१२]।</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><b class="sub-title">चरण ३: तथ्य सङ्कलन</b></p>
+                    <ul>
+                        <li><b>कार्य:</b> कुलतमा फसेका युवाहरूको यथार्थ विवरण बुझ्न विभिन्न माध्यमबाट तथ्य सङ्कलन गर्ने [१२]।</li>
+                        <li><b>विधि:</b> दुर्व्यसनीका परिवारसँग अन्तर्वार्ता लिने, उनीहरूको सङ्ख्या र उमेर समूहको लगत राख्ने, र लागू औषध सजिलै उपलब्ध हुने स्थानहरूको पहिचान गर्ने [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">चरण ४: विश्लेषण</b></p>
+                    <ul>
+                        <li><b>कार्य:</b> सङ्कलित तथ्य र कारणहरूको विश्लेषण गर्ने [१२]।</li>
+                        <li><b>निष्कर्ष विश्लेषण:</b> धेरैजसो युवा बेरोजगारी र मानसिक एक्लोपनका कारण कुलतमा फसेको, प्रहरी कारबाहीले मात्र रिस र प्रतिरोध बढेको तर सुधार केन्द्र र खेलकुद जस्ता रचनात्मक कामले सुधार हुने सम्भावना बढी देखिएको विश्लेषण गर्ने [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">चरण ५: निष्कर्ष</b></p>
+                    <ul>
+                        <li><b>कार्य:</b> सबैभन्दा प्रभावकारी र मानवीय विकल्पको छनोट गर्ने [१२]।</li>
+                        <li><b>निष्कर्ष:</b> कुलतमा लागेका युवालाई घृणा र सजाय गर्नुको सट्टा माया र परामर्श दिने, उनीहरूलाई पुनस्र्थापना केन्द्रमा उपचार गराउने, परिवारमा मेलमिलापको वातावरण बनाउने, र टोलमा खेलकुद र सीपमूलक तालिम सञ्चालन गर्ने सर्वोत्तम निष्कर्ष निकाल्ने [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">चरण ६: प्रयोग (कार्यान्वयन)</b></p>
+                    <ul>
+                        <li><b>कार्य:</b> निकालिएको निष्कर्षलाई समाजमा लागू गर्ने [१२]।</li>
+                        <li><b>कार्यान्वयन योजना:</b>
+                            <ul>
+                                <li>कुलतमा परेका युवाहरूलाई अभिभावकको सहमतिमा सुधार केन्द्रमा भर्ना गर्ने [१२]।</li>
+                                <li>टोल सुधार समिति र प्रहरीको सहयोगमा लागू औषध बिक्री वितरण हुने ठाउँहरू बन्द गराउने।</li>
+                                <li>युवा क्लब गठन गरी फुटबल, भलिबल प्रतियोगिता र कम्प्युटर वा उद्यमशीलताका तालिमहरू सञ्चालन गरी उनीहरूलाई समाजमा पुनः स्थापित गर्ने [१२]।</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>लागू औषध दुर्व्यसन जस्ता जटिल सामाजिक समस्यालाई बल प्रयोग वा उपेक्षा गरेर समाधान गर्न सकिँदैन। यसका लागि समस्या समाधान सीपका चरणहरू क्रमिक रूपमा लागू गरी सहानुभूतिपूर्ण र वैज्ञानिक दृष्टिकोण अपनाएमा मात्र युवाहरूलाई कुलतबाट बचाएर सभ्य समाज निर्माण गर्न सकिन्छ [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न ६ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q6" data-search="सञ्चार सीप Communication Skills">
+            <div class="card-header">
+                <span class="num">६</span>
+                <span class="q-text"><b>सञ्चार सीप (Communication Skills) भनेको के हो? सञ्चार प्रक्रियाका सात आधारभूत तत्त्वहरूको व्याख्या गर्दै सञ्चारका प्रमुख तीन विधिहरूको फाइदा र बेफाइदासहित तुलना गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. सञ्चार सीपको परिचय</span></p>
+                    <p>दुई वा दुईभन्दा बढी पक्षहरूबीच सूचना, जानकारी, विचार, भावना वा सन्देशहरूको आदानप्रदान गर्ने र त्यसको अर्थ सही रूपमा बुझ्ने प्रक्रियालाई <b>सञ्चार</b> भनिन्छ [१२]। एल. ए. एलेन (L.A. Allen) का अनुसार, "सञ्चार भन्नाले अरूको मस्तिष्कसँग समझदारी कायम गर्नका लागि व्यक्तिले गर्ने सबै कार्यहरूको योग हो। यसमा भन्ने, सुन्ने र तात्पर्य बुझ्ने एक व्यवस्थित एवम् निरन्तर प्रक्रिया समावेश हुन्छ [१२]।"</p>
+
+                    <p><span class="section-title">२. सञ्चार प्रक्रियाका ७ आधारभूत तत्त्वहरू</span></p>
+                    <p>सञ्चार प्रक्रिया पूर्ण हुनका लागि निम्नलिखित सातवटा तत्त्वहरूको आपसी अन्तरक्रिया आवश्यक पर्दछ [१२]:</p>
+                    <ol>
+                        <li><b>दुई वा दुईभन्दा बढी पक्ष वा व्यक्तिहरू:</b> सञ्चार हुनका लागि कम्तीमा सन्देश पठाउने र पाउने दुईवटा पक्ष चाहिन्छ [१२]।</li>
+                        <li><b>सञ्चारको माध्यम:</b> सन्देश प्रवाह गर्ने साधन (जस्तै: फोन, इन्टरनेट, चिठी, रेडियो आदि) [१२]।</li>
+                        <li><b>प्रेषक (Sender):</b> सूचना, विचार वा भावना पहिलो पटक पठाउने वा सुरुवात गर्ने व्यक्ति [१२]।</li>
+                        <li><b>प्रापक (Receiver):</b> प्रेषकले पठाएको सन्देश प्राप्त गर्ने वा बुझ्ने दोस्रो व्यक्ति [१२]।</li>
+                        <li><b>प्राप्त सूचना स्वीकार गर्नु:</b> प्रापकले प्रेषकको सन्देश प्राप्त गरी त्यसलाई ग्रहण गर्नु [१२]।</li>
+                        <li><b>सूचनालाई सही रूपमा बुझ्नु:</b> प्रेषकले जुन अर्थमा सन्देश पठाएको हो, प्रापकले त्यसलाई सोही रूपमा बुझ्नु [१२]।</li>
+                        <li><b>सूचनाको प्रतिक्रिया (Feedback) जनाउनु:</b> प्रापकले सन्देश बुझेपछि आफ्नो प्रतिक्रिया प्रेषकसमक्ष पठाउनु, जसले सञ्चार प्रक्रिया पुरा गर्छ [१२]।</li>
+                    </ol>
+
+                    <p><span class="section-title">३. सञ्चारका प्रमुख तीन विधिहरूको तुलनात्मक विश्लेषण</span></p>
+
+                    <table class="answer-table">
+                        <thead>
+                            <tr>
+                                <th>सञ्चार विधि</th>
+                                <th>परिचय [१२]</th>
+                                <th>फाइदाहरू [१२]</th>
+                                <th>बेफाइदाहरू [१२]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>मौखिक सञ्चार</b></td>
+                                <td>बोलेर वा शब्दको उच्चारण गरी सन्देश प्रवाह गरिने विधि (जस्तै: प्रत्यक्ष भेटघाट, फोन) [१२]।</td>
+                                <td>• तत्काल प्रतिक्रिया पाइने।<br>• सरल, छिटो र बढी प्रभावकारी हुने।<br>• आपसी आत्मीयता बढ्ने [१२]।</td>
+                                <td>• भविष्यका लागि लिखित प्रमाण वा अभिलेख रहँदैन।<br>• लामो र विस्तृत सन्देशका लागि उपयुक्त हुँदैन।</td>
+                            </tr>
+                            <tr>
+                                <td><b>लिखित सञ्चार</b></td>
+                                <td>पत्रपत्रिका, चिठी, इमेल वा प्रतिवेदन जस्ता लिखित दस्तावेजमार्फत गरिने सञ्चार [१२]।</td>
+                                <td>• कानुनी र सुरक्षित अभिलेख रहने।<br>• भविष्यमा प्रमाणको रूपमा पेस गर्न सकिने [१२]।</td>
+                                <td>• तत्काल प्रतिक्रिया पाउन गाह्रो हुने।<br>• निरक्षर वा लेखपढ गर्न नजान्ने व्यक्तिमा काम नलाग्ने।</td>
+                            </tr>
+                            <tr>
+                                <td><b>साङ्केतिक सञ्चार</b></td>
+                                <td>शब्दको प्रयोग नगरी इशारा, सङ्केत, बडी ल्याङ्ग्वेज वा ट्राफिक चिह्नमार्फत गरिने सञ्चार [१२]।</td>
+                                <td>• भाषाको बन्धन नहुने, जुनसुकै देशका मानिसले बुझ्न सक्ने।<br>• छोटो समयमा सन्देश प्रवाह हुने [१२]।</td>
+                                <td>• विस्तृत र गम्भीर सन्देश बुझाउन असम्भव हुने।<br>• कहिलेकाहीँ सङ्केतको गलत अर्थ (मिसअन्डरस्ट्यान्डिङ) लाग्न सक्ने।</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>सञ्चार जीवनको आधारशिला हो [१२]। परिस्थिति, समय र प्रापकको अवस्था हेरेर मौखिक, लिखित वा साङ्केतिक सञ्चार विधिको सही र सन्तुलित प्रयोग गर्न सक्नु नै एक उत्कृष्ट जीवनोपयोगी सञ्चार सीप हो [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न ७ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q7" data-search="सञ्चार अवरोध Barriers">
+            <div class="card-header">
+                <span class="num">७</span>
+                <span class="q-text"><b>सञ्चारका प्रमुख चार अवरोधहरू (Psychological, Semantic, Physical, Organizational) के-के हुन्? यी अवरोधहरूलाई हटाएर प्रभावकारी सञ्चार स्थापना गर्ने उपायहरू विस्तृत रूपमा लेख्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. सञ्चारका अवरोधहरूको परिचय</span></p>
+                    <p>सञ्चार प्रक्रिया सधैँ सहज रूपमा अगाडि बढ्दैन। सञ्चार प्रणालीमा बाधा उत्पन्न गर्ने, सन्देशलाई बिगार्ने वा प्रापकले गलत अर्थ लगाउने तत्वहरूलाई <b>सञ्चारका अवरोधहरू (Barriers)</b> भनिन्छ [१२]। प्रभावकारी सञ्चारका लागि यी अवरोधहरू पहिचान गरी हटाउनु आवश्यक हुन्छ [१२]।</p>
+
+                    <p><span class="section-title">२. सञ्चारका प्रमुख चार अवरोधहरू</span></p>
+
+                    <p><b class="sub-title">क) मनोवैज्ञानिक अवरोध (Psychological Barriers)</b></p>
+                    <p>यो प्रेषक र प्रापकको मानसिक अवस्था र संवेगसँग सम्बन्धित हुन्छ [१२]।</p>
+                    <ul>
+                        <li><b>भावना र संवेग:</b> मानिस अत्यधिक रिस, डर, चिन्ता वा आवेशमा हुँदा सन्देशको अर्थ सही रूपमा ग्रहण गर्न सक्दैन [१२]।</li>
+                        <li><b>पूर्वाग्रह:</b> सुन्ने वा सञ्चार गर्ने व्यक्तिप्रति पहिले नै नराम्रो धारणा हुनु [१२]।</li>
+                        <li><b>लैङ्गिक शैली र छनोट प्रविष्टि:</b> पुरुष र महिलाको सोच्ने र बोल्ने शैलीको भिन्नता, वा आफूलाई मन पर्ने सूचना मात्र सुन्ने र अरूलाई उपेक्षा गर्ने बानी [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">ख) भाषिक अवरोध (Semantic Barriers)</b></p>
+                    <p>भाषा वा शब्दको गलत बुझाइका कारण यो अवरोध सिर्जना हुन्छ [१२]।</p>
+                    <ul>
+                        <li><b>जटिल वा प्राविधिक भाषा:</b> सञ्चारमा अत्यधिक कडा, दार्शनिक वा प्राविधिक (Technical) शब्दहरूको प्रयोग गर्दा सर्वसाधारणले बुझ्न सक्दैनन् [१२]।</li>
+                        <li><b>बहुअर्थी शब्दहरू:</b> एउटै शब्दका फरक-फरक अर्थ लाग्नाले प्रापक भ्रममा पर्नु [१२]।</li>
+                        <li><b>अनुवादमा त्रुटि:</b> एक भाषाबाट अर्को भाषामा अनुवाद गर्दा अर्थको अनर्थ लाग्नु [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">ग) भौतिक अवरोध (Physical Barriers)</b></p>
+                    <p>यो वातावरणीय र बाह्य परिस्थिति विकासका कारण हुन्छ [१२]।</p>
+                    <ul>
+                        <li><b>भौगोलिक दूरी:</b> प्रेषक र प्रापक धेरै टाढा हुनु र सञ्चारका साधन (नेटवर्क) नहुनु [१२]।</li>
+                        <li><b>बाह्य ध्वनि (कोलाहल):</b> चर्को आवाज, मेसिनको आवाज वा कोलाहलपूर्ण वातावरण [१२]।</li>
+                        <li><b>खराब मौसम वा भौतिक प्रबन्ध:</b> कमजोर इन्टरनेट, फोनको खराब सिग्नल वा असहज बस्ने ठाउँ [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">घ) सङ्गठनात्मक अवरोध (Organizational Barriers)</b></p>
+                    <p>यो संस्था वा कार्यालयको संरचना र नियमसँग सम्बन्धित हुन्छ [१२]।</p>
+                    <ul>
+                        <li><b>जटिल संरचना:</b> सङ्गठनभित्र धेरै तह (Hierarchy) हुनु, जसले गर्दा तल्लो तहको कुरा माथिल्लो तहसम्म पुग्न समय लाग्छ [१२]।</li>
+                        <li><b>कडा नियम र योजनाको अभाव:</b> सल्लाह वा सुझाव लिने प्रवृत्तिको अभाव र अधिकारको केन्द्रीकरण [१२]।</li>
+                        <li><b>मर्यादा वा अहम् (Ego):</b> हाकिम र कर्मचारीबिचको दूरी र एकअर्कालाई विश्वास नगर्ने प्रवृत्ति [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">३. सञ्चारका अवरोधहरू हटाएर प्रभावकारी सञ्चार स्थापना गर्ने उपायहरू</span></p>
+                    <ul>
+                        <li><b>सरल र स्पष्ट भाषाको प्रयोग:</b> सञ्चार गर्दा प्रापकको स्तर अनुसारको सरल, स्पष्ट र बुझिने भाषाको प्रयोग गर्ने, प्राविधिक शब्दहरू कम प्रयोग गर्ने [१२]।</li>
+                        <li><b>सक्रिय सुनाइ र धैर्यता:</b> बोल्नुभन्दा अगाडि अरूको कुरा धैर्यतापूर्वक सुन्ने र बुझ्ने प्रयास गर्ने [१२]।</li>
+                        <li><b>संवेग नियन्त्रण:</b> रिस वा आवेशको बेला सञ्चार नगरी शान्त भएपछि मात्र आफ्ना कुराहरू राख्ने [१२]।</li>
+                        <li><b>द्विमार्गी सञ्चार (Two-way Communication):</b> सञ्चारलाई दोहोरो बनाउने, जसमा प्रेषकले सन्देश पठाएपछि प्रापकबाट पृष्ठपोषण वा प्रतिक्रिया अनिवार्य रूपमा लिने [१२]।</li>
+                        <li><b>उपयुक्त सञ्चार माध्यमको छनोट:</b> दूरी र सन्देशको गम्भीरता हेरेर भरपर्दो भौतिक र प्राविधिक माध्यम (इमेल, भिडियो कल वा प्रत्यक्ष भेट) रोज्ने [१२]।</li>
+                        <li><b>सङ्गठनात्मक सुधार:</b> संस्थाभित्र खुला र सहभागितामूलक वातावरण सिर्जना गर्ने, जहाँ सबै कर्मचारीले आफ्नो विचार स्वतन्त्र रूपमा राख्न सकून् [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>सञ्चारका अवरोधहरूले सम्बन्धहरू बिगार्ने र संस्थाको उत्पादकत्व घटाउने गर्छन्। सञ्चारका यी चारवटा अवरोधहरूलाई हटाएर सञ्चार सीप सुधार गरेमा घरायसी, सामाजिक तथा पेसागत जीवन सुमधुर र सफल बन्दछ [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न ८ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q8" data-search="तनाव Stress विशेषता रणनीति">
+            <div class="card-header">
+                <span class="num">८</span>
+                <span class="q-text"><b>तनाव (Stress) भनेको के हो? यसका विशेषता र सिर्जना हुने अवस्थाहरू स्पष्ट पार्दै तनाव व्यवस्थापनका सकारात्मक र नकारात्मक रणनीतिहरूको समालोचनात्मक समीक्षा गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. तनाव र यसको परिचय</span></p>
+                    <p>परिवर्तित बाह्य वातावरणमा आएको परिवर्तनका कारण व्यक्तिमा उत्पन्न हुने शारीरिक तथा मानसिक दबाब वा असन्तुलनको अवस्थालाई <b>तनाव (Stress)</b> भनिन्छ [१२]। तनाव व्यक्तिको सहनशीलतामा आउने चुनौती, माग वा धम्कीका रूपमा शरीर र मनले देखाउने एक स्वाभाविक प्रतिक्रिया हो [१२]।</p>
+
+                    <p><span class="section-title">२. तनावका चार मुख्य विशेषताहरू</span></p>
+                    <p>पाठ्यपुस्तकको आधारमा तनावका मुख्य विशेषताहरू निम्नलिखित छन् [१२]:</p>
+                    <ul>
+                        <li><b>वातावरणीय परिवर्तनको उपज:</b> यो बाह्य वातावरणमा आउने राम्रा वा नराम्रा परिवर्तनहरूका कारण सिर्जना हुन्छ [१२]।</li>
+                        <li><b>व्यक्तिपिच्छे फरक असर:</b> एउटै घटनाले एक व्यक्तिलाई ठुलो तनाव दिन सक्छ भने अर्को व्यक्तिलाई सामान्य लाग्न सक्छ [१२]।</li>
+                        <li><b>व्यवस्थापन गर्न सकिने पक्ष:</b> तनावलाई सधैँ समाप्त पार्न नसकिए पनि यसलाई रचनात्मक र सकारात्मक दिशामा रूपान्तरण वा व्यवस्थापन गर्न सकिन्छ [१२]।</li>
+                        <li><b>जीवनको अनिवार्य सर्त:</b> तनाव बिनाको जीवन असम्भव छ। जीवन जिउने क्रममा सानो-तिनो तनाव अनिवार्य रूपमा आइरहन्छ [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">३. तनाव सिर्जना हुने प्रमुख अवस्थाहरू</span></p>
+                    <p>तनाव मुख्यतया चारवटा अवस्थाहरूमा सिर्जना हुन्छ [१२]:</p>
+                    <ol>
+                        <li><b>अस्तित्व (Survival) तनाव:</b> कुनै भौतिक खतरा वा प्रतिकूल परिस्थिति (जस्तै: भूकम्प, दुर्घटना वा जङ्गली जनावरको सामना) प्रति शरीरले देखाउने तात्कालिक रक्षात्मक प्रतिक्रिया [१२]।</li>
+                        <li><b>आन्तरिक तनाव:</b> व्यक्तिको आफ्नै चिन्ता, डर, रिस, हीनताबोध वा संवेगका कारण मनभित्रैबाट आफैँ उत्पन्न हुने तनाव [१२]।</li>
+                        <li><b>वातावरणीय तनाव:</b> वरपरको वातावरण (जस्तै: हल्ला, भिडभाड, अत्यधिक गर्मी/चिसो वा सामाजिक दबाब) का कारण हुने तनाव [१२]।</li>
+                        <li><b>कामको चापबाट हुने तनाव:</b> तोकिएको समयमा धेरै काम गर्नुपर्ने अवस्था वा क्षमताभन्दा बढी कामको भारले गर्दा हुने तनाव [१२]।</li>
+                    </ol>
+
+                    <p><span class="section-title">४. तनाव व्यवस्थापनका रणनीतिहरूको समालोचनात्मक समीक्षा</span></p>
+                    <p>तनाव व्यवस्थापनका रणनीतिहरूलाई मुख्यतया तीन भागमा वर्गीकरण गरेर समीक्षा गर्न सकिन्छ [१२]:</p>
+
+                    <p><b class="sub-title">क) समर्पण (Submission) रणनीति (नकारात्मक पक्ष)</b></p>
+                    <ul>
+                        <li><b>परिभाषा:</b> तनाव दिने कारक वा परिस्थितिप्रति कुनै प्रतिवाद नगरी त्यसलाई चुपचाप स्वीकार गर्नु 'समर्पण' हो [१२]।</li>
+                        <li><b>समीक्षा:</b> यो दनात्मक प्रकृतिको हुन्छ [१२]। यसले तत्कालका लागि विवाद टाले पनि मनभित्र कुण्ठा र डिप्रेसन बढाउने हुनाले यो तनाव व्यवस्थापनको अस्वस्थ र दीर्घकालीन रूपमा घातक तरिका हो [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">ख) प्रतिरोध (Resistance) रणनीति (नकारात्मक पक्ष)</b></p>
+                    <ul>
+                        <li><b>परिभाषा:</b> तनाव उत्पन्न गर्ने वस्तु वा परिस्थितिप्रति रिस पोख्ने, झगडा गर्ने वा भौतिक आक्रमण गर्नु 'प्रतिरोध' हो [१२]।</li>
+                        <li><b>समीक्षा:</b> यसले क्षणिक रूपमा रिस शान्त पारे जस्तो लागे पनि दीर्घकालमा थप शत्रुता, शारीरिक नोक्सानी र झन् ठुलो मानसिक तनाव निम्त्याउँछ। त्यसैले यो एक हानिकारक रणनीति हो [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">ग) सम्झौता (Compromise) रणनीति (सकारात्मक पक्ष)</b></p>
+                    <ul>
+                        <li><b>परिभाषा:</b> आफ्नो शैली, आचरण र व्यवहारमा लचकता ल्याई परिस्थिति अनुकूल आपसी समझदारी कायम गर्नु 'सम्झौता' हो [१२]।</li>
+                        <li><b>समीक्षा:</b> यो तनाव व्यवस्थापनको सर्वोत्तम र व्यावहारिक तरिका हो [१२]। यसले दुवै पक्षलाई जित-जित (Win-Win) को अवस्थामा पुर्‍याउँछ र दीर्घकालीन रूपमा मानसिक शान्ति र स्वस्थ जीवन प्रदान गर्दछ [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>तनाव आफैँमा पूर्ण रूपमा खराब चिज होइन, कतिपय अवस्थामा यसले मानिसलाई काम गर्न उत्प्रेरित पनि गर्छ। तर, तनाव अत्यधिक भएमा समर्पण वा प्रतिरोध जस्ता नकारात्मक उपाय छाडेर सम्झौता गर्ने, योग-ध्यान गर्ने र रचनात्मक समय तालिका बनाउने जस्ता सकारात्मक रणनीति अपनाउनु नै बुद्धिमानी हुन्छ [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न ९ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q9" data-search="द्वन्द्व तनाव गोगने ओलने पुल विवाद">
+            <div class="card-header">
+                <span class="num">९</span>
+                <span class="q-text"><b>द्वन्द्व र तनावबीचको अन्तरसम्बन्ध केलाउनुहोस्। गोगने र ओलने गाउँको पुल निर्माणको विवाद (घटना अध्ययन) का आधारमा द्वन्द्व रूपान्तरण र तनाव व्यवस्थापनको महत्त्व प्रस्ट पार्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. द्वन्द्व र तनावबीचको अन्तरसम्बन्ध</span></p>
+                    <p>व्यक्तिका मूल्यमान्यता, विश्वास, स्वार्थ वा विचारमा देखिने भिन्नताका कारण दुई वा सोभन्दा बढी पक्षबिच उत्पन्न हुने असहमति वा विवाद नै <b>द्वन्द्व (Conflict)</b> हो [१२]। द्वन्द्व र तनाव (Stress) एकअर्कासँग गहिरो रूपमा जोडिएका छन्। जब समाज वा परिवारमा द्वन्द्व उत्पन्न हुन्छ, त्यसले सम्बन्धित व्यक्तिहरूमा मानसिक दबाब र संवेग उत्पन्न गराउँछ, जसलाई हामी <b>तनाव</b> भन्छौँ [१२]। अर्कोतर्फ, पहिले देखि नै तनावग्रस्त रहेको मानिसले सानो कुरामा पनि रिस पोख्ने हुँदा नयाँ द्वन्द्व सिर्जना हुन सक्छ। त्यसैले, द्वन्द्व तनावको कारक हो भने तनाव द्वन्द्वको परिणाम हो।</p>
+
+                    <p><span class="section-title">२. गोगने र ओलने गाउँको पुल विवादको घटना विश्लेषण</span></p>
+                    <p>पाठ्यपुस्तकको पृष्ठ ४७ मा दिइएको गोगने र ओलने गाउँको घटनाले द्वन्द्व र तनाव व्यवस्थापनको उत्कृष्ट व्यावहारिक उदाहरण प्रस्तुत गर्दछ [१२]:</p>
+
+                    <ul>
+                        <li><b>विवादको कारण:</b> दुई गाउँलाई जोड्ने पक्की पुल कहाँ निर्माण गर्ने भन्ने विषयमा गोगने र ओलने गाउँका बासिन्दाबिच सहमति हुन सकेन [१२]। गोगने गाउँलेहरू आफ्नै गाउँतर्फ पुल बनाउनुपर्ने अडानमा थिए भने ओलने गाउँलेहरू आफ्नो गाउँतर्फ बनाउनुपर्ने दाबी गरिरहेका थिए [१२]।</li>
+                        <li><b>विवादको प्रभाव (तनाव र क्षति):</b> यो असमझदारीका कारण दुवै गाउँका मानिसहरू उग्र बने, झडप भयो र केही मानिसहरू घाइते समेत भए [१२]। दुवै पक्षमा ठुलो मानसिक तनाव र शत्रुतापूर्ण वातावरण सिर्जना भयो, जसले गर्दा पुल निर्माणको काम लामो समयसम्म रोकियो [१२]।</li>
+                        <li><b>विवाद समाधानका उपायहरू (द्वन्द्व रूपान्तरण):</b>
+                            <ol>
+                                <li><b>मध्यस्थता र वार्ता:</b> दुवै गाउँका स्थानीय र भद्रभलाद्मीहरूको मध्यस्थतामा वार्ता र छलफल सुरु गरियो [१२]।</li>
+                                <li><b>लचकता र सम्झौता:</b> दुवै पक्षले आ-आफ्नो हठ त्यागेर आपसी समझदारीमा दुवै गाउँलाई पायक पर्ने र अनुकूल हुने साझा स्थानमा पुल बनाउने सहमति गरे [१२]।</li>
+                                <li><b>सहानुभूति र सहयोग:</b> घाइतेहरूको उपचारमा दुवै गाउँले मिलेर सहयोग गरे [१२]।</li>
+                            </ol>
+                        </li>
+                        <li><b>घटनाबाट प्राप्त सिकाइ:</b> यो द्वन्द्व रूपान्तरणपछि दुवै गाउँका युवाहरू मिलेर क्रिकेट क्लब गठन गरे र गाउँमा विकासका अन्य कामहरू (सरसफाइ, बाटो निर्माण) मिलेर गर्न थाले, जसले गर्दा उनीहरूमा आत्मीयता र सहयोगको भावना बढेर गयो [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">३. द्वन्द्व रूपान्तरण र तनाव व्यवस्थापनको महत्त्व</span></p>
+                    <ul>
+                        <li><b>शान्ति र सद्भाव कायम गर्न:</b> समाजमा शत्रुता अन्त्य गरी भाइचारा र आत्मीयता बढाउन यसले मद्दत गर्दछ [१२]।</li>
+                        <li><b>विकास निर्माणमा बाधा रोक्न:</b> गोगने र ओलने गाउँको पुल जस्तै रोकिएका विकासका आयोजनाहरू आपसी सहमतिमा समयमै सम्पन्न गर्न सकिन्छ [१२]।</li>
+                        <li><b>शारीरिक र मानसिक स्वास्थ्य रक्षा:</b> आपसी झगडा र तनावबाट मुक्त हुँदा मानिसको मानसिक र शारीरिक स्वास्थ्य राम्रो रहन्छ [१२]।</li>
+                        <li><b>सिर्जनात्मक क्षमताको विकास:</b> द्वन्द्वको सकारात्मक रूपान्तरणले समाजमा नयाँ सोच, सहकार्य र विकासका नयाँ ढोकाहरू खोल्दछ [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>गौतम बुद्धले भनेका छन्, "हजारौँ हल्का शब्दभन्दा शान्ति ल्याउने एक शब्द काफी हुन्छ [१२]।" द्वन्द्व आफैँमा सधैँ खराब हुँदैन, तर यसलाई समयमै व्यवस्थापन गर्न नसके यसले विनाश निम्त्याउँछ। गोगने र ओलने गाउँले झैँ आपसी सम्झौता र सहकार्यका माध्यमबाट द्वन्द्वलाई रूपान्तरण गरी तनावमुक्त समाज निर्माण गर्नु नै आजको मुख्य आवश्यकता हो [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न १० ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q10" data-search="अन्तरवैयक्तिक सीप Interpersonal Skills">
+            <div class="card-header">
+                <span class="num">१०</span>
+                <span class="q-text"><b>अन्तरवैयक्तिक सीप (Interpersonal Skills) भनेको के हो? यसका प्रमुख अङ्गहरू र महत्त्व बुझाउँदै दैनिक जीवन तथा पेसागत क्षेत्रमा यस सीपलाई सुधार गर्ने व्यावहारिक उपायहरू उल्लेख गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. अन्तरवैयक्तिक सीपको परिचय</span></p>
+                    <p>आफ्नो व्यक्तिगत क्षमता र संवेगात्मक दक्षताको विकास गरी सामाजिक परिवेशमा आफूलाई सफलतापूर्वक समायोजन गर्ने र अरूसँग सुमधुर एवम् अर्थपूर्ण सम्बन्ध कायम राख्ने कलालाई <b>अन्तरवैयक्तिक सीप (Interpersonal Skill)</b> भनिन्छ [१२]। यो सीपले मानिसलाई समाजमा घुलमिल हुन, अरूको भावना बुझ्न र सहकार्य गर्न सक्षम बनाउँछ [१२]।</p>
+
+                    <p><span class="section-title">२. अन्तरवैयक्तिक सीपका प्रमुख अङ्गहरू</span></p>
+                    <ul>
+                        <li><b>प्रभावकारी सञ्चार (Effective Communication):</b> आफ्ना कुरा स्पष्ट र मर्यादित रूपमा राख्ने र अरूको कुरा सुन्ने सीप [१२]।</li>
+                        <li><b>सक्रिय सुनाइ (Active Listening):</b> अरूले बोल्दा ध्यान दिएर सुन्नु र उनीहरूको दृष्टिकोण बुझ्नु [१२]।</li>
+                        <li><b>सहानुभूति (Empathy):</b> अरूको दुःख र परिस्थितिलाई आफ्नै ठानेर महसुस गर्नु [१२]।</li>
+                        <li><b>द्वन्द्व व्यवस्थापन (Conflict Management):</b> आपसी मतभेद र असमझदारीलाई वार्ताको माध्यमबाट शान्तिपूर्ण रूपमा सुल्झाउनु [१२]।</li>
+                        <li><b>नेतृत्व सीप (Leadership Skills):</b> समूहलाई सही दिशामा डोर्‍याउने र उत्प्रेरित गर्ने कला [१२]।</li>
+                        <li><b>लचकदार व्यक्तित्व (Flexibility):</b> समय र परिस्थिति अनुकूल आफ्नो आचरण र विचार परिमार्जन गर्न सक्नु [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">३. अन्तरवैयक्तिक सीपको महत्त्व</span></p>
+                    <ul>
+                        <li><b>सुमधुर सम्बन्धको विकास:</b> परिवार, छरछिमेक र कार्यक्षेत्रमा आपसी विश्वास र मित्रताको वातावरण बनाउन मद्दत गर्छ [१२]।</li>
+                        <li><b>समस्याको सहज समाधान:</b> समाजमा आइपर्ने विभिन्न विवाद र व्यक्तिगत समस्याहरू सजिलै हल गर्न सकिन्छ [१२]।</li>
+                        <li><b>व्यक्तित्व विकास:</b> समाजमा आदर, सम्मान र छुट्टै पहिचान स्थापित गर्न यस सीपले सहयोग पुर्‍याउँछ [१२]।</li>
+                        <li><b>कार्यक्षमतामा वृद्धि:</b> पेसागत क्षेत्रमा सहकर्मीहरूसँग राम्रो सहकार्य (Teamwork) भई उत्पादनशीलता बढ्छ [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">४. दैनिक जीवन र पेसागत क्षेत्रमा यस सीपलाई सुधार गर्ने ५ व्यावहारिक उपायहरू</span></p>
+                    <p>पाठ्यपुस्तकको पृष्ठ ४९ मा दिइएको छिमेकीको झगडा र लीला भाऊजूको प्रसङ्गका आधारमा अन्तरवैयक्तिक सीप सुधार्ने उपायहरू निम्नानुसार छन् [१२]:</p>
+                    <ol>
+                        <li><b>सकारात्मक सोचको विकास:</b> मनमा रिस, डाहा र नकारात्मक भावना त्यागेर सधैँ सकारात्मक र आशावादी सोच राख्ने, जसले गर्दा अरूले पनि हामीलाई विश्वास गर्छन् [१२]।</li>
+                        <li><b>अरूको अनुभव र विज्ञताको सम्मान:</b> आफूलाई मात्र सर्वज्ञाता ठान्ने अहम् त्यागेर अरूको ज्ञान, अनुभव र सुझावलाई सधैँ आदर गर्ने [१२]।</li>
+                        <li><b>सहानुभूतिको प्रदर्शन:</b> अरू समस्यामा पर्दा उनीहरूको पीडा बुझ्ने प्रयास गर्ने र सहयोगी हात फैलाउने [१२]।</li>
+                        <li><b>सक्रिय र धैर्यतापूर्वक सुन्ने बानी:</b> अरू बोल्दै गर्दा बिचमै कुरा नकाटी पहिले उनीहरूको कुरा ध्यान दिएर सुन्ने र त्यसपछि मात्र शिष्ट रूपमा आफ्नो विचार राख्ने [१२]।</li>
+                        <li><b>घमण्डको त्याग र मधुर बोली:</b> "म नै ठुलो हुँ" भन्ने घमण्ड त्यागेर छिमेकी तथा सहकर्मीहरूसँग सधैँ नम्र, मिठो र सम्मानजनक बोलीवचन प्रयोग गर्ने [१२]।</li>
+                    </ol>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>अन्तरवैयक्तिक सीप कुनै जन्मजात क्षमता मात्र नभएर निरन्तरको अभ्यास र आत्मसमीक्षाबाट विकास गर्न सकिने जीवनोपयोगी सीप हो [१२]। यस सीपको विकासले नै व्यक्तिलाई एक असल नागरिक र सफल पेसाकर्मी बनाउँछ [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न ११ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q11" data-search="सामाजिक सञ्जाल अन्तरवैयक्तिक सम्बन्ध">
+            <div class="card-header">
+                <span class="num">११</span>
+                <span class="q-text"><b>सामाजिक सञ्जालको प्रयोगले मानवको अन्तरवैयक्तिक सम्बन्धमा पारेका सकारात्मक र नकारात्मक प्रभावहरूको समीक्षा गर्दै यसलाई उत्तरदायी ढङ्गले प्रयोग गर्ने तरिकाहरू प्रस्तुत गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. पृष्ठभूमि</span></p>
+                    <p>२१औँ शताब्दी सञ्चार र सूचना प्रविधिको युग हो [१२]। आज फेसबुक, टिकटक, इन्स्टाग्राम र जिमेल जस्ता सामाजिक सञ्जालहरू मानव जीवनका अभिन्न अङ्ग बनिसकेका छन् [१२]। यी सञ्जालहरूले मानिसहरूलाई जुनसुकै स्थानबाट पनि एकआपसमा जोड्ने काम गरेका छन् [१२]। तर, यसको प्रयोगले मानिसको आपसी र प्रत्यक्ष अन्तरवैयक्तिक सम्बन्ध (Interpersonal Relationship) मा गहिरो सकारात्मक र नकारात्मक प्रभाव पारेको छ [१२]।</p>
+
+                    <p><span class="section-title">२. अन्तरवैयक्तिक सम्बन्धमा सामाजिक सञ्जालको प्रभाव</span></p>
+
+                    <p><b class="sub-title">क) सकारात्मक प्रभावहरू</b></p>
+                    <ul>
+                        <li><b>दूरीको अन्त्य:</b> सामाजिक सञ्जालले विश्वको जुनसुकै कुनामा रहेका परिवारका सदस्य, नातेदार र साथीभाइसँग क्षणभरमै भिडियो कल वा सन्देशमार्फत प्रत्यक्ष कुराकानी गर्न सम्भव बनाएको छ [१२]।</li>
+                        <li><b>सिकाइ र सहकार्यको माध्यम:</b> विद्यार्थीहरूले फेसबुक वा भाइबर ग्रुप बनाएर शैक्षिक सामग्री सेयर गर्ने र सामूहिक छलफल गर्ने अवसर पाएका छन्, जसले आपसी सहयोग बढाउँछ [१२]।</li>
+                        <li><b>व्यापार र सम्बन्ध प्रवर्द्धन:</b> उद्यमीहरूले ग्राहकहरूसँग सजिलै सञ्चार गरी माग बुझ्न र सुमधुर ग्राहक सम्बन्ध बनाउन सकेका छन् [१२]।</li>
+                        <li><b>समान विचार भएकाहरूको सञ्जाल:</b> विभिन्न सामाजिक वा रचनात्मक काममा रुचि भएका मानिसहरू समूहमा आवद्ध भई सहकार्य गर्न सक्छन् [१२]।</li>
+                    </ul>
+
+                    <p><b class="sub-title">ख) नकारात्मक प्रभावहरू (असुरक्षित प्रयोगका चुनौतीहरू)</b></p>
+                    <p>पाठ्यपुस्तकको पृष्ठ ४९-५० मा आमा डोमा र छोरी डोल्माको कुराकानीका आधारमा यसका गम्भीर नकारात्मक पक्षहरू यस प्रकार छन् [१२]:</p>
+                    <ul>
+                        <li><b>प्रत्यक्ष सम्बन्धको कमी:</b> मानिसहरू २४सै घण्टा मोबाइल स्क्रिनमा व्यस्त हुँदा सँगै बसेका परिवारका सदस्यहरूसँग बोल्न छाडेका छन्, जसले पारिवारिक आत्मीयता घटाएको छ [१२]।</li>
+                        <li><b>लाइक र सेयरको लत:</b> सामाजिक सञ्जालमा जथाभावी आफ्ना व्यक्तिगत तस्बिर र गोपनियता पोस्ट गर्ने र कति लाइक आयो भनी हेरिरहने मानसिक लत बढेको छ [१२]।</li>
+                        <li><b>साइबर बुलिङ र दुर्व्यवहार:</b> अनलाइनमा अपरिचित व्यक्तिहरूले जिस्काउने, गालीगलौज गर्ने, चरित्रहत्या गर्ने र मानसिक तनाव दिने समस्या बढेको छ [१२]।</li>
+                        <li><b>अस्वस्थ तुलना र हीनताबोध:</b> अरूको कृत्रिम र रङ्गीन अनलाइन जीवन देखेर आफ्नो वास्तविक जीवनसँग तुलना गरी हीनताबोध वा डिप्रेसनमा पर्ने युवाहरूको सङ्ख्या बढेको छ [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">३. सामाजिक सञ्जाललाई उत्तरदायी र सुरक्षित ढङ्गले प्रयोग गर्ने उपायहरू</span></p>
+                    <ul>
+                        <li><b>गोपनीयताको रक्षा (Privacy Settings):</b> आफ्ना व्यक्तिगत विवरण, घरको लोकेसन, फोन नम्बर र संवेदनशील तस्बिरहरू सामाजिक सञ्जालमा सार्वजनिक रूपमा पोस्ट गर्नु हुँदैन [१२]।</li>
+                        <li><b>समयको सीमा निर्धारण:</b> सामाजिक सञ्जाल चलाउने निश्चित समय तोक्ने र बाँकी समय परिवार, साथीभाइसँग प्रत्यक्ष कुराकानी र शारीरिक खेलकुदमा बिताउने [१२]।</li>
+                        <li><b>तथ्य जाँच (Fact Check):</b> अनलाइनमा भेटिएका हरेक सूचना वा समाचारलाई आँखा चिम्लेर विश्वास गर्नु र सेयर गर्नु हुँदैन।</li>
+                        <li><b>सभ्य र मर्यादित कमेन्ट:</b> कसैको पोस्टमा कमेन्ट गर्दा जथाभावी अश्लील वा अपमानजनक शब्द प्रयोग नगरी सभ्य भाषा प्रयोग गर्ने [१२]।</li>
+                        <li><b>अपरिचितसँग सावधानी:</b> सामाजिक सञ्जालमा चिनेका मानिसहरूसँग मात्र जोडिने र अपरिचित व्यक्तिको फ्रेन्ड रिक्वेस्ट स्वीकार गर्दा वा कुरा गर्दा सचेत रहने [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>सामाजिक सञ्जाल आफैँमा खराब साधन होइन। आमा डोमाले छोरी डोल्मालाई सम्झाए जस्तै, सामाजिक सञ्जाललाई मनोरञ्जनको साधन मात्र बनाएर यसको दुरुपयोग गर्नुको सट्टा, अन्तरवैयक्तिक सीप र सिकाइको थलोको रूपमा उत्तरदायी ढङ्गले प्रयोग गरेमा यसले मानव सम्बन्धलाई झन् कसिलो बनाउँछ [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== प्रश्न १२ ===== -->
+        <!-- ============================================================ -->
+        <div class="card fade-in" id="q12" data-search="नेतृत्व टोलीकार्य सम्बन्ध">
+            <div class="card-header">
+                <span class="num">१२</span>
+                <span class="q-text"><b>नेतृत्व (Leadership) र टोलीकार्य (Teamwork) बीचको सम्बन्ध स्पष्ट पार्नुहोस्। "टोलीकार्यबाट नै असल नेतृत्वको विकास हुन्छ" भन्ने भनाइलाई उदाहरणसहित पुष्टि गर्नुहोस्।</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+
+                    <p><span class="section-title">१. नेतृत्व र टोलीकार्यको अवधारणा</span></p>
+                    <p>कुनै व्यक्ति, समूह वा सङ्गठनको अगुवाइ गर्ने र अरूलाई साझा लक्ष्य प्राप्तिका लागि उत्प्रेरित गर्ने कला नै <b>नेतृत्व (Leadership)</b> हो [१२]। अर्कोतर्फ, कुनै निश्चित उद्देश्य प्राप्तिका लागि समूहका सबै सदस्यहरू मिलेर एकआपसमा सहयोग र समन्वयका साथ काम गर्ने प्रक्रियालाई <b>टोलीकार्य (Teamwork)</b> भनिन्छ [१२]। यी दुवै अवधारणाहरू एकअर्काका पूरक हुन्। बिना टोलीकार्य कुनै पनि नेता सफल हुन सक्दैन भने बिना कुशल नेतृत्व कुनै पनि टोलीले आफ्नो लक्ष्य प्राप्त गर्न सक्दैन [१२]।</p>
+
+                    <p><span class="section-title">२. टोलीकार्य र नेतृत्वबिचको गहिरो सम्बन्ध</span></p>
+                    <p>सङ्गठन वा समाजमा टोलीकार्य र नेतृत्व नङ र मासु जस्तै जोडिएका हुन्छन् [१२]:</p>
+                    <ul>
+                        <li><b>साझा लक्ष्य निर्धारण:</b> नेताले बाटो देखाउँछ भने टोलीले त्यो बाटोमा हिँडेर काम सम्पन्न गर्छ [१२]।</li>
+                        <li><b>अधिकार र जिम्मेवारीको बाँडफाँड:</b> असल नेताले टोलीका सबै सदस्यहरूको क्षमता बुझेर काम विभाजन गर्छ [१२]।</li>
+                        <li><b>पारस्परिक विश्वास:</b> टोलीमा विश्वासको वातावरण बनाउने काम नेतृत्वको हो, जसले गर्दा टोलीकार्य बलियो हुन्छ [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">३. "टोलीकार्यबाट असल नेतृत्वको विकास हुन्छ" भन्ने भनाइको पुष्टि</span></p>
+                    <p>यो भनाइ पूर्ण रूपमा सत्य हो। नेतृत्व सीप कुनै कोठामा एक्लै बसेर वा पुस्तक पढेर मात्र सिक्न सकिँदैन, यो त समूहमा काम गर्दा स्वतः विकास हुने सीप हो [१२]।</p>
+
+                    <p><b class="sub-title">कक्षा ११ को पाठ्यपुस्तकको पृष्ठ ५२ मा दिइएको काकाको गाउँको संस्मरणको उदाहरण:</b></p>
+                    <p>पहिलेका गाउँहरूमा दशैँ आउनुअगाडि पुरै गाउँलेले मिलेर बाटो खन्ने, खाल्डाखुल्डी पुर्ने र कुलो सफा गर्ने चलन थियो [१२]। यस सामूहिक कार्य (टोलीकार्य) मा वीरबहादुरले आफ्नो १० वर्षे छोरालाई ढुङ्गा बोक्ने काममा सघाउन र जाली बाँध्न सिकाए [१२]। एउटा सानो केटाले पाको मान्छेलाई काम सिकाउँदा सबैले हाँसेर उसलाई ढाप मार्दै स्याबासी दिए [१२]।</p>
+                    <p>यसरी सामूहिक रूपमा काम गर्दै जाँदा युवाहरूमा जिम्मेवारी वहन गर्ने, सञ्चार गर्ने र समस्या समाधान गर्ने क्षमताको विकास भयो [१२]। यसै टोलीकार्यको अनुभव र सिकाइका आधारमा पछि गएर गाउँलेले योग्य व्यक्तिलाई सर्वसम्मत रूपमा वडाध्यक्ष (नेता) बनाए [१२]। यस उदाहरणले प्रस्ट पार्छ कि सामूहिक काममा संलग्न हुँदा नै व्यक्तिको नेतृत्व क्षमता निखारिन्छ [१२]।</p>
+
+                    <p><span class="section-title">४. टोलीकार्यबाट नेतृत्व सीप विकास हुने आधारहरू</span></p>
+                    <ul>
+                        <li><b>समूहमा काम गर्दा सिकिने सीप:</b> टोलीमा काम गर्दा सदस्यहरूले खुला र इमानदारीपूर्वक काम गर्ने, सामूहिक लक्ष्य निर्धारण गर्ने र सफलतालाई सामूहिक रूपमा उत्सव मनाउने बानी बसाल्छन् [१२]।</li>
+                        <li><b>सहानुभूति र उत्तरदायित्वको विकास:</b> टोलीका अन्य सदस्यहरूप्रति सहानुभूति राख्ने र आफ्नो कामप्रति जवाफदेही हुने सीप सिकिन्छ [१२]।</li>
+                        <li><b>निर्णय र समाधान सीपको अभ्यास:</b> समूहमा आउने विवाद सुल्झाउने र सामूहिक निर्णय लिने क्रममा नेतृत्व सीपको अभ्यास हुन्छ [१२]।</li>
+                        <li><b>सबैलाई सम्मान गर्ने बानी:</b> टोलीका साना-ठुला सबै सदस्यलाई समान आदर र सम्मान गर्ने बानी बस्छ, जुन एक असल नेताको अनिवार्य गुण हो [१२]।</li>
+                    </ul>
+
+                    <p><span class="section-title">निष्कर्ष</span></p>
+                    <p>अतः नेतृत्व भनेको आदेश दिने अधिकार मात्र होइन, बरु टोलीसँगै मिलेर काम गर्ने र टोलीकै बलमा साझा सफलता हासिल गर्ने कला हो [१२]। त्यसैले, <b>"टोलीकार्य नै नेतृत्व विकासको पहिलो र वास्तविक पाठशाला हो"</b> भन्नु अत्यन्तै सान्दर्भिक र सत्य कुरा हो [१२]।</p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===== NO RESULTS ===== -->
+        <div class="no-results" id="noResults">
+            🔍 कुनै पनि प्रश्न फेला परेन। कृपया अर्को शब्द खोज्नुहोस्।
+        </div>
+
+    </main>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="माथि जानुहोस्">
+        ⬆
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // ===== SCROLL TO SECTION =====
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                const offset = 150;
+                const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.target === id) btn.classList.add('active');
+            });
+        }
+
+        // ===== SCROLL TOP BUTTON =====
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollTop');
+            if (window.scrollY > 400) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+
+        // ===== SEARCH =====
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            const allCards = document.querySelectorAll('.card');
+            let anyVisible = false;
+
+            allCards.forEach(card => {
+                const text = (card.dataset.search || '') + ' ' +
+                    (card.querySelector('.q-text')?.textContent || '') + ' ' +
+                    (card.querySelector('.answer')?.textContent || '');
+                const match = text.toLowerCase().includes(query);
+                if (query === '') {
+                    card.style.display = 'block';
+                    anyVisible = true;
+                } else if (match) {
+                    card.style.display = 'block';
+                    anyVisible = true;
+                    highlightText(card, query);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // tables inside cards
+            document.querySelectorAll('.answer-table').forEach(table => {
+                const parent = table.closest('.card');
+                if (!parent) return;
+                const text = table.textContent.toLowerCase();
+                if (query !== '' && text.includes(query)) {
+                    parent.style.display = 'block';
+                    anyVisible = true;
+                }
+            });
+
+            if (query !== '' && !anyVisible) {
+                noResults.classList.add('show');
+            } else {
+                noResults.classList.remove('show');
+            }
+        });
+
+        function highlightText(card, query) {
+            card.querySelectorAll('.highlight-match').forEach(el => {
+                const parent = el.parentNode;
+                parent.replaceChild(document.createTextNode(el.textContent), el);
+                parent.normalize();
+            });
+            if (query === '') return;
+            const elements = card.querySelectorAll('.q-text, .answer');
+            elements.forEach(el => {
+                const text = el.textContent;
+                const lower = text.toLowerCase();
+                const idx = lower.indexOf(query);
+                if (idx !== -1) {
+                    const before = text.substring(0, idx);
+                    const match = text.substring(idx, idx + query.length);
+                    const after = text.substring(idx + query.length);
+                    el.innerHTML = '';
+                    if (before) el.appendChild(document.createTextNode(before));
+                    const span = document.createElement('span');
+                    span.className = 'highlight-match';
+                    span.textContent = match;
+                    el.appendChild(span);
+                    if (after) el.appendChild(document.createTextNode(after));
+                }
+            });
+        }
+
+        // ===== ACTIVE NAV ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const sections = ['section-top', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12'];
+            let current = 'section-top';
+            const offset = 170;
+            for (const id of sections) {
+                const el = document.getElementById(id);
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= offset) {
+                        current = id;
+                    }
+                }
+            }
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.target === current) btn.classList.add('active');
+            });
+        });
+
+        // ===== KEYBOARD: ESC to clear search =====
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
+                searchInput.blur();
+            }
+        });
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // All cards are visible by default — no toggle needed
+        });
+    </script>
+
+</body>
+</html>

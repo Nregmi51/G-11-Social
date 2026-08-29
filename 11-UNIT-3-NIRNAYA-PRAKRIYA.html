@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>निर्णय प्रक्रिया — विस्तृत अध्ययन नोट</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e1424;
+    --bg-soft:#141c33;
+    --card:#1a2340;
+    --card-2:#1f2a4d;
+    --border:rgba(255,255,255,0.09);
+    --saffron:#ffb13c;
+    --saffron-soft:#ffd28a;
+    --teal:#28ddb9;
+    --rose:#ff6f83;
+    --violet:#a78bfa;
+    --text:#f4efe3;
+    --text-dim:#aab3d1;
+    --text-dimmer:#7c86a8;
+    --radius:18px;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(255,177,60,0.14), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(40,221,185,0.12), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Noto Sans Devanagari','Hind',sans-serif;
+    line-height:1.75;
+    padding-bottom:120px;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:'Tiro Devanagari Hindi', serif; margin:0 0 .4em; font-weight:400;}
+  a{color:inherit;}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    padding:56px 20px 40px;
+    text-align:center;
+    overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(255,177,60,0.10), transparent 70%);
+    pointer-events:none;
+  }
+  .hero .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:.78rem; letter-spacing:.14em; color:var(--saffron-soft);
+    background:rgba(255,177,60,0.1); border:1px solid rgba(255,177,60,0.35);
+    padding:6px 14px; border-radius:999px; margin-bottom:22px;
+    font-family:'Hind',sans-serif; font-weight:600;
+  }
+  .hero h1{
+    font-size:clamp(2rem, 8vw, 3.1rem);
+    color:var(--text);
+    text-shadow:0 0 40px rgba(255,177,60,0.25);
+    letter-spacing:.01em;
+  }
+  .hero .subtitle{
+    color:var(--text-dim); font-size:1.02rem; max-width:520px; margin:14px auto 0;
+  }
+  .hero .meta{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+    margin-top:26px;
+  }
+  .meta span{
+    font-size:.82rem; color:var(--teal); background:rgba(40,221,185,0.09);
+    border:1px solid rgba(40,221,185,0.3); padding:6px 12px; border-radius:999px;
+  }
+
+  /* trail dots decorative */
+  .trail-deco{
+    display:flex; justify-content:center; align-items:center; gap:6px; margin-top:30px; opacity:.7;
+  }
+  .trail-deco span{width:6px;height:6px;border-radius:50%; background:var(--saffron);}
+  .trail-deco span:nth-child(2n){background:var(--teal);}
+  .trail-deco span:nth-child(3n){background:var(--rose);}
+
+  /* ===== Layout ===== */
+  .wrap{max-width:760px; margin:0 auto; padding:0 18px;}
+
+  section{
+    padding:44px 0 8px;
+    border-top:1px solid var(--border);
+    scroll-margin-top:20px;
+  }
+  section:first-of-type{border-top:none;}
+
+  .sec-head{
+    display:flex; align-items:flex-start; gap:14px; margin-bottom:22px;
+  }
+  .sec-num{
+    flex:0 0 auto;
+    font-family:'Tiro Devanagari Hindi', serif;
+    font-size:1.3rem;
+    width:46px; height:46px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(145deg, var(--card-2), var(--card));
+    border:1px solid var(--border);
+    color:var(--saffron-soft);
+  }
+  .sec-head h2{font-size:clamp(1.35rem, 5vw, 1.7rem); color:var(--text);}
+  .sec-head .sec-sub{font-size:.85rem; color:var(--text-dimmer); margin-top:2px; font-family:'Hind',sans-serif;}
+
+  p{color:var(--text-dim); margin:0 0 16px; font-size:.98rem;}
+  strong{color:var(--text); font-weight:600;}
+
+  .card{
+    background:linear-gradient(160deg, var(--card), var(--card-2));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:18px 18px;
+    margin-bottom:16px;
+  }
+  .quote{
+    border-left:3px solid var(--saffron);
+    background:rgba(255,177,60,0.06);
+    padding:14px 16px;
+    border-radius:0 12px 12px 0;
+    font-style:normal;
+    color:var(--text);
+    margin:14px 0 18px;
+    font-size:.95rem;
+  }
+  .quote cite{display:block; margin-top:8px; color:var(--saffron-soft); font-size:.82rem; font-style:normal;}
+
+  .callout{
+    display:flex; gap:12px; align-items:flex-start;
+    background:rgba(255,111,131,0.08);
+    border:1px solid rgba(255,111,131,0.3);
+    border-radius:14px; padding:14px 16px; margin:16px 0;
+  }
+  .callout .ic{font-size:1.2rem;}
+  .callout p{margin:0; color:var(--text); font-size:.92rem;}
+
+  /* factor grid (internal/external) */
+  .factor-grid{display:grid; grid-template-columns:1fr; gap:14px; margin:18px 0;}
+  @media(min-width:600px){.factor-grid{grid-template-columns:1fr 1fr;}}
+  .factor-card{
+    border-radius:16px; padding:18px; border:1px solid var(--border);
+  }
+  .factor-card.internal{background:linear-gradient(160deg, rgba(40,221,185,0.12), rgba(26,35,64,0.6));}
+  .factor-card.external{background:linear-gradient(160deg, rgba(167,139,250,0.12), rgba(26,35,64,0.6));}
+  .factor-card h4{font-size:1.05rem; margin-bottom:8px; color:var(--text);}
+  .factor-card.internal h4{color:var(--teal);}
+  .factor-card.external h4{color:var(--violet);}
+  .factor-card ul{margin:0; padding-left:20px; color:var(--text-dim); font-size:.9rem;}
+  .factor-card li{margin-bottom:6px;}
+  .factor-card .impact{margin-top:12px; padding-top:12px; border-top:1px dashed var(--border); font-size:.85rem; color:var(--text-dimmer);}
+
+  /* decision types cards */
+  .type-grid{display:grid; grid-template-columns:1fr; gap:12px; margin:18px 0;}
+  @media(min-width:560px){.type-grid{grid-template-columns:1fr 1fr;}}
+  .type-card{
+    background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:16px; position:relative; overflow:hidden;
+  }
+  .type-card::before{
+    content:""; position:absolute; top:0; left:0; width:4px; height:100%;
+    background:var(--accent, var(--saffron));
+  }
+  .type-card h4{font-size:1rem; color:var(--text); margin-bottom:6px; display:flex; align-items:center; gap:8px;}
+  .type-card h4 .emoji{font-size:1.1rem;}
+  .type-card p{font-size:.86rem; margin:0;}
+  .type-card .ex{margin-top:8px; font-size:.8rem; color:var(--text-dimmer);}
+  .type-card .ex b{color:var(--saffron-soft); font-weight:600;}
+
+  /* 7 step trail */
+  .trail{position:relative; margin:26px 0 10px; padding-left:38px;}
+  .trail::before{
+    content:""; position:absolute; left:14px; top:6px; bottom:6px; width:2px;
+    background:repeating-linear-gradient(180deg, var(--saffron) 0 6px, transparent 6px 12px);
+  }
+  .trail-step{position:relative; margin-bottom:26px;}
+  .trail-step:last-child{margin-bottom:0;}
+  .trail-step::before{
+    content:attr(data-n);
+    position:absolute; left:-38px; top:0;
+    width:30px; height:30px; border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, var(--saffron-soft), var(--saffron));
+    color:#241300; font-weight:800; font-size:.85rem;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 0 0 4px var(--bg), 0 0 18px rgba(255,177,60,0.5);
+    font-family:'Hind',sans-serif;
+  }
+  .trail-step .card{margin-bottom:0;}
+  .trail-step h4{font-size:1rem; color:var(--saffron-soft); margin-bottom:4px;}
+  .trail-step p{margin:0; font-size:.9rem;}
+
+  /* causes list (chips) */
+  .chip-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:10px; margin:16px 0;}
+  .chip{
+    background:rgba(255,111,131,0.08); border:1px solid rgba(255,111,131,0.28);
+    border-radius:12px; padding:10px 12px; font-size:.84rem; color:var(--text);
+    display:flex; gap:8px; align-items:flex-start;
+  }
+  .chip .n{color:var(--rose); font-weight:700; font-family:'Hind',sans-serif;}
+
+  /* activities */
+  .activity{
+    background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:16px 18px; margin-bottom:14px;
+  }
+  .activity h4{font-size:1rem; color:var(--teal); margin-bottom:8px;}
+  .activity p{font-size:.9rem; margin-bottom:8px;}
+  .activity p:last-child{margin-bottom:0;}
+
+  /* exercise Q&A accordion */
+  .qa{border:1px solid var(--border); border-radius:14px; margin-bottom:10px; overflow:hidden; background:var(--card);}
+  .qa summary{
+    list-style:none; cursor:pointer; padding:14px 16px; font-size:.92rem; color:var(--text);
+    display:flex; justify-content:space-between; align-items:center; gap:10px;
+    font-weight:600;
+  }
+  .qa summary::-webkit-details-marker{display:none;}
+  .qa summary::after{
+    content:"+"; color:var(--saffron); font-size:1.3rem; font-weight:400; flex:0 0 auto; transition:transform .2s;
+  }
+  .qa[open] summary::after{transform:rotate(45deg);}
+  .qa .qa-body{padding:0 16px 16px; font-size:.88rem; color:var(--text-dim);}
+  .qa .qa-body table{width:100%; border-collapse:collapse; margin-top:10px; font-size:.82rem;}
+  .qa .qa-body th, .qa .qa-body td{border:1px solid var(--border); padding:8px; text-align:left;}
+  .qa .qa-body th{color:var(--saffron-soft); background:rgba(255,177,60,0.06);}
+
+  .tag-band{
+    display:inline-block; font-size:.72rem; letter-spacing:.06em; font-weight:700;
+    padding:3px 10px; border-radius:999px; margin-bottom:8px; font-family:'Hind',sans-serif;
+  }
+  .tag-band.marks1{background:rgba(40,221,185,0.15); color:var(--teal);}
+  .tag-band.marks5{background:rgba(255,177,60,0.15); color:var(--saffron-soft);}
+  .tag-band.marks8{background:rgba(255,111,131,0.15); color:var(--rose);}
+
+  /* glossary */
+  .gloss{display:grid; grid-template-columns:1fr; gap:10px; margin:18px 0;}
+  .gloss-item{
+    display:flex; gap:14px; padding:14px 16px; background:var(--card);
+    border:1px solid var(--border); border-radius:14px; align-items:flex-start;
+  }
+  .gloss-item .term{flex:0 0 110px; color:var(--saffron-soft); font-weight:700; font-size:.9rem;}
+  .gloss-item .def{color:var(--text-dim); font-size:.87rem;}
+
+  table.compare{width:100%; border-collapse:collapse; margin:16px 0; font-size:.85rem;}
+  table.compare th, table.compare td{border:1px solid var(--border); padding:10px; text-align:left;}
+  table.compare th{background:rgba(255,177,60,0.08); color:var(--saffron-soft);}
+  table.compare td{color:var(--text-dim);}
+
+  footer{
+    text-align:center; padding:50px 20px 20px; color:var(--text-dimmer); font-size:.8rem;
+  }
+
+  /* ===== Floating controls ===== */
+  .fab-stack{
+    position:fixed; right:16px; bottom:18px; z-index:60;
+    display:flex; flex-direction:column; gap:12px; align-items:center;
+  }
+  .fab{
+    width:52px; height:52px; border-radius:50%; border:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 24px rgba(0,0,0,0.4);
+    color:#1a0f00; font-size:1.3rem;
+    transition:transform .15s ease, opacity .2s ease;
+  }
+  .fab:active{transform:scale(.92);}
+  .fab-nav{
+    background:radial-gradient(circle at 30% 25%, var(--saffron-soft), var(--saffron));
+  }
+  .fab-top{
+    background:radial-gradient(circle at 30% 25%, #6ff0d8, var(--teal));
+    opacity:0; pointer-events:none; transform:translateY(10px) scale(.8);
+  }
+  .fab-top.show{opacity:1; pointer-events:auto; transform:translateY(0) scale(1);}
+
+  /* jump sheet */
+  .sheet-backdrop{
+    position:fixed; inset:0; background:rgba(5,8,18,0.6); backdrop-filter:blur(2px);
+    z-index:70; opacity:0; pointer-events:none; transition:opacity .25s ease;
+  }
+  .sheet-backdrop.show{opacity:1; pointer-events:auto;}
+  .sheet{
+    position:fixed; left:0; right:0; bottom:0; z-index:71;
+    background:linear-gradient(180deg, var(--card-2), var(--bg-soft));
+    border-radius:22px 22px 0 0;
+    border-top:1px solid var(--border);
+    padding:14px 16px 26px;
+    max-height:72vh; overflow-y:auto;
+    transform:translateY(102%);
+    transition:transform .3s cubic-bezier(.32,.72,0,1);
+    box-shadow:0 -10px 40px rgba(0,0,0,0.5);
+  }
+  .sheet.show{transform:translateY(0);}
+  .sheet-handle{width:40px; height:4px; border-radius:2px; background:var(--border); margin:0 auto 14px;}
+  .sheet h3{font-size:1.05rem; color:var(--saffron-soft); margin-bottom:14px; padding-left:4px;}
+  .sheet-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px;}
+  .sheet-list button{
+    width:100%; text-align:right; direction:ltr; background:transparent; border:none;
+    color:var(--text); font-family:inherit; font-size:.94rem; padding:12px 12px;
+    display:flex; align-items:center; gap:12px; border-radius:12px; cursor:pointer;
+  }
+  .sheet-list button:active{background:rgba(255,255,255,0.06);}
+  .sheet-list .num{
+    flex:0 0 auto; width:30px; height:30px; border-radius:9px; background:var(--card);
+    border:1px solid var(--border); display:flex; align-items:center; justify-content:center;
+    font-size:.82rem; color:var(--saffron-soft); font-family:'Hind',sans-serif; font-weight:700;
+  }
+  .sheet-list .lbl{flex:1; text-align:left;}
+
+  ::selection{background:rgba(255,177,60,0.3);}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="eyebrow">कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</span>
+  <h1>निर्णय प्रक्रिया</h1>
+  <p class="subtitle">एकाइ ३ · पाठ १ — Decision Making Process को पूर्ण, परीक्षा-उपयोगी अध्ययन नोट</p>
+  <div class="meta">
+    <span>📖 ९ खण्ड</span>
+    <span>🪜 ७ चरण</span>
+    <span>📝 परीक्षा प्रश्नोत्तर सहित</span>
+  </div>
+  <div class="trail-deco"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</div>
+
+<div class="wrap">
+
+  <section id="s1">
+    <div class="sec-head">
+      <div class="sec-num">१</div>
+      <div>
+        <h2>निर्णय र निर्णय निर्माणको अवधारणा</h2>
+        <div class="sec-sub">Conceptual Introduction</div>
+      </div>
+    </div>
+    <p>हामीले कुनै पनि काम गर्नुपूर्व आफ्नो उमेर, योग्यता, अनुभव र क्षमताका आधारमा <strong>'के गर्ने, किन गर्ने, कसरी गर्ने, कहाँ गर्ने र कहिले गर्ने'</strong> भन्ने प्रश्नहरूको समाधान खोज्दै एउटा निष्कर्षमा पुग्छौँ।</p>
+    <p>पाठ्यपुस्तकको उदाहरण अनुसार, जागृतिले आफ्नो भविष्यका लागि गाउँकै विद्यालयमा पढ्ने निधो गर्नु र जोमनले सहरको सुविधा सम्पन्न भौतिक वातावरणमा एमबीबीएस पढ्ने लक्ष्यसहित सहर जाने छनोट गर्नु निर्णयका उत्कृष्ट उदाहरण हुन्। यसरी उपलब्ध विकल्पहरूमध्येबाट एउटा निष्कर्षमा पुग्नु नै निर्णय हो।</p>
+
+    <div class="quote">
+      "निर्णय गर्ने कार्यलाई दुई वा सोभन्दा बढी सम्भाव्य विकल्पहरूबाट एउटा सबैभन्दा राम्रो विकल्पको छनोट भनी परिभाषित गर्न सकिन्छ।"
+      <cite>— जर्ज आर. टेरी</cite>
+    </div>
+    <div class="quote">
+      "विकल्पहरूबीचको छनोट कार्यका साथै योजना तर्जुमाको जगलाई निर्णय भनिन्छ।"
+      <cite>— हेरोल्ड कुन्ज र हेन्ज वेरिच</cite>
+    </div>
+
+    <p><strong>निष्कर्ष:</strong> निर्णय गर्नु भनेको उपलब्ध धेरै सम्भावना वा विकल्पहरूमध्येबाट तथ्य र प्रमाणका आधारमा एउटा उत्कृष्ट विकल्पको चयन गर्नु हो। यो एक निश्चित प्रक्रिया पूरा गरेर गरिने कार्य हो जसलाई <strong>निर्णय निर्माण (Decision Making)</strong> भनिन्छ।</p>
+
+    <div class="callout">
+      <span class="ic">🧭</span>
+      <p>हाम्रो एउटा सही निर्णयले भविष्यको मार्गचित्र कोर्छ भने एउटा गलत निर्णयले जीवनभरको पछुतो निम्त्याउन सक्छ।</p>
+    </div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head">
+      <div class="sec-num">२</div>
+      <div>
+        <h2>निर्णय गर्दा ध्यान दिनुपर्ने पक्षहरू</h2>
+        <div class="sec-sub">Internal &amp; External Factors · पृष्ठ ३२</div>
+      </div>
+    </div>
+    <p>सफल निर्णय लिनका लागि आन्तरिक र बाह्य दुवै पक्षहरूको सूक्ष्म विश्लेषण अनिवार्य छ:</p>
+
+    <div class="factor-grid">
+      <div class="factor-card internal">
+        <h4>🏠 आन्तरिक पक्ष</h4>
+        <ul>
+          <li>मानवीय स्रोत</li>
+          <li>भौतिक स्रोत</li>
+          <li>वित्तीय स्रोत</li>
+          <li>प्राविधिक स्रोत</li>
+          <li>उपलब्ध समय</li>
+          <li>सङ्गठनात्मक वातावरण</li>
+        </ul>
+        <div class="impact">संस्था वा व्यक्तिको आफ्नै क्षमता र सीमा निर्धारण गर्दछ।</div>
+      </div>
+      <div class="factor-card external">
+        <h4>🌐 बाह्य पक्ष</h4>
+        <ul>
+          <li>आर्थिक, सामाजिक, सांस्कृतिक पक्ष</li>
+          <li>भौगोलिक र प्रशासनिक पक्ष</li>
+          <li>मुलुकको नीति तथा कानुनी व्यवस्था</li>
+          <li>प्रतिस्पर्धा र प्रविधि</li>
+        </ul>
+        <div class="impact">निर्णयको वैधानिकता र सामाजिक स्वीकार्यता निर्धारण गर्दछ।</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="ic">💡</span>
+      <p><strong>विशेषज्ञ सुझाव:</strong> यी पक्षहरूको सन्तुलन मिलाउन नसक्दा निर्णय असफल हुन्छ। उदाहरणका लागि, मुलुकको कानुनी व्यवस्था (बाह्य पक्ष) लाई बेवास्ता गरी गरिएको निर्णयले कानुनी जटिलता र संस्थागत विफलता निम्त्याउँछ।</p>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head">
+      <div class="sec-num">३</div>
+      <div>
+        <h2>निर्णयका प्रकारहरू</h2>
+        <div class="sec-sub">Types of Decisions · ६ प्रकार</div>
+      </div>
+    </div>
+    <p>परिस्थिति र आवश्यकता अनुसार निर्णयहरूलाई मुख्यतया ६ भागमा विभाजन गर्न सकिन्छ:</p>
+
+    <div class="type-grid">
+      <div class="type-card" style="--accent:var(--saffron)">
+        <h4><span class="emoji">🏢</span>सङ्गठनात्मक निर्णय</h4>
+        <p>कार्यालय वा संस्थाको लक्ष्य प्राप्तिका लागि पदाधिकारीद्वारा लिइने निर्णय।</p>
+        <div class="ex"><b>उदाहरण:</b> विद्यालयले नयाँ शैक्षिक सत्रका लागि भर्ना शुल्क निर्धारण गर्नु।</div>
+      </div>
+      <div class="type-card" style="--accent:var(--teal)">
+        <h4><span class="emoji">🙋</span>व्यक्तिगत निर्णय</h4>
+        <p>व्यक्तिले आफ्नो दैनिक जीवन र भविष्यका लागि गर्ने स्व-निर्णय।</p>
+        <div class="ex"><b>उदाहरण:</b> कक्षा ११ मा कुन संकाय वा विषय पढ्ने भन्ने छनोट।</div>
+      </div>
+      <div class="type-card" style="--accent:var(--rose)">
+        <h4><span class="emoji">👥</span>सामूहिक निर्णय</h4>
+        <p>धेरै जना सहभागी भई आपसी सहमतिमा गरिने निर्णय।</p>
+        <div class="ex"><b>उदाहरण:</b> टोल सुधार समितिले बाटो पिच गर्ने सम्बन्धमा गर्ने निर्णय।</div>
+      </div>
+      <div class="type-card" style="--accent:var(--violet)">
+        <h4><span class="emoji">⚖️</span>विवेकशील निर्णय</h4>
+        <p>भावनामा नबगी तथ्य, तथ्याङ्क र प्रमाणको विश्लेषणबाट लिइने सर्वोत्तम निर्णय।</p>
+        <div class="ex"><b>उदाहरण:</b> बजेट र फिचरहरू तुलना गरेर कुन ल्यापटप किन्ने भन्ने निर्णय।</div>
+      </div>
+      <div class="type-card" style="--accent:var(--saffron)">
+        <h4><span class="emoji">📈</span>बढोत्तरी निर्णय</h4>
+        <p>पूर्व गरिएका निर्णयलाई नै आधार मानी जोखिम न्यूनीकरण गर्न थप सुधार वा परिमार्जन गर्ने रणनीति।</p>
+        <div class="ex"><b>उदाहरण:</b> पुस्तकालयमा थप नयाँ पुस्तक र आधुनिक र्‍याक थप्ने निर्णय।</div>
+      </div>
+      <div class="type-card" style="--accent:var(--teal)">
+        <h4><span class="emoji">🤝</span>सहभागितामूलक निर्णय</h4>
+        <p>लाभग्राही वा सरोकारवालालाई समेत सहभागी गराई गरिने निर्णय।</p>
+        <div class="ex"><b>उदाहरण:</b> विद्यालयको नयाँ पोसाक परिवर्तनमा विद्यार्थी र अभिभावकको राय लिने।</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head">
+      <div class="sec-num">४</div>
+      <div>
+        <h2>निर्णय प्रक्रियाका ७ चरणहरू</h2>
+        <div class="sec-sub">Steps of Decision Making Process</div>
+      </div>
+    </div>
+    <p>वैज्ञानिक निर्णयका लागि सातवटा क्रमिक चरणहरू पालना गर्नुपर्छ — यसलाई एउटा बाटो (trail) को रूपमा हेरौं:</p>
+
+    <div class="trail">
+      <div class="trail-step" data-n="१">
+        <div class="card"><h4>समस्याको पहिचान गर्ने</h4><p>निर्णय लिनुपर्ने मुख्य विषय वा समस्या के हो भनी स्पष्ट रूपमा ठम्याउने।</p></div>
+      </div>
+      <div class="trail-step" data-n="२">
+        <div class="card"><h4>समस्याको विश्लेषण गर्ने</h4><p>समस्याको प्रकृति, गम्भीरता र यसका कारणहरूबारे गहिरो अध्ययन गर्ने।</p></div>
+      </div>
+      <div class="trail-step" data-n="३">
+        <div class="card"><h4>विकल्पको पहिचान गर्ने</h4><p>समस्या समाधानका लागि उपलब्ध हुनसक्ने सबै सम्भावित उपायहरू खोज्ने।</p></div>
+      </div>
+      <div class="trail-step" data-n="४">
+        <div class="card"><h4>विकल्पको विश्लेषण गर्ने</h4><p>प्रत्येक विकल्पका फाइदा, बेफाइदा, लागत र जोखिमको लेखाजोखा गर्ने।</p></div>
+      </div>
+      <div class="trail-step" data-n="५">
+        <div class="card"><h4>सबैभन्दा राम्रो विकल्प छनोट गर्ने</h4><p>विश्लेषणका आधारमा सबैभन्दा प्रभावकारी विकल्प रोज्ने।</p></div>
+      </div>
+      <div class="trail-step" data-n="६">
+        <div class="card"><h4>निर्णय कार्यान्वयन गर्ने</h4><p>छनोट गरिएको विकल्पलाई व्यवहारमा उतार्न आवश्यक कार्ययोजना बनाउने।</p></div>
+      </div>
+      <div class="trail-step" data-n="७">
+        <div class="card"><h4>पुनरावलोकन तथा मूल्याङ्कन गर्ने</h4><p>कार्यान्वयनको नतिजा कस्तो रह्यो र लक्ष्य प्राप्त भयो कि भएन भनी जाँच्ने।</p></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="ic">⚠️</span>
+      <p>यो प्रक्रियालाई सही ढङ्गले पालना नगर्दा आइपर्ने जोखिमपूर्ण अवस्था <strong>'अनिर्णित अवस्था'</strong> हो।</p>
+    </div>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head">
+      <div class="sec-num">५</div>
+      <div>
+        <h2>अनिर्णित हुने अवस्था र यसका कारणहरू</h2>
+        <div class="sec-sub">Indecision and its Causes · पृष्ठ ३४</div>
+      </div>
+    </div>
+    <p>जब व्यक्ति वा संस्था समयमै सही विकल्प रोज्न सक्दैन र अन्योलमा रहन्छ, त्यसलाई <strong>अनिर्णित अवस्था</strong> भनिन्छ। यसले स्रोतसाधन र समयको दुरुपयोग गराई प्रगतिमा बाधा पुर्‍याउँछ।</p>
+
+    <p>अनिर्णित हुनुका मुख्य ८ कारणहरू:</p>
+    <div class="chip-grid">
+      <div class="chip"><span class="n">१</span> पर्याप्त सूचनाको अभाव</div>
+      <div class="chip"><span class="n">२</span> असहज परिस्थिति वा वातावरण</div>
+      <div class="chip"><span class="n">३</span> बाह्य दबाब समूहको हस्तक्षेप</div>
+      <div class="chip"><span class="n">४</span> नकारात्मक असरको डर</div>
+      <div class="chip"><span class="n">५</span> स्रोतसाधनको अनुपलब्धता</div>
+      <div class="chip"><span class="n">६</span> स्पष्ट अधिकारको अभाव</div>
+      <div class="chip"><span class="n">७</span> कम समय सीमा</div>
+      <div class="chip"><span class="n">८</span> नीति तथा कानुनमा जटिलता</div>
+    </div>
+  </section>
+
+  <section id="s6">
+    <div class="sec-head">
+      <div class="sec-num">६</div>
+      <div>
+        <h2>पाठका क्रियाकलापहरूको समाधान</h2>
+        <div class="sec-sub">Activity Solutions</div>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h4>क्रियाकलाप १ — घरपरिवारका समस्या समाधानका विकल्प</h4>
+      <p>घरमा फोहोर व्यवस्थापनको समस्या छ भने यसका विकल्पहरू:</p>
+      <p>१. घरमै कम्पोस्ट मल बनाउने&nbsp; २. नगरपालिकाको गाडीमा पठाउने&nbsp; ३. प्लास्टिक र सिसाजन्य वस्तु कबाडीलाई बिक्री गर्ने।</p>
+    </div>
+
+    <div class="activity">
+      <h4>क्रियाकलाप २ — विद्यालय व्यवस्थापन समितिका निर्णय</h4>
+      <p><strong>निर्णय:</strong> विद्यालयमा 'जङ्क फुड' निषेध गर्ने। <strong>कारण:</strong> विद्यार्थीको बढ्दो स्वास्थ्य समस्या र मोटोपन।</p>
+      <p><strong>विकल्पहरू:</strong> विद्यालयमै क्यान्टिन सञ्चालन गरी स्वस्थ खाजा खुवाउने वा घरबाटै खाजा ल्याउन अभिभावकलाई प्रोत्साहन गर्ने।</p>
+    </div>
+
+    <div class="activity">
+      <h4>क्रियाकलाप ३ — कार्यान्वयन हुन नसकेका निर्णयहरू</h4>
+      <p><strong>निर्णय १:</strong> दैनिक एक घण्टा व्यायाम गर्ने। &nbsp; <strong>निर्णय २:</strong> अंग्रेजी शब्दकोशका १० वटा शब्द दिनहुँ कण्ठ गर्ने।</p>
+      <p><strong>कार्यान्वयन नहुनुका कारण:</strong> समय व्यवस्थापनको अभाव, आलस्यता (Procrastination), र स्पष्ट कार्ययोजनाको कमी।</p>
+      <p><strong>नयाँ विकल्प:</strong> बिहान चाँडो उठ्ने बानी बसाल्ने र मोबाइल चलाउने समय घटाएर व्यायाम र अध्ययनमा लगाउने।</p>
+    </div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head">
+      <div class="sec-num">७</div>
+      <div>
+        <h2>पाठका अभ्यासहरूको समाधान</h2>
+        <div class="sec-sub">Exercise Solutions</div>
+      </div>
+    </div>
+
+    <details class="qa" open>
+      <summary>१. निर्णय निर्माणको परिचय दिनुहोस्।</summary>
+      <div class="qa-body">निर्णय निर्माण भनेको कुनै पनि समस्या समाधानका लागि वा लक्ष्य प्राप्तिका लागि उपलब्ध विभिन्न विकल्पहरूमध्येबाट तथ्य, तर्क र प्रमाणका आधारमा सर्वोत्तम विकल्प छनोट गर्ने एक सचेत र वैज्ञानिक प्रक्रिया हो। यो 'के गर्ने' र 'कसरी गर्ने' भन्ने निष्कर्षमा पुग्ने बौद्धिक कार्य हो।</div>
+    </details>
+
+    <details class="qa">
+      <summary>२. निर्णय निर्माणका प्रकारहरू उदाहरणसहित वर्णन गर्नुहोस्।</summary>
+      <div class="qa-body">निर्णय निर्माणका ६ प्रकारहरू छन्: १. व्यक्तिगत (कुन कपडा किन्ने), २. सङ्गठनात्मक (कम्पनीको नयाँ नियम), ३. सामूहिक (वन उपभोक्ता समितिको निर्णय), ४. विवेकशील (फाइदा-बेफाइदा हेरेर गरिने छनोट), ५. बढोत्तरी (भइरहेको काममा सुधार गर्ने), र ६. सहभागितामूलक (सरोकारवालाको सल्लाहमा गरिने निर्णय)।</div>
+    </details>
+
+    <details class="qa">
+      <summary>३. निर्णय गर्दा ध्यान दिनुपर्ने कुराहरूको सूची तयार पार्नुहोस्।</summary>
+      <div class="qa-body">
+        उपलब्ध मानवीय, भौतिक र वित्तीय स्रोत · समयको सीमा र सङ्गठनात्मक वातावरण · देशको विद्यमान नीति, नियम र कानुनी व्यवस्था · आर्थिक, सामाजिक र सांस्कृतिक परिवेश · प्रतिस्पर्धाको अवस्था र प्रविधिको विकास।
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>४. 'निर्णय निर्माण जटिल र व्यावहारिक काम हो।' — तर्कले पुष्टि गर्नुहोस्।</summary>
+      <div class="qa-body">
+        निर्णय निर्माण केवल एक विचार मात्र नभई एक गहन व्यावहारिक प्रक्रिया हो। यो निम्न कारणले जटिल छ: यसमा भविष्यमा पर्ने प्रभावको पूर्वानुमान गर्नुपर्ने हुन्छ; सीमित स्रोतसाधनको प्रयोग गरी अधिकतम प्रतिफल निकाल्नुपर्ने दबाब हुन्छ; विभिन्न बाह्य दबाब समूह र कानुनी जटिलताहरूको सामना गर्नुपर्छ; एउटा सानो त्रुटिले ठूलो आर्थिक वा सामाजिक क्षति पुर्‍याउन सक्छ। अतः यो अत्यन्तै जटिल र व्यावहारिक कार्य हो।
+      </div>
+    </details>
+  </section>
+
+  <section id="s8">
+    <div class="sec-head">
+      <div class="sec-num">८</div>
+      <div>
+        <h2>परीक्षा उपयोगी सम्भावित प्रश्नोत्तर</h2>
+        <div class="sec-sub">Exam-oriented Q&amp;A</div>
+      </div>
+    </div>
+
+    <span class="tag-band marks1">१ अङ्क</span>
+    <details class="qa"><summary>निर्णय निर्माणको पहिलो चरण कुन हो?</summary><div class="qa-body">समस्याको पहिचान गर्ने।</div></details>
+    <details class="qa"><summary>सामूहिक निर्णयको एक फाइदा लेख्नुहोस्।</summary><div class="qa-body">यसमा सबैको सहभागिता हुने हुँदा कार्यान्वयनमा सहजता हुन्छ।</div></details>
+    <details class="qa"><summary>पुनरावलोकन भनेको के हो?</summary><div class="qa-body">कार्यान्वयन भएको निर्णयले सोचेको परिणाम दियो कि दिएन भनी मूल्याङ्कन गर्ने कार्य।</div></details>
+    <details class="qa"><summary>बढोत्तरी निर्णय किन गरिन्छ?</summary><div class="qa-body">जोखिम कम गर्न र भइरहेको कार्यमा क्रमिक सुधार गर्न।</div></details>
+    <details class="qa"><summary>दबाब समूहले निर्णयमा कस्तो प्रभाव पार्छ?</summary><div class="qa-body">यसले निर्णयलाई कुनै खास पक्षको हितमा मोड्न नकारात्मक दबाब दिन सक्छ।</div></details>
+
+    <span class="tag-band marks5" style="margin-top:20px; display:inline-block;">५ अङ्क</span>
+    <details class="qa">
+      <summary>व्यक्तिगत र सामूहिक निर्णयबीचको भिन्नता देखाउनुहोस्।</summary>
+      <div class="qa-body">
+        <table>
+          <tr><th>आधार</th><th>व्यक्तिगत निर्णय</th><th>सामूहिक निर्णय</th></tr>
+          <tr><td>प्रक्रिया</td><td>व्यक्ति एक्लैले छिटो निर्णय लिन्छ।</td><td>छलफल र सहमति आवश्यक पर्दा समय लाग्छ।</td></tr>
+          <tr><td>उत्तरदायित्व</td><td>निर्णयको जस-अपजस व्यक्ति स्वयम्को हुन्छ।</td><td>उत्तरदायित्व सबै सदस्यहरूमा बाँडिन्छ।</td></tr>
+          <tr><td>गुणस्तर</td><td>सीमित अनुभव र ज्ञानका आधारमा हुन्छ।</td><td>विविध ज्ञान र अनुभवको प्रयोगले उच्च गुणस्तरको हुन्छ।</td></tr>
+        </table>
+      </div>
+    </details>
+    <details class="qa">
+      <summary>निर्णय प्रक्रियामा 'पुनरावलोकन' को महत्त्व स्पष्ट पार्नुहोस्।</summary>
+      <div class="qa-body">पुनरावलोकन निर्णय प्रक्रियाको अन्तिम तर महत्त्वपूर्ण चरण हो। यसले कार्यान्वयन भएको निर्णयको प्रभावकारिता जाँच्न मद्दत गर्छ। यदि निर्णयले सोचेको लक्ष्य प्राप्त गर्न सकेन भने कमजोरी पत्ता लगाई सुधार गर्न सकिन्छ। यसले भविष्यमा गरिने निर्णयहरूलाई अझ परिपक्व र त्रुटिरहित बनाउन मार्गदर्शन गर्दछ।</div>
+    </details>
+    <details class="qa">
+      <summary>निर्णय निर्माणमा सूचनाको भूमिका कस्तो रहन्छ?</summary>
+      <div class="qa-body">सूचना निर्णय निर्माणको मेरुदण्ड हो। पर्याप्त र सही सूचनाविना गरिने निर्णयले जोखिम निम्त्याउँछ। सूचनाले उपलब्ध विकल्पहरूको विश्लेषण गर्न, भविष्यको असर पूर्वानुमान गर्न र तथ्यपरक निष्कर्षमा पुग्न मद्दत गर्छ। सूचनाकै अभावमा मानिस 'अनिर्णित अवस्था' मा पुग्दछ।</div>
+    </details>
+
+    <span class="tag-band marks8" style="margin-top:20px; display:inline-block;">८ अङ्क</span>
+    <details class="qa">
+      <summary>विवेकशील निर्णय प्रक्रियालाई एक जीवनोपयोगी सिपको रूपमा विवेचना गर्नुहोस्।</summary>
+      <div class="qa-body">
+        <p style="margin-bottom:10px;">विवेकशील निर्णय प्रक्रिया कुनै पनि व्यक्तिको व्यक्तिगत र व्यावसायिक सफलताको आधारस्तम्भ हो। यसलाई जीवनोपयोगी सिप मान्नुका कारणहरू:</p>
+        <p style="margin-bottom:6px;"><strong>१. लक्ष्य प्राप्तिमा प्रभावकारिता:</strong> विवेकशील निर्णयले मानिसलाई भावनात्मक आवेशमा आउनबाट जोगाउँछ र तथ्य-तर्कका आधारमा सर्वोत्तम विकल्प छनोट गर्न सिकाउँछ।</p>
+        <p style="margin-bottom:6px;"><strong>२. तनाव न्यूनीकरण:</strong> वैज्ञानिक सात चरणहरू पालना गर्दा निर्णयको आधार स्पष्ट हुन्छ, जसले भविष्यको पछुतो र मानसिक तनाव कम गर्छ।</p>
+        <p style="margin-bottom:6px;"><strong>३. स्रोतको अधिकतम उपयोग:</strong> समय, पैसा र ऊर्जालाई सबैभन्दा बढी प्रतिफल दिने विकल्पमा लगानी गरी दक्षता बढाइन्छ।</p>
+        <p style="margin-bottom:0;"><strong>४. जोखिम व्यवस्थापन:</strong> विकल्पहरूको विश्लेषण गर्दा चुनौतीहरूको पूर्व-अनुमान गरिने हुनाले सम्भावित असफलताबाट बच्न सकिन्छ। दैनिक जीवनमा विषय छनोटदेखि पेशा छनोट सम्मका मोडहरूमा यसको ठूलो भूमिका हुन्छ।</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="s9">
+    <div class="sec-head">
+      <div class="sec-num">९</div>
+      <div>
+        <h2>पारिभाषिक शब्दावली</h2>
+        <div class="sec-sub">Technical Glossary</div>
+      </div>
+    </div>
+
+    <div class="gloss">
+      <div class="gloss-item"><div class="term">निर्णय</div><div class="def">कुनै काम गर्ने वा नगर्ने भनी विचारपूर्वक गरिएको निष्कर्ष।</div></div>
+      <div class="gloss-item"><div class="term">निर्णय निर्माण</div><div class="def">विकल्पहरूमध्येबाट उत्तम छनोट गर्ने निश्चित प्रक्रिया।</div></div>
+      <div class="gloss-item"><div class="term">पुनरावलोकन</div><div class="def">निर्णयको नतिजा कस्तो रह्यो भनी पुनः जाँच गर्ने काम।</div></div>
+      <div class="gloss-item"><div class="term">दबाब समूह</div><div class="def">निर्णयलाई आफ्नो पक्षमा पार्न प्रभाव पार्ने बाह्य शक्ति।</div></div>
+      <div class="gloss-item"><div class="term">बढोत्तरी निर्णय</div><div class="def">साविककै कामलाई थप परिमार्जन वा सुधार गर्ने कार्य।</div></div>
+      <div class="gloss-item"><div class="term">विकल्प विश्लेषण</div><div class="def">उपलब्ध उपायहरूको फाइदा र बेफाइदा जाँच्ने प्रक्रिया।</div></div>
+      <div class="gloss-item"><div class="term">तार्किक</div><div class="def">तथ्य र कारणमा आधारित सोचाइ (Logical)।</div></div>
+      <div class="gloss-item"><div class="term">कार्यान्वयन</div><div class="def">गरिएको निर्णयलाई व्यवहारमा लागू गर्ने कार्य।</div></div>
+      <div class="gloss-item"><div class="term">सरोकारवाला</div><div class="def">निर्णयबाट प्रत्यक्ष वा अप्रत्यक्ष प्रभाव पर्ने व्यक्ति वा समूह।</div></div>
+      <div class="gloss-item"><div class="term">पूर्वाग्रह</div><div class="def">कुनै कुराप्रति पहिले नै बनाइएको गलत धारणा वा झुकाव (Bias)।</div></div>
+    </div>
+  </section>
+
+  <footer>
+    यो नोटले तपाईंलाई निर्णय प्रक्रियाको पूर्ण ज्ञान दिनुका साथै परीक्षामा उच्च अङ्क ल्याउन मद्दत गर्नेछ। 🌤️
+  </footer>
+</div>
+
+<!-- Floating controls -->
+<div class="fab-stack">
+  <button class="fab fab-top" id="fabTop" aria-label="माथि जानुहोस्">⬆</button>
+  <button class="fab fab-nav" id="fabNav" aria-label="खण्डमा जानुहोस्">☰</button>
+</div>
+
+<div class="sheet-backdrop" id="sheetBackdrop"></div>
+<div class="sheet" id="sheet">
+  <div class="sheet-handle"></div>
+  <h3>⚡ छिटो खण्डमा जानुहोस्</h3>
+  <ul class="sheet-list" id="sheetList"></ul>
+</div>
+
+<script>
+  const sections = [
+    {id:'s1', n:'१', t:'निर्णयको अवधारणा'},
+    {id:'s2', n:'२', t:'ध्यान दिनुपर्ने पक्ष'},
+    {id:'s3', n:'३', t:'निर्णयका प्रकार'},
+    {id:'s4', n:'४', t:'७ चरणहरू'},
+    {id:'s5', n:'५', t:'अनिर्णित अवस्था'},
+    {id:'s6', n:'६', t:'क्रियाकलाप समाधान'},
+    {id:'s7', n:'७', t:'अभ्यास समाधान'},
+    {id:'s8', n:'८', t:'परीक्षा प्रश्नोत्तर'},
+    {id:'s9', n:'९', t:'शब्दावली'},
+  ];
+
+  const sheetList = document.getElementById('sheetList');
+  sections.forEach(s=>{
+    const li = document.createElement('li');
+    const btn = document.createElement('button');
+    btn.innerHTML = `<span class="num">${s.n}</span><span class="lbl">${s.t}</span>`;
+    btn.addEventListener('click', ()=>{
+      document.getElementById(s.id).scrollIntoView({behavior:'smooth', block:'start'});
+      closeSheet();
+    });
+    li.appendChild(btn);
+    sheetList.appendChild(li);
+  });
+
+  const sheet = document.getElementById('sheet');
+  const backdrop = document.getElementById('sheetBackdrop');
+  const fabNav = document.getElementById('fabNav');
+  const fabTop = document.getElementById('fabTop');
+
+  function openSheet(){ sheet.classList.add('show'); backdrop.classList.add('show'); }
+  function closeSheet(){ sheet.classList.remove('show'); backdrop.classList.remove('show'); }
+
+  fabNav.addEventListener('click', ()=>{
+    if(sheet.classList.contains('show')) closeSheet(); else openSheet();
+  });
+  backdrop.addEventListener('click', closeSheet);
+
+  fabTop.addEventListener('click', ()=>{
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 420){ fabTop.classList.add('show'); }
+    else{ fabTop.classList.remove('show'); }
+  }, {passive:true});
+</script>
+
+</body>
+</html>

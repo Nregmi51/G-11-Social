@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ १, पाठ ३ – सामाजिक अध्ययनका सिप र जीवनोपयोगी सिप</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* ----- RESET & BASE ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0ede8;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.07);
+            padding: 24px 18px 36px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #e0d6c8;
+            padding-bottom: 14px;
+            margin-bottom: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #c4450c;
+            margin-right: 8px;
+        }
+
+        .main-header .subtitle {
+            font-size: 0.95rem;
+            color: #4d5f72;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1f7a4a;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 4px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #fcf7f0;
+            border-radius: 60px;
+            padding: 12px 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #e6dccf;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+        }
+
+        .credit-bar .email {
+            color: #a0522d;
+        }
+
+        .credit-bar i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #c4450c;
+            margin: 40px 0 16px;
+            padding-bottom: 6px;
+            border-bottom: 4px solid #f0e0d0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .section-head i {
+            font-size: 1.4rem;
+            color: #c4450c;
+        }
+
+        .section-head .mark-badge {
+            background: #0b2b4a;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+        }
+
+        .section-head .mark-badge.gold {
+            background: #b45309;
+        }
+
+        .section-head .mark-badge.green {
+            background: #1f7a4a;
+        }
+
+        .section-head .mark-badge.purple {
+            background: #6b3fa0;
+        }
+
+        .sub-head {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #1a5a7a;
+            margin: 28px 0 12px;
+            padding-left: 12px;
+            border-left: 6px solid #c4450c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sub-head i {
+            color: #c4450c;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #2c6a3a;
+            margin: 20px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #2c6a3a;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+        }
+
+        .content-box.green {
+            border-left-color: #1f7a4a;
+        }
+
+        .content-box.purple {
+            border-left-color: #6b3fa0;
+        }
+
+        .content-box.blue {
+            border-left-color: #2a6b8a;
+        }
+
+        .content-box p {
+            margin-bottom: 6px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .content-box li {
+            margin-bottom: 4px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #d9d0c4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 10px 14px;
+            border: 1px solid #d9d0c4;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #e8dfd4;
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        .table-caption {
+            background: #f4efe8;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #d9d0c4;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+        }
+
+        .qa-block .q {
+            font-weight: 800;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.02rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #c4450c;
+            font-weight: 900;
+            min-width: 28px;
+        }
+
+        .qa-block .q i {
+            color: #c4450c;
+            font-size: 0.9rem;
+            width: 20px;
+        }
+
+        .qa-block .a {
+            margin-top: 4px;
+            padding-left: 44px;
+            color: #1e2a3a;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 4px;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+        }
+
+        /* ----- TIMETABLE ----- */
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+        }
+
+        .timetable th {
+            background: #1a5a7a;
+            color: #fff;
+        }
+
+        .timetable td {
+            padding: 8px 14px;
+            border: 1px solid #d9d0c4;
+        }
+
+        .timetable tr:nth-child(even) {
+            background: #f9f6f0;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 12px 16px;
+            border-left: 5px solid #6b3fa0;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1rem;
+        }
+
+        .glossary-item p {
+            margin-top: 2px;
+            font-size: 0.92rem;
+            color: #2d3a4a;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #c4450c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            font-size: 1.6rem;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(196, 69, 12, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #a0360a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 24px rgba(196, 69, 12, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #e0d6c8;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 24px;
+            font-weight: 500;
+        }
+
+        .footer-copy i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #d7cec0;
+            margin: 28px 0 10px;
+        }
+
+        .ref-note {
+            font-size: 0.85rem;
+            color: #5f6f80;
+            background: #f0ece6;
+            padding: 4px 14px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.2rem;
+            }
+
+            .section-head {
+                font-size: 1.15rem;
+            }
+
+            .sub-head {
+                font-size: 1.02rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 0.92rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.8rem;
+                padding: 10px 16px;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th,
+            td {
+                padding: 6px 8px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 48px;
+                height: 48px;
+                font-size: 1.2rem;
+                bottom: 18px;
+                right: 18px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 32px 42px 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-users"></i>
+                    एकाइ १, पाठ ३: सामाजिक अध्ययनका सिप र जीवनोपयोगी सिप
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> शैक्षिक नोट</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Regmi Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">regminarayan983@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ १, पाठ ३
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पाठको अवधारणात्मक परिचय ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head">
+            <i class="fas fa-lightbulb"></i>
+            १. पाठको अवधारणात्मक परिचय
+            <span class="mark-badge">Conceptual Introduction</span>
+        </div>
+
+        <div class="content-box">
+            <p>सामाजिक अध्ययन र जीवनोपयोगी शिक्षाले विद्यार्थीहरूलाई केवल सैद्धान्तिक ज्ञानमा मात्र सीमित नराखी उनीहरूलाई व्यावहारिक रूपमा सक्षम नागरिक बनाउने लक्ष्य राख्दछ। यसले व्यक्तिको आन्तरिक क्षमताको उजागर गर्दै समाज र राष्ट्रप्रतिको जिम्मेवारी बोध गराउँछ।</p>
+            <p style="font-weight:600; color:#0b2b4a; margin-top:8px;">
+                <i class="fas fa-quote-left" style="color:#c4450c; margin-right:4px;"></i>
+                सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षाको मूल ध्येय बालबालिकालाई असल, देशभक्त, चरित्रवान्, सक्षम र सिर्जनशील नागरिकका रूपमा तयार पार्नु हो। यी सिपहरुले व्यक्तिलाई जीवनभर समाजमा सहज रूपमा समायोजन हुन र २१औँ शताब्दीका बहुआयामिक चुनौतीहरूसँग जुध्न सामर्थ्य प्रदान गर्दछन्।
+                <i class="fas fa-quote-right" style="color:#c4450c; margin-left:4px;"></i>
+            </p>
+            <p>यी सिपहरुको सैद्धान्तिक ज्ञानपछि अब हामी सामाजिक अध्ययनमा प्रयोग हुने विशिष्ट ८ वटा सिपहरुको बारेमा चर्चा गर्नेछौँ।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. सामाजिक अध्ययनका ८ मुख्य सिपहरु ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head">
+            <i class="fas fa-book-open"></i>
+            २. सामाजिक अध्ययनका ८ मुख्य सिपहरु
+            <span class="mark-badge gold">Social Studies Skills</span>
+        </div>
+
+        <div class="content-box green">
+            <p style="font-weight:600; color:#0b2b4a; margin-bottom:10px;">पाठ्यपुस्तकको स्रोत सामग्रीअनुसार सामाजिक अध्ययन विषयका मुख्य आठ सिपहरु र तिनीहरूको व्यावहारिक महत्व यस प्रकार रहेका छन्:</p>
+
+            <ol style="font-weight:400; padding-left:24px;">
+                <li>
+                    <strong>क) नक्सा अध्ययन गर्ने र नक्सा उतार्ने सिप:</strong>
+                    यसले विद्यार्थीलाई भौगोलिक अवस्थितिको पहिचान गर्न र स्थान विशेषको दूरी तथा सम्बन्ध बुझ्न सक्षम बनाउँछ, जुन व्यावहारिक यात्रा र योजना निर्माणमा उपयोगी हुन्छ।
+                </li>
+                <li>
+                    <strong>ख) सिर्जनात्मक सिप:</strong>
+                    गीत, कविता, चित्र, निबन्ध र नाटक जस्ता माध्यमबाट आफ्ना भावना व्यक्त गर्ने यो सिपले विद्यार्थीको संवेगात्मक प्रस्फुटन र व्यक्तित्व विकासमा मद्दत पुर्याउँछ।
+                </li>
+                <li>
+                    <strong>ग) समाचार सङ्कलन, लेखन र प्रस्तुतीकरण सिप:</strong>
+                    समसामयिक घटनाक्रमलाई विश्लेषण गर्ने र रचनात्मक टिप्पणी गर्ने यो सिपले नागरिकलाई सुसूचित रहन र लोकतान्त्रिक अभ्यासमा सहभागी हुन सघाउँछ।
+                </li>
+                <li>
+                    <strong>घ) सामाजिक सिप:</strong>
+                    छलफल, सहकार्य, मेलमिलाप र समानुभूति जस्ता गुणहरूले समाजमा आपसी सद्भाव कायम राख्न र सामूहिक समस्या समाधान गर्न सक्षम बनाउँछन्।
+                </li>
+                <li>
+                    <strong>ङ) तथ्याङ्क प्रस्तुति सिप:</strong>
+                    जटिल तथ्याङ्कहरूलाई सरल र बोधगम्य बनाउन यो सिप प्रयोग गरिन्छ। यसमा मुख्यतया निम्न चार्टहरू प्रयोग हुन्छन्:
+                    <ul>
+                        <li>स्तम्भचित्र (Bar Graph)</li>
+                        <li>रेखाचित्र (Line Graph)</li>
+                        <li>चक्रचित्र (Pie Chart)</li>
+                        <li>ग्राफ र चार्ट निर्माण</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>च) ऐतिहासिक घटनालाई प्रस्तुतीकरण गर्ने सिप:</strong>
+                    समय रेखा (Timeline), वंशावली र व्यक्तिगत वृत्त निर्माण गर्ने यो सिपले विगतलाई वर्तमानसँग जोडेर भविष्यको मार्गचित्र कोर्न सहयोग गर्दछ।
+                </li>
+                <li>
+                    <strong>छ) खोज तथा अनुसन्धान सिप:</strong>
+                    सर्वेक्षण, क्षेत्रभ्रमण र अन्तर्वार्ताको योजना बनाई प्रतिवेदन तयार गर्ने यो सिपले विद्यार्थीमा वैज्ञानिक दृष्टिकोण र तथ्यमा आधारित निष्कर्ष निकाल्ने क्षमता विकास गर्दछ।
+                </li>
+                <li>
+                    <strong>ज) प्रदर्शन तथा प्रस्तुतीकरण सिप:</strong>
+                    आफूले सिकेका कुराहरूलाई वक्तृत्वकला, कार्यपत्र वा प्रदर्शनमार्फत स्पष्टसँग राख्ने यो सिपले आत्मविश्वास र सार्वजनिक सञ्चार क्षमता अभिवृद्धि गर्दछ।
+                </li>
+            </ol>
+
+            <p style="margin-top:10px;">सामाजिक अध्ययनका यी प्राविधिक सिपहरुसँगै दैनिक जीवनलाई सफल बनाउन २१औँ शताब्दीका जीवनोपयोगी सिपहरुको पनि उत्तिकै महत्व छ।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. जीवनोपयोगी सिप: वर्गीकरण र २१औँ शताब्दीको आवश्यकता ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head">
+            <i class="fas fa-heart"></i>
+            ३. जीवनोपयोगी सिप: वर्गीकरण र २१औँ शताब्दीको आवश्यकता
+            <span class="mark-badge green">Life Skills</span>
+        </div>
+
+        <div class="content-box blue">
+            <p>जीवनोपयोगी सिपहरु ती आन्तरिक क्षमता हुन् जुन बाहिरबाट प्रत्यक्ष नदेखिए पनि व्यक्तिको व्यक्तित्व विकास र जीवन व्यवस्थापनमा निर्णायक भूमिका खेल्छन्। यसलाई मुख्यतया दुई भागमा वर्गीकरण गरिन्छ:</p>
+            <ul>
+                <li><strong>नरम सिप (Soft Skills):</strong> व्यक्तिको स्वभाव, व्यवहार र अरूसँग गरिने सञ्चारसँग सम्बन्धित सिपहरु।</li>
+                <li><strong>व्यापक सिप (Transversal Skills):</strong> एक क्षेत्रबाट अर्को क्षेत्रमा सहजै स्थानान्तरण हुन सक्ने र जीवनका हरेक पक्षमा आवश्यक पर्ने बहुआयामिक सिपहरु।</li>
+            </ul>
+        </div>
+
+        <!-- ===== १३ सिपको तालिका ===== -->
+        <div class="sub-head"><i class="fas fa-table"></i> १३ वटा जीवनोपयोगी सिपहरूको विस्तृत विवरण</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: जीवनोपयोगी सिपहरू – परिभाषा र विद्यार्थी जीवनमा प्रयोग</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:15%;">क्र.सं.</th>
+                        <th style="width:25%;">सिपको नाम</th>
+                        <th style="width:30%;">छोटो परिभाषा</th>
+                        <th style="width:30%;">विद्यार्थी जीवनमा प्रयोग</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>१</td><td><strong>समस्या समाधान</strong></td><td>कठिनाइ पहिचान गरी समाधान खोज्ने क्षमता</td><td>गणितीय वा व्यावहारिक समस्या हल गर्न</td></tr>
+                    <tr><td>२</td><td><strong>सञ्चार सिप</strong></td><td>विचार र भावना प्रभावकारी रूपमा साटासाट गर्नु</td><td>शिक्षक र साथीहरूसँग स्पष्ट कुरा राख्न</td></tr>
+                    <tr><td>३</td><td><strong>सूचना प्रविधि</strong></td><td>आधुनिक प्रविधिको सही र सुरक्षित प्रयोग गर्नु</td><td>अनलाइन सिकाइ र अनुसन्धानमा</td></tr>
+                    <tr><td>४</td><td><strong>सहकार्य सिप</strong></td><td>साझा लक्ष्यका लागि मिलेर काम गर्नु</td><td>सामूहिक परियोजना र खेलकुदमा</td></tr>
+                    <tr><td>५</td><td><strong>समालोचनात्मक सोच</strong></td><td>तथ्यको गहिरो विश्लेषण गरी निर्णय लिनु</td><td>गलत सूचना र भ्रमबाट बच्न</td></tr>
+                    <tr><td>६</td><td><strong>अध्ययन सिप</strong></td><td>सिक्ने प्रक्रियालाई व्यवस्थित बनाउने कला</td><td>परीक्षाको तयारी र नयाँ ज्ञान प्राप्त गर्न</td></tr>
+                    <tr><td>७</td><td><strong>सहभागिता र छलफल</strong></td><td>सक्रिय रूपमा विचार राख्नु र सुन्नु</td><td>कक्षाकोठा र सामाजिक कार्यमा सहभागी हुन</td></tr>
+                    <tr><td>८</td><td><strong>सिर्जनात्मकता</strong></td><td>नयाँ र नवीन विचारको सिर्जना गर्नु</td><td>मौलिक रचना र परियोजना कार्यमा</td></tr>
+                    <tr><td>९</td><td><strong>अन्तरवैयक्तिक सिप</strong></td><td>अरूसँग सकारात्मक सम्बन्ध राख्ने कला</td><td>समाजमा घुलमिल हुन र नेतृत्व लिन</td></tr>
+                    <tr><td>१०</td><td><strong>तनाव व्यवस्थापन</strong></td><td>कठिन परिस्थितिमा मानसिक सन्तुलन कायम राख्नु</td><td>परीक्षाको दबाब र असफलता झेल्न</td></tr>
+                    <tr><td>११</td><td><strong>संवेग व्यवस्थापन</strong></td><td>आवेग, रिस र खुसीलाई सही दिशा दिनु</td><td>अनुशासन कायम राख्न र सही निर्णय लिन</td></tr>
+                    <tr><td>१२</td><td><strong>निर्णय निर्माण</strong></td><td>उपलब्ध विकल्पमध्ये उचित छनोट गर्नु</td><td>विषय छनोट वा करियरको योजना बनाउन</td></tr>
+                    <tr><td>१३</td><td><strong>नेतृत्व सिप</strong></td><td>अरूलाई मार्गनिर्देशन र उत्प्रेरित गर्नु</td><td>समूह कार्य वा कक्षा मनिटरको भूमिकामा</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-box blue" style="margin-top:10px;">
+            <p>यी सिपहरुलाई सैद्धान्तिक रूपमा बुझिसकेपछि, अब यसलाई व्यावहारिक रूपमा कसरी उतार्ने भन्ने सम्बन्धमा केही क्रियाकलापहरू हेरौँ।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. पाठका क्रियाकलापहरूको पूर्ण समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head">
+            <i class="fas fa-hands"></i>
+            ४. पाठका क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge gold">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-clock"></i> क्रियाकलाप १: २४ घण्टाको आदर्श समय तालिका</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: विद्यार्थीको लागि २४ घण्टाको आदर्श समय तालिका</div>
+            <table class="timetable">
+                <thead>
+                    <tr><th>समय</th><th>क्रियाकलाप</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>बिहान ५:०० – ६:००</td><td>उठ्ने, नित्यकर्म, योग र शारीरिक व्यायाम</td></tr>
+                    <tr><td>बिहान ६:०० – ८:३०</td><td>गम्भीर अध्ययन (समय व्यवस्थापन र कठिन विषय)</td></tr>
+                    <tr><td>बिहान ८:३० – ९:३०</td><td>भोजन र विद्यालय जाने तयारी</td></tr>
+                    <tr><td>बिहान ९:३० – बेलुका ४:३०</td><td>विद्यालय समय (सक्रिय सिकाइ र सहभागिता)</td></tr>
+                    <tr><td>बेलुका ४:३० – ५:३०</td><td>खाजा, विश्राम र शारीरिक खेलकुद</td></tr>
+                    <tr><td>बेलुका ५:३० – ७:३०</td><td>गृहकार्य, सिर्जनात्मक कार्य र परियोजना कार्य</td></tr>
+                    <tr><td>बेलुका ७:३० – ८:३०</td><td>पारिवारिक समय, रात्रि भोजन र संवाद</td></tr>
+                    <tr><td>बेलुका ८:३० – ९:३०</td><td>समाचार अध्ययन र भोलिको योजना निर्माण</td></tr>
+                    <tr><td>बेलुका ९:३० – बिहान ५:००</td><td>पर्याप्त र गहिरो निद्रा (७.५ घण्टा)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-poll"></i> क्रियाकलाप २: 'सामाजिक सञ्जालको प्रयोग' – नमुना सर्वेक्षण प्रतिवेदन</div>
+
+        <div class="content-box green">
+            <p style="font-weight:700; font-size:1.05rem; color:#0b2b4a;">शीर्षक: माध्यमिक तहका विद्यार्थीहरूमा सामाजिक सञ्जालको प्रयोगको अवस्था</p>
+
+            <ul>
+                <li><strong>उद्देश्य:</strong> विद्यार्थीहरूले सामाजिक सञ्जालमा बिताउने समय र यसको प्रभाव पहिचान गर्नु।</li>
+                <li><strong>विधि (Methodology):</strong> यस सर्वेक्षणमा 'सहज नमुना छनोट' (Convenience Sampling) विधिको प्रयोग गरी १० जना साथीहरूलाई प्रश्नावली सोधिएको थियो। तथ्याङ्क सङ्कलनका लागि 'अन्तर्वार्ता विधि' अपनाइएको थियो।</li>
+                <li><strong>प्राप्त तथ्याङ्कको व्याख्या:</strong> सङ्कलित तथ्याङ्कलाई विश्लेषण गर्दा ७०% विद्यार्थी मनोरञ्जन (भिडियो हेर्ने), २०% शैक्षिक सामग्री खोज्न र १०% कुराकानीका लागि सञ्जाल प्रयोग गर्दछन्। औसतमा एक विद्यार्थीले दिनको ३ घण्टा समय सञ्जालमा खर्च गरेको पाइयो।</li>
+                <li><strong>तथ्याङ्क प्रस्तुति:</strong> (यस प्रतिवेदनको अन्त्यमा प्राप्त तथ्याङ्कलाई चक्रचित्र (Pie-chart) मार्फत स्पष्ट पारिएको छ)।</li>
+                <li><strong>निष्कर्ष:</strong> सामाजिक सञ्जालको प्रयोग शैक्षिक भन्दा मनोरञ्जन केन्द्रित देखिएकाले यसको सन्तुलित र रचनात्मक प्रयोगका लागि सचेतना आवश्यक देखिन्छ।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. पाठका अभ्यासहरूको नमुना उत्तर ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head">
+            <i class="fas fa-check-double"></i>
+            ५. पाठका अभ्यासहरूको नमुना उत्तर
+            <span class="mark-badge">Exercise</span>
+        </div>
+
+        <!-- प्रश्न १ -->
+        <div class="qa-block">
+            <div class="q"><span class="qnum">प्रश्न १:</span> 'सडक मर्मत तथा सरसफाइ अभियान' को समाचार ढाँचा तयार पार्नुहोस्।</div>
+            <div class="a">
+                <p style="font-weight:700; font-size:1.05rem; color:#0b2b4a;">स्थानीय युवाको सक्रियतामा सडक मर्मत सम्पन्न</p>
+                <p><strong>विराटनगर, मोरङ ।</strong> मोरङको बुढीगंगा गाउँपालिकाका स्थानीय युवाहरूले 'हाम्रो गाउँ, सफा गाउँ' अभियान अन्तर्गत क्षतिग्रस्त सडकको मर्मत र सरसफाइ गरेका छन्। शुक्रबार बिहान भएको उक्त कार्यक्रममा सडक छेउका झाडी फँडानी गर्ने र खाल्डाखुल्डी पुर्ने कार्य गरिएको थियो। स्थानीय क्लबको नेतृत्वमा भएको यस श्रमदानमा ५० जना भन्दा बढी युवाको सहभागिता थियो। यस कार्यले वर्षाको समयमा हुनसक्ने दुर्घटना कम गर्ने स्थानीयको विश्वास छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न २ -->
+        <div class="qa-block">
+            <div class="q"><span class="qnum">प्रश्न २:</span> समय व्यवस्थापनका विषयमा दुई साथीबीचको संवाद (Dialogue) लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>अनिता:</strong> नमस्ते विवेक, तिम्रो परियोजना कार्य सकियो? म त निकै व्यस्त भएर भ्याउँदै भ्याइनँ।</p>
+                <p><strong>विवेक:</strong> नमस्ते अनिता, मेरो त हिजै सकियो। मैले समयको उचित व्यवस्थापन गरेको थिएँ।</p>
+                <p><strong>अनिता:</strong> समय व्यवस्थापन कसरी गर्छौ र? मलाई त २४ घण्टा पनि थोरै लाग्छ।</p>
+                <p><strong>विवेक:</strong> समय थोरै भएको होइन, हामीले प्राथमिकता नछुट्याएको मात्र हो। म 'समय तालिका' बनाएर काम गर्छु।</p>
+                <p><strong>अनिता:</strong> तालिकाले कसरी सघाउँछ त? म त बनाएर पनि पालना गर्नै सक्दिनँ।</p>
+                <p><strong>विवेक:</strong> सुरुमा कठिन लाग्छ। तर अनावश्यक काम, जस्तै मोबाइल चलाउने समय घटाउने हो भने पढ्न प्रशस्त समय निस्कन्छ।</p>
+                <p><strong>अनिता:</strong> हो त, म पनि मोबाइलमा धेरै समय बिताउँछु। अबदेखि म पनि तिमी जस्तै रुटिन बनाउँछु।</p>
+                <p><strong>विवेक:</strong> एकदम राम्रो! रुटिनमा सुत्ने, खेल्ने र पढ्ने समय स्पष्ट छुट्याऊ, अनि मात्र कामको चाप कम हुन्छ।</p>
+                <p><strong>अनिता:</strong> आजैदेखि म मेरो समयलाई सही सदुपयोग गर्ने प्रतिज्ञा गर्छु। धन्यवाद विवेक!</p>
+                <p><strong>विवेक:</strong> स्वागत छ अनिता, समय व्यवस्थापन नै सफलताको पहिलो खुड्किलो हो।</p>
+            </div>
+        </div>
+
+        <!-- परियोजना कार्य -->
+        <div class="sub-head"><i class="fas fa-newspaper"></i> परियोजना कार्य: भित्तेपत्रिका (Wall Newspaper) निर्माण</div>
+
+        <div class="content-box purple">
+            <p style="font-weight:700; color:#0b2b4a;">चरणबद्ध प्रक्रिया:</p>
+            <ol>
+                <li><strong>विषय छनोट:</strong> समसामयिक घटना, विद्यालयका गतिविधि वा ज्ञानवर्धक सामग्रीको मुख्य विषय तय गर्ने।</li>
+                <li><strong>टोली गठन:</strong> सम्पादक, चित्रकार र लेखकहरूको समूह विभाजन गर्ने।</li>
+                <li><strong>सामग्री सङ्कलन:</strong> समाचार, कथा, कविता र सूचनाहरू सङ्कलन गर्ने।</li>
+                <li><strong>सम्पादन र लेआउट:</strong> भाषा शुद्धीकरण गरी चार्ट पेपरमा आकर्षक ढङ्गले टाँस्ने वा लेख्ने।</li>
+                <li><strong>प्रकाशन र नवीकरण:</strong> विद्यालयको सूचना पाटीमा प्रदर्शन गर्ने र नियमित रूपमा सामग्री परिवर्तन गर्ने।</li>
+            </ol>
+            <p style="font-weight:700; color:#0b2b4a; margin-top:12px;">भित्तेपत्रिकामा समावेश गरिने सामग्रीहरूको सूची:</p>
+            <ul>
+                <li>स्थानीय र विद्यालय स्तरीय मुख्य समाचारहरू</li>
+                <li>विद्यार्थीहरूले लेखेका मौलिक कविता र कथाहरू</li>
+                <li>ज्ञानवर्धक सामान्य ज्ञान र रोचक तथ्यहरू</li>
+                <li>विद्यार्थीद्वारा कोरिएका चित्र र कार्टुनहरू</li>
+                <li>सम्पादकीय र समसामयिक विषयमा विद्यार्थीका टिप्पणी</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ६. परीक्षा उपयोगी सम्भावित प्रश्नोत्तर ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head">
+            <i class="fas fa-bullseye"></i>
+            ६. परीक्षा उपयोगी सम्भावित प्रश्नोत्तर
+            <span class="mark-badge gold">Exam-oriented Q&A</span>
+        </div>
+
+        <!-- अति संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तर (१ अङ्क)</div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">१.</span> जीवनोपयोगी सिप (Life Skills) को मुख्य विशेषता के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> यो व्यक्तिको व्यक्तित्व विकास र जीवनयापनमा प्रभाव पार्ने एक आन्तरिक र व्यावहारिक क्षमता हो।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">२.</span> २१औँ शताब्दीका दुईवटा महत्वपूर्ण सिपहरुको नाम लेख्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> समालोचनात्मक सोच र सञ्चार सिप।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">३.</span> सामाजिक अध्ययनमा 'समय रेखा' को प्रयोग किन गरिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> ऐतिहासिक घटनाहरूलाई समयको क्रमअनुसार व्यवस्थित रूपमा देखाउन समय रेखाको प्रयोग गरिन्छ।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">४.</span> समानुभूति (Empathy) भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> अरूको समस्या र भावनालाई उनीहरूकै स्थानमा रहेर बुझ्ने कलालाई समानुभूति भनिन्छ।</div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">५.</span> तथ्याङ्क प्रस्तुतिको कुनै एक फाइदा लेख्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> यसले जटिल र धेरै तथ्याङ्कलाई चित्रमार्फत छिटो र सरल रूपमा बुझ्न मद्दत गर्दछ।</div>
+        </div>
+
+        <!-- संक्षिप्त (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तर (५ अङ्क)</div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">१.</span> नरम सिप (Soft Skills) र कठोर सिप (Hard Skills) बीचको अन्तरसम्बन्ध स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> कठोर सिपले व्यक्तिको प्राविधिक ज्ञान र शैक्षिक योग्यता (जस्तै: कम्प्युटर चलाउने, गाडी मर्मत गर्ने) लाई बुझाउँछ भने नरम सिपले व्यक्तिको व्यवहार र सञ्चार शैलीलाई बुझाउँछ। व्यावसायिक सफलताका लागि यी दुवैको सन्तुलन अनिवार्य छ।</p>
+                <p><strong>उदाहरण:</strong> एक डाक्टरसँग उपचार गर्ने प्राविधिक ज्ञान (कठोर सिप) भए पनि बिरामीसँग राम्रो व्यवहार गर्ने र धैर्यता राख्ने (नरम सिप) भएन भने उनी सफल हुन सक्दैनन्। त्यसैले कठोर सिपले अवसरको ढोका खोल्छ भने नरम सिपले सफल र सुखी जीवन सुनिश्चित गर्दछ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">२.</span> तथ्याङ्क प्रस्तुति सिप अन्तर्गत प्रयोग हुने विभिन्न चार्टहरूको चर्चा गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सामाजिक अध्ययनमा प्राप्त सूचना र तथ्याङ्कलाई प्रस्तुत गर्न मुख्यतया तीन प्रकारका चार्टहरू प्रयोग गरिन्छ:</p>
+                <ul>
+                    <li><strong>स्तम्भचित्र (Bar Graph):</strong> विभिन्न वस्तु वा समयको तुलना गर्न सघाउँछ।</li>
+                    <li><strong>रेखाचित्र (Line Graph):</strong> समयसँगै कुनै कुरामा आएको उतारचढाव देखाउँछ।</li>
+                    <li><strong>चक्रचित्र (Pie Chart):</strong> समग्र हिस्सामा कुनै खास पक्षको अंश वा प्रतिशत कति छ भन्ने स्पष्ट पार्छ।</li>
+                </ul>
+                <p>यी सिपहरुले विद्यार्थीलाई अनुसन्धानकर्ताको रूपमा तयार पार्न मद्दत गर्छन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <div class="q"><span class="qnum">३.</span> सामाजिक अध्ययनका सिपहरुले कसरी विद्यार्थीलाई अनुशासित र जिम्मेवार बनाउँछन्?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सामाजिक अध्ययनका सिपहरुले विद्यार्थीमा सहकार्य, मेलमिलाप र नेतृत्वको विकास गराउँछन्। जब विद्यार्थीले समूहमा काम गर्छन्, उनीहरूले अरूको विचारको सम्मान गर्न र अनुशासनमा बस्न सिक्छन्। समाचार सङ्कलन र खोज अनुसन्धानका सिपहरुले उनीहरूलाई समाजका समस्याप्रति सचेत गराउँछन्, जसले गर्दा उनीहरूमा देश र समाजप्रतिको जिम्मेवारी बोध हुन्छ र एक असल नागरिकको चरित्र निर्माण हुन्छ।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तरात्मक प्रश्न (८ अङ्क)</div>
+
+        <div class="qa-block" style="border-left-color:#1f7a4a;">
+            <div class="q"><span class="qnum">प्रश्न:</span> २१औँ शताब्दीको चुनौतीपूर्ण युगमा जीवनोपयोगी सिपहरुको भूमिका कस्तो रहन्छ? तार्किक उत्तर दिनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> २१औँ शताब्दी प्रविधि, विश्वव्यापीकरण र तीव्र परिवर्तनको युग हो। यस युगमा सफल हुनका लागि केवल किताबी ज्ञान पर्याप्त छैन। जीवनोपयोगी सिपहरुले व्यक्तिलाई मानसिक र व्यावहारिक रूपमा सशक्त बनाउँछन्।</p>
+
+                <ul>
+                    <li><strong>समालोचनात्मक सोच:</strong> सूचनाको भीडबाट सत्य र तथ्य छुट्याउन मद्दत गर्छ।</li>
+                    <li><strong>सञ्चार र सहकार्य:</strong> बहुसांस्कृतिक समाजमा मिलेर काम गर्न सघाउँछ।</li>
+                    <li><strong>प्रविधिको सही प्रयोग (ICT Skills):</strong> विश्वबजारमा प्रतिस्पर्धा गर्न योग्य बनाउँछ।</li>
+                    <li><strong>तनाव र संवेग व्यवस्थापन:</strong> नहुने हो भने जतिसुकै शिक्षित व्यक्ति पनि असफल हुन सक्छ।</li>
+                </ul>
+
+                <p>अतः यी सिपहरुले व्यक्तिलाई अनुशासित, आत्मनिर्भर र समस्याहरूसँग डराउनुको साटो त्यसको समाधान खोज्न प्रेरित गर्दछन्। समग्रमा, एक सक्षम र सिर्जनशील विश्व नागरिक बन्नका लागि जीवनोपयोगी सिपहरु आधारभूत आवश्यकता हुन्।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ७. प्राविधिक शब्दावली संग्रह ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head">
+            <i class="fas fa-book-open"></i>
+            ७. प्राविधिक शब्दावली संग्रह
+            <span class="mark-badge purple">Technical Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> व्यापक सिप (Transversal Skills)</strong>
+                <p>एक परिस्थितिबाट अर्को परिस्थितिमा सहजै उपयोग गर्न सकिने बहुमुखी र बहुआयामिक सिपहरु।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> नरम सिप (Soft Skills)</strong>
+                <p>व्यक्तिको आन्तरिक चरित्र, स्वभाव, र अरूसँग गरिने व्यवहारसँग सम्बन्धित गैर-प्राविधिक सिपहरु।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> समालोचनात्मक सोच (Critical Thinking)</strong>
+                <p>कुनै पनि विषयवस्तुलाई बिना पूर्वाग्रह, तर्कपूर्ण र निष्पक्ष ढङ्गले विश्लेषण गर्ने प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> नमुना छनोट (Sampling)</strong>
+                <p>ठुलो समूहबाट अध्ययनका लागि छानिएका प्रतिनिधि पात्र वा एकाइहरू।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> समानुभूति (Empathy)</strong>
+                <p>अरूको पीडा वा खुसीलाई आफ्नै जस्तो महसुस गरी बुझ्ने उच्च मानवीय गुण।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> अन्तरवैयक्तिक सिप (Interpersonal Skills)</strong>
+                <p>दुई वा दुईभन्दा बढी व्यक्तिहरू बीच प्रभावकारी सञ्चार र मधुर सम्बन्ध कायम गर्ने कला।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> तथ्याङ्क विश्लेषण (Data Analysis)</strong>
+                <p>सङ्कलित सूचनाहरूलाई वर्गीकरण र व्याख्या गरी अर्थपूर्ण निष्कर्ष निकाल्ने कार्य।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> संवेग व्यवस्थापन (Emotion Management)</strong>
+                <p>रिस, डर, र खुसी जस्ता मानवीय भावनाहरूलाई नियन्त्रणमा राखी सही ठाउँमा प्रयोग गर्ने सिप।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> समय रेखा (Timeline)</strong>
+                <p>इतिहासका महत्वपूर्ण घटनाक्रमहरूलाई समयको क्रमबद्धतामा देखाइने रेखीय चित्र।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6b3fa0; margin-right:4px;"></i> खोज तथा अनुसन्धान (Research Skills)</strong>
+                <p>नयाँ तथ्यहरू पत्ता लगाउन गरिने व्यवस्थित र योजनाबद्ध अध्ययन प्रक्रिया।</p>
+            </div>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Regmi Sir</span></span>
+            <span><i class="fas fa-envelope"></i> regminarayan983@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ १, पाठ ३</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>कक्षा ११ - एकाई ३: जीवनोपयोगी सीप (३५ प्रश्नोत्तर)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #c0392b;
+            --primary-dark: #922b21;
+            --secondary: #2d3436;
+            --accent1: #f9ca24;
+            --accent2: #00b894;
+            --accent3: #6c5ce7;
+            --accent4: #0984e3;
+            --accent5: #e17055;
+            --bg-light: #f0f2f5;
+            --bg-card: #ffffff;
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+            --radius: 14px;
+            --transition: 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', sans-serif;
+            background: var(--bg-light);
+            color: var(--secondary);
+            line-height: 1.8;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, #c0392b 0%, #922b21 60%, #6c1a14 100%);
+            color: #fff;
+            padding: 22px 16px 26px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 24px rgba(192, 57, 43, 0.4);
+            border-bottom: 4px solid var(--accent1);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .header-title {
+            font-size: clamp(1.1rem, 4vw, 2rem);
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .header-title .badge {
+            background: var(--accent1);
+            color: var(--primary-dark);
+            font-size: 0.45em;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-weight: 800;
+        }
+
+        .header-badge {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(4px);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-badge .count {
+            background: var(--accent1);
+            color: var(--primary-dark);
+            padding: 0 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-bar {
+            background: #fff;
+            padding: 12px 14px;
+            position: sticky;
+            top: 72px;
+            z-index: 998;
+            box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+            border-bottom: 2px solid #eef0f3;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .nav-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 8px;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            min-width: max-content;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+            background: #f1f2f6;
+            border: 2px solid transparent;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent1);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(192, 57, 43, 0.3);
+            border-color: var(--primary);
+        }
+
+        .nav-btn .qty {
+            background: rgba(0, 0, 0, 0.08);
+            padding: 0 10px;
+            border-radius: 20px;
+            font-size: 0.6rem;
+            margin-left: 6px;
+            font-weight: 800;
+        }
+
+        .nav-btn.active .qty {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* ===== MAIN ===== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 18px 14px 100px;
+        }
+
+        /* ===== SECTION HEADER ===== */
+        .section-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            padding: 20px 26px;
+            border-radius: var(--radius);
+            margin: 32px 0 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(192, 57, 43, 0.3);
+            scroll-margin-top: 150px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.2rem, 3.2vw, 1.8rem);
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .section-header .icon {
+            font-size: 1.8rem;
+        }
+
+        .section-header .count {
+            background: rgba(255, 255, 255, 0.18);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .section-header .sub {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* ===== TOGGLE ALL ===== */
+        .toggle-all-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0 18px;
+        }
+
+        .toggle-all-btn {
+            border: none;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-family: inherit;
+            font-weight: 800;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toggle-all-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.13);
+        }
+
+        .toggle-all-btn.open-all {
+            background: var(--accent2);
+            color: #fff;
+        }
+
+        .toggle-all-btn.close-all {
+            background: var(--secondary);
+            color: #fff;
+        }
+
+        /* ===== CARDS ===== */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+            border-left: 6px solid var(--accent2);
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 38px rgba(0, 0, 0, 0.12);
+            transform: translateY(-2px);
+        }
+
+        /* section color coding */
+        .card.section-k {
+            border-left-color: var(--accent3);
+        }
+        .card.section-k .num {
+            background: #ede7f6;
+            color: var(--accent3);
+        }
+
+        .card.section-kh {
+            border-left-color: var(--accent4);
+        }
+        .card.section-kh .num {
+            background: #e3f2fd;
+            color: var(--accent4);
+        }
+
+        .card.section-ga {
+            border-left-color: var(--accent2);
+        }
+        .card.section-ga .num {
+            background: #e0f7fa;
+            color: var(--accent2);
+        }
+
+        .card.section-gh {
+            border-left-color: var(--accent5);
+        }
+        .card.section-gh .num {
+            background: #fbe9e7;
+            color: var(--accent5);
+        }
+
+        .card.section-ng {
+            border-left-color: #8e44ad;
+        }
+        .card.section-ng .num {
+            background: #f3e5f5;
+            color: #8e44ad;
+        }
+
+        .card-header {
+            padding: 18px 22px;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: #fafbfc;
+            border-bottom: 1px solid #f0f0f0;
+            transition: var(--transition);
+            user-select: none;
+        }
+
+        .card-header:hover {
+            background: #f0f2f8;
+        }
+
+        .card-header .num {
+            font-weight: 900;
+            font-size: 1.1rem;
+            min-width: 38px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.95rem;
+        }
+
+        .card-header .q-text {
+            font-weight: 800;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            flex: 1;
+            line-height: 1.7;
+        }
+
+        .card-header .toggle-icon {
+            font-size: 1.6rem;
+            transition: var(--transition);
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .card-header .toggle-icon.open {
+            transform: rotate(180deg);
+        }
+
+        .card-body {
+            padding: 0 22px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+            background: #fff;
+        }
+
+        .card-body.open {
+            max-height: 5000px;
+            padding: 20px 22px 28px;
+        }
+
+        .card-body .answer {
+            font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+            font-weight: 600;
+            line-height: 2.1;
+            color: #1a1a2e;
+        }
+
+        .card-body .answer b,
+        .card-body .answer strong {
+            font-weight: 900;
+            color: var(--primary-dark);
+        }
+
+        .card-body .answer ul,
+        .card-body .answer ol {
+            padding-left: 28px;
+            margin: 8px 0 12px;
+        }
+
+        .card-body .answer li {
+            margin-bottom: 6px;
+        }
+
+        .card-body .answer .highlight {
+            background: var(--accent1);
+            padding: 0 8px;
+            border-radius: 4px;
+            font-weight: 800;
+        }
+
+        /* ===== TABLE inside answer ===== */
+        .answer-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+            margin: 10px 0 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #eef0f3;
+        }
+
+        .answer-table th {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 800;
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        .answer-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: top;
+        }
+
+        .answer-table tr:nth-child(even) td {
+            background: #fafbfc;
+        }
+
+        .answer-table tr:hover td {
+            background: #f0f8ff;
+        }
+
+        .answer-table td:first-child {
+            font-weight: 700;
+            color: var(--primary-dark);
+            width: 28%;
+        }
+
+        /* ===== SCROLL TOP ===== */
+        .scroll-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--primary);
+            color: #fff;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.8rem;
+            box-shadow: 0 6px 28px rgba(192, 57, 43, 0.4);
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        .scroll-top:hover {
+            transform: scale(1.08) translateY(-4px);
+            box-shadow: 0 8px 36px rgba(192, 57, 43, 0.5);
+        }
+
+        /* ===== SEARCH ===== */
+        .search-box {
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px 12px 50px;
+            border-radius: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(4px);
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
+        }
+
+        .search-box input:focus {
+            background: rgba(255, 255, 255, 0.20);
+            border-color: #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+            opacity: 0.7;
+        }
+
+        .highlight-match {
+            background: var(--accent1);
+            padding: 0 6px;
+            border-radius: 4px;
+            font-weight: 900;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 1.2rem;
+            color: #999;
+            display: none;
+            font-weight: 700;
+        }
+
+        .no-results.show {
+            display: block;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header {
+                padding: 14px 12px 18px;
+            }
+            .header-title {
+                font-size: 1rem;
+            }
+            .header-badge {
+                font-size: 0.65rem;
+                padding: 4px 12px;
+            }
+            .header-badge .count {
+                font-size: 0.6rem;
+            }
+            .nav-bar {
+                top: 62px;
+                padding: 8px 10px;
+            }
+            .nav-btn {
+                font-size: 0.7rem;
+                padding: 8px 14px;
+            }
+            .search-box input {
+                font-size: 0.8rem;
+                padding: 10px 16px 10px 44px;
+            }
+            .search-box .search-icon {
+                font-size: 1rem;
+                left: 14px;
+            }
+            .section-header {
+                padding: 14px 18px;
+                margin: 22px 0 14px;
+            }
+            .section-header h2 {
+                font-size: 1rem;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .card-header {
+                padding: 14px 16px;
+                gap: 10px;
+            }
+            .card-header .num {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
+                min-width: 32px;
+            }
+            .card-header .q-text {
+                font-size: 0.9rem;
+            }
+            .card-body.open {
+                padding: 16px 16px 22px;
+            }
+            .card-body .answer {
+                font-size: 0.85rem;
+            }
+            .container {
+                padding: 12px 10px 80px;
+            }
+            .scroll-top {
+                width: 50px;
+                height: 50px;
+                font-size: 1.4rem;
+                bottom: 18px;
+                right: 18px;
+            }
+            .toggle-all-btn {
+                padding: 10px 18px;
+                font-size: 0.8rem;
+            }
+            .answer-table {
+                font-size: 0.7rem;
+                min-width: 320px;
+            }
+            .answer-table th,
+            .answer-table td {
+                padding: 7px 10px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .header-title {
+                font-size: 0.85rem;
+            }
+            .nav-btn {
+                font-size: 0.6rem;
+                padding: 6px 10px;
+            }
+            .card-header .q-text {
+                font-size: 0.8rem;
+            }
+            .card-body .answer {
+                font-size: 0.78rem;
+            }
+            .section-header h2 {
+                font-size: 0.85rem;
+            }
+            .card-header .num {
+                width: 28px;
+                height: 28px;
+                font-size: 0.7rem;
+                min-width: 28px;
+            }
+            .search-box input {
+                font-size: 0.7rem;
+                padding: 8px 12px 8px 36px;
+            }
+            .search-box .search-icon {
+                font-size: 0.9rem;
+                left: 12px;
+            }
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            .nav-bar,
+            .scroll-top,
+            .toggle-all-wrap,
+            .search-box {
+                display: none !important;
+            }
+            .header {
+                position: static !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .card-body {
+                max-height: none !important;
+                padding: 12px 16px 18px !important;
+                overflow: visible !important;
+            }
+            .card-header {
+                cursor: default !important;
+            }
+            .card-header .toggle-icon {
+                display: none !important;
+            }
+            .card {
+                break-inside: avoid;
+                border-left-width: 4px;
+            }
+            .section-header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background: #333 !important;
+            }
+            .answer-table th {
+                background: #333 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* ===== ANIMATION ===== */
+        .fade-in {
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== LARGE SCREEN ===== */
+        @media (min-width: 1400px) {
+            .container {
+                padding: 30px 24px 120px;
+                max-width: 1300px;
+            }
+            .card-header {
+                padding: 24px 32px;
+            }
+            .card-header .q-text {
+                font-size: 1.3rem;
+            }
+            .card-body.open {
+                padding: 26px 32px 34px;
+            }
+            .card-body .answer {
+                font-size: 1.2rem;
+            }
+            .section-header {
+                padding: 28px 36px;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .nav-btn {
+                font-size: 1rem;
+                padding: 14px 28px;
+            }
+            .header-title {
+                font-size: 2.2rem;
+            }
+            .scroll-top {
+                width: 72px;
+                height: 72px;
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="top">
+        <div class="header-inner">
+            <div class="header-title">
+                📘 कक्षा ११
+                <span class="badge">एकाई ३</span>
+            </div>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="प्रश्न खोज्नुहोस्..." aria-label="Search">
+            </div>
+            <div class="header-badge">
+                🎯 <span class="count">३५</span> संक्षिप्त प्रश्न
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav-bar" id="mainNav">
+        <div class="nav-inner">
+            <button class="nav-btn active" data-target="section-k" onclick="scrollToSection('section-k')">
+                क. निर्णय <span class="qty">८</span>
+            </button>
+            <button class="nav-btn" data-target="section-kh" onclick="scrollToSection('section-kh')">
+                ख. समस्या <span class="qty">६</span>
+            </button>
+            <button class="nav-btn" data-target="section-ga" onclick="scrollToSection('section-ga')">
+                ग. सञ्चार <span class="qty">९</span>
+            </button>
+            <button class="nav-btn" data-target="section-gh" onclick="scrollToSection('section-gh')">
+                घ. तनाव <span class="qty">६</span>
+            </button>
+            <button class="nav-btn" data-target="section-ng" onclick="scrollToSection('section-ng')">
+                ङ. अन्तरवैयक्तिक <span class="qty">६</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="container" id="mainContainer">
+
+        <!-- ============================================================ -->
+        <!-- ===== खण्ड क: निर्णय प्रक्रिया ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-k">
+            <h2><span class="icon">🎯</span> खण्ड क: निर्णय प्रक्रिया <span class="count">८ प्रश्न</span></h2>
+            <span class="sub">पाठ १</span>
+        </div>
+
+        <div class="toggle-all-wrap">
+            <button class="toggle-all-btn open-all" onclick="toggleAll('container-k', true)">📖 सबै खोल्नुहोस्</button>
+            <button class="toggle-all-btn close-all" onclick="toggleAll('container-k', false)">📕 सबै बन्द गर्नुहोस्</button>
+        </div>
+
+        <div id="container-k">
+
+            <!-- Q1 -->
+            <div class="card section-k fade-in" data-search="निर्णय निर्माण Decision Making">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१</span>
+                    <span class="q-text"><b>निर्णय निर्माण (Decision Making) प्रक्रिया भनेको के हो? यसको महत्त्व प्रस्ट पार्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>कुनै पनि काम गर्नुअघि उपलब्ध विभिन्न विकल्पहरूमध्ये सबैभन्दा उपयुक्त र सर्वोत्तम विकल्पको छनोट गरी अन्तिम निष्कर्षमा पुग्ने व्यवस्थित प्रक्रिया नै निर्णय निर्माण हो।</p>
+                        <p><b>महत्त्व:</b></p>
+                        <ul>
+                            <li><b>उद्देश्य प्राप्ति:</b> व्यक्तिगत वा सङ्गठनात्मक लक्ष्यहरू हासिल गर्न सही मार्गनिर्देशन गर्दछ।</li>
+                            <li><b>विकल्पहरूको सही पहिचान:</b> उपलब्ध अवसर र विकल्पहरूको विश्लेषण गरी उत्तम विकल्प रोज्न सघाउँछ।</li>
+                            <li><b>समय र स्रोतको सदुपयोग:</b> हचुवाको भरमा काम नगरी योजनाबद्ध निर्णय लिँदा समय, श्रम र आर्थिक स्रोतको अपव्यय हुन पाउँदैन।</li>
+                            <li><b>आत्मविश्वासमा वृद्धि:</b> सही निर्णय लिन सक्ने व्यक्तिमा आत्मविश्वास बढ्छ र उसले जीवनका हरेक चुनौतीहरूको सामना गर्न सक्छ।</li>
+                            <li><b>भविष्यको सुरक्षा:</b> दूरगामी सोचका साथ गरिएको विवेकशील निर्णयले भविष्यमा आउन सक्ने जोखिम न्यूनीकरण गर्दछ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="card section-k fade-in" data-search="आन्तरिक पक्ष">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२</span>
+                    <span class="q-text"><b>निर्णय निर्माण गर्दा ध्यान दिनुपर्ने आन्तरिक पक्षहरू के-के हुन्? व्याख्या गर्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>निर्णय प्रक्रियामा आन्तरिक वातावरण वा पक्षहरूको ठुलो भूमिका हुन्छ। निर्णयकर्ता वा संस्थाको नियन्त्रणभित्र रहने र निर्णयलाई प्रत्यक्ष प्रभाव पार्ने पक्षहरू नै आन्तरिक पक्षहरू हुन्।</p>
+                        <ul>
+                            <li><b>मानवीय स्रोतसाधन:</b> निर्णय कार्यान्वयन गर्ने जनशक्तिको क्षमता, सीप, अनुभव र मानसिक तत्परता कस्तो छ भनी हेर्नुपर्छ।</li>
+                            <li><b>वित्तीय स्रोतसाधन:</b> निर्णय कार्यान्वयन गर्न आवश्यक पर्ने बजेट वा आर्थिक लगानी उपलब्ध छ कि छैन भनी लेखाजोखा गर्नुपर्छ।</li>
+                            <li><b>भौतिक तथा प्राविधिक स्रोत:</b> संस्था वा व्यक्तिसँग उपलब्ध भौतिक पूर्वाधार, उपकरण र प्रविधिको उपलब्धताको मूल्याङ्कन गर्नुपर्छ।</li>
+                            <li><b>समय सीमा (Time Limit):</b> निर्णय कति समयभित्र लिइसक्नुपर्ने हो र त्यसको कार्यान्वयनको अवधि कति हो भन्ने कुरामा ध्यान दिनुपर्छ।</li>
+                            <li><b>व्यक्तिगत मूल्यमान्यता र रुचि:</b> व्यक्तिगत निर्णय गर्दा आफ्नो इच्छा, क्षमता, योग्यता र जीवनको लक्ष्यसँग त्यो निर्णय मेल खान्छ कि खाँदैन भनी आत्मसमीक्षा गर्नुपर्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="card section-k fade-in" data-search="बाह्य पक्ष">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">३</span>
+                    <span class="q-text"><b>निर्णय निर्माणलाई प्रभाव पार्ने बाह्य पक्षहरूको बारेमा चर्चा गर्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>हाम्रो नियन्त्रणभन्दा बाहिर रहेर हाम्रो निर्णय प्रक्रिया र यसको परिणामलाई असर गर्ने तत्वहरू बाह्य पक्षहरू हुन्।</p>
+                        <ul>
+                            <li><b>मुलुकको नीति तथा कानुनी व्यवस्था:</b> हामीले गर्ने निर्णयहरू देशको विद्यमान ऐन, कानुन, नियम र नीति विपरित हुनु हुँदैन।</li>
+                            <li><b>भौगोलिक र वातावरणीय पक्ष:</b> निर्णय गरिने क्षेत्रको भौगोलिक बनावट, जलवायु र पर्यावरण अनुकूल छ कि छैन भनी विचार गर्नुपर्छ।</li>
+                            <li><b>सामाजिक-सांस्कृतिक मूल्यमान्यता:</b> समाजमा स्थापित रीतिरिवाज, धर्म, संस्कृति र जनभावनालाई ठेस नपुग्ने गरी निर्णय लिनुपर्छ।</li>
+                            <li><b>आर्थिक र बजारको अवस्था:</b> देशको आर्थिक नीति, बजारको माग, प्रतिस्पर्धीहरूको अवस्था र मूल्यवृद्धि जस्ता आर्थिक पाटाहरू ध्यान दिनुपर्छ।</li>
+                            <li><b>विज्ञान र प्रविधिको विकास:</b> बदलिँदो प्रविधिको युगमा बाह्य प्रविधिले हाम्रो निर्णयलाई कसरी प्रभाव पार्छ भनी सजग रहनुपर्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="card section-k fade-in" data-search="व्यक्तिगत निर्णय सामूहिक निर्णय भिन्नता">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">४</span>
+                    <span class="q-text"><b>व्यक्तिगत निर्णय र सामूहिक निर्णयबीचको भिन्नता तालिकामा देखाउनुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <table class="answer-table">
+                            <thead>
+                                <tr><th>आधार</th><th>व्यक्तिगत निर्णय</th><th>सामूहिक निर्णय</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>निर्णयकर्ता</td><td>व्यक्ति स्वयं एक्लैले</td><td>सम्बन्धित समूह वा सरोकारवालाहरू मिलेर</td></tr>
+                                <tr><td>समय</td><td>छिटो हुन्छ</td><td>छलफल र सहमति जुटाउन बढी समय</td></tr>
+                                <tr><td>सहभागिता</td><td>अन्य व्यक्तिको सहभागिता हुँदैन</td><td>धेरै जनाको विचार, बुद्धि र सीपको सहभागिता</td></tr>
+                                <tr><td>असर र प्रभाव</td><td>निर्णय लिने व्यक्तिमा मात्र सीमित</td><td>सिङ्गो समूह, संस्था वा समाजमा पर्दछ</td></tr>
+                                <tr><td>कार्यान्वयन</td><td>कतिपय अवस्थामा कठिनाइ</td><td>सबैको सहमति हुने भएकाले सहज र प्रभावकारी</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="card section-k fade-in" data-search="विवेकशील बढोत्तरी भिन्नता">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">५</span>
+                    <span class="q-text"><b>विवेकशील निर्णय (Rational Decision) र बढोत्तरी निर्णय (Incremental Decision) बीचको भिन्नता स्पष्ट पार्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>विवेकशील निर्णय:</b></p>
+                        <ul>
+                            <li>तथ्य, तथ्याङ्क र वैज्ञानिक प्रमाणहरूको गहन विश्लेषणका आधारमा गरिन्छ।</li>
+                            <li>उपलब्ध सबै सम्भाव्य विकल्पहरूको पहिचान गरी तिनको दूरगामी असर मूल्याङ्कन गरेर सर्वोत्तम विकल्प छानिन्छ।</li>
+                            <li>नयाँ, जटिल र ठुला समस्याहरू समाधान गर्न बढी उपयोगी हुन्छ।</li>
+                        </ul>
+                        <p><b>बढोत्तरी निर्णय:</b></p>
+                        <ul>
+                            <li>यसअघि गरिसकिएका निर्णयहरूलाई आधार मानी हाल भइरहेका कामहरूमा सामान्य परिमार्जन वा थप सुधार गर्न लिइने निर्णय हो।</li>
+                            <li>नयाँ विकल्पहरू खोज्नुको सट्टा विगतको अनुभव र अभ्यासलाई नै निरन्तरता दिइन्छ।</li>
+                            <li>उदाहरण: विद्यालयको भवन निर्माण कार्यक्रम अन्तर्गत अर्को वर्ष थप पुस्तकहरू थप्ने वा सानो कोठा मर्मत गर्ने निर्णय।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="card section-k fade-in" data-search="निर्णय प्रक्रिया चक्र ७ चरण">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">६</span>
+                    <span class="q-text"><b>निर्णय प्रक्रिया चक्रका ७ वटा चरणहरूको क्रमिक रूपमा व्याख्या गर्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ol>
+                            <li><b>समस्याको पहिचान गर्ने:</b> निर्णय लिनुपर्ने मुख्य विषय वा समस्या के हो भनी स्पष्ट रूपमा बुझ्ने।</li>
+                            <li><b>समस्याको विश्लेषण गर्ने:</b> समस्या किन आयो, यसका प्रभावहरू के-के हुन् भनी कारण र असर खोज्ने।</li>
+                            <li><b>विकल्पको पहिचान गर्ने:</b> समस्या समाधानका लागि हुनसक्ने सम्भावित सम्पूर्ण उपाय वा विकल्पहरूको सूची तयार गर्ने।</li>
+                            <li><b>विकल्पको विश्लेषण गर्ने:</b> प्रत्येक विकल्पका सबल पक्ष, दुर्बल पक्ष, खर्च र परिणामको लेखाजोखा गर्ने।</li>
+                            <li><b>सर्वोत्तम विकल्प छनोट गर्ने:</b> विश्लेषणका आधारमा सबैभन्दा व्यावहारिक र बढी फाइदाजनक विकल्प छनोट गर्ने।</li>
+                            <li><b>निर्णय कार्यान्वयन गर्ने:</b> चुनिएको विकल्पलाई व्यवहारमा उतार्ने वा लागू गर्ने।</li>
+                            <li><b>पुनरावलोकन तथा मूल्याङ्कन गर्ने:</b> कार्यान्वयनपछि सोचेजस्तै नतिजा आयो कि आएन भनी हेर्ने र आवश्यक परे सुधार गर्ने।</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="card section-k fade-in" data-search="अनिर्णित अवस्था Indecision कारण">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">७</span>
+                    <span class="q-text"><b>मानिस अनिर्णित वा अन्योलको अवस्था (Indecision) मा पुग्नुका मुख्य कारणहरू के-के हुन्?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>पर्याप्त सूचनाको अभाव:</b> निर्णय गर्नुपर्ने विषयमा आवश्यक जानकारी वा तथ्यहरू नहुँदा मानिस अलमलमा पर्छ।</li>
+                            <li><b>भविष्यको असर र डर:</b> गलत निर्णय भएमा भविष्यमा पछुताउनुपर्ने वा ठुलो नोक्सानी बेहोर्नुपर्ने डरले निर्णय लिन सक्दैन।</li>
+                            <li><b>तत्कालको परिस्थिति वा वातावरण:</b> कहिलेकाहीँ वरपरको वातावरण यति तीव्र रूपमा बदलिन्छ कि मानिसले स्थितिको सही आँकलन गर्न सक्दैन।</li>
+                            <li><b>दबाब समूहको प्रभाव:</b> बाह्य व्यक्ति वा समूहको दबाब र हस्तक्षेपका कारण आफ्नो स्वविवेक प्रयोग गर्न गाह्रो हुन्छ।</li>
+                            <li><b>समय सीमा र स्रोतको सीमितता:</b> अति छोटो समयमा निर्णय लिनुपर्ने वा आर्थिक र मानवीय स्रोत नहुँदा अन्योल सिर्जना हुन्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="card section-k fade-in" data-search="दबाब समूह समय सीमा बाधा">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">८</span>
+                    <span class="q-text"><b>निर्णय प्रक्रियामा 'दबाब समूह' र 'समय सीमा' ले कसरी बाधा पुर्‍याउन सक्छन्? तर्क दिनुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>दबाब समूह (Pressure Group) को प्रभाव:</b></p>
+                        <ul>
+                            <li>यसले निर्णयकर्तालाई आफ्नो हित अनुकूल निर्णय गर्न अनुचित मानसिक, राजनीतिक वा सामाजिक दबाब दिन्छ।</li>
+                            <li>यसका कारण निर्णयकर्ताले विवेकशील र न्यायपूर्ण विकल्प छान्न पाउँदैन र दबाबमा परेर कमजोर वा गलत निर्णय गर्न बाध्य हुन्छ।</li>
+                        </ul>
+                        <p><b>समय सीमा (Time Limit) को प्रभाव:</b></p>
+                        <ul>
+                            <li>यदि निर्णय गर्नुपर्ने समय अत्यन्तै कम वा कडा छ भने निर्णयकर्ताले समस्याको गहिरो विश्लेषण गर्न पाउँदैन।</li>
+                            <li>हतारमा विकल्पहरू खोजिँदा र हतारमै निष्कर्षमा पुग्दा धेरै महत्त्वपूर्ण तथ्यहरू छुट्छन्, जसले गर्दा हचुवाको भरमा निर्णय हुन पुग्छ र पछि पछुताउनुपर्ने स्थिति आउँछ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end container-k -->
+
+
+        <!-- ============================================================ -->
+        <!-- ===== खण्ड ख: समस्या समाधान ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-kh" style="margin-top:40px;">
+            <h2><span class="icon">🧩</span> खण्ड ख: समस्या समाधान <span class="count">६ प्रश्न</span></h2>
+            <span class="sub">पाठ २</span>
+        </div>
+
+        <div class="toggle-all-wrap">
+            <button class="toggle-all-btn open-all" onclick="toggleAll('container-kh', true)">📖 सबै खोल्नुहोस्</button>
+            <button class="toggle-all-btn close-all" onclick="toggleAll('container-kh', false)">📕 सबै बन्द गर्नुहोस्</button>
+        </div>
+
+        <div id="container-kh">
+
+            <!-- Q9 -->
+            <div class="card section-kh fade-in" data-search="समस्या सकारात्मक नकारात्मक भिन्नता">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">९</span>
+                    <span class="q-text"><b>समस्या भनेको के हो? सकारात्मक समस्या र नकारात्मक समस्याबीचको भिन्नता प्रस्ट पार्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>मानिसको आन्तरिक सोच, बुझाइ, आदत वा परिस्थिति अनुकूल घटना वा परिवेशलाई ग्रहण गर्दा उत्पन्न हुने अप्ठ्यारो वा कठिनाइको अवस्था नै समस्या हो।</p>
+                        <p><b>सकारात्मक समस्या:</b></p>
+                        <ul>
+                            <li>मानव विकास र वैज्ञानिक खोजको आधार हो।</li>
+                            <li>कुनै नयाँ कुरा सिक्न वा नयाँ रहस्य पत्ता लगाउन मनमा उब्जिने कौतुहलता र जिज्ञासामूलक प्रश्नहरू यस अन्तर्गत पर्दछन्।</li>
+                            <li>यसले मानिसलाई खोज र अनुसन्धानतर्फ डोर्‍याउँछ र रचनात्मक क्षमता बढाउँछ।</li>
+                        </ul>
+                        <p><b>नकारात्मक समस्या:</b></p>
+                        <ul>
+                            <li>यो मानिसको दैनिक जीवनमा आउने बाधा वा झन्झट हो।</li>
+                            <li>जसले व्यक्ति वा समाजमा तनाव, रिस, चिन्ता, झैझगडा वा भौतिक एवम् मानसिक हानि पुर्‍याउँछ, त्यो नकारात्मक समस्या हो।</li>
+                            <li>उदाहरण: लागू पदार्थको दुर्व्यसन, घरायसी झगडा, वा आर्थिक सङ्कट।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q10 -->
+            <div class="card section-kh fade-in" data-search="समस्या समाधान सीप अङ्ग">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१०</span>
+                    <span class="q-text"><b>समस्या समाधान सीप (Problem Solving Skill) का प्रमुख अङ्गहरू के-के हुन्? सूची बनाई चर्चा गर्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>सक्रिय सुनाइ (Active Listening):</b> समस्यासँग जोडिएका व्यक्तिहरूका कुरा ध्यान दिएर सुन्नु र वास्तविक कुरा बुझ्नु।</li>
+                            <li><b>समस्या विश्लेषण (Problem Analysis):</b> समस्या के हो, यो किन उत्पन्न भयो र यसका असरहरू के-के छन् भनी वस्तुपरक विश्लेषण गर्नु।</li>
+                            <li><b>सिर्जनात्मकता (Creativity):</b> समस्या समाधानका लागि परम्परागत ढङ्गले मात्र नसोची नयाँ र नवीन उपायहरू पत्ता लगाउनु।</li>
+                            <li><b>सञ्चार (Communication):</b> समाधानका उपायहरू सम्बन्धित पक्षसँग स्पष्ट रूपमा आदानप्रदान गर्नु र सहमति जुटाउनु।</li>
+                            <li><b>सामूहिक भावना र कार्यदक्षता:</b> समूहमा काम गर्दा सबैको सहयोग लिनु र आफैँ निर्णय गरेर दृढताका साथ लागू गर्नु।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q11 -->
+            <div class="card section-kh fade-in" data-search="समस्या समाधान ६ चरण">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">११</span>
+                    <span class="q-text"><b>समस्या समाधानका ६ वटा क्रमिक चरणहरू उल्लेख गर्दै संक्षिप्त व्याख्या गर्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ol>
+                            <li><b>समस्या पहिचान र परिभाषा:</b> समस्या वास्तवमा के हो र यो कुन क्षेत्रसँग सम्बन्धित छ भनी प्रस्ट रूपमा बुझ्ने र परिभाषित गर्ने।</li>
+                            <li><b>परिकल्पना (Hypothesis):</b> समस्या समाधानका लागि के-के विकल्प वा उपायहरू हुन सक्छन् भनी सम्भावित परिणामको अनुमान गर्ने।</li>
+                            <li><b>तथ्य सङ्कलन:</b> परिकल्पना गरिएका विकल्पहरूलाई पुष्टि गर्न आवश्यक तथ्याङ्क, सूचना र प्रमाणहरू विभिन्न स्रोतबाट जुटाउने।</li>
+                            <li><b>विश्लेषण:</b> सङ्कलित तथ्य र सूचनाहरूलाई वर्गीकरण गरी कुन विकल्प सबैभन्दा बढी व्यावहारिक छ भनी तुलनात्मक विश्लेषण गर्ने।</li>
+                            <li><b>निष्कर्ष (Conclusion):</b> विश्लेषणको आधारमा समस्याको मुख्य कारण पत्ता लगाई सर्वोत्तम समाधानको निष्कर्ष निकाल्ने।</li>
+                            <li><b>प्रयोग (Application):</b> निकालिएको निष्कर्ष वा समाधानको उपायलाई वास्तविक जीवन वा कार्यक्षेत्रमा व्यवहारिक रूपमा लागू गर्ने।</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q12 -->
+            <div class="card section-kh fade-in" data-search="उमेश जुस पसल उपभोक्ता सचेतना">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१२</span>
+                    <span class="q-text"><b>"उमेशको जुस पसल" को घटनाबाट विद्यार्थीहरूले उपभोक्ता सचेतना र समस्या समाधानबारे के पाठ सिक्न सक्छन्?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>सस्तोको लोभ नगर्ने:</b> बजारमा पाइने सामान सस्तो छ भन्दैमा बिना जाँचबुझ किन्नु हुँदैन। गुणस्तर सधैँ मूल्यभन्दा महत्त्वपूर्ण हुन्छ।</li>
+                            <li><b>उपभोग्य मिति जाँच गर्ने:</b> जुनसुकै खाद्य सामग्री वा पेय पदार्थ किन्दा अनिवार्य रूपमा लेबल, उत्पादन मिति र उपभोग्य अवधि जाँच्नुपर्छ।</li>
+                            <li><b>तथ्यपरक सोच:</b> समस्या पर्दा रिसराग वा आवेगमा नआई विश्लेषणात्मक र तार्किक ढङ्गले सोचेर डाक्टरकोमा जाने र दुकानदारलाई सचेत गराउने काम गर्नुपर्छ।</li>
+                            <li><b>कानुनी अधिकारको ज्ञान:</b> म्याद गुज्रेको सामान बेच्नु अपराध हो। यस्तो अवस्थामा प्रहरी वा उपभोक्ता मञ्चमा उजुरी गर्ने कानुनी बाटोबारे सजग हुनुपर्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q13 -->
+            <div class="card section-kh fade-in" data-search="परिकल्पना तथ्य सङ्कलन भूमिका">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१३</span>
+                    <span class="q-text"><b>समस्या समाधानमा 'परिकल्पना' (Hypothesis) र 'तथ्य सङ्कलन' को भूमिका कस्तो हुन्छ?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>परिकल्पना (Hypothesis) को भूमिका:</b></p>
+                        <ul>
+                            <li>यसले समस्या समाधानका लागि एउटा काल्पनिक मार्गचित्र प्रदान गर्दछ।</li>
+                            <li>"यदि मैले यसो गरेँ भने यो समस्या हल हुन सक्छ" भनी सम्भावित विकल्पहरूको अनुमान गर्न यसले मद्दत गर्दछ, जसले गर्दा समाधानको दिशा निश्चित हुन्छ।</li>
+                        </ul>
+                        <p><b>तथ्य सङ्कलन (Data Collection) को भूमिका:</b></p>
+                        <ul>
+                            <li>परिकल्पना गरिएका विकल्पहरू केवल अनुमान मात्र हुन्। तिनलाई सत्य सावित गर्न प्रमाण चाहिन्छ, जुन तथ्य सङ्कलनले प्रदान गर्दछ।</li>
+                            <li>अन्तर्वार्ता, सर्वेक्षण, वा पुराना रेकर्डहरूबाट तथ्य जुटाएपछि मात्र समाधानको उपाय भरपर्दो र वैज्ञानिक बन्छ। तथ्यबिनाको निर्णयले समस्या थप बल्झाउन सक्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q14 -->
+            <div class="card section-kh fade-in" data-search="लागू पदार्थ दुर्व्यसन ६ चरणीय विधि">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१४</span>
+                    <span class="q-text"><b>"लागू पदार्थको दुर्व्यसन" जस्तो गम्भीर सामाजिक समस्यालाई समाधान गर्न ६-चरणीय विधिको प्रयोग कसरी गर्न सकिन्छ?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ol>
+                            <li><b>समस्या पहिचान:</b> विद्यालय वा समुदायमा कुन-कुन युवा दुर्व्यसनमा फसेका छन् र उनीहरूको अवस्था कस्तो छ भनी पहिचान गर्ने।</li>
+                            <li><b>परिकल्पना:</b> सचेतना कार्यक्रम, पुनस्र्थापना केन्द्रको स्थापना, वा साथी समूह (Peer Group) परामर्श प्रभावकारी समाधान हुन सक्छन् भनी अनुमान गर्ने।</li>
+                            <li><b>तथ्य सङ्कलन:</b> दुर्व्यसनमा फस्नुको मुख्य कारण (संगत, डिप्रेसन, कौतुहलता) पत्ता लगाउन गोप्य सर्वेक्षण र अन्तर्वार्ता गर्ने।</li>
+                            <li><b>विश्लेषण:</b> सङ्कलित तथ्यबाट बहुसंख्यक युवा डिप्रेसन र गलत संगतका कारण फसेको कुरा विश्लेषण गर्ने।</li>
+                            <li><b>निष्कर्ष:</b> परामर्श (Counseling) र खेलकुद गतिविधिमा संलग्न गराउनु नै सबैभन्दा उत्तम समाधान हो भनी निष्कर्ष निकाल्ने।</li>
+                            <li><b>प्रयोग:</b> युवाहरूका लागि परामर्श शिविर सञ्चालन गर्ने र टोलमा खेलकुद क्लब गठन गरी निष्कर्षलाई व्यवहारमा उतार्ने।</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end container-kh -->
+
+
+        <!-- ============================================================ -->
+        <!-- ===== खण्ड ग: सञ्चार ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-ga" style="margin-top:40px;">
+            <h2><span class="icon">💬</span> खण्ड ग: सञ्चार <span class="count">९ प्रश्न</span></h2>
+            <span class="sub">पाठ ३</span>
+        </div>
+
+        <div class="toggle-all-wrap">
+            <button class="toggle-all-btn open-all" onclick="toggleAll('container-ga', true)">📖 सबै खोल्नुहोस्</button>
+            <button class="toggle-all-btn close-all" onclick="toggleAll('container-ga', false)">📕 सबै बन्द गर्नुहोस्</button>
+        </div>
+
+        <div id="container-ga">
+
+            <!-- Q15 -->
+            <div class="card section-ga fade-in" data-search="सञ्चार आवश्यकता">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१५</span>
+                    <span class="q-text"><b>सञ्चार भनेको के हो? मानव जीवनमा प्रभावकारी सञ्चारको आवश्यकता किन पर्दछ?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>सञ्चार दुई वा दुईभन्दा बढी पक्षहरूबीच सूचना, विचार, भावना, दृष्टिकोण वा जानकारीहरूको आदानप्रदान गर्ने र एकअर्काको कुरा सही रूपमा बुझ्ने प्रक्रिया हो।</p>
+                        <ul>
+                            <li><b>सम्बन्ध बलियो बनाउन:</b> प्रभावकारी सञ्चारले परिवार, साथीभाइ र समाजमा आपसी विश्वास र सुमधुर सम्बन्ध कायम राख्छ।</li>
+                            <li><b>द्वन्द्व न्यूनीकरण:</b> धेरैजसो असमझदारीहरू गलत सञ्चारका कारण हुन्छन्। स्पष्ट सञ्चारले विवाद र असमझदारी हटाउँछ।</li>
+                            <li><b>ज्ञान र सीपको आदानप्रदान:</b> शिक्षा, प्रविधि र दैनिक व्यवहारका सीपहरू सञ्चारकै माध्यमबाट एक पुस्ताबाट अर्को पुस्तामा हस्तान्तरण हुन्छन्।</li>
+                            <li><b>सहकार्य र समन्वय:</b> कुनै पनि सामूहिक काम वा टोलीकार्य सफल बनाउन सदस्यहरूबीच निरन्तर र स्पष्ट सञ्चार आवश्यक हुन्छ।</li>
+                            <li><b>व्यक्तित्व विकास:</b> आफ्नो विचार स्पष्ट र प्रभावशाली ढङ्गले राख्न सक्ने व्यक्तिको नेतृत्व क्षमता र सामाजिक प्रतिष्ठा बढ्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q16 -->
+            <div class="card section-ga fade-in" data-search="एल. ए. एलेन L.A. Allen">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१६</span>
+                    <span class="q-text"><b>एल. ए. एलेन (L.A. Allen) का अनुसार सञ्चारको परिभाषा के हो? यसको अर्थ बुझाउनुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>प्रसिद्ध व्यवस्थापनविद् एल. ए. एलेन (L.A. Allen) का अनुसार, <b>"सञ्चार भन्नाले अरूको मस्तिष्कसँग समझदारी कायम गर्नका लागि व्यक्तिले गर्ने सबै कार्यहरूको योग हो। यस अन्तर्गत भन्ने, सुन्ने र तात्पर्य बुझ्ने एक व्यवस्थित एवम् निरन्तर प्रक्रिया पर्दछ।"</b></p>
+                        <ul>
+                            <li><b>समझदारी निर्माण:</b> सञ्चार भनेको केवल बोल्नु वा सन्देश पठाउनु मात्र होइन, बरु सुन्ने व्यक्तिको दिमागमा स्पष्ट बुझाइ (Understanding) सिर्जना गर्नु हो।</li>
+                            <li><b>त्रि-आयामी प्रक्रिया:</b> यसमा 'भन्ने' (सन्देश प्रवाह गर्ने), 'सुन्ने' (ध्यान दिएर ग्रहण गर्ने) र 'तात्पर्य बुझ्ने' (साझा अर्थ निकाल्ने) तीनवटै कुरा समावेश हुन्छन्।</li>
+                            <li><b>निरन्तरता:</b> यो कहिल्यै नरोकिने र एकपछि अर्को गर्दै चलिरहने व्यवस्थित प्रक्रिया हो।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q17 -->
+            <div class="card section-ga fade-in" data-search="सञ्चार ७ तत्त्व">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१७</span>
+                    <span class="q-text"><b>सञ्चार प्रक्रियाका सात आधारभूत तत्त्वहरू के-के हुन्? संक्षेपमा प्रस्ट पार्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ol>
+                            <li><b>दुई वा दुईभन्दा बढी पक्ष:</b> सञ्चारका लागि सन्देश पठाउने र पाउने कम्तीमा दुई पक्ष (व्यक्ति वा संस्था) हुनुपर्छ।</li>
+                            <li><b>सञ्चारको माध्यम (Channel):</b> सन्देश पठाउन प्रयोग गरिने माध्यम जस्तै: इन्टरनेट, मोबाइल, चिठी, वा प्रत्यक्ष भेटघाट।</li>
+                            <li><b>प्रेषक (Sender):</b> जसले सञ्चारको सुरुवात गर्छ र सूचना वा भावना अर्को पक्षलाई पठाउँछ।</li>
+                            <li><b>प्रापक (Receiver):</b> प्रेषकले पठाएको सन्देश प्राप्त गर्ने वा सुन्ने व्यक्ति।</li>
+                            <li><b>प्राप्त सूचना स्वीकार गर्नु:</b> प्रापकले प्रेषकको सन्देशलाई ध्यान दिएर सुन्नु वा पढ्नु।</li>
+                            <li><b>सूचनालाई सही रूपमा बुझ्नु:</b> प्रापकले सन्देशको वास्तविक अर्थ र मर्मलाई प्रेषकले चाहेकै रूपमा ग्रहण गर्नु।</li>
+                            <li><b>सूचनाको प्रतिक्रिया (Feedback):</b> प्रापकले बुझेपछि प्रेषकलाई दिने उत्तर वा पृष्ठपोषण, जसले सञ्चार पूरा भएको सङ्केत गर्छ।</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q18 -->
+            <div class="card section-ga fade-in" data-search="मौखिक लिखित भिन्नता">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१८</span>
+                    <span class="q-text"><b>मौखिक सञ्चार र लिखित सञ्चारबीचको भिन्नता तुलना गर्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <table class="answer-table">
+                            <thead><tr><th>विशेषता</th><th>मौखिक सञ्चार</th><th>लिखित सञ्चार</th></tr></thead>
+                            <tbody>
+                                <tr><td>प्रकृति</td><td>बोलेर वा मुखको भाषा प्रयोग</td><td>लेखेर, टाइप गरेर वा सङ्केतमा</td></tr>
+                                <tr><td>समय र खर्च</td><td>छिटो, खर्च कम वा शून्य</td><td>तयार गर्न समय लाग्छ, केही खर्च</td></tr>
+                                <tr><td>प्रतिक्रिया</td><td>तत्काल प्रतिक्रिया (Feedback)</td><td>प्रतिक्रिया प्राप्त हुन समय लाग्न सक्छ</td></tr>
+                                <tr><td>अभिलेख</td><td>कानुनी वा स्थायी अभिलेख रहँदैन</td><td>भविष्यका लागि स्थायी र सुरक्षित अभिलेख</td></tr>
+                                <tr><td>उपयोगिता</td><td>प्रत्यक्ष भेटघाट, बैठक, अनौपचारिक</td><td>औपचारिक निर्णय, सम्झौता, कानुनी पत्र</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q19 -->
+            <div class="card section-ga fade-in" data-search="साङ्केतिक सञ्चार Sign Symbolic">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">१९</span>
+                    <span class="q-text"><b>साङ्केतिक सञ्चार (Sign/Symbolic Communication) भनेको के हो? यसको महत्त्व उदाहरणसहित लेख्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>कुनै पनि भाषा वा लिखित/मौखिक शब्दको प्रयोग नगरी शारीरिक हाउभाउ, इशारा, सङ्केत, चिह्न वा रङको माध्यमबाट गरिने सञ्चारलाई साङ्केतिक सञ्चार भनिन्छ।</p>
+                        <ul>
+                            <li><b>भाषिक अवरोध हटाउन:</b> भाषा नबुझ्ने वा फरक देशका मानिसहरूबीच पनि साङ्केतिक सञ्चारले सजिलै सञ्चार स्थापित गर्छ।</li>
+                            <li><b>समयको बचत र तत्काल सङ्केत:</b> ट्राफिक प्रहरीको इशारा वा सडकको ट्राफिक लाइट (रातो, पहेंलो, हरियो) ले सवारी चालकहरूलाई तुरुन्तै सन्देश दिन्छ।</li>
+                            <li><b>सहानुभूति र सम्बन्ध:</b> कसैलाई ढाडस दिँदा काँधमा हात राख्नु वा टाउको हल्लाएर सहमति जनाउनुले बोलेको भन्दा बढी भावनात्मक सन्देश दिन्छ।</li>
+                            <li><b>अपाङ्गता भएका व्यक्तिका लागि वरदान:</b> बोल्न वा सुन्न नसक्ने व्यक्तिहरूका लागि साङ्केतिक सञ्चार (Sign Language) नै सञ्चारको एक मात्र मुख्य सहारा हो।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q20 -->
+            <div class="card section-ga fade-in" data-search="मनोवैज्ञानिक अवरोध Psychological">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२०</span>
+                    <span class="q-text"><b>सञ्चारका मनोवैज्ञानिक अवरोधहरू (Psychological Barriers) भन्नाले के बुझिन्छ?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>प्रेषक वा प्रापकको मानसिक अवस्था, सोचाइ, भावना र संवेगका कारण सञ्चार प्रक्रियामा आउने अवरोधलाई मनोवैज्ञानिक अवरोध भनिन्छ।</p>
+                        <ul>
+                            <li><b>पूर्वाग्रह (Prejudice):</b> सुन्ने व्यक्तिले बोल्ने व्यक्तिप्रति पहिल्यै नकारात्मक धारणा राखेको छ भने उसले बोलेका राम्रा कुरा पनि सुन्दैन।</li>
+                            <li><b>आवेश र आवेग:</b> रिस, डर, चिन्ता वा अत्यधिक खुसी भएको बेला मानिसले सन्देशको सही अर्थ बुझ्न सक्दैन र गलत प्रतिक्रिया दिन्छ।</li>
+                            <li><b>ध्यान केन्द्रित नहुनु (Inattention):</b> प्रापकको मन अन्तै छ वा ऊ मानसिक रूपमा व्यस्त छ भने प्रेषकले भनेको कुरा उसको दिमागसम्म पुग्दैन।</li>
+                            <li><b>सूचनाको छनोट प्रवृत्ती:</b> मानिसहरू आफूलाई मन पर्ने वा सुन्न चाहेको कुरा मात्र सुन्ने र बाँकी कुरालाई बेवास्ता गर्ने गर्छन्।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q21 -->
+            <div class="card section-ga fade-in" data-search="भाषिक भौतिक अवरोध Semantic Physical">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२१</span>
+                    <span class="q-text"><b>सञ्चारका भाषिक (Semantic) र भौतिक (Physical) अवरोधहरू कसरी सञ्चारमा बाधा बन्छन्?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>भाषिक अवरोध (Semantic Barriers):</b></p>
+                        <ul>
+                            <li>फरक भाषा, कठीन शब्दावली वा प्राविधिक शब्दहरूको अत्यधिक प्रयोगले प्रापक अलमलमा पर्छ।</li>
+                            <li>एउटै शब्दको फरक-फरक अर्थ लाग्ने अवस्थामा वा अस्पष्ट उच्चारणका कारण सन्देशको गलत व्याख्या हुन पुग्छ, जसले असमझदारी बढाउँछ।</li>
+                        </ul>
+                        <p><b>भौतिक अवरोध (Physical Barriers):</b></p>
+                        <ul>
+                            <li>प्रेषक र प्रापकबीचको भौगोलिक दूरी धेरै हुनु र उपयुक्त सञ्चार उपकरण नहुनु।</li>
+                            <li>वरपरको चर्को कोलाहल (बाह्य ध्वनि), जस्तै: कलकारखानाको आवाज, गाडीको हर्न वा कमजोर इन्टरनेट नेटवर्क, जसले गर्दा आवाज स्पष्ट सुनिँदैन।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q22 -->
+            <div class="card section-ga fade-in" data-search="सङ्गठनात्मक अवरोध Organizational">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२२</span>
+                    <span class="q-text"><b>सङ्गठनात्मक अवरोध (Organizational Barriers) भनेको के हो? यसका कारकहरू लेख्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>कुनै पनि कार्यालय, विद्यालय वा सङ्गठनभित्रको आन्तरिक संरचना, नियम र नीतिका कारण सञ्चार प्रवाहमा आउने बाधालाई सङ्गठनात्मक अवरोध भनिन्छ।</p>
+                        <ul>
+                            <li><b>जटिल सङ्गठनात्मक संरचना:</b> संस्थामा धेरै तहहरू (Levels) हुँदा तल्लो तहको सन्देश माथिल्लो तहसम्म पुग्न धेरै समय लाग्छ र सन्देशको स्वरूप बिग्रिन सक्छ।</li>
+                            <li><b>कडा नियम र नीतिहरू:</b> औपचारिक र लिखित रूपमा मात्र सञ्चार गर्नुपर्ने कडा नियमले गर्दा सूचना प्रवाह ढिलो हुन्छ।</li>
+                            <li><b>अधिकार र मर्यादाको दूरी:</b> व्यवस्थापक र कर्मचारी वा शिक्षक र विद्यार्थीबीचको अत्यधिक पदीय दूरीले गर्दा खुला सञ्चार हुन पाउँदैन।</li>
+                            <li><b>सल्लाह र पृष्ठपोषण लिने प्रवृत्तिको अभाव:</b> माथिल्लो ओहोदाका व्यक्तिहरूले सहायक वा तल्लो तहका कर्मचारीहरूको विचारलाई बेवास्ता गर्ने प्रवृत्ति।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q23 -->
+            <div class="card section-ga fade-in" data-search="अनिसा रामभरोस प्रभावकारी सञ्चार">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२३</span>
+                    <span class="q-text"><b>"अनिसा" र "रामभरोस" को उदाहरणबाट प्रभावकारी सञ्चारको व्यक्तिगत र व्यावसायिक फाइदा प्रस्ट पार्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>अनिसाबाट सिकिने व्यक्तिगत तथा शैक्षिक फाइदा:</b></p>
+                        <ul>
+                            <li>अनिसाले फेसबुक जस्ता सामाजिक सञ्जालमा शैक्षिक समूह बनाई साथीहरूसँग अध्ययन सामग्री सेयर गरिन्।</li>
+                            <li>यसले प्रभावकारी सञ्चारका माध्यमबाट कठिन विषयहरू सजिलै बुझ्न, ज्ञानको दायरा बढाउन र सामूहिक सिकाइलाई प्रोत्साहन गर्न सघाउँछ भन्ने पुष्टि गर्छ।</li>
+                        </ul>
+                        <p><b>रामभरोसबाट सिकिने व्यावसायिक फाइदा:</b></p>
+                        <ul>
+                            <li>रामभरोसले ग्राहकहरूसँग मिठो बोल्ने, सामानको विशेषता बुझाउने र उनीहरूका गुनासो ध्यान दिएर सुन्ने गरे।</li>
+                            <li>उनले अनलाइन विज्ञापन र होम डेलिभरी सेवामार्फत ग्राहकसँग सञ्चार गरे।</li>
+                            <li>यसले ग्राहक सन्तुष्टि बढाउँछ, व्यापार प्रवर्द्धन गर्छ र बजारमा आफ्नो व्यवसायको साख (Reputation) बलियो बनाउँछ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end container-ga -->
+
+
+        <!-- ============================================================ -->
+        <!-- ===== खण्ड घ: तनाव व्यवस्थापन ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-gh" style="margin-top:40px;">
+            <h2><span class="icon">🧘</span> खण्ड घ: तनाव व्यवस्थापन <span class="count">६ प्रश्न</span></h2>
+            <span class="sub">पाठ ४</span>
+        </div>
+
+        <div class="toggle-all-wrap">
+            <button class="toggle-all-btn open-all" onclick="toggleAll('container-gh', true)">📖 सबै खोल्नुहोस्</button>
+            <button class="toggle-all-btn close-all" onclick="toggleAll('container-gh', false)">📕 सबै बन्द गर्नुहोस्</button>
+        </div>
+
+        <div id="container-gh">
+
+            <!-- Q24 -->
+            <div class="card section-gh fade-in" data-search="तनाव विशेषता">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२४</span>
+                    <span class="q-text"><b>तनाव भनेको के हो? तनावका प्रमुख चार विशेषताहरू व्याख्या गर्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>बाह्य वातावरणमा आउने तीव्र परिवर्तन, चुनौती वा कठिनाइका कारण मानिसको शारीरिक र मानसिक अवस्थामा उत्पन्न हुने चाप वा दबाब नै तनाव हो।</p>
+                        <ul>
+                            <li><b>वातावरणीय परिवर्तनको उपज:</b> यो बाह्य वातावरण, परिस्थिति वा घटनाहरूसँग व्यक्तिले समायोजन गर्न नसक्दा सिर्जना हुन्छ।</li>
+                            <li><b>व्यक्तिपिच्छे असर फरक:</b> एउटै घटनाले एक व्यक्तिलाई ठुलो तनाव दिन सक्छ भने अर्को व्यक्तिलाई सामान्य लाग्न सक्छ।</li>
+                            <li><b>व्यवस्थापन गर्न सकिने:</b> तनावलाई पूर्ण रूपमा निर्मूल गर्न नसकिए पनि सकारात्मक सोच, ध्यान र जीवनशैली परिवर्तन गरेर व्यवस्थापन गर्न सकिन्छ।</li>
+                            <li><b>जीवनको अनिवार्य सर्त:</b> संसारमा तनाव नभएको कुनै मानिस हुँदैन। जीवन जिउने क्रममा चुनौतीहरू आइरहने हुनाले तनाव जीवनको एक हिस्सा हो।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q25 -->
+            <div class="card section-gh fade-in" data-search="तनाव अवस्था">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२५</span>
+                    <span class="q-text"><b>तनाव सिर्जना हुने मुख्य चार अवस्थाहरू के-के हुन्? चर्चा गर्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>अस्तित्व (सरभाइभल) तनाव:</b> कुनै तात्कालिक खतरा वा डरलाग्दो परिस्थिति आउँदा शरीरले देखाउने प्रतिक्रिया। जस्तै: जङ्गली जनावर अगाडि आउँदा वा अचानक दुर्घटना हुँदा।</li>
+                            <li><b>आन्तरिक तनाव:</b> बाह्य कारणले नभई मानिसको आफ्नै मनको चिन्ता, डर, रिस, हीनताबोध वा नकारात्मक सोचाइका कारण मनभित्रै उत्पन्न हुन्छ।</li>
+                            <li><b>वातावरणीय तनाव:</b> वरपरको वातावरण जस्तै: चर्को कोलाहल, भीडभाड, प्रदुषण वा असहज बसोबासका कारण दिमागमा पर्ने दबाब।</li>
+                            <li><b>कामको चापबाट हुने तनाव:</b> तोकिएको समयमा धेरै काम गर्नुपर्ने दबाब, परीक्षाको डर, वा कामको सिलसिलामा आउने व्यावसायिक चुनौतीहरू।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q26 -->
+            <div class="card section-gh fade-in" data-search="समर्पण प्रतिरोध सम्झौता तुलना">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२६</span>
+                    <span class="q-text"><b>तनाव व्यवस्थापनका रणनीतिहरू 'समर्पण', 'प्रतिरोध' र 'सम्झौता' को तुलना गर्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>समर्पण (Submission) रणनीति:</b></p>
+                        <ul>
+                            <li>तनाव दिने परिस्थिति वा कारकसँग कुनै प्रतिवाद नगरी पूर्ण रूपमा आत्मसमर्पण गर्छ वा चुपचाप सहन्छ।</li>
+                            <li>यो दनात्मक प्रकृतिको हुन्छ। तत्कालका लागि विवाद रोके पनि मनभित्र आक्रोश गुम्सिने भएकाले दीर्घकालमा मानसिक स्वास्थ्यका लागि हानिकारक हुन्छ।</li>
+                        </ul>
+                        <p><b>प्रतिरोध (Resistance) रणनीति:</b></p>
+                        <ul>
+                            <li>तनाव दिने शक्ति वा व्यक्ति विरुद्ध आक्रामक रूपमा प्रतिकार गर्छ।</li>
+                            <li>क्षणिक रूपमा रिस पोख्न मद्दत गरे पनि द्वन्द्वलाई झन् बढाउँछ र दीर्घकालीन रूपमा थप तनाव निम्त्याउँछ।</li>
+                        </ul>
+                        <p><b>सम्झौता (Compromise) रणनीति:</b></p>
+                        <ul>
+                            <li>आफ्नो आचरण, व्यवहार र शैलीमा लचकता ल्याई परिस्थिति अनुकूल आपसी समझदारीमा समाधान खोज्छ।</li>
+                            <li>सबैभन्दा सकारात्मक र वैज्ञानिक रणनीति हो, जसले दुवै पक्षलाई फाइदा पुर्‍याउँछ र तनावको दीर्घकालीन व्यवस्थापन गर्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q27 -->
+            <div class="card section-gh fade-in" data-search="योग ध्यान सकारात्मक सोच">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२७</span>
+                    <span class="q-text"><b>तनाव व्यवस्थापनका लागि योग, ध्यान र सकारात्मक सोचको भूमिका कसरी सहयोगी हुन्छ?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>योग र ध्यानको भूमिका:</b></p>
+                        <ul>
+                            <li>योगले शरीरका अङ्गहरूलाई क्रियाशील र स्वस्थ बनाउँछ भने ध्यान (Meditation) ले मस्तिष्कलाई शान्त बनाउँछ।</li>
+                            <li>ध्यान गर्दा शरीरमा कोर्टिसोल जस्ता तनाव बढाउने हर्मोन घट्छन् र खुसी बनाउने हर्मोन (एन्डोर्फिन) सक्रिय हुन्छन्, जसले मनलाई एकाग्र र तनावमुक्त बनाउँछ।</li>
+                        </ul>
+                        <p><b>सकारात्मक सोचको भूमिका:</b></p>
+                        <ul>
+                            <li>सकारात्मक सोचले जस्तोसुकै कठिन परिस्थितिमा पनि आशाको किरण देख्न सिकाउँछ।</li>
+                            <li>यसले समस्यालाई अवरोधको रूपमा नभई सिक्ने अवसरको रूपमा ग्रहण गर्न मद्दत गर्दछ, जसले गर्दा मानसिक दबाब स्वतः कम हुन्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q28 -->
+            <div class="card section-gh fade-in" data-search="द्वन्द्व परम्परागत आधुनिक अवधारणा">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२८</span>
+                    <span class="q-text"><b>द्वन्द्व (Conflict) भनेको के हो? यसको परम्परागत र आधुनिक अवधारणा बुझाउनुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>दुई वा दुईभन्दा बढी पक्षहरूबीच विचार, मूल्यमान्यता, स्वार्थ, विश्वास वा दृष्टिकोणमा मेल नखाँदा उत्पन्न हुने असहमति वा विवादको अवस्था नै द्वन्द्व हो।</p>
+                        <p><b>परम्परागत अवधारणा (Traditional View):</b></p>
+                        <ul>
+                            <li>द्वन्द्वलाई सधैँ नकारात्मक, विनाशकारी र हानिकारक मान्छ।</li>
+                            <li>समाज वा संस्थामा द्वन्द्व हुनु नै हुँदैन र यसलाई जुनसुकै हालतमा रोक्नुपर्छ भन्ने मान्यता।</li>
+                        </ul>
+                        <p><b>आधुनिक/अन्तरक्रियात्मक अवधारणा (Interactive View):</b></p>
+                        <ul>
+                            <li>द्वन्द्वलाई प्राकृतिक, स्वाभाविक र सामाजिक गतिशीलताका लागि आवश्यक मान्छ।</li>
+                            <li>निश्चित हदसम्मको द्वन्द्वले नयाँ विचार, सिर्जनशीलता र सुधारका ढोकाहरू खोल्छ। त्यसैले द्वन्द्वलाई रोक्ने भन्दा पनि यसको सही व्यवस्थापन र रूपान्तरण गर्नुपर्छ भन्ने मान्यता।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q29 -->
+            <div class="card section-gh fade-in" data-search="गोगने ओलने पुल विवाद">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">२९</span>
+                    <span class="q-text"><b>गोगने र ओलने गाउँको पुल निर्माण विवादको घटनाबाट द्वन्द्व रूपान्तरण र समाधानका के-के उपायहरू सिक्न सकिन्छ?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>मध्यस्थता र संवादको भूमिका:</b> दुवै गाउँका बुद्धिजीवी र भद्रभलाद्मीहरूको मध्यस्थतामा वार्ता सुरु भयो। संवाद नै विवाद समाधानको मुख्य साँचो हो।</li>
+                            <li><b>विन-विन (Win-Win) समाधान:</b> पुल दुवै गाउँलाई पायक पर्ने साझा स्थानमा बनाउने सहमति भयो, जसले गर्दा दुवै पक्षको जित भयो र कसैलाई अन्याय महसुस भएन।</li>
+                            <li><b>सम्बन्धको पुनर्स्थापना:</b> विवाद समाधानपछि दुवै गाउँका युवाहरू मिलेर मैत्रीपूर्ण क्रिकेट प्रतियोगिता खेले र क्रिकेट क्लब गठन गरे। यसले पुरानो दुश्मनीलाई मित्रतामा बदल्यो।</li>
+                            <li><b>सामूहिक विकासमा सहकार्य:</b> पुल निर्माण र खेलकुदका माध्यमबाट गाउँलेहरू बीच आत्मीयता, सहयोग र सहकार्य बढ्यो, जसले गाउँलाई नमुना गाउँ बनाउन मद्दत गर्‍यो।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end container-gh -->
+
+
+        <!-- ============================================================ -->
+        <!-- ===== खण्ड ङ: अन्तरवैयक्तिक सीपहरू ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-ng" style="margin-top:40px;">
+            <h2><span class="icon">🤝</span> खण्ड ङ: अन्तरवैयक्तिक सीपहरू <span class="count">६ प्रश्न</span></h2>
+            <span class="sub">पाठ ५</span>
+        </div>
+
+        <div class="toggle-all-wrap">
+            <button class="toggle-all-btn open-all" onclick="toggleAll('container-ng', true)">📖 सबै खोल्नुहोस्</button>
+            <button class="toggle-all-btn close-all" onclick="toggleAll('container-ng', false)">📕 सबै बन्द गर्नुहोस्</button>
+        </div>
+
+        <div id="container-ng">
+
+            <!-- Q30 -->
+            <div class="card section-ng fade-in" data-search="अन्तरवैयक्तिक सीप महत्त्व">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">३०</span>
+                    <span class="q-text"><b>अन्तरवैयक्तिक सीप (Interpersonal Skill) भनेको के हो? यसको सामाजिक महत्त्व प्रस्ट पार्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>आफूलाई सामाजिक परिवेशमा सफलतापूर्वक समायोजन गर्न, अरूसँग सुमधुर र प्रभावकारी सम्बन्ध कायम राख्न र सामूहिक रूपमा काम गर्न आवश्यक पर्ने सामाजिक दक्षता नै अन्तरवैयक्तिक सीप हो।</p>
+                        <ul>
+                            <li><b>सुमधुर सम्बन्धको स्थापना:</b> परिवार, समाज र कार्यक्षेत्रमा आपसी विश्वास, आदर र सुमधुर सम्बन्ध बनाउन मद्दत गर्छ।</li>
+                            <li><b>सामाजिक समायोजन:</b> नयाँ वातावरण वा नयाँ समाजमा सजिलैसँग घुलमिल हुन र अनुकूलन हुन यसले सघाउँछ।</li>
+                            <li><b>सहयोग र सहकार्य:</b> टोलीमा काम गर्दा आउने मनमुटाव हटाई सामूहिक लक्ष्य प्राप्तिका लागि एकजुट भएर काम गर्ने वातावरण बनाउँछ।</li>
+                            <li><b>सहानुभूति र सहयोग:</b> यस सीप भएका व्यक्तिहरूमा सहानुभूति (Empathy) को भावना उच्च हुन्छ, जसले गर्दा उनीहरू अरूको दुःख बुझ्न र मद्दत गर्न सधैँ तत्पर रहन्छन्।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q31 -->
+            <div class="card section-ng fade-in" data-search="अन्तरवैयक्तिक सम्बन्ध सुधार उपाय">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">३१</span>
+                    <span class="q-text"><b>अन्तरवैयक्तिक सम्बन्ध सुधार गर्ने ५ वटा व्यावहारिक उपायहरू के-के हुन्?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ol>
+                            <li><b>सक्रिय सुनाइ (Active Listening):</b> अरू व्यक्ति बोल्दा बीचमै नकाटी ध्यान दिएर सुन्ने र उनको भावनालाई बुझ्ने प्रयास गर्ने।</li>
+                            <li><b>सहानुभूति (Empathy) को व्यवहार:</b> अरूको समस्या वा अवस्थालाई उनीहरूकै दृष्टिकोणबाट महसुस गर्ने र "म तपाईँको पीडा बुझ्छु" भन्ने ढाडस दिने।</li>
+                            <li><b>सकारात्मक र नम्र बोलीवचन:</b> कुराकानी गर्दा जहिले पनि विनम्र, शिष्ट र आदरार्थी शब्दहरूको प्रयोग गर्ने। रिस वा आक्रोशलाई नियन्त्रण गर्ने।</li>
+                            <li><b>प्रशंसा र कृतज्ञता प्रकट गर्ने:</b> अरूले गरेका राम्रा कामको खुलेर प्रशंसा गर्ने र सहयोग पाएको खण्डमा "धन्यवाद" भन्न नहिचकिचाउने।</li>
+                            <li><b>विवादको शान्तिपूर्ण समाधान:</b> मतभेद वा असहमति हुँदा रिस पोख्नुको सट्टा दुवैलाई मान्य हुने गरी समझदारीमा कुरा टुङ्ग्याउने।</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q32 -->
+            <div class="card section-ng fade-in" data-search="सामाजिक सञ्जाल सम्बन्ध प्रभाव">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">३२</span>
+                    <span class="q-text"><b>आमा डोमा र छोरी डोल्माको संवादको सन्दर्भ जोड्दै सामाजिक सञ्जालको प्रयोगले अन्तरवैयक्तिक सम्बन्धमा कस्तो प्रभाव पार्छ?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>सकारात्मक प्रभाव:</b></p>
+                        <ul>
+                            <li>सामाजिक सञ्जालको सही प्रयोगले टाढा रहेका आफन्त र साथीभाइसँग तुरुन्तै सम्पर्क स्थापित गर्न र विचारहरू आदानप्रदान गर्न मद्दत गर्छ।</li>
+                            <li>यसले सामूहिक छलफल र सहकार्यका लागि सजिलो माध्यम प्रदान गर्छ।</li>
+                        </ul>
+                        <p><b>नकारात्मक प्रभाव (सजग हुनुपर्ने पक्ष):</b></p>
+                        <ul>
+                            <li>अत्यधिक प्रयोगले प्रत्यक्ष भेटघाट (Face-to-face interaction) लाई कम गर्छ। मानिसहरू एउटै कोठामा बस्दा पनि आ-आफ्नो मोबाइलमा व्यस्त हुँदा पारिवारिक आत्मीयता घट्छ।</li>
+                            <li>गोपनियता र सुरक्षाको खतरा रहन्छ। जथाभाबी फोटो वा व्यक्तिगत जानकारी पोस्ट गर्दा साइबर बुलिङ वा चरित्र हत्या जस्ता समस्या आउन सक्छन्, जसले सम्बन्धहरू बिगार्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q33 -->
+            <div class="card section-ng fade-in" data-search="समय व्यवस्थापन तनाव व्यवस्थापन">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">३३</span>
+                    <span class="q-text"><b>मनोज र रमुनाको संवादबाट 'समय व्यवस्थापन' र 'तनाव व्यवस्थापन' का उपायहरू कसरी सिक्न सकिन्छ?</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>समय व्यवस्थापनका उपायहरू (रमुनाको सल्लाह):</b></p>
+                        <ul>
+                            <li><b>दैनिक कार्यतालिका (Routine):</b> आफ्ना कामहरूको सूची बनाएर प्राथमिकताका आधारमा समय विभाजन गर्ने।</li>
+                            <li><b>फाइबर र विश्राम:</b> लगातार काम मात्र नगरी बीचमा छोटो विश्राम (Break) लिने, जसले दिमागलाई ताजा राख्छ।</li>
+                            <li><b>समयको बर्बादी रोक्ने:</b> सामाजिक सञ्जाल वा अनावश्यक कुरामा धेरै समय नबिताउने।</li>
+                        </ul>
+                        <p><b>तनाव व्यवस्थापनका उपायहरू:</b></p>
+                        <ul>
+                            <li>समयमै गृहकार्य र पढाइ सकेपछि अन्तिम समयमा हुने दौडधुप र परीक्षाको तनाव स्वतः कम हुन्छ।</li>
+                            <li>फुर्सदको समयमा संगीत सुन्ने, खेलकुद खेल्ने र रचनात्मक काममा लाग्नाले तनाव कम हुन्छ र कार्यक्षमता बढ्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q34 -->
+            <div class="card section-ng fade-in" data-search="असल नेतृत्व गुण">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">३४</span>
+                    <span class="q-text"><b>असल नेतृत्व (Leadership) भनेको के हो? असल नेतामा हुनुपर्ने मुख्य ५ वटा गुणहरू लेख्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>कुनै व्यक्ति, समूह वा सङ्गठनलाई साझा लक्ष्य प्राप्तिका लागि मार्गनिर्देशन गर्ने, उत्प्रेरित गर्ने र अगुवाइ गर्ने कला वा क्षमता नै नेतृत्व हो।</p>
+                        <ol>
+                            <li><b>दूरदर्शिता (Vision):</b> संगठन वा समूहलाई कुन दिशामा लैजाने र भविष्यको योजना के हो भन्ने स्पष्ट सोच।</li>
+                            <li><b>प्रभावकारी सञ्चार सीप:</b> आफ्ना विचार स्पष्ट रूपमा राख्न सक्ने र अरूका कुरा ध्यान दिएर सुन्ने क्षमता।</li>
+                            <li><b>समानुभूति र आदर:</b> समूहका सबै सदस्यहरूको भावनाको कदर गर्ने र उनीहरूलाई समान व्यवहार गर्ने।</li>
+                            <li><b>निर्णय क्षमता:</b> कठिन परिस्थितिमा पनि स्वविवेक प्रयोग गरी विवेकशील र समयसापेक्ष निर्णय लिन सक्ने दृढता।</li>
+                            <li><b>चरित्र र इमानदारिता:</b> आफ्नो आचरण र कामबाट अरूका लागि प्रेरणाको स्रोत बन्न सक्ने नैतिक बल।</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q35 -->
+            <div class="card section-ng fade-in" data-search="टोलीकार्य नेतृत्व सीप">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="num">३५</span>
+                    <span class="q-text"><b>टोलीकार्य (Teamwork) बाट कसरी नेतृत्व सीप विकास हुन्छ? उदाहरणसहित प्रस्ट पार्नुहोस्।</b></span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>जिम्मेवारी वहन:</b> टोलीमा काम गर्दा हरेक सदस्यले निश्चित कामको जिम्मेवारी लिनुपर्छ, जसले दायित्व बोध गराउँछ।</li>
+                            <li><b>समन्वय र मेलमिलाप:</b> फरक-फरक विचार भएका मानिसहरूलाई एउटै लक्ष्यका लागि बुझाउने र समन्वय गर्ने क्रममा नेतृत्वको आधारभूत सीप विकास हुन्छ।</li>
+                            <li><b>निर्णय र समस्या समाधान:</b> टोलीमा आइपर्ने साना-तिना विवाद र अप्ठ्याराहरू सामूहिक रूपमा हल गर्दा समस्या समाधान क्षमता तिखारिन्छ।</li>
+                            <li><b>उदाहरण:</b> गाउँमा बाटो खन्ने, कुलो सफा गर्ने वा वनभोज जाने जस्ता काम गर्दा सबै गाउँलेहरू मिलेर टोलीमा काम गर्थे। त्यहीँबाट गाउँका चलाख युवाहरूले समन्वय गर्न सिके र पछि गएर उनीहरू उत्कृष्ट वडाध्यक्ष वा सामाजिक नेता बन्न सफल भए। यसले देखाउँछ कि टोलीकार्य नै नेतृत्व जन्माउने मुख्य पाठशाला हो।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end container-ng -->
+
+
+        <!-- ===== NO RESULTS ===== -->
+        <div class="no-results" id="noResults">
+            🔍 कुनै पनि प्रश्न फेला परेन। कृपया अर्को शब्द खोज्नुहोस्।
+        </div>
+
+    </main>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="माथि जानुहोस्">
+        ⬆
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // ===== TOGGLE CARD =====
+        function toggleCard(headerEl) {
+            const body = headerEl.nextElementSibling;
+            const icon = headerEl.querySelector('.toggle-icon');
+            const isOpen = body.classList.contains('open');
+
+            if (isOpen) {
+                body.classList.remove('open');
+                body.style.maxHeight = '0';
+                if (icon) icon.classList.remove('open');
+            } else {
+                body.classList.add('open');
+                body.style.maxHeight = body.scrollHeight + 'px';
+                if (icon) icon.classList.add('open');
+            }
+        }
+
+        // ===== TOGGLE ALL =====
+        function toggleAll(containerId, open) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            const cards = container.querySelectorAll('.card');
+            cards.forEach(card => {
+                const body = card.querySelector('.card-body');
+                const icon = card.querySelector('.toggle-icon');
+                if (open) {
+                    body.classList.add('open');
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                    if (icon) icon.classList.add('open');
+                } else {
+                    body.classList.remove('open');
+                    body.style.maxHeight = '0';
+                    if (icon) icon.classList.remove('open');
+                }
+            });
+        }
+
+        // ===== SCROLL TO SECTION =====
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                const offset = 150;
+                const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.target === id) btn.classList.add('active');
+            });
+        }
+
+        // ===== SCROLL TOP BUTTON =====
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollTop');
+            if (window.scrollY > 400) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+
+        // ===== SEARCH =====
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            const allCards = document.querySelectorAll('.card');
+            let anyVisible = false;
+
+            allCards.forEach(card => {
+                const text = (card.dataset.search || '') + ' ' +
+                    (card.querySelector('.q-text')?.textContent || '') + ' ' +
+                    (card.querySelector('.answer')?.textContent || '');
+                const match = text.toLowerCase().includes(query);
+                if (query === '') {
+                    card.style.display = 'block';
+                    anyVisible = true;
+                } else if (match) {
+                    card.style.display = 'block';
+                    anyVisible = true;
+                    highlightText(card, query);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // tables inside cards
+            document.querySelectorAll('.answer-table').forEach(table => {
+                const parent = table.closest('.card');
+                if (!parent) return;
+                const text = table.textContent.toLowerCase();
+                if (query !== '' && text.includes(query)) {
+                    parent.style.display = 'block';
+                    anyVisible = true;
+                }
+            });
+
+            if (query !== '' && !anyVisible) {
+                noResults.classList.add('show');
+            } else {
+                noResults.classList.remove('show');
+            }
+        });
+
+        function highlightText(card, query) {
+            card.querySelectorAll('.highlight-match').forEach(el => {
+                const parent = el.parentNode;
+                parent.replaceChild(document.createTextNode(el.textContent), el);
+                parent.normalize();
+            });
+            if (query === '') return;
+            const elements = card.querySelectorAll('.q-text, .answer');
+            elements.forEach(el => {
+                const text = el.textContent;
+                const lower = text.toLowerCase();
+                const idx = lower.indexOf(query);
+                if (idx !== -1) {
+                    const before = text.substring(0, idx);
+                    const match = text.substring(idx, idx + query.length);
+                    const after = text.substring(idx + query.length);
+                    el.innerHTML = '';
+                    if (before) el.appendChild(document.createTextNode(before));
+                    const span = document.createElement('span');
+                    span.className = 'highlight-match';
+                    span.textContent = match;
+                    el.appendChild(span);
+                    if (after) el.appendChild(document.createTextNode(after));
+                }
+            });
+        }
+
+        // ===== ACTIVE NAV ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const sections = ['section-k', 'section-kh', 'section-ga', 'section-gh', 'section-ng'];
+            let current = '';
+            const offset = 170;
+            for (const id of sections) {
+                const el = document.getElementById(id);
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= offset) {
+                        current = id;
+                    }
+                }
+            }
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.target === current) btn.classList.add('active');
+            });
+        });
+
+        // ===== KEYBOARD: ESC to clear search =====
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
+                searchInput.blur();
+            }
+        });
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.card-body.open').forEach(body => {
+                body.style.maxHeight = body.scrollHeight + 'px';
+            });
+            window.addEventListener('resize', function() {
+                document.querySelectorAll('.card-body.open').forEach(body => {
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
