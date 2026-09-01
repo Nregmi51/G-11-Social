@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ २, पाठ २ – सञ्चार एप्लिकेसनहरूको प्रयोग (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #edf7f5;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #00838F;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #00838F;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #00838F;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #00838F;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #00838F;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #4DB6AC;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #00838F ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #fff;
+            background: #00838F;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(0, 131, 143, 0.30);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #00838F;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #f5d742;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; }
+        .section-head .mark-badge.green { background: #7dcea0; }
+        .section-head .mark-badge.purple { background: #b39ddb; }
+        .section-head .mark-badge.blue { background: #81d4fa; }
+        .section-head .mark-badge.pink { background: #f48fb1; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #006064;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #00838F;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #00838F;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #006064;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #00838F;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #00838F;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #00838F;
+            background: #edf7f5;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #00838F;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #00838F;
+        }
+
+        .qa-block.color1 { border-left-color: #00838F; background: #edf7f5; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #00838F;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #006064;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #00838F;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- EMAIL BOX ----- */
+        .email-box {
+            background: #fcf8f0;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .email-box .email-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .email-box .email-label {
+            font-weight: 700;
+            color: #006064;
+        }
+
+        .email-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 6px;
+            line-height: 2;
+        }
+
+        .email-box .salutation {
+            font-weight: 700;
+            color: #0b2b4a;
+        }
+
+        .email-box .closing {
+            font-weight: 700;
+            color: #0b2b4a;
+            margin-top: 10px;
+        }
+
+        /* ----- ACTIVITY / PROJECT BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #c9bdb0;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- Mermaid-style flow chart ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #edf7f5;
+            border-radius: 20px;
+            border: 2px dashed #4DB6AC;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #4DB6AC;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #00838F;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 131, 143, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #006064;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(0, 131, 143, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #00838F;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #d0c4b8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #00838F;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .email-box p {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-wifi"></i>
+                    एकाइ २, पाठ २: सञ्चार एप्लिकेसनहरूको प्रयोग
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी सीप
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ २, पाठ २
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> इन्टरनेट (Internet)</strong>
+                <p>विश्वभरका कम्प्युटर तथा डिजिटल उपकरणहरूलाई एकापसमा जोडी सूचना, तथ्याङ्क र सन्देशहरूको तीव्र आदानप्रदान सम्भव बनाउने विश्वव्यापी विद्युतीय महासञ्जाल।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> वेब ब्राउजर (Web Browser)</strong>
+                <p>इन्टरनेट चलाउन, विभिन्न वेबसाइटहरू खोल्न र अनलाइन सामग्रीहरू प्राप्त गर्नका लागि प्रयोग गरिने विशेष सफ्टवेयर वा एप्लिकेसन (जस्तै: गुगल क्रोम, मोजिला फायरफक्स, सफारी)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> इमेल (Electronic Mail - Email)</strong>
+                <p>इन्टरनेटको माध्यमबाट एक व्यक्ति वा संस्थाबाट अर्को व्यक्ति वा संस्थामा सन्देश, लिखित पत्र तथा डिजिटल फाइलहरू क्षणभरमै पठाउन र प्राप्त गर्न प्रयोग गरिने आधुनिक विद्युतीय प्रणाली।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> सञ्चार एप्लिकेसन (Communication Application)</strong>
+                <p>इन्टरनेटमा जोडिएर प्रयोगकर्ताहरूबीच कुराकानी गर्न, अडियो/भिडियो कल गर्न र फाइलहरू आदानप्रदान गर्न मद्दत गर्ने सफ्टवेयर (जस्तै: जिमेल, मेसेन्जर, भाइबर, ह्वाट्सएप)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> अट्याचमेन्ट (Attachment)</strong>
+                <p>इमेल पठाउँदा मूल सन्देशको साथमा थपेर पठाइने बाह्य फाइलहरू जस्तै: कागजात (Documents), तस्बिरहरू (Photos), अडियो वा भिडियो।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> सामाजिक सञ्जाल (Social Media)</strong>
+                <p>इन्टरनेटको मद्दतले संसारभरिका मानिसहरूलाई एकै ठाउँमा जोडेर विचार, सञ्चार, फोटो र भिडियो आदानप्रदान गर्न तथा सामाजिक अन्तरक्रिया गर्न मद्दत गर्ने भर्चुअल मञ्च (जस्तै: फेसबुक, युट्युब, टिकटक)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> खुला सिकाइ (Open Learning)</strong>
+                <p>भौतिक उपस्थितिको बन्धन बिना, इन्टरनेट र प्रविधिको सहायताले जुनसुकै स्थान र समयमा आफ्नो अनुकूलता अनुसार ज्ञान हासिल गर्ने लचिलो शैक्षिक पद्धति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> इ-सिकाइ (E-learning)</strong>
+                <p>विद्युतीय उपकरण र इन्टरनेटको प्रयोगद्वारा अनलाइन कक्षाहरू, शैक्षिक भिडियोहरू र डिजिटल सामग्रीहरूका माध्यमबाट गरिने सिकाउने र सिक्ने प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> इनबक्स (Inbox)</strong>
+                <p>इमेल खाताभित्र प्राप्त भएका सम्पूर्ण नयाँ तथा पुराना चिठी वा सन्देशहरू सुरक्षित रूपमा जम्मा भएर बस्ने मुख्य डिजिटल फोल्डर।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00838F; margin-right:4px;"></i> स्पाम इमेल (Spam Email)</strong>
+                <p>विज्ञापन गर्ने वा गलत नियत (ह्याकिङ वा फिसिङ) राख्ने उद्देश्यले अपरिचित स्रोतहरूबाट पठाइने अनावश्यक वा शङ्कास्पद इमेलहरू।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "सञ्चार एप्लिकेसनहरूको प्रयोग" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. परिचय र महत्त्व -->
+        <div class="sub-head"><i class="fas fa-globe"></i> १. सञ्चार एप्लिकेसनहरूको परिचय र महत्त्व</div>
+
+        <div class="content-box teal-light">
+            <p>आधुनिक विज्ञान र प्रविधिको युगमा इन्टरनेट र सञ्चार एप्लिकेसनहरू मानव जीवनका अभिन्न अङ्ग बनिसकेका छन्। यसले संसारलाई एउटा सानो विश्वव्यापी गाउँ (Global Village) मा परिणत गरिदिएको छ।</p>
+            <ul>
+                <li><strong>सञ्चारको सुगमता:</strong> यसका माध्यमबाट जुनसुकै कुनामा रहेका मानिसहरूसँग क्षणभरमै लिखित, मौखिक वा भिजुअल माध्यमबाट सम्पर्क स्थापित गर्न सकिन्छ।</li>
+                <li><strong>खुला र इ-सिकाइको प्रवद्र्धन:</strong> अनलाइन पुस्तकालय, भर्चुअल कक्षाहरू र खुला विश्वविद्यालयका माध्यमबाट घरमै बसी उच्च शिक्षा हासिल गर्न सम्भव भएको छ।</li>
+                <li><strong>व्यापारिक र व्यावसायिक उपयोगिता:</strong> इन्टरनेटको प्रयोगबाट सामान तथा सेवाहरूको खरिद-बिक्री (E-commerce) र अनलाइन भुक्तानी गर्न सहज भएको छ।</li>
+            </ul>
+        </div>
+
+        <!-- २. वेब ब्राउजर -->
+        <div class="sub-head"><i class="fas fa-compass"></i> २. वेब ब्राउजर र इन्टरनेट सम्पर्क स्थापना गर्ने तरिका</div>
+
+        <div class="content-box blue-light">
+            <p>इन्टरनेट सेवा उपलब्ध कम्प्युटर वा मोबाइलमा ब्राउजर बिना वेबसाइटहरू खोल्न सकिँदैन। वेब ब्राउजरले प्रयोगकर्ता र इन्टरनेटको सर्भरबीच पुलको काम गर्दछ।</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">१. इन्टरनेट जडान भएको कम्प्युटर/मोबाइल खोल्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">२. वेब ब्राउजर आइकनमा डबल क्लिक गरी खोल्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">३. Address Bar मा गइ वेबसाइट ठेगाना टाइप गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">४. Enter Key थिच्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">५. चाहिएको वेबसाइटको होमपेज खुल्छ</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">६. वेबसाइटमा उपलब्ध जानकारी वा सेवाको प्रयोग गर्ने</div>
+            </div>
+        </div>
+
+        <!-- ३. इमेल -->
+        <div class="sub-head"><i class="fas fa-envelope"></i> ३. इमेल (Electronic Mail) को प्रयोग र यसका फाइदाहरू</div>
+
+        <div class="content-box green-light">
+            <p>परम्परागत हुलाक चिठीको सट्टामा इन्टरनेटको प्रयोग गरी पठाइने विद्युतीय चिठीलाई इमेल भनिन्छ।</p>
+
+            <p><strong>इमेल प्रयोगका ६ वटा प्रमुख फाइदाहरू:</strong></p>
+            <ol>
+                <li><strong>निःशुल्क सञ्चार:</strong> इमेल खाता खोल्न र सन्देश पठाउन कुनै अतिरिक्त शुल्क लाग्दैन।</li>
+                <li><strong>तीव्र गति र विश्वसनीयता:</strong> विश्वको जुनसुकै स्थानमा पनि केही सेकेन्डभित्रै सन्देश पुग्छ र प्राप्तकर्ताले सुरक्षित रूपमा प्राप्त गर्छ।</li>
+                <li><strong>बहुसञ्चार क्षमता:</strong> एकै पटकमा एउटै चिठी धेरै मानिसहरूलाई एकसाथ पठाउन सकिन्छ।</li>
+                <li><strong>फाइल अट्याचमेन्टको सुविधा:</strong> लिखित सन्देशका साथै तस्बिर, कागजात, अडियो, भिडियो आदि सजिलै पठाउन सकिन्छ।</li>
+                <li><strong>सुरक्षित भण्डारण:</strong> पठाइएका र प्राप्त भएका इमेल तथा कागजातहरू भविष्यमा प्रमाणका रूपमा प्रयोग गर्न क्लाउडमा सुरक्षित रहन्छन्।</li>
+                <li><strong>पर्यावरण अनुकूल:</strong> कागजरहित सञ्चार प्रणाली भएकाले यसले वन विनाश रोक्न र वातावरण संरक्षणमा मद्दत पुर्‍याउँछ।</li>
+            </ol>
+        </div>
+
+        <!-- ४. सामाजिक सञ्जाल -->
+        <div class="sub-head"><i class="fas fa-share-alt"></i> ४. सामाजिक सञ्जालको सुरक्षित प्रयोग: सबल र दुर्बल पक्षहरू</div>
+
+        <div class="content-box orange-light">
+            <div class="table-wrap">
+                <div class="table-caption">तुलना: सामाजिक सञ्जालका फाइदाहरू र बेफाइदाहरू</div>
+                <table>
+                    <thead>
+                        <tr><th>क्र.सं.</th><th>सामाजिक सञ्जालका फाइदाहरू (Pros)</th><th>सामाजिक सञ्जालका बेफाइदा तथा चुनौतीहरू (Cons)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>१</td><td>व्यक्तिगत र सामूहिक रूपमा निःशुल्क कुराकानी र छलफल गर्न सकिने।</td><td>अत्यधिक प्रयोगले सामाजिक सञ्जालको कुत वा लत लाग्ने जोखिम।</td></tr>
+                        <tr><td>२</td><td>विश्वव्यापी पहुँच भएकाले संसारभरि नयाँ सम्बन्धहरू बनाउन र सञ्चार गर्न सकिने।</td><td>सामाजिक सञ्जालको लतका कारण मानिसहरूमा मानसिक तनाव र एकाकीपन बढ्ने।</td></tr>
+                        <tr><td>३</td><td>तत्कालै निःशुल्क रूपमा समाचार, घटना र सूचनाहरू आदानप्रदान गर्न सकिने।</td><td>धोकेबाज, ठग र अपराधी प्रकृतिका मानिसहरू सक्रिय भई ठगी हुने डर।</td></tr>
+                        <tr><td>४</td><td>व्यापार, व्यवसाय र उत्पादनहरूको प्रवर्द्धन र डिजिटल विज्ञापन गर्न ठुलो सहयोग पुग्ने।</td><td>गलत र भ्रामक सूचना फैलिन गई व्यक्तिको प्रतिष्ठामा आँच आउने र समाजमा आतङ्क सिर्जना हुने।</td></tr>
+                        <tr><td>५</td><td>सामाजिक तथा राजनीतिक मुद्दाहरूमा जनचेतना जगाउन र ऐक्यबद्धता जनाउन सजिलो हुने।</td><td>डर, त्रास वा धम्की दिएर मानिसहरूको शारीरिक र मानसिक शोषण (cyber bullying) हुन सक्ने।</td></tr>
+                        <tr><td>६</td><td>विचार, सिर्जना, कला र ज्ञानको आदानप्रदान गरी सहकार्य गर्न सकिने।</td><td>व्यक्तिगत र गोप्य सूचनाहरू चोरी वा ह्याक हुन सक्ने गम्भीर खतरा।</td></tr>
+                        <tr><td>७</td><td>जनमत सङ्कलन र सरकार वा नीति निर्माताहरूमाथि सकारात्मक दबाब सिर्जना गर्न सकिने।</td><td>प्रयोगकर्ताको आनीबानी र व्यक्तिगत डेटाको दुरुपयोग गरी व्यापारिक फाइदा उठाउने जोखिम।</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १: इमेल पठाउने -->
+        <div class="sub-head"><i class="fas fa-paper-plane"></i> क्रियाकलाप १: इमेल पठाउने व्यावहारिक नमुना</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#00838F; margin-right:8px;"></i> प्रश्न:</p>
+            <p>सबैले आआफ्नो इमेल खाता खोल्नुहोस् र सामाजिक सञ्जालका फाइदा र बेफाइदा उल्लेख गर्दै साथीलाई इमेल पठाउनुहोस्।</p>
+        </div>
+
+        <div class="email-box">
+            <p class="email-title"><i class="fas fa-envelope-open-text" style="color:#00838F; margin-right:8px;"></i> जिमेल (Gmail) को वास्तविक र स्तरीय नमुना ढाँचा:</p>
+
+            <p><span class="email-label">To (प्राप्तकर्ताको इमेल):</span> kshitiz.pokhrel11@gmail.com</p>
+            <p><span class="email-label">Subject (विषय):</span> सामाजिक सञ्जालका फाइदा र बेफाइदाहरूका बारेमा जानकारी।</p>
+
+            <p><strong>Message Body (सन्देशको मुख्य भाग):</strong></p>
+
+            <p class="salutation">आदरणीय मित्र क्षितिज,</p>
+
+            <p>सप्रेम नमस्कार।</p>
+
+            <p>म यहाँ आरामै छु र तिमी पनि त्यहाँ आरामै छौ भन्ने कामना गर्दछु। आजको यो विद्युतीय पत्र (इमेल) मार्फत म तिमीलाई वर्तमान समयमा हाम्रो जीवनको अभिन्न अङ्ग बनेको 'सामाजिक सञ्जाल' (Social Media) का फाइदा र बेफाइदाका बारेमा केही कुराहरू साझा गर्न गइरहेको छु।</p>
+
+            <p>हामीले दैनिक रूपमा प्रयोग गर्ने फेसबुक, युट्युब, टिकटक जस्ता सामाजिक सञ्जालहरूले हाम्रो जीवनलाई निकै सजिलो बनाएका छन्। यसबाट हामीले क्षणभरमै देश-विदेशका समाचारहरू थाहा पाउन सक्छौँ। टाढा रहेका आफन्तहरूसँग निःशुल्क भिडियो कल गर्न र आफ्ना भावना वा सिर्जनाहरू संसारमाझ प्रस्तुत गर्न सक्छौँ। तर यसका साथसाथै यसका केही नराम्रा पक्षहरू पनि छन्। सामाजिक सञ्जालमा धेरै समय बिताउँदा अध्ययनमा बाधा पुग्ने, आँखा र स्वास्थ्य बिग्रने तथा अनलाइन ठगी र साइबर बुलिङ जस्ता साइबर अपराधहरूको सिकार हुने खतरा सधैँ रहन्छ।</p>
+
+            <p>त्यसैले हामीले यसको प्रयोग गर्दा निकै सावधानी अपनाउनुपर्छ। आफ्ना व्यक्तिगत विवरणहरू गोप्य राख्ने र निश्चित समय सीमा तोकेर मात्र सामाजिक सञ्जाल चलाउने बानी बसाल्नुपर्छ। यसबारे तिम्रो विचार के छ? फुर्सदको समयमा मलाई जवाफी इमेल लेख्नू है।</p>
+
+            <p class="closing">तिम्रो सुभचिन्तक मित्र,<br>मनोज शर्मा<br>कक्षा ११, रोल नम्बर: १०</p>
+
+            <p><em>नोट: यस इमेलको साथमा सामाजिक सञ्जाल सुरक्षित प्रयोग गर्ने तरिकासम्बन्धी एउटा पिडिएफ फाइल पनि Attach गरेर पठाइएको छ।</em></p>
+        </div>
+
+        <!-- क्रियाकलाप २: अन्तरक्रिया कार्यक्रम -->
+        <div class="sub-head"><i class="fas fa-comments"></i> क्रियाकलाप २: "सामाजिक सञ्जालको सुरक्षित प्रयोग" सम्बन्धी अन्तरक्रिया कार्यक्रम</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#00838F; margin-right:8px;"></i> प्रश्न:</p>
+            <p>सामाजिक सञ्जालको सुरक्षित प्रयोग सम्बन्धमा विद्यालय वा समुदायमा सञ्चालन गरिने अन्तरक्रिया कार्यक्रमको एक नमुना कार्ययोजना/प्रतिवेदन तयार पार्नुहोस्।</p>
+        </div>
+
+        <div class="content-box purple-light">
+            <p style="font-weight:800; color:#0b2b4a; text-align:center; font-size:1.25rem;">"सामाजिक सञ्जालको सुरक्षित प्रयोग र यसका चुनौतीहरू"<br>अन्तरक्रिया कार्यक्रमको विस्तृत प्रतिवेदन</p>
+
+            <p><strong>१. पृष्ठभूमि:</strong> सूचना प्रविधिको तीव्र विकाससँगै विद्यार्थीहरूमा सामाजिक सञ्जालको प्रयोग तीव्र रूपमा बढिरहेको छ। तर, यसको सुरक्षित प्रयोग गर्ने ज्ञानको अभावमा धेरै विद्यार्थीहरू अनलाइन हिंसा, साइबर अपराध र मानसिक तनावको सिकार भइरहेका छन्। यसै सन्दर्भमा विद्यार्थीहरूमा सचेतना फैलाउन विद्यालयको सामाजिक अध्ययन तथा जीवनोपयोगी सीप क्लबको आयोजनामा एकदिने अन्तरक्रिया कार्यक्रम सम्पन्न गरियो।</p>
+
+            <p><strong>२. कार्यक्रमका उद्देश्यहरू:</strong></p>
+            <ul>
+                <li>विद्यार्थीहरूलाई सामाजिक सञ्जालका सकारात्मक र नकारात्मक पक्षहरूबारे जानकारी गराउनु।</li>
+                <li>सुरक्षित अनलाइन बानी र प्राइभेसी सेटिङ मिलाउने तरिकाहरू सिकाउनु।</li>
+                <li>साइबर अपराध र कानुनी उपचारका बारेमा सचेत गराउनु।</li>
+            </ul>
+
+            <p><strong>३. कार्यक्रमको रूपरेखा:</strong></p>
+            <ul>
+                <li><strong>मिति:</strong> २०८३ साल भदौ १० गते, शुक्रबार</li>
+                <li><strong>स्थान:</strong> विद्यालयको बहुउद्देश्यीय हल</li>
+                <li><strong>सहभागी:</strong> कक्षा ११ र १२ का जम्मा १५० जना विद्यार्थी र शिक्षकहरू</li>
+                <li><strong>प्रमुख अतिथि/वक्ता:</strong> जिल्ला प्रहरी कार्यालयका साइबर सुरक्षा विज्ञ प्रहरी निरीक्षक श्री रमेश थापा।</li>
+            </ul>
+
+            <p><strong>४. प्रस्तुत गरिएका मुख्य विषयवस्तुहरू (अन्तरक्रियाको निष्कर्ष):</strong></p>
+            <ul>
+                <li><strong>व्यक्तिगत सुरक्षा:</strong> सामाजिक सञ्जालमा कहिल्यै पनि आफ्नो घरको ठेगाना, फोन नम्बर, पासवर्ड वा संवेदनशील फोटोहरू पोस्ट वा सेयर गर्नु हुँदैन।</li>
+                <li><strong>बलियो पासवर्ड:</strong> पासवर्ड राख्दा जहिले पनि अक्षर, अङ्क र विशेष चिह्नहरू (जस्तै: @, #, $, _) मिसाएर बलियो बनाउनुपर्छ र समय-समयमा परिवर्तन गरिरहनुपर्छ।</li>
+                <li><strong>अपरिचित व्यक्तिसँग सावधानी:</strong> सामाजिक सञ्जालमा नचिनेका मानिसहरूको साथी बन्ने अनुरोध (Friend Request) स्वीकार गर्नु हुँदैन।</li>
+                <li><strong>साइबर बुलिङ विरुद्ध आवाज:</strong> कसैले अनलाइनमा जिस्काएमा, धम्क्याएमा वा अनावश्यक सन्देश पठाएमा डराउनुको सट्टा तुरुन्त आफ्ना अभिभावक वा शिक्षकलाई जानकारी गराई कानुनी मद्दत लिनुपर्छ।</li>
+            </ul>
+
+            <p><strong>५. निष्कर्ष:</strong> यस अन्तरक्रिया कार्यक्रमले विद्यार्थीहरूमा प्रविधिको विवेकपूर्ण प्रयोग गर्ने सोचको विकास गराएको छ। प्रविधि आफैँमा खराब होइन, तर यसको प्रयोगकर्ताको चेतनास्तरले यसलाई वरदान वा अभिशाप बनाउँछ भन्ने कुरामा सबै सहभागीहरू सहमत भए।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(ख)</span> ब्राउजर भनेको के हो? उदाहरण दिएर प्रस्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> इन्टरनेटमा रहेका अथाह सूचना, वेबसाइट र वेबपेजहरू खोल्न, हेर्न र तिनको उपयोग गर्नका लागि कम्प्युटर वा मोबाइलमा स्थापना (Install) गरिने सफ्टवेयर वा एप्लिकेसनलाई <strong>वेब ब्राउजर</strong> भनिन्छ। ब्राउजरले प्रयोगकर्ताले खोजेको विषय वा वेबसाइटको ठेगाना (URL) लाई इन्टरनेटको सर्भरबाट खोजेर प्रयोगकर्ताको स्क्रिनमा बुझ्न सक्ने भाषामा प्रस्तुत गर्ने काम गर्दछ।</p>
+
+                <p><strong>प्रमुख उदाहरणहरू:</strong></p>
+                <ul>
+                    <li><strong>गुगल क्रोम (Google Chrome):</strong> वर्तमान समयमा संसारभर सबैभन्दा बढी प्रयोग गरिने र तीव्र गतिको ब्राउजर।</li>
+                    <li><strong>मोजिला फायरफक्स (Mozilla Firefox):</strong> प्रयोगकर्ताको गोपनियता र सुरक्षाका दृष्टिकोणले निकै उत्कृष्ट ब्राउजर।</li>
+                    <li><strong>एप्पल सफारी (Apple Safari):</strong> एप्पल कम्पनीका उत्पादनहरू (iPhone, Mac) मा मात्र प्रयोग गरिने ब्राउजर।</li>
+                    <li><strong>माइक्रोसफ्ट एज (Microsoft Edge):</strong> विन्डोज अपरेटिङ सिस्टमसँगै आउने नयाँ र अत्याधुनिक ब्राउजर।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ग)</span> इमेल भनेको के हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> इन्टरनेट र विद्युतीय उपकरणहरू (जस्तै: कम्प्युटर, ल्यापटप, स्मार्टफोन) को प्रयोग गरी एउटा डिजिटल ठेगानाबाट अर्को डिजिटल ठेगानामा लिखित सन्देश, तस्बिर, कागजात वा अन्य फाइलहरू तुरुन्तै पठाउन र प्राप्त गर्न प्रयोग गरिने आधुनिक विद्युतीय हुलाक प्रणालीलाई <strong>इमेल (Electronic Mail - Email)</strong> भनिन्छ। यो परम्परागत हुलाक सेवाको आधुनिक र द्रुत विकल्प हो। यसका लागि प्रेषक (पठाउने) र प्रापक (पाउने) दुवैसँग इमेल खाता र इन्टरनेट जडान भएको हुनुपर्दछ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(घ)</span> इमेलमा फाइल Attach गर्ने तरिका लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> इमेल पठाउँदा लिखित सन्देशका साथमा आफ्नो कम्प्युटर वा मोबाइलमा रहेका तस्बिर, डकुमेन्ट वा अन्य फाइलहरू थपेर (Attach गरेर) पठाउने स्पष्ट र चरणबद्ध तरिकाहरू निम्नानुसार छन्:</p>
+                <ol>
+                    <li><strong>चरण १:</strong> सबैभन्दा पहिले वेब ब्राउजर खोली आफ्नो जिमेल (Gmail) खातामा लगइन (Sign in) गर्नुहोस्।</li>
+                    <li><strong>चरण २:</strong> जिमेलको बायाँतर्फ माथि रहेको <strong>'+ Compose'</strong> (कम्पोज) बटनमा क्लिक गर्नुहोस्। यसो गर्दा स्क्रिनको दायाँतर्फ एउटा नयाँ विन्डो (New Message Box) खुल्नेछ।</li>
+                    <li><strong>चरण ३:</strong> <strong>'To'</strong> लेखिएको कोठामा प्राप्तकर्ताको इमेल ठेगाना र <strong>'Subject'</strong> लेखिएको कोठामा इमेलको विषय टाइप गर्नुहोस्।</li>
+                    <li><strong>चरण ४:</strong> नयाँ विन्डोको तलपट्टि रहेको <strong>'Send'</strong> बटनको ठीक दायाँतिर रहेको <strong>क्लिप (Paperclip - 📎)</strong> को आकारको चिह्नमा क्लिक गर्नुहोस्।</li>
+                    <li><strong>चरण ५:</strong> क्लिपमा क्लिक गरेपछि एउटा नयाँ डाइलग बक्स खुल्नेछ, जहाँबाट तपाईँले आफ्नो कम्प्युटर वा मोबाइलको कुन फोल्डरमा फाइल छ, सो ठाउँमा गई पठाउनुपर्ने फाइल छनोट (Select) गर्नुहोस् र <strong>'Open'</strong> मा क्लिक गर्नुहोस्।</li>
+                    <li><strong>चरण ६:</strong> छानिएको फाइल इमेलमा लोड (Upload) भएको निश्चित गर्नुहोस् (फाइल लोड हुँदा निलो रङको प्रगति रेखा देखिन्छ र पूरा भएपछि फाइलको नाम र साइज कालो अक्षरमा देखाउँछ)।</li>
+                    <li><strong>चरण ७:</strong> अन्त्यमा सन्देश तयार भएपछि तल रहेको निलो रङको <strong>'Send'</strong> बटनमा क्लिक गर्नुहोस्। तपाईँको फाइल सुरक्षित रूपमा पठाइनेछ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (१ अङ्क भार)</div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">१.</span> इन्टरनेट र कम्प्युटरको प्रयोग गरी गरिने अनलाइन शिक्षण सिकाइलाई के भनिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> इन्टरनेट र कम्प्युटरको प्रयोग गरी गरिने अनलाइन शिक्षण सिकाइलाई <strong>इ-सिकाइ (E-learning)</strong> भनिन्छ।</div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">२.</span> जिमेल (Gmail) को पूरा रूप के हो र यसको विकास कुन कम्पनीले गरेको हो?</div>
+            <div class="a"><strong>उत्तर:</strong> जिमेलको पूरा रूप '<strong>गुगल मेल</strong>' (Google Mail) हो र यसको विकास अमेरिकी प्रविधि कम्पनी <strong>गुगल (Google)</strong> ले गरेको हो।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">३.</span> इमेल पठाउँदा सन्देशको मुख्य विषयवस्तु के हो भनी प्रस्ट पार्न कुन कोठा (Field) को प्रयोग गरिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> इमेल पठाउँदा सन्देशको मुख्य विषयवस्तु प्रस्ट पार्न '<strong>Subject</strong>' (विषय) कोठाको प्रयोग गरिन्छ।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">४.</span> सामाजिक सञ्जालमा आउने साइबर बुलिङ (Cyber Bullying) भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> सामाजिक सञ्जाल वा डिजिटल माध्यमबाट कसैलाई जिस्काउने, गालीगलौज गर्ने, चरित्रहत्या गर्ने वा मानसिक पीडा दिने कार्यलाई <strong>साइबर बुलिङ</strong> भनिन्छ।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">५.</span> अपरिचित वा संकास्पद व्यक्तिबाट आएको इमेल अट्याचमेन्टलाई नखोली किन डिलिट गर्नुपर्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> त्यस्ता इमेलहरूमा कम्प्युटर वा मोबाइल बिगार्ने भाइरस वा डाटा चोरी गर्ने मालवेयर हुन सक्ने हुनाले नखोली डिलिट गर्नुपर्छ।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तरहरू (५ अङ्क भार)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> वर्तमान समयमा इमेल सेवाको बढ्दो महत्त्वलाई ५ वटा बुँदामा प्रस्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> आधुनिक डिजिटल युगमा सञ्चारको सबैभन्दा भरपर्दो, छिटो र औपचारिक माध्यम इमेल बनेको छ, जसले परम्परागत चिठीपत्रको अस्तित्वलाई विस्थापित गरेको छ।</p>
+
+                <p><strong>यसको महत्त्वलाई निम्नानुसार प्रस्ट पार्न सकिन्छ:</strong></p>
+                <ol>
+                    <li><strong>द्रुत गति र दक्षता:</strong> यसले संसारभरि जुनसुकै स्थानमा रहेका व्यक्ति वा संस्थालाई केही सेकेन्डमै आधिकारिक सूचना तथा पत्रहरू पुर्‍याउने कार्य गर्दछ।</li>
+                    <li><strong>कागजरहित र किफायती:</strong> यसले कार्यालयहरूमा कागजको प्रयोग घटाएर वातावरण संरक्षण गर्नुका साथै हुलाक टिकट वा कुरियर खर्चको पूर्ण बचत गर्दछ।</li>
+                    <li><strong>विश्वसनीय अभिलेख:</strong> पठाइएका र प्राप्त भएका सन्देश तथा फाइलहरू सधैँका लागि क्लाउडमा सुरक्षित रहने हुनाले यसलाई भविष्यमा कानुनी प्रमाणका रूपमा प्रयोग गर्न सकिन्छ।</li>
+                    <li><strong>व्यावसायिक औपचारिकता:</strong> व्यावसायिक, शैक्षिक र सरकारी क्षेत्रमा हुने औपचारिक सञ्चार र सम्झौताहरू इमेलकै माध्यमबाट सम्पादन गरिन्छ।</li>
+                    <li><strong>फाइल सुरक्षा र भण्डारण:</strong> ठुला-ठुला डकुमेन्ट, तस्बिर र महत्त्वपूर्ण प्रतिवेदनहरू सुरक्षित तरिकाले स्थानान्तरण र संग्रह गर्न इमेलले महत्वपूर्ण सीप प्रदान गर्दछ।</li>
+                </ol>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, कम लागतमा छिटो, छरितो र आधिकारिक सञ्चार स्थापना गर्नका लागि आजको व्यावसायिक तथा शैक्षिक जीवनमा इमेल सेवा अपरिहार्य बनिसकेको छ।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तरात्मक प्रश्न (८ अङ्क भार)</div>
+
+        <div class="qa-block color2" style="border-left-color:#00838F;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "सामाजिक सञ्जाल आधुनिक मानव समाजका लागि बरदान र अभिशाप दुवै हो।" यस भनाइलाई पाठ्यपुस्तकमा आधारित सकारात्मक र नकारात्मक बुँदाहरूको विश्लेषण गर्दै व्यावहारिक उदाहरण र सुरक्षित प्रयोगका उपायसहित विवेचना गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> सामाजिक सञ्जाल (Social Media) इन्टरनेट र डिजिटल प्रविधिको सहायताले मानिसहरूलाई भर्चुअल संसारमा जोड्ने आधुनिक माध्यम हो। वर्तमान २१औँ शताब्दीमा फेसबुक, युट्युब, टिकटक, इन्स्टाग्राम र एक्स (ट्विटर) जस्ता माध्यमहरू मानिसको दैनिक दिनचर्या र जीवनशैलीको अभिन्न हिस्सा बनिसकेका छन्। यी सञ्जालहरूले मानव जीवनलाई अत्यन्तै सहज, सञ्चारयुक्त र गतिशील बनाएका छन्। तर, अर्कोतर्फ यसको अविवेकी र असुरक्षित प्रयोगले समाजमा विकृति, अपराध र व्यक्तिगत तनावहरू पनि निम्त्याएको छ। त्यसैले, सामाजिक सञ्जालको प्रकृति र प्रयोगको शैलीलाई हेरेर यसलाई समाजका लागि 'वरदान र अभिशाप दुवै' का रूपमा व्याख्या गरिन्छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+
+                <p><strong>क) बरदानका रूपमा सामाजिक सञ्जाल (सकारात्मक पक्षहरू):</strong></p>
+                <ul>
+                    <li><strong>क्षणभरमै सञ्चार र पहुँच:</strong> भौगोलिक रूपमा टाढा रहेका आफन्त तथा मित्रहरूसँग निःशुल्क रूपमा तुरुन्त कुराकानी र भिडियो कल गर्न सम्भव भएको छ।</li>
+                    <li><strong>ज्ञान र सूचनाको भण्डार:</strong> अनलाइन सिकाइ सामग्री, शैक्षिक भिडियो र रचनात्मक विचारहरू आदानप्रदान गर्न तथा नयाँ सीप सिक्न यो उत्कृष्ट माध्यम हो।</li>
+                    <li><strong>व्यापार प्रवर्द्धन र विज्ञापन:</strong> साना तथा ठुला उद्यमीहरूले आफ्ना उत्पादनहरूको विज्ञापन गरी अनलाइन व्यवसाय (E-commerce) सञ्चालन गर्न यसबाट ठुलो टेवा पाएका छन्।</li>
+                    <li><strong>सामाजिक जनचेतना:</strong> समाजमा व्याप्त कुरीति, अन्याय र प्राकृतिक विपद्को समयमा छिटोभन्दा छिटो सूचना प्रवाह गरी जनमत र सहयोग जुटाउन यसले सशक्त भूमिका खेल्छ।</li>
+                </ul>
+
+                <p><strong>ख) अभिशापका रूपमा सामाजिक सञ्जाल (नकारात्मक पक्षहरू):</strong></p>
+                <ul>
+                    <li><strong>डिजिटल लत र समयको बर्बादी:</strong> विशेष गरी युवा र विद्यार्थी वर्गमा यसको अत्यधिक लत (Addiction) बस्नाले मानसिक स्वास्थ्यमा असर पर्नुका साथै अध्ययन र सिर्जनशीलतामा ह्रास आएको छ।</li>
+                    <li><strong>साइबर अपराधको वृद्धि:</strong> सामाजिक सञ्जालमार्फत मानिसहरूलाई ठग्ने, ब्ल्याकमेल गर्ने, साइबर बुलिङ गर्ने र चरित्रहत्या गर्ने घटनाहरू तीव्र रूपमा बढिरहेका छन्।</li>
+                    <li><strong>भ्रामक सूचना र अफवाह:</strong> सत्यता जाँच नगरी क्षणभरमै गलत र भ्रामक समाचार वा अफवाह फैलिँदा समाजमा अशान्ति, साम्प्रदायिक दङ्गा वा त्रासको वातावरण सिर्जना हुने गर्दछ।</li>
+                    <li><strong>गोपनीयताको गम्भीर खतरा:</strong> व्यक्तिगत विवरण, लोकेसन र संवेदनशील जानकारीहरू सेयर गर्दा प्रविधिको दुरुपयोग भई ह्याकिङ वा भौतिक असुरक्षाको खतरा रहन्छ।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपाली समाजको एउटा यथार्थपरक उदाहरण हेर्दा, केही समयअघि जाजरकोट र रुकुम पश्चिममा गएको भूकम्पको समयमा सामाजिक सञ्जालमार्फत पीडितहरूको अवस्था र राहतको आवश्यकताका बारेमा तुरुन्तै थाहा पाउन र देश-विदेशबाट ठुलो मात्रामा आर्थिक तथा भौतिक सहयोग संकलन गर्न सम्भव भयो। यो सामाजिक सञ्जालको 'वरदान' रूपी उत्कृष्ट उदाहरण हो। तर, यसको विपरीत, केही किशोरकिशोरीहरू सामाजिक सञ्जालमा अपरिचित मानिसहरूको प्रलोभनमा परेर आफ्नो बैंक खाताको ओटिपि (OTP) सेयर गर्दा लाखौँ रुपैयाँ ठगिएका छन् भने कतिपय सामाजिक सञ्जालमा अरूले गरेको गालीगलौज र मानसिक यातना (Cyber Bullying) खप्न नसकेर डिप्रेसनको सिकार भएका छन्। यो यसको 'अभिशाप' रूपी कालो पक्ष हो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, सामाजिक सञ्जाल आफैँमा खराब वा असल वस्तु होइन। यो एउटा चक्कु जस्तै हो, जसको प्रयोग कसरी गर्ने भन्ने कुरा प्रयोगकर्ताको हातमा निर्भर रहन्छ। यदि हामीले आफ्नो सामाजिक सञ्जालको प्राइभेसी सेटिङ मिलाउने, अपरिचित व्यक्तिहरूलाई विश्वास नगर्ने, बलियो पासवर्ड प्रयोग गर्ने र यसको प्रयोग गर्ने समय तोकेर सिर्जनात्मक काममा मात्र प्रयोग गर्ने हो भने यो सधैँ वरदान साबित हुनेछ। तसर्थ, २१औँ शताब्दीमा सामाजिक सञ्जालको प्रयोग गर्दा उत्तरदायी र सचेत डिजिटल साक्षरता सीप र साइबर नैतिकता अपनाउनु नै आजको मुख्य आवश्यकता हो।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#006064; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> प्रविधि आफैँमा राम्रो वा नराम्रो होइन, यसको प्रयोगकर्ताको चेतनास्तरले यसको गुणस्तर निर्धारण गर्छ। सामाजिक सञ्जाल र इमेलको प्रयोग गर्दा सधैँ सुरक्षित, संयमित र सिर्जनात्मक बन्नुहोस्। आफ्नो डिजिटल पहिचानको सुरक्षा गर्नु नै आधुनिक डिजिटल साक्षरताको पहिलो सर्त हो।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ २, पाठ २</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
