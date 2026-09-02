@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ २, पाठ ३ – अनलाइन भुक्तानी (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f5fa;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1565C0;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1565C0;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8f0f8;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b0c4de;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1565C0;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1565C0;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1565C0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #42A5F5;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e8f0f8;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - BLUE ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #1565C0;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(21, 101, 192, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #1565C0;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #0D47A1;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1565C0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1565C0;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0D47A1;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #1565C0;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1565C0;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1565C0;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b0c4de;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b0c4de;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1565C0;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8f0f8;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #b0c4de;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1565C0;
+        }
+
+        .qa-block.color1 { border-left-color: #1565C0; background: #e8f0f8; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1565C0;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #0D47A1;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1565C0;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #e8f0f8;
+            border-radius: 20px;
+            border: 2px dashed #42A5F5;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #42A5F5;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        .dialogue-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .dialogue-box .dialogue-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .dialogue-box .speaker {
+            font-weight: 700;
+            color: #0D47A1;
+        }
+
+        .dialogue-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+            line-height: 2;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1565C0;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(21, 101, 192, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D47A1;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(21, 101, 192, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1565C0;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b0c4de;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1565C0;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .dialogue-box p {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-credit-card"></i>
+                    एकाइ २, पाठ ३: अनलाइन भुक्तानी
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · जीवनोपयोगी सीपका रूपमा डिजिटल सीपहरू तथा सामान्य अनुसन्धान सीपहरू
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ २, पाठ ३
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> अनलाइन भुक्तानी (Online Payment)</strong>
+                <p>इन्टरनेट र विद्युतीय उपकरणको प्रयोग गरी भौतिक नगदको प्रयोग बिना नै एक बैङ्क खाताबाट अर्को बैङ्क खातामा सुरक्षित रूपमा रकम स्थानान्तरण वा महसुल भुक्तानी गर्ने डिजिटल प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> डेबिट कार्ड (Debit Card)</strong>
+                <p>बैङ्क खातामा जम्मा रहेको रकमको सीमाभित्र रहेर एटीएमबाट नगद झिक्क वा अनलाइन/विद्युतीय माध्यमबाट सामान तथा सेवाको भुक्तानी गर्न बैङ्कद्वारा जारी गरिने इलेक्ट्रोनिक कार्ड।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> क्रेडिट कार्ड (Credit Card)</strong>
+                <p>बैङ्क वा वित्तीय संस्थाले ग्राहकको साख (Credit) र आम्दानीका आधारमा निश्चित रकम सीमासम्म सरसापट वा कर्जाका रूपमा खरिद र अनलाइन भुक्तानी गर्न जारी गर्ने वित्तीय कार्ड।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> इन्टरनेट बैङ्किङ (Internet Banking)</strong>
+                <p>बैङ्कको आधिकारिक वेबसाइट वा वेब पोर्टल प्रयोग गरी ग्राहकले आफ्नो खाताको विवरण हेर्न, पैसा पठाउन र विभिन्न बिलहरू भुक्तानी गर्न सक्ने इन्टरनेटमा आधारित सेवा।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> ओटीपी (OTP - One Time Password)</strong>
+                <p>डिजिटल कारोबार वा खाता एक्टिभेट गर्दा प्रयोगकर्ताको सुरक्षा र पहिचान प्रमाणीकरणका लागि प्रणालीले स्वचालित रूपमा पठाउने एक पटक मात्र काम लाग्ने सुरक्षित र गोप्य अङ्क वा कोड।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> ट्रान्जेक्सन पिन (Transaction PIN)</strong>
+                <p>अनलाइन भुक्तानी वा मोबाइल बैङ्किङ एपमार्फत कारोबार फर्स्योट वा पैसा पठाउने अन्तिम चरणमा सुरक्षाका लागि प्रयोग गरिने चार वा ६ अङ्कको गोप्य नम्बर।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> डिजिटल एप्लिकेसन (Digital Application)</strong>
+                <p>कम्प्युटर, स्मार्टफोन वा स्मार्ट घरायसी उपकरणहरू चलाउन, सञ्चार गर्न वा विशेष कार्य सम्पादन गर्न कम्प्युटर प्रोग्राममा आधारित भई निर्माण गरिएका सफ्टवेयरहरू।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> डिजिटल लत (Digital Addiction)</strong>
+                <p>कम्प्युटर, इन्टरनेट, मोबाइल वा सामाजिक सञ्जालको अत्यधिक र अनियन्त्रित प्रयोगका कारण व्यक्तिको दैनिक जीवन, स्वास्थ्य र सामाजिक सम्बन्धमा नकारात्मक असर पर्ने गरी विकसित हुने कुलत।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> पासवर्ड म्यानेजर (Password Manager)</strong>
+                <p>विभिन्न अनलाइन खाता तथा एप्लिकेसनका जटिल पासवर्डहरूलाई सुरक्षित र गुप्त ढङ्गले भण्डारण गरी सम्झन मद्दत गर्ने आधुनिक सफ्टवेयर वा उपकरण।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> सार्वजनिक वाई-फाई (Public Wi-Fi)</strong>
+                <p>होटल, रेस्टुरेन्ट, पार्क वा सार्वजनिक स्थलहरूमा जो कोहीले निःशुल्क वा सशुल्क चलाउन पाउने गरी खुला गरिएको इन्टरनेट नेटवर्क, जसमा साइबर सुरक्षाको जोखिम उच्च रहन्छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "अनलाइन भुक्तानी" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. अवधारणा र महत्त्व -->
+        <div class="sub-head"><i class="fas fa-globe"></i> १. अनलाइन भुक्तानीको अवधारणा र यसको महत्त्व</div>
+
+        <div class="content-box blue-light">
+            <p>आधुनिक डिजिटल अर्थतन्त्रमा अनलाइन भुक्तानी एक अनिवार्य जीवनोपयोगी सीप बनेको छ। इन्टरनेट र विद्युतीय उपकरण (कम्प्युटर, स्मार्टफोन आदि) को सहायताले बैङ्क खातामा रहेको रकम भौतिक रूपमा उपस्थित नभई क्षणभरमै अर्को खातामा पठाउनु वा सामान तथा सेवाको मूल्य चुकाउनु नै अनलाइन भुक्तानी हो। यस सीपले घरायसी र व्यापारिक दुवै क्षेत्रमा क्रान्तिकारी परिवर्तन ल्याएको छ।</p>
+        </div>
+
+        <!-- २. फाइदा र चुनौती -->
+        <div class="sub-head"><i class="fas fa-balance-scale"></i> २. अनलाइन भुक्तानीका फाइदा तथा चुनौतीहरू</div>
+
+        <div class="content-box green-light">
+            <p>अनलाइन भुक्तानीका दुवै सकारात्मक र नकारात्मक पक्षहरू रहेका छन्, जसलाई निम्न तालिकामा तुलनात्मक रूपमा प्रस्तुत गरिएको छ:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तुलना: अनलाइन भुक्तानीका फाइदाहरू र चुनौतीहरू</div>
+                <table>
+                    <thead>
+                        <tr><th>अनलाइन भुक्तानीका फाइदाहरू (Pros)</th><th>अनलाइन भुक्तानीका चुनौतीहरू (Cons)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>जनशक्ति र खर्च कटौती:</strong> व्यक्ति आफैँले भुक्तानी गर्ने हुँदा कार्यालयहरूमा बिल काउन्टरमा अतिरिक्त कर्मचारी राख्नु पर्दैन।</td><td><strong>सेवा शुल्क (Service Charge):</strong> अनलाइन भुक्तानी सेवा प्रदान गरेबापत सेवा प्रदायकले अतिरिक्त शुल्क लिने गर्दछन्।</td></tr>
+                        <tr><td><strong>समयको बचत:</strong> बिल तिर्न घण्टौँ लाइनमा बस्नुपर्ने र टाढा जानुपर्ने झन्झट हुँदैन।</td><td><strong>अन्तर-आबद्धता समस्या:</strong> यो प्रणाली पूर्णतः इन्टरनेटमा आधारित हुने हुँदा इन्टरनेट वा सर्भर डाउन हुँदा कारोबार रोकिन्छ।</td></tr>
+                        <tr><td><strong>व्यापारिक सहजता:</strong> अनलाइनबाटै सामान र सेवा खरिद-बिक्री गर्न अत्यन्तै सजिलो हुन्छ।</td><td><strong>साइबर अपराधको जोखिम:</strong> साइबर अपराधीहरूले फिशिङ वा ह्याकिङ गरेर रकमको दुरुपयोग गर्न सक्छन्।</td></tr>
+                        <tr><td><strong>विश्वसनीय र द्रुत सेवा:</strong> भौतिक नगद ओसारपसार नगरी छिटो, छरितो र सुरक्षित रूपमा रकम स्थानान्तरण हुन्छ।</td><td><strong>भौतिक कारोबारमा सीमितता:</strong> इन्टरनेट सेवा नभएको ठाउँमा वा अफलाइन अवस्थामा यो प्रणाली प्रयोग गर्न सकिँदैन।</td></tr>
+                        <tr><td><strong>चोरी र सुरक्षा जोखिम न्यूनीकरण:</strong> घरमा नगद राख्नु नपर्ने वा बाहिर बोकेर हिँड्नु नपर्ने हुँदा हराउने वा चोरी हुने डर हुँदैन।</td><td><strong>डिजिटल साक्षरताको अभाव:</strong> प्रविधिसम्बन्धी पर्याप्त ज्ञान र सीप नभएका व्यक्तिहरू यो सेवाबाट वञ्चित हुन्छन्।</td></tr>
+                        <tr><td><strong>देशको नोटको संरक्षण:</strong> नगदरहित (Cashless) कारोबार हुँदा कागजको नोटको आयु बढ्छ र नयाँ नोट छाप्ने राष्ट्रिय खर्च जोगिन्छ।</td><td><strong>भौगोलिक असमानता:</strong> नेपालका दुर्गम वा सबै ग्रामीण क्षेत्रहरूमा इन्टरनेट र बैङ्किङ पहुँच पुगिसकेको छैन।</td></tr>
+                        <tr><td><strong>पारदर्शी आर्थिक रेकर्ड:</strong> हरेक कारोबारको डिजिटल विवरण (Statement) रहने हुँदा हिसाब राख्न सजिलो र पारदर्शी हुन्छ।</td><td><strong>प्राविधिक त्रुटि:</strong> कहिलेकाहीँ पैसा खाताबाट काटिने तर प्रविधिको खराबीका कारण अर्को पक्षमा रकम जम्मा नहुने र सो पैसा फिर्ता आउन समय लाग्ने प्राविधिक समस्या उत्पन्न हुन्छ।</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ३. सुरक्षित अनलाइन भुक्तानीका सावधानी -->
+        <div class="sub-head"><i class="fas fa-shield-alt"></i> ३. सुरक्षित अनलाइन भुक्तानीका लागि अपनाउनुपर्ने सावधानीहरू</div>
+
+        <div class="content-box orange-light">
+            <p>अनलाइन कारोबार गर्दा थोरै मात्र असावधानीले ठुलो आर्थिक नोक्सानी गराउन सक्छ। त्यसैले निम्न कुराहरूमा अनिवार्य ध्यान दिनुपर्छ:</p>
+            <ul>
+                <li><strong>पूर्वजानकारी र अनुसन्धान:</strong> कुनै पनि सामान वा सेवा खरिद गर्नुअघि इन्टरनेटमा सर्च गरेर सो वस्तु वा सेवा र वेबसाइटको विश्वसनीयता बुझ्नुपर्छ।</li>
+                <li><strong>विश्वसनीय कम्पनीको छनोट:</strong> स्थापित र प्रमाणित अनलाइन व्यापारिक साइट वा कम्पनीबाट मात्र कारोबार गर्ने।</li>
+                <li><strong>गोपनीयता कायम राख्ने:</strong> कारोबार गर्दा पासवर्ड, कार्ड नम्बर, र रकम सधैँ आफैँले टाइप गर्ने।</li>
+                <li><strong>व्यक्तिगत उपकरणको प्रयोग:</strong> आफ्नै मोबाइल वा कम्प्युटरबाट मात्र अनलाइन कारोबार गर्ने। साइबर क्याफे वा अरूको मोबाइलबाट चलाउँदा विवरणहरू रेकर्ड भएर दुरुपयोग हुने सम्भावना रहन्छ।</li>
+                <li><strong>छुट्टै इमेल खाताको प्रयोग:</strong> बैङ्किङ वा अनलाइन भुक्तानीका लागि मात्र एउटा छुट्टै सुरक्षित इमेल ठेगाना प्रयोग गर्दा थप सुरक्षा प्राप्त हुन्छ।</li>
+                <li><strong>पासवर्ड म्यानेजरको प्रयोग:</strong> आफ्नो पासवर्ड सधैँ बलियो र गोप्य राख्नुपर्छ। धेरै वटा खाताका पासवर्ड भुल्ने डर भएमा कापीमा लेखेर राख्नुभन्दा विश्वसनीय पासवर्ड म्यानेजर प्रयोग गर्नु उपयुक्त हुन्छ।</li>
+                <li><strong>सार्वजनिक वाई-फाईको बहिष्कार:</strong> होटल, बसपार्क वा खुला ठाउँमा पाइने सार्वजनिक वाई-फाई (Public Wi-Fi) प्रयोग गरेर बैङ्किङ कारोबार कहिल्यै गर्नु हुँदैन। यसबाट डाटाहरू सहजै चोरी हुन सक्छन्।</li>
+                <li><strong>आधिकारिक र विश्वसनीय एपको प्रयोग:</strong> एप्लिकेसनहरू डाउनलोड गर्दा गुगल प्ले स्टोर वा एप्पल एप स्टोर जस्ता प्रमाणित ठाउँबाट मात्र आधिकारिक एप डाउनलोड गर्ने।</li>
+            </ul>
+        </div>
+
+        <!-- ४. घरायसी तथा कार्यालयीय डिजिटल एप्लिकेसन -->
+        <div class="sub-head"><i class="fas fa-laptop"></i> ४. घरायसी तथा कार्यालयीय डिजिटल एप्लिकेसनहरूको उपयोगिता</div>
+
+        <div class="content-box purple-light">
+            <p>अहिलेको विश्वमा कम्प्युटर र इन्टरनेट मात्र होइन, कम्प्युटर प्रोग्राममा आधारित अनेकौँ घरायसी तथा व्यावसायिक एप्लिकेसनहरू (Digital Applications) को प्रयोग तीव्र गतिमा बढिरहेको छ:</p>
+            <ul>
+                <li><strong>घरायसी प्रयोग:</strong> कम्प्युटर, स्मार्ट टेलिभिजन (Smart TV), वाई-फाई राउटर, माइक्रोओभन, लुगा धुने मेसिन (Washing Machine), र डिजिटल कुकर जस्ता उपकरणहरूले गृहकार्यलाई सहज बनाएका छन्। नेपालमा समेत अनुहार वा आवाज पहिचान गर्ने डिजिटल ताल्चाहरू (Locks) को प्रयोग सुरु भइसकेको छ।</li>
+                <li><strong>कार्यालयीय प्रयोग:</strong> विभिन्न कार्यालय, अस्पताल, बैङ्क र यातायातका साधनहरूमा डिजिटल हाजिरी, कार्डबाट ताल्चा खोल्ने, कार्ड प्रयोग गरेर भाडा तिर्ने तथा बिल तिर्ने सुविधाहरू व्यापक रूपमा प्रयोग भइरहेका छन्।</li>
+            </ul>
+        </div>
+
+        <!-- ५. डिजिटल उपकरण सुरक्षित प्रयोग नियम -->
+        <div class="sub-head"><i class="fas fa-cog"></i> ५. डिजिटल उपकरणहरूको सुरक्षित प्रयोगका नियमहरू</div>
+
+        <div class="content-box gold-light">
+            <p>नयाँ र आधुनिक डिजिटल उपकरणहरू चलाउँदा निम्नलिखित ६ वटा प्रमुख नियमहरू पालना गर्नुपर्छ:</p>
+            <ol>
+                <li><strong>प्रयोग निर्देशिका (User Manual) को अध्ययन:</strong> कुनै पनि नयाँ डिजिटल उपकरण ल्याएपछि त्यससँगै आउने निर्देशिका राम्ररी पढेर मात्र त्यसलाई विद्युत् लाइनमा जोड्ने।</li>
+                <li><strong>सदस्यहरूलाई सिकाउने:</strong> घरका वा कार्यालयका सबै सदस्यहरूलाई नयाँ उपकरणको सही प्रयोग गर्ने विधिबारे जानकारी गराउने।</li>
+                <li><strong>बालबालिकाको सुरक्षा:</strong> ताप वा आगो निकाल्ने संवेदनशील डिजिटल उपकरणहरू साना बालबालिकाहरूको पहुँच भन्दा टाढा राख्ने र चलाउन नदिने।</li>
+                <li><strong>डिजिटल लतबाट बचाउने:</strong> बालबालिकाहरूलाई लामो समयसम्म मोबाइल वा ट्याब्लेट जस्ता उपकरणहरू प्रयोग गर्न नदिई डिजिटल लत (Digital Addiction) बाट जोगाउने।</li>
+                <li><strong>सचेत प्रयोग:</strong> सार्वजनिक कार्यालय, अस्पताल वा यातायातमा रहेका डिजिटल उपकरणहरू आफूलाई आवश्यक र चलाउन अनुमति भएको खण्डमा मात्र प्रयोग गर्ने।</li>
+                <li><strong>कर्मचारीको सहयोग:</strong> नयाँ ठाउँका डिजिटल उपकरण चलाउनु अगाडि त्यहाँ लेखिएका निर्देशनहरू पढ्ने वा नबुझेमा त्यहाँका कर्मचारीहरूलाई सोधेर मात्र चलाउने।</li>
+            </ol>
+        </div>
+
+        <!-- ६. मोबाइल बैङ्किङ एक्टिभेसन र भुक्तानी प्रक्रिया -->
+        <div class="sub-head"><i class="fas fa-mobile-alt"></i> ६. मोबाइल बैङ्किङ एप एक्टिभेसन र भुक्तानीको प्रक्रिया</div>
+
+        <div class="content-box pink-light">
+            <p>कुनै पनि बैङ्कको मोबाइल बैङ्किङ एप डाउनलोड गरी घरमै बसी बिल भुक्तानी गर्ने क्रमबद्ध प्रक्रियालाई निम्न प्रवाहचित्र (Mermaid Flowchart) मार्फत सजिलैसँग सम्झिन सकिन्छ:</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">१. गुगल प्ले स्टोर वा एप स्टोरमा जाने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">२. आफ्नो बैङ्कको आधिकारिक एप डाउनलोड गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">३. एप खोली 'एक्टिभेट सर्भिस' मा क्लिक गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">४. मोबाइल नम्बर र खाता नम्बर राखी 'Next' गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">५. प्राप्त हुने OTP को प्रतीक्षा गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">६. प्राप्त OTP प्रविष्ट गरी खाताको वैधता सुनिश्चित गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">७. लगइन पासवर्ड सुरक्षित रूपमा सेटअप गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">८. ट्रान्जेक्सन पिन तय गरी फिनिस गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">९. अनलाइन सेवामा लगइन गरी बिल भुक्तानी गर्ने</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १: संवाद -->
+        <div class="sub-head"><i class="fas fa-comment-dots"></i> क्रियाकलाप १: अनलाइन पेमेन्टबाट हुने फाइदा र बेफाइदाहरू समेटेर एक संवाद तयार गर्नुहोस्।</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#1565C0; margin-right:8px;"></i> प्रश्न:</p>
+            <p>अनलाइन पेमेन्टबाट हुने फाइदा र बेफाइदाहरू समेटेर एक संवाद तयार गर्नुहोस्।</p>
+        </div>
+
+        <div class="dialogue-box">
+            <p class="dialogue-title"><i class="fas fa-pen-fancy" style="color:#1565C0; margin-right:8px;"></i> शीर्षक: अनलाइन भुक्तानी: सुविधा र सावधानी</p>
+            <p><strong>पात्रहरू:</strong></p>
+            <ul>
+                <li><span class="speaker">रोशन:</span> (परम्परागत रूपमा लाइन बसेर बिल तिर्न रुचाउने विद्यार्थी)</li>
+                <li><span class="speaker">अमृता:</span> (डिजिटल सीपको सही प्रयोग गर्ने आधुनिक विद्यार्थी)</li>
+            </ul>
+            <p><em>(कलेजको चौरमा रोशन निकै थकित मुद्रामा बसिरहेको छ। अमृता उसको नजिक आउँछिन्।)</em></p>
+
+            <p><span class="speaker">अमृता:</span> रोशन, तिमी आज कता कता हरायौ? क्लास सकिन लाग्दा मात्र आइपुग्यौ त, के भयो?</p>
+            <p><span class="speaker">रोशन:</span> लौ न अमृता, नसोध! कलेजको फी र बिजुलीको बिल तिर्न बैङ्क र नेपाल विद्युत प्राधिकरणको काउन्टर धाउँदा धाउँदै आजको पूरै दिन बर्बाद भयो। चर्को घाममा ३ घण्टा लाइनमा बस्दा जीउ निकै थाकेको छ।</p>
+            <p><span class="speaker">अमृता:</span> ओहो रोशन! तिमी अझै पनि ढुङ्गे युगतर्फ नै छौ कि क्या हो? आजको डिजिटल युगमा पनि यसरी समय र श्रमको नाश गर्ने? यी सबै काम त मोबाइलबाट ५ मिनेटमै घरमै बसेर हुन्थे नि।</p>
+            <p><span class="speaker">रोशन:</span> तिमीले अनलाइन भुक्तानी (Online Payment) को कुरा गरेकी होला। मलाई त यो प्रविधि पटक्कै सुरक्षित लाग्दैन। कता कता अनलाइन ह्याक भयो र पैसा चोरी भयो भन्ने सुन्छु। त्यसैले दुःख पाए पनि नगदै बोकेर लाइन बस्न नै विश्वासिलो लाग्छ।</p>
+            <p><span class="speaker">अमृता:</span> तिम्रो डर स्वाभाविक हो रोशन। तर प्रविधिलाई सही ढङ्गले प्रयोग गर्न जान्यो भने यसका फाइदाहरू धेरै छन्। पहिलो कुरा, तिम्रो अमूल्य समय बच्यो। दोस्रो, लाइन बस्न जाने र आउने यातायातको खर्च कटौती भयो। तेस्रो, खल्तीमा नगद बोकेर हिँड्नु नपर्ने हुँदा चोरी हुने वा हराउने डर हुँदैन।</p>
+            <p><span class="speaker">रोशन:</span> हो र? अनि हाम्रा हजुरबाले भन्नुहुन्थ्यो, हामीले अनलाइनबाट कारोबार गर्दा पैसा प्रत्यक्ष देखिँदैन, यसले हिसाब राख्न कत्तिको सजिलो बनाउँछ र?</p>
+            <p><span class="speaker">अमृता:</span> झन् सजिलो बनाउँछ रोशन! हामीले डिजिटल वालेट वा मोबाइल बैङ्किङ एपबाट गरेको सानोभन्दा सानो खर्चको पनि विस्तृत रेकर्ड (Statement) एपमै सुरक्षित रहन्छ। यसले गर्दा हिसाब राख्न र आर्थिक पारदर्शिता कायम गर्न निकै सजिलो हुन्छ। अझ महत्त्वपूर्ण कुरा तो, नगदरहित कारोबारले राष्ट्रिय कागजी नोटको आयु बढाउँछ, जसले गर्दा नयाँ नोट छाप्न देशको ठुलो बजेट जोगिन्छ।</p>
+            <p><span class="speaker">रोशन:</span> फाइदाहरू तो साँच्चै राम्रा रहेछन्। तर यसका चुनौतीहरू पनि त होलान् नि, हैन र?</p>
+            <p><span class="speaker">अमृता:</span> पक्कै पनि छन् रोशन। पहिलो कुरा, यसको प्रयोगका लागि इन्टरनेट सेवा अनिवार्य हुन्छ। इन्टरनेट वा बैङ्कको सर्भर डाउन भयो भने कारोबार रोकिन्छ। दोस्रो, यसको प्रयोग गर्दा निश्चित सेवा शुल्क पनि तिर्नुपर्ने हुन सक्छ। तेस्रो र सबैभन्दा ठुलो चुनौती भनेको डिजिटल साक्षरताको कमी र साइबर सुरक्षाको खतरा हो। सुरक्षा नियमहरू नअपनाएमा ह्याकरहरूले ओटिपि (OTP) वा ट्रान्जेक्सन पिन चोरी गरेर रकम हिनामिना गर्न सक्छन्।</p>
+            <p><span class="speaker">रोशन:</span> ओहो, त्यसो भए यसबाट बच्ने कसरी त? हामीले के-के कुरामा ध्यान दिनुपर्छ?</p>
+            <p><span class="speaker">अमृता:</span> एकदमै सजिलो छ। हामीले कारोबार गर्दा सधैँ आफ्नै स्मार्टफोन वा कम्प्युटर मात्र प्रयोग गर्नुपर्छ। अरूको वाई-फाई वा सार्वजनिक वाई-फाई प्रयोग गरेर कारोबार गर्नु हुँदैन। आफ्नो ट्रान्जेक्सन पिन र पासवर्ड कसैलाई भन्नु हुँदैन। अनि कतैबाट आएका शङ्कास्पद लिङ्क वा विज्ञापनमा क्लिक गर्नु हुँदैन।</p>
+            <p><span class="speaker">रोशन:</span> अमृता, आज तिमीले मलाई डिजिटल युगको एउटा महत्त्वपूर्ण सीपको बारेमा राम्रो जानकारी दियौ। म आजै मेरो बैङ्कमा गएर मोबाइल बैङ्किङ एप एक्टिभेट गर्छु र आगामी महिनादेखि म पनि समय र श्रम दुवै बचाउँछु। धन्यवाद तिमीलाई!</p>
+            <p><span class="speaker">अमृता:</span> स्वागत छ रोशन! हामी विद्यार्थीहरूले यस्ता जीवनोपयोगी सीपहरू सिकेर व्यवहारमा लागू गर्नुपर्छ। कलेज जाऔँ अब।</p>
+        </div>
+
+        <!-- क्रियाकलाप २: प्रयोगात्मक चरण -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> क्रियाकलाप २: राजनको उदाहरण जस्तै बैङ्कको मोबाइल एप डाउनलोड गर्ने, एक्टिवेट गर्ने, र विद्यालय/खानेपानीको बिल भुक्तानी गर्ने प्रयोगात्मक चरणहरू लेख्नुहोस्।</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#1565C0; margin-right:8px;"></i> प्रश्न:</p>
+            <p>राजनको उदाहरण जस्तै बैङ्कको मोबाइल एप डाउनलोड गर्ने, एक्टिवेट गर्ने, र विद्यालय/खानेपानीको बिल भुक्तानी गर्ने प्रयोगात्मक चरणहरू लेख्नुहोस्।</p>
+        </div>
+
+        <div class="content-box teal-light">
+            <p><strong>खानेपानीको महसुल अनलाइन भुक्तानी गर्ने प्रयोगात्मक प्रक्रिया:</strong></p>
+            <p>राजनले विद्यालयको शुल्क तिरे जस्तै मैले मेरो बुबाको मोबाइलमा रहेको बैङ्क एप प्रयोग गरी हाम्रो घरको खानेपानीको बिल अनलाइन भुक्तानी गरेको चरणबद्ध व्यावहारिक अनुभव यस प्रकार छ:</p>
+            <ol>
+                <li><strong>एप प्राप्ति:</strong> मोबाइलको गुगल प्ले स्टोरमा गई बुबाको बैङ्क खाता रहेको "राष्ट्रिय वाणिज्य बैङ्क" को आधिकारिक एप (RBB Smart) डाउनलोड गरेँ।</li>
+                <li><strong>सेवाको सुरुआत:</strong> एप खोलेर स्क्रिनमा देखिएको 'Activate Service' विकल्पमा क्लिक गरेँ।</li>
+                <li><strong>खाता आबद्धता:</strong> बुबाको बैङ्कमा दर्ता भएको मोबाइल नम्बर र बैङ्क खाता नम्बर प्रविष्ट गरी 'Next' बटन थिचें।</li>
+                <li><strong>सुरक्षा कोडको आगमन:</strong> मेरो बुबाको मोबाइलमा बैङ्कद्वारा पठाइएको ६ अङ्कको एक पटक मात्र प्रयोग हुने ओटीपी (OTP - One Time Password) प्राप्त भयो।</li>
+                <li><strong>खाता प्रमाणीकरण:</strong> उक्त OTP प्रविष्ट गरेपछि बैङ्कको प्रणालीले खाता मान्य (Valid) भएको पुष्टि गर्‍यो।</li>
+                <li><strong>लगइन पासवर्ड निर्धारण:</strong> एप सधैँ खोल्नका लागि एक बलियो लगइन पासवर्ड (Login Password) सेटअप गरेँ।</li>
+                <li><strong>कारोबार पिन तय:</strong> कारोबार फर्स्योट गर्नका लागि ४ अङ्कको छुट्टै गोप्य ट्रान्जेक्सन पिन (Transaction PIN) तय गरी 'Finish' गरेँ। यसरी सेवा एक्टिवेसन प्रक्रिया सफल भयो।</li>
+                <li><strong>लगइन प्रक्रिया:</strong> नव-निर्मित पासवर्ड प्रयोग गरी बैङ्कको अनलाइन सेवामा सफलतापूर्वक लगइन गरेँ।</li>
+                <li><strong>महसुल भुक्तानी:</strong> एपको गृहपृष्ठमा रहेको 'Utility Payment' भित्र गई 'Khanepani' विकल्प रोजेँ। हाम्रो खानेपानी काउन्टर छनोट गरी ग्राहक परिचय नम्बर (Customer ID) टाइप गरेँ। बुबाको ट्रान्जेक्सन पिन हानेर ओके गरेपछि क्षणभरमै खानेपानीको महसुल भुक्तानी भयो र त्यसको रसिद (PDF Receipt) मोबाइलमा सुरक्षित राखेँ।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> अनलाइन भुक्तानीका फाइदाहरू उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सूचना प्रविधिको विकाससँगै आर्थिक कारोबारलाई सरल बनाउन अनलाइन भुक्तानी एक महत्त्वपूर्ण माध्यम बनेको छ। पाठ्यपुस्तकका आधारमा अनलाइन भुक्तानीका मुख्य फाइदाहरू निम्नानुसार छन्:</p>
+                <ul>
+                    <li><strong>समय र श्रमको बचत:</strong> खानेपानी, विद्युत, कलेजको शुल्क वा अन्य बिलहरू भुक्तानी गर्न कार्यालयमा धाउनु पर्दैन र घामपानीमा घण्टौँ लाइन बस्ने झन्झटबाट मुक्ति मिल्छ।</li>
+                    <li><strong>आर्थिक खर्चमा कटौती:</strong> उपभोक्ता स्वयम्ले आफ्नै मोबाइलबाट कारोबार गर्ने हुनाले सङ्घसंस्थामा पैसा बुझ्नका लागि छुट्टै जनशक्ति राख्नु पर्दैन, जसले गर्दा जनशक्ति खर्च कम हुन्छ।</li>
+                    <li><strong>व्यापारिक क्षेत्रमा सहजता:</strong> ई-कमर्स वा अनलाइन खरिद-बिक्रीमा तत्कालै पैसा तिर्न र लिन सकिने हुँदा व्यापार व्यवसाय छिटो र प्रभावकारी रूपमा सञ्चालन हुन्छ।</li>
+                    <li><strong>भौतिक नगद सुरक्षा:</strong> ठुलो परिमाणमा नगद पैसा खल्ती वा घरमा राख्नु नपर्ने भएकाले पैसा हराउने, च्यातिने वा चोरी हुने सुरक्षा जोखिम निकै कम हुन्छ।</li>
+                    <li><strong>कागजी नोटको संरक्षण:</strong> नगदरहित (Cashless) कारोबारले भौतिक नोटको प्रयोग घटाउँछ। यसले गर्दा राज्यको नोट छपाइमा हुने करोडौँ रुपैयाँको खर्च बच्छ।</li>
+                    <li><strong>पारदर्शी अभिलेख:</strong> हरेक कारोबारको रेकर्ड बैङ्किङ प्रणालीमा रहने हुँदा हिसाब व्यवस्थापन गर्न व्यक्ति, संस्था र सरकारलाई सजिलो हुनुका साथै कर प्रशासन पारदर्शी हुन्छ।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> अनलाइन भुक्तानीका चुनौतीहरूको सूची तयार पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अनलाइन भुक्तानी सुविधा सम्पन्न भए तापनि सुरक्षा र पूर्वाधारका दृष्टिकोणले यो विभिन्न चुनौतीहरूबाट घेरिएको छ। यसका प्रमुख चुनौतीहरूको सूची यस प्रकार छ:</p>
+                <ol>
+                    <li><strong>इन्टरनेट र सर्भरमा निर्भरता:</strong> यो सेवा पूर्णतः इन्टरनेटमा आश्रित हुने भएकाले इन्टरनेट गयो वा बैङ्कको सर्भर डाउन भयो भने सम्पूर्ण वित्तीय कारोबार ठप्प हुन्छ।</li>
+                    <li><strong>साइबर सुरक्षाको जोखिम:</strong> प्रविधिको दुरुपयोग गरी ह्याकरहरूले फिशिङ, भाइरस आक्रमण वा अकाउन्ट ह्याकिङमार्फत ग्राहकको खाताबाट रकम चोरी गर्ने जोखिम उच्च रहन्छ।</li>
+                    <li><strong>डिजिटल साक्षरताको अभाव:</strong> नेपाल जस्तो विकासोन्मुख देशमा अझै पनि ठुलो जनसङ्ख्यामा डिजिटल साक्षरताको कमी छ, जसले गर्दा मानिसहरू प्राविधिक ज्ञानको अभावमा यो सेवा चलाउन सक्दैनन्।</li>
+                    <li><strong>भौगोलिक र पूर्वाधारको असमानता:</strong> नेपालका सबै ग्रामीण तथा दुर्गम क्षेत्रहरूमा भरपर्दो इन्टरनेट र बैङ्किङ नेटवर्क पुग्न नसकेकाले अनलाइन भुक्तानीको राष्ट्रव्यापी प्रयोग हुन सकेको छैन।</li>
+                    <li><strong>अतिरिक्त सेवा शुल्क:</strong> अनलाइन भुक्तानी वा क्रेडिट कार्ड प्रयोग गर्दा कम्पनीहरूले निश्चित प्रतिशत अतिरिक्त सेवा शुल्क काट्ने गर्दछन्, जुन गरिब उपभोक्ताका लागि महँगो पर्न सक्छ।</li>
+                    <li><strong>कारोबार फस्ने जोखिम (Technical Glitch):</strong> कहिलेकाहीँ खाताबाट पैसा काटिने तर प्रविधिको खराबीका कारण अर्को पक्षमा रकम जम्मा नहुने र सो पैसा फिर्ता आउन समय लाग्ने प्राविधिक समस्या उत्पन्न हुन्छ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">३.</span> 'डिजिटल एप्लिकेसनको प्रयोगले समय र श्रमको बचत हुन्छ', यस भनाइलाई व्यावहारिक उदाहरणसहित पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> 'डिजिटल एप्लिकेसनको प्रयोगले समय र श्रमको बचत हुन्छ' भन्ने भनाइ अकाट्य सत्य हो। आजको तीव्र गतिको संसारमा मानिसलाई आफ्ना घरायसी र व्यावसायिक कामहरू फर्स्योट गर्न समयको अभाव छ, जसमा डिजिटल एप्लिकेसनहरूले ठुलो सहयोग गरेका छन्।</p>
+
+                <p><strong>व्यावहारिक उदाहरणहरूद्वारा पुष्टि:</strong></p>
+                <ul>
+                    <li><strong>घरायसी काममा बचत:</strong> परम्परागत रूपमा दाउरा वा ग्यासमा खाना पकाउँदा लगातार हेरचाह गर्नुपर्ने हुन्थ्यो। तर आधुनिक डिजिटल एप्लिकेसन र माइक्रोओभन वा डिजिटल प्रेसर कुकरको प्रयोगले निश्चित समय (Timer) सेट गरेर ढुक्कसँग अन्य काम गर्न सकिन्छ। यसले मानिसको निरन्तर खटिनुपर्ने श्रम र समय बचाएको छ।</li>
+                    <li><strong>कारोबार र बिल भुक्तानीमा सहजता:</strong> विगतमा कलेजको शुल्क, बिजुलीको महसुल, र खानेपानीको बिल तिर्न कलेज र सरकारी कार्यालय धाउनुपर्थ्यो। एक दिनमा एउटा मात्र बिल तिर्न सकिने अवस्था थियो। तर हाल विभिन्न डिजिटल वालेट (जैसे eSewa, Khalti) वा बैङ्कका मोबाइल एप्लिकेसनको प्रयोग गरी ५ मिनेटमै घरै बसीबसी सबै बिलहरू तिर्न सकिन्छ। यसबाट पूरै दिनको श्रम र लामो लाइन बस्नुपर्ने झन्झटको अन्त भएको छ।</li>
+                    <li><strong>सुरक्षा र सञ्चारमा सहजता:</strong> कार्यालयहरूमा हाजिरी पुस्तिकामा सही गर्दा समय लाग्ने र रेकर्ड राख्न गाह्रो हुने अवस्था थियो। तर डिजिटल हाजिरी (Fingerprint/Facial Recognition) एप्लिकेसनको प्रयोगले क्षणभरमै हजारौँ कर्मचारीको रेकर्ड व्यवस्थित हुन्छ।</li>
+                </ul>
+                <p>यसरी, घरायसी कार्यदेखि लिएर कार्यालयीय कार्य सम्पादनसम्म डिजिटल एप्लिकेसनहरूले मानिसको अमूल्य समय र शारीरिक श्रम दुवैको बचत गरी जीवनलाई अत्यन्त सरल र सुविधायुक्त बनाएका छन्।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तर (१ अङ्क भार)</div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">१.</span> अनलाइन भुक्तानी सेवा सुचारु गर्न बैङ्किङ क्षेत्रमा कुन सेवा लिनु अनिवार्य छ?</div>
+            <div class="a"><strong>उत्तर:</strong> अनलाइन भुक्तानी सेवा सुचारु गर्न बैङ्किङ क्षेत्रमा <strong>इन्टरनेट बैङ्किङ वा मोबाइल बैङ्किङ</strong> सेवा लिनु अनिवार्य छ।</div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">२.</span> ओटीपी (OTP) को पूरा रूप के हो र यो किन आवश्यक छ?</div>
+            <div class="a"><strong>उत्तर:</strong> OTP को पूरा रूप '<strong>One Time Password</strong>' हो, र यो अनलाइन कारोबारको सुरक्षा सुदृढ गर्न र प्रयोगकर्ताको पहिचान प्रमाणीकरण गर्न आवश्यक छ।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">३.</span> डिजिटल लत (Digital Addiction) भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> मोबाइल, इन्टरनेट, वा कम्प्युटर गेम जस्ता डिजिटल प्रविधिहरूको अत्यधिक प्रयोगका कारण दैनिक काम र स्वास्थ्यमा नकारात्मक असर पर्ने गरी बस्ने नराम्रो बानी नै <strong>डिजिटल लत</strong> हो।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">४.</span> नयाँ डिजिटल उपकरण चलाउनु पूर्व त्यसको कुन निर्देशिका अध्ययन गर्नु उपयोगी हुन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> नयाँ डिजिटल उपकरण चलाउनु पूर्व त्यससँगै आउने प्रयोग निर्देशिका अर्थात् '<strong>User Manual</strong>' को अध्ययन गर्नु उपयोगी हुन्छ।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">५.</span> सुरक्षित डिजिटल भुक्तानीका लागि पासवर्ड राख्दा कस्तो सावधानी अपनाउनुपर्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> सुरक्षित भुक्तानीका लागि पासवर्ड <strong>बलियो</strong> (अक्षर, सङ्केत र सङ्ख्या मिसाएर) राख्नुपर्छ र यसलाई नियमित रूपमा परिवर्तन गर्दै कतै लेखेर राख्नुको सट्टा <strong>पासवर्ड म्यानेजर</strong> प्रयोग गर्नुपर्छ।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तर (५ अङ्क भार)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> डिजिटल एप्लिकेसनको प्रयोग गर्दा बालबालिकाहरूमा कस्ता जोखिमहरू देखा पर्न सक्छन्? यसबाट बच्ने उपायहरू उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> आधुनिक युगमा डिजिटल उपकरणहरू बालबालिकाको सिकाइ र मनोरञ्जनको साधन बनेका छन्, तर यिनको अनियन्त्रित प्रयोगले गम्भीर शारीरिक र मानसिक समस्याहरू निम्त्याइरहेको छ।</p>
+
+                <p><strong>सघन विश्लेषणात्मक बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>डिजिटल लत र स्वास्थ्य समस्या:</strong> लामो समय स्क्रिनमा घोरिँदा बालबालिकामा आँखा दुख्ने, मोटोपना बढ्ने, ढाड दुख्ने र मानसिक रूपमा डिजिटल लत (Digital Addiction) बस्ने गर्दछ।</li>
+                    <li><strong>सामाजिक सीपको ह्रास:</strong> बाह्य खेलकुद र सामाजिक अन्तरक्रियाबाट टाढिँदा बालबालिकाहरूमा मानिसहरूसँग घुलमिल हुने र अन्तरवैयक्तिक सीपको विकास हुन पाउँदैन।</li>
+                    <li><strong>गलत सामग्रीको पहुँच:</strong> इन्टरनेटको खुला संसारमा अभिभावकीय नियन्त्रण (Parental Control) बिना चलाउँदा बालबालिकाहरू हिंसात्मक वा अश्लील सामग्रीको सिकार हुन सक्छन्।</li>
+                    <li><strong>सुरक्षित प्रयोगका उपायहरू:</strong> नयाँ उपकरण किनेपछि 'User Manual' पढेर सुरक्षा सेटिङ मिलाउने र आगो वा ताप निकाल्ने संवेदनशील डिजिटल उपकरण चलाउन नदिने।</li>
+                    <li><strong>अभिभावकीय नियमन र समय सीमा:</strong> बालबालिकालाई निश्चित समय मात्र मोबाइल चलाउन दिने, उनीहरूसँगै समय बिताउने र डिजिटल सञ्जालमा उनीहरूका गतिविधि नियाल्ने।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, प्रविधिलाई पूर्ण रूपमा निषेध गर्नुभन्दा अभिभावकले सचेतता अपनाई निश्चित समय र सुरक्षा नियमभित्र मात्र डिजिटल उपकरण चलाउन दिएमा बालबालिकालाई यसका जोखिमहरूबाट जोगाउन सकिन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> 'सार्वजनिक वाई-फाई प्रयोग गरेर अनलाइन भुक्तानी गर्नु वित्तीय अपराधलाई निमन्त्रणा दिनु हो।' यस भनाइलाई पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> सुविधा र निःशुल्क इन्टरनेटको लोभमा धेरै मानिसहरू सार्वजनिक स्थलका वाई-फाई प्रयोग गर्दछन्, तर यस्तो सञ्जाल बैङ्किङ कारोबारका लागि अत्यन्त असुरक्षित र जोखिमयुक्त मानिन्छ।</p>
+
+                <p><strong>सघन विश्लेषणात्मक बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>डाटा चोरीको जोखिम (Data Sniffing):</strong> सार्वजनिक वाई-फाई सञ्जालहरू खुला र सुरक्षित नहुने भएकाले ह्याकरहरूले सजिलै त्यहाँ प्रवाह हुने सूचनाहरू, बैङ्क एकाउन्ट नम्बर, र पासवर्डहरू चोर्न सक्छन्।</li>
+                    <li><strong>नक्कली नेटवर्क सिर्जना (Man-in-the-Middle Attack):</strong> साइबर अपराधीहरूले असली वाई-फाई जस्तै देखिने गरी नक्कली नेटवर्क सिर्जना गर्छन्। प्रयोगकर्ताले झुक्किएर त्यसमा लगइन गरी कारोबार गर्दा सबै व्यक्तिगत विवरण ह्याकरको हातमा पुग्दछ।</li>
+                    <li><strong>व्यक्तिगत गोपनियताको अन्त्य:</strong> सार्वजनिक वाई-फाई प्रदायकले प्रयोगकर्ताका ब्राउजिङ इतिहास र मोबाइलमा रहेका कतिपय फाइलहरूमा पहुँच बनाएर वित्तीय अपराध गर्ने अवसर पाउँछन्।</li>
+                    <li><strong>बच्ने सुरक्षा रणनीति:</strong> अनलाइन भुक्तानी गर्दा सधैँ आफ्नै उपकरण र निजी मोबाइल डाटा वा घरको सुरक्षित पासवर्ड-संरक्षित वाई-फाई मात्र प्रयोग गर्नुपर्छ।</li>
+                    <li><strong>पासवर्ड म्यानेजर र छुट्टै इमेल:</strong> बैङ्किङ कारोबारका लागि मात्र प्रयोग हुने छुट्टै इमेल र बलियो पासवर्ड प्रयोग गर्दा सार्वजनिक ठाउँमा हुन सक्ने डाटाहरूको चोरीबाट बच्न सकिन्छ।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, क्षणिक लोभ वा अल्छीपनले गर्दा असुरक्षित इन्टरनेट नेटवर्क चलाउनुको सट्टा आफ्नै सुरक्षित मोबाइल नेटवर्क प्रयोग गरी अनलाइन भुक्तानी गर्नु नै वित्तीय सुरक्षाको पहिलो कडी हो।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो विश्लेषणात्मक प्रश्नोत्तर (८ अङ्क भार)</div>
+
+        <div class="qa-block color3" style="border-left-color:#1565C0;">
+            <div class="q"><span class="qnum">प्रश्न:</span> 'डिजिटल भुक्तानी आधुनिक अर्थतन्त्रको मेरुदण्ड हो तर यसमा रहेका सुरक्षा चुनौतीहरूलाई न्यूनीकरण गर्न बहुपक्षीय प्रयासको खाँचो छ।' यस भनाइलाई सुरक्षित अनलाइन बैङ्किङका उपायहरूसँग जोडेर विस्तृत विवेचना गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> आधुनिक सूचना र सञ्चार प्रविधिको विकाससँगै विश्वको अर्थतन्त्र भौतिक कागजी नोटबाट नगदरहित (Cashless) डिजिटल भुक्तानी प्रणालीतर्फ द्रुत गतिमा रूपान्तरण भइरहेको छ। इन्टरनेट, कम्प्युटर, स्मार्टफोन र बैङ्किङ एप्लिकेसनहरूको प्रयोग गरी पैसा स्थानान्तरण गर्ने प्रक्रिया नै डिजिटल वा अनलाइन भुक्तानी हो। यसले व्यापार व्यवसायलाई तीव्रता दिने, समय र जनशक्तिको बचत गर्ने, र वित्तीय पारदर्शिता कायम गर्ने हुँदा यसलाई आधुनिक अर्थतन्त्रको मेरुदण्ड मानिन्छ। तर, यसको प्रयोगसँगै बढ्दै गएको साइबर अपराध, ह्याकिङ, र डिजिटल साक्षरताको कमी जस्ता सुरक्षा चुनौतीहरूले यसको दिगो विकासमा ठुलो धक्का पुर्‍याएका छन्। यी चुनौतीहरूलाई न्यूनीकरण गर्न राज्य, वित्तीय संस्था र उपभोक्ता स्वयम्को सचेतना र सहकार्य अपरिहार्य छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+
+                <ul>
+                    <li><strong>उपभोक्ताको तहमा अपनाउनुपर्ने सुरक्षा अभ्यास:</strong>
+                        <ul>
+                            <li><strong>बलियो पासवर्ड र नियमित परिवर्तन:</strong> प्रयोगकर्ताहरूले आफ्ना मोबाइल बैङ्किङ र डिजिटल वालेटमा सजिलै अनुमान गर्न नसकिने (अक्षर, विशेष सङ्केत र सङ्ख्याको सम्मिश्रण भएको) पासवर्ड राख्नुपर्छ। पासवर्डहरू नियमित अन्तरालमा परिवर्तन गर्ने र सुरक्षित राख्न विश्वसनीय पासवर्ड म्यानेजरको प्रयोग गर्नुपर्छ।</li>
+                            <li><strong>ओटीपी (OTP) र पिन (PIN) को गोपनीयता:</strong> कारोबार प्रमाणीकरणका लागि आउने ६ अङ्कको ओटीपी र पैसा पठाउने ट्रान्जेक्सन पिन कहिल्यै पनि कुनै व्यक्ति, सन्देश वा शङ्कास्पद फोन कलमा सेयर गर्नु हुँदैन।</li>
+                            <li><strong>निजी उपकरण र इन्टरनेटको प्रयोग:</strong> बैङ्किङ कारोबारका लागि आफ्नै व्यक्तिगत मोबाइल वा ल्यापटप मात्र प्रयोग गर्ने। होटल वा कलेजका सार्वजनिक वाई-फाई (Public Wi-Fi) मार्फत आर्थिक कारोबार नगर्ने, किनकि यसमा डाटाहरू सजिलै ट्र्याक हुन सक्छन्।</li>
+                            <li><strong>छुट्टै इमेल र एपको आधिकारिकता:</strong> आर्थिक कारोबारका लागि मात्र एउटा छुट्टै सुरक्षित इमेल ठेगाना प्रयोग गर्ने र एपहरू डाउनलोड गर्दा आधिकारिक स्टोर (Play Store/App Store) बाट मात्र डाउनलोड गर्ने।</li>
+                        </ul>
+                    </li>
+                    <li><strong>बैङ्क तथा वित्तीय संस्थाको भूमिका:</strong> वित्तीय संस्थाहरूले आफ्ना डिजिटल एप्लिकेसनहरूमा बहु-तह सुरक्षा (Multi-factor Authentication) प्रणाली लागू गर्नुपर्छ। ग्राहकका विवरणहरू गुप्तिकरण (Encryption) गरी सुरक्षित राख्नुपर्छ। समय-समयमा आउने प्राविधिक त्रुटि (Technical Glitches) हरूलाई तुरुन्त हल गर्ने र ग्राहकको पैसा अड्किएमा २४ घण्टाभित्र फिर्ता हुने संयन्त्र बनाउनुपर्छ।</li>
+                    <li><strong>राज्य र कानुनी पक्ष:</strong> राज्यले विद्युतीय कारोबार ऐनलाई प्रभावकारी रूपमा कार्यान्वयन गरी साइबर अपराधीहरूलाई कडा सजाय र जरिवाना तिराउने व्यवस्था गर्नुपर्छ। दुर्गम क्षेत्रहरूमा इन्टरनेट पूर्वाधारको विकास र नागरिकहरूमा डिजिटल साक्षरता अभियान सञ्चालन गरी प्रविधिको न्यायोचित पहुँच सुनिश्चित गर्नुपर्छ।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपाली समाजमा केही समय अगाडि एकजना सेवानिवृत्त सरकारी शिक्षक रामलाल (नाम परिवर्तन) को घटनालाई लिन सकिन्छ। उहाँले आफ्नो निवृत्तिभरण (पेन्सन) को रकम बैङ्कबाट निकाल्न र घरायसी बिलहरू तिर्न मोबाइल बैङ्किङ एप सुरु गर्नुभएको थियो। एक दिन उहाँलाई कतैबाट अज्ञात फोन आयो र भनियो, <em>"हामी बैङ्कबाट बोलेका हौँ, तपाईँको खाता ब्लक हुन लागेको छ, खाता सञ्चालन गर्न तपाईँको मोबाइलमा आएको ओटिपि (OTP) भन्नुहोस्।"</em> प्रविधिसम्बन्धी पर्याप्त ज्ञान (डिजिटल साक्षरता) नभएका कारण रामलालले सजिलै सो ओटीपी कोड फोनमा बताउनुभयो र केही मिनेटमै उहाँको खातामा रहेको जीवनभरको कमाइ ५ लाख रुपैयाँ चोरी भयो। यदि रामलालले यो क्याप्सुल नोटमा उल्लिखित <strong>"सुरक्षित अनलाइन भुक्तानीका नियमहरू"</strong> जस्तै- ओटीपी र पिन कसैलाई नभन्ने र शङ्कास्पद कलहरूमा विश्वास नगर्ने जीवनोपयोगी सीप सिक्नुभएको भए उहाँ यो ठुलो आर्थिक क्षति र मानसिक तनावबाट बच्नुहुने थियो। यो उदाहरणले देखाउँछ कि उपभोक्ता सचेतना नै साइबर सुरक्षाको सबैभन्दा बलियो जग हो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> डिजिटल भुक्तानी प्रणाली आधुनिक विश्व र नेपालको समृद्धि तथा वित्तीय पारदर्शिताका लागि एक बरदान साबित भइसकेको छ। यसले हाम्रो श्रम र समय बचाएर जीवनलाई अत्यन्तै सहज र सुविधायुक्त त बनाएको छ, तर यससँगै जोडिएर आउने साइबर अपराध र प्राविधिक जोखिमहरू निकै भयावह छन्। तसर्थ, अनलाइन भुक्तानीलाई सुरक्षित बनाउन राज्यले कडा साइबर सुरक्षा नीति र पूर्वाधारको विकास गर्नुपर्छ भने वित्तीय संस्थाहरूले प्रविधिलाई अझ अभेद्य बनाउनुपर्छ। सबैभन्दा महत्त्वपूर्ण कुरा, नागरिक स्वयम्ले यस पाठमा सिकेका सुरक्षित डिजिटल व्यवहार र जीवनोपयोगी सीपहरूलाई आफ्नो दैनिक अभ्यासमा लागू गर्नुपर्छ। बहुपक्षीय र एकीकृत सचेतनाबाट मात्र आधुनिक डिजिटल अर्थतन्त्रलाई सुरक्षित र समृद्ध बनाउन सकिन्छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1565C0; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> डिजिटल भुक्तानीको सुरक्षा पूर्ण रूपमा प्रयोगकर्ताको सचेतनामा निर्भर हुन्छ। ओटीपी, पिन र पासवर्ड कहिल्यै पनि कसैलाई नभन्नुहोस्। सार्वजनिक वाई-फाईबाट बैङ्किङ कारोबार नगर्नुहोस् र आफ्नै उपकरण प्रयोग गर्नुहोस्। सुरक्षित डिजिटल अभ्यास नै आधुनिक आर्थिक सुरक्षाको पहिलो सर्त हो।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ २, पाठ ३</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
