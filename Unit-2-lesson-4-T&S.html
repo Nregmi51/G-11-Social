@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ २, पाठ ४ – इन्टरनेटबाट सूचना खोजी र प्रयोग (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f5faf0;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #6a8c2a;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #6a8c2a;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8f0e0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c8a0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #6a8c2a;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #6a8c2a;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #B8F45D;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #9fd44a;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #0b2b4a;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #0b2b4a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #0b2b4a;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        .toc-grid a:hover i {
+            color: #ffffff;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #B8F45D ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            background: #B8F45D;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(184, 244, 93, 0.40);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #0b2b4a;
+        }
+
+        .section-head .mark-badge {
+            color: #0b2b4a;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #ffffff; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #4a6a1a;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #B8F45D;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #6a8c2a;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #4a6a1a;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #6a8c2a;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #B8F45D;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.green-light {
+            border-left-color: #B8F45D;
+            background: #f0f8e8;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c8a0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c8a0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #B8F45D;
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8f0e0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #b8c8a0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #B8F45D;
+        }
+
+        .qa-block.color1 { border-left-color: #B8F45D; background: #f0f8e8; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #6a8c2a;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #4a6a1a;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #B8F45D;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #f0f8e8;
+            border-radius: 20px;
+            border: 2px dashed #B8F45D;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #B8F45D;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- POSTER BOX ----- */
+        .poster-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 3px double #B8F45D;
+            margin: 12px 0;
+            text-align: center;
+        }
+
+        .poster-box .poster-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.2rem;
+        }
+
+        .poster-box .poster-sub {
+            font-weight: 600;
+            color: #4a6a1a;
+            font-size: 1.05rem;
+        }
+
+        .poster-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+            line-height: 2;
+        }
+
+        .poster-box .slogan {
+            font-weight: 800;
+            color: #0b2b4a;
+            background: #f0f8e8;
+            padding: 4px 16px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 6px 0;
+        }
+
+        /* ----- DIALOGUE BOX ----- */
+        .dialogue-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .dialogue-box .dialogue-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .dialogue-box .speaker {
+            font-weight: 700;
+            color: #4a6a1a;
+        }
+
+        .dialogue-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+            line-height: 2;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #6a8c2a;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(106, 140, 42, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #4a6a1a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(106, 140, 42, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #6a8c2a;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c8a0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #B8F45D;
+            color: #0b2b4a;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #0b2b4a;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .dialogue-box p {
+                font-size: 1.02rem;
+            }
+            .poster-box p {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-search"></i>
+                    एकाइ २, पाठ ४: इन्टरनेटबाट सूचना तथा अध्ययन सामग्रीको खोजी र प्रयोग
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ २, पाठ ४
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> वर्ल्डवाइड वेब (Worldwide Web - WWW)</strong>
+                <p>इन्टरनेटको माध्यमबाट पहुँच प्राप्त गर्न सकिने, अन्तरसम्बन्धित वेब पानाहरू (Web Pages) र डिजिटल सूचना वा सामग्रीहरूको विश्वव्यापी विशाल भण्डार वा सञ्जाललाई वर्ल्डवाइड वेब भनिन्छ <span class="ref">[२४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> सर्च इन्जिन (Search Engine)</strong>
+                <p>वर्ल्डवाइड वेबमा रहेका अथाह सूचना र सामग्रीहरूमध्ये प्रयोगकर्तालाई चाहिएको विशिष्ट जानकारी खोज्न मद्दत गर्ने सफ्टवेयर वा वेब-आधारित प्रणाली (जस्तै: Google, Bing, Yahoo) लाई सर्च इन्जिन भनिन्छ <span class="ref">[२४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> मूल शब्द (Keyword)</strong>
+                <p>इन्टरनेट वा सर्च इन्जिनमा कुनै पनि विषयको जानकारी वा सामग्री खोज्नका लागि सर्च बक्स (Search Box) मा टाइप गरिने मुख्य, अर्थपूर्ण र विशिष्ट शब्द वा शब्दावलीलाई मूल शब्द भनिन्छ <span class="ref">[२४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> ट्रङ्केसन (Truncation)</strong>
+                <p>सर्च इन्जिनमा खोजीको दायरा फराकिलो बनाउन मूल शब्दको अन्त्यमा विशेष चिह्न (प्रायः तारा चिह्न `*`) प्रयोग गरी सो शब्दसँग मिल्दाजुल्दा वा सोबाट बन्ने सबै शब्दहरू एकै पटक खोज्ने प्राविधिक उपलब्धिलाई ट्रङ्केसन भनिन्छ <span class="ref">[२४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> युआरएल (Uniform Resource Locator - URL)</strong>
+                <p>इन्टरनेटको सञ्जालमा रहेको कुनै पनि विशिष्ट वेबसाइट, वेब पेज वा डिजिटल फाइलको निश्चित र अद्वितीय ठेगानालाई युआरएल (URL) भनिन्छ (जस्तै: `www.moecdc.gov.np`) <span class="ref">[२५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> उद्धरण (Citation)</strong>
+                <p>इन्टरनेट वा पुस्तकबाट कुनै पनि अध्ययन सामग्री वा सूचना आफ्नो अनुसन्धान वा लेखमा प्रयोग गर्दा उक्त सूचनाको वास्तविक स्रोत, लेखक र प्रकाशन मितिलाई कानुनी तथा बौद्धिक रूपमा दिइने प्राज्ञिक श्रेय वा प्रमाणलाई उद्धरण भनिन्छ <span class="ref">[२५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> गैरनाफामूलक वेबसाइट (Non-profit Website)</strong>
+                <p>व्यापारिक वा आर्थिक लाभ आर्जन गर्ने उद्देश्य नराखी विशुद्ध सेवा, शिक्षा, सूचना वा अनुसन्धानका लागि सञ्चालन गरिएका वेबसाइटहरू (प्रायः डोमेनको अन्त्यमा `.org`, `.edu`, `.gov` हुने) लाई गैरनाफामूलक वेबसाइट भनिन्छ <span class="ref">[२५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> सर्च बक्स (Search Box)</strong>
+                <p>सर्च इन्जिन वा ब्राउजरको गृहपृष्ठ (Homepage) मा प्रयोगकर्ताले आफूलाई चाहिएको विषयको मूल शब्द (Keyword) टाइप गर्नका लागि उपलब्ध गराइएको खाली कोठा वा टेक्स्ट प्रविष्ट गर्ने ठाउँलाई सर्च बक्स भनिन्छ <span class="ref">[२४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> विश्वसनीयता मूल्याङ्कन (Reliability Evaluation)</strong>
+                <p>इन्टरनेटमा भेटिएका अथाह सूचनाहरू सत्य, तथ्यपरक, आधिकारिक र प्रामाणिक छन् वा छैनन् भनी विभिन्न आधारहरूमा जाँच गर्ने बौद्धिक प्रक्रियालाई विश्वसनीयता मूल्याङ्कन भनिन्छ <span class="ref">[२५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> डिजिटल सीप (Digital Skill)</strong>
+                <p>सूचना प्रविधिको युगमा डिजिटल उपकरणहरू, इन्टरनेट, एप्लिकेसनहरू र सर्च इन्जिनको सुरक्षित, प्रभावकारी, नैतिक र उत्तरदायी प्रयोग गरी ज्ञान प्राप्त गर्ने, सिर्जना गर्ने र सञ्चार गर्ने कार्यगत क्षमतालाई डिजिटल सीप भनिन्छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "इन्टरनेटबाट सूचना खोजी र प्रयोग" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. WWW र सर्च इन्जिन -->
+        <div class="sub-head"><i class="fas fa-globe"></i> १. वर्ल्डवाइड वेब (WWW) र सर्च इन्जिनको अवधारणा</div>
+
+        <div class="content-box green-light">
+            <p>इन्टरनेटको प्रादुर्भावसँगै विश्वभरिका ज्ञान र सूचनालाई एकै ठाउँमा एकीकृत गर्ने काम वर्ल्डवाइड वेब (WWW) ले गरेको छ <span class="ref">[२४]</span>। यो सूचना र ज्ञानको महासागर हो <span class="ref">[२४]</span>। यस महासागरबाट आफूलाई आवश्यक पर्ने विशिष्ट सामग्रीहरू छान्नका लागि <strong>सर्च इन्जिन</strong> को विकास भएको हो <span class="ref">[२४]</span>।</p>
+            <ul>
+                <li><strong>लोकप्रिय सर्च इन्जिनहरू:</strong> गुगल (Google), याहु (Yahoo), आस्क डट कम (Ask.com), एमएसएन (MSN), बिङ (Bing), एबाउट (About) आदि <span class="ref">[२४]</span>।</li>
+                <li><strong>नेपालमा लोकप्रियता:</strong> नेपालमा सबैभन्दा बढी प्रयोग गरिने र लोकप्रिय सर्च इन्जिन गुगल (Google) हो <span class="ref">[२४]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- २. १२ खोजी तरिकाहरू -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> २. इन्टरनेटमा सामग्री खोजी गर्ने उत्कृष्ट १२ तरिकाहरू (Search Techniques)</div>
+
+        <div class="content-box blue-light">
+            <p>सर्च इन्जिनको सही र प्रभावकारी प्रयोग गर्नका लागि प्रयोगकर्तासँग विशिष्ट डिजिटल खोज सीप हुन आवश्यक छ <span class="ref">[२४]</span>। पाठ्यपुस्तकका अनुसार प्रभावकारी खोजीका १२ वटा चरणबद्ध तरिकाहरू निम्न छन् <span class="ref">[२४]</span>:</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">१. आवश्यक सामग्रीको मूल शब्द Keyword पहिचान</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">२. सर्च बक्समा टाइप गरी Enter थिच्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">३. उचित ट्याबहरू Images, Videos, News आदि प्रयोग</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">४. प्राप्त नतिजाहरूमा स्क्रोल गरी हेर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">५. सूचनाको विश्वसनीयता मूल्याङ्कन गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">६. आफूलाई चाहिएको आधिकारिक लिङ्कमा क्लिक गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">७. ट्रङ्केसन - `*` को प्रयोग गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">८. अनावश्यक शब्द हटाउन माइनस `-` चिह्नको प्रयोग</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">९. निश्चित वाक्यांशका लागि Double Quotes `""`</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">१०. नतिजा सन्तोषजनक नभए Keyword परिवर्तन</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">११. पर्यायवाची वा सम्बन्धित शब्दहरू प्रयोग</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">१२. वैकल्पिक सर्च इन्जिनहरूको प्रयोग</div>
+            </div>
+
+            <p><strong>खोजीका विशिष्ट प्रविधिहरू (Advanced Search Tips):</strong></p>
+            <ul>
+                <li><strong>ट्रङ्केसन (Truncation - `*`):</strong> मूल शब्दको पछाडि तारा चिह्न लगाउँदा सो शब्दको मूल धातुबाट बन्ने सबै रूपहरू खोजिन्छन् <span class="ref">[२४]</span>। उदाहरणका लागि: <code>Quali*</code> टाइप गर्दा <code>Qualify</code>, <code>Qualification</code>, <code>Qualified</code> आदि सबै खोज परिणाममा देखा पर्छन् <span class="ref">[२४]</span>।</li>
+                <li><strong>माइनस चिह्न (Minus `-`):</strong> खोजीबाट कुनै निश्चित शब्द हटाउनका लागि यसको प्रयोग गरिन्छ <span class="ref">[२४]</span>। जस्तै: नेपाली वनस्पति खोज्दा सल्ला बाहेकको खोज्नु परेमा <code>Nepal forest -pine</code> टाइप गर्न सकिन्छ <span class="ref">[२४]</span>।</li>
+                <li><strong>उद्धरण चिह्न (Double Quotes `""`):</strong> निश्चित वा हुबहु वाक्यांश खोज्नका लागि उद्धरण चिह्न प्रयोग गरिन्छ <span class="ref">[२४]</span>। जस्तै: <code>"Life skills education in Nepal"</code> टाइप गर्दा सोही क्रममा रहेका शब्दहरू मात्र खोजिन्छन् <span class="ref">[२४]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ३. विश्वसनीयता मूल्याङ्कनका ५ आधार -->
+        <div class="sub-head"><i class="fas fa-check-circle"></i> ३. इन्टरनेटमा प्राप्त सूचनाको विश्वसनीयता मूल्याङ्कनका ५ आधारहरू</div>
+
+        <div class="content-box purple-light">
+            <p>इन्टरनेटमा जोकोहीले पनि सामग्री राख्न सक्ने भएकाले त्यहाँ प्राप्त हुने सबै सूचनाहरू सत्य र विश्वसनीय हुँदैनन् <span class="ref">[२५]</span>। तसर्थ, सूचनाको मूल्याङ्कन गर्न देहायका ५ आधारहरू अपनाउनुपर्छ <span class="ref">[२५]</span>:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: विश्वसनीयता मूल्याङ्कनका ५ आधारहरू <span class="ref">[२५]</span></div>
+                <table>
+                    <thead>
+                        <tr><th style="width:15%;">क्र.सं.</th><th style="width:20%;">मूल्याङ्कनको आधार</th><th style="width:65%;">विस्तृत व्याख्या र प्राज्ञिक दृष्टिकोण</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>१</strong></td>
+                            <td><strong>URL को आधार</strong></td>
+                            <td>वेबसाइटको डोमेन एक्सटेन्सन हेर्ने। सरकारी निकायको <code>.gov</code>, शैक्षिक संस्थाको <code>.edu</code> र गैरनाफामूलक संस्थाको <code>.org</code> लाई व्यावसायिक प्रयोजनको <code>.com</code> भन्दा बढी विश्वसनीय मानिन्छ <span class="ref">[२५]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>२</strong></td>
+                            <td><strong>लेखकको आधार</strong></td>
+                            <td>सामग्री लेख्ने व्यक्तिको नाम, योग्यता, पद र आबद्ध संस्थाको परिचय खुलाइएको छ भने उक्त सामग्री बढी आधिकारिक र विश्वसनीय हुन्छ <span class="ref">[२५]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>३</strong></td>
+                            <td><strong>वेबसाइटको उद्देश्य</strong></td>
+                            <td>वेबसाइट स्थापनाको उद्देश्य व्यापारिक (सामग्री बेच्ने वा भ्रम छर्ने) भन्दा प्राज्ञिक, सूचनामूलक वा गैरनाफामूलक भएमा सूचनाको विश्वसनीयता उच्च रहन्छ <span class="ref">[२५]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>४</strong></td>
+                            <td><strong>उद्धरण (Citation)</strong></td>
+                            <td>यदि उक्त लेख वा सामग्रीलाई अन्य अनुसन्धानकर्ताहरूले आफ्नो लेखमा बढी उद्धरण (Cite) गरेका छन् भने त्यसलाई प्राज्ञिक रूपमा बढी आधिकारिक मानिन्छ <span class="ref">[२५]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>५</strong></td>
+                            <td><strong>समय (Recency)</strong></td>
+                            <td>सूचना कहिले प्रकाशित वा नवीकरण (Update) भएको हो भनी समय जाँच्नुपर्छ। पुराना सामग्रीभन्दा नयाँ वा हालसालै परिमार्जन गरिएका सामग्रीहरू बढी सान्दर्भिक हुन्छन् <span class="ref">[२५]</span>।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप (क): पोस्टर -->
+        <div class="sub-head"><i class="fas fa-poster"></i> क्रियाकलाप (क): सर्च इन्जिनका फाइदाहरू समेटिएको एउटा आकर्षक डिजिटल पोष्टर</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#6a8c2a; margin-right:8px;"></i> प्रश्न:</p>
+            <p>सर्च इन्जिनका फाइदाहरू समेटिएको एउटा आकर्षक डिजिटल पोष्टरको सिर्जनात्मक ढाँचा र मुख्य सचेतनामूलक नाराहरू।</p>
+        </div>
+
+        <div class="poster-box">
+            <p class="poster-title"><i class="fas fa-globe" style="color:#6a8c2a;"></i> 🌐 डिजिटल ज्ञानको सारथ्य: सर्च इन्जिन 🌐</p>
+            <p style="font-size:0.95rem; color:#6a6a6a;">[चित्र: गुगल, बिङ र याहुको सन्तुलित लोगोहरू र इन्टरनेटको विश्वव्यापी सञ्जाल]</p>
+
+            <p class="poster-sub">📌 सर्च इन्जिनका ५ प्रमुख बरदानहरू:</p>
+            <p>१. अथाह ज्ञानमा द्रुत पहुँच (Quick Access to Global Information)</p>
+            <p>२. समय र श्रमको बचत (Saving of Valuable Time and Labor)</p>
+            <p>३. अनलाइन सिकाइ र शैक्षिक सामग्रीको उपलब्धता (E-Learning support)</p>
+            <p>४. खोज तथा अनुसन्धानमा सहजता (Assistance in Research)</p>
+            <p>५. बहुपक्षीय सूचनाको तुलनात्मक अध्ययनको अवसर (Comparative Study)</p>
+
+            <hr style="border-top:2px dashed #b8c8a0; margin:10px 0;">
+
+            <p class="slogan">💡 "सर्च इन्जिनको सही खोजी सीप र विवेकपूर्ण प्रयोग नै डिजिटल साक्षरता हो!"</p>
+            <p class="slogan" style="background:#fef8ee;">"आँखा चिम्लेर नगरौँ विश्वास, युआरएल जाँच्ने गरौँ अभ्यास"</p>
+        </div>
+
+        <!-- क्रियाकलाप (ख): संवाद -->
+        <div class="sub-head"><i class="fas fa-comment-dots"></i> क्रियाकलाप (ख): सुरक्षित खोजीबारे संवाद (Dialogue)</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#6a8c2a; margin-right:8px;"></i> प्रश्न:</p>
+            <p>इन्टरनेट र सर्च इन्जिन प्रयोग गर्दा ध्यान दिनुपर्ने कुराहरू र सुरक्षित खोजीबारे दुई साथी (सिर्जना र प्रज्वल) बीचको एउटा उत्कृष्ट तथा जानकारीमूलक संवाद (Dialogue)।</p>
+        </div>
+
+        <div class="dialogue-box">
+            <p class="dialogue-title"><i class="fas fa-pen-fancy" style="color:#6a8c2a; margin-right:8px;"></i> संवाद: सिर्जना र प्रज्वल</p>
+
+            <p><span class="speaker">सिर्जना:</span> प्रज्वल, नमस्कार! तिमी सामाजिक अध्ययनको परियोजना कार्यका लागि के गर्दैछौ?</p>
+            <p><span class="speaker">प्रज्वल:</span> नमस्कार सिर्जना! म इन्टरनेटबाट 'नेपालमा जलविद्युत्को सम्भावना' विषयमा सामग्री खोज्दैछु। तर गुगलमा यति धेरै जानकारी आयो कि कुन सही हो र कुन गलत, छुट्ट्याउनै गाह्रो भयो।</p>
+            <p><span class="speaker">सिर्जना:</span> हो प्रज्वल, इन्टरनेट सूचनाको महासागर त हो तर यहाँ भेटिने सबै कुरा विश्वसनीय हुँदैनन् <span class="ref">[२४, २५]</span>। हामीसँग इन्टरनेटबाट सामग्री खोज्ने र त्यसलाई मूल्याङ्कन गर्ने सही 'खोज सीप' हुनुपर्छ <span class="ref">[२४, २५]</span>।</p>
+            <p><span class="speaker">प्रज्वल:</span> खोज सीप भनेको के हो सिर्जना? गुगलको सर्च बक्समा लेखेर खोज्नु बाहेक अरू पनि तरिकाहरू हुन्छन् र?</p>
+            <p><span class="speaker">सिर्जना:</span> अवश्य हुन्छन् नि! उदाहरणका लागि, तिमीले निश्चित वाक्यांश खोज्नका लागि 'उद्धरण चिह्न' अर्थात् Double Quotes <code>""</code> प्रयोग गर्न सक्छौ <span class="ref">[२४]</span>। जस्तै: <code>"Hydroelectricity potential in Nepal"</code> लेखेर खोज्यौ भने गुगलले यी शब्दहरू सँगै भएका पानाहरू मात्र देखाउँछ <span class="ref">[२४]</span>।</p>
+            <p><span class="speaker">प्रज्वल:</span> ओहो! यो त निकै सजिलो आइडिया रहेछ। अनि मिल्दाजुल्दा सबै शब्दहरू एकै पटक खोज्नु परेमा नि?</p>
+            <p><span class="speaker">सिर्जना:</span> त्यसका लागि 'ट्रङ्केसन' (Truncation) को प्रयोग गर्न सकिन्छ <span class="ref">[२४]</span>। शब्दको पछाडि तारा चिह्न <code>*</code> थपेर खोज्दा त्यसको मूल रूपबाट बन्ने सबै शब्द खोजिन्छन् <span class="ref">[२४]</span>। जस्तै: <code>Hydro*</code> लेख्दा <code>Hydroelectric</code>, <code>Hydropower</code>, <code>Hydrology</code> आदि सबै आउँछन् <span class="ref">[२४]</span>।</p>
+            <p><span class="speaker">प्रज्वल:</span> अनि हामीले कुन जानकारी विश्वसनीय छ भनेर कसरी थाहा पाउने त?</p>
+            <p><span class="speaker">सिर्जना:</span> त्यसका लागि हामीले मुख्यतया ५ वटा कुरामा ध्यान दिनुपर्छ <span class="ref">[२५]</span>। पहिलो त वेबसाइटको युआरएल (URL) हेर्ने <span class="ref">[२५]</span>। सरकारी निकायको <code>.gov</code> वा शैक्षिक संस्थाको <code>.edu</code> वा संस्थागत <code>.org</code> भएका वेबसाइटका सामग्री व्यावसायिक <code>.com</code> भन्दा बढी भरपर्दा हुन्छन् <span class="ref">[२५]</span>।</p>
+            <p><span class="speaker">प्रज्वल:</span> ए! अनि दोस्रो नि?</p>
+            <p><span class="speaker">सिर्जना:</span> दोस्रो, लेखकको परिचय र आबद्धता जाँच्ने <span class="ref">[२५]</span>। तेस्रो, वेबसाइटको उद्देश्य नाफामूलक हो कि प्राज्ञिक, त्यो बुझ्ने <span class="ref">[२५]</span>। चौथो, उक्त सामग्रीलाई अन्य अनुसन्धानकर्ताले उद्धरण (Citation) गरेका छन् कि छैनन् हेर्ने र पाँचौँ, सामग्री कत्तिको नयाँ वा अपडेटेड छ भनी प्रकाशन मिति हेर्ने <span class="ref">[२५]</span>।</p>
+            <p><span class="speaker">प्रज्वल:</span> तिमीले त मलाई ठुलो सीप सिकायौ, सिर्जना! अब म यी कुराहरू ध्यानमा राखेर सुरक्षित र विश्वसनीय खोजी गर्छु। धेरै-धेरै धन्यवाद!</p>
+            <p><span class="speaker">सिर्जना:</span> तिमीलाई पनि धन्यवाद प्रज्वल! राम्रोसँग परियोजना कार्य पूरा गर।</p>
+        </div>
+
+        <!-- क्रियाकलाप (ग): व्यावहारिक उदाहरण -->
+        <div class="sub-head"><i class="fas fa-project-diagram"></i> क्रियाकलाप (ग): व्यावहारिक खोजीको उदाहरण</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#6a8c2a; margin-right:8px;"></i> प्रश्न:</p>
+            <p>विद्यार्थीले शैक्षिक प्रयोजनका लागि गुगल सर्च इन्जिनको प्रयोग गरी 'नेपालमा पर्यटन उद्योगको सम्भावना र चुनौती' विषयक अध्ययन सामग्री खोजेको र त्यसलाई आफ्नो सामाजिक अध्ययनको परियोजना कार्यमा प्रयोग गरेको एक व्यावहारिक उदाहरण।</p>
+        </div>
+
+        <div class="content-box orange-light">
+            <p><strong>विद्यार्थीको नाम:</strong> सुप्रिम पराजुली</p>
+            <p><strong>कक्षा:</strong> ११ (विज्ञान र प्रविधि समूह)</p>
+            <p><strong>परियोजनाको विषय:</strong> नेपालमा पर्यटन उद्योगको सम्भावना र चुनौती</p>
+
+            <p><strong>व्यावहारिक खोजीको चरणबद्ध विवरण:</strong></p>
+            <ol>
+                <li><strong>मूल शब्द (Keyword) पहिचान:</strong> सुरुमा मैले पर्यटनको सम्भावना र चुनौती बुझ्नका लागि <code>"Tourism potential in Nepal"</code>, <code>"Challenges of Nepalese tourism industry"</code>, र <code>"Nepal tourism statistics .gov.np"</code> जस्ता विशिष्ट मूल शब्दहरू तयार गरेँ <span class="ref">[२४]</span>।</li>
+                <li><strong>सर्च इन्जिनको छनोट:</strong> मैले संसारकै सबैभन्दा लोकप्रिय र द्रुत सर्च इन्जिन <strong>Google</strong> को प्रयोग गरेँ <span class="ref">[२४]</span>।</li>
+                <li><strong>सर्च प्रविधिको प्रयोग:</strong>
+                    <ul>
+                        <li>हुबहु वाक्यांश खोज्नका लागि गुगलमा <code>"Tourism development challenges in Nepal"</code> (डबल कोटसहित) टाइप गरेर खोजी गरेँ <span class="ref">[२४]</span>।</li>
+                        <li>नेपाल सरकारको आधिकारिक तथ्याङ्क पाउनका लागि संस्कृति, पर्यटन तथा नागरिक उड्डयन मन्त्रालयको वेबसाइट खोज्न <code>Nepal tourism data filetype:pdf</code> प्रयोग गरेँ, जसले गर्दा सिधै सरकारी प्रतिवेदनहरू (PDF) प्राप्त भए <span class="ref">[२४, २५]</span>।</li>
+                    </ul>
+                </li>
+                <li><strong>विश्वसनीयता मूल्याङ्कन:</strong>
+                    <ul>
+                        <li>मैले नेपाल पर्यटन बोर्डको आधिकारिक युआरएल <code>.gov.np</code> भएको वेबसाइटबाट तथ्याङ्क लिएँ, जुन सरकारी र आधिकारिक थियो <span class="ref">[२५]</span>।</li>
+                        <li>सन् २०२४ र २०२५ का प्रतिवेदनहरू मात्र छनोट गरेँ ताकि तथ्याङ्कहरू नयाँ र सान्दर्भिक होउन् <span class="ref">[२५]</span>।</li>
+                    </ul>
+                </li>
+                <li><strong>परियोजना कार्यमा प्रयोग:</strong> यसरी प्राप्त भएको भरपर्दो सूचनालाई वर्गीकरण गरी नेपालमा धार्मिक, साहसिक र सांस्कृतिक पर्यटनको सम्भावनाका बुँदाहरू र सडक पूर्वाधारको कमी, कमजोर हवाई सुरक्षा र फोहोरमैला व्यवस्थापन जस्ता चुनौतीहरू समेटी परियोजना प्रतिवेदन तयार पारेँ। प्रतिवेदनको अन्त्यमा मैले सन्दर्भ सामग्रीको रूपमा नेपाल पर्यटन बोर्डको वेबसाइटको युआरएल उद्धरण (Citation) गरेँ <span class="ref">[२५]</span>।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> सर्च इन्जिन भनेको के हो? यसको महत्त्व उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> वर्ल्डवाइड वेब (WWW) मा रहेका अथाह डिजिटल सूचना र जानकारीहरूको विशाल भण्डार वा सञ्जालबाट प्रयोगकर्तालाई आवश्यक पर्ने विशिष्ट सामग्रीहरू मूल शब्द (Keyword) को आधारमा द्रुत गतिमा खोजेर उपलब्ध गराउने वेब-आधारित सफ्टवेयर वा प्रणालीलाई <strong>सर्च इन्जिन</strong> भनिन्छ <span class="ref">[२४]</span>। गुगल, बिङ र याहु यसका प्रमुख उदाहरणहरू हुन् <span class="ref">[२४]</span>।</p>
+
+                <p><strong>२१औँ शताब्दीको ज्ञानमा आधारित समाजमा सर्च इन्जिनको महत्त्व:</strong></p>
+                <ol>
+                    <li><strong>द्रुत सूचना प्राप्ति:</strong> यसले संसारभरिको ज्ञान र सूचनालाई केही सेकेन्डमै प्रयोगकर्ताको स्क्रिनमा उपलब्ध गराउँछ <span class="ref">[२४]</span>।</li>
+                    <li><strong>अध्ययन र अनुसन्धानमा सहजता:</strong> विद्यार्थी, शिक्षक र अनुसन्धानकर्ताहरूका लागि आवश्यक पर्ने शोधपत्र, पुस्तक र लेखहरू सजिलै प्राप्त गर्न मद्दत गर्दछ <span class="ref">[२४]</span>।</li>
+                    <li><strong>समय र लागतको बचत:</strong> पुस्तकालय धाउने र भौतिक रूपमा पुस्तक खोज्ने समय र खर्चको बचत गरी घरमै बसेर नि:शुल्क ज्ञान आर्जन गर्न सकिन्छ <span class="ref">[२४]</span>।</li>
+                    <li><strong>निर्णय निर्माणमा सहयोग:</strong> विभिन्न विषयका तुलनात्मक तथ्य, तथ्याङ्क र समीक्षाहरू प्राप्त हुने भएकाले सही निर्णय लिन सहज हुन्छ।</li>
+                    <li><strong>खुला र आजीवन सिकाइ (Open & Lifelong Learning):</strong> जुनसुकै उमेरका व्यक्तिले पनि आफूलाई मन लागेको नयाँ सीप, प्रविधि र ज्ञान सर्च इन्जिनको सहयोगले सिक्न सक्छन्।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> कुनै दुई सर्च इन्जिनहरूको नाम लेखी तिनका विशेषताहरू लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> विश्वमा धेरै सर्च इन्जिनहरू सञ्चालनमा रहेका छन् <span class="ref">[२४]</span>। तीमध्ये सबैभन्दा लोकप्रिय र बढी प्रयोग हुने दुई सर्च इन्जिनहरूको नाम र तिनका प्रमुख विशेषताहरू निम्न बमोजिम छन् <span class="ref">[२४]</span>:</p>
+
+                <p><strong>१. गुगल (Google)</strong> — गुगल विश्वको सबैभन्दा बढी लोकप्रिय र शक्तिशाली सर्च इन्जिन हो <span class="ref">[२४]</span>।</p>
+                <ul>
+                    <li><strong>विशाल डेटाबेस र द्रुत गति:</strong> यसको वेब इन्डेक्सिङ क्षमता अत्यन्तै ठुलो छ र यसले सेकेन्डको दशौँ भागमा लाखौँ परिणामहरू देखाउन सक्छ।</li>
+                    <li><strong>अत्यधिक सान्दर्भिकता (PageRank Algorithm):</strong> प्रयोगकर्ताले खोजेको मूल शब्दसँग ठ्याक्कै मिल्ने र बढी उपयोगी वेबसाइटहरूलाई प्राथमिकताका साथ पहिलो पृष्ठमा देखाउँछ।</li>
+                    <li><strong>विशिष्ट सेवाहरूको एकीकरण:</strong> यसमा गुगल बक्सभित्रै इमेज, भिडियो, न्युज, म्याप, र गुगल ट्रान्सलेटर जस्ता सेवाहरू एकीकृत रूपमा उपलब्ध छन् <span class="ref">[२४]</span>।</li>
+                </ul>
+
+                <p><strong>२. बिङ (Bing)</strong> — बिङ माइक्रोसफ्ट (Microsoft) कम्पनीद्वारा विकास गरिएको र गुगलपछि संसारमा बढी प्रयोग गरिने सर्च इन्जिन हो <span class="ref">[२४]</span>।</p>
+                <ul>
+                    <li><strong>भिजुअल खोजीमा अब्बल (Visual Search):</strong> बिङको होमपेजमा दैनिक रूपमा सुन्दर पृष्ठभूमि चित्रहरू राखिएका हुन्छन् र यसले भिडियो तथा इमेज खोजीमा गुगल भन्दा बढी स्पष्ट र आकर्षक लेआउट प्रदान गर्दछ।</li>
+                    <li><strong>इन्टीग्रेटेड एआई (Copilot Integration):</strong> हाल यसमा माइक्रोसफ्टको कृत्रिम बौद्धिकता (AI) कोपाइलट जोडिएको छ, जसले प्रयोगकर्तालाई सिधै उत्तर र सारांश तयार पारिदिन्छ।</li>
+                    <li><strong>इमेज फिल्टरिङ:</strong> बिङमा फोटोहरू खोज्दा साइज, लेआउट, रङ र प्रकारका आधारमा फिल्टर गर्ने निकै सजिला विकल्पहरू हुन्छन्।</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (१ अङ्क भार)</div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">१.</span> इन्टरनेटको सन्दर्भमा 'WWW' को पूरा रूप के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> इन्टरनेटको सन्दर्भमा 'WWW' को पूरा रूप <strong>'Worldwide Web' (वर्ल्डवाइड वेब)</strong> हो <span class="ref">[२४]</span>।</div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">२.</span> ट्रङ्केसन (Truncation) भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> सर्च इन्जिनमा खोजीको दायरा फराकिलो बनाउन मूल शब्दको अन्त्यमा तारा चिह्न (<code>*</code>) प्रयोग गरी सो शब्दसँग मिल्दाजुल्दा सबै शब्दहरू एकै पटक खोज्ने प्रविधिलाई ट्रङ्केसन भनिन्छ <span class="ref">[२४]</span>।</div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">३.</span> सरकारी निकायका वेबसाइटहरूको विश्वसनीयता बढी हुनुको कारण के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> सरकारी निकायका वेबसाइटहरूको युआरएल (URL) को अन्त्यमा सुरक्षा र आधिकारिकता जनाउने <strong><code>.gov</code></strong> हुने भएकाले यस्ता सामग्री बढी विश्वसनीय हुन्छन् <span class="ref">[२५]</span>।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">४.</span> गुगल बाहेक प्रचलित अन्य दुई सर्च इन्जिनहरूको नाम लेख्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> गुगल बाहेक प्रचलित अन्य दुई सर्च इन्जिनहरू <strong>बिङ (Bing)</strong> र <strong>याहु (Yahoo)</strong> हुन् <span class="ref">[२४]</span>।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">५.</span> खोजीको क्रममा कुनै निश्चित शब्द हटाउन कुन गणितीय चिह्न प्रयोग गरिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> खोजीको क्रममा नचाहिने शब्द हटाउनका लागि मूल शब्दको अगाडि <strong>माइनस (<code>-</code>)</strong> चिह्न प्रयोग गरिन्छ <span class="ref">[२४]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तरहरू (५ अङ्क भार)</div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">१.</span> इन्टरनेटमा भेटिने सूचनाहरू आँखा चिम्लेर विश्वास गर्नु हुँदैन, किन? स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> वर्तमान समयमा इन्टरनेट सूचना र ज्ञानको प्रचुरता भएको माध्यम भए तापनि यसमा प्रवाह हुने सबै सामग्रीहरू आधिकारिक र तथ्यपरक हुँदैनन् <span class="ref">[२४, २५]</span>।</p>
+
+                <p><strong>मुख्य विश्लेषणात्मक बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>सम्पादन नियन्त्रणको अभाव:</strong> इन्टरनेटमा कसैको पनि कठोर सेन्सरसिप वा पूर्व-समीक्षा बिना जोकोहीले ब्लग, सामाजिक सञ्जाल वा वेबसाइटमार्फत सामग्रीहरू पोष्ट गर्न सक्छन्।</li>
+                    <li><strong>व्यापारिक स्वार्थ र भ्रम:</strong> धेरै वेबसाइटहरू विज्ञापन क्लिक गराउन र भ्युज बढाउनका लागि भ्रामक, अतिरञ्जित र 'क्लिकबेट' शीर्षकका सामग्रीहरू राख्ने गर्दछन्।</li>
+                    <li><strong>गलत तथा अपूर्ण सूचना:</strong> कतिपय वेबसाइटमा पुराना, असान्दर्भिक र नवीकरण नगरिएका तथ्याङ्कहरू हुन्छन्, जसले विद्यार्थी वा अनुसन्धानकर्तालाई गलत दिशामा लैजान सक्छ <span class="ref">[२५]</span>।</li>
+                    <li><strong>साइबर सङ्गठित झुटा प्रचारहरू:</strong> निश्चित विचार वा प्रोपागान्डा फैलाउनका लागि योजनाबद्ध रूपमा सामाजिक सञ्जाल र इन्टरनेटमा गलत सूचना (Misinformation) सम्प्रेषण गरिएका हुन्छन्।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, बौद्धिक र शैक्षिक प्रयोजनका लागि इन्टरनेटका सामग्री प्रयोग गर्नुपूर्व URL, लेखक र उद्धरण जस्ता आधारहरूमा यसको विश्वसनीयता अनिवार्य जाँच्नुपर्दछ <span class="ref">[२५]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">२.</span> सर्च इन्जिनमा प्रभावकारी खोजीका लागि ध्यान दिनुपर्ने प्रमुख पाँचवटा व्यावहारिक सीपहरू उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> इन्टरनेटमा अथाह सूचना भएकाले सही खोज सीपको अभावमा खोजेको सामग्री समयमै फेला पार्न सकिँदैन, जसका लागि उन्नत खोज विधिको ज्ञान हुन आवश्यक छ <span class="ref">[२४]</span>।</p>
+
+                <p><strong>मुख्य विश्लेषणात्मक बुँदाहरू:</strong></p>
+                <ol>
+                    <li><strong>विशिष्ट मूल शब्द (Specific Keyword):</strong> खोजी गर्दा <code>Nepal</code> जस्तो सामान्य शब्दको साटो <code>Nepal tourism development challenges 2024</code> जस्तो विशिष्ट र स्पष्ट मूल शब्द प्रयोग गर्नुपर्छ <span class="ref">[२४]</span>।</li>
+                    <li><strong>उद्धरण चिह्न (Double Quotes <code>""</code>):</strong> निश्चित र हुबहु वाक्यांश खोज्नका लागि <code>"Nepalese constitution 2072"</code> जस्तै उद्धरण चिह्नभित्र राखी खोज्ने बानी बसाल्नुपर्छ <span class="ref">[२४]</span>।</li>
+                    <li><strong>ट्रङ्केसन (Truncation) को प्रयोग:</strong> एउटै धातुबाट बन्ने धेरै शब्दहरू खोज्न शब्दको पछाडि <code>*</code> चिह्न (जस्तै: <code>educat*</code> ले <code>education</code>, <code>educational</code>, <code>educator</code> खोज्छ) प्रयोग गर्नुपर्छ <span class="ref">[२४]</span>।</li>
+                    <li><strong>अनावश्यक शब्दहरू हटाउने (Minus Operator):</strong> खोज परिणाममा नचाहिने विधा हटाउन माइनस चिह्न प्रयोग गर्नुपर्छ, जस्तै: <code>Apple -fruit</code> (यसले स्याउ फलफूल बाहेक एप्पल कम्पनीको जानकारी दिन्छ) <span class="ref">[२४]</span>।</li>
+                    <li><strong>फाइलको प्रकार फिल्टर गर्ने (Filetype option):</strong> शैक्षिक प्रतिवेदन वा पुस्तक खोज्दा <code>filetype:pdf</code> वा <code>filetype:ppt</code> थपेर खोजेमा सिधै आवश्यक ढाँचाको सामग्री फेला पर्छ।</li>
+                </ol>
+
+                <p><strong>निष्कर्ष:</strong> यी डिजिटल खोज सीपहरुको व्यावहारिक प्रयोगले विद्यार्थी र अनुसन्धानकर्ताको समय र श्रम दुवैको ठुलो बचत गराउँछ <span class="ref">[२४]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">३.</span> इन्टरनेटमा प्राप्त सूचनाको विश्वसनीयता मूल्याङ्कन गर्दा URL (Uniform Resource Locator) ले कसरी महत्त्वपूर्ण भूमिका खेल्छ? प्रस्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> इन्टरनेटमा लाखौँ वेबसाइटहरू सञ्चालनमा छन् र ती वेबसाइटहरूको प्रकृति र विश्वस्तताको स्तर पहिचान गर्ने सबैभन्दा सजिलो र पहिलो कडी नै तिनीहरूको युआरएल (URL) हो <span class="ref">[२५]</span>।</p>
+
+                <p><strong>मुख्य विश्लेषणात्मक बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>सरकारी (<code>.gov</code>):</strong> सरकारी वेबसाइटको युआरएलको अन्त्यमा <code>.gov</code> (नेपालको हकमा <code>.gov.np</code>) हुन्छ <span class="ref">[२५]</span>। यो नेपाल सरकार वा सम्बन्धित राष्ट्रको आधिकारिक निकायको वेबसाइट भएकाले यसमा राखिएका कानुन, नीति, निर्णय र तथ्याङ्कहरू १००% भरपर्दा र अकाट्य मानिन्छन् <span class="ref">[२५]</span>।</li>
+                    <li><strong>शैक्षिक (<code>.edu</code>):</strong> विश्वविद्यालय, विद्यालय वा अनुसन्धानमूलक शैक्षिक संस्थाहरूको युआरएलको अन्त्यमा <code>.edu</code> हुन्छ <span class="ref">[२५]</span>। यसमा प्राज्ञिक शोधपत्र, पाठ्यपुस्तक र अनुसन्धानका नतिजाहरू हुने भएकाले यो उच्च स्तरको बौद्धिक र प्रामाणिक मानिन्छ <span class="ref">[२५]</span>।</li>
+                    <li><strong>गैरनाफामूलक संस्था (<code>.org</code>):</strong> संयुक्त राष्ट्रसङ्घ वा अन्तर्राष्ट्रिय रेडक्रस जस्ता गैरसरकारी संस्थाको युआरएलमा <code>.org</code> हुन्छ <span class="ref">[२५]</span>। व्यापारिक फाइदाभन्दा सामाजिक हितका लागि स्थापित भएकाले यिनका प्रतिवेदनहरू बढी निष्पक्ष हुन्छन् <span class="ref">[२५]</span>।</li>
+                    <li><strong>व्यापारिक (<code>.com</code>):</strong> व्यावसायिक र नाफामूलक कम्पनीहरूको वेबसाइटको युआरएलमा <code>.com</code> हुन्छ <span class="ref">[२५]</span>। यिनीहरूको मुख्य उद्देश्य सामान बेच्ने वा प्रचार गर्ने हुने भएकाले कतिपय अवस्थामा सामग्रीहरू एकपक्षीय वा विज्ञापन प्रेरित हुन सक्छन् <span class="ref">[२५]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, कुनै पनि इन्टरनेटको सामग्री प्रयोग गर्दा त्यसको युआरएल (URL) एक्सटेन्सन हेरेर मात्र त्यसको प्राज्ञिक स्तर र सत्यताको मापन गर्नुपर्दछ <span class="ref">[२५]</span>।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तरात्मक प्रश्नोत्तर (८ अङ्क भार)</div>
+
+        <div class="qa-block color3" style="border-left-color:#6a8c2a;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "इन्टरनेट सूचना र ज्ञानको महासागर हो तर उपयुक्त खोज सीपहरु बिना यसको प्रयोग बालुवामा पानी हाले जस्तै हुन सक्छ।" यस भनाइलाई इन्टरनेटमा सूचना खोजी गर्ने र त्यसलाई मूल्याङ्कन गर्ने विभिन्न सीपहरूसँग जोडेर विवेचना गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> २१औँ शताब्दी सञ्चार र सूचना प्रविधिको युग हो, जहाँ इन्टरनेट मानव सभ्यताको सबैभन्दा शक्तिशाली भौतिक र बौद्धिक जग बनेको छ <span class="ref">[२४]</span>। आज इन्टरनेटमा संसारभरिको ज्ञान, विज्ञान, दर्शन र तथ्याङ्कहरू वर्ल्डवाइड वेब (WWW) मार्फत उपलब्ध छन् <span class="ref">[२४]</span>। तर, यो अथाह ज्ञानको महासागरमा सही बाटो पहिल्याउने 'खोज सीप' नभएमा प्रयोगकर्ता अलमलिने र आफ्नो अमूल्य समय तथा श्रम नष्ट गर्ने निश्चित छ <span class="ref">[२४]</span>। जसरी बालुवामा खन्याएको पानी सिधै जमिनमुनि हराउँछ र त्यसको कुनै प्रत्यक्ष उत्पादकत्व देखिँदैन, त्यसै गरी उपयुक्त प्राविधिक खोज विधि र सूचनाको सही मूल्याङ्कन गर्ने सीप बिना इन्टरनेटको प्रयोग गर्दा समय खेर जान्छ तर वास्तविक र आधिकारिक ज्ञान प्राप्त हुन सक्दैन <span class="ref">[२४, २५]</span>। तसर्थ, डिजिटल युगमा सफल विद्यार्थी र सचेत नागरिक बन्नका लागि प्रभावकारी खोजी र विश्वसनीयता मूल्याङ्कन सम्बन्धी सीपहरू अपरिहार्य जीवनोपयोगी सीपहरू हुन्।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span> इन्टरनेटको प्रयोगलाई सार्थक र उत्पादक बनाउनका लागि मुख्यतया दुईवटा पाटामा ध्यान दिनु आवश्यक छ:</p>
+
+                <p><strong>क) प्रभावकारी इन्टरनेट खोजी सीप (Effective Searching Skills)</strong> — इन्टरनेटको अथाह भण्डारबाट आफूलाई चाहिएको वास्तविक मोती टिप्नका लागि हामीसँग निम्न प्राविधिक सीप हुन आवश्यक छ <span class="ref">[२४]</span>:</p>
+                <ol>
+                    <li><strong>मूल शब्द (Keyword) को सटीक छनोट:</strong> सामान्य र फराकिलो अर्थ दिने शब्दको साटो विशिष्ट र निश्चित विषय मात्र जनाउने शब्दहरू खोज्नुपर्छ <span class="ref">[२४]</span>।</li>
+                    <li><strong>उन्नत खोज प्रविधिको प्रयोग (Advanced Search Operators):</strong>
+                        <ul>
+                            <li><strong>डबल कोटेशन <code>""</code>:</strong> यसले सर्च इन्जिनलाई ती शब्दहरू सोही क्रममा रहेका पानाहरू मात्र खोज्न निर्देशन दिन्छ <span class="ref">[२४]</span>।</li>
+                            <li><strong>ट्रङ्केसन <code>*</code>:</strong> शब्दको मूल रूपसँग जोडिएका सबै रूपहरू एकै चोटी खोज्न मद्दत गर्छ <span class="ref">[२४]</span>।</li>
+                            <li><strong>माइनस <code>-</code>:</strong> खोजबाट अनावश्यक वा विषयान्तर हुने शब्द हटाउन प्रयोग गरिन्छ <span class="ref">[२४]</span>।</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>ख) सूचनाको विश्वसनीयता मूल्याङ्कन सीप (Information Evaluation Skills)</strong> — इन्टरनेटमा भेटिएका सामग्री आँखा चिम्लेर विश्वास गर्दा प्राज्ञिक स्तर खस्कने र गलत सिकाइ हुने भय रहन्छ <span class="ref">[२५]</span>। यसबाट बच्न हामीसँग निम्न ५ वटा जाँच्ने सीप हुनुपर्दछ <span class="ref">[२५]</span>:</p>
+                <ol>
+                    <li><strong>URL वा डोमेनको प्रकृति जाँच्ने:</strong> व्यावसायिक वेबसाइट भन्दा सरकारी निकायका वेबसाइटहरू बढी भरपर्दा हुन्छन् <span class="ref">[२५]</span>।</li>
+                    <li><strong>लेखकीय वैधता पहिचान गर्ने:</strong> लेखकको योग्यता र प्राज्ञिक इतिहास खोज्ने सीप <span class="ref">[२५]</span>।</li>
+                    <li><strong>तथ्यको समय सान्दर्भिकता:</strong> सामग्री कहिले लेखिएको हो र यसको तथ्याङ्क अपडेटेड छ कि छैन भनी मिति विश्लेषण गर्ने <span class="ref">[२५]</span>।</li>
+                    <li><strong>सङ्गठनात्मक मनसाय बुझ्ने:</strong> सूचना प्रदान गर्ने संस्थाको उद्देश्य प्राज्ञिक हो कि व्यापारिक, सो छुट्ट्याउने सीप <span class="ref">[२५]</span>।</li>
+                </ol>
+
+                <p>यी सीपहरुको अभाव भएमा प्रयोगकर्ता झुटा समाचार (Fake News), प्रोपागान्डा र भ्रामक तथ्याङ्कको दलदलमा फस्न पुग्छन्।</p>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपाली शैक्षिक परिवेशकै एउटा जीवन्त उदाहरण लिन सकिन्छ। कक्षा ११ की छात्रा सुमीलाई सामाजिक अध्ययन शिक्षकले <strong>"नेपालमा बहुभाषिक समाजको अवस्था र चुनौती"</strong> विषयमा एक अनुसन्धान प्रतिवेदन लेख्न गृहकार्य दिनुभयो।</p>
+
+                <p>सुमीसँग इन्टरनेट खोज सीपको अभाव थियो। उनले गुगलको सर्च बक्समा सिधै <code>nepal languages</code> टाइप गरिन्। गुगलले करिब १० करोड नतिजाहरू देखायो। उनले पहिलो नम्बरमा आएको एउटा अनौपचारिक र व्यावसायिक ब्लग (जसको URL को अन्त्यमा <code>.com</code> थियो र लेखकको कुनै नाम थिएन) बाट भाषासम्बन्धी तथ्याङ्कहरू जस्ताको तस्तै सारिन्। उक्त सामग्री सन् २०११ को पुरानो तथ्याङ्कमा आधारित थियो र कतिपय दाबीहरू भ्रामक थिए। परिणामस्वरूप, उनको प्रतिवेदन त्रुटिपूर्ण बन्यो र उनले निकै कम अङ्क प्राप्त गरिन्।</p>
+
+                <p>अर्कोतर्फ, सोही कक्षाका छात्र आयुषले उपयुक्त खोज सीपको प्रयोग गरे। उनले <code>"Multilingual society in Nepal" filetype:pdf</code> टाइप गरेर खोजी गरे <span class="ref">[२४]</span>। उनले राष्ट्रिय जनगणना २०७८ को आधिकारिक तथ्याङ्क प्राप्त गर्न केन्द्रीय तथ्याङ्क विभागको युआरएल <code>.gov.np</code> भएको सरकारी वेबसाइट र त्रिभुवन विश्वविद्यालयको <code>.edu.np</code> भएको वेबसाइटका प्राज्ञिक लेखहरू मात्र डाउनलोड गरे <span class="ref">[२५]</span>। उनले प्रत्येक तथ्याङ्क कहिले प्रकाशित भएको हो भनी समय जाँच गरे र आफ्नो लेखमा सन्दर्भ सामग्रीहरूको सही उद्धरण (Citation) पनि गरे <span class="ref">[२५]</span>। आयुषको प्रतिवेदन अत्यन्तै उत्कृष्ट, तथ्यपरक र प्राज्ञिक बन्यो र शिक्षकले उनलाई कक्षाकै सर्वोत्कृष्ट विद्यार्थी घोषित गर्नुभयो।</p>
+
+                <p>यो उदाहरणले स्पष्ट पार्छ कि खोज सीप र मूल्याङ्कन क्षमता बिना इन्टरनेट चलाउनु र बालुवामा पानी खन्याउनु उस्तै हो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> सङ्क्षेपमा भन्नुपर्दा, इन्टरनेट वर्तमान मानव जातिले सिर्जना गरेको सबैभन्दा ठुलो ज्ञानको स्रोत हो <span class="ref">[२४]</span>। तर, यो स्रोतको उपयोगिता प्रयोगकर्ताको क्षमता र सीपमा निर्भर रहन्छ। उपयुक्त खोज प्रविधिको प्रयोग र सूचनाको कठोर विश्वसनीयता मूल्याङ्कन गर्न नसक्ने व्यक्ति इन्टरनेटको कोलाहलमा अलमलिन्छ <span class="ref">[२४, २५]</span>। त्यसैले, विद्यार्थीहरूले शैक्षिक र व्यावहारिक जीवनमा इन्टरनेटको अधिकतम फाइदा लिनका लागि केवल ब्राउजिङ मात्र नगरी माथि उल्लिखित विशिष्ट डिजिटल र खोज सीपहरुको नियमित अभ्यास गर्नुपर्दछ <span class="ref">[२४, २५]</span>। तब मात्र हामीले इन्टरनेटबाट प्राप्त गरेको सूचनालाई देश र समाजको हितमा वास्तविक ज्ञानका रूपमा रूपान्तरण गर्न सक्छौँ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#B8F45D; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#0b2b4a;"></i>
+            <strong>अन्तिम सल्लाह:</strong> इन्टरनेट ज्ञानको विशाल भण्डार हो तर सही खोज सीप बिना यसको सदुपयोग सम्भव छैन। सधैँ विशिष्ट मूल शब्द, डबल कोट्स, ट्रङ्केसन र माइनस चिह्नको प्रयोग गर्नुहोस्। प्राप्त सूचनाको URL, लेखक र प्रकाशन मिति जाँच्न नबिर्सनुहोस्। विश्वसनीय स्रोतबाट मात्र अध्ययन सामग्री प्रयोग गर्नु नै डिजिटल साक्षरताको पहिलो सर्त हो।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ २, पाठ ४</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
