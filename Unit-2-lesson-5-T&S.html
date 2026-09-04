@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ २, पाठ ५ – इन्टरनेट र सामाजिक सञ्जालको उत्तरदायी प्रयोग (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f8fae8;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #b5c82a;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #b5c82a;
+            color: #0b2b4a;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8f0d8;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c8d8a0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #b5c82a;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #b5c82a;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #E7F23A;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #d0dd2e;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #0b2b4a;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #0b2b4a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #0b2b4a;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        .toc-grid a:hover i {
+            color: #ffffff;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #E7F23A ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            background: #E7F23A;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(231, 242, 58, 0.40);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #0b2b4a;
+        }
+
+        .section-head .mark-badge {
+            color: #0b2b4a;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #ffffff; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #5a6e1a;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #E7F23A;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #b5c82a;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #5a6e1a;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #b5c82a;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #E7F23A;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.yellow-light {
+            border-left-color: #E7F23A;
+            background: #f6f8d0;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c8d8a0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c8d8a0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #E7F23A;
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8f0d8;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c8d8a0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #E7F23A;
+        }
+
+        .qa-block.color1 { border-left-color: #E7F23A; background: #f6f8d0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #b5c82a;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #5a6e1a;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #E7F23A;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #f6f8d0;
+            border-radius: 20px;
+            border: 2px dashed #E7F23A;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #E7F23A;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- LETTER BOX ----- */
+        .letter-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .letter-box .letter-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .letter-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 6px;
+            line-height: 2;
+        }
+
+        .letter-box .salutation {
+            font-weight: 700;
+            color: #0b2b4a;
+        }
+
+        .letter-box .closing {
+            font-weight: 700;
+            color: #0b2b4a;
+            margin-top: 10px;
+        }
+
+        /* ----- DIALOGUE BOX ----- */
+        .dialogue-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .dialogue-box .dialogue-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .dialogue-box .speaker {
+            font-weight: 700;
+            color: #5a6e1a;
+        }
+
+        .dialogue-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+            line-height: 2;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #b5c82a;
+            color: #0b2b4a;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(181, 200, 42, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #8fa31f;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(181, 200, 42, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #b5c82a;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #c8d8a0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #E7F23A;
+            color: #0b2b4a;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #0b2b4a;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .dialogue-box p {
+                font-size: 1.02rem;
+            }
+            .letter-box p {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-shield-alt"></i>
+                    एकाइ २, पाठ ५: इन्टरनेट र सामाजिक सञ्जालको उत्तरदायी प्रयोग
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ २, पाठ ५
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> साइबर नैतिकता (Cyber Ethics)</strong>
+                <p>इन्टरनेट, कम्प्युटर र डिजिटल प्रविधिहरूको प्रयोग गर्दा प्रयोगकर्ताले पालना गर्नुपर्ने नैतिक नियम, आचरण, जिम्मेवारी र सामाजिक मूल्यमान्यताहरूको समष्टि।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> साइबर अपराध (Cyber Crime)</strong>
+                <p>कम्प्युटर, इन्टरनेट वा अन्य कुनै डिजिटल उपकरण तथा नेटवर्कको प्रयोग गरी व्यक्ति, संस्था वा राज्यविरुद्ध गरिने गैरकानुनी, अनैतिक वा आपराधिक गतिविधि।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> विद्युतीय कारोबार ऐन, २०६३</strong>
+                <p>नेपालमा विद्युतीय माध्यमबाट हुने कारोबारलाई व्यवस्थित गर्न र डिजिटल सञ्चारको सुरक्षित प्रयोग सुनिश्चित गर्दै साइबर अपराध नियन्त्रण गर्न बनेको देशको मुख्य कानुनी दस्ताबेज।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> कम्प्युटर स्रोत सङ्केत (Source Code)</strong>
+                <p>कुनै पनि सफ्टवेयर वा कम्प्युटर प्रोग्राम सञ्चालन गर्न प्रोग्रामरले कम्प्युटर भाषा (Programming Language) मा लेखेको मूल कोड वा निर्देशनहरूको संरचना।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> डिजिटल हस्ताक्षर (Digital Signature)</strong>
+                <p>डिजिटल दस्ताबेज वा सञ्चारको आधिकारिकता, अखण्डता र सुरक्षा प्रमाणीकरण गर्न प्रयोग गरिने एक विशेष गणितीय वा साङ्केतिक सुरक्षा प्रविधि।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> प्राइभेसी सेटिङ (Privacy Settings)</strong>
+                <p>सामाजिक सञ्जाल वा डिजिटल एप्लिकेसनहरूमा आफ्नो व्यक्तिगत विवरण, पोस्ट, र सूचनाहरू कसले हेर्न वा प्रयोग गर्न पाउने भनी प्रयोगकर्ता आफैँले निर्धारण गर्ने सुरक्षा विकल्प।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> साइबर बुलिङ (Cyber Bullying)</strong>
+                <p>डिजिटल माध्यमहरू (जस्तै: फेसबुक, इन्स्टाग्राम, मेसेन्जर आदि) को प्रयोग गरी कसैलाई धम्की दिने, हैरानी पार्ने, जिस्क्याउने, अपमानित गर्ने वा मानसिक रूपमा सताउने नकारात्मक कार्य।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> एन्टिभाइरस (Antivirus)</strong>
+                <p>कम्प्युटर प्रणालीलाई हानिकारक भाइरस, मालवेयर, र स्पाइवेयरबाट जोगाउन, पत्ता लगाउन र सफा गर्नका लागि डिजाइन गरिएको विशेष कम्प्युटर सफ्टवेयर।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> ह्याकिङ (Hacking)</strong>
+                <p>बिनाअनुमति वा अनधिकृत रूपमा अरूको कम्प्युटर प्रणाली, नेटवर्क वा डिजिटल खाताहरूमा प्रवेश गरी डाटा चोरी गर्ने वा नोक्सानी पुर्‍याउने कार्य।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#b5c82a; margin-right:4px;"></i> साइबर सुरक्षा (Cyber Security)</strong>
+                <p>इन्टरनेटसँग जोडिएका प्रणालीहरू, हार्डवेयर, सफ्टवेयर र डेटालाई साइबर आक्रमण, चोरी वा अनधिकृत पहुँचबाट बचाउने प्रविधि र प्रक्रिया।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "इन्टरनेट र सामाजिक सञ्जालको उत्तरदायी प्रयोग" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. पृष्ठभूमि -->
+        <div class="sub-head"><i class="fas fa-history"></i> १. इन्टरनेट र सामाजिक सञ्जालको उत्तरदायी प्रयोग: पृष्ठभूमि</div>
+
+        <div class="content-box yellow-light">
+            <p>आजको डिजिटल युगमा इन्टरनेट र सामाजिक सञ्जाल मानव जीवनको अभिन्न अङ्ग बनिसकेका छन्। यी प्रविधिहरूले एकातिर संसारलाई साँघुरो पार्दै सञ्चार, अध्ययन र ज्ञानको दायरालाई असीमित बनाएका छन् भने अर्कोतिर यसको दुरुपयोगले गम्भीर सामाजिक, मानसिक र कानुनी सङ्कटहरू पनि निम्त्याइरहेको छ। त्यसैले, इन्टरनेटको प्रयोग गर्दा 'साइबर नैतिकता' र 'उत्तरदायित्व' को बोध हुनु अत्यन्तै आवश्यक छ।</p>
+        </div>
+
+        <!-- २. साइबर नैतिकता -->
+        <div class="sub-head"><i class="fas fa-gavel"></i> २. साइबर नैतिकता (Cyber Ethics)</div>
+
+        <div class="content-box blue-light">
+            <p>साइबर नैतिकता भनेको इन्टरनेट प्रयोगको आचारसंहिता हो। यसले प्रयोगकर्तालाई इन्टरनेट संसारमा असल नागरिकका रूपमा प्रस्तुत हुन मार्गनिर्देशन गर्दछ।</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">व्यक्तिगत गोपनीयताको सम्मान</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">प्रतिलिपि अधिकार र बौद्धिक सम्पत्तिको रक्षा</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">शिष्ट र उत्तरदायी सञ्चार</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">कानुनी नियमहरूको अक्षरशः पालना</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">डिजिटल दुर्व्यवहारको प्रतिकार</div>
+            </div>
+
+            <p><strong>साइबर नैतिकतानुसार गर्न नहुने ९ वटा प्रमुख कार्यहरू:</strong></p>
+            <ul>
+                <li>(क) अरूको फाइल वा रेकर्डहरू बिनाअनुमति खोज्नु, हेर्नु, बिगार्नु, हटाउनु, कपी गर्नु र प्रयोग गर्नु।</li>
+                <li>(ख) अरूको कम्प्युटर पासवर्ड चोर्नु वा प्रयोग गर्नु।</li>
+                <li>(ग) ग्राहकहरूको व्यक्तिगत बैङ्क खाता हेर्नु, चोर्नु, बिगार्नु, डिजिटल सही चोर्नु र प्रयोग गर्नु।</li>
+                <li>(घ) भाइरस वा मालवेयर बनाएर प्रणालीहरूमा प्रयोग गर्नु वा फैलाउनु।</li>
+                <li>(ङ) कम्प्युटरको गोपनीयता र सुरक्षा प्रणालीलाई भङ्ग गर्नु (ह्याकिङ)।</li>
+                <li>(च) इन्टरनेटमा झुटा, भ्रामक वा कसैको प्रतिष्ठामा आँच आउने सूचना दिनु।</li>
+                <li>(छ) विद्युतीय स्वरूपमा गैरकानुनी वा अश्लील कुराहरू प्रकाशन तथा प्रदर्शन गर्नु।</li>
+                <li>(ज) कुनै पनि क्षेत्र वा सङ्घसंस्थामा रहेका व्यक्तिगत वा सामूहिक रेकर्डहरू बिनाअनुमति हेर्नु, सच्याउनु वा नष्ट गर्नु।</li>
+                <li>(झ) विद्यालय वा क्याम्पसका विद्यार्थीहरूको रेकर्ड वा मार्क लेजर चोर्नु, हटाउनु, सच्याउनु वा कुनै किसिमले नोक्सानी पुर्‍याउनु।</li>
+            </ul>
+        </div>
+
+        <!-- ३. विद्युतीय कारोबार ऐन, २०६३ -->
+        <div class="sub-head"><i class="fas fa-balance-scale"></i> ३. विद्युतीय (इलेक्ट्रोनिक) कारोबार ऐन, २०६३</div>
+
+        <div class="content-box purple-light">
+            <p>नेपालमा साइबर अपराध नियन्त्रण र डिजिटल कारोबार सुरक्षाका लागि यो ऐन जारी गरिएको हो। यस ऐनमा विभिन्न साइबर कसुरहरू र सोबापत हुने सजायहरूको स्पष्ट कानुनी व्यवस्था छ।</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: विद्युतीय कारोबार ऐन, २०६३ अनुसार साइबर अपराध र सजाय</div>
+                <table>
+                    <thead>
+                        <tr><th style="width:45%;">निषेध गरिएको कार्य (कसुर)</th><th style="width:55%;">कानुनी सजाय (जरिवाना र कैद)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>१. कम्प्युटर स्रोत सङ्केत (Source Code) चोरी, नष्ट वा परिवर्तन गरेमा</strong></td><td>३ वर्षसम्म कैद वा २ लाख रुपैयाँसम्म जरिवाना वा दुवै</td></tr>
+                        <tr><td><strong>२. विनाअख्तियारी कुनै कार्यक्रम, सूचना वा तथ्याङ्कमा पहुँच प्राप्त गरेमा</strong></td><td>२ लाख रुपैयाँसम्म जरिवाना वा ३ वर्षसम्म कैद वा दुवै</td></tr>
+                        <tr><td><strong>३. कम्प्युटर सम्पदामा रहेका सूचना नष्ट वा क्षति पुर्‍याएमा</strong></td><td>२ लाख रुपैयाँसम्म जरिवाना वा ३ वर्षसम्म कैद वा दुवै</td></tr>
+                        <tr><td><strong>४. इन्टरनेटमा गैरकानुनी, सार्वजनिक नैतिकता विरुद्धका वा घृणा फैलाउने सामग्री प्रकाशन गरेमा</strong></td><td>१ लाख रुपैयाँसम्म जरिवाना वा ५ वर्षसम्म कैद वा दुवै (दोहोर्‍याएमा १.५ गुणा सजाय थपिने)</td></tr>
+                        <tr><td><strong>५. आधिकारिक रूपमा प्राप्त गरेको गोपनीयता भङ्ग गरेमा</strong></td><td>१ लाख रुपैयाँसम्म जरिवाना वा २ वर्षसम्म कैद वा दुवै</td></tr>
+                        <tr><td><strong>६. झुटा इजाजतपत्र वा प्रमाणपत्र पेस वा प्रदर्शन गरेमा</strong></td><td>१ लाख रुपैयाँसम्म जरिवाना वा २ वर्षसम्म कैद वा दुवै</td></tr>
+                        <tr><td><strong>७. कम्प्युटर कसुर गर्न प्रोत्साहन वा उद्योग गरेमा वा षड्यन्त्रमा सामेल भएमा</strong></td><td>५० हजार रुपैयाँसम्म जरिवाना वा ६ महिनासम्म कैद वा दुवै</td></tr>
+                        <tr><td><strong>८. कम्प्युटर कसुर गर्न सघाएमा वा मतियार भई कार्य गरेमा</strong></td><td>मुख्य कसुरदारलाई भएको सजायको आधा सजाय</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ४. सामाजिक सञ्जाल सुरक्षित प्रयोगका ८ उपाय -->
+        <div class="sub-head"><i class="fas fa-shield-alt"></i> ४. सामाजिक सञ्जालको सुरक्षित प्रयोग गर्ने ८ व्यावहारिक उपायहरू</div>
+
+        <div class="content-box orange-light">
+            <ol>
+                <li><strong>प्राइभेसी सेटिङ (Privacy Settings) को व्यवस्थापन:</strong> आफ्नो प्रोफाइल र पोस्टहरू केवल नजिकका साथीहरूले मात्र हेर्न मिल्ने गरी सेटिङ मिलाउने।</li>
+                <li><strong>सोचविचार गरेर मात्र पोस्ट गर्ने:</strong> कुनै स्टेटस वा कमेन्ट पोस्ट गर्नुअघि यसले आफ्नो वा अरूको भविष्य र प्रतिष्ठामा कस्तो असर पार्छ भनी राम्ररी सोच्ने।</li>
+                <li><strong>सञ्जालमा असल छवि निर्माण:</strong> शिष्ट र मर्यादित भाषाको प्रयोग गर्ने, नराम्रो गालीगलौज वा अपमानजनक शब्दहरू प्रयोग नगर्ने।</li>
+                <li><strong>गोपनीयताको रक्षा:</strong> आफ्नो व्यक्तिगत फोन नम्बर, बैंक विवरण, जन्ममिति वा संवेदनशील पारिवारिक तस्बिरहरू सञ्जालमा पोस्ट नगर्ने।</li>
+                <li><strong>कम्प्युटर सुरक्षा र एन्टिभाइरस:</strong> उपकरणहरूमा बलियो एन्टिभाइरस र इन्टरनेट सुरक्षा सफ्टवेयरहरू इन्स्टल गर्ने।</li>
+                <li><strong>अभिभावक वा प्रहरीको सहयोग:</strong> इन्टरनेटमा कसैले धम्काएमा, हैरानी पारेमा वा नराम्रो व्यवहार गरेमा तत्काल अभिभावक, शिक्षक वा नेपाल प्रहरीको साइबर ब्यूरोमा जानकारी गराउने।</li>
+                <li><strong>बलियो र जटिल पासवर्डको प्रयोग:</strong> पासवर्ड राख्दा अंग्रेजीका ठुला र साना अक्षरहरू, सङ्ख्या र विशेष सङ्केतहरू (जस्तै: @, #, $, *) मिसाएर राख्ने र बेलाबेलामा परिवर्तन गर्ने।</li>
+                <li><strong>शङ्कास्पद लिङ्क वा सन्देशहरू नखोल्ने:</strong> उपहारको प्रलोभन देखाउने वा चिट्ठा परेको दाबी गर्ने अज्ञात स्रोतबाट आएका शङ्कास्पद लिङ्क वा इमेलहरू नखोल्ने।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप (क): चिठी -->
+        <div class="sub-head"><i class="fas fa-envelope"></i> क्रियाकलाप (क): सामाजिक सञ्जाल प्रयोगबाट भएका आपराधिक क्रियाकलाप समेटेर विदेश बस्ने दाइ वा दिदीलाई चिठी</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#b5c82a; margin-right:8px;"></i> प्रश्न:</p>
+            <p>आफ्नो वरपर सामाजिक सञ्जाल प्रयोगबाट भएका आपराधिक क्रियाकलाप समेटेर विदेश बस्ने दाइ वा दिदीलाई एउटा चिठी लेख्नुहोस्।</p>
+        </div>
+
+        <div class="letter-box">
+            <p><strong>मिति:</strong> २०८३/०५/१५</p>
+            <p><strong>काठमाडौँ, नेपाल।</strong></p>
+
+            <p class="salutation">आदरणीय दाइ,<br>सादर प्रणाम।</p>
+
+            <p>हामी यहाँ सबै आरामै छौँ र हजुरको पनि त्यहाँ सुस्वास्थ्य एवम् सुखद जीवनको कामना गर्दछु। दाइ, यो चिठीमार्फत म हजुरलाई हालै हाम्रो गाउँ र छिमेकमा सामाजिक सञ्जालको दुरुपयोगका कारण घटेका केही संवेदनशील घटनाहरूबारे जानकारी गराउन र हामी सबै कसरी सचेत हुनुपर्छ भन्ने विषय साझा गर्न लेख्दै छु।</p>
+
+            <p>आजभोलि इन्टरनेट र फेसबुक, टिकटक जस्ता सामाजिक सञ्जालको प्रयोग गाउँगाउँमा व्यापक भएको छ। तर, यसको सही प्रयोग गर्न नजान्दा केही व्यक्तिहरू ठुलो कानुनी र सामाजिक समस्यामा परेका छन्। हालै मात्र हाम्रै छिमेकका एकजना दाइ फेसबुकमा नचिनेको मानिसले पठाएको "लटरी र उपहार" को नक्कली लिङ्कमा क्लिक गर्दा बैंक खाताबाट लाखौँ रुपैयाँ ठगीमा पर्नुभयो। त्यस्तै, कक्षा १० मा पढ्ने एउटी बहिनीलाई नक्कली अकाउन्ट खोलेर साइबर बुलिङ (मानसिक यातना) दिने र तस्बिरहरू बिगारेर सामाजिक सञ्जालमा हाल्ने धम्की दिएपछि प्रहरीको साइबर ब्यूरोमा उजुरी गर्नुपर्‍यो। अपराधी त पक्राउ पर्‍यो, तर ती बहिनीले भोग्नुपरेको मानसिक तनाव निकै गम्भीर थियो।</p>
+
+            <p>दाइ, यी घटनाहरूले मलाई प्रविधिको उत्तरदायी प्रयोग र बलियो प्राइभेसी सेटिङ कति महत्त्वपूर्ण रहेछ भन्ने कुरा सिकाएको छ। हजुर पनि विदेशमा हुनुहुन्छ, त्यहाँ पनि यस्ता डिजिटल ठगी र साइबर अपराधहरू त भइरहन्छन् होला। त्यसैले आफ्नो पासवर्ड बलियो राख्नुहोला र शङ्कास्पद लिङ्कहरू नखोल्नुहोला।</p>
+
+            <p>हजुरको पत्रको पर्खाइमा छु। आफ्नो स्वास्थ्यको ख्याल राख्नुहोला।</p>
+
+            <p class="closing">हजुरकी प्यारी बहिनी,<br>कृति शर्मा</p>
+        </div>
+
+        <!-- क्रियाकलाप (ख): संवाद -->
+        <div class="sub-head"><i class="fas fa-comment-dots"></i> क्रियाकलाप (ख): 'साइबर नैतिकता' विषयमा दुई साथीहरूबीच संवादको नमुना</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#b5c82a; margin-right:8px;"></i> प्रश्न:</p>
+            <p>'साइबर नैतिकता' विषयमा दुई साथीहरूबीच संवादको नमुना तयार गर्नुहोस्।</p>
+        </div>
+
+        <div class="dialogue-box">
+            <p class="dialogue-title"><i class="fas fa-pen-fancy" style="color:#b5c82a; margin-right:8px;"></i> संवाद: अनुराग र सृष्टि</p>
+
+            <p><strong>पात्रहरू:</strong></p>
+            <ul>
+                <li><span class="speaker">अनुराग</span> (प्रविधिप्रेमी तर असावधान विद्यार्थी)</li>
+                <li><span class="speaker">सृष्टि</span> (सचेत र डिजिटल रूपमा साक्षर विद्यार्थी)</li>
+            </ul>
+            <p><em>(विद्यालयको मध्यान्तरको समयमा चौरमा बसेर कुराकानी गर्दै)</em></p>
+
+            <p><span class="speaker">अनुराग:</span> सृष्टि, मैले हिजो फेसबुकमा एउटा रमाइलो ट्रोल देखेँ। कसैले हाम्रो कक्षाको एकजना साथीको अलि अनौठो तस्बिर एडिट गरेर पोस्ट गरेको रहेछ। मैले त हाँसेर त्यसलाई सेयर र कमेन्ट पनि गरिदिएँ।</p>
+            <p><span class="speaker">सृष्टि:</span> अनुराग! तिमीले यस्तो गम्भीर गल्ती कसरी गर्न सक्छौ? के तिमीलाई 'साइबर नैतिकता' (Cyber Ethics) भनेको के हो थाहा छैन?</p>
+            <p><span class="speaker">अनुराग:</span> साइबर नैतिकता? त्यो भनेको के हो र? सामाजिक सञ्जालमा रमाइलो गर्नु त सामान्य कुरा त हो नि।</p>
+            <p><span class="speaker">सृष्टि:</span> रमाइलोको पनि सीमा हुन्छ अनुराग। कसैको अनुमति बिना उसको तस्बिर बिगार्नु, सेयर गर्नु र उसको सामाजिक प्रतिष्ठामा आँच आउने काम गर्नु साइबर नैतिकता विरुद्धको काम हो। साइबर नैतिकता भनेको इन्टरनेट चलाउँदा पालना गर्नुपर्ने आचारसंहिता हो।</p>
+            <p><span class="speaker">अनुराग:</span> ए! त्यसो भए मैले त अन्जानमै साइबर अपराध पो गरेछु कि क्या हो?</p>
+            <p><span class="speaker">सृष्टि:</span> हो त नि! नेपालको विद्युतीय कारोबार ऐन, २०६३ अनुसार सामाजिक सञ्जाल वा इन्टरनेटमा कसैलाई अपमान गर्ने, घृणा फैलाउने वा चरित्र हत्या गर्ने सामग्री राखेमा १ लाख रुपैयाँसम्म जरिवाना वा ५ वर्षसम्म कैद वा दुवै सजाय हुन सक्छ।</p>
+            <p><span class="speaker">अनुराग:</span> ओहो! यति कडा कानुन छ र? म त निकै डराएँ। अब म तत्काल त्यो पोस्ट डिलिट गर्छु र साथीसँग माफी माग्छु।</p>
+            <p><span class="speaker">सृष्टि:</span> एकदम सही निर्णय अनुराग। हामीले इन्टरनेटमा सधैँ अरूको गोपनीयता र मर्यादाको सम्मान गर्नुपर्छ। बलियो पासवर्ड प्रयोग गर्ने, प्राइभेसी मिलाउने र जथाभावी अनावश्यक कुराहरू पोस्ट नगर्नु नै उत्तरदायी प्रयोग हो।</p>
+            <p><span class="speaker">अनुराग:</span> मलाई आज निकै राम्रो कुरा सिकायौ सृष्टि। अब म सधैँ साइबर नैतिकताको पालना गर्नेछु। धन्यवाद!</p>
+            <p><span class="speaker">सृष्टि:</span> स्वागत छ अनुराग, सुरक्षित र उत्तरदायी बनौँ!</p>
+        </div>
+
+        <!-- क्रियाकलाप (ग): सूची तयार (already covered in table, so we can mention it) -->
+        <div class="sub-head"><i class="fas fa-list-ul"></i> क्रियाकलाप (ग): विद्युतीय कारोबार ऐन, २०६३ अनुसार मुख्य मुख्य साइबर अपराधको सूची</div>
+
+        <div class="content-box teal-light">
+            <p><strong>उत्तर:</strong> यो सूची खण्ड २ को उपशीर्षक ३ मा रहेको विस्तृत तालिकामा पूर्ण कानुनी सजायसहित व्यवस्थित रूपमा प्रस्तुत गरिएको छ। विद्यार्थीहरूले परीक्षामा सोही तालिकाको प्रयोग गरी उत्तर लेख्न सक्छन्।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> साइबर नैतिकता भनेको के हो?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> इन्टरनेट, कम्प्युटर र विभिन्न सामाजिक सञ्जाल जस्ता डिजिटल माध्यमहरूको प्रयोग गर्दा प्रयोगकर्ताहरूले पालना गर्नुपर्ने नीति-नियम, नैतिक आचरण, व्यक्तिगत गोपनीयताको सम्मान र सामाजिक उत्तरदायित्वको समष्टिलाई नै <strong>साइबर नैतिकता (Cyber Ethics)</strong> भनिन्छ। प्रविधिको संसारमा सभ्य, सुरक्षित र मर्यादित वातावरण निर्माण गर्न यसको भूमिका अतुलनीय हुन्छ।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> साइबर नैतिकतानुसार गर्न नहुने कार्यहरू उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> साइबर नैतिकतानुसार इन्टरनेट प्रयोगकर्ताहरूले निम्नलिखित कार्यहरू गर्नु हुँदैन:</p>
+                <ol>
+                    <li>अरूको व्यक्तिगत डेटा, फाइल वा रेकर्डहरू अनुमति बिना चोर्नु, नष्ट गर्नु वा परिमार्जन गर्नु।</li>
+                    <li>अरूको कम्प्युटर वा सामाजिक सञ्जालको पासवर्ड चोरी गर्नु वा अनधिकृत रूपमा प्रयोग गर्नु।</li>
+                    <li>सामाजिक सञ्जाल वा डिजिटल माध्यमबाट कसैको चरित्र हत्या गर्ने, अपमान गर्ने वा मानसिक तनाव दिने (साइबर बुलिङ)।</li>
+                    <li>कम्प्युटर प्रणालीलाई बिगार्न वा सुस्त बनाउन जानीजानी कम्प्युटर भाइरस वा मालवेयर निर्माण र प्रवाह गर्नु।</li>
+                    <li>इन्टरनेटमा झुटा, भ्रामक, अफवाह फैलाउने वा सामाजिक सद्भाव बिगार्ने सामग्रीहरू प्रकाशन गर्नु।</li>
+                    <li>नक्कली डिजिटल प्रोफाइल वा आईडी सिर्जना गरी अरूको नाममा ठगी गर्नु वा छक्याउनु।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> साइबर अपराधबाट बच्न तपाईंले के के कुरामा सचेत हुनुपर्छ? सचेतनाका उपायहरू बुँदागत रूपमा उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> साइबर अपराधबाट बच्नका लागि हामीले निम्न लिखित सुरक्षा र सचेतनाका उपायहरू अपनाउनुपर्छ:</p>
+                <ul>
+                    <li><strong>बलियो पासवर्ड निर्माण:</strong> सङ्ख्या, साना-ठुला अक्षर र विशेष चिह्नहरूको प्रयोग गरी बलियो पासवर्ड बनाउने र यसलाई गोप्य राख्ने।</li>
+                    <li><strong>प्राइभेसी सेटिङको प्रयोग:</strong> सामाजिक सञ्जालमा आफ्ना व्यक्तिगत विवरण र पोस्टहरू अपरिचित व्यक्तिहरूले हेर्न नमिल्ने गरी प्राइभेसी मिलाउने।</li>
+                    <li><strong>अपरिचित लिङ्क र इमेल निषेध:</strong> ठुलो चिठ्ठा परेको वा पुरस्कार जितिएको भनी आउने शङ्कास्पद लिङ्क वा इमेलहरू कहिल्यै नखोल्ने।</li>
+                    <li><strong>सञ्चारमा शिष्टता र मर्यादा:</strong> इन्टरनेटमा कसैसँग कुराकानी गर्दा वा टिप्पणी गर्दा सभ्य र मर्यादित भाषाको प्रयोग गर्ने।</li>
+                    <li><strong>एन्टिभाइरसको प्रयोग:</strong> आफ्नो कम्प्युटर र मोबाइलमा विश्वसनीय एन्टिभाइरस सफ्टवेयर राख्ने र नियमित रूपमा स्क्यान गर्ने।</li>
+                    <li><strong>गोपनीयताको संरक्षण:</strong> बैंक अकाउन्ट नम्बर, पिन नम्बर, नागरिकता नम्बर र संवेदनशील तस्बिरहरू इन्टरनेटमा साझा नगर्ने।</li>
+                    <li><strong>नेपाल प्रहरीको सहयोग:</strong> साइबर बुलिङ वा ठगीको सिकार भएमा तत्काल नेपाल प्रहरीको साइबर ब्यूरोमा उजुरी गर्ने।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> सामाजिक सञ्जालका फाइदाहरू उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सामाजिक सञ्जालका प्रमुख फाइदाहरू यस प्रकार छन्:</p>
+                <ol>
+                    <li><strong>सजिलो सम्पर्क र सञ्चार:</strong> संसारको जुनसुकै कुनामा रहेका परिवार, आफन्त र साथीभाइसँग निःशुल्क र तत्काल भिडियो वा अडियो कुराकानी गर्न सकिन्छ।</li>
+                    <li><strong>सूचना र ज्ञानको आदानप्रदान:</strong> राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार, शैक्षिक सामग्री र महत्त्वपूर्ण जानकारीहरू तुरुन्तै प्राप्त गर्न र फैलाउन सकिन्छ।</li>
+                    <li><strong>खुला सिकाइ र अनलाइन शिक्षा:</strong> इन्टरनेटको माध्यमबाट घरमै बसेर विभिन्न सीपमूलक र शैक्षिक कोर्सहरू निःशुल्क वा न्यून शुल्कमा अध्ययन गर्न सकिन्छ।</li>
+                    <li><strong>व्यापार प्रवर्द्धन र विज्ञापन:</strong> साना तथा ठुला व्यवसायीहरूले आफ्ना उत्पादन र सेवाहरूको विज्ञापन सामाजिक सञ्जालमार्फत न्यून खर्चमा लक्षित ग्राहकसम्म पुर्‍याउन सक्छन्।</li>
+                    <li><strong>सचेतना र सामाजिक अभियान:</strong> समाजमा सकारात्मक परिवर्तनका लागि जनचेतना फैलाउन, विपद्को समयमा उद्धार र सहयोग जुटाउन सामाजिक सञ्जाल उपयोगी माध्यम बन्दछ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तर (अङ्क भार: १)</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">१.</span> नेपालमा साइबर अपराध नियन्त्रण गर्ने मुख्य कानुनी संयन्त्र कुन हो?</div>
+            <div class="a"><strong>उत्तर:</strong> नेपालमा साइबर अपराध नियन्त्रण गर्ने मुख्य कानुनी संयन्त्र <strong>'विद्युतीय (इलेक्ट्रोनिक) कारोबार ऐन, २०६३'</strong> हो।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">२.</span> साइबर नैतिकता भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> इन्टरनेट र डिजिटल प्रविधिको प्रयोग गर्दा पालना गर्नुपर्ने नैतिक नियम र सामाजिक उत्तरदायित्व नै <strong>साइबर नैतिकता</strong> हो।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">३.</span> विद्युतीय कारोबार ऐन, २०६३ अनुसार कम्प्युटर स्रोत सङ्केत (Source Code) नष्ट गरेमा के सजाय हुन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> कम्प्युटर स्रोत सङ्केत नष्ट गरेमा <strong>तीन वर्षसम्म कैद वा दुई लाख रुपैयाँसम्म जरिवाना वा दुवै</strong> सजाय हुन सक्छ।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">४.</span> सामाजिक सञ्जालको प्राइभेसी सेटिङ (Privacy Settings) किन मिलाउनुपर्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> आफ्नो व्यक्तिगत सूचना र डाटालाई अनधिकृत पहुँच, चोरी वा दुरुपयोग हुनबाट जोगाउन <strong>प्राइभेसी सेटिङ</strong> मिलाउनुपर्छ।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">५.</span> साइबर बुलिङ (Cyber Bullying) को एउटा उदाहरण दिनुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> फेसबुक जस्ता सामाजिक सञ्जालमा कसैको तस्बिरलाई अनुमति बिना बिगारेर अपमानजनक रूपमा पोस्ट गर्नु <strong>साइबर बुलिङ</strong>को उदाहरण हो।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तर (अङ्क भार: ५)</div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">१.</span> विद्युतीय कारोबार ऐन, २०६३ को आवश्यकता किन परेको हो? संक्षेपमा स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> सूचना प्रविधिको तीव्र विकाससँगै डिजिटल माध्यमबाट हुने कारोबार र सञ्चार बढेपछि यसलाई कानुनी दायरामा ल्याउन विद्युतीय कारोबार ऐन, २०६३ जारी गरिएको हो।</p>
+
+                <p><strong>मुख्य बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>कारोबारलाई कानुनी मान्यता:</strong> डिजिटल हस्ताक्षर र विद्युतीय अभिलेखलाई कानुनी वैधता प्रदान गरी डिजिटल व्यापार र बैङ्किङलाई सुरक्षित बनाउन।</li>
+                    <li><strong>साइबर अपराध नियन्त्रण:</strong> ह्याकिङ, डाटा चोरी, चरित्र हत्या, र भाइरस फैलाउने जस्ता आधुनिक आपराधिक क्रियाकलापलाई नियन्त्रण गरी कानुनी सजायको दायरामा ल्याउन।</li>
+                    <li><strong>गोपनीयताको रक्षा:</strong> इन्टरनेट प्रयोगकर्ताहरूको व्यक्तिगत र संस्थागत विवरणहरूको गोपनीयता भङ्ग हुनबाट जोगाउन र पीडितलाई उचित क्षतिपूर्ति दिलाउन।</li>
+                    <li><strong>सभ्य डिजिटल समाज निर्माण:</strong> सामाजिक सञ्जालको उत्तरदायी प्रयोग सुनिश्चित गर्दै अनलाइन माध्यममा हुने अमर्यादित र घृणास्पद अभिव्यक्तिलाई रोक्न।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> समग्रमा, देशमा सुरक्षित, मर्यादित र विश्वसनीय डिजिटल वातावरण निर्माण गरी सुशासन कायम गर्न यो ऐन अपरिहार्य बनेको हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">२.</span> "सामाजिक सञ्जालको सुरक्षित प्रयोगमा व्यक्तिगत सचेतना नै सबैभन्दा बलियो सुरक्षा कवच हो।" यस भनाइलाई तर्कसहित स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> प्रविधि जतिसुकै आधुनिक भए पनि प्रयोगकर्ता आफैँ सचेत नभएसम्म साइबर सुरक्षाको प्रत्याभूति गर्न सकिँदैन।</p>
+
+                <p><strong>मुख्य बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>पासवर्डको सुरक्षा:</strong> यदि प्रयोगकर्ताले सजिलो पासवर्ड राखेमा वा अरूलाई साझा गरेमा जुनसुकै बेला अकाउन्ट ह्याक हुन सक्छ, त्यसैले व्यक्तिगत सजगता आवश्यक छ।</li>
+                    <li><strong>सूचना प्रवाहमा नियन्त्रण:</strong> आफ्नो घरको लोकेसन, बैंक विवरण वा संवेदनशील पारिवारिक फोटोहरू आफैँले नियन्त्रण गरेर पोस्ट नगर्नु नै सबैभन्दा सुरक्षित विधि हो।</li>
+                    <li><strong>प्रलोभनबाट बच्ने:</strong> चिट्ठा वा उपहारको भ्रममा नपरी अज्ञात लिङ्कहरू क्लिक नगर्ने विवेक प्रयोगकर्ता स्वयंले देखाउनुपर्छ।</li>
+                    <li><strong>गोपनीयताको व्यवस्थापन:</strong> प्राविधिक रूपमा उपलब्ध प्राइभेसी सेटिङहरू कसरी प्रयोग गर्ने भन्ने ज्ञान र सचेतना व्यक्ति आफैँमा हुनुपर्दछ।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, राज्यको कानुन र प्राविधिक सुरक्षा हुँदाहुँदै पनि व्यक्तिको सचेत बानी र व्यवहार नै साइबर अपराधबाट बच्ने अकाट्य उपाय हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">३.</span> साइबर बुलिङ भनेको के हो? यसका नकारात्मक प्रभाव र यसबाट बच्ने उपायहरू लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> सामाजिक सञ्जालको माध्यमबाट अरूलाई होच्याउने, धम्काउने वा मानसिक यातना दिने कार्य नै <strong>साइबर बुलिङ</strong> हो।</p>
+
+                <p><strong>नकारात्मक प्रभावहरू:</strong></p>
+                <ul>
+                    <li><strong>मानसिक तनाव र डिप्रेसन:</strong> पीडित व्यक्तिमा गम्भीर डिप्रेसन, डर, लघुताभास र एक्लोपनाको समस्या देखिन्छ।</li>
+                    <li><strong>आत्महत्याको जोखिम:</strong> गम्भीर चरित्र हत्या वा सामाजिक बदनामका कारण कतिपय किशोर-किशोरीले आत्महत्या सम्मको आत्मघाती निर्णय लिन पुग्छन्।</li>
+                    <li><strong>शैक्षिक र सामाजिक ह्रास:</strong> पीडितको पढाइ बिग्रनुका साथै समाज र साथीभाइसँग घुलमिल हुने क्षमता घट्छ।</li>
+                </ul>
+
+                <p><strong>बच्ने उपायहरू:</strong></p>
+                <ul>
+                    <li>त्यस्ता व्यक्तिलाई तुरुन्त ब्लक गर्ने र रिपोर्ट गर्ने।</li>
+                    <li>घटनाको स्क्रिनसट वा प्रमाण सुरक्षित राखेर अभिभावक, शिक्षक वा प्रहरीलाई तुरुन्त जानकारी दिने।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> साइबर बुलिङ एउटा गम्भीर सामाजिक समस्या भएकाले यस विरुद्ध डराएर बस्नुभन्दा कानुनी उपचार खोज्नु उत्तम विकल्प हो।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तरात्मक प्रश्न (अङ्क भार: ८)</div>
+
+        <div class="qa-block color5" style="border-left-color:#b5c82a;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "सूचना र प्रविधिको युगमा साइबर नैतिकता र सामाजिक सञ्जालको उत्तरदायी प्रयोग सभ्य डिजिटल समाजको बलियो आधारशिला हो।" यस भनाइलाई व्यावहारिक उदाहरण र नेपालको कानुनी पक्षहरू जोडेर विस्तृत विवेचना गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> एक्काइसौँ शताब्दी सूचना प्रविधि र सञ्चारको क्रान्तिकारी युग हो। इन्टरनेट र सामाजिक सञ्जालले संसारलाई एउटा सानो डिजिटल गाउँ (Global Village) मा रूपान्तरण गरिदिएको छ। प्रविधिको यो असीमित विकासले मानव जीवनलाई अत्यन्तै सरल, छिटो र ज्ञानमुखी बनाएको छ। तर, प्रविधिको द्रुत विकाससँगै यसको दुरुपयोगले साइबर अपराध र नैतिक ह्रासका नयाँ चुनौतीहरू पनि थपिदिएको छ। यसै सन्दर्भमा, इन्टरनेटको सुरक्षित, मर्यादित र व्यवस्थित प्रयोगका लागि 'साइबर नैतिकता' (Cyber Ethics) र प्रयोगकर्ताको 'उत्तरदायित्व' आजको अपरिहार्य आवश्यकता बनेको छ। अनलाइन जगत्मा अरूको अधिकार, गोपनीयता र आत्मसम्मानको रक्षा गर्दै सभ्य प्रस्तुत हुनु नै उत्तरदायी प्रयोगको सार हो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span> डिजिटल युगमा एउटा सभ्य समाज निर्माणका लागि प्रविधिको सही उपयोग हुनुपर्छ। यसका लागि निम्न बुँदाहरूमा केन्द्रित भई विश्लेषण गर्न सकिन्छ:</p>
+
+                <ul>
+                    <li><strong>गोपनीयताको अधिकार (Right to Privacy):</strong> वास्तविक समाजमा जस्तै डिजिटल सञ्जालमा पनि प्रत्येक व्यक्तिको गोपनीयताको अधिकार हुन्छ। अरूको अनुमति बिना व्यक्तिगत तस्बिर खिच्नु, सम्पादन गर्नु, वा अनलाइनमा पोस्ट गर्नु सरासर अनैतिक र कानुनी रूपमा दण्डनीय कार्य हो।</li>
+                    <li><strong>साइबर बुलिङ र मानसिक स्वास्थ्य:</strong> सामाजिक सञ्जालमा गरिने एउटा नराम्रो कमेन्ट वा नकारात्मक ट्रोलले सम्बन्धित व्यक्तिको मानसिक स्वास्थ्यमा गम्भीर आँच पुर्‍याउँछ। तसर्थ, आफ्ना शब्द र विचारहरू सञ्जालमा व्यक्त गर्दा शिष्टता अपनाउनु साइबर नैतिकताको पहिलो सर्त हो।</li>
+                    <li><strong>कानुनी बल र विद्युतीय कारोबार ऐन, २०६३:</strong> नेपाल सरकारले साइबर अपराध र दुरुपयोगलाई नियन्त्रण गर्न ठोस कदम चालेको छ। यस ऐनले सामाजिक सञ्जालमा गैरकानुनी सामग्री प्रकाशन गर्ने, अरूको गोपनीयता भङ्ग गर्ने, पासवर्ड चोर्ने वा अनधिकृत पहुँच राख्नेहरूलाई कडा सजाय र जरिवानाको व्यवस्था गरेको छ। यसले सभ्य समाज निर्माणका लागि कानुनी बन्धन तयार पारेको छ।</li>
+                    <li><strong>अफवाह र भ्रामक सूचना नियन्त्रण:</strong> आजभोलि सामाजिक सञ्जालमा भाइरल हुने लोभमा झुटा र अफवाह फैलाउने खालका समाचार तथा भिडियो पोस्ट गर्ने होडबाजी छ। यसले समाजमा अशान्ति, त्रास र दङ्गा निम्त्याउन सक्छ। त्यसैले सत्यता जाँच गरेर मात्र सूचना प्रवाह गर्नु एक जिम्मेवार डिजिटल नागरिकको कर्तव्य हो।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> हाम्रै नेपाली समाजमा केही समयअघि एउटा घटना घटेको थियो। काठमाडौँकी एक कलेज पढ्ने जेहेन्दार छात्रा सुस्मिता (नाम परिवर्तन) को फेसबुक आईडीबाट उनको व्यक्तिगत तस्बिरहरू कसैले डाउनलोड गर्‍यो। अपराधीले सुस्मिताको नाममा अर्को नक्कली (Fake) प्रोफाइल बनाएर ती तस्बिरहरूलाई आपत्तिजनक रूपमा सम्पादन गरी पोस्ट गर्न थाल्यो र उनका कलेजका साथीहरूलाई अश्लील म्यासेजहरू पठाउन थाल्यो। यस घटनाले सुस्मिता गम्भीर मानसिक तनावमा परिन्, कलेज जान छोडिन् र समाजबाट अलग भइन्।</p>
+
+                <p>तर, उनका कलेजका शिक्षक र अभिभावकले समयमै साइबर नैतिकता र कानुनको सहयोग लिने निर्णय गरे। उनीहरूले नेपाल प्रहरीको साइबर ब्यूरोमा उजुरी दर्ता गरे। प्रहरीले डिजिटल फरेन्सिक प्रविधि प्रयोग गरी नक्कली आईडी चलाउने व्यक्तिलाई छिट्टै पत्ता लगायो। दोषीलाई विद्युतीय कारोबार ऐन, २०६३ को दफा ४७ अनुसार मुद्दा चलाइयो, जहाँ उसलाई जरिवाना र कैदको सजाय भयो। यो उदाहरणले देखाउँछ कि अनलाइन संसारमा सानो असावधानीले कति ठुलो मानसिक सङ्कट ल्याउन सक्छ र कानुनी सुरक्षा तथा सामाजिक सचेतना कति बलियो हुनुपर्छ।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> अन्त्यमा, प्रविधि आफैँमा राम्रो वा नराम्रो हुँदैन; यसको उपयोग कसरी गरिन्छ भन्ने कुरा मानवीय व्यवहारमा भर पर्दछ। विज्ञान र प्रविधिले दिएको यो अनुपम उपहार अर्थात् इन्टरनेट र सामाजिक सञ्जाललाई सिर्जनात्मक, शैक्षिक र उत्पादनशील कार्यमा लगाउनुपर्दछ। साइबर नैतिकताको पालना केवल कानुनी डरले मात्र होइन, बरु आत्मअनुशासन र असल सामाजिक चेतनाका कारण गरिनुपर्दछ। जब हरेक इन्टरनेट प्रयोगकर्ता डिजिटल रूपमा साक्षर र उत्तरदायी बन्दछन्, तब मात्र सभ्य र सुरक्षित डिजिटल समाजको निर्माण सम्भव छ। तसर्थ, 'आफू पनि बचौँ र अरूलाई पनि सुरक्षित राखौँ' भन्ने मूल मर्मका साथ इन्टरनेटको प्रयोग गर्नु नै आजको आवश्यकता हो।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#E7F23A; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#0b2b4a;"></i>
+            <strong>अन्तिम सल्लाह:</strong> इन्टरनेट र सामाजिक सञ्जाल शक्तिशाली उपकरण हुन्, तर यसको प्रयोग गर्दा सधैँ साइबर नैतिकतालाई आत्मसात् गर्नुहोस्। आफ्नो प्राइभेसी सेटिङ मिलाउनुहोस्, बलियो पासवर्ड प्रयोग गर्नुहोस्, र अरूको गोपनीयताको सम्मान गर्नुहोस्। साइबर बुलिङ वा ठगीको शिकार भएमा नडराई कानुनी सहायता लिनुहोस्। याद राख्नुहोस् – डिजिटल संसारमा पनि हाम्रा कर्महरूले हाम्रो पहिचान निर्माण गर्छन्।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ २, पाठ ५</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
