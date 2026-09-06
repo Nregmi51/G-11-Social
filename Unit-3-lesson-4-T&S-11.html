@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ ४ – तनाव व्यवस्थापन (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #eaf5f0;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #004D40;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #00695C;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #00695C;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e0ece6;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8d0c4;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #00695C;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #00695C;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #00695C;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #4DB6AC;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #00695C ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #00695C;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(0, 105, 92, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #00695C;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #004D40;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #00695C;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #00695C;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #004D40;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #00695C;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #00695C;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #004D40;
+            font-weight: 900;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #00695C;
+            background: #eaf5f0;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8d0c4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8d0c4;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #00695C;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e0ece6;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #004D40;
+            border-bottom: 2px solid #b8d0c4;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #00695C;
+        }
+
+        .qa-block.color1 { border-left-color: #00695C; background: #eaf5f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #004D40;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #00695C;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #004D40;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #004D40;
+            font-size: 1.1rem;
+        }
+
+        .qa-block .a p {
+            color: #374210;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #00695C;
+        }
+
+        .glossary-item strong {
+            color: #004D40;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eaf5f0;
+            border-radius: 20px;
+            border: 2px dashed #4DB6AC;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #00695C;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- ACTIVITY / ANALYSIS BOX ----- */
+        .analysis-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #b8d0c4;
+            margin: 12px 0;
+            color: #374210;
+        }
+
+        .analysis-box .analysis-title {
+            font-weight: 900;
+            color: #004D40;
+            font-size: 1.15rem;
+        }
+
+        .analysis-box p,
+        .analysis-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+            color: #374210;
+        }
+
+        .analysis-box ul,
+        .analysis-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #b8d0c4;
+            margin: 12px 0;
+            color: #374210;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #004D40;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+            color: #374210;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- DISPLAY BOARD BOX ----- */
+        .display-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #b8d0c4;
+            margin: 12px 0;
+            color: #374210;
+        }
+
+        .display-box .display-title {
+            font-weight: 900;
+            color: #004D40;
+            font-size: 1.1rem;
+        }
+
+        .display-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+            color: #374210;
+        }
+
+        .display-box ul,
+        .display-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #00695C;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 105, 92, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #004D40;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(0, 105, 92, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #00695C;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #004D40;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8d0c4;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #00695C;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .analysis-box p,
+            .analysis-box li {
+                font-size: 1.02rem;
+            }
+            .display-box p {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-brain"></i>
+                    एकाइ ३, पाठ ४: तनाव व्यवस्थापन (Stress Management)
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> NEB परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ ३, पाठ ४
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> तनाव (Stress)</strong>
+                <p>आन्तरिक वा बाह्य वातावरणमा आउने विभिन्न परिवर्तन, माग वा चुनौतीका कारण व्यक्तिको शारीरिक तथा मानसिक सन्तुलनमा उत्पन्न हुने दबाब वा असहजताको अवस्था।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> तनाव व्यवस्थापन (Stress Management)</strong>
+                <p>मानसिक दबाब वा तनावलाई नकारात्मक ऊर्जाबाट रूपान्तरण गरी रचनात्मक, सिर्जनात्मक र सकारात्मक कार्यमा लगाई शारीरिक तथा मानसिक स्वास्थ्य अनुकूल व्यवहार परिमार्जन गर्ने व्यवस्थित प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> अस्तित्व तनाव (Survival Stress)</strong>
+                <p>कुनै अचानक आइपर्ने बाह्य खतरा, गम्भीर बिरामी वा दुर्घटनाप्रति शारीरिक वा मानसिक रक्षाका लागि शरीरले देखाउने तात्कालिक र तीव्र प्रतिक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> आन्तरिक तनाव (Internal Stress)</strong>
+                <p>बाह्य कारणबिना व्यक्तिको आफ्नै मनभित्र चल्ने अत्यधिक चिन्ता, भय, हीनताबोध, नकारात्मक सोचाइ वा संवेगका कारण सिर्जना हुने आत्म-निर्मित दबाब।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> वातावरणीय तनाव (Environmental Stress)</strong>
+                <p>आफ्नो वरपरको भौतिक तथा सामाजिक वातावरण (जस्तै: ठुलो कोलाहल, भिडभाड, प्रतिकूल मौसम वा सामाजिक दबाब) का कारण उत्पन्न हुने मानसिक असहजता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> कामको चापबाट हुने तनाव (Workload Stress)</strong>
+                <p>व्यक्तिको कार्यक्षमता, स्रोत र समयभन्दा बढी कार्यभार वा जिम्मेवारी आइपर्दा उत्पन्न हुने शारीरिक थकान र मानसिक शिथिलताको अवस्था।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> समर्पण रणनीति (Submission Strategy)</strong>
+                <p>तनाव उत्पन्न गर्ने कारक वा परिस्थितिसँग लड्नुको सट्टा कुनै प्रतिवाद नगरी त्यसलाई स्वीकार गर्ने र आफ्ना भावना दबाउने एक अस्वस्थ र दमनकारी रणनीति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> प्रतिरोध रणनीति (Resistance Strategy)</strong>
+                <p>तनाव दिने परिस्थिति वा व्यक्तिप्रति आक्रोश, बदला, गालीगलौज वा भौतिक हिंसाका माध्यमबाट तात्कालिक प्रतिवाद गर्ने नकारात्मक र अस्वस्थ रणनीति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> सम्झौता रणनीति (Compromise Strategy)</strong>
+                <p>आफ्नो व्यवहार, शैली, सोचाइ र आचरणमा लचकता ल्याई अनुकूलन गर्दै आपसी सञ्चार र समझदारीका माध्यमबाट तनाव समाधान गर्ने दीर्घकालीन र सकारात्मक रणनीति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00695C; margin-right:4px;"></i> द्वन्द्व रूपान्तरण (Conflict Transformation)</strong>
+                <p>व्यक्ति वा समूहबीचको असहमति र विवादलाई नकारात्मक रूपमा दबाउनुको सट्टा आपसी संवाद र सम्झौताका माध्यमबाट सामाजिक एकता, नयाँ सहकार्य र आत्मीय सम्बन्धमा बदल्ने आधुनिक पद्धति।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "तनाव व्यवस्थापन" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. तनावका विशेषताहरू -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. तनाव र यसका आधारभूत विशेषताहरू</div>
+
+        <div class="content-box teal-light">
+            <p>तनाव मानव जीवनको एक अनिवार्य र स्वाभाविक पक्ष हो। यसलाई निम्नलिखित विशेषताहरूका आधारमा बुझ्न सकिन्छ:</p>
+            <ul>
+                <li><strong>वातावरणीय परिवर्तनको उपज:</strong> बाह्य सामाजिक, आर्थिक वा भौतिक वातावरणमा आउने द्रुत परिवर्तनले व्यक्तिमा तनाव सिर्जना गर्छ।</li>
+                <li><strong>व्यक्तिपिच्छे फरक असर:</strong> एउटै घटना वा परिस्थितिप्रति फरक-फरक व्यक्तिको बुझाइ र सहनशीलता फरक हुने हुनाले यसको प्रभाव पनि व्यक्तिपिच्छे भिन्न हुन्छ।</li>
+                <li><strong>व्यवस्थापन गर्न सकिने अवस्था:</strong> तनावलाई पूर्ण रूपमा नष्ट गर्न नसकिए पनि सकारात्मक जीवनोपयोगी सीपहरू जस्तै: योग, ध्यान र समय व्यवस्थापनद्वारा रचनात्मक रूपमा नियन्त्रण गर्न सकिन्छ।</li>
+                <li><strong>जीवनको अनिवार्य सर्त:</strong> जीवनमा सुख-दुःख र उतारचढाव निरन्तर आइरहने भएकाले तनावलाई जीवनको एक अभिन्न र अकाट्य यथार्थ मानिन्छ।</li>
+            </ul>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">वातावरणीय वा आन्तरिक परिवर्तन</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="mermaid-step">मस्तिष्कद्वारा चुनौती वा खतराको अनुभूति</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; width:100%;">
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+                        <div class="mermaid-step" style="background:#ffcdd2;">नकारात्मक तरिका:<br>समर्पण वा प्रतिरोध</div>
+                        <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="mermaid-step" style="background:#ffab91;">मानसिक र शारीरिक क्षति</div>
+                    </div>
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+                        <div class="mermaid-step" style="background:#c8e6c9;">सकारात्मक तरिका:<br>सम्झौता र जीवनोपयोगी सीपहरू</div>
+                        <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="mermaid-step" style="background:#81d4fa;">सन्तुलित जीवन र सामाजिक प्रगति</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- २. तनाव सिर्जना हुने अवस्थाहरू -->
+        <div class="sub-head"><i class="fas fa-list-check"></i> २. तनाव सिर्जना हुने अवस्थाहरू र तिनको वर्गीकरण</div>
+
+        <div class="content-box blue-light">
+            <p>मानव जीवनमा तनाव सिर्जना हुने प्रमुख चारवटा अवस्थाहरू निम्नलिखित छन्:</p>
+            <ul>
+                <li><strong>शारीरिक अस्तित्व रक्षाको अवस्था (Survival):</strong> अचानक दुर्घटना वा आपत्कालीन अवस्था आउँदा शरीरले देखाउने तात्कालिक दबाब।</li>
+                <li><strong>आन्तरिक मनोवैज्ञानिक अवस्था (Internal):</strong> आफ्नै अनियन्त्रित संवेग, चिन्ता, निराशा र डरको अवस्था।</li>
+                <li><strong>भौतिक तथा सामाजिक वातावरण (Environmental):</strong> अत्यधिक हल्ला, प्रदूषण, प्रतिकूल मौसम र समाजको कडा अनुशासन वा दबाब।</li>
+                <li><strong>पेसागत वा शैक्षिक कार्यभार (Workload):</strong> कार्यस्थल वा विद्यालयमा तोकिएको समयभित्र क्षमताभन्दा बढी काम फत्ते गर्नुपर्ने दबाब।</li>
+            </ul>
+        </div>
+
+        <!-- ३. तीन रणनीतिहरूको तुलनात्मक विश्लेषण -->
+        <div class="sub-head"><i class="fas fa-table"></i> ३. तनाव व्यवस्थापनका प्रमुख तीन रणनीतिहरूको तुलनात्मक विश्लेषण</div>
+
+        <div class="content-box green-light">
+            <p>तनाव उत्पन्न हुँदा मानिसले अवलम्बन गर्ने रणनीतिहरू र तिनको प्रभाव बुझ्न यो प्राज्ञिक तालिका उपयोगी सिद्ध हुन्छ:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: तनाव व्यवस्थापनका रणनीतिहरूको तुलना</div>
+                <table>
+                    <thead>
+                        <tr><th>क्र.सं.</th><th>रणनीति (Strategies)</th><th>मुख्य चरित्र र विशेषता</th><th>व्यावहारिक परिणाम र दीर्घकालीन प्रभाव</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>१</strong></td>
+                            <td><strong>समर्पण (Submission)</strong></td>
+                            <td>• बिनाप्रतिवाद परिस्थितिलाई स्विकार्ने।<br>• भावना र आकांक्षालाई दबाउने।<br>• हीनताबोधको विकास हुने।</td>
+                            <td>तत्कालका लागि विवाद टरे पनि मनभित्र कुण्ठा र निराशा जम्मा भई दीर्घकालमा <strong>डिप्रेसन वा गम्भीर मानसिक रोग</strong> निम्त्याउँछ। यो अस्वस्थ रणनीति हो।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>२</strong></td>
+                            <td><strong>प्रतिरोध (Resistance)</strong></td>
+                            <td>• आक्रोश, रिस, डाहा र बदलाको भावना राख्ने।<br>• भौतिक वा भाषिक आक्रमणमा उत्रिने।<br>• अरूलाई दोषारोपण गर्ने।</td>
+                            <td>क्षणिक रूपमा भडास निस्किए पनि यसले <strong>द्वन्द्व, कानुनी झमेला र सामाजिक सम्बन्धमा गम्भीर क्षति</strong> पुर्‍याउँछ। यो अत्यन्त हानिकारक रणनीति हो।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>३</strong></td>
+                            <td><strong>सम्झौता (Compromise)</strong></td>
+                            <td>• सोचाइ, व्यवहार र शैलीमा लचकता ल्याउने।<br>• सकारात्मक सञ्चार र समझदारी अपनाउने।<br>• समस्याको जरा पहिचान गर्ने।</td>
+                            <td>यसले <strong>तनावको स्थायी र वैज्ञानिक समाधान</strong> निकाल्छ। सामाजिक आत्मीयता र व्यक्तिगत कार्यदक्षता बढाउने यो <strong>सर्वोत्कृष्ट सकारात्मक रणनीति</strong> हो।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ४. १२ सकारात्मक सीपहरू -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> ४. तनाव व्यवस्थापनका १२ वटा सकारात्मक जीवनोपयोगी सीपहरू</div>
+
+        <div class="content-box purple-light">
+            <p>दैनिक जीवन र शैक्षिक वातावरणलाई सन्तुलित र तनावमुक्त राख्न निम्नलिखित सकारात्मक उपायहरू प्रभावकारी हुन्छन्:</p>
+            <ol>
+                <li><strong>तीन पटक लामो र गहिरो श्वासप्रश्वास (Deep Breathing):</strong> यसले तत्काल मस्तिष्कमा अक्सिजन प्रवाह बढाएर रिस र बेचैनी कम गर्छ।</li>
+                <li><strong>उल्टो गन्ती विधि (Reverse Counting):</strong> रिस वा उत्तेजना आएको बेला १०० देखि पछाडि घट्दो क्रममा गन्ती गर्दा ध्यान अन्यत्र मोडिने र संवेग नियन्त्रण हुन्छ।</li>
+                <li><strong>नियमित योग तथा ध्यान (Yoga and Meditation):</strong> मानसिक एकाग्रता, आन्तरिक शान्ति र आत्मबल बढाउन यो प्राचीन विधिको ठुलो महत्त्व छ।</li>
+                <li><strong>सङ्गीत श्रवण र गायन:</strong> मनपर्ने मधुर सङ्गीत सुन्दा मस्तिष्कमा सकारात्मक हर्मोनहरू उत्पन्न भई तनावको स्तर तुरुन्तै घट्छ।</li>
+                <li><strong>रचनात्मक कला र चित्रकला (Creative Arts):</strong> मनका कुण्ठा र भावनाहरूलाई सिर्जनात्मक माध्यमबाट व्यक्त गर्दा मानसिक बोझ कम हुन्छ।</li>
+                <li><strong>योजनाबद्ध समय कार्यतालिका (Time Table):</strong> दैनिक कामलाई समय तालिकाअनुसार व्यवस्थित गर्दा अन्तिम समयको हतार र दबाबबाट बच्न सकिन्छ।</li>
+                <li><strong>कामको प्राथमिकता निर्धारण (Task Prioritization):</strong> महत्त्वपूर्ण र आपत्कालीन कामलाई सुरुमा र सामान्य कामलाई पछि गर्ने गरी वर्गीकरण गर्ने।</li>
+                <li><strong>स्पष्ट र यथार्थपरक लक्ष्य निर्धारण:</strong> आफ्नो क्षमताअनुसारको व्यावहारिक लक्ष्य राख्दा अनावश्यक दबाब र निराशा पैदा हुँदैन।</li>
+                <li><strong>मनोरम दृश्यावलोकन र प्रकृतिसँग सामीप्य:</strong> हरियाली, डाँडाकाँडा वा शान्त प्राकृतिक स्थलको अवलोकनले मानसिक ताजगी प्रदान गर्छ।</li>
+                <li><strong>सकारात्मक तथा ज्ञानवर्धक सामग्रीको अध्ययन:</strong> पुस्तक, जीवन उपयोगी जीवनी वा पत्रपत्रिका पढ्नाले सकारात्मक सोचको विकास हुन्छ।</li>
+                <li><strong>शारीरिक व्यायाम तथा खेलकुद:</strong> दौडिने, फुटबल, बास्केटबल जस्ता खेल खेल्दा शरीरमा रक्तसञ्चार सन्तुलित भई स्फूर्ति प्राप्त हुन्छ।</li>
+                <li><strong>विश्वासिलो सामाजिकीकरण (Socializing):</strong> आफ्ना पिरमर्काहरू मन मिल्ने साथी, आमाबुबा वा शिक्षकसँग खुलेर साझा गर्दा मन हल्का हुन्छ।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-comment-dots"></i> क्रियाकलाप १: तनाव व्यवस्थापनका रणनीतिहरूमध्ये सबैभन्दा उपयुक्त रणनीति कुन हो र किन? छलफल गर्नुहोस्।</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#00695C; margin-right:8px;"></i> प्रश्न:</p>
+            <p>तनाव व्यवस्थापनका प्रमुख तीन रणनीतिहरू (समर्पण, प्रतिरोध र सम्झौता) मध्ये कुन सबैभन्दा उपयुक्त, वैज्ञानिक र दिगो रणनीति हो? कारण सहित छलफल गर्नुहोस्।</p>
+        </div>
+
+        <div class="analysis-box">
+            <p><strong>उत्तर:</strong> तनाव व्यवस्थापनका प्रमुख तीन रणनीतिहरू (समर्पण, प्रतिरोध र सम्झौता) मध्ये <strong>"सम्झौता (Compromise)"</strong> सबैभन्दा उपयुक्त, वैज्ञानिक र दिगो रणनीति हो।</p>
+
+            <p><strong>कारणहरू:</strong></p>
+            <ul>
+                <li><strong>समर्पण (Submission) अस्वस्थ छ:</strong> यसले समस्याको बाहिरी रूपलाई मात्र दबाउँछ। मनभित्रै कुण्ठा जम्मा हुने भएकाले यसले दीर्घकालमा डिप्रेसन वा गम्भीर मानसिक समस्या निम्त्याउँछ।</li>
+                <li><strong>प्रतिरोध (Resistance) हानिकारक छ:</strong> यसले रिस, आक्रोश र भौतिक वा भाषिक हिंसा जन्माउँछ। यसले क्षणिक रूपमा आक्रोश शान्त गरे पनि दीर्घकालमा थप शत्रुता र कानुनी वा सामाजिक झमेला सिर्जना गर्छ।</li>
+                <li><strong>सम्झौता (Compromise) सर्वोत्कृष्ट छ:</strong> सम्झौता भनेको आफ्नो स्वाभिमान गिराउनु होइन, बरु परिस्थितिसँग अनुकूलन हुन आफ्ना शैलीगत र व्यवहारजन्य गतिविधिमा आवश्यक सुधार वा परिवर्तन गर्नु हो। यसमा सकारात्मक सञ्चार र आपसी समझदारीको प्रयोग गरी तनावको जरा नै समाधान गरिन्छ। अतः यो नै तनाव व्यवस्थापनको स्वस्थतम तरिका हो।</li>
+            </ul>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-clipboard-list"></i> क्रियाकलाप २: तनाव व्यवस्थापनका सकारात्मक तरिकाहरूका लागि प्रदर्शन पाटी (Display Board) सन्देशहरू</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#00695C; margin-right:8px;"></i> प्रश्न:</p>
+            <p>विद्यालयको प्रदर्शन पाटीमा विद्यार्थीहरूलाई सचेत गराउन टाँस्न सकिने ५ वटा उत्कृष्ट रचनात्मक र जानकारीमूलक सन्देशहरू तयार गर्नुहोस्।</p>
+        </div>
+
+        <div class="display-box">
+            <p class="display-title"><i class="fas fa-bullhorn" style="color:#00695C; margin-right:8px;"></i> प्रदर्शन पाटीका लागि सन्देशहरू:</p>
+            <ol>
+                <li>💡 <em>"तनाव जीवनको अन्त्य होइन, यो त हाम्रो व्यवहार र सोचाइमा परिमार्जन ल्याउने एउटा उत्कृष्ट अवसर हो!"</em></li>
+                <li>🧘‍♀️ <em>"क्रोध र प्रतिरोधले शरीर र सम्बन्ध दुवै बिगार्छ; योग, ध्यान र लामो श्वासप्रश्वासले मन शान्त बनाउँछ।"</em></li>
+                <li>📅 <em>"समय तालिका बनाएर काम गर्ने बानी बसालौँ; अन्तिम समयको हतारो र अनावश्यक तनावबाट टाढै रहौँ।"</em></li>
+                <li>🗣️ <em>"आफ्नो मनभित्र तनावको भारी नबोकौँ; विश्वासिलो साथी, परिवार वा शिक्षकसँग खुलेर मनका कुरा साझा गरौँ।"</em></li>
+                <li>🎨 <em>"कला, सङ्गीत र खेलकुदलाई जीवनको हिस्सा बनाऔँ; मानसिक तनावलाई रचनात्मक ऊर्जामा रूपान्तरण गरौँ।"</em></li>
+            </ol>
+        </div>
+
+        <!-- क्रियाकलाप ४ -->
+        <div class="sub-head"><i class="fas fa-search"></i> क्रियाकलाप ४: गोगने र ओलने गाउँको पुल निर्माण विवादको घटनाको गहन विश्लेषण</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#00695C; margin-right:8px;"></i> घटनाको संक्षिप्त विवरण:</p>
+            <p>गोगने र ओलने गाउँको सिमानामा पक्की पुल निर्माण गर्ने क्रममा कुन स्थानमा बनाउने भन्ने स्वार्थका कारण दुवै गाउँका बासिन्दाबीच गम्भीर विवाद र झडप भयो। जसले गर्दा विकास निर्माण अवरुद्ध भयो। पछि दुवै गाउँका भद्रभलादमी र स्थानीय तहको मध्यस्थतामा वार्ता भई सहमतिमा उपयुक्त ठाउँमा पुल निर्माण गरियो। हाल दुवै गाउँ मिलेर क्रिकेट क्लब गठन गरेका छन् र आपसी सहकार्यमा बस्छन्।</p>
+        </div>
+
+        <div class="analysis-box">
+            <p class="analysis-title"><i class="fas fa-table" style="color:#00695C; margin-right:8px;"></i> घटना विश्लेषण प्रतिवेदन:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: गोगने र ओलने विवादको विश्लेषण</div>
+                <table>
+                    <thead>
+                        <tr><th>विश्लेषणका पक्षहरू</th><th>घटनामा आधारित विस्तृत विवरण र विश्लेषण</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>१. विवादका कारणहरू</strong></td>
+                            <td>• पुल आफ्नो गाउँको नजिक बनाउँदा भौतिक र आर्थिक फाइदा बढी हुने व्यक्तिगत तथा सामूहिक स्वार्थ।<br>• दुवै गाउँबीच सुरुवाती चरणमा आपसी छलफल र सञ्चारको अभाव हुनु।<br>• व्यक्तिगत तथा क्षेत्रीय प्रतिष्ठा (इगो) लाई विकास भन्दा माथि राख्नु।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>२. विवादका प्रभावहरू</strong></td>
+                            <td>• दुवै गाउँका बासिन्दाबीच ढुङ्गा हानाहान, कुटपिट र शारीरिक झडप भई केही व्यक्ति घाइते हुनु।<br>• गाउँको सामाजिक सद्भाव र शान्ति सुरक्षा खलबलिनु तथा पत्रपत्रिकामा नकारात्मक समाचार आउनु।<br>• पक्की पुल निर्माणको महत्त्वपूर्ण विकास कार्य लामो समयसम्म ठप्प हुनु।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>३. विवाद समाधानका उपायहरू</strong></td>
+                            <td>• दुवै गाउँका बुद्धिजीवी, भद्रभलादमी र स्थानीय नेतृत्वको सक्रिय मध्यस्थता।<br>• वार्ताको टेबलमा बसी संवाद र आपसी 'सम्झौता' को नीति अवलम्बन गर्नु।<br>• प्राविधिक रूपमा दुवै गाउँलाई पायक पर्ने र उपयुक्त हुने साझा स्थानमा पुल बनाउने लिखित सहमति गर्नु।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>४. यस घटनाबाट भएको सिकाइ</strong></td>
+                            <td>• द्वन्द्व जतिसुकै उग्र र जटिल भए पनि आपसी सञ्चार, छलफल र सम्झौताबाट समाधान सम्भव छ।<br>• द्वन्द्वको उचित व्यवस्थापन र रूपान्तरणले पुराना रिसराग मेटाई समाजमा पहिलेभन्दा बलियो सामाजिक सम्बन्ध, सहकार्य र आत्मीयता स्थापना गर्न सक्छ (जस्तै: क्रिकेट क्लबको गठन र आपसी सहकार्य)।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> माथिको घटनामा तनाव सिर्जना गर्ने के के कारण उल्लेख गरिएका छन्? (ज्ञानहरिको कथाका आधारमा)</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> पाठको सुरुमा दिइएको ज्ञानहरिको कथाका आधारमा उनमा तनाव सिर्जना हुनुका प्रमुख कारणहरू निम्नलिखित छन्:</p>
+                <ol>
+                    <li><strong>परीक्षाको चिन्ता:</strong> कक्षा ११ को परीक्षा नजिकिँदै जाँदा कसरी राम्रो अङ्क ल्याउने र कसरी परीक्षा उत्तीर्ण गर्ने भन्ने मानसिक दबाब।</li>
+                    <li><strong>आर्थिक दबाब:</strong> गाउँको तुलनामा सहरको पढाइ र बसाइ निकै खर्चिलो हुनु र सो खर्च धान्न गाह्रो हुनु।</li>
+                    <li><strong>पारिवारिक हीनताबोध र ग्लानि:</strong> साना भाइलाई वृद्ध आमाबुबाको जिम्मामा गाउँमै छोडेर पढ्न सहर आउनु परेकोमा मनमा लागेको ठेस।</li>
+                    <li><strong>आमाको स्वास्थ्य समस्या:</strong> आमा अचानक बिरामी परेको खबरले मनमा बढेको ठुलो चिन्ता।</li>
+                    <li><strong>एकाग्रताको अभाव र असफलताको डर:</strong> पढाइमा ध्यान केन्द्रित गर्न नसक्नु, जसले गर्दा परीक्षा बिग्रने र भविष्य असफल हुने लगातारको डर।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> तनावले ज्ञानहरिलाई कस्तो असर पारेको छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> तनावका कारण ज्ञानहरिको शारीरिक, मानसिक र शैक्षिक जीवनमा निम्नलिखित नकारात्मक असरहरू परेका छन्:</p>
+                <ul>
+                    <li><strong>शारीरिक असरहरू:</strong> राती राम्रोसँग निद्रा नलाग्नु (अनिन्द्राको समस्या) र खाना खान मन नलाग्नु (अरुचि)।</li>
+                    <li><strong>मानसिक असरहरू:</strong> मनमा लगातार नकारात्मक सोच आउनु, अत्यधिक बेचैनी र छटपटी बढ्नु, आफू अलिक बढी निराश हुनु र भविष्यप्रति हीनताबोध बढ्नु।</li>
+                    <li><strong>शैक्षिक असरहरू:</strong> पढाइमा ध्यान केन्द्रित (Concentrate) गर्न नसक्नु, जसका कारण पढाइ बिग्रने र परीक्षा अनुत्तीर्ण हुने खतरा बढ्नु।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> तनाव व्यवस्थापनमा योग र ध्यानले पुर्‍याउने फाइदा के के हुन्?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> तनाव व्यवस्थापनमा पूर्वीय दर्शनका अमूल्य उपहार योग र ध्यानको अत्यन्त महत्त्वपूर्ण भूमिका हुन्छ, जसका फाइदाहरू यस प्रकार छन्:</p>
+                <ol>
+                    <li><strong>मानसिक एकाग्रतामा वृद्धि:</strong> योग र ध्यानले छरिएको मनलाई एक ठाउँमा केन्द्रित गर्न सिकाउँछ, जसले सिकाइ र स्मरण शक्तिलाई तीव्र बनाउँछ।</li>
+                    <li><strong>नकारात्मक संवेग नियन्त्रण:</strong> रिस, चिन्ता, भय र उत्तेजना जस्ता संवेगहरूलाई संयमित र नियन्त्रणमा राख्ने अद्भुत आत्मबल प्रदान गर्छ।</li>
+                    <li><strong>मस्तिष्कको शान्ति:</strong> यसले मस्तिष्कमा चल्ने अनावश्यक र हानिकारक सोचहरूलाई कम गरी आन्तरिक शान्ति र सन्तोष प्रदान गर्छ।</li>
+                    <li><strong>शारीरिक स्फूर्ति र सन्तुलन:</strong> योगका आसनहरूले शरीरमा रक्तसञ्चार र अक्सिजनको प्रवाह सन्तुलित गराई शारीरिक थकाइ र आलस्यता हटाउँछन्।</li>
+                    <li><strong>सकारात्मक दृष्टिकोणको विकास:</strong> निराशा र हीनताबोधलाई हटाई जीवनप्रति आशावादी र सकारात्मक दृष्टिकोण निर्माण गर्न मद्दत गर्छ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> 'तनाव व्यवस्थापनमा ज्ञानहरिले अपनाएका रणनीतिहरू वास्तवमा सकारात्मक छन्' यस भनाइलाई पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> ज्ञानहरिले आफ्नो जीवनमा आइपरेको चर्को तनावलाई व्यवस्थापन गर्न अपनाएका रणनीतिहरू पूर्ण रूपमा सकारात्मक, वैज्ञानिक र जीवनोपयोगी छन्। यस तथ्यलाई निम्नलिखित बुँदाहरूले पुष्टि गर्दछन्:</p>
+                <ol>
+                    <li><strong>योग तथा ध्यानको अवलम्बन:</strong> तनाव कम गर्न र मन एकाग्र बनाउन उनले नियमित योग र ध्यानको अभ्यास सुरु गरे, जसले उनको पढाइमा एकाग्रता फर्कायो।</li>
+                    <li><strong>आर्थिक व्यवस्थापन र खर्च कटौती:</strong> सहरको महँगो बसाइको खर्च कम गर्न उनले अनावश्यक खर्चहरू कटाई आर्थिक सन्तुलन कायम गरे।</li>
+                    <li><strong>पारिवारिक सञ्चार र आत्मीयता:</strong> आमाबुबासँग नियमित रूपमा फोनमार्फत कुराकानी गरी आफ्नो मनको पीर कम गरे र बुबाआमाको चिन्ता पनि मेटाए।</li>
+                    <li><strong>सिर्जनात्मक र रचनात्मक रुचि:</strong> उनले आफ्नो फुर्सदको समय र दबाबलाई चित्रकला (Drawing) र मधुर सङ्गीत (Music) जस्ता विधामा सक्रिय गराए।</li>
+                    <li><strong>सामुदायिक घुलमिल र शारीरिक सक्रियता:</strong> छिमेकी र साथीहरूसँगको संवाद बढाएर एक्लोपन हटाए र बिहानको समयमा करेसाबारीको काममा सक्रिय भए।</li>
+                </ol>
+                <p>अतः उनले कुलत वा अस्वस्थ बाटो रोज्नुको सट्टा स्वस्थ र रचनात्मक जीवनशैली अपनाएकाले उनका रणनीतिहरू वास्तवमै सकारात्मक छन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">(ङ)</span> तनाव हुनुभन्दा पनि त्यसलाई कसरी व्यवस्थापन गरिन्छ भन्ने कुरा बढी महत्त्वपूर्ण हुन्छ। के तपाईं यस भनाइसँग सहमत हुनुहुन्छ, आफ्ना तर्कहरू प्रस्तुत गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> हो, म यस भनाइसँग <strong>शतप्रतिशत सहमत</strong> छु। तनाव आफैँमा एउटा तटस्थ परिस्थिति मात्र हो तर यसलाई हामी कसरी सामना र व्यवस्थापन गर्छौँ भन्ने कुराले नै हाम्रो जीवनको सफलता, असफलता, स्वास्थ्य र भविष्य निर्धारण गर्दछ। यसका पक्षमा मेरा ठोस प्राज्ञिक तर्कहरू निम्नलिखित छन्:</p>
+                <ol>
+                    <li><strong>तनाव जीवनको अनिवार्य पाटो हो:</strong> संसारमा कुनै पनि यस्तो मानिस छैन जसलाई कहिल्यै तनाव नहोस्। यो जीवनको अनिवार्य सर्त हो। त्यसैले तनाव हुनै नदिनु हाम्रो हातमा हुँदैन, तर त्यसको व्यवस्थापन गर्नु पूर्ण रूपमा हाम्रो नियन्त्रणमा हुन्छ।</li>
+                    <li><strong>रणनीतिले नतिजा निर्धारण गर्छ:</strong> यदि कसैले तनाव हुँदा 'समर्पण' वा 'प्रतिरोध' (जस्तै: कुलतमा फस्ने, रक्सी-चुरोट खाने, आत्महत्याको प्रयास गर्ने वा अरूसँग झगडा गर्ने) जस्ता नकारात्मक बाटो अपनाएमा जीवन बर्बाद हुन्छ। तर, त्यही तनावलाई 'सम्झौता' वा सकारात्मक जीवनोपयोगी सीपहरू (योग, ध्यान, समय व्यवस्थापन) बाट हल गरेमा मानिस अझ परिपक्व र सफल बन्दछ।</li>
+                    <li><strong>सकारात्मक रूपान्तरणको सम्भावना:</strong> तनावले मानिसलाई आफ्नो कमीकमजोरी सुधार्ने र नयाँ कुरा सिक्ने अवसर दिन्छ। जसरी ज्ञानहरिले तनावलाई व्यवस्थापन गरेर आफ्नो जीवनलाई अझ अनुशासित र सिर्जनात्मक बनाए, त्यसरी नै उचित व्यवस्थापनले मानिसलाई थप बलियो र कार्यदक्ष बनाउँछ।</li>
+                </ol>
+                <p>अतः समस्या वा तनाव आउनु ठुलो कुरा होइन, त्यसलाई बुद्धिमानीपूर्वक व्यवस्थापन गर्नु नै वास्तविक जीवनोपयोगी सीप हो।</p>
+            </div>
+        </div>
+
+        <!-- अभ्यास २ -->
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">अभ्यास २:</span> तनाव व्यवस्थापनका सकारात्मक वा स्वस्थ र अस्वस्थ तरिकाहरूसँग सम्बन्धित चित्र, फोटो सङ्कलन गरी प्रदर्शन पाटीमा टाँस्नुहोस्।</div>
+            <div class="a">
+                <p><em>(विद्यार्थीहरूले परियोजना कार्यका रूपमा चित्रहरू टाँस्नका लागि प्रयोग गर्न सक्ने वर्गीकरण तालिका)</em></p>
+
+                <div class="table-wrap">
+                    <div class="table-caption">तालिका: स्वस्थ र अस्वस्थ तनाव व्यवस्थापनका तरिकाहरू</div>
+                    <table>
+                        <thead>
+                            <tr><th>स्वस्थ र सकारात्मक तरिकाहरू (Healthy Ways)</th><th>अस्वस्थ र नकारात्मक तरिकाहरू (Unhealthy Ways)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>• <strong>योग र ध्यानको तस्बिर:</strong> शान्त मुद्रामा पद्मासनमा बसेको व्यक्ति।<br>• <strong>शारीरिक व्यायाम/खेलकुदको तस्बिर:</strong> दौडिरहेको वा फुटबल खेलिरहेको दृश्य।<br>• <strong>सञ्चार र सामाजिकीकरणको तस्बिर:</strong> साथीभाइ वा परिवार मिलेर हाँस्दै कुराकानी गरेको।<br>• <strong>समय तालिकाको नमुना:</strong> भित्तामा टाँसिएको आकर्षक र व्यवस्थित कार्यतालिका।<br>• <strong>सिर्जनात्मक कामको तस्बिर:</strong> क्यानभासमा रङ भरिरहेको वा गिटार बजाइरहेको दृश्य।</td>
+                                <td>• <strong>धूम्रपान र मद्यपानको तस्बिर:</strong> चुरोट वा रक्सी खाइरहेको दृश्य (जसले शरीर र दिमाग बिगार्छ)।<br>• <strong>आक्रोश र झगडाको तस्बिर:</strong> रिसले रातोपिरो भएर कराउँदै गरेको वा कुटपिटमा उत्रिएको दृश्य।<br>• <strong>एक्लोपन र टोलाएको तस्बिर:</strong> कोठाको कुनामा टाउको समातेर एकलो टोलाइरहेको दृश्य।<br>• <strong>दमन वा आत्मसमर्पणको तस्बिर:</strong> निराश भई रुँदै गरेको दृश्य (भावना दबाउने)।</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- अभ्यास ३ -->
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">अभ्यास ३:</span> तलको अंश पढेर कक्षामा साथीहरूसँग छलफल गर्नुहोस्: "द्वन्द्व, तनाव र द्वन्द्व व्यवस्थापन"। (हाजारौँ हल्का शब्दभन्दा शान्ति ल्याउन एक शब्द काफी हुन्छ - गौतम बुद्ध...)</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> यस अंशले मानव जीवनमा द्वन्द्व, तनाव र तिनको उचित व्यवस्थापनको महत्त्वलाई अत्यन्त गहिरो ढङ्गले उजागर गर्दछ। कक्षामा गरिने छलफलका मुख्य बुँदाहरू निम्नलिखित छन्:</p>
+                <ol>
+                    <li><strong>द्वन्द्वको यथार्थ:</strong> समाज र सङ्गठनमा विचार, मूल्यमान्यता र स्वार्थको भिन्नताले द्वन्द्व हुनु स्वाभाविक हो। द्वन्द्व आफैँमा विनाशकारी हुँदैन, यो त सुधार र रूपान्तरणको एउटा माध्यम हो।</li>
+                    <li><strong>तनावको जड:</strong> जब द्वन्द्वलाई समयमै र सही तरिकाले सम्बोधन गरिँदैन, तब यसले व्यक्ति र समाजमा चर्को मानसिक तथा सामाजिक तनाव उत्पन्न गराउँछ।</li>
+                    <li><strong>गौतम बुद्धको सन्देशको सान्दर्भिकता:</strong> बुद्धको भनाइ <em>"हजारौँ हल्का शब्दभन्दा शान्ति ल्याउने एक शब्द काफी हुन्छ"</em> को अर्थ द्वन्द्व र तनावको बेला आक्रोशपूर्ण र अपमानजनक शब्दहरू (प्रतिरोध रणनीति) प्रयोग गर्नुभन्दा शान्ति, प्रेम र सम्झौताको एउटै मधुर शब्दले ठुलो विनाश रोक्न सक्छ भन्ने हो।</li>
+                    <li><strong>सकारात्मक व्यवस्थापनको आवश्यकता:</strong> द्वन्द्वलाई दबाउनु वा यसबाट भाग्नु (समर्पण) भन्दा पनि आपसी संवाद, मध्यस्थता र सम्झौताका माध्यमबाट यसलाई रूपान्तरण गरी सामाजिक विकास र आत्मीयता प्रवर्द्धन गर्नुपर्दछ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त उत्तरात्मक प्रश्नोत्तरहरू (१ अङ्क भार)</div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">१.</span> तनाव भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> वातावरणमा आउने विभिन्न परिवर्तन वा व्यक्तिगत चुनौतीहरूका कारण व्यक्तिको शारीरिक तथा मानसिक सन्तुलनमा उत्पन्न हुने दबाबको अवस्था नै <strong>तनाव</strong> हो।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">२.</span> तनाव व्यवस्थापनका प्रमुख तीन रणनीतिहरू के-के हुन्?</div>
+            <div class="a"><strong>उत्तर:</strong> तनाव व्यवस्थापनका प्रमुख तीन रणनीतिहरू <strong>समर्पण (Submission), प्रतिरोध (Resistance)</strong> र <strong>सम्झौता (Compromise)</strong> हुन्।</div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">३.</span> उल्टो गन्ती (Reverse Counting) विधिले तनाव कम गर्न कसरी मद्दत गर्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> उल्टो गन्ती विधिले रिस वा उत्तेजना आएको बेला व्यक्तिको ध्यानलाई आक्रोशको केन्द्रबाट अन्यत्र मोडेर संवेग नियन्त्रण गर्न मद्दत गर्छ।</div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">४.</span> द्वन्द्वको अन्तरक्रियात्मक अवधारणा (Interactive Approach) ले के मान्यता राख्दछ?</div>
+            <div class="a"><strong>उत्तर:</strong> यस अवधारणाले सङ्गठन वा समाजको गतिशीलता र सिर्जनशीलताका लागि निश्चित हदसम्म द्वन्द्व हुनु आवश्यक र प्राकृतिक हुन्छ भन्ने मान्यता राख्दछ।</div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">५.</span> तनाव सधैँ नकारात्मक मात्र हुन्छ? स्पष्ट पार्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> हुँदैन, केही हदसम्मको तनाव (Eustress) ले मानिसलाई कामप्रति जिम्मेवार बन्न, नयाँ कुरा सिक्न र प्रगति गर्न उत्प्रेरित गर्ने हुनाले यो सकारात्मक पनि हुन्छ।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त उत्तरात्मक प्रश्नोत्तरहरू (५ अङ्क भार)</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">१.</span> तनाव सिर्जना हुने विभिन्न अवस्थाहरूको सविस्तार चर्चा गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> मानव जीवनमा तनाव एक अपरिहार्य यथार्थ हो, जुन विभिन्न आन्तरिक तथा बाह्य वातावरणीय परिवर्तनका कारण सिर्जना हुन्छ।</p>
+
+                <p><strong>व्यक्तिमा मुख्यतया निम्नलिखित चार अवस्थाहरूले तनाव सिर्जना गर्दछन्:</strong></p>
+                <ul>
+                    <li><strong>अस्तित्व (Survival) तनाव:</strong> आफ्नो अस्तित्व रक्षाका लागि खतराप्रति शारीरिक वा मानसिक प्रतिक्रिया जनाउँदा आउने दबाब, जस्तै: अचानक गम्भीर बिरामी पर्दा वा दुर्घटनामा पर्दा हुने तनाव।</li>
+                    <li><strong>आन्तरिक (Internal) तनाव:</strong> बाह्य कारणबिना व्यक्तिको आफ्नै मनभित्र चल्ने अत्यधिक चिन्ता, भय, हीनताबोध वा नकारात्मक सोचाइका कारण आउने दबाब।</li>
+                    <li><strong>वातावरणीय (Environmental) तनाव:</strong> आफ्नो वरपरको वातावरणका कारण सिर्जना हुने दबाब, जस्तै: चर्को ध्वनि, अत्यधिक भिडभाड, प्रतिकूल मौसम वा सामाजिक दबाब।</li>
+                    <li><strong>कामको चापबाट हुने तनाव (Workload):</strong> आफ्नो क्षमता र समयभन्दा बढी कार्यभार वा जिम्मेवारी आइपर्दा उत्पन्न हुने शारीरिक थकान र मानसिक शिथिलताको अवस्था।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> अतः यी विभिन्न अवस्थाहरूलाई समयमै पहिचान गरी सकारात्मक जीवनोपयोगी सीपहरूद्वारा व्यवस्थापन गर्नु नै बुद्धिमानी हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">२.</span> 'समर्पण' र 'प्रतिरोध' तनाव व्यवस्थापनका नकारात्मक रणनीतिहरू हुन् भनी कसरी पुष्टि गर्नुहुन्छ?</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> तनाव सिर्जना हुँदा व्यक्तिले देखाउने प्रतिक्रिया वा रणनीतिले उनको शारीरिक र मानसिक स्वास्थ्यको भविष्य निर्धारण गर्दछ। यस सन्दर्भमा 'समर्पण' र 'प्रतिरोध' दुवैलाई नकारात्मक रणनीति मानिन्छ।</p>
+
+                <p><strong>समर्पण (Submission) अस्वस्थ हुनुको कारण:</strong> यसअन्तर्गत व्यक्तिले तनाव दिने परिस्थितिसँग लड्नुको सट्टा आत्मसमर्पण गर्छ र आफ्ना भावनाहरू दबाउँछ। यो दमनकारी प्रकृतिको हुने हुनाले तत्कालका लागि विवाद टरे जस्तो देखिए पनि यसले मनभित्र निराशा र हीनताबोध बढाउँछ, जसले अन्ततः डिप्रेसन जस्ता गम्भीर मानसिक रोग निम्त्याउँछ।</p>
+
+                <p><strong>प्रतिरोध (Resistance) हानिकारक हुनुको कारण:</strong> यसअन्तर्गत व्यक्तिले तनाव दिने पक्षप्रति रिस पोख्ने, कुटपिट वा भौतिक आक्रमण गर्ने, र डाहा गर्ने जस्ता हिंसात्मक व्यवहार देखाउँछ। यसले क्षणिक रूपमा आक्रोश शान्त गरे पनि शत्रुता र सामाजिक द्वन्द्व बढाउँछ र कानुनी वा शारीरिक रूपमा ठुलो क्षति पुर्‍याउँछ।</p>
+
+                <p><strong>निष्कर्ष:</strong> अतः यी दुवै रणनीतिले तनावको स्थायी समाधान नगरी थप जटिलता निम्त्याउने भएकाले यिनीहरू नकारात्मक र अनुपयुक्त तरिकाहरू हुन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">३.</span> तनाव व्यवस्थापनमा 'सम्झौता' (Compromise) रणनीतिको महत्त्व उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> तनाव व्यवस्थापनका विभिन्न रणनीतिहरूमध्ये 'सम्झौता' रणनीतिलाई सबैभन्दा परिपक्व, स्वस्थ र दिगो तरिका मानिन्छ।</p>
+
+                <p><strong>यस रणनीतिको बहुपक्षीय महत्त्व निम्नलिखित बुँदाहरूमा स्पष्ट पारिएको छ:</strong></p>
+                <ul>
+                    <li><strong>परिस्थिति अनुकूलन:</strong> यसले व्यक्तिलाई परिस्थितिअनुसार आफ्नो सोच, व्यवहार र आचरणमा लचकता ल्याई अनुकूलन हुन सिकाउँछ।</li>
+                    <li><strong>आपसी समझदारीको विकास:</strong> यस रणनीतिमा रिस वा आत्मसमर्पणको सट्टा सकारात्मक सञ्चार र वार्ताको माध्यमबाट दुवै पक्षको हित हुने गरी समाधान खोजिन्छ।</li>
+                    <li><strong>दीर्घकालीन र दिगो समाधान:</strong> यसले समस्याको बाहिरी रूपलाई मात्र नदबाई तनाव र द्वन्द्वको मूल जडलाई नै शान्तिपूर्ण रूपमा रूपान्तरण गर्दछ।</li>
+                    <li><strong>सामाजिक सद्भाव र आत्मीयता:</strong> सम्झौताले असमझदारी र रिसरागलाई मेटाई समाजमा आपसी सहयोग, सहकार्य र भ्रातृत्वको सम्बन्ध स्थापना गर्छ।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> अतः तनाव र द्वन्द्वलाई रचनात्मक रूपमा रूपान्तरण गरी व्यक्तिगत शान्ति र सामाजिक प्रगति हासिल गर्न 'सम्झौता' रणनीति अपरिहार्य छ।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तरात्मक प्रश्न (८ अङ्क भार)</div>
+
+        <div class="qa-block color8" style="border-left-color:#00695C;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "तनाव र द्वन्द्व मानव जीवनका अकाट्य सत्य हुन् तर यिनीहरूको सकारात्मक व्यवस्थापनले नै समाजलाई प्रगति र शान्तितर्फ डोर्‍याउँछ।" यस भनाइलाई पाठ्यपुस्तकका सकारात्मक रणनीतिहरू र द्वन्द्व रूपान्तरणको सन्दर्भ जोडी विवेचना गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> मानव जीवन विभिन्न चाहना, आवश्यकता, सोच र सामाजिक अन्तर्क्रियाहरूको योग हो। यी सबै पक्षहरू सधैँ अनुकूल नहुने भएकाले व्यक्तिमा 'तनाव' र समाजमा 'द्वन्द्व' सिर्जना हुनु स्वाभाविक र अकाट्य यथार्थ हो। वातावरणमा आउने परिवर्तन वा व्यक्तिगत चुनौतीहरूले मानिसमा मानसिक दबाब अर्थात् तनाव उत्पन्न गराउँछ भने मूल्यमान्यता र स्वार्थमा देखिने मतभेदले द्वन्द्व जन्माउँछ। तनाव र द्वन्द्व आफैँमा पूर्ण रूपमा विनाशकारी हुँदैनन्। यिनीहरूलाई कसरी सामना र व्यवस्थापन गरिन्छ भन्ने कुराले नै व्यक्तिगत स्वास्थ्यको दिशा र सामाजिक प्रगतिको मार्ग निर्धारण गर्दछ। अतः यिनीहरूको सकारात्मक रूपान्तरण नै सभ्य समाजको जग हो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span> तनाव र द्वन्द्वलाई सकारात्मक रूपमा व्यवस्थापन गर्न निम्नलिखित सकारात्मक रणनीतिहरू र सिद्धान्तहरूको भूमिका महत्त्वपूर्ण रहन्छ:</p>
+
+                <ul>
+                    <li><strong>सकारात्मक तनाव व्यवस्थापनका रणनीतिहरू:</strong> तनावलाई नकारात्मक ऊर्जाबाट रूपान्तरण गरी सिर्जनात्मक बनाउनका लागि योग, ध्यान, समय व्यवस्थापन (प्राथमिकता निर्धारण), र सङ्गीत वा कला जस्ता रचनात्मक सीपहरू अपरिहार्य छन्। यी सीपहरूले व्यक्तिको मानसिक सन्तुलन कायम राखी कार्यदक्षता बढाउँछन्।</li>
+                    <li><strong>द्वन्द्वको आधुनिक र अन्तरक्रियात्मक अवधारणा:</strong> द्वन्द्वलाई सधैँ खराब र विनाशकारी ठान्ने परम्परागत चिन्तन गलत छ। आधुनिक अवधारणाअनुसार द्वन्द्व प्राकृतिक र स्वाभाविक प्रक्रिया हो, जसले समाजमा नयाँ सुधार र विचारको मन्थन गराउँछ। उचित रूपमा व्यवस्थापन गरिएको द्वन्द्वले सामाजिक न्याय र विकास ल्याउँछ।</li>
+                    <li><strong>सम्झौता रणनीतिको सर्वोत्कृष्टता:</strong> समर्पणले भावना दबाउँछ र मानसिक रोग जन्माउँछ भने प्रतिरोधले रिस र हिंसा बढाउँछ। तर 'सम्झौता' रणनीतिले सोचाइ र व्यवहारमा लचकता ल्याई सकारात्मक सञ्चारका माध्यमबाट तनाव र द्वन्द्व दुवैको दिगो र आपसी हित अनुकूल समाधान निकाल्छ।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपाली ग्रामीण समाजमा द्वन्द्व व्यवस्थापन र तनाव रूपान्तरणको उत्कृष्ट उदाहरण <strong>गोगने र ओलने गाउँको पुल निर्माण विवाद</strong>को घटना हो। सुरुमा दुई गाउँ जोड्ने पक्की पुल कहाँ बनाउने भन्ने विषयमा व्यक्तिगत र क्षेत्रीय स्वार्थका कारण दुवै गाउँका बासिन्दाबीच ढुङ्गा हानाहान र झडप भयो। यो द्वन्द्वले दुवै गाउँमा अत्यधिक तनाव, शत्रुता र विकास निर्माणको अवरोध सिर्जना गर्‍यो (प्रतिरोधको नकारात्मक परिणाम)।</p>
+
+                <p>तर, जब दुवै गाउँका बुद्धिजीवी, भद्रभलादमी र स्थानीय नेतृत्वको सक्रियतामा आपसी संवाद, वार्ता र सम्झौताको नीति अवलम्बन गरियो, तब उनीहरूले प्राविधिक रूपमा दुवै गाउँलाई पायक पर्ने साझा स्थानमा पुल बनाउने लिखित सहमति गरे। यस सकारात्मक सम्झौताको परिणाम स्वरूप केवल पक्की पुल मात्र बनेन, बरु पुराना सबै तित्तता मेटिएर दुवै गाउँका युवाहरू मिलेर एउटै क्रिकेट क्लब गठन गरे र हाल उनीहरू आपसी आत्मीयता, सहकार्य र सामाजिक सद्भावको नयाँ उदाहरण बनेका छन्।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, तनाव र द्वन्द्व जीवनका अनिवार्य पक्षहरू हुन् जसलाई पूर्ण रूपमा पन्छाउन असम्भव छ। तर, समर्पण र प्रतिरोध जस्ता संकुचित र नकारात्मक रणनीतिहरूलाई त्यागेर 'सम्झौता' र सकारात्मक जीवनोपयोगी सीपहरूको माध्यमबाट यिनीहरूको बुद्धिमानीपूर्वक व्यवस्थापन गर्न सकेमा मात्र व्यक्तिगत जीवन स्वस्थ र सिर्जनात्मक बन्छ। यसले समाजमा रहेका मतभेदहरूलाई सहकार्यमा बदल्दै दिगो शान्ति, सामाजिक सद्भाव र विकासको मार्ग प्रशस्त गर्दछ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#00695C; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> तनाव जीवनको स्वाभाविक अंश हो, तर यसले तपाईंलाई नियन्त्रित गर्न नदिनुहोस्। योग, ध्यान, समय व्यवस्थापन र सकारात्मक सोचलाई दैनिक अभ्यासमा ल्याउनुहोस्। समर्पण वा प्रतिरोधको सट्टा 'सम्झौता' र रचनात्मक रूपान्तरणको बाटो रोज्नुहोस् – यसले तपाईंलाई मानसिक रूपमा स्वस्थ, सामाजिक रूपमा सफल र जीवनमा सन्तुलित बनाउनेछ। याद राख्नुहोस् – तनावलाई नियन्त्रण गर्ने क्षमता नै साँचो जीवनोपयोगी सीप हो।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ३, पाठ ४</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
