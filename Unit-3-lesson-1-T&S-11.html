@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ १ – निर्णय प्रक्रिया (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #eaf5ed;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #1B5E20;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #2E7D32;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #2E7D32;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e0ece4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8d0c0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #2E7D32;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #2E7D32;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #2E7D32;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #4CAF50;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #2E7D32 ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #2E7D32;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(46, 125, 50, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #2E7D32;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #1B5E20;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #2E7D32;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #2E7D32;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1B5E20;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #2E7D32;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #2E7D32;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.green-light {
+            border-left-color: #2E7D32;
+            background: #eaf5ed;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8d0c0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8d0c0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #2E7D32;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e0ece4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #b8d0c0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #2E7D32;
+        }
+
+        .qa-block.color1 { border-left-color: #2E7D32; background: #eaf5ed; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1B5E20;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #2E7D32;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #1B5E20;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #2E7D32;
+        }
+
+        .glossary-item strong {
+            color: #1B5E20;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eaf5ed;
+            border-radius: 20px;
+            border: 2px dashed #4CAF50;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #2E7D32;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- ACTIVITY / ANALYSIS BOX ----- */
+        .analysis-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #b8d0c0;
+            margin: 12px 0;
+        }
+
+        .analysis-box .analysis-title {
+            font-weight: 900;
+            color: #1B5E20;
+            font-size: 1.15rem;
+        }
+
+        .analysis-box p,
+        .analysis-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+        }
+
+        .analysis-box ul,
+        .analysis-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #b8d0c0;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #1B5E20;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #2E7D32;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #1B5E20;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(46, 125, 50, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #2E7D32;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8d0c0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #2E7D32;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .analysis-box p,
+            .analysis-box li {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-arrow-right"></i>
+                    एकाइ ३, पाठ १: निर्णय प्रक्रिया (Decision Making Process)
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ ३, पाठ १
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> निर्णय (Decision)</strong>
+                <p>कुनै काम गर्नुपूर्व सो काम गर्ने वा नगर्ने भनी विभिन्न सम्भाव्य विकल्पहरूमध्येबाट विचारपूर्वक लिइने अन्तिम निष्कर्ष वा विवेकी छनोट।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> निर्णय निर्माण (Decision Making)</strong>
+                <p>कुनै निश्चित उद्देश्य प्राप्तिका लागि उपलब्ध विभिन्न विकल्पहरू पहिचान गरी, तथ्यहरूको सङ्कलन र विश्लेषणद्वारा उत्कृष्ट विकल्प छनोट र कार्यान्वयन गर्ने व्यवस्थित प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> विवेकशील निर्णय (Rational Decision)</strong>
+                <p>व्यक्तिगत भावना, संवेग र पूर्वाग्रहभन्दा माथि उठेर तथ्य, तथ्याङ्क र प्रमाणहरूको वस्तुनिष्ठ विश्लेषणका आधारमा लिइने सर्वोत्तम निर्णय।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> बढोत्तरी निर्णय (Incremental Decision)</strong>
+                <p>पूर्वघोषित वा विगतका निर्णयहरूलाई नै आधार बनाई भइरहेका कार्यहरूमा सामयिक थपघट, परिमार्जन वा सुधार गर्ने प्रकृतिको निर्णय।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> सहभागितामूलक निर्णय (Participative Decision)</strong>
+                <p>निर्णयको प्रत्यक्ष वा अप्रत्यक्ष प्रभाव पर्ने लक्षित वर्ग, सरोकारवाला वा लाभग्राही समूहलाई निर्णय प्रक्रियामा सक्रिय रूपमा सहभागी गराई लिइने सामूहिक निर्णय।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> सङ्गठनात्मक निर्णय (Organizational Decision)</strong>
+                <p>कुनै संस्था, कार्यालय वा समूहको उद्देश्य प्राप्ति र दैनिक कार्य सञ्चालनका सिलसिलामा आधिकारिक पदाधिकारी वा कर्मचारीद्वारा लिइने संस्थागत निर्णय।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> अनिर्णित अवस्था (Indecision)</strong>
+                <p>पर्याप्त सूचनाको अभाव, भविष्यको डर वा दबाबका कारण समयमै उपयुक्त विकल्प रोज्न नसकी अन्योल, द्विविधा र असमञ्जसमा फस्ने मानसिक अवस्था।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> दबाब समूह (Pressure Group)</strong>
+                <p>निर्णयकर्तालाई आफ्नो स्वार्थ अनुकूल निर्णय गराउनका लागि बाह्य रूपमा प्रभाव, दबाब वा लबिइङ सिर्जना गर्ने सङ्गठित सामाजिक वा राजनीतिक समूह।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> पुनरावलोकन (Review/Evaluation)</strong>
+                <p>कार्यान्वयन भइसकेको निर्णयले अपेक्षित परिणाम दियो कि दिएन र त्यसको प्रभाव कस्तो रह्यो भनी गरिने समीक्षात्मक मूल्याङ्कन।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#2E7D32; margin-right:4px;"></i> आन्तरिक वातावरण (Internal Environment)</strong>
+                <p>निर्णय निर्माण र कार्यान्वयनलाई प्रत्यक्ष प्रभाव पार्ने निर्णयकर्ता वा संस्थाभित्रै उपलब्ध स्रोतसाधनहरू (भौतिक, वित्तीय, मानवीय, र प्राविधिक) को अनुकूलता वा प्रतिकूलता।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "निर्णय प्रक्रिया" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. अवधारणा -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. निर्णय र निर्णय निर्माणको अवधारणा</div>
+
+        <div class="content-box green-light">
+            <p>मानव जीवन दैनिक रूपमा अनेकन् छनोट र निर्णयहरूको शृङ्खला हो। हामीले काम गर्नुपूर्व आफ्नो उमेर, योग्यता, अनुभव र क्षमताअनुसार कामको सम्बन्धमा आफ्नो सोच वा विचार बनाएका हुन्छौँ। "के गर्ने, किन गर्ने, कसरी गर्ने, कहाँ गर्ने, कहिले गर्ने" भन्ने प्रश्नहरूको बुद्धिमत्तापूर्ण समाधान खोज्दै अन्तिम निष्कर्षमा पुग्नु नै निर्णय हो।</p>
+
+            <ul>
+                <li><strong>जर्ज आर. टेरी (George R. Terry) का अनुसार:</strong> "निर्णय गर्ने कार्यलाई दुई वा सोभन्दा बढी सम्भाव्य विकल्पहरूबाट एउटा सबैभन्दा राम्रो विकल्पको छनोट भनी परिभाषित गरिन्छ।"</li>
+                <li><strong>हेरोल्ड कुन्ज र हेन्ज वेरिच (Harold Koontz &amp; Heinz Weihrich) का अनुसार:</strong> "विकल्पहरूबीचको छनोट कार्यका साथै योजना तर्जुमाको जगलाई नै निर्णय भनिन्छ।"</li>
+            </ul>
+
+            <p>तसर्थ, <strong>निर्णय निर्माण (Decision Making)</strong> एउटा आकस्मिक घटना नभई निश्चित र व्यवस्थित प्रक्रिया हो। यस अन्तर्गत कुनै खास उद्देश्य प्राप्ति वा समस्या समाधानका लागि विभिन्न सम्भावना र विकल्पहरूको पहिचान गरिन्छ, सूचना सङ्कलन गरिन्छ, र भविष्यमा पर्ने प्रभावको विश्लेषणका आधारमा निर्णय लिइन्छ।</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">१. समस्याको पहिचान</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">२. समस्याको विश्लेषण</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">३. विकल्पको पहिचान</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">४. विकल्पको विश्लेषण</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">५. सर्वोत्तम विकल्प छनोट</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">६. निर्णय कार्यान्वयन</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">७. पुनरावलोकन तथा मूल्याङ्कन</div>
+            </div>
+        </div>
+
+        <!-- २. प्रकारहरू -->
+        <div class="sub-head"><i class="fas fa-list-check"></i> २. निर्णयका प्रकारहरू</div>
+
+        <div class="content-box blue-light">
+            <p>दैनिक जीवन, समाज र संस्थागत व्यवस्थापनमा निर्णयहरू विभिन्न प्रकृतिका हुन्छन्। पाठ्यपुस्तकका आधारमा यसका ६ प्रकारहरू निम्नलिखित छन्:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: निर्णयका प्रकारहरू</div>
+                <table>
+                    <thead>
+                        <tr><th>निर्णयको प्रकार</th><th>मुख्य विशेषता</th><th>व्यावहारिक उदाहरण</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>१. सङ्गठनात्मक निर्णय</strong></td>
+                            <td>संस्थाको लक्ष्य प्राप्तिका लागि पदाधिकारीद्वारा लिइने औपचारिक र नीतिगत निर्णय।</td>
+                            <td>विद्यालय व्यवस्थापन समितिले विद्यालयमा नयाँ कम्प्युटर प्रयोगशाला स्थापना गर्ने निर्णय गर्नु।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>२. व्यक्तिगत निर्णय</strong></td>
+                            <td>व्यक्तिले आफ्नो दैनिक जीवनयापन र इच्छाअनुसार लिने निर्णय, जसको प्रभाव आफैँमा सीमित हुन्छ।</td>
+                            <td>बिहान छिटो उठेर अध्ययन गर्ने वा साँझमा गृहकार्य गर्ने भन्ने निर्णय।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>३. सामूहिक निर्णय</strong></td>
+                            <td>आपसी हित र भलाइका लागि सरोकारवालाहरू मिली लोकतान्त्रिक वा सर्वसम्मत रूपमा गरिने निर्णय।</td>
+                            <td>टोल सुधार समितिले गाउँमा खानेपानी मुहान संरक्षण गर्ने सामूहिक निर्णय गर्नु।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>४. विवेकशील निर्णय</strong></td>
+                            <td>संवेगमा नआई तथ्य, प्रमाण र विकल्पहरूको गहन विश्लेषणका आधारमा लिइने तार्किक निर्णय।</td>
+                            <td>कक्षा ११ पछि आफ्नो क्षमता र भविष्यको अवसर हेरी विज्ञान वा मानविकी सङ्काय रोज्नु।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>५. बढोत्तरी निर्णय</strong></td>
+                            <td>विगतका निर्णय वा चलिरहेको कार्यलाई थप परिमार्जन र सुधार गर्ने गरी लिइने क्रमिक निर्णय।</td>
+                            <td>विगत वर्षदेखि चलिरहेको पुस्तकालय भवन निर्माणमा थप बजेट विनियोजन गरी सभाहल पनि थप्नु।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>६. सहभागितामूलक निर्णय</strong></td>
+                            <td>लक्षित समूह र लाभग्राहीलाई निर्णय प्रक्रियामा सहभागी गराई गरिने समावेशी निर्णय।</td>
+                            <td>सामुदायिक वन उपभोक्ता समूहको बैठकमा उपभोक्ताहरूकै सहमतिमा वन पैदावार वितरणको नियम तोक्नु।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ३. ध्यान दिनुपर्ने पक्षहरू -->
+        <div class="sub-head"><i class="fas fa-balance-scale"></i> ३. निर्णय गर्दा ध्यान दिनुपर्ने आन्तरिक र बाह्य पक्षहरू</div>
+
+        <div class="content-box purple-light">
+            <p>कुनै पनि निर्णय विनाआधार र हचुवाको भरमा गर्नु हुँदैन। तथ्य र विश्लेषणविना गरिएको निर्णयले स्रोत, साधन र समयको बर्बादी मात्र गराउँछ। त्यसैले निर्णय गर्दा निम्नलिखित दुई वातावरणीय पक्षहरूमा ध्यान दिनुपर्छ:</p>
+
+            <ul>
+                <li><strong>क) आन्तरिक वातावरणीय पक्षहरू:</strong> उपलब्ध समय, आवश्यक पर्ने मानवीय स्रोत, भौतिक पूर्वाधार, वित्तीय अवस्था, प्राविधिक स्रोतसाधनको उपलब्धता र निर्णयकर्ताको आन्तरिक इच्छाशक्ति।</li>
+                <li><strong>ख) बाह्य वातावरणीय पक्षहरू:</strong> राष्ट्रिय तथा अन्तर्राष्ट्रिय आर्थिक, सामाजिक, सांस्कृतिक र भौगोलिक अवस्था; प्रशासनिक संयन्त्र; मुलुकको विद्यमान नीति तथा कानुनी व्यवस्था; प्रतिस्पर्धीहरूको अवस्था; एवं विज्ञान र प्रविधिको विकास।</li>
+            </ul>
+        </div>
+
+        <!-- ४. अनिर्णित अवस्था -->
+        <div class="sub-head"><i class="fas fa-question-circle"></i> ४. अनिर्णित अवस्था र यसका कारणहरू</div>
+
+        <div class="content-box orange-light">
+            <p>कुनै समस्या वा परिस्थिति आइपर्दा समयमै उपयुक्त विकल्प रोज्न नसकेर अन्योलमा पर्नु <strong>अनिर्णित अवस्था</strong> हो। जस्तै: कवीरले खराब सङ्गतका कारण विद्यालय छोड्ने वा नछोड्ने द्विविधामा परेर घर र विद्यालय दुवैतर्फ असत्य बोल्नु अनिर्णित अवस्थाको नकारात्मक उदाहरण हो। मानिस अनिर्णित बन्नुका ८ प्रमुख कारणहरू यस प्रकार छन्:</p>
+            <ol>
+                <li><strong>पर्याप्त सूचनाको अभाव:</strong> निर्णय गर्नका लागि आवश्यक सत्य तथ्य विवरण फेला नपर्नु।</li>
+                <li><strong>तत्कालको परिस्थिति वा वातावरण:</strong> प्रतिकूल वा तनावपूर्ण सामाजिक/पारिवारिक वातावरण।</li>
+                <li><strong>दबाब समूह:</strong> बाह्य व्यक्ति वा समूहको अनावश्यक प्रभाव र दबाब।</li>
+                <li><strong>भविष्यको असर वा प्रभाव:</strong> निर्णय गलत भएमा आउन सक्ने सम्भावित नकारात्मक परिणामको डर।</li>
+                <li><strong>स्रोतसाधनको उपलब्धता:</strong> निर्णय कार्यान्वयन गर्न आवश्यक पर्ने साधनको सुनिश्चितता नहुनु।</li>
+                <li><strong>निर्णय गर्ने अधिकार:</strong> आफूसँग निर्णय लिने कानुनी वा व्यावहारिक अधिकारको अन्योल हुनु।</li>
+                <li><strong>समय सीमा:</strong> निकै कम समयमा महत्त्वपूर्ण निर्णय लिनुपर्ने मानसिक दबाब।</li>
+                <li><strong>विद्यमान नीति र कानुन:</strong> कानुनी जटिलता वा नीतिगत अस्पष्टता।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-home"></i> क्रियाकलाप १: घरपरिवारमा आइपरेका समस्याहरूको सूची र समाधान</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#2E7D32; margin-right:8px;"></i> प्रश्न:</p>
+            <p>आफ्नो घरपरिवारमा आइपरेका विभिन्न प्रकारका समस्याहरूको सूची तयार गरी कक्षाकोठामा साथीहरूसँग छलफल गर्नुहोस्। सबैका समस्याहरू उस्तै प्रकारका छन्, छैनन् जानकारी लिनुहोस् र आगामी दिनमा कुनै एक घरायसी समस्या समाधानका लागि निर्णयका लागि विकल्पहरूको खोजी गर्नुहोस्।</p>
+        </div>
+
+        <div class="analysis-box">
+            <p class="analysis-title"><i class="fas fa-list" style="color:#2E7D32; margin-right:8px;"></i> क) घरपरिवारमा आइपर्ने विभिन्न समस्याहरूको काल्पनिक सूची:</p>
+            <ol>
+                <li><strong>खानेपानीको अभाव:</strong> धारामा नियमित पानी नआउने र ट्याङ्करको पानी किन्नुपर्ने आर्थिक भार।</li>
+                <li><strong>घरायसी फोहोरमैला व्यवस्थापन:</strong> कुहिने र नकुहिने फोहोर विसर्जन गर्ने उपयुक्त ठाउँको कमी।</li>
+                <li><strong>पारिवारिक बजेट असन्तुलन:</strong> आम्दानी भन्दा खर्च बढी भई मासिक बचत हुन नसक्नु।</li>
+                <li><strong>डिजिटल लत (Screen Time):</strong> बालबालिका तथा युवा सदस्यहरूमा मोबाइल र सामाजिक सञ्जालको अत्यधिक प्रयोग।</li>
+            </ol>
+            <p><em>छलफलको निष्कर्ष:</em> कक्षामा साथीहरूसँग छलफल गर्दा अधिकांश सहरी साथीहरूको समस्या खानेपानी र फोहोर व्यवस्थापनसँग मिल्दोजुल्दो देखियो भने ग्रामीण क्षेत्रका साथीहरूमा यातायात र कृषि उत्पादनको बजार व्यवस्थापनको समस्या प्रमुख पाइयो।</p>
+
+            <p class="analysis-title" style="margin-top:16px;"><i class="fas fa-table" style="color:#2E7D32; margin-right:8px;"></i> ख) 'खानेपानीको अभाव' समस्या समाधानका लागि निर्णय विकल्पहरूको विश्लेषण तालिका:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: खानेपानीको अभाव समस्या समाधानका विकल्पहरू</div>
+                <table>
+                    <thead>
+                        <tr><th>समस्या</th><th>सम्भाव्य विकल्पहरू</th><th>विकल्पहरूको विश्लेषण (सबल/दुर्बल पक्ष)</th><th>अन्तिम निर्णय (सर्वोत्तम छनोट)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3"><strong>खानेपानीको तीव्र अभाव</strong></td>
+                            <td><strong>विकल्प १:</strong> भूमिगत इनार खन्ने वा बोरिङ गर्ने।</td>
+                            <td><strong>सबल:</strong> दीर्घकालीन रूपमा पानीको आफ्नै स्रोत हुने।<br><strong>दुर्बल:</strong> प्रारम्भिक खर्च निकै उच्च हुने र जमिनमुनिको पानी सुक्ने जोखिम।</td>
+                            <td rowspan="3"><strong>अन्तिम निर्णय:</strong><br>घरको छतमा <strong>आकासे पानी सङ्कलन प्रणाली</strong> जडान गर्ने र हिउँदमा टोलको साझा इनारबाट पानी ल्याउने सामूहिक निर्णय गरियो। यसले आर्थिक भार कम गर्छ र वातावरण मैत्री पनि हुन्छ।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>विकल्प २:</strong> आकासे पानी सङ्कलन (Rainwater Harvesting) प्रविधि जडान गर्ने।</td>
+                            <td><strong>सबल:</strong> कम खर्चिलो, वातावरणमैत्री र बर्खामा सहज हुने।<br><strong>दुर्बल:</strong> हिउँदका सुख्खा महिनामा पानी अपर्याप्त हुन सक्ने।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>विकल्प ३:</strong> बजारबाट नियमित पानी ट्याङ्कर खरिद गर्ने।</td>
+                            <td><strong>सबल:</strong> तत्कालै पानी उपलब्ध हुने, झन्झट नहुने।<br><strong>दुर्बल:</strong> महँगो हुने र दीर्घकालीन समाधान नहुने।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-school"></i> क्रियाकलाप २: विद्यालय व्यवस्थापन समितिका निर्णयहरूको विश्लेषण</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#2E7D32; margin-right:8px;"></i> प्रश्न:</p>
+            <p>विद्यालय व्यवस्थापन समितिले विद्यालयको व्यवस्थापनका सम्बन्धमा एक वर्षभित्र गरेका विभिन्न निर्णयहरूको सूची तयार गरी त्यस्तो निर्णय लिनु पर्ने कारण सम्बन्धमा जानकारी लिनुहोस्। उपयुक्त निर्णयका लागि अन्य सम्भाव्य विकल्पहरू के के हुन सक्थे? सो सम्बन्धमा कक्षामा छलफल गरी सुझावहरू तयार गर्नुहोस्।</p>
+        </div>
+
+        <div class="analysis-box">
+            <p>कुनै एक स्थानीय सामुदायिक विद्यालयको विद्यालय व्यवस्थापन समिति (SMC) ले एक वर्षभित्र गरेका तीन प्रमुख निर्णयहरूको विश्लेषण यस प्रकार छ:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: विद्यालय व्यवस्थापन समितिका निर्णयहरूको विश्लेषण</div>
+                <table>
+                    <thead>
+                        <tr><th>व्यवस्थापन समितिले गरेको निर्णय</th><th>निर्णय लिनुको कारण</th><th>अन्य सम्भाव्य विकल्पहरू</th><th>कक्षा छलफलबाट प्राप्त सुझाव र परिमार्जित विकल्प</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>१. विद्यालय हाताभित्र नयाँ विज्ञान प्रयोगशाला भवन निर्माण गर्ने।</strong></td>
+                            <td>माध्यमिक तहका विद्यार्थीहरूलाई प्रयोगात्मक कक्षाका लागि पर्याप्त स्थान नभएकोले।</td>
+                            <td>विकल्प क: साविककै कक्षाकोठालाई परिमार्जन गरी प्रयोगशाला बनाउने।<br>विकल्प ख: अनलाइन भर्चुअल ल्याब (E-Lab) को प्रयोग गर्ने।</td>
+                            <td>नयाँ भवन निर्माण गर्नु उत्तम हो, तर बजेट अभाव भएमा पुराना कोठा परिमार्जन गर्नु उपयुक्त हुन्थ्यो। साथै, भौतिक पूर्वाधारसँगै प्रविधिमैत्री भर्चुअल ल्याब पनि मिसाउनु पर्छ।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>२. विद्यालयको खाजा घर (Canteen) लाई निजी ठेकेदारलाई सञ्चालन गर्न दिने।</strong></td>
+                            <td>विद्यार्थीहरूलाई सफा, स्वस्थ र सस्तो खाजा उपलब्ध गराउने आन्तरिक जनशक्तिको अभाव भएकोले।</td>
+                            <td>विकल्प क: विद्यालय स्वयंले आफ्नै मातहतमा भान्से राखेर क्यान्टिन चलाउने।<br>विकल्प ख: अभिभावक सहकारी मोडलमा खाजा घर सञ्चालन गर्ने।</td>
+                            <td>निजी ठेकेदारलाई दिँदा व्यापारिक स्वार्थ हुन सक्छ। तसर्थ, <strong>अभिभावक-शिक्षक सहकारी मोडल</strong>मा खाजा घर चलाउँदा सस्तो, पोसिलो र विद्यार्थीमैत्री खाजा उपलब्ध गराउन सकिन्छ।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>३. भौतिक सुरक्षाका लागि विद्यालयको मूल ढोकामा सीसीटीभी क्यामेरा जडान गर्ने।</strong></td>
+                            <td>विद्यालयको सम्पत्ति चोरी हुने र बाह्य अवांछित तत्वहरूको प्रवेश रोक्न।</td>
+                            <td>विकल्प क: सुरक्षा गार्ड (पाले दाइ) को संख्या थप गर्ने।<br>विकल्प ख: पर्खालको उचाइ बढाउने।</td>
+                            <td>सीसीटीभी जडान गर्नु आधुनिक र किफायती विकल्प हो। तर सुरक्षा गार्डको मानवीय उपस्थिति र प्राविधिक निगरानी दुवैको सन्तुलन हुनुपर्छ।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- क्रियाकलाप ३ -->
+        <div class="sub-head"><i class="fas fa-user"></i> क्रियाकलाप ३: आफूले गरेका तर कार्यान्वयन नसकेका निर्णयहरूको समीक्षा</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#2E7D32; margin-right:8px;"></i> प्रश्न:</p>
+            <p>तपाईंले आफैँले गरेका तर कार्यान्वयन वा लागू गर्न नसकिएका निर्णयहरूको सूची तयार गर्नुहोस्। साथै उक्त निर्णयहरू कार्यान्वयन गर्न नसक्नुका कारणहरू खोजी गरी नयाँ विकल्प पहिचान गर्नुहोस् र त्यसको कार्यान्वयन गर्नुहोस्।</p>
+        </div>
+
+        <div class="analysis-box">
+            <p>व्यक्तिगत जीवनमा कतिपय निर्णयहरू दृढ इच्छाशक्तिको कमी वा व्यावहारिक वातावरण नमिल्नाले कार्यान्वयन हुन सक्दैनन्। त्यस्ता निर्णयहरूको आत्मसमीक्षा तल प्रस्तुत गरिएको छ:</p>
+
+            <p><strong>कार्यान्वयन हुन नसकेको निर्णय:</strong> <em>"दैनिक बिहान ५:०० बजे उठेर ३ घण्टा लोकसेवा/बोर्ड परीक्षाको स्व-अध्ययन गर्ने।"</em></p>
+
+            <p><strong>कार्यान्वयन गर्न नसक्नुका कारणहरू (आत्म-विश्लेषण):</strong></p>
+            <ol>
+                <li><strong>डिजिटल लत:</strong> राती ढिलोसम्म मोबाइल फोनमा सामाजिक सञ्जाल र भिडियोहरू हेर्ने बानीले गर्दा बिहान ५ बजे ब्युँझनै नसकिने।</li>
+                <li><strong>अव्यावहारिक योजना:</strong> शरीरलाई पर्याप्त निद्रा नपुग्दा बिहान उठेपछि टाउको दुख्ने र अध्ययनमा ध्यान केन्द्रित नहुने।</li>
+                <li><strong>दृश्य अलार्मको कमजोरी:</strong> मोबाइल फोनमै अलार्म राख्दा ब्युँझने बित्तिकै सजिलै 'Snooze' थिचेर पुनः सुत्ने बानी।</li>
+            </ol>
+
+            <p><strong>नयाँ विकल्पहरूको पहिचान र कार्यान्वयन कार्ययोजना:</strong></p>
+            <ul>
+                <li><strong>विकल्प क (परिमार्जित समय):</strong> बिहान ५:०० बजेको सट्टा ५:३० बजे उठ्ने र राती ठीक १०:०० बजे सुत्ने नियम बनाउने।</li>
+                <li><strong>विकल्प ख (वातावरणीय परिवर्तन):</strong> सुत्ने कोठामा मोबाइल फोन नलग्ने र अलार्मका लागि भौतिक घडी प्रयोग गरी त्यसलाई ओछ्यानभन्दा टाढा टेबलमा राख्ने (ताकि अलार्म बन्द गर्न ओछ्यानबाट उठ्नै परोस्)।</li>
+                <li><strong>विकल्प ग (पृष्ठपोषण):</strong> दैनिक अध्ययनको प्रगति तालिका भित्तामा टाँस्ने र परिवारको सदस्यलाई आफू उठे/नउठेको निगरानी गर्न अनुरोध गर्ने।</li>
+            </ul>
+
+            <p><strong>कार्यान्वयनको नतिजा:</strong> यो नयाँ योजना लागू गरेपछि मोबाइल स्क्रिन टाइम घट्यो, निद्रा पूरा भयो र बिहानको अध्ययन नियमित बन्न सक्यो।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> निर्णय निर्माणको परिचय दिनुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> कुनै पनि काम सुरु गर्नुपूर्व त्यस कामसँग सम्बन्धित विविध पाटाहरूको मूल्याङ्कन गरी "के गर्ने, किन गर्ने, कसरी गर्ने र कहिले गर्ने" भन्ने सन्दर्भमा एउटा निश्चित निष्कर्षमा पुग्ने प्रक्रिया नै <strong>निर्णय निर्माण</strong> हो। यो मानवीय जीवन र व्यवस्थापनको मुटु मानिने एक अनिवार्य जीवनोपयोगी सीप हो। निर्णय निर्माणको प्रक्रियामा मानिसले आफ्नो उमेर, अनुभव, क्षमता र ज्ञानका आधारमा उपलब्ध विभिन्न विकल्पहरू पहिल्याउने गर्दछ।<br><br>
+                प्राज्ञिक दृष्टिकोणबाट निर्णय निर्माण उपलब्ध विकल्पहरूमध्येबाट सर्वोत्तम विकल्प छनोट गर्ने एक बौद्धिक र तार्किक प्रक्रिया हो। प्रसिद्ध विद्वान हेरोल्ड कुन्जका अनुसार निर्णय विकल्पहरूबीचको छनोट कार्य मात्र नभएर योजना तर्जुमाको आधारशिला पनि हो। त्यसैले, व्यक्तिगत जीवनको सफलता, घरायसी सुख, सङ्गठनात्मक विकास र राज्य सञ्चालनको मार्गचित्र कोर्न निर्णय निर्माणले मार्गदर्शनको भूमिका खेल्दछ।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> निर्णय निर्माणका प्रकारहरू उदाहरणसहित वर्णन गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> निर्णयको प्रकृति, क्षेत्र, सहभागिता र अङ्कभारका आधारमा निर्णय निर्माणलाई मुख्यतया ६ भागमा वर्गीकरण गर्न सकिन्छ।</p>
+
+                <ol>
+                    <li><strong>सङ्गठनात्मक निर्णय (Organizational Decision):</strong> कुनै पनि सरकारी, गैरसरकारी वा निजी संस्थाको दैनिक कार्य सञ्चालन र उद्देश्य प्राप्तिका लागि आधिकारिक पदाधिकारीहरूले लिने निर्णय।<br><em>उदाहरण:</em> बैंक सञ्चालक समितिले व्याजदर घटाउने वा बढाउने निर्णय गर्नु।</li>
+                    <li><strong>व्यक्तिगत निर्णय (Personal Decision):</strong> व्यक्तिले आफ्नो निजी जीवन, रुचि र आवश्यकताका आधारमा आफैँ लिने निर्णय।<br><em>उदाहरण:</em> कुनै विद्यार्थीले अतिरिक्त समयमा सङ्गीत वा खेलकुद कक्षा सिक्ने निर्णय गर्नु।</li>
+                    <li><strong>सामूहिक निर्णय (Group Decision):</strong> समाज वा समूहका सदस्यहरू मिलेर आपसी हित, कल्याण र विकासका लागि सामूहिक छलफलद्वारा गरिने साझा निर्णय।<br><em>उदाहरण:</em> टोलबासी मिलेर गाउँको सडक मर्मतका लागि जनश्रमदान गर्ने निर्णय लिनु।</li>
+                    <li><strong>विवेकशील निर्णय (Rational Decision):</strong> आवेग वा संवेगमा नआई तथ्य, तथ्याङ्क र वैज्ञानिक प्रमाणहरूको गहन विश्लेषण गरी सर्वोत्तम विकल्पको छनोट गरिने निर्णय।<br><em>उदाहरण:</em> किसानले माटो परीक्षण गराई आफ्नो खेतको माटो अनुकूल फस्टाउने बाली लगाउने निर्णय गर्नु।</li>
+                    <li><strong>बढोत्तरी निर्णय (Incremental Decision):</strong> यसअघि नै कार्यान्वयनमा आइसकेका निर्णय वा कार्यहरूलाई आधार मानी वर्तमान परिस्थिति अनुसार त्यसमा थप सुधार वा परिमार्जन गर्ने निर्णय।<br><em>उदाहरण:</em> विद्यालयमा भइरहेको कम्प्युटर शिक्षालाई थप प्रभावकारी बनाउन आगामी शैक्षिक सत्रदेखि ई-लाइब्रेरी थप गर्ने निर्णय गर्नु।</li>
+                    <li><strong>सहभागितामूलक निर्णय (Participative Decision):</strong> निर्णयको प्रभाव भोग्ने लक्षित वर्ग, सर्वसाधारण वा सरोकारवालाहरूलाई निर्णय प्रक्रियाको प्रारम्भिक चरणदेखि नै सहभागी गराई सर्वसम्मतिले गरिने लोकतान्त्रिक निर्णय।<br><em>उदाहरण:</em> स्थानीय तहले बजेट विनियोजन गर्दा स्थानीय बासिन्दहरूसँग प्रत्यक्ष भेला गराई योजना छनोट गर्नु।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">३.</span> निर्णय गर्दा ध्यान दिनुपर्ने कुराहरूको सूची तयार पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> कुनै पनि निर्णयलाई सफल, व्यावहारिक र त्रुटिरहित बनाउन निर्णयकर्ताले बहुआयामिक पक्षहरूमा ध्यान दिनु आवश्यक छ। निर्णय गर्दा ध्यान दिनुपर्ने कुराहरूको वर्गीकरणसहितको सूची तल प्रस्तुत गरिएको छ:</p>
+
+                <p><strong>क) आन्तरिक वातावरणीय पक्षहरू:</strong></p>
+                <ul>
+                    <li><strong>उपलब्ध समय:</strong> निर्णय तत्काल लिनुपर्ने हो कि सोच्नका लागि पर्याप्त समय छ भनी विश्लेषण गर्ने।</li>
+                    <li><strong>मानवीय स्रोतसाधन:</strong> निर्णय कार्यान्वयन गर्न आवश्यक पर्ने दक्ष जनशक्तिको उपलब्धता आँकलन गर्ने।</li>
+                    <li><strong>वित्तीय स्रोत:</strong> निर्णय कार्यान्वयन गर्न लाग्ने लागत र आफ्नो बजेट क्षमताको सन्तुलन मिलाउने।</li>
+                    <li><strong>भौतिक पूर्वाधार:</strong> उपकरण, प्रविधि र कार्यस्थलको अनुकूलता हेर्ने।</li>
+                </ul>
+
+                <p><strong>ख) बाह्य वातावरणीय पक्षहरू:</strong></p>
+                <ul>
+                    <li><strong>कानुनी र नीतिगत व्यवस्था:</strong> निर्णयले मुलुकको विद्यमान ऐन, कानुन, नियम र सामाजिक मर्यादालाई उल्लङ्घन गर्छ कि गर्दैन भनी जाँच्ने।</li>
+                    <li><strong>सामाजिक-सांस्कृतिक परिवेश:</strong> निर्णयले स्थानीय समाजको रीतिरिवाज, मूल्यमान्यता र सांस्कृतिक संवेदनशीलतामा पार्ने प्रभावको ख्याल गर्ने।</li>
+                    <li><strong>भौगोलिक र वातावरणीय पक्ष:</strong> निर्णयले वातावरणमा कुनै दीर्घकालीन नकारात्मक असर (जस्तै प्रदूषण) गर्छ कि गर्दैन भनी सुनिश्चित गर्ने।</li>
+                    <li><strong>प्रतिस्पर्धी र प्रविधिको अवस्था:</strong> बजारमा रहेका प्रतिस्पर्धीहरूको रणनीति र उपलब्ध आधुनिक प्रविधिलाई ध्यान दिने।</li>
+                </ul>
+
+                <p><strong>ग) परिणाम र भावनाको आँकलन:</strong></p>
+                <ul>
+                    <li><strong>भविष्यको प्रभाव:</strong> यस निर्णयले दीर्घकालमा कस्तो परिणाम ल्याउँछ र यसले कसैको अहित त गर्दैन भनी पूर्वअनुमान गर्ने।</li>
+                    <li><strong>निर्णय पश्चात्को अनुभूति:</strong> निर्णय गरिसकेपछि आफू वा संस्थालाई पश्चात्ताप वा आत्मग्लानि नहुने गरी विवेकपूर्ण निष्कर्षमा पुग्ने।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">४.</span> 'निर्णय निर्माण जटिल र व्यावहारिक काम हो।' यस भनाइलाई आफ्ना तर्कले पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> निर्णय निर्माण केवल एक शब्दको छनोट वा तत्कालै गरिने घोषणा मात्र होइन; यो त विज्ञान र कलाको समिश्रण भएको अत्यन्तै संवेदनशील, जटिल र व्यावहारिक कार्य हो। यस भनाइलाई पुष्टि गर्ने मुख्य तर्कहरू निम्न बमोजिम छन्:</p>
+
+                <ul>
+                    <li><strong>बहुविकल्पको अन्योल र द्वन्द्व:</strong> कुनै पनि समस्या समाधानका लागि धेरै विकल्पहरू उपलब्ध हुन्छन्। प्रत्येक विकल्पका आफ्नै सबल र दुर्बल पक्षहरू हुन्छन्। एउटा पक्षलाई फाइदा पुग्ने विकल्प रोज्दा अर्को पक्षलाई हानि हुन सक्ने हुनाले सही सन्तुलन मिलाउनु अत्यन्तै जटिल हुन्छ।</li>
+                    <li><strong>अनिश्चित भविष्य र जोखिम:</strong> निर्णय वर्तमानमा गरिन्छ तर यसको परिणाम भविष्यमा देखा पर्दछ। भविष्य सधैँ अनिश्चित र परिवर्तनशील हुने भएकाले वर्तमानको उत्कृष्ट निर्णय पनि भविष्यमा गलत सावित हुन सक्छ। यो जोखिम उठाउनु आफैँमा चुनौतीपूर्ण छ।</li>
+                    <li><strong>वातावरणीय दबाब र कानुनी सीमाहरू:</strong> निर्णय गर्दा राष्ट्रिय ऐन-कानुन, दबाब समूहहरूको चाहना, सीमित वित्तीय स्रोत, र सामाजिक मूल्यमान्यताको कडा परिधिभित्र रहनुपर्छ। यी विरोधी शक्तिहरूका बीचमा व्यावहारिक बाटो पहिल्याउनु सजिलो हुँदैन।</li>
+                    <li><strong>मानवीय संवेग र पूर्वाग्रह:</strong> निर्णयकर्ता पनि मानिस नै भएकाले कहिलेकाहीँ रिस, लोभ, डर, वा व्यक्तिगत सम्बन्धका कारण विवेक गुम्न सक्छ। संवेगलाई नियन्त्रणमा राखी पूर्णतः वस्तुनिष्ठ र तटस्थ भएर निर्णय गर्नु मानसिक रूपमा कठिन कार्य हो।</li>
+                    <li><strong>स्रोत र साधनको सीमा:</strong> व्यावहारिक धरातलमा साधन र स्रोतहरू सधैँ सीमित हुन्छन्। ती सीमित साधनहरूको अधिकतम उपयोग हुने गरी कुशल निर्णय लिनु व्यावहारिक सीप बिना सम्भव छैन।</li>
+                </ul>
+
+                <p>निष्कर्षमा, निर्णय निर्माण प्रक्रियामा समस्या पहिचानदेखि लिएर विकल्पहरूको खोजी, तिनको व्यावहारिक विश्लेषण, कार्यान्वयन र अन्त्यमा पृष्ठपोषणको चक्र पूरा गर्नुपर्ने हुन्छ। थोरै असावधानीले पनि ठुलो क्षति पुर्‍याउन सक्ने हुनाले निर्णय निर्माण साँच्चिकै एक जटिल र व्यावहारिक जीवनोपयोगी सीप हो।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (अङ्क भार: १)</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">१.</span> निर्णय प्रक्रियामा 'पृष्ठपोषण' वा 'पुनरावलोकन' किन आवश्यक पर्दछ?</div>
+            <div class="a"><strong>उत्तर:</strong> कार्यान्वयन गरिएको निर्णयले सही दिशा लिएको छ कि छैन भनी जाँच्न र आवश्यक परेमा निर्णय परिमार्जन गर्न पुनरावलोकन आवश्यक पर्दछ।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">२.</span> जर्ज आर. टेरीका अनुसार निर्णयको मुख्य सार के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> जर्ज आर. टेरीका अनुसार निर्णयको मुख्य सार उपलब्ध दुई वा सोभन्दा बढी सम्भाव्य विकल्पहरूबाट एउटा सबैभन्दा राम्रो विकल्पको छनोट गर्नु हो।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">३.</span> बढोत्तरी निर्णय (Incremental Decision) को एउटा व्यावहारिक उदाहरण दिनुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> गत वर्ष निर्माण गरिएको विद्यालयको खेल मैदानमा यस वर्ष दर्शक बस्ने प्यारापिट थप गर्ने निर्णय गर्नु बढोत्तरी निर्णयको उदाहरण हो।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">४.</span> अनिर्णित अवस्थाले निम्त्याउन सक्ने एउटा ठुलो जोखिम के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> अनिर्णित अवस्थाले गर्दा समयमै उपयुक्त अवसर गुम्न सक्छ र सानो समस्या बढेर भविष्यमा ठुलो सामाजिक वा व्यक्तिगत दुर्घटना निम्तिन सक्छ।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">५.</span> सङ्गठनात्मक र व्यक्तिगत निर्णयबिचको मुख्य भिन्नता के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> सङ्गठनात्मक निर्णय संस्थाको सामूहिक हित र लक्ष्यका लागि लिइन्छ भने व्यक्तिगत निर्णय व्यक्तिको आफ्नै निजी जीवन र इच्छा अनुकूल लिइन्छ।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तरहरू (अङ्क भार: ५)</div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">१.</span> सहभागितामूलक निर्णय प्रक्रियाले किन संस्थागत स्वामित्व र सफलता बढाउँछ? विश्लेषण गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> निर्णय प्रक्रियामा निर्णयको प्रभाव भोग्ने व्यक्ति वा समूहलाई सहभागी गराउनु नै सहभागितामूलक निर्णय हो। यो लोकतान्त्रिक र दिगो व्यवस्थापनको अचुक सूत्र मानिन्छ।</p>
+
+                <ul>
+                    <li><strong>अपनत्वको भावना विकास:</strong> जब कर्मचारी वा लक्षित समूह निर्णय प्रक्रियामा संलग्न हुन्छन्, उनीहरूले उक्त निर्णयलाई संस्थाको नभई आफ्नै व्यक्तिगत जिम्मेवारी सम्झन्छन्।</li>
+                    <li><strong>विविध विचार र रचनात्मकताको प्रवेश:</strong> धेरै मस्तिष्कहरू सँगै काम गर्दा समस्याका नवप्रवर्तनात्मक र सिर्जनात्मक विकल्पहरू फेला पर्दछन्।</li>
+                    <li><strong>कार्यान्वयनमा सहजता:</strong> निर्णय हुनुपूर्व नै व्यापक छलफल भइसकेको हुनाले कार्यान्वयनका चरणमा आउने आन्तरिक विरोध र अवरोधहरू स्वतः न्यून भएर जान्छन्।</li>
+                    <li><strong>पारदर्शिता र विश्वासको वातावरण:</strong> यसले सङ्गठनभित्र नेतृत्व र सदस्यहरू बीचको आपसी सम्बन्धलाई सुमधुर र विश्वासिलो बनाउँछ।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, सबैको भावना र विचार समेटिने भएकाले सहभागितामूलक निर्णय नै संस्थागत स्वामित्व र दीर्घकालीन सफलता प्राप्त गर्ने सर्वोत्तम माध्यम हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">२.</span> विवेकशील निर्णय लिनका लागि तथ्य र तथ्याङ्कको महत्त्व स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> कल्पना वा भावनाको लहरमा बगेर गरिएको निर्णय क्षणिक र घातक हुन सक्छ, त्यसैले वास्तविक र दिगो निर्णयका लागि वस्तुनिष्ठ तथ्य र प्रमाणहरूको विश्लेषण अपरिहार्य हुन्छ।</p>
+
+                <ul>
+                    <li><strong>पूर्वाग्रह र भ्रमबाट मुक्ति:</strong> तथ्य र तथ्याङ्कले निर्णयकर्तालाई व्यक्तिगत मनमुटाव, संवेग, रिस वा लोभका आधारमा हुन सक्ने त्रुटिपूर्ण निर्णयबाट जोगाउँछ।</li>
+                    <li><strong>जोखिम न्यूनीकरण:</strong> वैज्ञानिक तथ्याङ्कको विश्लेषणले भविष्यमा आउन सक्ने चुनौतीहरूको पूर्वअनुमान गर्न सहज बनाउँछ, जसले गर्दा असफलताको दर निकै कम हुन्छ।</li>
+                    <li><strong>विकल्पहरूको सही मूल्याङ्कन:</strong> सङ्कलित विवरणका आधारमा कुन विकल्प बढी किफायती र बढी फलदायी छ भनी गणितीय तथा तार्किक रूपमा तुलना गर्न सकिन्छ।</li>
+                    <li><strong>विश्वसनीयता र वैधता:</strong> तथ्यमा आधारित निर्णयहरू कानुनी र सामाजिक रूपमा बलिया हुन्छन् र तिनलाई सबैले सहर्ष स्वीकार गर्दछन्।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> स्पष्ट तथ्याङ्क र अकाट्य प्रमाणहरू विवेकशील निर्णयका खम्बा हुन्, जसले निर्णयलाई हचुवा हुनबाट जोगाएर वैज्ञानिक र व्यावहारिक धरातल प्रदान गर्दछन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">३.</span> निर्णय प्रक्रियामा 'दबाब समूह' ले कसरी सकारात्मक वा नकारात्मक प्रभाव पार्न सक्छ? व्याख्या गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> दबाब समूहहरूले निर्णयकर्तालाई प्रभावित पारी आफ्नो अनुकूलको निर्णय गराउन पैरवी गरिरहेका हुन्छन्। यिनीहरूको भूमिका परिस्थिति अनुसार सकारात्मक वा नकारात्मक दुवै हुन सक्छ।</p>
+
+                <p><strong>सकारात्मक प्रभावहरू:</strong></p>
+                <ul>
+                    <li><strong>सचेतना र खबरदारी:</strong> दबाब समूहले सीमान्तकृत र आवाजविहीन वर्गका मुद्दाहरू उठाई निर्णयकर्तालाई लोककल्याणकारी निर्णय गर्न बाध्य पार्दछन् (जस्तै: वातावरणीय अभियन्ताहरूको दबाबले रुख काट्न रोकिनु)।</li>
+                    <li><strong>पारदर्शिता प्रवर्द्धन:</strong> यिनीहरूले सङ्गठन वा सरकारलाई निरङ्कुश र अपारदर्शी निर्णय गर्नबाट रोक्न कडा निगरानी राख्दछन्।</li>
+                </ul>
+
+                <p><strong>नकारात्मक प्रभावहरू:</strong></p>
+                <ul>
+                    <li><strong>निहित स्वार्थको सम्झौता:</strong> कहिलेकाहीँ व्यावसायिक वा राजनीतिक दबाब समूहले आफ्नो सानो समूहको स्वार्थका लागि बहुसङ्ख्यक जनतालाई हानि पुग्ने निर्णय गर्न निर्णयकर्तालाई विवश बनाउँछन्।</li>
+                    <li><strong>अनिर्णयको वातावरण सिर्जना:</strong> अत्यधिक र अनुचित दबाबका कारण निर्णयकर्ता डराएर समयमै सही निर्णय लिन नसक्ने (अनिर्णित अवस्था) अन्योलमा फस्न सक्छन्।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> दबाब समूह लोकतन्त्रको सुन्दर गहना भए पनि यसको प्रयोग व्यक्तिगत स्वार्थभन्दा माथि उठेर सामाजिक भलाइका लागि मात्र निर्देशित हुनुपर्दछ।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तरात्मक प्रश्न (अङ्क भार: ८)</div>
+
+        <div class="qa-block color5" style="border-left-color:#2E7D32;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "दैनिक जीवनदेखि राज्य सञ्चालनसम्म विवेकशील निर्णय प्रक्रिया एक अनिवार्य जीवनोपयोगी सीप हो।" यस भनाइलाई निर्णयका क्रमिक चरणहरूसँग जोडेर विस्तृत विवेचना गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> हाम्रो जीवनको गुणस्तर हामीले रोज्ने विकल्पहरू र तिनको परिणामले निर्धारण गर्दछ। साधारण घरायसी छनोटदेखि लिएर राज्यको नीति निर्माण जस्तो वृहत् क्षेत्रमा गरिने निर्णयको पछाडि एउटा निश्चित प्रक्रिया लुकेको हुन्छ। कुनै पनि विषयमा हतारमा वा भावनामा बगेर निष्कर्ष निकाल्नुको सट्टा उपलब्ध विकल्पहरूको पहिचान, तथ्यको सङ्कलन र तार्किक विश्लेषणका आधारमा सर्वोत्तम मार्ग रोज्ने कला नै 'विवेकशील निर्णय प्रक्रिया' हो। यो केवल प्राज्ञिक सिद्धान्त मात्र नभएर मानिसलाई सफल, आत्मनिर्भर र जिम्मेवार नागरिक बनाउने एक अपरिहार्य जीवनोपयोगी सीप हो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span> विवेकशील निर्णय अचानक हुने संयोग होइन, यो निर्णय प्रक्रिया चक्रका ७ वटा क्रमिक चरणहरू पार गरेपछि मात्र परिपक्व बन्दछ:</p>
+
+                <ol>
+                    <li><strong>समस्याको पहिचान:</strong> निर्णय लिनुपूर्व वास्तविक समस्या के हो भनी ठम्याउनु पहिलो पाइला हो। समस्या नै गलत पहिचान भएमा पूरै निर्णय गलत दिशामा जान्छ।</li>
+                    <li><strong>समस्याको विश्लेषण:</strong> समस्याको गहिराइ, यसका कारण र यसले पार्ने तात्कालिक तथा दीर्घकालीन प्रभावको सूक्ष्म विश्लेषण यस चरणमा गरिन्छ।</li>
+                    <li><strong>विकल्पको पहिचान:</strong> समस्या समाधानका लागि उपलब्ध हुनसक्ने सबै सम्भाव्य उपाय र विकल्पहरूको खोजी गरी सूची तयार पारिन्छ।</li>
+                    <li><strong>विकल्पको विश्लेषण:</strong> प्रत्येक विकल्प कार्यान्वयन गर्न लाग्ने लागत, स्रोतसाधन, समय र त्यसबाट प्राप्त हुने प्रतिफलको सबल र दुर्बल पक्ष केलाइन्छ।</li>
+                    <li><strong>सर्वोत्तम विकल्पको छनोट:</strong> विश्लेषणका आधारमा सबैभन्दा व्यावहारिक, किफायती र अधिकतम प्रतिफल दिने विकल्पलाई निर्णयका रूपमा छनोट गरिन्छ।</li>
+                    <li><strong>निर्णय कार्यान्वयन:</strong> छनोट गरिएको विकल्पलाई व्यावहारिक रूपमा लागू गर्न आवश्यक कदम चालिन्छ।</li>
+                    <li><strong>पुनरावलोकन तथा मूल्याङ्कन:</strong> कार्यान्वयन भएको निर्णयले अपेक्षित लक्ष्य प्राप्त गर्‍यो वा गरेन भनी वस्तुनिष्ठ मूल्याङ्कन गरिन्छ र आगामी दिनका लागि पृष्ठपोषण प्राप्त गरिन्छ।</li>
+                </ol>
+
+                <p>दैनिक जीवनमा यस सीपको अभाव भएमा मानिस कुलत, गलत वित्तीय लगानी, वा पारिवारिक कलहमा फस्न सक्छ। त्यस्तै, राज्य सञ्चालनमा विवेकशील निर्णय नहुँदा देश वैदेशिक ऋणको दलदल, गलत सन्धि सम्झौता वा असफल आयोजनाको सिकार बन्न पुग्दछ।</p>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपाली समाजको सन्दर्भमा <strong>"मेलम्ची खानेपानी आयोजना"</strong> वा स्थानीय तहको <strong>"सडक विस्तार अभियान"</strong> लाई यसको उत्कृष्ट उदाहरणका रूपमा लिन सकिन्छ। कुनै एक स्थानीय तहले आफ्नो वडामा बर्खायाममा आउने बाढीको समस्या समाधान गर्न निर्णय लिनु थियो।</p>
+
+                <ul>
+                    <li><strong>हचुवा निर्णय (विवेकहीन):</strong> तत्कालै बाढी रोक्न कमजोर तटबन्ध निर्माण गरियो, जुन पहिलो बाढीमै बगेर गयो र लगानी बालुवामा पानी भयो।</li>
+                    <li><strong>विवेकशील निर्णय प्रक्रिया:</strong> वडाले इन्जिनियरहरू बोलाएर बाढी आउनुको मुख्य कारण (पहिरो र साँघुरो खोल्सा) पहिचान गर्‍यो। विभिन्न विकल्पहरू जस्तै: नयाँ कुलो खन्ने, बायो-इन्जिनियरिङ (बोटबिरुवा रोप्ने), वा पक्की पर्खाल लगाउने विकल्पहरूको लागत र आयु विश्लेषण गर्‍यो। अन्तिममा, जैविक इन्जिनियरिङ र पक्की ग्याबियन पर्खालको समिश्रण रोजियो। उपभोक्ता समितिमार्फत स्थानीयलाई सहभागी गराई काम गरियो।</li>
+                </ul>
+
+                <p>परिणामस्वरूप, उक्त योजना सफल भयो र हिउँदमा पनि पहिरो रोकियो। यो विवेकशील निर्णय प्रक्रियाको व्यावहारिक सफल नमुना हो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> अन्त्यमा, निर्णय निर्माण गर्नु भनेको वर्तमानको स्रोत र साधन खर्चेर सुखद भविष्यको जग बसाल्नु हो। हामीले आज गर्ने ससाना निर्णयहरूले भोलिको हाम्रो व्यक्तिगत चरित्र र राष्ट्रको भविष्य तय गर्दछन्। त्यसैले, निर्णय प्रक्रियाका चरणहरूलाई आत्मसात् गर्दै आन्तरिक र बाह्य वातावरणको सन्तुलन मिलाएर लिइने विवेकशील निर्णयले नै व्यक्तिलाई असल र देशलाई समृद्ध बनाउँछ। तसर्थ, निर्णय प्रक्रिया प्रत्येक विद्यार्थी र नागरिकले सिक्नै पर्ने जीवनोपयोगी सीपको मुटु हो।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#2E7D32; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> निर्णय निर्माण जीवनको हरेक क्षेत्रमा सफलताको कुञ्जी हो। हतारमा निर्णय नलिनुहोस्, उपलब्ध विकल्पहरूको विश्लेषण गर्नुहोस्, तथ्य र तथ्याङ्कको सहारा लिनुहोस्, र आन्तरिक तथा बाह्य वातावरणको सन्तुलन मिलाउनुहोस्। याद राख्नुहोस् – विवेकशील निर्णयले नै सफल व्यक्ति, सुखी परिवार र समृद्ध समाजको निर्माण गर्दछ।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ३, पाठ १</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
