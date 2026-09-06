@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ २ – समस्या समाधान (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #eef0f8;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #283593;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #3F51B5;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #3F51B5;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ecf4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c0c8d8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #3F51B5;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #3F51B5;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #3F51B5;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #7986CB;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #3F51B5 ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #3F51B5;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(63, 81, 181, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #3F51B5;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #283593;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #3F51B5;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #3F51B5;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #283593;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #3F51B5;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #3F51B5;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.indigo-light {
+            border-left-color: #3F51B5;
+            background: #eef0f8;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c0c8d8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c0c8d8;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #3F51B5;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8ecf4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c0c8d8;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #3F51B5;
+        }
+
+        .qa-block.color1 { border-left-color: #3F51B5; background: #eef0f8; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #283593;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #3F51B5;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #283593;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #3F51B5;
+        }
+
+        .glossary-item strong {
+            color: #283593;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eef0f8;
+            border-radius: 20px;
+            border: 2px dashed #7986CB;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #3F51B5;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- ACTIVITY / ANALYSIS BOX ----- */
+        .analysis-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #c0c8d8;
+            margin: 12px 0;
+        }
+
+        .analysis-box .analysis-title {
+            font-weight: 900;
+            color: #283593;
+            font-size: 1.15rem;
+        }
+
+        .analysis-box p,
+        .analysis-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+        }
+
+        .analysis-box ul,
+        .analysis-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #c0c8d8;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #283593;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #3F51B5;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(63, 81, 181, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #283593;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(63, 81, 181, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #3F51B5;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #c0c8d8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #3F51B5;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .analysis-box p,
+            .analysis-box li {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-puzzle-piece"></i>
+                    एकाइ ३, पाठ २: समस्या समाधान (Problem Solving)
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ ३, पाठ २
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> समस्या (Problem)</strong>
+                <p>कुनै घटना, विचार वा परिवेशलाई ग्रहण वा बुझ्न कठिनाइ उत्पन्न भएको र समाधानका लागि उचित मार्ग खोज्नुपर्ने प्रतिकूल वा जिज्ञासामूलक अवस्था <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> सकारात्मक समस्या (Positive Problem)</strong>
+                <p>कुनै नयाँ ज्ञानको खोजी गर्न वा बौद्धिक जिज्ञासा मेटाउनका लागि उठाइएको रचनात्मक प्रश्न वा कौतुहलताको अवस्था <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> नकारात्मक समस्या (Negative Problem)</strong>
+                <p>जसले व्यक्ति वा समाजमा मानसिक तनाव, रिस, झैझगडा वा मानसिक पीडा उत्पन्न गराई दैनिक जीवनमा व्यवधान खडा गर्छ <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> समस्या समाधान सीप (Problem Solving Skill)</strong>
+                <p>कुनै पनि समस्यालाई व्यवस्थित चरणबद्ध प्रक्रियाद्वारा विश्लेषण गरी, उपयुक्त विकल्पहरूको पहिचान र प्रयोगमार्फत तार्किक निष्कर्षमा पुग्ने जीवनोपयोगी सीप <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> परिकल्पना (Hypothesis)</strong>
+                <p>समस्या समाधानका लागि पहिचान गरिएका सम्भाव्य विकल्पहरू र तिनीहरूबाट प्राप्त हुन सक्ने परिणामहरूको तर्कपूर्ण र सकारात्मक पूर्वअनुमान गर्ने कार्य <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> तथ्य सङ्कलन (Data/Fact Collection)</strong>
+                <p>परिकल्पना वा विकल्पहरूको परीक्षण र पुष्टि गर्नका लागि सम्बन्धित क्षेत्रबाट आवश्यक सूचना, प्रमाण, र विवरणहरू सङ्कलन गर्ने प्रक्रिया <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> आत्मबोध (Self-Realization/Awareness)</strong>
+                <p>आफ्नो गल्ती वा कमजोरीलाई स्विकार्दै भविष्यमा त्यस्ता गल्तीहरू नदोहोर्‍याउने दृढ सङ्कल्प र आन्तरिक चेतनाको जागृति <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> सक्रिय सुनाइ (Active Listening)</strong>
+                <p>समस्या समाधानका क्रममा अरूका विचार, भावना र दृष्टिकोणलाई एकाग्रचित्त भई गहिराइसँग बुझ्ने र प्रतिक्रिया दिने सीप <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> स्वनिर्णय (Self-Decision/Autonomy)</strong>
+                <p>अरूको अनुचित दबाबमा नपरी विवेक र तथ्यका आधारमा आफैँले सही र गलत छुट्ट्याएर दृढतापूर्वक निर्णय गर्ने क्षमता <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#3F51B5; margin-right:4px;"></i> कार्यदक्षता (Efficiency)</strong>
+                <p>उपलब्ध सीमित स्रोत, साधन र समयको अधिकतम सदुपयोग गरी न्यूनतम क्षतिमा सर्वोत्तम नतिजा हासिल गर्ने कार्यक्षमता <span class="ref">[९]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "समस्या समाधान" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. समस्याको अवधारणा -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. समस्याको बहुआयामिक अवधारणा र यसका प्रकारहरू</div>
+
+        <div class="content-box indigo-light">
+            <p>मानिसको भित्री सोच, आदत, उमेर र अनुभवका आधारमा कुनै घटना वा परिवेशलाई ग्रहण गर्ने तरिका फरक-फरक हुन्छ <span class="ref">[९]</span>। यही बुझाइ र दृष्टिकोणमा कठिनाइ आउँदा समस्या सिर्जना हुन्छ <span class="ref">[९]</span>। समस्यालाई मुख्यतया दुई भागमा वर्गीकरण गर्न सकिन्छ:</p>
+
+            <ul>
+                <li><strong>सकारात्मक समस्या:</strong> यो खोज र सिकाइको प्रस्थानविन्दु हो <span class="ref">[९]</span>। जस्तै: वैज्ञानिक अनुसन्धानका प्रश्नहरू, गणितीय समस्याहरू वा शैक्षिक जिज्ञासाहरू <span class="ref">[९]</span>।</li>
+                <li><strong>नकारात्मक समस्या:</strong> यसले समाज र व्यक्तिमा क्षति पुर्‍याउँछ र नकारात्मक संवेगहरूलाई बढावा दिन्छ <span class="ref">[९]</span>। जस्तै: झैझगडा, लागू पदार्थको दुर्व्यसन, र डिजिटल लत <span class="ref">[९]</span>।</li>
+            </ul>
+
+            <div class="tip-box" style="background:#e0e8f0; color:#0b2b4a; margin:10px 0;">
+                <i class="fas fa-lightbulb" style="color:#3F51B5;"></i>
+                <strong>विशेष तथ्य:</strong> "मानिसको उमेर, खोजको अवस्था, काम गर्ने ठाउँको वातावरण, र अनुभव जस्ता कुराहरूले कुनै विषयलाई समस्या ठान्ने वा नठान्ने कुरा निर्धारण गर्दछ" <span class="ref">[९]</span>।
+            </div>
+        </div>
+
+        <!-- २. ६ क्रमिक चरणहरू -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> २. समस्या समाधानका ६ क्रमिक चरणहरू</div>
+
+        <div class="content-box blue-light">
+            <p>समस्याको पहिचानपछि समाधानका लागि व्यवस्थित चरणहरू पालना गर्नुपर्छ <span class="ref">[९]</span>।</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: समस्या समाधानका ६ चरणहरू <span class="ref">[९]</span></div>
+                <table>
+                    <thead>
+                        <tr><th>चरण</th><th>शीर्षक</th><th>मुख्य प्रक्रिया</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>१</strong></td>
+                            <td><strong>समस्या पहिचान र परिभाषा</strong></td>
+                            <td>समस्या के हो, कसरी सिर्जना भयो र किन भयो भन्ने प्रश्नको उत्तर खोजी समस्याको मूल कारण र अन्य कारण पहिचान गर्ने <span class="ref">[९]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>२</strong></td>
+                            <td><strong>परिकल्पना</strong></td>
+                            <td>समस्या समाधानका लागि विश्लेषणात्मक, तार्किक, औचित्यपूर्ण, सिर्जनात्मक र सकारात्मक विकल्पमध्ये उपयुक्त विकल्पको पहिचान गर्ने र उक्त विकल्पको सम्भावित परिणाम ख्याल गर्ने <span class="ref">[९]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>३</strong></td>
+                            <td><strong>तथ्य सङ्कलन</strong></td>
+                            <td>समस्या समाधानका लागि पहिचान गरिएको विकल्पसँग सम्बन्धित आवश्यक तथ्य खोज गर्ने र समाधानका लागि प्रयोग गर्ने तरिकाको सोच विकास गर्ने <span class="ref">[९]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>४</strong></td>
+                            <td><strong>विश्लेषण</strong></td>
+                            <td>पहिचान गरिएका विकल्पहरूको विभिन्न तथ्य र सूचनामा आधारित भई विश्लेषण गर्ने र सबल तथा दुर्बल पक्ष केलाउने <span class="ref">[९]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>५</strong></td>
+                            <td><strong>निष्कर्ष</strong></td>
+                            <td>समस्याको कारण, समस्या समाधानका लागि चयन गरिएको विकल्प र सो विकल्पसँग सम्बन्धित तथ्यका आधारमा समस्या समाधानको निष्कर्ष निकाल्ने <span class="ref">[९]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>६</strong></td>
+                            <td><strong>प्रयोग</strong></td>
+                            <td>समस्या समाधानको निष्कर्षलाई वास्तविक व्यवहार वा जीवनमा लागू गर्ने <span class="ref">[९]</span>।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">१. समस्या पहिचान र परिभाषा</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">२. परिकल्पना र विकल्पहरूको अनुमान</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">३. तथ्य र प्रमाण सङ्कलन</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">४. सङ्कलित तथ्यहरूको विश्लेषण</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">५. निष्कर्ष निर्धारण</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">६. व्यवहारमा निष्कर्षको प्रयोग</div>
+            </div>
+        </div>
+
+        <!-- ३. ८ आधारभूत स्तम्भहरू -->
+        <div class="sub-head"><i class="fas fa-list-check"></i> ३. समस्या समाधान सीपका ८ आधारभूत स्तम्भहरू</div>
+
+        <div class="content-box green-light">
+            <p>समस्या समाधानका लागि व्यक्तिमा निम्न जीवनोपयोगी सीपहरू हुनु अपरिहार्य मानिन्छ <span class="ref">[९]</span>:</p>
+            <ul>
+                <li><strong>सक्रिय सुनाइ:</strong> अरूको कुरा र दृष्टिकोण ध्यान दिएर सुन्नु <span class="ref">[९]</span>।</li>
+                <li><strong>समस्या विश्लेषण:</strong> समस्याको जरो कारण र यसको प्रभाव छुट्ट्याउनु <span class="ref">[९]</span>।</li>
+                <li><strong>समाधानको खोज:</strong> नवीन र व्यावहारिक उपायहरूको खोजी गर्नु <span class="ref">[९]</span>।</li>
+                <li><strong>सिर्जनात्मकता:</strong> परम्परागत शैलीभन्दा फरक र नवीन तरिकाले सोच्नु <span class="ref">[९]</span>।</li>
+                <li><strong>सञ्चार:</strong> आफ्ना विचार र विकल्पहरू स्पष्टसँग प्रस्तुत गर्नु <span class="ref">[९]</span>।</li>
+                <li><strong>स्वनिर्णय:</strong> सही विकल्पको छनोट आफैँले दृढतापूर्वक गर्नु <span class="ref">[९]</span>।</li>
+                <li><strong>सामूहिक भावना:</strong> समूहमा मिलेर सहकार्यका माध्यमबाट काम गर्नु <span class="ref">[९]</span>।</li>
+                <li><strong>कार्यदक्षता:</strong> समय र स्रोतको उच्चतम व्यवस्थापन गर्नु <span class="ref">[९]</span>।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-chalkboard-teacher"></i> क्रियाकलाप १: अनलाइन कक्षा र हस्तलिखित उत्तर (स्मृतिको घटना विश्लेषण) <span class="ref">[९]</span></div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#3F51B5; margin-right:8px;"></i> घटनाको सारांश:</p>
+            <p>अनलाइन कक्षामा विद्यार्थीहरू इन्टरनेटबाट हुबहु सारेर उत्तर पठाउँथे <span class="ref">[९]</span>। स्मृतिले हातले लेखेर पठाएपछि शिक्षकले सबैलाई हस्तलिखित उत्तर लेख्न अनिवार्य गरे, जसका कारण साथीहरूले स्मृतिलाई इमेलमा गाली गरे <span class="ref">[९]</span>।</p>
+        </div>
+
+        <div class="analysis-box">
+            <p class="analysis-title"><i class="fas fa-question" style="color:#3F51B5; margin-right:8px;"></i> (अ) विद्यार्थीले प्रश्न सोध्दा शिक्षकले किन समस्या ठानेका होलान्?</p>
+            <p><strong>उत्तर:</strong> विद्यार्थीले प्रश्न सोध्दा शिक्षकले यसलाई <strong>'सकारात्मक समस्या'</strong> अर्थात् खोज र सिकाइको अवसर ठानेका होलान् <span class="ref">[९]</span>। विद्यार्थीले नयाँ कुरा सिक्न र आफ्नो जिज्ञासा मेटाउन प्रश्न सोधेका हुन् भन्ने कुरा शिक्षकले बुझेका हुन्छन् <span class="ref">[९]</span>।</p>
+
+            <p class="analysis-title" style="margin-top:16px;"><i class="fas fa-question" style="color:#3F51B5; margin-right:8px;"></i> (आ) विद्यार्थीहरू शिक्षकसँग नरिसाएर किन स्मृतिसँग रिसाएका होलान्?</p>
+            <p><strong>उत्तर:</strong> स्मृतिले इमानदारीपूर्वक आफ्नै विवेक प्रयोग गरी हस्तलिखित उत्तर पठाएर अन्य विद्यार्थीको 'हुबहु सार्ने र सजिलै काम फत्ते गर्ने' खराब बानीलाई उजागर गरिदिइन् <span class="ref">[९]</span>। शिक्षकले स्मृतिको कामको प्रशंसा गर्दै सबैलाई हस्तलिखित उत्तर अनिवार्य गरिदिएपछि बाँकी विद्यार्थीलाई अल्छी गर्न नमिलेकाले उनीहरू स्मृतिसँग रिसाएका हुन् <span class="ref">[९]</span>।</p>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-store"></i> व्यावहारिक अभ्यास: उमेशको जुस पसलको घटना विश्लेषण <span class="ref">[९]</span></div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#3F51B5; margin-right:8px;"></i> घटनाको सारांश:</p>
+            <p>उमेशले पैसा बचाउने सुरमा ५० रुपैयाँमा उपभोग्य मिति गुज्रिएको जुस किनेर ल्यायो, जसका कारण परिवारका सबै बिरामी भए <span class="ref">[९]</span>। अन्त्यमा उमेशलाई आफ्नो गल्तीको 'आत्मबोध' भयो र उसले पसलेलाई त्यस्ता सामान नबेच्न अनुरोध गर्ने निर्णय गर्‍यो <span class="ref">[९]</span>।</p>
+        </div>
+
+        <div class="analysis-box">
+            <p class="analysis-title"><i class="fas fa-users" style="color:#3F51B5; margin-right:8px;"></i> घटना विश्लेषण तालिका:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: उमेशको घटनाको विश्लेषण <span class="ref">[९]</span></div>
+                <table>
+                    <thead>
+                        <tr><th>विश्लेषक</th><th>भूमिका/प्रकृति</th><th>विश्लेषण र निष्कर्ष</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>उमेशकी दिदी</strong></td>
+                            <td>विश्लेषणात्मक</td>
+                            <td>भाईले सस्तोमा जुस किन्दा म्याद नहेरेको र उर्मिलाले भाईलाई गल्ती औँल्याउँदै दोष लगाएको <span class="ref">[९]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>बाबु</strong></td>
+                            <td>तार्किक</td>
+                            <td>काम गर्दा सधैँ विचार पुर्‍याउनुपर्छ, विचार नपुर्‍याई काम गर्दा समस्या आउँछ भनी सम्झाउनुभएको <span class="ref">[९]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>छिमेकी काका</strong></td>
+                            <td>औँल्याइएको/औचित्यपूर्ण</td>
+                            <td>बिरामी पर्नेबित्तिकै तुरुन्त डाक्टर बोलाएर प्राथमिक उपचारको व्यवस्था गरी मानवीय धर्म निभाउनुभएको <span class="ref">[९]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>उमेश आफैँ</strong></td>
+                            <td>सकारात्मक र आत्मबोध</td>
+                            <td>सुरुमा प्रहरीकहाँ जाने सोचे पनि पछि आफ्नै गल्ती स्वीकार गरी आत्मबोध गरेको र पसलेलाई सम्झाउने निष्कर्ष निकालेको <span class="ref">[९]</span>।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> समस्या भनेको के हो?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> नेपाली समाज र व्यक्तिगत जीवनको सन्दर्भमा समस्या भन्नाले कुनै पनि घटना, विचार वा परिवेशलाई ग्रहण गर्ने वा बुझ्ने क्रममा उत्पन्न हुने कठिनाइको अवस्था हो <span class="ref">[९]</span>। यसले हाम्रो सोच्ने र बुझ्ने प्रक्रियामा अवरोध खडा गर्दछ <span class="ref">[९]</span>। समस्या सकारात्मक (जिज्ञासा वा नयाँ खोजको रूपमा) र नकारात्मक (रिस, चिन्ता र तनाव उत्पन्न गर्ने रूपमा) दुवै प्रकारको हुन सक्दछ <span class="ref">[९]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> समस्या कसरी पहिचान गरिन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> समस्याको पहिचान वैज्ञानिक र व्यावहारिक विधिद्वारा गरिन्छ। यसका लागि निम्न प्रक्रिया अपनाइन्छ:</p>
+                <ol>
+                    <li><strong>लक्षण वा असरहरूको अवलोकन:</strong> सुरुमा वरपरका मानिसहरूको व्यवहारमा आएको परिवर्तन, असहज अवस्था वा असमझदारीलाई नजिकबाट नियालेर <span class="ref">[९]</span>।</li>
+                    <li><strong>जरो कारण (Root Cause) को खोजी:</strong> समस्या कुन ठाउँबाट, कसरी र किन सुरु भयो भन्ने प्रश्नको उत्तर खोजेर <span class="ref">[९]</span>।</li>
+                    <li><strong>तथ्य र सूचनाको तुलना:</strong> सामान्य अवस्था र हालको असामान्य अवस्थाबीच तुलना गरेर <span class="ref">[९]</span>।</li>
+                    <li><strong>सक्रिय सुनाइ र छलफल:</strong> सम्बन्धित सरोकारवालाहरूको भनाइ र दृष्टिकोणलाई गहिराइसँग सुनेर <span class="ref">[९]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> समस्या समाधानका मुख्य चरण के के हुन्?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> समस्या समाधानका मुख्य ६ वटा चरणहरू क्रमिक रूपमा यस प्रकार रहेका छन् <span class="ref">[९]</span>:</p>
+                <ol>
+                    <li><strong>समस्या पहिचान र परिभाषा:</strong> समस्याको मूल कारण र प्रभाव स्पष्ट पार्ने <span class="ref">[९]</span>।</li>
+                    <li><strong>परिकल्पना (Hypothesis):</strong> समाधानका लागि सम्भाव्य सकारात्मक र सिर्जनात्मक विकल्पहरूको पूर्वअनुमान गर्ने <span class="ref">[९]</span>।</li>
+                    <li><strong>तथ्य सङ्कलन:</strong> चयन गरिएका विकल्पहरूलाई प्रमाणित गर्न आवश्यक सूचना र तथ्य खोज्ने <span class="ref">[९]</span>।</li>
+                    <li><strong>विश्लेषण:</strong> सङ्कलित तथ्यहरूका आधारमा विकल्पहरूको सबल र दुर्बल पक्ष केलाउने <span class="ref">[९]</span>।</li>
+                    <li><strong>निष्कर्ष:</strong> प्राप्त प्रमाणका आधारमा सर्वोत्तम र विवेकशील समाधानको निष्कर्ष निकाल्ने <span class="ref">[९]</span>।</li>
+                    <li><strong>प्रयोग:</strong> निष्कर्षलाई वास्तविक जीवनको समस्या समाधानका लागि व्यावहारिक रूपमा लागू गर्ने <span class="ref">[९]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> समस्याको निष्कर्ष कसरी निकालिन्छ?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> समस्याको निष्कर्ष निकाल्नका लागि सङ्कलन गरिएका तथ्य, प्रमाण, र सूचनाहरूलाई गहिराइसँग विश्लेषण गरिन्छ <span class="ref">[९]</span>। यस क्रममा समस्या सिर्जना हुनुको मूल कारण र परिकल्पना गरिएका समाधानका विकल्पहरूलाई आपसमा भिडाएर हेरिन्छ <span class="ref">[९]</span>। जुन विकल्पले सबैभन्दा कम क्षतिमा, कानुन र नैतिकताको दायराभित्र रही दीर्घकालीन र सर्वोत्तम नतिजा दिन्छ, त्यसैलाई अन्तिम निष्कर्षको रूपमा छनोट गरिन्छ <span class="ref">[९]</span>। यस प्रक्रियामा 'आत्मबोध' र 'विवेकशीलता' को सबैभन्दा ठुलो भूमिका हुन्छ <span class="ref">[९]</span>।
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (१ अङ्क भार)</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">१.</span> समस्या समाधान सीप भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> समस्यालाई बुझ्ने, विश्लेषण गर्ने, विकल्प खोज्ने र सही समाधान व्यवहारमा लागू गर्ने जीवनोपयोगी सीप नै <strong>समस्या समाधान सीप</strong> हो <span class="ref">[९]</span>।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">२.</span> समस्या समाधानको दोस्रो चरण 'परिकल्पना' मा के गरिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> यस चरणमा समस्या समाधानका लागि सम्भाव्य विकल्पहरूको पहिचान र तिनको सम्भावित परिणामको पूर्वअनुमान गरिन्छ <span class="ref">[९]</span>।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">३.</span> सकारात्मक समस्याको एउटा उदाहरण दिनुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> "हाम्रो गाउँमा खानेपानीको दिगो व्यवस्थापन कसरी गर्न सकिएला?" भनी नयाँ खोजीका लागि उठाइएको जिज्ञासामूलक प्रश्न <strong>सकारात्मक समस्या</strong> हो <span class="ref">[९]</span>।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">४.</span> उमेशको जुस पसलको कथाबाट हामीले सामान किन्दा अपनाउनुपर्ने के मुख्य पाठ सिक्छौँ?</div>
+            <div class="a"><strong>उत्तर:</strong> हामीले सामान खरिद गर्दा मूल्य मात्र नहेरी अनिवार्य रूपमा <strong>उपभोग्य मिति (Expiry Date)</strong> र गुणस्तर जाँच गरेर मात्र किन्नुपर्छ भन्ने पाठ सिक्छौँ <span class="ref">[९]</span>।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">५.</span> समस्या समाधान सीपअन्तर्गत 'स्वनिर्णय' को के महत्त्व छ?</div>
+            <div class="a"><strong>उत्तर:</strong> स्वनिर्णयले व्यक्तिलाई अरूको बहकाउ वा अनुचित दबाबमा नपरी तथ्य र विवेकका आधारमा सही विकल्प छनोट गर्ने क्षमता प्रदान गर्दछ <span class="ref">[९]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तरहरू (५ अङ्क भार)</div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">१.</span> समस्या समाधान सीपका प्रमुख ५ वटा अङ्गहरूको चर्चा गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> दैनिक जीवनमा आइपर्ने विभिन्न व्यक्तिगत र सामाजिक कठिनाइहरूलाई बुद्धिमत्तापूर्वक सुल्झाउनका लागि समस्या समाधान सीप आवश्यक पर्दछ <span class="ref">[९]</span>।</p>
+
+                <p><strong>यस सीपका प्रमुख ५ वटा अङ्गहरू निम्न छन् <span class="ref">[९]</span>:</strong></p>
+                <ul>
+                    <li><strong>सक्रिय सुनाइ:</strong> समस्यासँग जोडिएका व्यक्तिहरूको कुरा र भावनालाई ध्यानपूर्वक सुनेर वास्तविक कुरा बुझ्न मद्दत गर्छ <span class="ref">[९]</span>।</li>
+                    <li><strong>समस्या विश्लेषण:</strong> समस्याको मूल कारण र यसले पार्ने नकारात्मक प्रभावलाई छुट्ट्याउन मद्दत गर्दछ <span class="ref">[९]</span>।</li>
+                    <li><strong>सिर्जनात्मकता:</strong> परम्परागत वा पुरानो ढर्राभन्दा बाहिर निस्किएर समस्या समाधानका नवीन र किफायती उपायहरू सोच्न प्रेरित गर्छ <span class="ref">[९]</span>।</li>
+                    <li><strong>स्वनिर्णय:</strong> धेरै विकल्पहरूमध्ये आफ्नो विवेक र मूल्यमान्यतामा आधारित भई उत्तम विकल्प रोज्ने आँट दिन्छ <span class="ref">[९]</span>।</li>
+                    <li><strong>कार्यदक्षता:</strong> उपलब्ध सीमित स्रोतसाधन र समयको उच्चतम सदुपयोग गर्दै न्यूनतम नोक्सानीमा समस्या सुल्झाउन सघाउँछ <span class="ref">[९]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> अतः यी अङ्गहरूको सामूहिक विकासले नै व्यक्तिलाई एक कुशल र सफल समस्या समाधानकर्ता बनाउँदछ <span class="ref">[९]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">२.</span> "काम गर्दा विचार नपुर्‍याएमा समस्या सिर्जना हुन्छ" भन्ने भनाइलाई उमेशको घटनाको सन्दर्भमा स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> हाम्रो सानो असावधानी वा हतारले कहिलेकाहीँ ठुलो पारिवारिक तथा सामाजिक दुर्घटना निम्त्याउन सक्छ भन्ने कुरा उमेशको घटनाले पुष्टि गर्दछ <span class="ref">[९]</span>।</p>
+
+                <p><strong>यस भनाइका मुख्य तर्कहरू निम्नानुसार छन् <span class="ref">[९]</span>:</strong></p>
+                <ul>
+                    <li><strong>मितव्ययिता र लोभको द्वन्द्व:</strong> उमेशले पैसा बचाउने लोभमा परेर सस्तो जुस रोज्यो तर त्यसको गुणस्तर र म्याद जाँच गर्ने आधारभूत कुरामा विचार पुर्‍याएन <span class="ref">[९]</span>।</li>
+                    <li><strong>गम्भीर असर:</strong> विचार नपुर्‍याई जुस खरिद गर्दा परिवारका सम्पूर्ण सदस्यहरू गम्भीर रूपमा बिरामी भई अस्पताल भर्ना हुनुपर्ने असहज अवस्था आयो <span class="ref">[९]</span>।</li>
+                    <li><strong>जिम्मेवारी पन्छाउने प्रवृत्ति:</strong> समस्या सिर्जना भइसकेपछि सुरुमा उमेशले पसलेलाई दोष दिएर आफ्नो जिम्मेवारीबाट पन्छिन खोज्यो, जसले समस्या झन् बढाउँछ <span class="ref">[९]</span>।</li>
+                    <li><strong>चेतना र आत्मबोध:</strong> बाबुको "काम गर्दा विचार पुर्‍याउनुपर्छ" भन्ने तार्किक भनाइले उमेशलाई आफ्नो गल्ती महसुस गराई जिम्मेवार ग्राहक बन्न प्रेरित गर्‍यो <span class="ref">[९]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, दैनिक जीवनको सानो खरिद प्रक्रियामा समेत विचार नपुर्‍याउँदा ज्यानै जोखिममा पर्ने समस्या सिर्जना हुने हुनाले हरेक कार्यमा सचेतता आवश्यक छ <span class="ref">[९]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">३.</span> स्मृतिको घटनाबाट प्राप्त हुने सिकाइलाई आफ्नो विद्यालयको परिवेशसँग जोड्दै चर्चा गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> अनलाइन शिक्षाको समयमा स्मृतिको इमानदारी र उसका सहपाठीहरूको नक्कल गर्ने बानीले हाम्रो वर्तमान शैक्षिक प्रणाली र नैतिकताको यथार्थ ऐना देखाउँछ <span class="ref">[९]</span>।</p>
+
+                <p><strong>यस घटनाबाट प्राप्त हुने सिकाइहरू निम्न छन् <span class="ref">[९]</span>:</strong></p>
+                <ul>
+                    <li><strong>इमानदारीको महत्त्व:</strong> इन्टरनेटबाट हुबहु सारेर उत्तर बुझाउनुभन्दा आफैँले मेहनत गरेर हस्तलिखित उत्तर तयार पार्नु वास्तविक सिकाइ हो <span class="ref">[९]</span>।</li>
+                    <li><strong>पिर ग्रुप प्रेसर (Peer Pressure) को सामना:</strong> असल काम गर्दा कहिलेकाहीँ साथीहरूले विरोध वा गाली गर्न सक्छन् (जस्तै स्मृतिलाई गरे), तर आफ्नो सही मार्गबाट विचलित हुनु हुँदैन <span class="ref">[९]</span>।</li>
+                    <li><strong>शिक्षकको निष्पक्ष भूमिका:</strong> शिक्षकले केवल उत्तर मात्र नहेरी विद्यार्थीको मौलिकता र मेहनतको पहिचान गरी सोहीअनुसार मूल्याङ्कन गर्नुपर्छ <span class="ref">[९]</span>।</li>
+                    <li><strong>सामूहिक चेतनाको विकास:</strong> अरूको प्रगति वा असल बानीलाई डाहा गर्नुको साटो त्यसबाट प्रेरणा लिएर आफ्नो क्षमता सुधार्नु नै वास्तविक सीप हो <span class="ref">[९]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, हाम्रो विद्यालयमा पनि गृहकार्य गर्दा वा परीक्षा दिँदा अरूको सार्ने प्रवृत्तिलाई निरुत्साहित गरी स्मृतिको जस्तै मौलिकता र इमानदारीलाई प्रश्रय दिनुपर्छ <span class="ref">[९]</span>।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो विश्लेषणात्मक प्रश्न (८ अङ्क भार)</div>
+
+        <div class="qa-block color5" style="border-left-color:#3F51B5;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "लागू पदार्थको दुर्व्यसनमा फसेको साथीको समस्यालाई समस्या समाधानका ६ वटा क्रमिक चरणहरू प्रयोग गरी कसरी रूपान्तरण गर्न सकिन्छ?" पाठ्यपुस्तकको परियोजना कार्यको घटनाका आधारमा एउटा विस्तृत समाधान मार्गचित्र प्रस्तुत गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> हाम्रो समाज र विद्यालयहरूमा लागू पदार्थको दुर्व्यसन एक गम्भीर र नकारात्मक समस्याको रूपमा देखा परेको छ <span class="ref">[९]</span>। यसले दुर्व्यसनमा फसेको व्यक्तिको स्वास्थ्य, पारिवारिक सम्बन्ध र सामाजिक प्रतिष्ठा मात्र नष्ट गर्दैन, बरु उसलाई गम्भीर अपराध तर्फ धकेल्छ। प्रस्तुत प्रतिवेदनमा विद्यालयको एक साथी लागू पदार्थको कुलतमा फसेको, घरमा चोरीका घटनाहरू बढेको, प्रहरीको निगरानीमा रहेको र परिवार अलमलमा परेको संवेदनशील घटनालाई व्यवस्थित र वैज्ञानिक 'समस्या समाधान सीप' का ६ वटा चरणहरू प्रयोग गरी समाधान गर्ने व्यावहारिक मार्गचित्र प्रस्तुत गरिएको छ <span class="ref">[९]</span>।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span> यस गम्भीर समस्यालाई समाधान गर्न ६ वटा क्रमिक चरणहरूको प्रयोग यस प्रकार गरिन्छ:</p>
+
+                <ul>
+                    <li><strong>चरण १: समस्या पहिचान र परिभाषा —</strong> यहाँ मुख्य समस्या साथी लागू पदार्थको दुर्व्यसनमा फस्नु, कुलतका कारण घरमा चोरी हुनु, समूहका आपराधिक युवाहरूबाट ज्यानको खतरा हुनु र परिवार तथा विद्यालय अन्योलमा पर्नु हो <span class="ref">[९]</span>। यसको मूल कारण गलत सङ्गत र सही अभिभावकत्व वा परामर्शको अभाव हो।</li>
+                    <li><strong>चरण २: परिकल्पना (सम्भाव्य विकल्पहरूको खोजी) —</strong> यसका लागि हामीसँग निम्न विकल्पहरू छन्:
+                        <ul>
+                            <li><em>विकल्प क:</em> उसलाई प्रहरीको जिम्मा लगाउने र सजाय दिने।</li>
+                            <li><em>विकल्प ख:</em> विद्यालयबाट निष्कासन गर्ने।</li>
+                            <li><em>विकल्प ग:</em> परिवार, विद्यालय र साथीहरू मिलेर उसलाई माया, परामर्श (Counselling) र सुधार गृह (Rehabilitation Center) पठाई नयाँ जीवन दिने।</li>
+                        </ul>
+                        हामीले 'विकल्प ग' लाई सर्वोत्तम विकल्पको रूपमा परिकल्पना गर्छौँ, किनकि सजायले व्यक्ति झन् विद्रोही बन्छ तर परामर्श र उपचारले सुधार ल्याउँछ।</li>
+                    <li><strong>चरण ३: तथ्य सङ्कलन —</strong> हामी साथीको दैनिक आचरण, उसको संगतको समूह, घरबाट हराएका सामानहरूको विवरण, विद्यालयको उपस्थिति र प्रहरीको निगरानीको अवस्थाबारे गोप्य रूपमा तथ्य सङ्कलन गर्छौँ।</li>
+                    <li><strong>चरण ४: विश्लेषण —</strong> सङ्कलित तथ्यका आधारमा कुलतमा फस्नुको कारण साथीहरूबाट पाएको दबाब (Peer Pressure) र पैसाको अभावमा चोरी गर्न बाध्य भएको देखिन्छ। उसलाई तत्काल उद्धार नगरे उसको ज्यान जोखिममा पर्ने र प्रहरी कारबाहीमा भविष्य बर्बाद हुने विश्लेषण गरिन्छ।</li>
+                    <li><strong>चरण ५: निष्कर्ष —</strong> सम्पूर्ण तथ्य विश्लेषणबाट यो निष्कर्ष निस्कन्छ कि साथीलाई कारबाही वा निष्कासन गर्नुको साटो उसको गोप्यता कायम राख्दै तत्काल मनोवैज्ञानिक परामर्श दिनु र सुधार गृहमा भर्ना गर्नु नै दीर्घकालीन र सर्वोत्तम समाधान हो।</li>
+                    <li><strong>चरण ६: प्रयोग (निष्कर्ष कार्यान्वयन) —</strong> हामी विद्यालय प्रशासन र उसको परिवारसँग समन्वय गरी उसलाई सुधार गृह पठाउँछौँ। उसलाई कुलतबाट मुक्त गराएर पुनः विद्यालयमा ससम्मान अध्ययन गर्ने वातावरणको सिर्जना गर्छौँ।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपाली समाजमा लागू पदार्थको दुर्व्यसनको शिकार भएका युवाहरूको सङ्ख्या बढ्दो छ। उदाहरणका लागि, काठमाडौँका एक १६ वर्षीय छात्र नवीन (नाम परिवर्तन) गलत सङ्गतका कारण लागू औषधको दुर्व्यसनमा फसेका थिए। उनको घरबाट पैसा र गरगहना हराउन थालेपछि बुबाआमाले सुरुमा उनीसँग झगडा गरे र कोठामा थुनेर राखे, जसले गर्दा नवीनले आत्महत्याको प्रयास गरे। पछि विद्यालयका शिक्षकहरूको सक्रियतामा समस्या समाधान सीप अपनाइयो। उनलाई नजिकैको सुधार गृहमा ६ महिना राखियो, परिवारले उनलाई तिरस्कार गर्नुको साटो माया र विश्वास दिए। आज नवीन कुलतमुक्त भएर समाजशास्त्रमा स्नातक तह अध्ययन गर्दैछन् र समाजमा दुर्व्यसन विरुद्धका अभियानमा सक्रिय छन्। यसले देखाउँछ कि रिस र कारबाही भन्दा 'समस्या समाधान सीप' को व्यावहारिक प्रयोग सधैँ प्रभावकारी हुन्छ।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> लागू पदार्थको दुर्व्यसन केवल एउटा व्यक्तिको चरित्रको कमजोरी मात्र नभएर एक गम्भीर सामाजिक-मानसिक समस्या हो <span class="ref">[९]</span>। यसलाई रिस, दमन वा सामाजिक बहिष्कारको माध्यमबाट कहिल्यै समाधान गर्न सकिँदैन। जब हामी समस्या समाधान सीपका ६ चरणहरू—विशेष गरी सहानुभूति, सक्रिय सुनाइ र स्वनिर्णय जस्ता जीवनोपयोगी सीपहरू लागू गर्छौँ, तब मात्र कुलतमा फसेको युवालाई नयाँ जीवन दिन र सभ्य समाजको निर्माण गर्न सम्भव हुन्छ <span class="ref">[९]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#3F51B5; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> समस्या समाधान जीवनको हरेक क्षेत्रमा अपरिहार्य सीप हो। समस्यालाई अवसरको रूपमा हेर्नुहोस्, यसका कारणहरू गहिराइसँग बुझ्नुहोस्, र व्यवस्थित चरणहरू पालना गरी समाधान निकाल्नुहोस्। सक्रिय सुनाइ, सिर्जनात्मकता र स्वनिर्णयको अभ्यासले तपाईंलाई एक कुशल समस्या समाधानकर्ता बनाउनेछ। याद राख्नुहोस् – हरेक समस्या समाधानको एउटा अवसर हो।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ३, पाठ २</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
