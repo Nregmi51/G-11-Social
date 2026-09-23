@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ ५ – अन्तरवैयक्तिक सीपहरू (कक्षा ११)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #1A237E;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(26, 35, 126, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #1A237E;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1A237E;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #1A237E;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #1A237E;
+            font-size: 1.1rem;
+        }
+
+        .qa-block .a p {
+            color: #374210;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1A237E;
+        }
+
+        .glossary-item strong {
+            color: #1A237E;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- BRANCH FLOW (Tree Diagram) ----- */
+        .branch-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            padding: 18px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .branch-root {
+            background: #1A237E;
+            color: #ffffff;
+            border-color: #1A237E;
+            font-size: 1.05rem;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 800;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .branch-children {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .branch-children {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .branch-children {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ----- ACTIVITY / ANALYSIS BOX ----- */
+        .analysis-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #b8c0a8;
+            margin: 12px 0;
+            color: #374210;
+        }
+
+        .analysis-box .analysis-title {
+            font-weight: 900;
+            color: #1A237E;
+            font-size: 1.15rem;
+        }
+
+        .analysis-box p,
+        .analysis-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+            color: #374210;
+        }
+
+        .analysis-box ul,
+        .analysis-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #b8c0a8;
+            margin: 12px 0;
+            color: #374210;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #1A237E;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+            color: #374210;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- CITATION REF ----- */
+        .ref {
+            font-size: 0.72em;
+            color: #5C6BC0;
+            font-weight: 800;
+            vertical-align: super;
+            margin-left: 2px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .analysis-box p,
+            .analysis-box li {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .branch-root {
+                font-size: 0.9rem;
+                padding: 8px 18px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-handshake"></i>
+                    एकाइ ३, पाठ ५: अन्तरवैयक्तिक सीपहरू
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा क्याप्सुल नोट (v2)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ ३, पाठ ५
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> विस्तृत प्राज्ञिक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&amp;A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड १: पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            खण्ड १: विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="content-box blue-light">
+            <p>यस पाठमा प्रयोग भएका मुख्य <strong>१० वटा प्राविधिक, सामाजिक तथा मनोवैज्ञानिक शब्दहरूको</strong> परीक्षा-उपयोगी र प्राज्ञिक परिभाषा निम्नलिखित छ:</p>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> १. अन्तरवैयक्तिक सीप (Interpersonal Skills)</strong>
+                <p>समाजमा अरू व्यक्तिहरूसँग प्रभावकारी रूपमा सञ्चार गर्न, सकारात्मक मानवीय सम्बन्ध निर्माण गर्न, विचार तथा भावनाहरूको आदानप्रदान गर्न र सहकार्य गर्न आवश्यक पर्ने व्यावहारिक सामाजिक क्षमता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> २. अन्तरवैयक्तिक सम्बन्ध (Interpersonal Relationship)</strong>
+                <p>दुई वा सोभन्दा बढी व्यक्तिहरूबीच स्थापित हुने सामाजिक, भावनात्मक र व्यावहारिक सम्बन्ध, जुन आपसी विश्वास, सम्मान, बुझाइ र सहकार्यमा आधारित हुन्छ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ३. सक्रिय सुनाइ (Active Listening)</strong>
+                <p>अरूले बोलेका कुराहरूलाई बिनाकुनै पूर्वधारणा वा अवरोध ध्यानपूर्वक सुन्ने, बुझ्ने, र उपयुक्त प्रतिक्रिया दिने सकारात्मक सञ्चार प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ४. सहानुभूति (Empathy)</strong>
+                <p>अरू व्यक्तिको परिस्थिति, दुःख, समस्या वा भावनालाई उनीहरूकै दृष्टिकोणबाट महसुस गरी सहयोगी र संवेदनशील व्यवहार देखाउने क्षमता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ५. टोलीकार्य (Teamwork)</strong>
+                <p>कुनै साझा सामाजिक वा संस्थागत लक्ष्य प्राप्तिका लागि समूहका सदस्यहरू मिलेर आपसी समन्वय, सहकार्य, र समझदारीका साथ एकताबद्ध भई गरिने कार्य।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ६. नेतृत्व (Leadership)</strong>
+                <p>कुनै निश्चित उद्देश्य प्राप्तिका लागि समूह वा समाजका मानिसहरूलाई सही मार्गनिर्देशन गर्ने, प्रेरित गर्ने, र अघि बढाउने संगठनात्मक क्षमता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ७. द्वन्द्व व्यवस्थापन (Conflict Management)</strong>
+                <p>मानिसहरूबीच उत्पन्न हुने असमझदारी, विचारको भिन्नता वा विवादलाई आपसी संवाद, सम्झौता र मध्यस्थताका माध्यमबाट शान्तिपूर्ण रूपमा रूपान्तरण गर्ने कला।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ८. सामाजिक समायोजन (Social Adjustment)</strong>
+                <p>परिवर्तित सामाजिक वातावरण, नयाँ परिवेश, वा संस्कृतिसँग आफूलाई अनुकुलित गराई सहज रूपमा अन्तरक्रिया गर्न सक्ने क्षमता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ९. संवेगात्मक परिपक्वता (Emotional Maturity)</strong>
+                <p>आफ्ना रिस, राग, ईर्ष्या, र उत्तेजना जस्ता नकारात्मक संवेगहरूलाई नियन्त्रण गरी सन्तुलित र विवेकपूर्ण व्यवहार देखाउने मानसिक क्षमता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> १०. सिर्जनात्मक प्रतिक्रिया (Constructive Feedback)</strong>
+                <p>अरूको गल्ती वा कमजोरी औँल्याउँदा होच्याउने वा अपमान गर्ने नियत नराखी सुधारका लागि सकारात्मक, शिष्ट र आदरार्थी भाषामा दिइने सुझाव।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड २: विस्तृत प्राज्ञिक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            खण्ड २: विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- २.१ अवधारणा र महत्त्व -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. अन्तरवैयक्तिक सीपको अवधारणा र महत्त्व</div>
+
+        <div class="content-box blue-light">
+            <p>मानिस एक सामाजिक प्राणी भएकाले ऊ समाजभन्दा बाहिर एक्लै बाँच्न सक्दैन। दैनिक जीवनमा परिवारका सदस्यहरू, छिमेकी, साथीभाइ, शिक्षक, र सहकर्मीहरूसँग निरन्तर अन्तरक्रिया गरिरहनुपर्छ। अरूसँगको सम्बन्धलाई कसिलो, सुमधुर र फलदायी बनाउने क्षमता नै <strong>अन्तरवैयक्तिक सीप</strong> हो।</p>
+
+            <p><strong>अन्तरवैयक्तिक सीपको महत्त्व:</strong></p>
+            <ul>
+                <li><strong>सामाजिक समायोजन:</strong> नयाँ विद्यालय, नयाँ काम वा अनपेक्षित सामाजिक परिवेशमा सहजै घुलमिल हुन मद्दत गर्छ।</li>
+                <li><strong>प्रभावकारी सञ्चार:</strong> आफ्ना विचार र भावनाहरू स्पष्ट रूपमा व्यक्त गर्न र अरूका भनाइलाई सही रूपमा बुझ्न सघाउँछ।</li>
+                <li><strong>द्वन्द्व निवारण:</strong> विचारको भिन्नताका कारण आउन सक्ने असमझदारी र रिसरागलाई वार्ता र सम्झौताबाट समाधान गर्छ।</li>
+                <li><strong>पेसागत सफलता:</strong> रोजगार बजार र कार्यस्थलमा समूहसँग मिलेर काम गर्न तथा नेतृत्व लिन यो सीप अपरिहार्य छ।</li>
+            </ul>
+        </div>
+
+        <!-- २.२ सम्बन्ध सुधारका उपाय -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> २. अन्तरवैयक्तिक सम्बन्ध सुधारका ५ प्रमुख उपायहरू</div>
+
+        <div class="content-box green-light">
+            <p>दैनिक जीवनमा मानवीय सम्बन्धलाई बलियो बनाउन निम्नलिखित ५ वटा प्रमुख जीवनोपयोगी उपायहरू अपनाउनुपर्छ:</p>
+
+            <div class="branch-flow">
+                <div class="branch-root">अन्तरवैयक्तिक सम्बन्ध सुधारका उपायहरू</div>
+                <div class="branch-children">
+                    <div class="mermaid-step">१. सकारात्मक सोच र संवेग नियन्त्रण</div>
+                    <div class="mermaid-step">२. सक्रिय सुनाइ र विचारको सम्मान</div>
+                    <div class="mermaid-step">३. समानुभूति र सहयोगी व्यवहार</div>
+                    <div class="mermaid-step">४. विनम्रता र अहंकारको अन्त्य</div>
+                    <div class="mermaid-step">५. शिष्ट सञ्चार र स्पष्टता</div>
+                </div>
+            </div>
+
+            <ol>
+                <li><strong>सकारात्मक सोचको विकास:</strong> अरूप्रति पूर्वधारणा वा ईर्ष्या नराखी सकारात्मक दृष्टिकोण राख्ने।</li>
+                <li><strong>सक्रियतापूर्वक सुन्ने बानी:</strong> अरू बोल्दा बिचमै नकाटी ध्यान दिएर सुन्ने र उनीहरूका भावनाको सम्मान गर्ने।</li>
+                <li><strong>सहानुभूतिको प्रदर्शन:</strong> अरूको दुःखमा आफूलाई राखेर सोच्ने र निस्वार्थ सहयोग गर्ने।</li>
+                <li><strong>विनम्रता र शिष्टाचार:</strong> कुराकानीमा सधैँ आदरार्थी र नम्र भाषाको प्रयोग गर्ने, अहङ्कार र घमण्ड त्याग्ने।</li>
+                <li><strong>सत्य र शिष्ट सञ्चार:</strong> नढाँटीकन आफ्ना कुराहरू प्रस्ट र मर्यादित रूपमा प्रस्तुत गर्ने।</li>
+            </ol>
+        </div>
+
+        <!-- २.३ सम्बन्ध र सामाजिक सञ्जाल -->
+        <div class="sub-head"><i class="fas fa-share-nodes"></i> ३. अन्तरवैयक्तिक सम्बन्ध र सामाजिक सञ्जाल</div>
+
+        <div class="content-box purple-light">
+            <p>आधुनिक युगमा सामाजिक सञ्जाल (फेसबुक, मेसेन्जर, इन्स्टाग्राम, ह्वाट्सएप आदि) अन्तरवैयक्तिक सम्बन्ध विस्तारका प्रमुख माध्यम बनेका छन्। तर, यसको प्रयोग गर्दा विशेष सजगता अपनाउनु आवश्यक छ।</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: सामाजिक सञ्जालको प्रयोग — सबल पक्ष, दुर्बल पक्ष र सुरक्षा नियमहरू</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:20%;">क्षेत्र</th>
+                            <th style="width:26%;">सबल पक्ष (फाइदाहरू)</th>
+                            <th style="width:26%;">दुर्बल पक्ष (जोखिमहरू)</th>
+                            <th style="width:28%;">अपनाउनुपर्ने सुरक्षा नियमहरू</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>सामाजिक सञ्जाल र सम्बन्ध</strong></td>
+                            <td>
+                                • टाढा रहेका आफन्त र साथीहरूसँग तत्काल जोड्ने।<br>
+                                • विचार र अध्ययन सामग्री आदानप्रदान गर्न सकिने।<br>
+                                • विश्वव्यापी सञ्जाल निर्माण हुने।
+                            </td>
+                            <td>
+                                • वास्तविक (प्रत्यक्ष) भेटघाट र पारिवारिक घुलमिल घट्ने।<br>
+                                • साइबर बुलिङ र चरित्रहत्याको जोखिम।<br>
+                                • गलत सूचना र भ्रम फैलने डर।
+                            </td>
+                            <td>
+                                • प्राइभेसी सेटिङ कडा बनाउने।<br>
+                                • अपरिचितको रिक्वेस्ट स्वीकार नगर्ने।<br>
+                                • तस्बिर वा विवरण जथाभावी सेयर नगर्ने।<br>
+                                • कमेन्ट गर्दा शिष्ट भाषा प्रयोग गर्ने।
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- २.४ नेतृत्वका गुण -->
+        <div class="sub-head"><i class="fas fa-crown"></i> ४. असल नेतृत्वका गुणहरू र अन्तरवैयक्तिक सीप</div>
+
+        <div class="content-box orange-light">
+            <p>नेतृत्व भनेको अरूलाई सही उद्देश्य प्राप्तिका लागि प्रोत्साहित गर्ने र बाटो देखाउने क्षमता हो। एक असल नेता हुनका लागि उच्च स्तरको अन्तरवैयक्तिक सीप आवश्यक हुन्छ।</p>
+
+            <p><strong>असल नेतामा हुनुपर्ने मुख्य गुणहरू:</strong></p>
+            <ul>
+                <li><strong>आत्मअनुशासन र नियमको पालना:</strong> आफैँ नियममा बाँधिएर अरूका लागि अनुकरणीय बन्ने।</li>
+                <li><strong>सहानुभूति र लोकतान्त्रिक आचरण:</strong> समूहका सबै सदस्यको विचार सुन्ने र सम्मान गर्ने।</li>
+                <li><strong>संवेगात्मक स्थिरता:</strong> कठिन र दबाबपूर्ण परिस्थितिमा पनि शान्त रहेर निर्णय लिने।</li>
+                <li><strong>उत्प्रेरक क्षमता:</strong> टोलीका सदस्यहरूको प्रतिभा पहिचान गरी उनीहरूलाई हौसला दिने।</li>
+            </ul>
+        </div>
+
+        <!-- २.५ टोलीकार्यबाट नेतृत्व विकास -->
+        <div class="sub-head"><i class="fas fa-people-group"></i> ५. टोलीकार्य (Teamwork) बाट नेतृत्व विकास हुने प्रक्रिया</div>
+
+        <div class="content-box teal-light">
+            <p>कुनै पनि साझा लक्ष्य हासिल गर्नका लागि समूहका सबै सदस्यहरूले एकताबद्ध भई गर्ने कार्य नै <strong>टोलीकार्य</strong> हो। टोलीकार्यले व्यक्तिमा स्वतः नेतृत्व सीपको विकास गराउँछ।</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">टोलीकार्यको सुरुआत</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">जिम्मेवारी बाँडफाँड र सहकार्य</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">समस्या समाधान र अनुभव हासिल</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">आत्मविश्वास र नेतृत्व सीपको विकास</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ३: क्रियाकलापको पूर्ण समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            खण्ड ३: क्रियाकलापको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-chalkboard-teacher"></i> क्रियाकलाप १: डोल्मा आमाको काखमा पल्टिनुको कारण र सन्देश</div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">उत्तर:</span> डोल्माको मानसिक अन्योल र आमाको मार्गदर्शन</div>
+            <div class="a">
+                <p>पाठ्यपुस्तकको सन्दर्भअनुसार, डोल्मा सामाजिक सञ्जालको सुरक्षित प्रयोग र गोपनियताका विषयमा चिन्तित र अन्योलमा थिइन्। उनकी आमा (डोमा) ले उनलाई सामाजिक सञ्जालका जोखिमहरू र सुरक्षित रूपमा प्रयोग गर्ने उपायहरू (जस्तै: अपरिचितसँग सतर्क रहने, व्यक्तिगत विवरण सेयर नगर्ने, र प्राइभेसी सेटिङ मिलाउने) स्पष्टसँग बुझाइदिइन्। आमाको मार्गदर्शनपछि डोल्माको मनमा रहेको डर, चिन्ता र अन्योल हट्यो। उनी आश्वस्त र सुरक्षित महसुस गर्दै खुसी भएर आमाको काखमा पल्टिएकी हुन्।</p>
+                <p><strong>सन्देश:</strong> यसबाट हामीले आफ्ना समस्याहरू अभिभावकसँग खुलेर सेयर गर्दा सही मार्गदर्शन र मानसिक शान्ति पाइन्छ भन्ने सन्देश पाउँछौँ।</p>
+            </div>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-comments"></i> क्रियाकलाप २: मनोज र रमुनाको संवादमा आधारित उत्तरहरू</div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(अ)</span> सामाजिक सञ्जालको प्रयोगले पार्ने नकारात्मक असरहरूको सूची</div>
+            <div class="a">
+                <ol>
+                    <li><strong>डिजिटल लत र समयको बर्बादी:</strong> धेरै समय स्क्रिनमा बिताउँदा अध्ययन, खेलकुद र घरायसी काम ओझेलमा पर्छ।</li>
+                    <li><strong>पारिवारिक दूरी:</strong> घरका सदस्यहरूसँग प्रत्यक्ष कुराकानी गर्नुको सट्टा मोबाइलमा व्यस्त रहँदा पारिवारिक आत्मीयता घट्छ।</li>
+                    <li><strong>साइबर बुलिङ र मानसिक तनाव:</strong> अनलाइन माध्यममा नकारात्मक कमेन्ट, ब्ल्याकमेलिङ वा भ्रामक प्रचारले व्यक्तिको मानसिक स्वास्थ्य बिग्रन्छ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">(आ)</span> अन्तरवैयक्तिक सीप र सामाजिक सञ्जालबिचको सम्बन्ध</div>
+            <div class="a">
+                <p>सामाजिक सञ्जाल अन्तरवैयक्तिक सम्बन्ध विस्तार गर्ने आधुनिक प्रविधि हो। यदि व्यक्तिमा राम्रो अन्तरवैयक्तिक सीप छ भने उसले अनलाइनमा पनि शिष्ट, मर्यादित र उत्तरदायी व्यवहार देखाउँछ, जसले गर्दा अनलाइन सम्बन्धहरू पनि स्वस्थ र सकारात्मक बन्दछन्।</p>
+            </div>
+        </div>
+
+        <!-- क्रियाकलाप ३ -->
+        <div class="sub-head"><i class="fas fa-user-tie"></i> क्रियाकलाप ३: तेस्रो नेताको परिकल्पना र विशेषताहरू</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">उत्तर:</span> तेस्रो नेतामा हुनुपर्ने विशेषताहरू</div>
+            <div class="a">
+                <p>पाठमा उल्लिखित पहिलो र दोस्रो नेताको तुलनात्मक विश्लेषणका आधारमा तेस्रो नेतामा निम्नलिखित विशेषताहरू हुनुपर्छ:</p>
+                <ul>
+                    <li><strong>निस्वार्थी र परोपकारी भावना:</strong> आफ्नो व्यक्तिगत स्वार्थभन्दा माथि उठेर जनता र समाजको सेवामा समर्पित रहने।</li>
+                    <li><strong>सुमधुर अन्तरवैयक्तिक सम्बन्ध:</strong> जनतासँग प्रत्यक्ष घुलमिल हुने, उनीहरूका पीरमर्का सहानुभूतिपूर्वक सुन्ने र सबैसँग समान व्यवहार गर्ने।</li>
+                    <li><strong>विपद्मा अग्रसरता:</strong> बाढी, पहिरो वा अन्य सङ्कटका बेला आफैँ खटिएर राहत र उद्धारमा नेतृत्व लिने।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- क्रियाकलाप ४ -->
+        <div class="sub-head"><i class="fas fa-book-reader"></i> क्रियाकलाप ४: काकाको टोलीकार्य सम्बन्धी संस्मरणबाट सिकाइ</div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">उत्तर:</span> परम्परागत सहकार्य संस्कृतिबाट प्राप्त सिकाइ</div>
+            <div class="a">
+                <p>काकाको संस्मरणले हाम्रो परम्परागत नेपाली समाजमा विद्यमान 'अर्मपर्म' र 'श्रमदान' को सहकार्य संस्कृतिलाई उजागर गर्छ। यसबाट हामीले निम्नलिखित कुराहरू सिक्न सक्छौँ:</p>
+                <ol>
+                    <li>सामूहिक रूपमा काम गर्दा जस्तोसुकै कठिन र ठुला विकास निर्माणका कामहरू पनि सहजै सम्पन्न हुन्छन्।</li>
+                    <li>टोलीकार्यले मानिसहरूमा आपसी आत्मीयता, भ्रातृत्व र सामाजिक एकता बलियो बनाउँछ।</li>
+                    <li>समूहमा काम गर्दा सदस्यहरूमा जिम्मेवारीबोध र नेतृत्व क्षमताको स्वतः विकास हुन्छ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ४: अभ्यासको पूर्ण समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            खण्ड ४: अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्रश्न १:</span> अन्तरवैयक्तिक सीप भनेको के हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानव समाजमा अरू मानिसहरूसँग सुमधुर र सकारात्मक सम्बन्ध कायम राख्न, प्रभावकारी रूपमा विचार तथा भावनाहरू आदानप्रदान गर्न, सक्रियतापूर्वक अरूका कुरा सुन्न, र समूहमा मिलेर काम गर्न आवश्यक पर्ने व्यावहारिक सामाजिक क्षमतालाई <strong>अन्तरवैयक्तिक सीप</strong> भनिन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्रश्न २:</span> अन्तरवैयक्तिक सीप किन महत्त्वपूर्ण छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अन्तरवैयक्तिक सीप मानव जीवनमा निम्नलिखित कारणहरूले गर्दा अत्यन्तै महत्त्वपूर्ण छ:</p>
+                <ul>
+                    <li>यसले व्यक्तिलाई नयाँ सामाजिक परिवेश र समाजमा सजिलैसँग समायोजन (Adjustment) हुन मद्दत गर्छ।</li>
+                    <li>यसले आपसी असमझदारी, मनमुटाव र द्वन्द्वलाई हटाएर सुमधुर पारिवारिक तथा सामाजिक सम्बन्ध निर्माण गर्दछ।</li>
+                    <li>यसले सक्रिय सुनाइ, सहानुभूति र जिम्मेवारी वहन गर्ने क्षमता बढाएर परिपक्व व्यक्तित्व निर्माण गर्दछ।</li>
+                    <li>पेसागत क्षेत्र र कार्यस्थलमा टोलीकार्य गर्न, सहकर्मीहरूसँग समन्वय गर्न र सफलता प्राप्त गर्न यो सीप अपरिहार्य छ।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्रश्न ३:</span> अन्तरवैयक्तिक सम्बन्ध सुधार गर्ने उपायहरू लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अन्तरवैयक्तिक सम्बन्ध सुधार गर्ने प्रमुख उपायहरू यस प्रकार छन्:</p>
+                <ol>
+                    <li><strong>सकारात्मक सोचको विकास:</strong> अरूप्रति सधैँ सकारात्मक दृष्टिकोण राख्ने र रिस, ईर्ष्या तथा डाहा जस्ता नकारात्मक संवेगहरूलाई नियन्त्रण गर्ने।</li>
+                    <li><strong>सक्रियतापूर्वक सुन्ने बानी:</strong> अरू बोल्दा बिचमै नकाटी ध्यान दिएर सुन्ने र उनीहरूको विचारको सम्मान गर्ने।</li>
+                    <li><strong>सहानुभूतिको व्यवहार:</strong> अरूको दुःख र समस्यालाई आफ्नै ठानेर आत्मसात् गर्ने र सहयोगी हात बढाउने।</li>
+                    <li><strong>अहङ्कारको अन्त्य:</strong> आफूलाई मात्र ज्ञानी ठान्ने घमण्ड त्याग्ने र सबैसँग नम्र र शिष्ट भाषामा संवाद गर्ने।</li>
+                    <li><strong>सहकार्य र सामूहिक भावना:</strong> समूहमा काम गर्ने, अरूलाई प्रोत्साहन दिने र सकारात्मक प्रतिक्रिया प्रदान गर्ने।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्रश्न ४:</span> अन्तरवैयक्तिक सम्बन्ध सुधारका लागि सामाजिक सञ्जाललाई कसरी प्रयोग गर्नुपर्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सामाजिक सञ्जाललाई अन्तरवैयक्तिक सम्बन्ध बिगार्ने माध्यम नबनाई सुधार गर्ने साधनका रूपमा निम्नलिखित तरिकाले प्रयोग गर्नुपर्छ:</p>
+                <ul>
+                    <li>सामाजिक सञ्जाललाई उपयोगी ज्ञान, सूचना र सकारात्मक विचारहरू आदानप्रदान गर्ने थलोका रूपमा प्रयोग गर्ने।</li>
+                    <li>साथीभाइ र आफन्तहरूसँग शिष्ट, मर्यादित र आदरार्थी भाषामा अनलाइन कुराकानी र शुभकामना साटासाट गर्ने।</li>
+                    <li>अरूको पोस्ट वा विचारमा प्रतिक्रिया दिँदा गालीगलौज वा अपमान नगरी रचनात्मक र सकारात्मक सुझाव मात्र दिने।</li>
+                    <li>व्यक्तिगत गोपनियता जोगाउन प्राइभेसी सेटिङको उचित प्रयोग गर्ने र अनलाइनमा अपरिचितहरूसँग सतर्क रहने।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्रश्न ५:</span> असल नेतृत्व विकास गर्न के के गर्न सकिन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> असल नेतृत्व विकास गर्न निम्नलिखित कार्यहरू गर्न सकिन्छ:</p>
+                <ul>
+                    <li><strong>कडा आत्मअनुशासन:</strong> आफैँ नियम र मर्यादामा रहेर अरूका लागि अनुकरणीय दृष्टान्त बन्ने।</li>
+                    <li><strong>सक्रिय सुनाइ र धैर्यता:</strong> समूहका सबै सदस्यका विचार, गुनासा र सुझावहरू धैर्यपूर्वक सुन्ने बानी बसाल्ने।</li>
+                    <li><strong>टोलीकार्यमा संलग्नता:</strong> समूहमा काम गर्दा जिम्मेवारी लिने र अरू सदस्यहरूलाई प्रोत्साहित गर्दै अघि बढाउने।</li>
+                    <li><strong>निरन्तर सिकाइ र संवेग नियन्त्रण:</strong> आफ्ना गल्तीहरूबाट सिक्ने र कठिन परिस्थितिमा पनि संयमित भएर निर्णय लिने क्षमता बढाउने।</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ५: परीक्षा विशेष सम्भावित प्रश्नोत्तर ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            खण्ड ५: परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> १. अति संक्षिप्त उत्तरात्मक प्रश्नोत्तरहरू (१ अङ्क भार)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्रश्न १:</span> अन्तरवैयक्तिक सीप भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> समाजमा अरू व्यक्तिहरूसँग सुमधुर सम्बन्ध कायम राख्न, विचार साटासाट गर्न र सहकार्य गर्न आवश्यक पर्ने सामाजिक क्षमता नै अन्तरवैयक्तिक सीप हो।</div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्रश्न २:</span> समानुभूति (Empathy) भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> अरू व्यक्तिको दुःख, समस्या वा परिस्थितिलाई उनीहरुकै ठाउँमा रहेर महसुस गरी सहयोगी व्यवहार देखाउनु समानुभूति हो।</div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्रश्न ३:</span> टोलीकार्य (Teamwork) को मुख्य फाइदा के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> टोलीकार्यको मुख्य फाइदा साझा लक्ष्य सहजै हासिल हुनुका साथै सदस्यहरूमा सहकार्य र नेतृत्व सीपको विकास हुनु हो।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">प्रश्न ४:</span> सक्रिय सुनाइ (Active Listening) ले अन्तरवैयक्तिक सम्बन्धमा कसरी मद्दत गर्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> सक्रिय सुनाइले वक्ताप्रति आदर र विश्वास सिर्जना गर्छ, जसले गर्दा आपसी असमझदारी हटेर सम्बन्ध कसिलो बन्छ।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">प्रश्न ५:</span> असल नेतामा हुनुपर्ने कुनै एक प्रमुख गुण लेख्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> असल नेतामा हुनुपर्ने एक प्रमुख गुण समूहका सदस्यहरूलाई उत्प्रेरित गरी सामूहिक निर्णयको सम्मान गर्नु हो।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> २. संक्षिप्त उत्तरात्मक प्रश्नोत्तरहरू (५ अङ्क भार)</div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्रश्न १:</span> अन्तरवैयक्तिक सम्बन्ध सुधारका प्रमुख उपायहरू बुँदागत रूपमा व्याख्या गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानव जीवनमा सुमधुर अन्तरवैयक्तिक सम्बन्धले मानसिक शान्ति र सामाजिक सफलता प्रदान गर्दछ <span class="ref">[१२]</span>। सम्बन्ध सुधारका प्रमुख उपायहरू निम्नानुसार छन् <span class="ref">[१२]</span>:</p>
+                <ul>
+                    <li><strong>सकारात्मक सोच र संवेग नियन्त्रण:</strong> रिस, ईर्ष्या र घमण्ड त्यागी सबैसँग सकारात्मक र आत्मीय दृष्टिकोण राख्नुपर्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>सक्रिय सुनाइ:</strong> अरूको कुरा बिचमै नकाटी ध्यानपूर्वक सुन्ने र उनीहरूका भावनालाई कदर गर्नुपर्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>सहानुभूतिको व्यवहार:</strong> अरूको दुःखमा सहयोगी बनेर उनीहरूको मनोबल बढाउनुपर्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>शिष्ट र प्रस्ट सञ्चार:</strong> कुराकानी गर्दा सधैँ नम्र, प्रस्ट र आदरार्थी शब्दहरूको प्रयोग गर्नुपर्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>सामूहिक सहकार्य:</strong> एक्लै हिँड्ने बानी छोडेर समाज वा टोलीमा मिलेर काम गर्ने र विचार साटासाट गर्ने बानी बसाल्नुपर्छ <span class="ref">[१२]</span>।</li>
+                </ul>
+                <p>अतः यी जीवनोपयोगी उपायहरूको नियमित अभ्यासले नै हाम्रा पारिवारिक र सामाजिक सम्बन्धहरूलाई कसिलो र जीवन्त बनाउँछ <span class="ref">[१२]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्रश्न २:</span> सामाजिक सञ्जाल कसरी अन्तरवैयक्तिक सम्बन्धका लागि 'वरदान' र 'अभिशाप' दुवै बन्न सक्छ? स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> आधुनिक डिजिटल युगमा सामाजिक सञ्जाल सञ्चारको प्रभावकारी माध्यम बनेको छ, जुन हाम्रो प्रयोगको आधारमा वरदान वा अभिशाप बन्दछ <span class="ref">[१२]</span>।</p>
+                <ul>
+                    <li><strong>वरदानका रूपमा (सकारात्मक पक्ष):</strong> यसले टाढा रहेका साथीभाइ र आफन्तहरूसँग क्षणभरमै जोड्छ <span class="ref">[१२]</span>। यसका माध्यमबाट शैक्षिक सामग्री, सकारात्मक विचार र ज्ञानवर्धक सूचनाहरू आदानप्रदान गरी सम्बन्धलाई विचार प्रधान र समृद्ध बनाउन सकिन्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>अभिशापका रूपमा (नकारात्मक पक्ष):</strong> अत्यधिक प्रयोगले प्रत्यक्ष भेटघाट र पारिवारिक कुराकानी घटाउँछ <span class="ref">[१२]</span>। सामाजिक सञ्जालमा गरिने अभद्र कमेन्ट, गलत प्रचार, र साइबर बुलिङले मानिसबिच शत्रुता र मानसिक तनाव बढाउँछ <span class="ref">[१२]</span>।</li>
+                </ul>
+                <p>अतः सामाजिक सञ्जाललाई सचेत, मर्यादित र प्राइभेसी अपनाएर प्रयोग गरेमा यो वरदान साबित हुन्छ भने असावधानीपूर्वक प्रयोग गरेमा अभिशाप बन्दछ <span class="ref">[१२]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्रश्न ३:</span> टोलीकार्य (Teamwork) ले कसरी व्यक्तिमा नेतृत्व सीपको विकास गराउँछ? तर्क प्रस्तुत गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> टोलीकार्य र नेतृत्व सीप एकअर्कासँग प्रत्यक्ष रूपमा जोडिएका अवधारणा हुन् <span class="ref">[१२]</span>। समूहमा मिलेर काम गर्दा मानिसमा स्वतः नेतृत्व क्षमता निखरिएर आउँछ <span class="ref">[१२]</span>।</p>
+                <p>यसका प्रमुख आधारहरू निम्नलिखित छन् <span class="ref">[१२]</span>:</p>
+                <ul>
+                    <li><strong>जिम्मेवारी बोध:</strong> टोलीकार्यमा प्रत्येक सदस्यलाई निश्चित कामको जिम्मेवारी दिइन्छ, जसले व्यक्तिलाई कर्तव्यनिष्ठ र जवाफदेही बनाउँछ <span class="ref">[१२]</span>।</li>
+                    <li><strong>समस्या समाधानको अनुभव:</strong> समूहमा काम गर्दा आउने अप्ठ्यारा र चुनौतीहरूलाई सामूहिक छलफलबाट हल गर्न सिकिन्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>सञ्चार र समन्वय:</strong> टोलीका अन्य सदस्यहरूसँग निरन्तर कुराकानी गर्दा सञ्चार सीप र अन्तरवैयक्तिक सम्बन्ध बलियो हुन्छ <span class="ref">[१२]</span>।</li>
+                    <li><strong>विविधताको सम्मान:</strong> टोलीमा रहेका फरक विचार र क्षमता भएका मानिसहरूलाई समेटेर अघि बढ्ने क्षमता विकास हुन्छ <span class="ref">[१२]</span>।</li>
+                </ul>
+                <p>अतः टोलीकार्यले व्यक्तिलाई अनुशासन, सहकार्य र निर्णय निर्माणमा परिपक्व बनाई एक सफल र सर्वस्वीकार्य नेताका रूपमा स्थापित गराउँछ <span class="ref">[१२]</span>।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> ३. लामो उत्तरात्मक प्रश्न (८ अङ्क भार)</div>
+
+        <div class="qa-block color5" style="border-left-color:#1A237E;">
+            <div class="q"><span class="qnum">प्रश्न:</span> 'अन्तरवैयक्तिक सीप २१औँ शताब्दीमा सफल व्यक्तिगत, सामाजिक र व्यावसायिक जीवनको आधारशिला हो।' यस भनाइलाई पाठ्यपुस्तकका आधारमा सान्दर्भिक उदाहरण र तर्कसहित पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय (Introduction):</span> मानव समाज अन्तरसम्बन्धहरूको एउटा जटिल सञ्जाल हो <span class="ref">[१२]</span>। २१औँ शताब्दीको आधुनिक, प्रतिस्पर्धी र प्रविधिमैत्री विश्वमा केवल किताबी ज्ञान वा प्राविधिक दक्षता (Hard Skills) मात्र मानिसलाई सफल बनाउन पर्याप्त छैन <span class="ref">[१२]</span>। समाजमा अरूसँग सुमधुर सम्बन्ध कायम गर्ने, प्रभावकारी संवाद गर्ने, भावना बुझ्ने र सहकार्य गर्ने 'अन्तरवैयक्तिक सीप' (Interpersonal Skill) नै २१औँ शताब्दीको सबैभन्दा महत्त्वपूर्ण जीवनोपयोगी सीप मानिन्छ <span class="ref">[१२]</span>। यस सीपले व्यक्तिलाई एकातिर आत्मविश्वासी र लचकदार बनाउँछ भने अर्कोतिर समाज र कार्यस्थलमा सम्मानित स्थान दिलाउँछ <span class="ref">[१२]</span>।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. मुख्य विश्लेषण र तर्कहरू (Core Analysis):</span> अन्तरवैयक्तिक सीपले मानव जीवनका तीनवटै आयाम (व्यक्तिगत, सामाजिक र व्यावसायिक) मा कसरी आधारशिलाको काम गर्छ भन्ने कुरालाई निम्न अनुसार विश्लेषण गर्न सकिन्छ <span class="ref">[१२]</span>:</p>
+
+                <ul>
+                    <li><strong>व्यक्तिगत जीवनमा सन्तुलन:</strong> अन्तरवैयक्तिक सीप भएका व्यक्तिहरूमा उच्च संवेगात्मक परिपक्वता र आत्मअनुशासन हुन्छ <span class="ref">[१२]</span>। उनीहरू आफ्ना रिस, चिन्ता र घमण्डलाई नियन्त्रण गरी परिवारमा सुमधुर सम्बन्ध कायम राख्छन् <span class="ref">[१२]</span>। सक्रिय सुनाइ र समानुभूतिको प्रयोगले पारिवारिक असमझदारीहरू सहजै सुल्झन्छन् <span class="ref">[१२]</span>।</li>
+                    <li><strong>सामाजिक जीवन र समायोजन:</strong> समाजमा विविध जातजाति, भाषा, धर्म र विचारका मानिसहरू हुन्छन् <span class="ref">[१२]</span>। अन्तरवैयक्तिक सीपले व्यक्तिलाई सामाजिक विविधताको सम्मान गर्न र नयाँ सामाजिक परिवेशमा सहजै समायोजन हुन सिकाउँछ <span class="ref">[१२]</span>। यसले समाजमा भ्रातृत्व, एकता र सामाजिक सद्भाव अभिवृद्धि गर्दछ <span class="ref">[१२]</span>।</li>
+                    <li><strong>व्यावसायिक सफलता र टोलीकार्य:</strong> आधुनिक कार्यस्थलहरूमा एक्लै काम गरेर नतिजा निकाल्न सकिँदैन <span class="ref">[१२]</span>। सफल हुनका लागि टोलीकार्य (Teamwork), प्रभावकारी सञ्चार र नेतृत्व क्षमता चाहिन्छ <span class="ref">[१२]</span>। अन्तरवैयक्तिक सीप भएका कर्मचारी वा नेताले टोलीका सदस्यहरूलाई उत्प्रेरित गर्ने, द्वन्द्व व्यवस्थापन गर्ने र साझा लक्ष्य प्राप्तिका लागि एकताबद्ध गराउने काम गर्दछन् <span class="ref">[१२]</span>।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">३. व्यावहारिक/वास्तविक उदाहरण (Practical/Real-life Example):</span> हाम्रो नेपाली समाजमा <strong>सामुदायिक विकास र आमा समूहको टोलीकार्य</strong> यसको प्रत्यक्ष र जीवन्त उदाहरण हो। कुनै गाउँमा खानेपानीको मुहान संरक्षण गर्ने वा गाउँको बाटो खन्ने काम गर्दा जब स्थानीय नेतृत्वमा राम्रो अन्तरवैयक्तिक सीप हुन्छ, तब सिङ्गो गाउँ नै श्रमदानमा जुट्छ। पाठ्यपुस्तकमा उल्लिखित काकाको संस्मरणमा जस्तै, विगतमा गाउँमा कुलो सफा गर्ने वा रोपाईं गर्ने काममा गाउँलेहरू एकजुट हुनुमा आपसी सुमधुर अन्तरवैयक्तिक सम्बन्ध नै मुख्य कारक थियो। उता, प्रविधिसँग जोडिएको आधुनिक सन्दर्भमा, डोल्माले आफ्ना मनका अन्योल र डर आमासँग खुलेर साट्दा आमाले दिएको सकारात्मक मार्गदर्शनले उनको डिजिटल जीवन सुरक्षित बन्यो। यसले देखाउँछ कि चाहे परम्परागत समाज होस् वा आधुनिक अनलाइन संसार, अन्तरवैयक्तिक सीप नै समस्या समाधान र सफलताको कडी हो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">४. निष्कर्ष (Conclusion):</span> निष्कर्षमा, अन्तरवैयक्तिक सीप कुनै जन्मजात पाइने वस्तु मात्र होइन, यो त निरन्तर अभ्यास, सकारात्मक सोच र आत्मसमीक्षाबाट विकास गरिने जीवनोपयोगी कला हो <span class="ref">[१२]</span>। २१औँ शताब्दीको जटिल र द्रुत गतिमा परिवर्तन भइरहेको विश्वमा एकाकीपन, तनाव र सामाजिक विघटनबाट बचेर सफल र सुखद जीवन जिउनका लागि अन्तरवैयक्तिक सीप अपरिहार्य रहेको छ <span class="ref">[१२]</span>। त्यसैले, घर, विद्यालय र समुदाय स्तरबाटै बालबालिका तथा युवाहरूमा यो सीपको प्रवर्धन गर्नु आजको मुख्य आवश्यकता हो <span class="ref">[१२]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> अन्तरवैयक्तिक सीप जीवनको हरेक क्षेत्रमा सफलताको कुञ्जी हो। सक्रिय सुनाइ, सहानुभूति, विनम्रता र स्पष्ट सञ्चारको अभ्यास गर्नुहोस्। टोलीकार्यमा संलग्न हुनुहोस् र नेतृत्व सीप विकास गर्नुहोस्। याद राख्नुहोस् – सुमधुर अन्तरवैयक्तिक सम्बन्धले नै मानसिक शान्ति, सामाजिक सद्भाव र पेसागत सफलता दिलाउँछ।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ३, पाठ ५</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
