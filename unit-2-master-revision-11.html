@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>कक्षा ११ – एकाइ २: डिजिटल तथा अनुसन्धान सीपहरू (मास्टर रिभिजन गाइड)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- INFO CARD ----- */
+        .exam-info {
+            background: #eef0f0;
+            border: 2px solid #5C6BC0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 24px;
+        }
+
+        .exam-info h3 {
+            color: #1A237E;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exam-info h3 i {
+            color: #1A237E;
+        }
+
+        .exam-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .exam-info ul li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #374210;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-info ul li i {
+            color: #1A237E;
+            margin-top: 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .exam-info ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- LESSON HEADERS (Different colors per lesson) ----- */
+        .lesson-head {
+            font-size: 1.65rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 44px 0 8px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .lesson-head i {
+            font-size: 1.55rem;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.22);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .lesson-head .lesson-num {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 900;
+            padding: 3px 14px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .lesson-head.lesson1 { background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%); }
+        .lesson-head.lesson2 { background: linear-gradient(135deg, #1f7a4a 0%, #2e9e63 100%); }
+        .lesson-head.lesson3 { background: linear-gradient(135deg, #6A1B9A 0%, #8E24AA 100%); }
+        .lesson-head.lesson4 { background: linear-gradient(135deg, #b45309 0%, #d97706 100%); }
+        .lesson-head.lesson5 { background: linear-gradient(135deg, #0f7a7a 0%, #14a0a0 100%); }
+        .lesson-head.lessonExtra { background: linear-gradient(135deg, #a03a5a 0%, #c44a6b 100%); }
+
+        /* ----- SUB HEADERS ----- */
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 22px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sub-head-sm i {
+            color: #1A237E;
+            font-size: 1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- HIGHLIGHT / FACT BOX ----- */
+        .fact-box {
+            background: #fff8e1;
+            border: 2px dashed #d97706;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 16px 0;
+            font-weight: 600;
+        }
+
+        .fact-box .fact-title {
+            color: #b45309;
+            font-weight: 900;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .fact-box .fact-title i {
+            color: #b45309;
+        }
+
+        .fact-box p,
+        .fact-box ul,
+        .fact-box li {
+            font-size: 1.08rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        .fact-box ul {
+            padding-left: 24px;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.02rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f6f8f3;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A / QUESTION BOX ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.15rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.13rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1A237E;
+        }
+
+        .glossary-item strong {
+            color: #1A237E;
+            font-size: 1.1rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.05rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        @media (max-width: 700px) {
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        /* ----- BRANCH FLOW (Tree Diagram) ----- */
+        .branch-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            padding: 18px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .branch-root {
+            background: #1A237E;
+            color: #ffffff;
+            border-color: #1A237E;
+            font-size: 1.05rem;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 800;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .branch-children {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .branch-children {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .branch-children {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ----- MARKS TAG ----- */
+        .marks-tag {
+            display: inline-block;
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 40px;
+            margin-left: 8px;
+        }
+
+        /* ----- PROBABLE EXAM QUESTIONS BOX ----- */
+        .probable-questions {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin: 20px 0 10px;
+        }
+
+        .probable-questions h4 {
+            color: #f5d742;
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .probable-questions h4 i {
+            color: #f5d742;
+        }
+
+        .probable-questions ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .probable-questions ul li {
+            font-size: 1.05rem;
+            color: #ffffff;
+            font-weight: 500;
+            padding-left: 22px;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .probable-questions ul li::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #f5d742;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.08rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .lesson-head {
+                font-size: 1.22rem;
+                padding: 12px 16px;
+            }
+
+            .lesson-head i {
+                width: 34px;
+                height: 34px;
+                font-size: 1.15rem;
+            }
+
+            .lesson-head .lesson-num {
+                font-size: 0.66rem;
+                padding: 2px 10px;
+            }
+
+            .sub-head {
+                font-size: 1.12rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.02rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.88rem;
+            }
+            th,
+            td {
+                font-size: 0.88rem;
+                padding: 6px 8px;
+            }
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+            .branch-root {
+                font-size: 0.92rem;
+                padding: 8px 18px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+            .probable-questions ul li {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-laptop-code"></i>
+                    एकाइ २: डिजिटल तथा अनुसन्धान सीपहरू
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-star"></i> मास्टर रिभिजन गाइड</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ २
+            </span>
+        </div>
+
+        <!-- ===== EXAM INFO ===== -->
+        <div class="exam-info">
+            <h3><i class="fas fa-circle-info"></i> गाइड विवरण</h3>
+            <ul>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय:</strong> सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>एकाइ:</strong> २ – डिजिटल सीप र अनुसन्धान सीपहरू</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>पाठ संख्या:</strong> ५ वटा मुख्य पाठ</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>आधार:</strong> NEB नयाँ पाठ्यक्रम र Specification Grid</span></li>
+            </ul>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#overview"><i class="fas fa-chevron-right"></i> एकाई २ को समग्र अवधारणा</a>
+                <a href="#lesson1"><i class="fas fa-chevron-right"></i> पाठ १: डिजिटल साक्षरता</a>
+                <a href="#lesson2"><i class="fas fa-chevron-right"></i> पाठ २: सञ्चार एप्लिकेसनहरू</a>
+                <a href="#lesson3"><i class="fas fa-chevron-right"></i> पाठ ३: अनलाइन भुक्तानी</a>
+                <a href="#lesson4"><i class="fas fa-chevron-right"></i> पाठ ४: सूचना खोजी र प्रयोग</a>
+                <a href="#lesson5"><i class="fas fa-chevron-right"></i> पाठ ५: उत्तरदायी प्रयोग र साइबर नैतिकता</a>
+                <a href="#comparison"><i class="fas fa-chevron-right"></i> प्राज्ञिक तुलनात्मक तालिकाहरू</a>
+                <a href="#exam-qa"><i class="fas fa-chevron-right"></i> परीक्षा विशेष सम्भावित प्रश्नोत्तर</a>
+                <a href="#glossary"><i class="fas fa-chevron-right"></i> प्राविधिक शब्दावली</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड १: एकाईको समग्र अवधारणा ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lessonExtra" id="overview">
+            <i class="fas fa-diagram-project"></i>
+            खण्ड १: एकाई २ को समग्र अवधारणा
+            <span class="lesson-num">Unit Overview</span>
+        </div>
+
+        <div class="content-box blue-light">
+            <p>मानव सभ्यता २१औँ शताब्दीमा प्रवेश गरेसँगै सूचना, सञ्चार र प्रविधिको विकासले सञ्चार र दैनिक कार्यशैलीमा व्यापक परिवर्तन ल्याएको छ। यस एकाईको मुख्य उद्देश्य विद्यार्थीहरूलाई डिजिटल प्रविधिको केवल प्रयोगकर्ता मात्र नबनाई <strong>डिजिटल रूपमा साक्षर, कुशल, विवेकशील, र उत्तरदायी नागरिक</strong> बनाउनु हो।</p>
+        </div>
+
+        <div class="branch-flow">
+            <div class="branch-root">एकाइ २: डिजिटल तथा अनुसन्धान सीपहरू</div>
+            <div class="branch-children">
+                <div class="mermaid-step">पाठ १: डिजिटल साक्षरता</div>
+                <div class="mermaid-step">पाठ २: सञ्चार एप्लिकेसनहरू</div>
+                <div class="mermaid-step">पाठ ३: अनलाइन भुक्तानी</div>
+                <div class="mermaid-step">पाठ ४: सूचना खोजी र प्रयोग</div>
+                <div class="mermaid-step">पाठ ५: उत्तरदायी प्रयोग र साइबर नैतिकता</div>
+            </div>
+        </div>
+
+        <div class="content-box green-light">
+            <p><strong>पाठ १, २, ३ बाट:</strong> आधारभूत डिजिटल ज्ञान र कार्य दक्षता</p>
+            <p><strong>पाठ ४ बाट:</strong> प्राज्ञिक खोज र अनुसन्धान सीप</p>
+            <p><strong>पाठ ५ बाट:</strong> कानुनी सचेतना र साइबर सुरक्षा</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ १: डिजिटल साक्षरता ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson1" id="lesson1">
+            <i class="fas fa-laptop"></i>
+            पाठ १: डिजिटल साक्षरता
+            <span class="lesson-num">Lesson 1</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> १. अवधारणा</div>
+
+        <div class="content-box blue-light">
+            <p><strong>डिजिटल साक्षरता (Digital Literacy):</strong> डिजिटल उपकरणहरू (कम्प्युटर, स्मार्टफोन आदि), इन्टरनेट, र सञ्चार प्रविधिको सुरक्षित, प्रभावकारी, नैतिक र उत्तरदायी प्रयोग गरी ज्ञान प्राप्त गर्ने, सिर्जना गर्ने र सञ्चार गर्ने क्षमतालाई डिजिटल साक्षरता भनिन्छ।</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-clock-rotate-left"></i> २. नेपालमा कम्प्युटरको इतिहास</div>
+
+        <div class="fact-box">
+            <div class="fact-title"><i class="fas fa-history"></i> ऐतिहासिक तथ्यहरू</div>
+            <ul>
+                <li>नेपालमा पहिलोपटक <strong>वि.सं. २०२८ (सन् १९७२)</strong> को जनगणनाका लागि <strong>IBM 1401</strong> कम्प्युटर भाडामा ल्याइएको थियो।</li>
+                <li>वि.सं. २०३९ मा राष्ट्रिय कम्प्युटर केन्द्रको स्थापना भयो।</li>
+                <li>वि.सं. २०४७ को प्रजातन्त्र पुनःस्थापनापछि निजी क्षेत्रमा कम्प्युटरको प्रयोग तीव्र बन्यो।</li>
+            </ul>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-list-ol"></i> ३. हिल्लर स्पाइडर्स (Hiller Spires) का अनुसार डिजिटल साक्षरताका ३ पक्षहरू</div>
+
+        <div class="branch-flow">
+            <div class="branch-root">डिजिटल साक्षरताका ३ पक्षहरू</div>
+            <div class="branch-children">
+                <div class="mermaid-step">१. डिजिटल सामग्री प्राप्त र उपयोग गर्ने</div>
+                <div class="mermaid-step">२. डिजिटल सामग्री सिर्जना गर्ने</div>
+                <div class="mermaid-step">३. डिजिटल सामग्री सञ्चार/वितरण गर्ने</div>
+            </div>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-microchip"></i> ४. कम्प्युटर हार्डवेयरको वर्गीकरण</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: कम्प्युटर हार्डवेयरको वर्गीकरण</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:30%;">उपकरणको प्रकार</th>
+                        <th style="width:70%;">उदाहरणहरू</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>इनपुट उपकरणहरू</strong></td>
+                        <td>किबोर्ड, माउस, स्क्यानर, माइक</td>
+                    </tr>
+                    <tr>
+                        <td><strong>प्रशोधन उपकरण</strong></td>
+                        <td>CPU (मस्तिष्कका रूपमा कार्य गर्ने)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>आउटपुट उपकरणहरू</strong></td>
+                        <td>मनिटर, प्रिन्टर, स्पिकर</td>
+                    </tr>
+                    <tr>
+                        <td><strong>भण्डारण उपकरणहरू</strong></td>
+                        <td>हार्डडिक्स, पेनड्राइभ, SSD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-print"></i> ५. माइक्रोसफ्ट वर्ड (MS Word) र प्रिन्ट गर्ने चरणहरू</div>
+
+        <div class="mermaid-flow">
+            <div class="mermaid-step">डकुमेन्ट खोल्ने</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">टाइप गर्ने</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">Ctrl + S थिचेर सेभ गर्ने</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">Ctrl + P थिची Print Preview हेर्ने</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">प्रिन्टर छनोट गरी 'Print' क्लिक गर्ने</div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ २: सञ्चार एप्लिकेसनहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson2" id="lesson2">
+            <i class="fas fa-comments"></i>
+            पाठ २: सञ्चार एप्लिकेसनहरूको प्रयोग
+            <span class="lesson-num">Lesson 2</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-globe"></i> १. वेब ब्राउजर (Web Browser)</div>
+
+        <div class="content-box green-light">
+            <p><strong>वेब ब्राउजर:</strong> वर्ल्डवाइड वेब (WWW) मा रहेका सूचना र वेबसाइटहरू खोल्न र हेर्न प्रयोग गरिने एप्लिकेसन सफ्टवेयर।</p>
+            <p><strong>उदाहरणहरू:</strong> Google Chrome, Mozilla Firefox, Microsoft Edge, Safari</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-envelope"></i> २. इमेल (Electronic Mail - Gmail)</div>
+
+        <div class="content-box blue-light">
+            <p>इन्टरनेटको माध्यमबाट पत्र, दस्ताबेज, तस्बिर र फाइलहरू एक ठाउँबाट अर्को ठाउँमा तुरुन्तै पठाउने विद्युतीय प्रणाली।</p>
+
+            <p><strong>फाइल Attach गर्ने चरणहरू:</strong></p>
+            <ol>
+                <li>Compose मा क्लिक गर्ने</li>
+                <li>'Paperclip' (Attachment) आइकनमा थिच्ने</li>
+                <li>फाइल छनोट गरी 'Open' गर्ने</li>
+                <li>'Send' थिच्ने</li>
+            </ol>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-share-nodes"></i> ३. सामाजिक सञ्जालका फाइदा र चुनौतीहरू</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: सामाजिक सञ्जालका फाइदा र चुनौतीहरू</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:50%;">फाइदाहरू</th>
+                        <th style="width:50%;">चुनौतीहरू</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>द्रुत सञ्चार</li>
+                                <li>विश्वव्यापी सम्बन्ध</li>
+                                <li>खुला सिकाइ</li>
+                                <li>व्यापारिक विज्ञापन</li>
+                                <li>सामाजिक सचेतना</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>डिजिटल लत</li>
+                                <li>व्यक्तिगत गोपनियता भङ्ग</li>
+                                <li>साइबर अपराध/बुलिङ</li>
+                                <li>अस्वस्थ तुलना तथा मानसिक तनाव</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ३: अनलाइन भुक्तानी ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson3" id="lesson3">
+            <i class="fas fa-credit-card"></i>
+            पाठ ३: अनलाइन भुक्तानी
+            <span class="lesson-num">Lesson 3</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> १. अवधारणा</div>
+
+        <div class="content-box purple-light">
+            <p><strong>अनलाइन भुक्तानी:</strong> नगद पैसाको प्रत्यक्ष प्रयोग नगरी डिजिटल माध्यम (इन्टरनेट, मोबाइल एप, कार्ड) बाट सेवा वा वस्तुको मूल्य भुक्तानी गर्ने प्रविधि।</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-wallet"></i> २. मुख्य माध्यमहरू</div>
+
+        <div class="branch-flow">
+            <div class="branch-root">अनलाइन भुक्तानीका माध्यमहरू</div>
+            <div class="branch-children">
+                <div class="mermaid-step">डेबिट कार्ड<br><span style="font-weight:400;font-size:0.85rem;">खातामा भएको पैसा काटिने</span></div>
+                <div class="mermaid-step">क्रेडिट कार्ड<br><span style="font-weight:400;font-size:0.85rem;">बैङ्कको सीमासम्म ऋणमा</span></div>
+                <div class="mermaid-step">डिजिटल वालेट<br><span style="font-weight:400;font-size:0.85rem;">eSewa, Khalti</span></div>
+                <div class="mermaid-step">मोबाइल बैङ्किङ<br><span style="font-weight:400;font-size:0.85rem;">ConnectIPS, बैङ्क एप</span></div>
+            </div>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-thumbs-up"></i> ३. अनलाइन भुक्तानीका ७ मुख्य फाइदाहरू</div>
+
+        <div class="content-box green-light">
+            <ol>
+                <li>समय र श्रमको बचत।</li>
+                <li>नगद बोक्ने झन्झट र चोरीको डरबाट मुक्ति।</li>
+                <li>भौतिक नोटको आयु बढ्ने र राज्यको छपाई खर्च जोगिने।</li>
+                <li>स्वचालित र पारदर्शी कारोबार रेकर्ड रहने।</li>
+                <li>घरमै बसेर २४सै घण्टा सेवा पाइने।</li>
+                <li>खुद्रा पैसाको समस्या समाधान हुने।</li>
+                <li>डिजिटल अर्थतन्त्रको प्रवर्द्धन हुने।</li>
+            </ol>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-shield-halved"></i> ४. सुरक्षित अनलाइन भुक्तानीका ८ नियमहरू</div>
+
+        <div class="content-box orange-light">
+            <ol>
+                <li>आधिकारिक र विश्वसनीय एप मात्र प्रयोग गर्ने।</li>
+                <li>ट्रान्जेक्सन पिन (Transaction PIN) र OTP कसैलाई नदिने।</li>
+                <li>सार्वजनिक वा असुरक्षित वाइफाइ (Public Wi-Fi) मा बैङ्किङ कारोबार नगर्ने।</li>
+                <li>आफ्नै व्यक्तिगत उपकरण (Personal Device) प्रयोग गर्ने।</li>
+                <li>समय-समयमा पासवर्ड परिवर्तन गरिरहने।</li>
+                <li>लटरी, इनाम वा अनजान लिङ्कहरूमा क्लिक नगर्ने।</li>
+                <li>ब्यालेन्स नियमित जाँच गर्ने।</li>
+                <li>शंकास्पद कारोबार भएमा बैङ्कमा तत्काल जानकारी गराउने।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ४: सूचना खोजी र प्रयोग ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson4" id="lesson4">
+            <i class="fas fa-magnifying-glass"></i>
+            पाठ ४: इन्टरनेटबाट सूचना तथा अध्ययन सामग्रीको खोजी र प्रयोग
+            <span class="lesson-num">Lesson 4</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> १. सर्च इन्जिन (Search Engine)</div>
+
+        <div class="content-box orange-light">
+            <p><strong>सर्च इन्जिन:</strong> इन्टरनेटमा रहेका विशाल सूचनाहरूमध्ये आफूलाई चाहिएको सामग्री खोज्न मद्दत गर्ने सफ्टवेयर।</p>
+            <p><strong>उदाहरणहरू:</strong> Google, Bing, Yahoo</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-magnifying-glass-plus"></i> २. विशेष खोजी प्रविधिहरू (Search Techniques)</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: सर्च इन्जिनका विशेष खोजी प्रविधिहरू</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:25%;">प्रविधि</th>
+                        <th style="width:40%;">प्रयोग विधि</th>
+                        <th style="width:35%;">उदाहरण</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>मूल शब्द (Keyword)</strong></td>
+                        <td>स्पष्ट र विशिष्ट शब्द मात्र टाइप गर्ने</td>
+                        <td>"नेपालको इतिहास"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ट्रङ्केसन (`*`)</strong></td>
+                        <td>मूल शब्दको पछाडि तारा चिह्न राखेर मिल्दाजुल्दा शब्द खोज्ने</td>
+                        <td>`Quali*` → Quality, Qualification</td>
+                    </tr>
+                    <tr>
+                        <td><strong>माइनस चिह्न (`-`)</strong></td>
+                        <td>नचाहिने शब्द हटाउन प्रयोग गरिने</td>
+                        <td>`Jaguar -car`</td>
+                    </tr>
+                    <tr>
+                        <td><strong>उद्धरण चिह्न (`""`)</strong></td>
+                        <td>निश्चित शब्द समूह वा वाक्य जस्ताको तस्तै खोज्न</td>
+                        <td>`"climate change in Nepal"`</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-circle-check"></i> ३. सूचनाको विश्वसनीयता मूल्याङ्कन गर्ने ५ आधारहरू</div>
+
+        <div class="content-box blue-light">
+            <ol>
+                <li><strong>URL/डोमेनको आधार:</strong> `.gov` (सरकारी), `.edu` (शैक्षिक), `.org` (गैरनाफामूलक) बढी आधिकारिक हुन्छन्।</li>
+                <li><strong>लेखकको पहिचान:</strong> लेखकको नाम, योग्यता र विशेषज्ञता खुलेको हुनुपर्ने।</li>
+                <li><strong>वेबसाइटको उद्देश्य:</strong> व्यापारिक विज्ञापनभन्दा प्राज्ञिक र निष्पक्ष उद्देश्य हुनुपर्ने।</li>
+                <li><strong>उद्धरण (Citation):</strong> मुख्य स्रोत र प्रमाणहरू उल्लेख गरिएको हुनुपर्ने।</li>
+                <li><strong>समय/अद्यावधिकता:</strong> सामग्री हालै अद्यावधिक (Updated) भएको हुनुपर्ने।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ५: उत्तरदायी प्रयोग र साइबर नैतिकता ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson5" id="lesson5">
+            <i class="fas fa-shield-halved"></i>
+            पाठ ५: इन्टरनेट र सामाजिक सञ्जालको उत्तरदायी प्रयोग
+            <span class="lesson-num">Lesson 5</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-scale-balanced"></i> १. साइबर नैतिकता (Cyber Ethics)</div>
+
+        <div class="content-box teal-light">
+            <p><strong>साइबर नैतिकता:</strong> इन्टरनेट र प्रविधिको प्रयोग गर्दा पालना गर्नुपर्ने नैतिक नियम, मर्यादा, आचरण र उत्तरदायित्व।</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-user-secret"></i> २. साइबर अपराध (Cyber Crime)</div>
+
+        <div class="content-box pink-light">
+            <p><strong>साइबर अपराध:</strong> कम्प्युटर वा नेटवर्कको दुरुपयोग गरी गरिने गैरकानुनी र आपराधिक कार्य।</p>
+            <p><strong>विद्युतीय (इलेक्ट्रोनिक) कारोबार ऐन, २०६३:</strong> नेपालमा साइबर अपराध नियन्त्रण र डिजिटल कारोबारलाई कानुनी मान्यता दिन बनेको मुख्य ऐन।</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-gavel"></i> ३. विद्युतीय कारोबार ऐन, २०६३ अनुसार सजायको तालिका</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: विद्युतीय कारोबार ऐन, २०६३ अनुसार कसुर र सजाय</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:50%;">कसुर / अपराध</th>
+                        <th style="width:50%;">कानुनी सजाय (कैद र जरिवाना)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>कम्प्युटर स्रोत सङ्केत (Source Code) चोरी वा नष्ट गरेमा</strong></td>
+                        <td>३ वर्षसम्म कैद वा रु. २ लाखसम्म जरिवाना वा दुवै।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>बिनाअख्तियारी कम्प्युटर प्रणालीमा प्रवेश गरेमा (Hacking)</strong></td>
+                        <td>रु. २ लाखसम्म जरिवाना वा ३ वर्षसम्म कैद वा दुवै।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>कम्प्युटर प्रणालीमा क्षति पुर्‍याएमा वा डाटा बिगारेमा</strong></td>
+                        <td>रु. ३ लाखसम्म जरिवाना वा ३ वर्षसम्म कैद वा दुवै।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>इन्टरनेटमा अश्लील वा गैरकानुनी सामग्री प्रकाशन गरेमा</strong></td>
+                        <td>रु. १ लाखसम्म जरिवाना वा ५ वर्षसम्म कैद वा दुवै।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>झुटा दस्ताबेज वा डिजिटल सही (Digital Signature) पेस गरेमा</strong></td>
+                        <td>रु. १ लाखसम्म जरिवाना वा २ वर्षसम्म कैद वा दुवै।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ३: प्राज्ञिक तुलनात्मक तालिकाहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lessonExtra" id="comparison">
+            <i class="fas fa-table-columns"></i>
+            खण्ड ३: प्राज्ञिक तुलनात्मक तालिकाहरू
+            <span class="lesson-num">Comparison</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-microchip"></i> तालिका १: कम्प्युटर हार्डवेयर र सफ्टवेयरबिचको तुलना</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: कम्प्युटर हार्डवेयर र सफ्टवेयर</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:22%;">तुलनाको आधार</th>
+                        <th style="width:39%;">हार्डवेयर (Hardware)</th>
+                        <th style="width:39%;">सफ्टवेयर (Software)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. भौतिक अस्तित्व</strong></td>
+                        <td>छुन र देख्न सकिने कम्प्युटरका भौतिक अङ्गहरू।</td>
+                        <td>छुन नसकिने, कम्प्युटरमा चल्ने प्रोग्राम वा निर्देशनहरूको समूह।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. कार्य</strong></td>
+                        <td>डाटा इनपुट गर्न, प्रशोधन गर्न र आउटपुट दिन प्रयोग हुन्छ।</td>
+                        <td>हार्डवेयरलाई कसरी काम गर्ने भनी निर्देशन दिन्छ।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. उदाहरण</strong></td>
+                        <td>किबोर्ड, माउस, CPU, मनिटर, प्रिन्टर।</td>
+                        <td>MS Word, Windows OS, Google Chrome, Photoshop।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४. निर्भरता</strong></td>
+                        <td>सफ्टवेयरविना हार्डवेयरले काम गर्न सक्दैन।</td>
+                        <td>हार्डवेयरविना सफ्टवेयर सञ्चालन हुन सक्दैन।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-money-bill-transfer"></i> तालिका २: परम्परागत भुक्तानी र अनलाइन भुक्तानीबिचको तुलना</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: परम्परागत भुक्तानी र अनलाइन भुक्तानी</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:22%;">तुलनाको आधार</th>
+                        <th style="width:39%;">परम्परागत भुक्तानी</th>
+                        <th style="width:39%;">अनलाइन भुक्तानी</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. माध्यम</strong></td>
+                        <td>भौतिक नगद नोट वा चेकको प्रयोग।</td>
+                        <td>डिजिटल वालेट, बैङ्क एप, कार्ड, वा QR कोड।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. समय र पहुँच</strong></td>
+                        <td>बैङ्किङ समय (१० देखि ४ बजेसम्म) मा मात्र सम्भव।</td>
+                        <td>२४सै घण्टा, ३६५ दिन जुनसुकै ठाउँबाट सम्भव।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. सुरक्षा जोखिम</strong></td>
+                        <td>चोरी हुने, हराउने वा अशुद्ध नोट पर्ने जोखिम।</td>
+                        <td>पासवर्ड/PIN सुरक्षित राखेमा चोरी नहुने तर साइबर जोखिम।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४. अभिलेख (Record)</strong></td>
+                        <td>हस्तलिखित रसिद वा पासबुक भर पर्नुपर्ने।</td>
+                        <td>डिजिटल प्रणालीमा स्वतः तुरुन्तै अभिलेख रहने।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ४: परीक्षा विशेष सम्भावित प्रश्नोत्तर ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lessonExtra" id="exam-qa">
+            <i class="fas fa-bullseye"></i>
+            खण्ड ४: NEB परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="lesson-num">Exam Practice</span>
+        </div>
+
+        <!-- अति संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> १. अति संक्षिप्त उत्तरात्मक प्रश्नोत्तरहरू (१ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्रश्न १:</span> डिजिटल साक्षरताका तीन मुख्य पक्षहरू के-के हुन्?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> हिल्लर स्पाइडर्सका अनुसार डिजिटल साक्षरताका तीन मुख्य पक्षहरू: १. डिजिटल सामग्री प्राप्त र उपयोग गर्ने, २. डिजिटल सामग्री सिर्जना गर्ने, र ३. डिजिटल सामग्री सञ्चार वा वितरण गर्ने हुन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्रश्न २:</span> नेपालमा पहिलोपटक भित्रिएको कम्प्युटर कुन हो र यो कहिले ल्याइएको थियो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नेपालमा पहिलोपटक भित्रिएको कम्प्युटर <strong>IBM 1401</strong> हो र यो वि.सं. २०२८ (सन् १९७२) को जनगणनाका लागि ल्याइएको थियो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्रश्न ३:</span> ट्रङ्केसन (Truncation) भनेको के हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सर्च इन्जिनमा मूल शब्दको अन्त्यमा विशेष चिह्न (प्रायः `*`) प्रयोग गरी सो शब्दसँग मिल्दाजुल्दा सबै शब्दहरू एकै पटक खोज्ने प्रविधिलाई ट्रङ्केसन भनिन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्रश्न ४:</span> OTP को पूरा रूप के हो र यसको महत्त्व के छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> OTP को पूरा रूप <strong>One Time Password</strong> हो र यसले अनलाइन बैङ्किङ कारोबार गर्दा प्रयोगकर्ताको आधिकारिकता पुष्टि गरी सुरक्षा प्रदान गर्दछ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्रश्न ५:</span> कम्प्युटर स्रोत सङ्केत (Source Code) चोरी गरेमा विद्युतीय कारोबार ऐन, २०६३ अनुसार के सजाय हुन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> कम्प्युटर स्रोत सङ्केत चोरी वा नष्ट गरेमा <strong>३ वर्षसम्म कैद वा रु. २ लाखसम्म जरिवाना वा दुवै</strong> सजाय हुन्छ।</p>
+            </div>
+        </div>
+
+        <!-- संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> २. संक्षिप्त उत्तरात्मक प्रश्नोत्तरहरू (५ अङ्क)</div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">प्रश्न १:</span> दैनिक जीवनमा अनलाइन भुक्तानीका फाइदाहरू र यसका प्रमुख चुनौतीहरूको समीक्षा गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> आधुनिक प्रविधिको विकाससँगै अनलाइन भुक्तानी मानव जीवनको अनिवार्य हिस्सा बनेको छ। यसका फाइदा र चुनौतीहरू निम्न अनुसार छन्:</p>
+
+                <p><strong>अनलाइन भुक्तानीका फाइदाहरू:</strong></p>
+                <ol>
+                    <li><strong>समय र श्रमको बचत:</strong> बैङ्क वा कार्यालयमा लाइन बस्नु नपर्ने।</li>
+                    <li><strong>सुरक्षा:</strong> भौतिक नगद बोक्नु नपर्ने भएकाले चोरी वा हराउने डर नहुने।</li>
+                    <li><strong>राज्यलाई फाइदा:</strong> नोट छपाई खर्च जोगिने र डिजिटल अर्थतन्त्र प्रवर्द्धन हुने।</li>
+                    <li><strong>पारदर्शी अभिलेख:</strong> प्रत्येक कारोबारको डिजिटल रेकर्ड रहने।</li>
+                </ol>
+
+                <p><strong>अनलाइन भुक्तानीका चुनौतीहरू:</strong></p>
+                <ol>
+                    <li><strong>इन्टरनेट र सर्भर समस्या:</strong> प्राविधिक ढिलाइ वा सर्भर डाउन हुँदा भुक्तानी रोकिने।</li>
+                    <li><strong>साइबर सुरक्षाको जोखिम:</strong> फिसिङ, ओटिपी चोरी र डिजिटल ठगीको खतरा।</li>
+                    <li><strong>डिजिटल साक्षरताको कमी:</strong> दक्ष जनशक्तिको अभावमा ग्रामीण क्षेत्रका नागरिक वञ्चित हुनु।</li>
+                </ol>
+
+                <p><strong>निष्कर्ष:</strong> उचित सुरक्षा उपाय र जनचेतना अपनाएमा अनलाइन भुक्तानी आधुनिक अर्थतन्त्रको बलियो खम्बा हो।</p>
+            </div>
+        </div>
+
+        <!-- लामो -->
+        <div class="sub-head"><i class="fas fa-star"></i> ३. लामो उत्तरात्मक प्रश्न (८ अङ्क - NEB ४-चरण ढाँचा)</div>
+
+        <div class="qa-block color7" style="border-left-color:#1A237E;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "२१औँ शताब्दीको सूचना र प्रविधिको युगमा डिजिटल साक्षरता, सूचना खोजी सीप र साइबर नैतिकता सभ्य समाजका अपरिहार्य आधार हुन्।" यस भनाइलाई पाठ्यपुस्तकका आधारमा व्यावहारिक उदाहरणसहित विवेचना गर्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+
+                <p><span style="font-weight:900;">१. परिचय (Introduction):</span> २१औँ शताब्दी सूचना र सञ्चार प्रविधिको स्वर्ण युग हो। आजको आधुनिक समाजमा प्रविधिको प्रयोग केवल मनोरञ्जनमा सीमित नरही शिक्षा, स्वास्थ्य, अर्थतन्त्र, र सार्वजनिक सेवा प्रवाहको मुख्य सञ्चालक बनेको छ। यस परिवेशमा डिजिटल उपकरणहरूको प्रयोग गर्न जान्नु (डिजिटल साक्षरता), इन्टरनेटबाट सही सूचना खोज्नु (सूचना खोजी सीप), र प्रविधिको प्रयोग गर्दा नैतिक मर्यादा पालना गर्नु (साइबर नैतिकता) सभ्य र प्रशासित समाजका लागि अपरिहार्य सर्तहरू हुन्।</p>
+
+                <p><span style="font-weight:900;">२. मुख्य विश्लेषण र तर्क (Core Analysis):</span></p>
+
+                <ul>
+                    <li><strong>डिजिटल साक्षरताको भूमिका:</strong> यसले नागरिकलाई प्रविधि मैत्री बनाई दैनिक कार्य सहज बनाउँछ। MS Word, इमेल, र डिजिटल भुक्तानी जस्ता कार्यहरूले मानिसको कार्यदक्षता र उत्पादकत्वमा वृद्धि ल्याउँछन्।</li>
+                    <li><strong>सूचना खोजी र मूल्याङ्कन सीप:</strong> इन्टरनेटमा सत्य र झुटा (Fake News) सूचनाको बाढी नै छ। ट्रङ्केसन, किवर्ड र `.gov`, `.edu` जस्ता डोमेन पहिचान गरी आधिकारिक सूचना मात्र ग्रहण गर्ने सीपले मानिसलाई भ्रमबाट जोगाउँछ।</li>
+                    <li><strong>साइबर नैतिकता र कानुनी सुरक्षा:</strong> प्रविधिको पहुँच बढेसँगै ह्याकिङ, साइबर बुलिङ, र बौद्धिक सम्पत्ति चोरी जस्ता अपराधहरू बढेका छन्। विद्युतीय कारोबार ऐन, २०६३ को पालना गर्दै अरूको गोपनीयताको सम्मान गर्नु र नैतिक दायरामा रहनुले नै समाजमा साइबर सुरक्षा कायम गर्दछ।</li>
+                </ul>
+
+                <p><span style="font-weight:900;">३. व्यावहारिक/वास्तविक उदाहरण (Practical Example):</span> हाम्रो नेपाली समाजकै सन्दर्भ हेर्दा, कोभिड-१९ को महामारीका बेला डिजिटल रूपमा साक्षर शिक्षक र विद्यार्थीहरूले अनलाइन कक्षामार्फत सिकाइ निरन्तर राख्न सके। त्यस्तै, गुगल सर्चबाट `.gov.np` वेबसाइट प्रयोग गरी लोक सेवा आयोगको फारम भर्ने र eSewa वा खल्टीबाट शुल्क तिर्ने युवाहरूले समय र पैसाको ठुलो बचत गरेका छन्। तर, अर्कोतर्फ सामाजिक सञ्जालमा नक्कली खाता खोलेर साथीहरूलाई साइबर बुलिङ गर्ने वा लटरी परेको नाममा ओटिपी (OTP) सेयर गर्दा लाखौँ गुमाएका घटनाहरूले साइबर नैतिकता र सुरक्षा सीपको अभाव कति घातक हुन्छ भन्ने प्रस्ट पार्छ।</p>
+
+                <p><span style="font-weight:900;">४. निष्कर्ष (Conclusion):</span> अतः डिजिटल प्रविधि आफैँमा एउटा शक्तिशाली औजार मात्र हो; यसको प्रयोग कसरी गर्ने भन्ने कुरा मानिसको साक्षरता र नैतिकतामा भर पर्छ। यदि हामीले डिजिटल साक्षरता अभिवृद्धि गर्दै, सही सूचना खोजी सीपको प्रयोग गर्ने र साइबर नैतिकतालाई आफ्नो जीवनशैली बनाउने हो भने मात्र २१औँ शताब्दीमा एक सभ्य, सुरक्षित र प्रविधिमैत्री समाजको निर्माण सम्भव छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ५: प्राविधिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lessonExtra" id="glossary">
+            <i class="fas fa-book-open"></i>
+            खण्ड ५: विषयगत प्राविधिक शब्दावली
+            <span class="lesson-num">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> डिजिटल साक्षरता (Digital Literacy)</strong>
+                <p>डिजिटल उपकरण, इन्टरनेट र प्रविधिको सुरक्षित, प्रभावकारी र नैतिक प्रयोग गर्ने कार्यगत क्षमता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> हार्डवेयर (Hardware)</strong>
+                <p>कम्प्युटरका देख्न र छुन सकिने भौतिक अङ्गहरू (जस्तै: किबोर्ड, मनिटर, CPU)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> सफ्टवेयर (Software)</strong>
+                <p>कम्प्युटर हार्डवेयरलाई सञ्चालन गर्न र विशिष्ट कार्य गर्न लेखिएका प्रोग्राम वा निर्देशनहरूको समूह।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> सर्च इन्जिन (Search Engine)</strong>
+                <p>इन्टरनेटमा रहेका विशाल सामग्रीहरूमध्ये चाहिएको सूचना खोज्न मद्दत गर्ने सफ्टवेयर (उदा: Google, Bing)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ट्रङ्केसन (Truncation)</strong>
+                <p>सर्च इन्जिनमा शब्दको पछाडि `*` चिह्न राखी सोसँग मिल्दाजुल्दा सबै शब्दहरू खोज्ने प्रविधि।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> युआरएल (URL)</strong>
+                <p>इन्टरनेटमा रहेको कुनै पनि वेबसाइट वा पानाको निश्चित र अद्वितीय ठेगाना।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> साइबर नैतिकता (Cyber Ethics)</strong>
+                <p>इन्टरनेट र डिजिटल प्रविधि प्रयोग गर्दा पालना गर्नुपर्ने नैतिक नियम र सामाजिक मर्यादा।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> साइबर अपराध (Cyber Crime)</strong>
+                <p>डिजिटल माध्यम वा कम्प्युटरको प्रयोग गरी गरिने गैरकानुनी वा आपराधिक गतिविधि।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> विद्युतीय कारोबार ऐन, २०६३</strong>
+                <p>नेपालमा साइबर अपराध नियन्त्रण र डिजिटल कारोबारलाई कानुनी मान्यता दिने ऐन।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ओटिपि (OTP)</strong>
+                <p>अनलाइन कारोबारको सुरक्षाका लागि मोबाइलमा आउने एकपटक मात्र प्रयोग गर्न सकिने गोप्य सुरक्षा कोड (One Time Password)।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> यो एकाइ २ को मास्टर रिभिजन गाइड हो। ५ वटै पाठका अवधारणा, परिभाषा, प्रकार, चरण र प्रविधिहरू राम्ररी याद गर्नुहोस्। NEB परीक्षामा ५ र ८ अङ्कका उत्तरहरू अनिवार्य रूपमा <strong>३-स्तरीय ढाँचा</strong> (परिचय → विश्लेषण → निष्कर्ष) मा लेख्नुहोस्। व्यावहारिक उदाहरणहरू समावेश गर्नुहोस्। विद्युतीय कारोबार ऐन, २०६३ का सजायका तथ्याङ्क शुद्ध रूपमा सम्झनुहोस्। नियमित अभ्यासले मात्र आत्मविश्वास र गति बढ्छ। शुभकामना!
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ २</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
