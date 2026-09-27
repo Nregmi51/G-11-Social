@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>कक्षा ११ – एकाइ ३: जीवनोपयोगी सीप (मास्टर रिभिजन गाइड)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- INFO CARD ----- */
+        .exam-info {
+            background: #eef0f0;
+            border: 2px solid #5C6BC0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 24px;
+        }
+
+        .exam-info h3 {
+            color: #1A237E;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exam-info h3 i {
+            color: #1A237E;
+        }
+
+        .exam-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .exam-info ul li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #374210;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-info ul li i {
+            color: #1A237E;
+            margin-top: 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .exam-info ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- LESSON HEADERS (Different colors per lesson) ----- */
+        .lesson-head {
+            font-size: 1.65rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 44px 0 8px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .lesson-head i {
+            font-size: 1.55rem;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.22);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .lesson-head .lesson-num {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 900;
+            padding: 3px 14px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .lesson-head.lesson1 { background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%); }
+        .lesson-head.lesson2 { background: linear-gradient(135deg, #1f7a4a 0%, #2e9e63 100%); }
+        .lesson-head.lesson3 { background: linear-gradient(135deg, #6A1B9A 0%, #8E24AA 100%); }
+        .lesson-head.lesson4 { background: linear-gradient(135deg, #b45309 0%, #d97706 100%); }
+        .lesson-head.lesson5 { background: linear-gradient(135deg, #0f7a7a 0%, #14a0a0 100%); }
+        .lesson-head.lessonExtra { background: linear-gradient(135deg, #a03a5a 0%, #c44a6b 100%); }
+
+        /* ----- SUB HEADERS ----- */
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 22px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sub-head-sm i {
+            color: #1A237E;
+            font-size: 1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- HIGHLIGHT / FACT BOX ----- */
+        .fact-box {
+            background: #fff8e1;
+            border: 2px dashed #d97706;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 16px 0;
+            font-weight: 600;
+        }
+
+        .fact-box .fact-title {
+            color: #b45309;
+            font-weight: 900;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .fact-box .fact-title i {
+            color: #b45309;
+        }
+
+        .fact-box p,
+        .fact-box ul,
+        .fact-box li {
+            font-size: 1.08rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        .fact-box ul {
+            padding-left: 24px;
+        }
+
+        /* ----- QUOTE BOX ----- */
+        .quote-box {
+            background: #f0ece6;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin: 14px 0;
+            font-style: italic;
+            font-weight: 500;
+            color: #1a3a5c;
+            border-left: 5px solid #1A237E;
+        }
+
+        .quote-box p {
+            font-size: 1.12rem;
+            margin-bottom: 6px;
+            color: #1a3a5c;
+        }
+
+        .quote-box strong {
+            color: #1A237E;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.02rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f6f8f3;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A / QUESTION BOX ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.15rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.13rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1A237E;
+        }
+
+        .glossary-item strong {
+            color: #1A237E;
+            font-size: 1.1rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.05rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        @media (max-width: 700px) {
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        /* ----- BRANCH FLOW (Tree Diagram) ----- */
+        .branch-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            padding: 18px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .branch-root {
+            background: #1A237E;
+            color: #ffffff;
+            border-color: #1A237E;
+            font-size: 1.05rem;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 800;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .branch-children {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .branch-children {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .branch-children {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ----- MARKS TAG ----- */
+        .marks-tag {
+            display: inline-block;
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 40px;
+            margin-left: 8px;
+        }
+
+        /* ----- PROBABLE EXAM QUESTIONS BOX ----- */
+        .probable-questions {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin: 20px 0 10px;
+        }
+
+        .probable-questions h4 {
+            color: #f5d742;
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .probable-questions h4 i {
+            color: #f5d742;
+        }
+
+        .probable-questions ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .probable-questions ul li {
+            font-size: 1.05rem;
+            color: #ffffff;
+            font-weight: 500;
+            padding-left: 22px;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .probable-questions ul li::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #f5d742;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.08rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .lesson-head {
+                font-size: 1.22rem;
+                padding: 12px 16px;
+            }
+
+            .lesson-head i {
+                width: 34px;
+                height: 34px;
+                font-size: 1.15rem;
+            }
+
+            .lesson-head .lesson-num {
+                font-size: 0.66rem;
+                padding: 2px 10px;
+            }
+
+            .sub-head {
+                font-size: 1.12rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.02rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.88rem;
+            }
+            th,
+            td {
+                font-size: 0.88rem;
+                padding: 6px 8px;
+            }
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+            .branch-root {
+                font-size: 0.92rem;
+                padding: 8px 18px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+            .probable-questions ul li {
+                font-size: 0.98rem;
+            }
+            .quote-box p {
+                font-size: 1.02rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-medal"></i>
+                    एकाइ ३: जीवनोपयोगी सीप
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-star"></i> मास्टर रिभिजन गाइड</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ ३
+            </span>
+        </div>
+
+        <!-- ===== EXAM INFO ===== -->
+        <div class="exam-info">
+            <h3><i class="fas fa-circle-info"></i> गाइड विवरण</h3>
+            <ul>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय:</strong> सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>एकाइ:</strong> ३ – जीवनोपयोगी सीप (Life Skills)</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>पाठ संख्या:</strong> ५ वटा मुख्य पाठ</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>आधार:</strong> NEB नयाँ पाठ्यक्रम र Specification Grid</span></li>
+            </ul>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#lesson1"><i class="fas fa-chevron-right"></i> पाठ १: निर्णय प्रक्रिया</a>
+                <a href="#lesson2"><i class="fas fa-chevron-right"></i> पाठ २: समस्या समाधान</a>
+                <a href="#lesson3"><i class="fas fa-chevron-right"></i> पाठ ३: सञ्चार</a>
+                <a href="#lesson4"><i class="fas fa-chevron-right"></i> पाठ ४: तनाव व्यवस्थापन</a>
+                <a href="#lesson5"><i class="fas fa-chevron-right"></i> पाठ ५: अन्तरवैयक्तिक सीपहरू</a>
+                <a href="#exam-qa"><i class="fas fa-chevron-right"></i> परीक्षा विशेष सम्भावित प्रश्नोत्तर</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ १: निर्णय प्रक्रिया ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson1" id="lesson1">
+            <i class="fas fa-scale-balanced"></i>
+            पाठ १: निर्णय प्रक्रिया
+            <span class="lesson-num">Lesson 1</span>
+        </div>
+
+        <!-- १.१ अवधारणा र परिभाषाहरू -->
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> १. अवधारणा र परिभाषाहरू</div>
+
+        <div class="content-box blue-light">
+            <ul>
+                <li><strong>निर्णय (Decision):</strong> कुनै काम गर्नुपूर्व सो काम गर्ने वा नगर्ने भनी विभिन्न सम्भाव्य विकल्पहरूमध्येबाट विचारपूर्वक लिइने अन्तिम निष्कर्ष वा विवेकी छनोट।</li>
+                <li><strong>निर्णय निर्माण (Decision Making):</strong> कुनै निश्चित उद्देश्य प्राप्तिका लागि उपलब्ध विभिन्न विकल्पहरू पहिचान गरी, तथ्यहरूको सङ्कलन र विश्लेषणद्वारा उत्कृष्ट विकल्प छनोट र कार्यान्वयन गर्ने व्यवस्थित प्रक्रिया।</li>
+            </ul>
+        </div>
+
+        <div class="quote-box">
+            <p><strong>जर्ज आर. टेरी (George R. Terry) का अनुसार:</strong> "निर्णय गर्ने कार्यलाई दुई वा सोभन्दा बढी सम्भाव्य विकल्पहरूबाट एउटा सबैभन्दा राम्रो विकल्पको छनोट भनी परिभाषित गरिन्छ।"</p>
+            <p><strong>हेरोल्ड कुन्ज र हेन्ज वेरिच (Harold Koontz &amp; Heinz Weihrich) का अनुसार:</strong> "विकल्पहरूबीचको छनोट कार्यका साथै योजना तर्जुमाको जगलाई नै निर्णय भनिन्छ।"</p>
+        </div>
+
+        <!-- १.२ निर्णयका प्रकार -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> २. निर्णयका ६ प्रकारहरू</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: निर्णयका प्रकार, विशेषता र उदाहरण</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:6%;">क्र.सं.</th>
+                        <th style="width:22%;">निर्णयको प्रकार</th>
+                        <th style="width:38%;">मुख्य विशेषता</th>
+                        <th style="width:34%;">व्यावहारिक उदाहरण</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१</strong></td>
+                        <td><strong>सङ्गठनात्मक निर्णय</strong></td>
+                        <td>संस्थाको लक्ष्य प्राप्तिका लागि आधिकारिक पदाधिकारीद्वारा लिइने संस्थागत निर्णय।</td>
+                        <td>विद्यालय व्यवस्थापन समितिले कम्प्युटर ल्याब स्थापना गर्ने निर्णय।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२</strong></td>
+                        <td><strong>व्यक्तिगत निर्णय</strong></td>
+                        <td>व्यक्तिले आफ्नो दैनिक जीवनयापन र रुचिअनुसार लिने व्यक्तिगत निर्णय।</td>
+                        <td>बिहान छिटो उठेर अध्ययन गर्ने निर्णय।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३</strong></td>
+                        <td><strong>सामूहिक निर्णय</strong></td>
+                        <td>आपसी हितका लागि सरोकारवालाहरू मिली सर्वसम्मत वा लोकतान्त्रिक रूपमा गरिने निर्णय।</td>
+                        <td>टोल सुधार समितिले खानेपानी मुहान संरक्षण गर्ने निर्णय।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४</strong></td>
+                        <td><strong>विवेकशील निर्णय</strong></td>
+                        <td>व्यक्तिगत भावनाभन्दा माथि उठेर तथ्य, तथ्याङ्क र प्रमाणका आधारमा लिइने निर्णय।</td>
+                        <td>क्षमता र भविष्यको अवसर हेरी सङ्काय छनोट गर्ने निर्णय।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>५</strong></td>
+                        <td><strong>बढोत्तरी निर्णय</strong></td>
+                        <td>विगतका निर्णय वा कार्यलाई आधार बनाई क्रमिक परिमार्जन वा सुधार गर्ने निर्णय।</td>
+                        <td>चलिरहेको भवन निर्माणमा थप बजेट विनियोजन गर्ने निर्णय।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>६</strong></td>
+                        <td><strong>सहभागितामूलक निर्णय</strong></td>
+                        <td>प्रत्यक्ष प्रभाव पर्ने लक्षित समूह र लाभग्राहीलाई सहभागी गराई लिइने निर्णय।</td>
+                        <td>सामुदायिक वन उपभोक्ता समूहको नियम निर्माण निर्णय।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- १.३ निर्णय चक्र -->
+        <div class="sub-head"><i class="fas fa-rotate"></i> ३. निर्णय चक्रका ७ क्रमिक चरणहरू</div>
+
+        <div class="mermaid-flow">
+            <div class="mermaid-step">१. समस्याको पहिचान</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">२. समस्याको विश्लेषण</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">३. विकल्पको पहिचान</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">४. विकल्पको विश्लेषण</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">५. सर्वोत्तम विकल्प छनोट</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">६. निर्णय कार्यान्वयन</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">७. पुनरावलोकन तथा मूल्याङ्कन</div>
+        </div>
+
+        <!-- १.४ वातावरणीय पक्षहरू -->
+        <div class="sub-head"><i class="fas fa-earth-asia"></i> ४. निर्णय गर्दा ध्यान दिनुपर्ने वातावरणीय पक्षहरू</div>
+
+        <div class="content-box green-light">
+            <p><strong>आन्तरिक वातावरणीय पक्षहरू:</strong> उपलब्ध समय, आवश्यक पर्ने मानवीय स्रोत, भौतिक पूर्वाधार, वित्तीय अवस्था, प्राविधिक स्रोतसाधन र निर्णयकर्ताको आन्तरिक इच्छाशक्ति।</p>
+
+            <p><strong>बाह्य वातावरणीय पक्षहरू:</strong> आर्थिक, सामाजिक, सांस्कृतिक र भौगोलिक अवस्था; प्रशासनिक संयन्त्र; मुलुकको विद्यमान नीति तथा कानुनी व्यवस्था; प्रतिस्पर्धीहरूको अवस्था; एवं विज्ञान र प्रविधिको विकास।</p>
+        </div>
+
+        <!-- १.५ अनिर्णित अवस्था -->
+        <div class="sub-head"><i class="fas fa-triangle-exclamation"></i> ५. अनिर्णित अवस्था (Indecision) र यसका ८ कारणहरू</div>
+
+        <div class="content-box orange-light">
+            <p>समयमै उपयुक्त विकल्प रोज्न नसकी अन्योल र असमञ्जसमा फस्ने मानसिक अवस्थालाई <strong>अनिर्णित अवस्था</strong> भनिन्छ।</p>
+
+            <ol>
+                <li>पर्याप्त सूचना र विवरणको अभाव</li>
+                <li>प्रतिकूल वा तनावपूर्ण तत्कालको परिस्थिति/वातावरण</li>
+                <li>बाह्य व्यक्ति वा दबाब समूहको हस्तक्षेप</li>
+                <li>निर्णय गलत भएमा आउन सक्ने सम्भावित नकारात्मक परिणाम वा भविष्यको डर</li>
+                <li>निर्णय कार्यान्वयन गर्ने स्रोतसाधनको अनिश्चितता</li>
+                <li>निर्णय गर्ने अधिकारको अस्पष्टता</li>
+                <li>समय सीमाको अत्यधिक मानसिक दबाब</li>
+                <li>विद्यमान नीति तथा कानुनी जटिलता</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ २: समस्या समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson2" id="lesson2">
+            <i class="fas fa-puzzle-piece"></i>
+            पाठ २: समस्या समाधान
+            <span class="lesson-num">Lesson 2</span>
+        </div>
+
+        <!-- २.१ अवधारणा -->
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> १. अवधारणा</div>
+
+        <div class="content-box green-light">
+            <ul>
+                <li><strong>समस्या (Problem):</strong> मानिसको दैनिक जीवन, कार्यस्थल वा समाजमा लक्ष्य प्राप्ति वा सोचेको उपलब्धि हासिल गर्ने क्रममा देखा पर्ने अप्ठ्यारो, असहजता, बाधा वा चुनौतीयुक्त अवस्था।</li>
+                <li><strong>समस्या समाधान (Problem Solving):</strong> देखा परेको बाधा वा असन्तुलनलाई तर्कपूर्ण, क्रमिक र योजनाबद्ध ढङ्गले हटाई स्थिति सामान्य बनाउने प्रक्रिया।</li>
+            </ul>
+        </div>
+
+        <!-- २.२ समस्या समाधानका चरणहरू -->
+        <div class="sub-head"><i class="fas fa-stairs"></i> २. समस्या समाधानका ६ क्रमिक चरणहरू</div>
+
+        <div class="mermaid-flow">
+            <div class="mermaid-step">१. समस्याको पहिचान तथा परिभाषा</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">२. सम्भाव्य कारणहरूको विश्लेषण</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">३. समाधानका विकल्पहरूको सिर्जना</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">४. सर्वोत्तम विकल्पको छनोट</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">५. कार्ययोजना निर्माण र कार्यान्वयन</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">६. नतिजाको अनुगमन र मूल्याङ्कन</div>
+        </div>
+
+        <!-- २.३ समस्या समाधानका स्तम्भहरू -->
+        <div class="sub-head"><i class="fas fa-columns"></i> ३. समस्या समाधान सीपका ८ मुख्य स्तम्भहरू</div>
+
+        <div class="branch-flow">
+            <div class="branch-root">समस्या समाधान सीपका ८ स्तम्भहरू</div>
+            <div class="branch-children">
+                <div class="mermaid-step">१. विश्लेषणात्मक सोच</div>
+                <div class="mermaid-step">२. अनुसन्धान सीप</div>
+                <div class="mermaid-step">३. टोलीकार्य</div>
+                <div class="mermaid-step">४. निर्णय निर्माण</div>
+                <div class="mermaid-step">५. लचकता</div>
+                <div class="mermaid-step">६. सिर्जनात्मकता</div>
+                <div class="mermaid-step">७. सञ्चार सीप</div>
+                <div class="mermaid-step">८. सक्रिय सुनाइ</div>
+            </div>
+        </div>
+
+        <div class="content-box blue-light">
+            <ol>
+                <li><strong>विश्लेषणात्मक सोच (Analytical Thinking):</strong> समस्याका स-साना अङ्गहरू छुट्याएर तार्किक ढङ्गले गहन अध्ययन गर्ने क्षमता।</li>
+                <li><strong>अनुसन्धान सीप (Research Skill):</strong> समस्यासँग सम्बन्धित आवश्यक तथ्य र सूचनाहरू सङ्कलन गर्ने क्षमता।</li>
+                <li><strong>टोलीकार्य (Teamwork):</strong> समूहका अन्य सदस्यहरूसँग मिलेर साझा समस्या हल गर्ने सहकार्यात्मक सीप।</li>
+                <li><strong>निर्णय निर्माण (Decision Making):</strong> उपलब्ध धेरै विकल्पहरूबाट उपयुक्त विकल्प रोज्न सक्ने दक्षता।</li>
+                <li><strong>लचकता (Flexibility):</strong> परिवर्तित परिस्थिति अनुकूल आफ्ना योजना र सोचमा परिमार्जन गर्न सक्ने क्षमता।</li>
+                <li><strong>सिर्जनात्मकता (Creativity):</strong> नयाँ, मौलिक र नवीन उपायहरूबाट समस्या सुल्झाउने कला।</li>
+                <li><strong>सञ्चार सीप (Communication Skill):</strong> समस्या र सोको समाधानबारे स्पष्ट र शिष्ट रूपमा आफ्ना विचार व्यक्त गर्ने सीप।</li>
+                <li><strong>सक्रिय सुनाइ (Active Listening):</strong> अरूका कुरा ध्यानपूर्वक सुनेर समस्याको वास्तविक जड बुझ्ने सीप।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ३: सञ्चार ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson3" id="lesson3">
+            <i class="fas fa-comments"></i>
+            पाठ ३: सञ्चार
+            <span class="lesson-num">Lesson 3</span>
+        </div>
+
+        <!-- ३.१ अवधारणा -->
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> १. अवधारणा</div>
+
+        <div class="content-box purple-light">
+            <p><strong>सञ्चार (Communication):</strong> दुई वा सोभन्दा बढी व्यक्ति वा समूहबिच विचार, सूचना, अनुभव, भावना र ज्ञानको आदानप्रदान गर्ने प्रक्रिया। 'सञ्चार' शब्द ल्याटिन भाषाको <em>'Communis'</em> बाट आएको हो, जसको अर्थ साझा बनाउनु हुन्छ।</p>
+        </div>
+
+        <!-- ३.२ सञ्चारका तत्त्वहरू -->
+        <div class="sub-head"><i class="fas fa-diagram-project"></i> २. सञ्चार प्रक्रियाका ७ आधारभूत तत्त्वहरू</div>
+
+        <div class="mermaid-flow">
+            <div class="mermaid-step">१. सञ्चारक/प्रेषक</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">२. सन्देश</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">३. सङ्केतन</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">४. माध्यम</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">५. सङ्केत बाचन</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">६. प्राप्तकर्ता</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">७. पृष्ठपोषण</div>
+        </div>
+
+        <!-- ३.३ सञ्चारका विधिहरू -->
+        <div class="sub-head"><i class="fas fa-list-check"></i> ३. सञ्चारका ३ प्रमुख विधिहरू</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: सञ्चारका विधि — स्वरूप, सबल पक्ष र दुर्बल पक्ष</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:18%;">विधि</th>
+                        <th style="width:32%;">मुख्य स्वरूप र माध्यम</th>
+                        <th style="width:25%;">सबल पक्ष</th>
+                        <th style="width:25%;">दुर्बल पक्ष</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. मौखिक सञ्चार</strong></td>
+                        <td>बोलेर गरिने सञ्चार (गफगाफ, टेलिफोन, भाषण, बैठक)।</td>
+                        <td>तत्काल पृष्ठपोषण प्राप्त हुने, प्रत्यक्ष र प्रभावकारी।</td>
+                        <td>लिखित प्रमाण नरहने, दूरदराजमा प्रभाव कम।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. लिखित सञ्चार</strong></td>
+                        <td>लेखेर गरिने सञ्चार (पत्रपत्रिका, इमेल, प्रतिवेदन, चिठी)।</td>
+                        <td>भविष्यका लागि कानुनी र आधिकारिक प्रमाण।</td>
+                        <td>तत्काल पृष्ठपोषण नपाइने, निरक्षरका लागि अनुपयोगी।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. साङ्केतिक सञ्चार</strong></td>
+                        <td>शरीरको भाषा (Body Language), हाउभाउ, इशारा, र चिह्न।</td>
+                        <td>भाषाको बाधा नहुने, भावना व्यक्त गर्न सजिलो।</td>
+                        <td>गलत अर्थ लाग्न सक्ने, स्पष्टताको कमी।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ३.४ सञ्चारका अवरोधहरू -->
+        <div class="sub-head"><i class="fas fa-ban"></i> ४. सञ्चारका ४ मुख्य अवरोधहरू</div>
+
+        <div class="content-box pink-light">
+            <ol>
+                <li><strong>भौतिक अवरोध:</strong> अत्यधिक कोलाहल, दुरी, प्राविधिक खराबी वा खराब मौसम।</li>
+                <li><strong>सङ्गठनात्मक अवरोध:</strong> जटिल साङ्गठनिक संरचना, अस्पष्ट नीति, र अधिकारको केन्द्रीकरण।</li>
+                <li><strong>मनोवैज्ञानिक अवरोध:</strong> ध्यान नदिनु, पूर्वधारणा, रिस, तनाव, वा अविश्वास।</li>
+                <li><strong>भाषागत तथा सांस्कृतिक अवरोध:</strong> प्राविधिक शब्दको प्रयोग, फरक भाषा, र सांस्कृतिक भिन्नता।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ४: तनाव व्यवस्थापन ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson4" id="lesson4">
+            <i class="fas fa-spa"></i>
+            पाठ ४: तनाव व्यवस्थापन
+            <span class="lesson-num">Lesson 4</span>
+        </div>
+
+        <!-- ४.१ अवधारणा -->
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> १. अवधारणा र विशेषताहरू</div>
+
+        <div class="content-box orange-light">
+            <ul>
+                <li><strong>तनाव (Stress):</strong> वातावरणीय परिवर्तन, माग वा चुनौतीका कारण व्यक्तिको शारीरिक तथा मानसिक सन्तुलनमा उत्पन्न हुने दबाब वा असहजताको अवस्था।</li>
+                <li><strong>तनाव व्यवस्थापन (Stress Management):</strong> मानसिक दबाबलाई नकारात्मक ऊर्जाबाट रूपान्तरण गरी सिर्जनात्मक र सकारात्मक कार्यमा लगाई शारीरिक तथा मानसिक स्वास्थ्य अनुकूल व्यवहार परिमार्जन गर्ने प्रक्रिया।</li>
+                <li><strong>तनावका ४ विशेषताहरू:</strong> वातावरणीय परिवर्तनको उपज, व्यक्तिपिच्छे असर फरक, व्यवस्थापन गर्न सकिने, र जीवनको अनिवार्य सर्त।</li>
+            </ul>
+        </div>
+
+        <!-- ४.२ तनाव सिर्जना हुने अवस्थाहरू -->
+        <div class="sub-head"><i class="fas fa-circle-exclamation"></i> २. तनाव सिर्जना हुने ४ अवस्थाहरू</div>
+
+        <div class="branch-flow">
+            <div class="branch-root">तनाव सिर्जना हुने अवस्थाहरू</div>
+            <div class="branch-children">
+                <div class="mermaid-step">१. अस्तित्व (Survival) तनाव<br><span style="font-weight:400;font-size:0.85rem;">दुर्घटना/आकस्मिक खतरा</span></div>
+                <div class="mermaid-step">२. आन्तरिक तनाव<br><span style="font-weight:400;font-size:0.85rem;">चिन्ता, भय, हीनताबोध</span></div>
+                <div class="mermaid-step">३. वातावरणीय तनाव<br><span style="font-weight:400;font-size:0.85rem;">कोलाहल, भिडभाड, दबाब</span></div>
+                <div class="mermaid-step">४. कामको चापको तनाव<br><span style="font-weight:400;font-size:0.85rem;">क्षमताभन्दा बढी काम</span></div>
+            </div>
+        </div>
+
+        <div class="content-box blue-light">
+            <ul>
+                <li><strong>अस्तित्व (Survival) तनाव:</strong> दुर्घटना वा आकस्मिक खतरामा शरीरले देखाउने तात्कालिक प्रतिक्रिया।</li>
+                <li><strong>आन्तरिक तनाव:</strong> आफ्नै मनभित्र चल्ने चिन्ता, भय, हीनताबोध वा नकारात्मक सोच।</li>
+                <li><strong>वातावरणीय तनाव:</strong> कोलाहल, भिडभाड, प्रतिकूल मौसम वा सामाजिक दबाब।</li>
+                <li><strong>कामको चापको तनाव:</strong> क्षमताभन्दा बढी कामको भार वा जिम्मेवारी।</li>
+            </ul>
+        </div>
+
+        <!-- ४.३ तनाव व्यवस्थापनका रणनीतिहरू -->
+        <div class="sub-head"><i class="fas fa-shield-heart"></i> ३. तनाव व्यवस्थापनका ३ प्रमुख रणनीतिहरू</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: तनाव व्यवस्थापनका रणनीतिहरूको तुलना</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:22%;">रणनीति</th>
+                        <th style="width:38%;">अर्थ र प्रकृति</th>
+                        <th style="width:40%;">दीर्घकालीन नतिजा</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. समर्पण (Submission)</strong></td>
+                        <td>परिस्थितिप्रति बिनाप्रतिवाद आत्मसमर्पण गर्ने वा भावना दबाउने।</td>
+                        <td><strong>अस्वस्थ तरिका:</strong> डिप्रेसन जस्ता गम्भीर मानसिक समस्या निम्त्याउँछ।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. प्रतिरोध (Resistance)</strong></td>
+                        <td>आक्रोश, रिस, कुटपिट वा भौतिक आक्रमणद्वारा प्रतिवाद गर्ने।</td>
+                        <td><strong>नकारात्मक तरिका:</strong> शत्रुता र कानुनी वा शारीरिक क्षति निम्त्याउँछ।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. सम्झौता (Compromise)</strong></td>
+                        <td>आफ्नो व्यवहार र सोचमा परिमार्जन गरी अनुकूलन र समझदारी गर्ने।</td>
+                        <td><strong>सर्वोत्कृष्ट र दिगो तरिका:</strong> सकारात्मक रूपान्तरण र शान्ति प्रदान गर्छ।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ४.४ तनाव कम गर्ने सीपहरू -->
+        <div class="sub-head"><i class="fas fa-leaf"></i> ४. तनाव कम गर्ने १२ सकारात्मक जीवनोपयोगी सीपहरू</div>
+
+        <div class="content-box teal-light">
+            <ol>
+                <li>३ पटक लामो र गहिरो श्वास लिने</li>
+                <li>उल्टो गन्ती (१००, ९९, ९८...) गर्ने</li>
+                <li>नियमित योग तथा ध्यान गर्ने</li>
+                <li>मनपर्ने गीत सङ्गीत सुन्ने</li>
+                <li>चित्र बनाउने वा रचनात्मक काम गर्ने</li>
+                <li>समय तालिका बनाएर काम गर्ने</li>
+                <li>कामको प्राथमिकता निर्धारण गर्ने</li>
+                <li>स्पष्ट र व्यावहारिक लक्ष्य निर्धारण गर्ने</li>
+                <li>प्रकृति वा मनोरम दृश्यावलोकन गर्ने</li>
+                <li>ज्ञानवर्धक पुस्तक वा पत्रपत्रिका पढ्ने</li>
+                <li>खेलकुद तथा शारीरिक व्यायाम गर्ने</li>
+                <li>साथी र शिक्षकसँग खुलेर कुराकानी गर्ने</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ५: अन्तरवैयक्तिक सीपहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson5" id="lesson5">
+            <i class="fas fa-handshake"></i>
+            पाठ ५: अन्तरवैयक्तिक सीपहरू
+            <span class="lesson-num">Lesson 5</span>
+        </div>
+
+        <!-- ५.१ अवधारणा -->
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> १. अवधारणा र महत्त्व</div>
+
+        <div class="content-box teal-light">
+            <ul>
+                <li><strong>अन्तरवैयक्तिक सीप (Interpersonal Skills):</strong> समाजमा अरू मानिसहरूसँग प्रभावकारी रूपमा संवाद गर्ने, स्वस्थ मानवीय सम्बन्ध स्थापित गर्ने, र आपसी विश्वास र सहकार्यको वातावरण सिर्जना गर्ने क्षमता।</li>
+                <li><strong>महत्त्व:</strong> सामाजिक समायोजन, लचकदार व्यक्तित्व विकास, द्वन्द्वको शान्तिपूर्ण समाधान, टोलीकार्य र सङ्गठनात्मक सफलता।</li>
+            </ul>
+        </div>
+
+        <!-- ५.२ सम्बन्ध सुधारका उपायहरू -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> २. अन्तरवैयक्तिक सम्बन्ध सुधारका ५ प्रमुख उपायहरू</div>
+
+        <div class="branch-flow">
+            <div class="branch-root">अन्तरवैयक्तिक सम्बन्ध सुधारका उपायहरू</div>
+            <div class="branch-children">
+                <div class="mermaid-step">१. सकारात्मक सोचको विकास</div>
+                <div class="mermaid-step">२. सक्रिय सुनाइ र सम्मान</div>
+                <div class="mermaid-step">३. समानुभूति (Empathy)</div>
+                <div class="mermaid-step">४. विनम्रता र अहङ्कारको अन्त्य</div>
+                <div class="mermaid-step">५. शिष्ट र प्रस्ट सञ्चार</div>
+            </div>
+        </div>
+
+        <!-- ५.३ सामाजिक सञ्जालका नियमहरू -->
+        <div class="sub-head"><i class="fas fa-share-nodes"></i> ३. सामाजिक सञ्जाल र अन्तरवैयक्तिक सम्बन्ध</div>
+
+        <div class="content-box purple-light">
+            <p><strong>उत्तरदायी प्रयोगका ५ नियमहरू:</strong></p>
+            <ol>
+                <li>व्यक्तिगत विवरण र गोपनीयता (Privacy Settings) सुरक्षित राख्ने।</li>
+                <li>अनलाइनमा अपरिचितहरूसँग सतर्क रहने।</li>
+                <li>जथाभावी अश्लील वा भ्रामक सूचना पोस्ट/सेयर नगर्ने।</li>
+                <li>टिप्पणी गर्दा सधैँ शिष्ट र रचनात्मक भाषा प्रयोग गर्ने।</li>
+                <li>वास्तविक जीवनका सम्बन्धहरूलाई समय दिने (डिजिटल लतबाट बच्ने)।</li>
+            </ol>
+        </div>
+
+        <!-- ५.४ टोलीकार्य र नेतृत्व -->
+        <div class="sub-head"><i class="fas fa-people-group"></i> ४. टोलीकार्य (Teamwork) र असल नेतृत्वका गुणहरू</div>
+
+        <div class="content-box green-light">
+            <p><strong>टोलीकार्य:</strong> साझा उद्देश्य हासिल गर्नका लागि समूहका सबै सदस्यहरूले एकताबद्ध भएर आपसी समन्वय, सहकार्य र समझदारीका साथ गरिने कार्य।</p>
+
+            <p><strong>असल नेताका गुणहरू:</strong></p>
+            <ul>
+                <li>स्पष्ट दूरदृष्टि (Vision)</li>
+                <li>दरिलो इच्छाशक्ति</li>
+                <li>आत्मअनुशासन</li>
+                <li>सिर्जनात्मकता</li>
+                <li>सहनशीलता</li>
+                <li>समानुभूति</li>
+                <li>संवेगात्मक परिपक्वता</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== परीक्षा विशेष सम्भावित प्रश्नोत्तरहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lessonExtra" id="exam-qa">
+            <i class="fas fa-bullseye"></i>
+            परीक्षा विशेष सम्भावित प्रश्नोत्तरहरू
+            <span class="lesson-num">Exam Practice</span>
+        </div>
+
+        <!-- अति संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (१ अङ्क भार)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> विवेकशील निर्णय भनेको के हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> व्यक्तिगत भावना र पूर्वाग्रहभन्दा माथि उठेर तथ्य, तथ्याङ्क र प्रमाणको आधारमा लिइने निर्णय नै विवेकशील निर्णय हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> सञ्चार प्रक्रियामा 'पृष्ठपोषण' को भूमिका के हुन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> पृष्ठपोषणले सञ्चार प्रक्रिया पूरा भएको पुष्टि गर्छ र सन्देश सही रूपमा बुझियो वा बुझिएन भन्ने स्पष्ट पार्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">३.</span> तनाव व्यवस्थापनको सबैभन्दा दिगो र सकारात्मक रणनीति कुन हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> आफ्ना व्यवहार र सोचमा अनुकूलन गरी आपसी समझदारी कायम गर्ने <strong>'सम्झौता (Compromise)'</strong> रणनीति नै सबैभन्दा दिगो हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">४.</span> समानुभूति (Empathy) भनेको के हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अरूको दुःख, समस्या वा भावनालाई आफ्नै ठानेर आत्मसात् गर्ने र सोही अनुसार सहयोगी व्यवहार देखाउने क्षमता नै समानुभूति हो।</p>
+            </div>
+        </div>
+
+        <!-- संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तर (५ अङ्क भार)</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्रश्न:</span> अनिर्णित अवस्था भनेको के हो? मानिस अनिर्णित बन्नुका प्रमुख कारणहरू उल्लेख गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> परिस्थिति आइपर्दा समयमै उपयुक्त विकल्प रोज्न नसकी अन्योल र द्विविधामा फस्ने मानसिक अवस्थालाई <strong>अनिर्णित अवस्था</strong> भनिन्छ।</p>
+
+                <p><strong>अनिर्णित बन्नुका प्रमुख कारणहरू:</strong></p>
+                <ul>
+                    <li>निर्णयका लागि आवश्यक तथ्य र सूचनाको अभाव हुनु।</li>
+                    <li>बाह्य व्यक्ति वा दबाब समूहको अनावश्यक प्रभाव पर्नु।</li>
+                    <li>निर्णय गलत भएमा आउन सक्ने सम्भावित दुष्परिणामको डर हुनु।</li>
+                    <li>निर्णय कार्यान्वयनका लागि स्रोतसाधन र समयको कमी हुनु।</li>
+                    <li>निर्णय गर्ने अधिकार र नीतिको अस्पष्टता हुनु।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- लामो -->
+        <div class="sub-head"><i class="fas fa-star"></i> लामो उत्तरात्मक प्रश्न (८ अङ्क भार - NEB ढाँचा)</div>
+
+        <div class="qa-block color6" style="border-left-color:#1A237E;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "तनाव र द्वन्द्व जीवनका अनिवार्य पक्ष हुन् तर यिनीहरूको सकारात्मक व्यवस्थापनले नै व्यक्ति र समाजलाई समृद्ध बनाउँछ।" यस भनाइलाई जीवनोपयोगी सीपहरूसँग जोडेर विस्तृत विवेचना गर्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+
+                <p><span style="font-weight:900;">१. परिचय (Introduction):</span> तनाव र द्वन्द्व जीवनका अनिवार्य पक्ष हुन् — यिनीहरू परिवर्तन, विकास र सुधारका सूचक पनि हुन्। तनाव भनेको वातावरणीय परिवर्तन, माग वा चुनौतीका कारण व्यक्तिको शारीरिक तथा मानसिक सन्तुलनमा उत्पन्न हुने दबाब हो भने द्वन्द्व भनेको दुई वा सोभन्दा बढी पक्षबिचको मतभेद, असहमति वा टकरावको अवस्था हो। जीवनोपयोगी सीपहरूको सही प्रयोगले यिनीहरूलाई सकारात्मक रूपान्तरण गर्न सकिन्छ।</p>
+
+                <p><span style="font-weight:900;">२. मुख्य विश्लेषण (Core Analysis):</span></p>
+
+                <p><strong>क) तनावका ३ रणनीतिहरूको तुलना:</strong></p>
+                <ul>
+                    <li><strong>समर्पण (Submission):</strong> परिस्थितिप्रति बिनाप्रतिवाद आत्मसमर्पण गर्ने वा भावना दबाउने। यो अस्वस्थ तरिका हो — डिप्रेसन जस्ता गम्भीर मानसिक समस्या निम्त्याउँछ।</li>
+                    <li><strong>प्रतिरोध (Resistance):</strong> आक्रोश, रिस, कुटपिट वा भौतिक आक्रमणद्वारा प्रतिवाद गर्ने। यो नकारात्मक तरिका हो — शत्रुता र कानुनी वा शारीरिक क्षति निम्त्याउँछ।</li>
+                    <li><strong>सम्झौता (Compromise):</strong> आफ्नो व्यवहार र सोचमा परिमार्जन गरी अनुकूलन र समझदारी गर्ने। यो सर्वोत्कृष्ट र दिगो तरिका हो — सकारात्मक रूपान्तरण र शान्ति प्रदान गर्छ।</li>
+                </ul>
+
+                <p><strong>ख) तनाव कम गर्ने १२ जीवनोपयोगी सीपहरू:</strong> ३ पटक लामो र गहिरो श्वास लिने, उल्टो गन्ती गर्ने, नियमित योग तथा ध्यान गर्ने, मनपर्ने सङ्गीत सुन्ने, चित्र बनाउने, समय तालिका बनाएर काम गर्ने, कामको प्राथमिकता निर्धारण गर्ने, स्पष्ट र व्यावहारिक लक्ष्य निर्धारण गर्ने, प्रकृति दृश्यावलोकन गर्ने, ज्ञानवर्धक पुस्तक पढ्ने, खेलकुद तथा शारीरिक व्यायाम गर्ने, र साथी तथा शिक्षकसँग खुलेर कुराकानी गर्ने।</p>
+
+                <p><strong>ग) द्वन्द्व समाधानमा सञ्चार र सम्झौताको भूमिका:</strong> प्रभावकारी सञ्चार सीपले पक्षहरूबिच खुला संवाद स्थापित गरी असमझदारी हटाउँछ। सक्रिय सुनाइ, समानुभूति र शिष्ट भाषाको प्रयोगले द्वन्द्वलाई सहकार्यमा रूपान्तरण गर्न सकिन्छ।</p>
+
+                <p><span style="font-weight:900;">३. व्यावहारिक उदाहरण (Practical Example):</span> समाजमा देखा परेको विवाद (जस्तै: गोगने र ओलने गाउँको पुल निर्माण विवाद) लाई संवाद र सम्झौताद्वारा समाधान गरी सहकार्यको नयाँ आयाम (क्रिकेट क्लब गठन) सिर्जना गरिएको घटना यसको उत्कृष्ट उदाहरण हो। यसरी द्वन्द्वलाई सकारात्मक सहकार्यमा बदल्न सकिन्छ।</p>
+
+                <p><span style="font-weight:900;">४. निष्कर्ष (Conclusion):</span> अतः तनाव र द्वन्द्वलाई समस्याका रूपमा नभई सुधार र समृद्धिको अवसरका रूपमा लिनुपर्छ। जीवनोपयोगी सीपहरूको सही अभ्यासले नै यिनीहरूलाई सकारात्मक रूपान्तरण गरी व्यक्ति र समाज दुवैलाई समृद्ध बनाउन सकिन्छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> यो एकाइ ३ को मास्टर रिभिजन गाइड हो। ५ वटै पाठका अवधारणा, परिभाषा, प्रकार, चरण र रणनीतिहरू राम्ररी याद गर्नुहोस्। NEB परीक्षामा ५ र ८ अङ्कका उत्तरहरू अनिवार्य रूपमा <strong>३-स्तरीय ढाँचा</strong> (परिचय → विश्लेषण → निष्कर्ष) मा लेख्नुहोस्। व्यावहारिक उदाहरणहरू समावेश गर्नुहोस्। नियमित अभ्यासले मात्र आत्मविश्वास र गति बढ्छ। शुभकामना!
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ३</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
