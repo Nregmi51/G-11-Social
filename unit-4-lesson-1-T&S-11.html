@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>कक्षा ११ – एकाइ ४, पाठ १: मानवको जैविक उत्पत्ति र विकासक्रम</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- INFO CARD ----- */
+        .exam-info {
+            background: #eef0f0;
+            border: 2px solid #5C6BC0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 24px;
+        }
+
+        .exam-info h3 {
+            color: #1A237E;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exam-info h3 i {
+            color: #1A237E;
+        }
+
+        .exam-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .exam-info ul li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #374210;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-info ul li i {
+            color: #1A237E;
+            margin-top: 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .exam-info ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- LESSON HEADERS ----- */
+        .lesson-head {
+            font-size: 1.65rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 44px 0 8px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .lesson-head i {
+            font-size: 1.55rem;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.22);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .lesson-head .lesson-num {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 900;
+            padding: 3px 14px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .lesson-head.lesson1 { background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%); }
+        .lesson-head.lesson2 { background: linear-gradient(135deg, #1f7a4a 0%, #2e9e63 100%); }
+        .lesson-head.lesson3 { background: linear-gradient(135deg, #6A1B9A 0%, #8E24AA 100%); }
+        .lesson-head.lesson4 { background: linear-gradient(135deg, #b45309 0%, #d97706 100%); }
+        .lesson-head.lesson5 { background: linear-gradient(135deg, #0f7a7a 0%, #14a0a0 100%); }
+        .lesson-head.lessonExtra { background: linear-gradient(135deg, #a03a5a 0%, #c44a6b 100%); }
+
+        /* ----- SUB HEADERS ----- */
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 22px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sub-head-sm i {
+            color: #1A237E;
+            font-size: 1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- HIGHLIGHT / FACT BOX ----- */
+        .fact-box {
+            background: #fff8e1;
+            border: 2px dashed #d97706;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 16px 0;
+            font-weight: 600;
+        }
+
+        .fact-box .fact-title {
+            color: #b45309;
+            font-weight: 900;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .fact-box .fact-title i {
+            color: #b45309;
+        }
+
+        .fact-box p,
+        .fact-box ul,
+        .fact-box li {
+            font-size: 1.08rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        .fact-box ul {
+            padding-left: 24px;
+        }
+
+        /* ----- QUOTE BOX ----- */
+        .quote-box {
+            background: #f0ece6;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin: 14px 0;
+            font-style: italic;
+            font-weight: 500;
+            color: #1a3a5c;
+            border-left: 5px solid #1A237E;
+        }
+
+        .quote-box p {
+            font-size: 1.12rem;
+            margin-bottom: 6px;
+            color: #1a3a5c;
+        }
+
+        .quote-box strong {
+            color: #1A237E;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.02rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f6f8f3;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A / QUESTION BOX ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.15rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.13rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1A237E;
+        }
+
+        .glossary-item strong {
+            color: #1A237E;
+            font-size: 1.1rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.05rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        @media (max-width: 700px) {
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        /* ----- BRANCH FLOW (Tree Diagram) ----- */
+        .branch-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            padding: 18px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .branch-root {
+            background: #1A237E;
+            color: #ffffff;
+            border-color: #1A237E;
+            font-size: 1.05rem;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 800;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .branch-children {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .branch-children {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .branch-children {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ----- MARKS TAG ----- */
+        .marks-tag {
+            display: inline-block;
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 40px;
+            margin-left: 8px;
+        }
+
+        /* ----- LETTER BOX ----- */
+        .letter-box {
+            background: #ffffff;
+            border: 2px dashed #1A237E;
+            border-radius: 14px;
+            padding: 22px 26px;
+            margin: 16px 0;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1.05rem;
+            line-height: 2;
+            color: #1a1a2e;
+        }
+
+        .letter-box p {
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+
+        .letter-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        /* ----- SLIDE BOX ----- */
+        .slide-box {
+            background: #faf8f5;
+            border: 2px solid #b8c0a8;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin: 14px 0;
+        }
+
+        .slide-box .slide-title {
+            background: #1A237E;
+            color: #ffffff;
+            font-weight: 900;
+            font-size: 1.05rem;
+            padding: 8px 18px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .slide-box ul {
+            padding-left: 24px;
+        }
+
+        .slide-box li {
+            font-size: 1.08rem;
+            margin-bottom: 5px;
+            color: #374210;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.08rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.35rem;
+            }
+
+            .lesson-head {
+                font-size: 1.2rem;
+                padding: 12px 16px;
+            }
+
+            .lesson-head i {
+                width: 34px;
+                height: 34px;
+                font-size: 1.1rem;
+            }
+
+            .lesson-head .lesson-num {
+                font-size: 0.66rem;
+                padding: 2px 10px;
+            }
+
+            .sub-head {
+                font-size: 1.1rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.86rem;
+            }
+            th,
+            td {
+                font-size: 0.86rem;
+                padding: 6px 8px;
+            }
+            .mermaid-step {
+                font-size: 0.82rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+            .branch-root {
+                font-size: 0.9rem;
+                padding: 8px 18px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+            .letter-box {
+                font-size: 0.95rem;
+                padding: 16px 18px;
+            }
+            .slide-box {
+                padding: 14px 16px;
+            }
+            .slide-box li {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-dna"></i>
+                    एकाइ ४, पाठ १: मानवको जैविक उत्पत्ति र विकासक्रम
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-star"></i> परीक्षा क्याप्सुल नोट</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ ४, पाठ १
+            </span>
+        </div>
+
+        <!-- ===== EXAM INFO ===== -->
+        <div class="exam-info">
+            <h3><i class="fas fa-circle-info"></i> नोट विवरण</h3>
+            <ul>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय:</strong> सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>एकाइ:</strong> ४ – मानव तथा समाजको उद्भव र विकास</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>पाठ:</strong> १ – मानवको जैविक उत्पत्ति र विकासक्रम</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>आधार:</strong> NEB नयाँ पाठ्यक्रम र Specification Grid</span></li>
+            </ul>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#glossary"><i class="fas fa-chevron-right"></i> खण्ड १: पारिभाषिक शब्दावली</a>
+                <a href="#notes"><i class="fas fa-chevron-right"></i> खण्ड २: विस्तृत प्राज्ञिक नोट</a>
+                <a href="#activities"><i class="fas fa-chevron-right"></i> खण्ड ३: क्रियाकलापको समाधान</a>
+                <a href="#exercises"><i class="fas fa-chevron-right"></i> खण्ड ४: अभ्यासको समाधान</a>
+                <a href="#exam-qa"><i class="fas fa-chevron-right"></i> खण्ड ५: परीक्षा विशेष प्रश्नोत्तर</a>
+                <a href="#finaltip"><i class="fas fa-chevron-right"></i> अन्तिम सल्लाह</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड १: पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson1" id="glossary">
+            <i class="fas fa-book-open"></i>
+            खण्ड १: विषयगत पारिभाषिक शब्दावली
+            <span class="lesson-num">Glossary</span>
+        </div>
+
+        <div class="content-box blue-light">
+            <p>यस पाठमा प्रयोग भएका मुख्य <strong>१० वटा प्राविधिक तथा मानवशास्त्रीय शब्दहरूको</strong> परीक्षा-उपयोगी र प्राज्ञिक परिभाषा निम्न बमोजिम छ:</p>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> १. जैविक उद्विकास (Biological Evolution)</strong>
+                <p>सजीव प्राणीहरूमा वंशानुगत गुण र वातावरणीय अनुकूलनका कारण पुस्तान्तरणसँगै आउने क्रमिक, धीमा र गुणात्मक शारीरिक तथा जैविक परिवर्तनको प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> २. होस्मिनिड (Hominid)</strong>
+                <p>आधुनिक मानव र मानवका ती सम्पूर्ण प्राचीन पुर्खाहरूलाई जनाउने मानवशास्त्रीय शब्द, जसको मुख्य विशेषता ठाडो शरीर र दुई खुट्टाले हिँड्नु हो।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ३. अस्ट्रालोपिथेकस (Australopithecus)</strong>
+                <p>आजभन्दा करिब ४० लाखदेखि १० लाख वर्ष अगाडिसम्म अफ्रिकामा बसोबास गरेको, दुई खुट्टाले सिधा हिँड्न सक्ने तर खप्परको आकार बाँदरसँग मिल्ने प्राचीन मानव पुर्खा।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ४. होमो (Homo)</strong>
+                <p>जैविक वर्गीकरणअनुसार आधुनिक मानव र उसका प्रत्यक्ष पुर्खाहरू समेटिएको वैज्ञानिक जाति (Genus), जसको मुख्य विशेषता ठुलो मस्तिष्क र हतियार बनाउने/प्रयोग गर्ने क्षमता हो।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ५. होमो हयाबिलिस (Homo habilis)</strong>
+                <p>होमो जातिको पहिलो प्रजाति, जसले ढुङ्गाका साना टुक्राहरू र लट्ठीलाई सिकार गर्न तथा कन्दमूल खन्न प्रयोग गर्दथ्यो।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ६. होमो इरेक्टस (Homo erectus)</strong>
+                <p>अफ्रिकाबाट एसिया र युरोप महादेशसम्म फैलिएको पहिलो मानव जाति, जसको जिउडाल पूर्ण रूपमा सिधा थियो र जसले आगोको प्रयोग गर्न थालेको मानिन्छ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ७. होमो नियन्डरथलेंसिस (Homo neanderthalensis)</strong>
+                <p>युरोप र पश्चिम एसियामा १,५०,००० देखि ३०,००० वर्ष अगाडिसम्म बसोबास गरेको, आगोको प्रयोग गर्ने, मरेका मानिसलाई गाड्ने र सांकेतिक भाषा बोल्ने प्रागैतिहासिक मानव।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ८. मस्टेरियन संस्कृति (Mousterian Culture)</strong>
+                <p>नियन्डरथल मानवले ढुङ्गाका सूक्ष्म तथा तिखा औजारहरू निर्माण गरी विकास गरेको विशिष्ट ढुङ्गे युगको प्रविधि र संस्कृति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> ९. होमो सेपियन्स (Homo sapiens)</strong>
+                <p>आजभन्दा करिब १ लाख ५० हजार वर्षअघि उद्विकास भई हाल पृथ्वीमा अस्तित्वमा रहेको एक मात्र आधुनिक मानव जाति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1A237E; margin-right:4px;"></i> १०. अवशेषशास्त्र (Paleontology)</strong>
+                <p>प्राचीन कालका जीवजन्तु र वनस्पतिहरूका चट्टान वा माटोमा छापिएका अवशेषहरू (Fossils) को वैज्ञानिक अध्ययन गर्ने र उद्विकासको इतिहास पहिल्याउने विज्ञान।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड २: विस्तृत प्राज्ञिक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson2" id="notes">
+            <i class="fas fa-lightbulb"></i>
+            खण्ड २: विस्तृत प्राज्ञिक नोट
+            <span class="lesson-num">Core Notes</span>
+        </div>
+
+        <!-- २.१ अवधारणा -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. मानवको जैविक उद्विकासको अवधारणा</div>
+
+        <div class="content-box green-light">
+            <ul>
+                <li><strong>उत्पत्ति र सिद्धान्त:</strong> पृथ्वीका सम्पूर्ण जीवहरूझैँ मानव जातिको उत्पत्ति पनि क्रमिक जैविक उद्विकासको प्रक्रियाबाट भएको हो। वैज्ञानिक अध्ययनअनुसार मानवको उद्विकास बाँदर वा नरवानर (Ape) बाट सिधै नभई, नरवानरजस्तै देखिने (Ape-like) साझा पुर्खाबाट भएको हो।</li>
+                <li><strong>होस्मिनिड विकास:</strong> आजभन्दा करिब ६० लाख वर्षअगाडि पुच्छर नभएका, ठाडो जिउडाल भएका, ठुलो मस्तिष्क भएका र दुई खुट्टाले हिँड्न सक्ने 'होस्मिनिड' (Hominid) पुर्खाहरूको उत्पत्ति भयो। <em>साह्रेलान्थ्रोपस</em>, <em>ओरोरिन</em> र <em>आर्डिपिथेकस</em> प्रारम्भिक होस्मिनिड हुन्, जसमध्ये <em>आर्डिपिथेकस</em>लाई पहिलो होस्मिनिड मानिन्छ।</li>
+                <li><strong>मानवको मुख्य दुई जाति:</strong> मानव अवशेषहरूलाई मुख्यतया दुई जातिमा विभाजन गरिन्छ— <strong>अस्ट्रालोपिथेकस (Australopithecus)</strong> र <strong>होमो (Homo)</strong>।</li>
+            </ul>
+        </div>
+
+        <!-- २.२ उद्विकासक्रम प्रवाहचित्र -->
+        <div class="sub-head"><i class="fas fa-diagram-project"></i> २. मानव उद्विकासक्रम झल्काउने क्रमिक प्रवाहचित्र</div>
+
+        <div class="mermaid-flow">
+            <div class="mermaid-step">साझा नरवानर पुर्खा<br><span style="font-weight:400;font-size:0.85rem;">(Ape-like Ancestor)</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step">प्रारम्भिक होस्मिनिड<br><span style="font-weight:400;font-size:0.85rem;">(Ardipithecus)</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step">अस्ट्रालोपिथेकस<br><span style="font-weight:400;font-size:0.85rem;">(४०–१० लाख वर्ष अगाडि)</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step">होमो जातिको उद्विकास<br><span style="font-weight:400;font-size:0.85rem;">(Genus Homo)</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step">होमो हयाबिलिस<br><span style="font-weight:400;font-size:0.85rem;">(२३–१५ लाख वर्ष अगाडि)</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step">होमो इरेक्टस<br><span style="font-weight:400;font-size:0.85rem;">(१८–३ लाख वर्ष अगाडि)</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step">होमो नियन्डरथलेंसिस<br><span style="font-weight:400;font-size:0.85rem;">(१.५ लाख–३० हजार वर्ष अगाडि)</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step">होमो सेपियन्स<br><span style="font-weight:400;font-size:0.85rem;">(१.५ लाख वर्ष अगाडिदेखि हालसम्म)</span></div>
+        </div>
+
+        <!-- २.३ तुलनात्मक तालिका -->
+        <div class="sub-head"><i class="fas fa-table"></i> ३. मानव उद्विकासका ५ प्रमुख चरणहरूको तुलनात्मक तालिका</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: मानव उद्विकासका ५ प्रमुख चरणहरू</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:18%;">मानव प्रजाति (Species)</th>
+                        <th style="width:14%;">समय सीमा</th>
+                        <th style="width:20%;">अवशेष भेटिएका स्थानहरू</th>
+                        <th style="width:48%;">शारीरिक तथा व्यवहारगत मुख्य विशेषताहरू</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. अस्ट्रालोपिथेकस (Australopithecus)</strong></td>
+                        <td>४० लाख–१० लाख वर्ष अगाडि</td>
+                        <td>पूर्वी अफ्रिका (केन्या, तान्जानिया, इथियोपिया) र मध्य अफ्रिका (चाड)</td>
+                        <td>
+                            • दुई खुट्टाले सिधा हिँड्ने।<br>
+                            • खप्परको आकार बाँदरसँग मिल्ने, होचो कद र अगाडि च्यापु निस्केको।<br>
+                            • झुन्ड बनाएर बस्ने।
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. होमो हयाबिलिस (Homo habilis)</strong></td>
+                        <td>२३ लाख–१५ लाख वर्ष अगाडि</td>
+                        <td>पूर्वी अफ्रिका</td>
+                        <td>
+                            • होमो जातिको पहिलो प्रजाति।<br>
+                            • लट्ठी र साना ढुङ्गालाई हतियार बनाई सिकार गर्ने र कन्दमूल खन्ने।<br>
+                            • <strong>'सिपालु मानव'</strong> (Handy Human) भनिने।
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. होमो इरेक्टस (Homo erectus)</strong></td>
+                        <td>१८ लाख–३ लाख वर्ष अगाडि</td>
+                        <td>अफ्रिका, एसिया (जाभा, पेकिङ) र युरोप</td>
+                        <td>
+                            • अफ्रिकाबाट अन्य महादेशमा फैलिएको पहिलो मानव।<br>
+                            • जिउडाल पूर्ण रूपमा सिधा।<br>
+                            • पहिलोपटक आगोको प्रयोग र ठुला ढुङ्गे हतियार निर्माण।
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>४. होमो नियन्डरथलेंसिस (Homo neanderthalensis)</strong></td>
+                        <td>१,५०,०००–३०,००० वर्ष अगाडि</td>
+                        <td>युरोप र पश्चिम एसिया (जर्मनीको नियन्डर उपत्यका)</td>
+                        <td>
+                            • गठिलो शरीर, लाम्चो खप्पर, मस्टेरियन हतियार संस्कृति।<br>
+                            • आगोको प्रयोग, मृतकलाई गाड्ने (सामाजिक संस्कार)।<br>
+                            • सांकेतिक भाषाको प्रयोग।
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>५. होमो सेपियन्स (Homo sapiens)</strong></td>
+                        <td>१,५०,००० वर्ष अगाडिदेखि हालसम्म</td>
+                        <td>विश्वव्यापी</td>
+                        <td>
+                            • आधुनिक मानिस, ठुलो मस्तिष्क र विकसित चेतना।<br>
+                            • परिष्कृत भाषा, संस्कृति, कृषि र प्रविधिको विकास।
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ३: क्रियाकलापको समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson3" id="activities">
+            <i class="fas fa-hands"></i>
+            खण्ड ३: क्रियाकलापको पूर्ण समाधान
+            <span class="lesson-num">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-table"></i> क्रियाकलाप १: मानव उद्विकासको क्रम तालिकामा देखाउने</div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्रश्न:</span> विभिन्न स्रोतको प्रयोग गरी मानव उद्विकासको क्रमलाई तालिकामा देखाउनुहोस्।</div>
+            <div class="a">
+                <p><strong>समाधान:</strong> माथि खण्ड २ को उपशीर्षक ३ मा प्रस्तुत गरिएको <strong>"मानव उद्विकासका ५ प्रमुख चरणहरूको तुलनात्मक प्राज्ञिक तालिका"</strong> नै यस क्रियाकलापको पूर्ण र प्रामाणिक तालिकाबद्ध उत्तर हो।</p>
+            </div>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-desktop"></i> क्रियाकलाप २: मानव उद्विकासका चरणहरू झल्काउने पोस्टर/स्लाइड बनाई प्रस्तुत गर्ने</div>
+
+        <div class="content-box orange-light">
+            <p><strong>प्रस्तुतीकरण स्लाइड / पोस्टरको रूपरेखा (Slide Presentation Layout):</strong></p>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड १: शीर्षक स्लाइड</div>
+            <ul>
+                <li>शीर्षक: मानव जातिको जैविक उत्पत्ति र उद्विकासक्रम (Biological Evolution of Humans)</li>
+                <li>प्रस्तुतकर्ता: कक्षा ११, सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा अध्ययनरत विद्यार्थी।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड २: प्रारम्भिक पुर्खा – अस्ट्रालोपिथेकस</div>
+            <ul>
+                <li><strong>समय:</strong> ४० लाख – १० लाख वर्ष अगाडि।</li>
+                <li><strong>विशेषता:</strong> दुई खुट्टाले हिँड्ने, झुन्डमा बस्ने, सानो मस्तिष्क।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड ३: सिपालु मानव – होमो हयाबिलिस</div>
+            <ul>
+                <li><strong>समय:</strong> २३ लाख – १५ लाख वर्ष अगाडि।</li>
+                <li><strong>विशेषता:</strong> ढुङ्गा र लट्ठीको प्रयोग गरी कन्दमूल खन्ने र सिकार गर्ने ('Handy Human')।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड ४: महादेशीय विस्तारक – होमो इरेक्टस</div>
+            <ul>
+                <li><strong>समय:</strong> १८ लाख – ३ लाख वर्ष अगाडि।</li>
+                <li><strong>विशेषता:</strong> सिधा जिउडाल, आगोको आविष्कार र अफ्रिकाबाट युरोप/एसिया प्रवास।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड ५: संस्कृति निर्माता – होमो नियन्डरथल</div>
+            <ul>
+                <li><strong>समय:</strong> १,५०,००० – ३०,००० वर्ष अगाडि।</li>
+                <li><strong>विशेषता:</strong> मस्टेरियन हतियार, मृतक बुझ्ने/गाड्ने सामाजिक संस्कार, सांकेतिक भाषा।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड ६: आधुनिक मानव – होमो सेपियन्स</div>
+            <ul>
+                <li><strong>समय:</strong> १,५०,००० वर्ष अगाडिदेखि हालसम्म।</li>
+                <li><strong>विशेषता:</strong> पूर्ण विकसित मस्तिष्क, जटिल भाषा, कृषि, समाज र आधुनिक प्रविधि।</li>
+            </ul>
+        </div>
+
+        <!-- क्रियाकलाप ३ -->
+        <div class="sub-head"><i class="fas fa-envelope-open-text"></i> क्रियाकलाप ३: नियन्डरथलबाट हालसम्मको मानव उद्विकासको अवस्था समेटी साथीलाई चिठी लेख्ने</div>
+
+        <div class="letter-box">
+            <p><strong>मिति:</strong> २०८३/०६/११<br>
+            <strong>स्थान:</strong> काठमाडौँ, नेपाल</p>
+
+            <p><strong>प्रिय साथी सुजन,<br>
+            सप्रेम नमस्ते।</strong></p>
+
+            <p>यहाँ म सानन्द छु र त्यहाँ तिमी पनि कुशल छौ भन्ने कामना गर्दछु। आज हाम्रो कक्षा ११ को सामाजिक अध्ययन विषयमा 'मानवको जैविक उत्पत्ति र विकासक्रम' पाठ पढ्दै गर्दा नियन्डरथल मानवदेखि आजको आधुनिक मानव (होमो सेपियन्स) सम्म आइपुग्दा भएका शारीरिक र व्यवहारगत परिवर्तनहरूले मलाई निकै आश्चर्यचकित बनायो। यही रोचक ज्ञान तिमीसँग साझा गर्न यो चिठी लेख्दै छु।</p>
+
+            <p>आजभन्दा करिब १ लाख ५० हजार वर्षअगाडि पृथ्वीमा बसोबास गर्ने नियन्डरथल मानव (Homo neanderthalensis) का शारीरिक विशेषताहरू आधुनिक मानिसको तुलनामा निकै फरक थिए। उनीहरू होचा र गठिला थिए, उनीहरूको खप्पर लाम्चो थियो र आँखामाथिका आँखीभौँका हड्डीहरू प्रस्ट बाहिर निस्केका थिए। उनीहरूले ढुङ्गाका मस्टेरियन हतियार बनाउने, आगोको प्रयोग गर्ने र मरेका मानिसलाई गाड्ने संस्कार सुरु गरे तापनि उनीहरूसँग स्पष्ट र परिष्कृत भाषा थिएन; उनीहरू सांकेतिक भाषामा कुरा गर्दथे।</p>
+
+            <p>तर उद्विकासको क्रममा आजको आधुनिक मानव अर्थात् होमो सेपियन्स (Homo sapiens) सम्म आइपुग्दा मानव शरीर र व्यवहारमा क्रान्तिकारी परिवर्तन आएको छ:</p>
+            <ol>
+                <li><strong>शारीरिक परिवर्तन:</strong> मानिसको खप्पर गोलकार भयो, मस्तिष्कको क्षमता र आकार अभिवृद्धि भयो, अनुहारका हड्डी र च्यापु साना तथा आकर्षक बने र जिउडाल पूर्ण रूपमा सन्तुलित भयो।</li>
+                <li><strong>व्यवहारगत परिवर्तन:</strong> सांकेतिक भाषाको ठाउँमा जटिल र स्पष्ट ध्वनि आधारित व्याकरणिक भाषाको विकास भयो। मानिसले जङ्गली सिकारी जीवन छोडेर कृषि, पशुपालन, स्थायी बस्ती र संगठित समाजको निर्माण गर्‍यो।</li>
+                <li><strong>प्रविधिको विकास:</strong> केवल ढुङ्गाका हतियारमा सीमित मानव आज डिजिटल, अन्तरिक्ष र कृत्रिम बौद्धिकता (AI) को युगमा आइपुगेको छ।</li>
+            </ol>
+
+            <p>यसरी हेर्दा नियन्डरथलबाट आधुनिक मानवसम्मको यात्रा शारीरिक सुन्दरता मात्र नभई चेतना र विवेकको अभूतपूर्व रूपान्तरण हो। तिमीलाई यो विषय कस्तो लाग्यो? पत्रको उत्तरमा लेख्नु है।</p>
+
+            <p style="text-align:right;"><strong>तिमीलाई माया गर्ने साथी,<br>
+            रोशन श्रेष्ठ</strong></p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ४: अभ्यासको समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson4" id="exercises">
+            <i class="fas fa-check-double"></i>
+            खण्ड ४: अभ्यासको पूर्ण समाधान
+            <span class="lesson-num">Exercises</span>
+        </div>
+
+        <!-- प्रश्न १ -->
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्रश्न १:</span> मानवको जैविक उद्विकासको छोटो परिचय लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> पृथ्वीमा रहेका सम्पूर्ण सजीव प्राणीहरूझैँ मानव जातिको उत्पत्ति पनि एकाएक नभई लाखौँ वर्षको क्रमिक जैविक उद्विकास (Biological Evolution) को परिणाम हो। वैज्ञानिक वर्गीकरणअनुसार मानिसको उत्पत्ति बाँदर वा नरवानर (Ape) बाट सिधै नभई नरवानरजस्तै देखिने (Ape-like) साझा पुर्खाबाट भएको हो।</p>
+
+                <p>आजभन्दा करिब ६० लाख वर्षअगाडि दुई खुट्टाले हिँड्न सक्ने, पुच्छर नभएका र ठुलो मस्तिष्क भएका 'होस्मिनिड' (Hominid) पुर्खाहरूको विकास भयो। उद्विकासको यस प्रक्रियामा अस्ट्रालोपिथेकस (Australopithecus) बाट सुरु भई होमो हयाबिलिस, होमो इरेक्टस, र होमो नियन्डरथलेंसिस हुँदै आजभन्दा करिब १ लाख ५० हजार वर्षअघि आधुनिक मानिस अर्थात् 'होमो सेपियन्स' (Homo sapiens) को उद्विकास भयो। शारीरिक बनावटमा सन्तुलन, मस्तिष्कको आकारमा वृद्धि, र दुवै हातको प्रभावकारी प्रयोग नै मानव जैविक उद्विकासका मुख्य आधारहरू हुन्।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न २ -->
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्रश्न २:</span> अस्ट्रालोपिथेकस र होमो हयाबिलिसबिचका समानता र भिन्नता प्रस्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानव उद्विकासका प्रारम्भिक दुई चरणहरू अस्ट्रालोपिथेकस र होमो हयाबिलिसबिचका समानता र भिन्नताहरू निम्न बमोजिम रहेका छन्:</p>
+
+                <p><strong>क) समानताहरू:</strong></p>
+                <ol>
+                    <li><strong>द्विपदीय हिँडाइ:</strong> दुवै प्रजाति दुई खुट्टाको सहाराले सिधा उभिएर हिँड्न सक्थे।</li>
+                    <li><strong>समूहगत आवास:</strong> दुवै प्रजातिहरू सुरक्षा र सिकारका लागि झुन्ड वा समूह बनाएर बस्ने गर्दथे।</li>
+                    <li><strong>प्राकृतिक आहार:</strong> दुवै प्रजातिहरू मुख्यतया प्राकृतिक कन्दमूल, फलफूल र साना जनावरको काँचो मासुमा निर्भर थिए।</li>
+                </ol>
+
+                <p><strong>ख) भिन्नताहरू (तुलनात्मक तालिका):</strong></p>
+            </div>
+        </div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: अस्ट्रालोपिथेकस र होमो हयाबिलिसबिचको भिन्नता</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:22%;">तुलनाको आधार</th>
+                        <th style="width:39%;">अस्ट्रालोपिथेकस</th>
+                        <th style="width:39%;">होमो हयाबिलिस</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. समय अवधि</strong></td>
+                        <td>आजभन्दा ४० लाखदेखि १० लाख वर्ष अगाडिसम्म अस्तित्वमा रहेको।</td>
+                        <td>आजभन्दा २३ लाखदेखि १५ लाख वर्ष अगाडिसम्म अस्तित्वमा रहेको।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. वैज्ञानिक जाति (Genus)</strong></td>
+                        <td>यो मानिसको प्रारम्भिक पुर्खा 'अस्ट्रालोपिथेकस' जातिमा पर्दछ।</td>
+                        <td>यो आधुनिक मानिसको आफ्नै जाति 'होमो' (Homo) को पहिलो प्रजाति हो।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. हतियार प्रयोग</strong></td>
+                        <td>यसले हतियार बनाउने वा प्रयोग गर्ने स्पष्ट क्षमता विकास गरेको थिएन।</td>
+                        <td>यसले ढुङ्गा र लट्ठीलाई हतियारका रूपमा कन्दमूल खन्न र सिकार गर्न प्रयोग गर्दथ्यो।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४. उपनाम/उपाधि</strong></td>
+                        <td>यसलाई केवल प्रारम्भिक होस्मिनिड पुर्खा मानिन्छ।</td>
+                        <td>यसको कार्यकुशलताका कारण यसलाई <strong>'सिपालु मानव'</strong> (Handy Human) भनिन्छ।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- परियोजना कार्य -->
+        <div class="sub-head"><i class="fas fa-file-lines"></i> परियोजना कार्य: वंशावली अध्ययन प्रतिवेदन</div>
+
+        <div class="content-box teal-light">
+            <p><strong>प्रश्न:</strong> तपाईँको पुर्खाको उद्विकास कहाँ भएको थियो? कसरी हालको ठाउँमा आएर बसोबास गरेका हुन् वा पहिलेदेखि नै त्यहीँ पो थिए कि आफ्ना अग्रजहरूसँग सोधेर वा वंशावली अध्ययन गरेर जानकारी सङ्कलन गर्नुहोस् र एक प्रतिवेदन बनाई प्रस्तुत गर्नुहोस्।</p>
+        </div>
+
+        <div class="letter-box">
+            <p style="text-align:center;"><strong>अनुसन्धान तथा अध्ययन प्रतिवेदन</strong></p>
+
+            <p><strong>१. शीर्षक:</strong> श्रेष्ठ परिवारको उत्पत्ति, उद्विकास र बसाइँसराइको ऐतिहासिक प्रतिवेदन</p>
+
+            <p><strong>२. अध्ययनको उद्देश्य:</strong> आफ्ना अग्रजहरू र वंशावलीको अध्ययन गरी आफ्ना पुर्खाको ऐतिहासिक उत्पत्ति र बसाइँसराइको इतिहास पत्ता लगाउनु।</p>
+
+            <p><strong>३. अध्ययन विधि:</strong> घरका ज्येष्ठ नागरिक (हजुरबुबा/हजुरआमा) सँगको अन्तर्वार्ता र वंश-वृक्ष (वंशावली पुस्तक) को अवलोकन।</p>
+
+            <p><strong>४. मुख्य खोज तथा प्राप्त विवरणहरू:</strong></p>
+            <ul>
+                <li><strong>पुर्खाको ऐतिहासिक उत्पत्ति:</strong> मानवशास्त्रीय दृष्टिकोणले सम्पूर्ण मानव जातिको उत्पत्ति अफ्रिकामा भए तापनि हाम्रो काठमाडौँ उपत्यकाको नेवार (श्रेष्ठ) पुर्खाको इतिहास लिच्छविकाल र मल्लकालसँग जोडिएको पाइयो।</li>
+                <li><strong>बसाइँसराइको क्रम:</strong> हाम्रा जिजुहजुरबुबाको पालासम्म हाम्रो मूल घर भक्तपुरको पुरानो बजारमा रहेको थियो।</li>
+                <li><strong>सहरबाट काभ्रे हुँदै काठमाडौँ फिर्ता:</strong> वि.सं. १९९० को दशकमा व्यापार व्यवसायका सिलसिलामा हाम्रा पुर्खाहरू काभ्रेको बनेपा गएर बसोबास गर्नुभएको थियो। पछि वि.सं. २०४५ सालतिर बुबाको रोजगार र हाम्रा अध्ययनका लागि पुनः काठमाडौँ (हालको नयाँ बानेश्वर) मा स्थायी बसोबास सुरु भएको पाइयो।</li>
+            </ul>
+
+            <p><strong>५. निष्कर्ष:</strong> मानव इतिहास सधैँ गतिशील र बसाइँसराइयुक्त हुन्छ। भौगोलिक, आर्थिक र सामाजिक अवसरहरूको खोजीका क्रममा मानिस एक ठाउँबाट अर्को ठाउँमा स्थानान्तरण भई अनुकूलन हुँदै आएको तथ्य आफ्नै परिवारको इतिहासबाट स्पष्ट हुन्छ।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ५: परीक्षा विशेष सम्भावित प्रश्नोत्तर ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson5" id="exam-qa">
+            <i class="fas fa-bullseye"></i>
+            खण्ड ५: परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="lesson-num">Exam Practice</span>
+        </div>
+
+        <!-- अति संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (१ अङ्क भार)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्रश्न १:</span> मानवको वैज्ञानिक नाम के हो?</div>
+            <div class="a"><p><strong>उत्तर:</strong> मानवको वैज्ञानिक नाम <strong>'होमो सेपियन्स' (Homo sapiens)</strong> हो।</p></div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्रश्न २:</span> पहिलो होस्मिनिड पुर्खा कसलाई मानिन्छ?</div>
+            <div class="a"><p><strong>उत्तर:</strong> खोज तथा अनुसन्धानका आधारमा <strong>'आर्डिपिथेकस' (Ardipithecus)</strong> लाई पहिलो होस्मिनिड मानिन्छ।</p></div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्रश्न ३:</span> 'सिपालु मानव' (Handy Human) भनेर कुन मानव प्रजातिलाई चिनिन्छ?</div>
+            <div class="a"><p><strong>उत्तर:</strong> <strong>'होमो हयाबिलिस' (Homo habilis)</strong> लाई सिपालु मानव भनेर चिनिन्छ।</p></div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्रश्न ४:</span> अफ्रिका महादेशबाट अन्य महादेशमा फैलिएको पहिलो मानव प्रजाति कुन हो?</div>
+            <div class="a"><p><strong>उत्तर:</strong> अफ्रिकाबाट एसिया र युरोप महादेशमा फैलिएको पहिलो मानव प्रजाति <strong>'होमो इरेक्टस' (Homo erectus)</strong> हो।</p></div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्रश्न ५:</span> नियन्डरथल मानवले प्रयोग गरेका ढुङ्गे हतियारको संस्कृतिलाई के भनिन्छ?</div>
+            <div class="a"><p><strong>उत्तर:</strong> नियन्डरथल मानवले प्रयोग गरेका ढुङ्गे हतियारको संस्कृतिलाई <strong>'मस्टेरियन संस्कृति' (Mousterian Culture)</strong> भनिन्छ।</p></div>
+        </div>
+
+        <!-- संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तरहरू (५ अङ्क भार)</div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">प्रश्न १:</span> होमो इरेक्टस (Homo erectus) का मुख्य शारीरिक र भौगोलिक विशेषताहरूको वर्णन गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अफ्रिका महादेशबाट विकसित भई विश्वका अन्य महादेशहरूमा फैलिने पहिलो मानव प्रजाति 'होमो इरेक्टस' हो।</p>
+
+                <p>यसका मुख्य विशेषताहरू निम्न बमोजिम छन्:</p>
+                <ul>
+                    <li><strong>भौगोलिक विस्तार:</strong> यसका अवशेषहरू दक्षिण अफ्रिका, केन्या, तान्जानियाका साथै एसियाको इन्डोनेसिया (जाभा), चीन (पेकिङ) र युरोपका विभिन्न भागमा भेटिएका छन्।</li>
+                    <li><strong>सिधा जिउडाल:</strong> यसको जिउडाल पूर्ण रूपमा सिधा थियो, जसले गर्दा यो टाढा-टाढासम्म सजिलै पैदल यात्रा गर्न सक्थ्यो।</li>
+                    <li><strong>आगोको प्रयोग:</strong> यस प्रजातिले नै सम्भवतः पहिलोपटक प्राकृतिक आगोको प्रयोग र नियन्त्रण गर्न सिकेको थियो।</li>
+                    <li><strong>शारीरिक बनावट:</strong> अघिल्ला पुर्खाहरूको तुलनामा यसको बङ्गारा र गालाका हड्डीहरू साना थिए तर चिउँडोको विकास भइसकेको थिएन।</li>
+                </ul>
+
+                <p>अतः होमो इरेक्टस मानव उद्विकासको इतिहासमा महादेशीय प्रवास र प्रविधि प्रयोगको महत्त्वपूर्ण मोड हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">प्रश्न २:</span> नियन्डरथल मानव (Homo neanderthalensis) को सामाजिक र सांस्कृतिक जीवनमा आएका परिवर्तनहरू स्पष्ट पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> जर्मनीको नियन्डर उपत्यकामा अवशेष भेटिएको नियन्डरथल मानव आधुनिक मानवभन्दा ठीक अघिल्लो उद्विकासको चरण हो।</p>
+
+                <p>यसको सामाजिक र सांस्कृतिक जीवनका मुख्य परिवर्तनहरू यस प्रकार छन्:</p>
+                <ul>
+                    <li><strong>मस्टेरियन हतियार संस्कृति:</strong> यिनीहरूले ढुङ्गालाई फुटाएर तिखा र परिष्कृत हतियार बनाई सिकार गर्ने कला (मस्टेरियन संस्कृति) विकास गरे।</li>
+                    <li><strong>आगो र ओढारको प्रयोग:</strong> यिनीहरूले आगोको नियमित प्रयोग गरी उज्यालो, ताप र जङ्गली जनावरबाट सुरक्षा प्राप्त गरे तथा ओढारमा बस्न थाले।</li>
+                    <li><strong>सामाजिक संस्कार (मृतक संस्कार):</strong> मरेका मानिसहरूलाई सम्मानपूर्वक गाड्ने संस्कारको सुरुवात गरे, जसले यिनीहरूमा आध्यात्मिक र सामाजिक चेतनाको विकास भएको पुष्टि गर्छ।</li>
+                    <li><strong>सांकेतिक सञ्चार:</strong> यिनीहरूमा पूर्ण भाषाको विकास नभए पनि समूहमा सहकार्य गर्न सांकेतिक बोलीको प्रयोग गर्दथे।</li>
+                </ul>
+
+                <p>अतः नियन्डरथल मानवमा सामाजिकता र संस्कृतिको प्रारम्भिक जग बसेको देखिन्छ।</p>
+            </div>
+        </div>
+
+        <!-- लामो -->
+        <div class="sub-head"><i class="fas fa-star"></i> लामो उत्तरात्मक प्रश्न (८ अङ्क भार - NEB ढाँचा)</div>
+
+        <div class="qa-block color8" style="border-left-color:#1A237E;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "मानवको जैविक उद्विकास एकाएक भएको घटना नभई प्राकृतिक अनुकूलन र क्रमिक शारीरिक-व्यवहारगत रूपान्तरणको लामो यात्रा हो।" यस भनाइलाई मानव उद्विकासका प्रमुख चरणहरू र तिनका विशेषताहरूका आधारमा विस्तृत विश्लेषणात्मक समीक्षा गर्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय (Introduction):</span> संसारका सम्पूर्ण सजीव प्राणीहरूझैँ मानव जातिको उत्पत्ति पनि कुनै अलौकिक वा एकाएक घटेको घटना होइन। यो आजभन्दा करिब ६० लाख वर्षअघि सुरु भएको प्राकृतिक चयन, वातावरणीय अनुकूलन र शारीरिक तथा मानसिक रूपान्तरणको एक जटिल र लामो जैविकीय यात्रा हो। वैज्ञानिक अध्ययनअनुसार मानवको उद्विकास बाँदरबाट नभई नरवानरजस्तै देखिने (Ape-like) साझा पुर्खाबाट भएको हो। दुई खुट्टाले हिँड्ने क्षमता, मस्तिष्कको आकारमा क्रमिक वृद्धि, हातको स्वतन्त्र प्रयोग र भाषा/संस्कृतिको विकास नै मानव उद्विकासका मुख्य माइलस्टोनहरू हुन्।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. मुख्य विश्लेषण र तर्कहरू (Core Analysis):</span> मानवको जैविक उद्विकासलाई ५ वटा प्रमुख क्रमिक चरणहरूमा विभाजन गरेर हेर्न सकिन्छ, जसले उद्विकासको निरन्तरतालाई पुष्टि गर्दछन्:</p>
+
+                <ul>
+                    <li><strong>अस्तित्वको प्रारम्भ (अस्ट्रालोपिथेकस - ४० देखि १० लाख वर्ष अगाडि):</strong> यो दुई खुट्टाले सिधा हिँड्न सक्ने पहिलो फराकिलो पुर्खा हो, जसको खप्पर बाँदरजस्तै भए पनि यसले झुन्डमा बसेर प्राकृतिक जीवन बिताउन थाल्यो।</li>
+                    <li><strong>कार्यानुभव र कार्यकुशलता (होमो हयाबिलिस - २३ देखि १५ लाख वर्ष अगाडि):</strong> 'होमो' जातिको सुरुवात भई यस प्रजातिले पहिलोपटक ढुङ्गा र लट्ठीलाई हतियारका रूपमा प्रयोग गरी 'सिपालु मानव' को रूपमा आफूलाई रूपान्तरण गर्‍यो।</li>
+                    <li><strong>शारीरिक सन्तुलन र प्रवास (होमो इरेक्टस - १८ देखि ३ लाख वर्ष अगाडि):</strong> पूर्ण रूपमा सिधा उभिने यो प्रजातिले आगोको नियन्त्रित प्रयोग गर्‍यो र अफ्रिकाको भूगोल नाघेर एसिया र युरोपसम्म आफ्नो बस्ती विस्तार गर्‍यो।</li>
+                    <li><strong>सामाजिकता र संस्कार (होमो नियन्डरथल - १.५ लाख देखि ३० हजार वर्ष अगाडि):</strong> यस चरणमा आइपुग्दा मस्टेरियन हतियार संस्कृति, आगोको प्रयोग, र मरेका मानिस गाड्ने सामाजिक-सांस्कृतिक संस्कारको विकास भयो।</li>
+                    <li><strong>बौद्धिक क्रान्ति (होमो सेपियन्स - १.५ लाख वर्षअघिदेखि हालसम्म):</strong> आधुनिक मानवको रूपमा विकसित भई पूर्ण भाषा, उन्नत चेतना, कृषि, प्रविधि र सभ्यताको सिर्जना भयो।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">३. व्यावहारिक/वास्तविक उदाहरण (Practical/Real-life Example):</span> मानव उद्विकासको यो सिद्धान्तलाई हामी आफ्नै शरीर र दैनिक व्यवहारमा प्रत्यक्ष महसुस गर्न सक्छौँ। उदाहरणका लागि, हाम्रा हातका बुढीऔँलाहरू अन्य चार औँलाको विपरीत दिशामा सजिलै मोडिन सक्छन् (Opposable Thumbs)। यही जैविक अनुकूलनका कारण आज हामी कलम समातेर लेख्न, कम्प्युटरको किबोर्ड चलाउन वा मेशिनहरू सञ्चालन गर्न सक्षम छौँ। यदि अस्ट्रालोपिथेकस र होमो हयाबिलिसका पालामा दुई खुट्टाले हिँडेर हातहरू स्वतन्त्र नभएका भए आजको आधुनिक प्रविधि र मानव सभ्यता सम्भव हुने थिएन।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">४. निष्कर्ष (Conclusion):</span> निष्कर्षमा, मानवको जैविक उद्विकास प्रकृतिको एक अनुपम र निरन्तर प्रक्रिया हो। अस्ट्रालोपिथेकसको शारीरिक जगदेखि होमो सेपियन्सको उच्च बौद्धिक क्षमतासम्म आइपुग्दा मानवले प्रकृतिसँग निरन्तर सङ्घर्ष र अनुकूलन गर्दै आफूलाई श्रेष्ठ प्राणीका रूपमा स्थापित गरेको छ। यो लामो उद्विकासको इतिहासले हामीलाई प्रकृतिसँग मिलेर बस्न र मानवीय चेतनाको संरक्षण गर्न सदैव प्रेरणा प्रदान गर्दछ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" id="finaltip" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> यो एकाइ ४, पाठ १ को परीक्षा क्याप्सुल नोट हो। मानव उद्विकासका ५ प्रमुख चरणहरू — <strong>अस्ट्रालोपिथेकस → होमो हयाबिलिस → होमो इरेक्टस → होमो नियन्डरथल → होमो सेपियन्स</strong> — क्रम, समय, स्थान र विशेषतासहित शुद्ध रूपमा याद गर्नुहोस्। NEB परीक्षामा ५ र ८ अङ्कका उत्तरहरू अनिवार्य रूपमा <strong>३-स्तरीय ढाँचा</strong> (परिचय → विश्लेषण → निष्कर्ष) मा लेख्नुहोस्। शुभकामना!
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ४, पाठ १</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
