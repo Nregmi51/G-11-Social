@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>कक्षा ११ – एकाइ ४, पाठ २: मानव समाजको विकासक्रम</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.85rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.14rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- INFO CARD ----- */
+        .exam-info {
+            background: #eef0f0;
+            border: 2px solid #5C6BC0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 24px;
+        }
+
+        .exam-info h3 {
+            color: #1A237E;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exam-info h3 i {
+            color: #1A237E;
+        }
+
+        .exam-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .exam-info ul li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #374210;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-info ul li i {
+            color: #1A237E;
+            margin-top: 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .exam-info ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 14.5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 44px 0 8px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.22);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .section-head .section-num {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 900;
+            padding: 3px 14px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-head.sh1 { background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%); }
+        .section-head.sh2 { background: linear-gradient(135deg, #1f7a4a 0%, #2e9e63 100%); }
+        .section-head.sh3 { background: linear-gradient(135deg, #6A1B9A 0%, #8E24AA 100%); }
+        .section-head.sh4 { background: linear-gradient(135deg, #b45309 0%, #d97706 100%); }
+        .section-head.sh5 { background: linear-gradient(135deg, #0f7a7a 0%, #14a0a0 100%); }
+
+        /* ----- SUB HEADERS ----- */
+        .sub-head {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.05rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 22px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sub-head-sm i {
+            color: #1A237E;
+            font-size: 1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.13rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- FACT BOX ----- */
+        .fact-box {
+            background: #fff8e1;
+            border: 2px dashed #d97706;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 16px 0;
+            font-weight: 600;
+        }
+
+        .fact-box .fact-title {
+            color: #b45309;
+            font-weight: 900;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .fact-box .fact-title i {
+            color: #b45309;
+        }
+
+        .fact-box p,
+        .fact-box ul,
+        .fact-box li {
+            font-size: 1.08rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        .fact-box ul {
+            padding-left: 24px;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.02rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f6f8f3;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.13rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #1A237E;
+            font-size: 1.06rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1A237E;
+        }
+
+        .glossary-item strong {
+            color: #1A237E;
+            font-size: 1.06rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .glossary-item p {
+            font-size: 1rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        .glossary-item .num {
+            display: inline-block;
+            background: #1A237E;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.78rem;
+            font-weight: 900;
+            margin-right: 6px;
+        }
+
+        @media (max-width: 700px) {
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- FLOW CHART (Mermaid CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            margin: 16px 0;
+            padding: 20px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 0.98rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 220px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.4rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        .mermaid-step.root { background: #f3e5f5; border-color: #6A1B9A; }
+        .mermaid-step.stone { background: #fce4ec; border-color: #a03a5a; }
+        .mermaid-step.paleo { background: #e3f2fd; border-color: #1A237E; }
+        .mermaid-step.meso { background: #fff3e0; border-color: #d97706; }
+        .mermaid-step.neo { background: #e8f5e9; border-color: #1f7a4a; }
+        .mermaid-step.final { background: #f5d742; border-color: #b45309; font-weight: 900; }
+
+        /* ----- SLIDE BOX ----- */
+        .slide-box {
+            background: #faf8f5;
+            border: 2px solid #b8c0a8;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin: 14px 0;
+        }
+
+        .slide-box .slide-title {
+            background: #1A237E;
+            color: #ffffff;
+            font-weight: 900;
+            font-size: 1.02rem;
+            padding: 8px 18px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .slide-box ul {
+            padding-left: 24px;
+        }
+
+        .slide-box li {
+            font-size: 1.06rem;
+            margin-bottom: 5px;
+            color: #374210;
+        }
+
+        /* ----- SPEECH BOX ----- */
+        .speech-box {
+            background: #ffffff;
+            border: 2px dashed #1A237E;
+            border-radius: 14px;
+            padding: 22px 28px;
+            margin: 16px 0;
+        }
+
+        .speech-box .speech-title {
+            font-weight: 900;
+            color: #1A237E;
+            font-size: 1.15rem;
+            text-align: center;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #b8c0a8;
+        }
+
+        .speech-box p {
+            font-weight: 500;
+            font-size: 1.08rem;
+            margin-bottom: 10px;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .speech-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .speech-box .greeting {
+            font-style: italic;
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        /* ----- MARKS TAG ----- */
+        .marks-tag {
+            display: inline-block;
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 40px;
+            margin-left: 8px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.06rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.3rem;
+            }
+
+            .section-head {
+                font-size: 1.2rem;
+                padding: 12px 16px;
+            }
+
+            .section-head i {
+                width: 34px;
+                height: 34px;
+                font-size: 1.1rem;
+            }
+
+            .section-head .section-num {
+                font-size: 0.66rem;
+                padding: 2px 10px;
+            }
+
+            .sub-head {
+                font-size: 1.08rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.88rem;
+                padding: 10px 16px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.84rem;
+            }
+            th,
+            td {
+                font-size: 0.84rem;
+                padding: 6px 8px;
+            }
+            .mermaid-step {
+                font-size: 0.82rem;
+                padding: 6px 14px;
+                min-width: 170px;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+            .slide-box {
+                padding: 14px 16px;
+            }
+            .slide-box li {
+                font-size: 1rem;
+            }
+            .speech-box {
+                padding: 16px 18px;
+            }
+            .speech-box p {
+                font-size: 1rem;
+            }
+            .glossary-item strong {
+                font-size: 1rem;
+            }
+            .glossary-item p {
+                font-size: 0.96rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-people-group"></i>
+                    एकाइ ४, पाठ २: मानव समाजको विकासक्रम
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-star"></i> परीक्षा क्याप्सुल नोट</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा ११ – एकाइ ४, पाठ २
+            </span>
+        </div>
+
+        <!-- ===== EXAM INFO ===== -->
+        <div class="exam-info">
+            <h3><i class="fas fa-circle-info"></i> नोट विवरण</h3>
+            <ul>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय:</strong> सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>एकाइ:</strong> ४ – मानव तथा समाजको उद्भव र विकास</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>पाठ:</strong> २ – मानव समाजको विकासक्रम</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>लक्ष्य:</strong> ८ अङ्कमा ७.५ र ५ अङ्कमा ४.५ सम्म</span></li>
+            </ul>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#glossary"><i class="fas fa-chevron-right"></i> खण्ड १: पारिभाषिक शब्दावली</a>
+                <a href="#notes"><i class="fas fa-chevron-right"></i> खण्ड २: विस्तृत प्राज्ञिक नोट</a>
+                <a href="#activities"><i class="fas fa-chevron-right"></i> खण्ड ३: क्रियाकलाप समाधान</a>
+                <a href="#exercises"><i class="fas fa-chevron-right"></i> खण्ड ४: अभ्यास समाधान</a>
+                <a href="#exam-qa"><i class="fas fa-chevron-right"></i> खण्ड ५: परीक्षा विशेष प्रश्नोत्तर</a>
+                <a href="#finaltip"><i class="fas fa-chevron-right"></i> अन्तिम सल्लाह</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड १: पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh1" id="glossary">
+            <i class="fas fa-book-open"></i>
+            खण्ड १: विषयगत पारिभाषिक शब्दावली
+            <span class="section-num">Glossary</span>
+        </div>
+
+        <div class="content-box blue-light">
+            <p>यस पाठमा प्रयोग भएका मुख्य <strong>१० वटा प्राविधिक, समाजशास्त्रीय तथा मानवशास्त्रीय शब्दहरूको</strong> परीक्षा-उपयोगी र प्राज्ञिक परिभाषा निम्न बमोजिम छ:</p>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><span class="num">१</span> मानव समाज (Human Society)</strong>
+                <p>निश्चित भूगोल वा क्षेत्रभित्र समान सामाजिक-सांस्कृतिक सम्बन्ध, सहकार्य, अन्तरनिर्भरता र सञ्चारका माध्यमबाट आपसमा जोडिएका मानिसहरूको सङ्गठित समूह।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२</span> आदिम साम्यवाद (Primitive Communism)</strong>
+                <p>मानव समाज विकासको पहिलो चरण, जहाँ निजी सम्पत्ति, वर्ग र शोषणको अस्तित्व थिएन र सबै उत्पादनका साधनहरूमा सम्पूर्ण समुदायको साझा स्वामित्व रहन्थ्यो।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">३</span> ढुङ्गे युग (Stone Age)</strong>
+                <p>मानव इतिहासको त्यो प्रारम्भिक प्रागैतिहासिक कालखण्ड, जहाँ मानिसहरूले आफ्नो दैनिकी, शिकार र जीवनयापनका लागि मुख्यतया ढुङ्गाका औजार र हतियारहरूको प्रयोग गर्दथे।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">४</span> पुरापाषाण युग (Paleolithic Age)</strong>
+                <p>आजभन्दा करिब २५ लाख वर्षअघिदेखि १०,००० वर्ष अगाडिसम्म कायम रहेको ढुङ्गे युगको सबैभन्दा लामो प्रारम्भिक चरण, जहाँ मानिसहरू घुमन्ते र सिकारी जीवन बिताउँथे।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">५</span> मस्टेरियन र लेभाल्लोइसियन संस्कृति</strong>
+                <p>मध्य पुरापाषाण कालमा नियन्डरथल मानवले ढुङ्गाका पातला चोइटा (Flakes) निकालेर निर्माण गरेका धारिला, परिष्कृत औजारहरू र तिनको विशिष्ट निर्माण प्रविधि।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">६</span> मध्यपाषाण युग (Mesolithic Age)</strong>
+                <p>पुरापाषाण र नवपाषाण युगबिचको सङ्क्रमणकालीन कालखण्ड (करिब १०,००० वर्ष अगाडि), जहाँ मानिसहरूले काठ र सिङमा जोडिएका सूक्ष्म औजारहरू (Microliths) र प्रारम्भिक कृषिको थालनी गरे।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">७</span> नवपाषाण युग (Neolithic Age)</strong>
+                <p>आजभन्दा करिब ९,००० वर्षअगाडि सुरु भएको ढुङ्गे युगको अन्तिम र सबैभन्दा विकसित चरण, जहाँ चिल्ला औजारहरू, स्थायी बसोबास, खेतीपाती र पशुपालनको विकास भयो।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">८</span> नवपाषाण क्रान्ति (Neolithic Revolution)</strong>
+                <p>नवपाषाण युगमा मानिसहरू घुमन्ते सिकारी जीवनशैली छोडेर स्थायी बसोबास, व्यवस्थित कृषि र पशुपालनतर्फ रूपान्तरण भई मानव संस्कृति र समाजमा आएको व्यापक र अभूतपूर्व परिवर्तन।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">९</span> सामन्तवादी समाज (Feudal Society)</strong>
+                <p>भूमि (जमिन) उत्पादनको मुख्य साधनका रूपमा रहेको सामाजिक-आर्थिक व्यवस्था, जहाँ जमिनदार/भूस्वामीहरूले किसान तथा भूदासहरूमाथि प्रभुत्व कायम राख्दथे।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">१०</span> पुँजीवादी समाज (Capitalist Society)</strong>
+                <p>उद्योग, प्रविधि र निजी पुँजी उत्पादनको मुख्य आधार रहेको आधुनिक सामाजिक-आर्थिक व्यवस्था, जहाँ बजार प्रतिस्पर्धा र नाफा आर्जन मुख्य उद्देश्य हुन्छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड २: विस्तृत प्राज्ञिक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh2" id="notes">
+            <i class="fas fa-lightbulb"></i>
+            खण्ड २: विस्तृत प्राज्ञिक नोट
+            <span class="section-num">Core Notes</span>
+        </div>
+
+        <!-- २.१ अवधारणा -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. मानव समाजको उत्पत्ति र अवधारणा</div>
+
+        <div class="content-box green-light">
+            <ul>
+                <li><strong>उत्पत्ति:</strong> आदिम मानवमा चेतना र सामूहिक सोचको विकास भएसँगै समाजको उत्पत्ति भएको हो। सुरक्षा, खाद्यवस्तुको खोजी र शिकारका लागि समूहमा बस्नुपर्ने बाध्यताले परिवार र समाज निर्माण गर्‍यो।</li>
+            </ul>
+
+            <p><strong>कार्ल मार्क्स (Karl Marx) का अनुसार समाज विकासका ४ चरणहरू:</strong></p>
+            <ol>
+                <li><strong>आदिम साम्यवादी समाज:</strong> साझा स्वामित्व र वर्गविहीन अवस्था।</li>
+                <li><strong>दासप्रथाको समाज:</strong> मालिक र दासबिचको वर्ग विभाजन।</li>
+                <li><strong>सामन्तवादी समाज:</strong> भूस्वामी (जमिनदार) र किसान/भूदासबिचको सम्बन्ध।</li>
+                <li><strong>पुँजीवादी समाज:</strong> पुँजीपति (मालिक) र श्रमिकबिचको सम्बन्ध।</li>
+            </ol>
+
+            <p><strong>इ. बी. टेलर र ए. एल. मोर्गनका अनुसार समाज विकासका ३ चरणहरू:</strong></p>
+            <ol>
+                <li><strong>ढुङ्गे युग (प्रारम्भिक चरण):</strong> घुमन्ते र अशिक्षित अवस्था।</li>
+                <li><strong>बर्बर युग (मध्यकालीन चरण):</strong> पशुपालन र प्रारम्भिक कृषि अवस्था।</li>
+                <li><strong>सभ्य युग (आधुनिक चरण):</strong> लिपि, नगर, प्रविधि र व्यवस्थित राज्य प्रणालीको विकास।</li>
+            </ol>
+        </div>
+
+        <!-- २.२ प्रवाहचित्र -->
+        <div class="sub-head"><i class="fas fa-diagram-project"></i> २. ढुङ्गे युगको वर्गीकरण र उद्विकासक्रम प्रवाहचित्र</div>
+
+        <div class="mermaid-flow">
+            <div class="mermaid-step stone">ढुङ्गे युग (Stone Age)<br><span style="font-weight:400;font-size:0.85rem;">२५ लाख देखि ३ हजार वर्ष अगाडि</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step paleo">पुरापाषाण युग (Paleolithic)<br><span style="font-weight:400;font-size:0.85rem;">२५ लाख – १० हजार वर्ष अगाडि</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step paleo">निम्न पुरापाषाण शैली<br><span style="font-weight:400;font-size:0.85rem;">२५ लाख – २ लाख वर्ष</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step paleo">मध्य पुरापाषाण शैली<br><span style="font-weight:400;font-size:0.85rem;">२ लाख – ४० हजार वर्ष</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step paleo">उच्च पुरापाषाण शैली<br><span style="font-weight:400;font-size:0.85rem;">४० हजार – १० हजार वर्ष</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step meso">मध्यपाषाण युग (Mesolithic)<br><span style="font-weight:400;font-size:0.85rem;">करिब १० हजार वर्ष अगाडि</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step neo">नवपाषाण युग (Neolithic)<br><span style="font-weight:400;font-size:0.85rem;">करिब ९ हजार वर्ष अगाडिदेखि</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="mermaid-step final">नवपाषाण क्रान्ति → धातु युग → सभ्यताको विकास</div>
+        </div>
+
+        <!-- २.३ तुलनात्मक तालिका -->
+        <div class="sub-head"><i class="fas fa-table"></i> ३. पाषाण (ढुङ्गे) युगका विभिन्न चरणहरूको तुलनात्मक तालिका</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: ढुङ्गे युगका ५ चरणहरूको तुलना</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:16%;">पाषाण युगको चरण</th>
+                        <th style="width:14%;">मुख्य समय सीमा</th>
+                        <th style="width:20%;">प्रमुख मानव प्रजाति र संस्कृति</th>
+                        <th style="width:22%;">औजार र प्रविधिको स्वरूप</th>
+                        <th style="width:28%;">मुख्य सामाजिक-सांस्कृतिक विशेषताहरू</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. निम्न पुरापाषाण</strong></td>
+                        <td>२५ लाख – २ लाख वर्ष अगाडि</td>
+                        <td>होमो इरेक्टस (Homo erectus)</td>
+                        <td>साना भद्दा ढुङ्गाका औजार, हाते बन्चरो (Hand axe)</td>
+                        <td>घुमन्ते जीवन, झुण्डमा बसोबास, आगोको नियन्त्रित प्रयोग सुरु।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. मध्य पुरापाषाण</strong></td>
+                        <td>२ लाख – ४० हजार वर्ष अगाडि</td>
+                        <td>नियन्डरथल (Neanderthal)</td>
+                        <td>मस्टेरियन र लेभाल्लोइसियन संस्कृति, तिखा चोइटा औजार</td>
+                        <td>गुफामा बसोबास, मरेका मानिस गाड्ने संस्कार, सांकेतिक भाषा।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. उच्च पुरापाषाण</strong></td>
+                        <td>४० हजार – १० हजार वर्ष अगाडि</td>
+                        <td>होमो सेपियन्स (Homo sapiens)</td>
+                        <td>परिष्कृत ब्लेड, भाला, तिर, सुइ, हड्डीका औजार</td>
+                        <td>गुफा चित्रकला (Art), कपडा लगाउने habit, जङ्गली जनावर पाल्न सुरु।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४. मध्यपाषाण</strong></td>
+                        <td>करिब १० हजार वर्ष अगाडि</td>
+                        <td>सङ्क्रमणकालीन मानव समाज</td>
+                        <td>ज्यामितीय आकारका सूक्ष्म औजार (Microliths), बिँड भएका औजार</td>
+                        <td>कन्दमूल प्रशोधन, कपडा बुन्ने काम, प्रारम्भिक खेतीपातीको सुरुवात।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>५. नवपाषाण</strong></td>
+                        <td>करिब ९ हजार वर्ष अगाडिदेखि</td>
+                        <td>आधुनिक मानव (Homo sapiens)</td>
+                        <td>पालिस गरिएका चिल्ला र तिखा औजारहरू, भाँडाकुँडा</td>
+                        <td><strong>नवपाषाण क्रान्ति:</strong> स्थायी बसोबास, व्यवस्थित कृषि, पशुपालन, निजी सम्पत्ति।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- २.४ नवपाषाण क्रान्ति -->
+        <div class="sub-head"><i class="fas fa-wheat-awn"></i> ४. नवपाषाण क्रान्ति (Neolithic Revolution) र यसका प्रभावहरू</div>
+
+        <div class="content-box gold-light">
+            <ul>
+                <li><strong>कृषिको सुरुवात:</strong> मेसोपोटामिया, जोर्डन, इजिप्ट (गहुँ, जौ), चीन (धान, कोदो), अफ्रिका (तिल, कोदो) र अमेरिका (मकै, आलु, भटमास) मा खेतीपाती सुरु।</li>
+                <li><strong>पशुपालन:</strong> गाई, भैँसी, भेडा, बाख्रा, सुँगुर, कुकुरलाई घरपालुवा बनाइयो।</li>
+                <li><strong>सामाजिक परिवर्तन:</strong> घुमन्ते जीवनको अन्त्य भई नदी किनारमा स्थायी गाउँ र घरहरूको निर्माण।</li>
+                <li><strong>निजी सम्पत्ति र असमानता:</strong> जमिन र उब्जनीमा व्यक्तिगत स्वामित्व बढेपछि समाजमा धनी र गरिबबिच असमानता र वर्गको विकास भयो।</li>
+                <li><strong>धातु युगको जग:</strong> नवपाषाण युगको अन्त्यतिर ताँबो (Copper) र कांस्य (Bronze) धातुको आविष्कार भई प्राच्य नदीघाँटी सभ्यताहरूको विकास भयो।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ३: क्रियाकलापको समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh3" id="activities">
+            <i class="fas fa-hands"></i>
+            खण्ड ३: पाठका क्रियाकलापहरूको पूर्ण समाधान
+            <span class="section-num">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-desktop"></i> क्रियाकलाप १: मानव समाजको उद्विकासका बारेमा सानो बुकलेट वा स्लाइड प्रस्तुतीकरणको रूपरेखा तयार गर्ने</div>
+
+        <div class="content-box orange-light">
+            <p><strong>प्रस्तुतीकरण/बुकलेटको शीर्षक:</strong> "आदिम साम्यवाददेखि आधुनिक युगसम्म: मानव समाजको विकासक्रम"</p>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड १: परिचय</div>
+            <ul>
+                <li>मानव समाजको परिभाषा र उद्विकासको अवधारणा।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड २: विद्वान्का दृष्टिकोण</div>
+            <ul>
+                <li>कार्ल मार्क्स (आदिम साम्यवाद, दास, सामन्तवाद, पुँजीवाद) र इ.बी. टेलर/मोर्गन (ढुङ्गे, बर्बर, सभ्य युग) का सिद्धान्तहरू।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड ३: पुरापाषाण युग</div>
+            <ul>
+                <li>पुरापाषाणका ३ चरण (निम्न, मध्य, उच्च) र होमो इरेक्टस तथा नियन्डरथलको जीवनशैली।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड ४: मध्यपाषाण युग</div>
+            <ul>
+                <li>सूक्ष्म औजार (Microliths) को प्रयोग र प्रारम्भिक कृषि।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड ५: नवपाषाण युग र क्रान्ति</div>
+            <ul>
+                <li>स्थायी बसोबास, व्यवस्थित खेतीपाती, पशुपालन र चिल्ला औजारहरू।</li>
+            </ul>
+        </div>
+
+        <div class="slide-box">
+            <div class="slide-title">स्लाइड ६: निष्कर्ष</div>
+            <ul>
+                <li>ढुङ्गे युगको जगमा आधुनिक सभ्य समाज र प्रविधिको निर्माण।</li>
+            </ul>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-comments"></i> क्रियाकलाप २: ढुङ्गे युगका मानव र अहिलेका मानिसको जीवनशैलीबिच तुलना</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: ढुङ्गे युगका मानव र आधुनिक मानिसको तुलना</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:20%;">तुलनाको आधार</th>
+                        <th style="width:40%;">ढुङ्गे युगका मानवको जीवनशैली</th>
+                        <th style="width:40%;">आधुनिक मानिसको जीवनशैली</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. बासस्थान</strong></td>
+                        <td>गुफा, रुखका छहारी र अस्थायी छाप्रो।</td>
+                        <td>पक्की घर, अग्ला भवन, आधुनिक सहर।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. भोजन र उब्जनी</strong></td>
+                        <td>जङ्गली फलफूल, कन्दमूल र कच्चा/पोलेको मासु।</td>
+                        <td>व्यवस्थित कृषि, खाद्यान्न प्रशोधन र विविधतायुक्त परिकार।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. औजार र प्रविधि</strong></td>
+                        <td>ढुङ्गा, हड्डी र काठका कच्चा वा चिल्ला औजार।</td>
+                        <td>डिजिटल प्रविधि, मेसिन, कम्प्युटर, स्वचालित उपकरण।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४. पोशाक</strong></td>
+                        <td>जनावरको छाला, रुखका बोक्रा र पातहरू।</td>
+                        <td>सुती, सिल्क, उन र सिन्थेटिक कपडाहरू।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>५. सामाजिक संरचना</strong></td>
+                        <td>वर्गविहीन, साना झुण्ड र साझा स्वामित्व (आदिम साम्यवाद)।</td>
+                        <td>जटिल सामाजिक वर्ग, कानुनी राज्य, निजी सम्पत्ति र राज्य व्यवस्था।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- क्रियाकलाप ३ -->
+        <div class="sub-head"><i class="fas fa-microphone"></i> क्रियाकलाप ३: 'आजको मानव समाज लाखौँ वर्षदेखिको क्रमबद्ध विकासको परिणाम हो' शीर्षकमा वक्तृता</div>
+
+        <div class="speech-box">
+            <p class="speech-title"><i class="fas fa-microphone" style="color:#1A237E; margin-right:6px;"></i> वक्तृता / मन्तव्य नमुना</p>
+
+            <p class="greeting">आदरणीय सभाध्यक्ष महोदय, निर्णायक मण्डल, र मेरा सहपाठी साथीहरू!</p>
+
+            <p>आज म यस गरिमामय सभामा <strong>"आजको मानव समाज लाखौँ वर्षदेखिको क्रमबद्ध विकासको परिणाम हो"</strong> भन्ने शीर्षकमा आफ्ना विचारहरू प्रस्तुत गर्न उभिएको छु।</p>
+
+            <p>आज हामी जुन प्रविधि, सहर, सुविधा र अधिकारयुक्त विकसित समाजमा बाँचिरहेका छौँ, यो रातारात बनेको होइन। आजभन्दा करिब २५ लाख वर्षअगाडि हाम्रा प्राचीन पुर्खाहरूले ढुङ्गाका भद्दा औजार बनाएर आफ्नो अस्तित्व जोगाउन सुरु गरेका थिए। पुरापाषाण कालमा होमो इरेक्टस र नियन्डरथलहरूले आगो बाल्न, मरेकालाई गाड्न र गुफामा चित्र बनाउन सिके।</p>
+
+            <p>करिब ९ हजार वर्षअगाडि नवपाषाण युगमा मानिसले घुमन्ते जीवन छोडेर खेतीपाती र पशुपालन अङ्गालेपछि मात्र स्थायी समाजको जग बस्यो। यसैलाई इतिहासमा <strong>'नवपाषाण क्रान्ति'</strong> भनिन्छ। कार्ल मार्क्स र इ.बी. टेलर जस्ता विद्वान्‌हरूका अनुसार समाज आदिम साम्यवाद, बर्बर युग हुँदै आजको पुँजीवादी र औद्योगिक सभ्य युगमा आइपुगेको हो।</p>
+
+            <p>तसर्थ, आजको मानव सभ्यता हाम्रा पुर्खाहरूको निरन्तर सङ्घर्ष, खोज, आविष्कार र श्रमको पुस्तान्तरित उपज हो। हामीले आफ्नो इतिहास बुझेर मात्र समृद्ध भविष्य निर्माण गर्न सक्छौँ।</p>
+
+            <p style="text-align:right; font-weight:800; color:#1A237E;">धन्यवाद!</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ४: अभ्यासको समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh4" id="exercises">
+            <i class="fas fa-check-double"></i>
+            खण्ड ४: पाठका अभ्यासहरूको पूर्ण समाधान
+            <span class="section-num">Exercises</span>
+        </div>
+
+        <!-- प्रश्न १ -->
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्रश्न १:</span> कार्ल मार्क्स, इ. बी. टेलर र ए. एल. मोर्गनका समाज विकासका चरणहरू उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानव समाजको ऐतिहासिक विकासक्रमलाई विभिन्न समाजशास्त्री र मानवशास्त्रीहरूले फरक-फरक दृष्टिकोणबाट वर्गीकरण गरेका छन्:</p>
+
+                <p><strong>क) कार्ल मार्क्स (Karl Marx) का अनुसार समाज विकासका ४ चरणहरू:</strong></p>
+                <ol>
+                    <li><strong>आदिम साम्यवादी समाज:</strong> उत्पादनका साधनमा साझा स्वामित्व रहेको र वर्गविहीन समाज।</li>
+                    <li><strong>दासप्रथाको समाज:</strong> मालिक र दास गरी दुई मुख्य विरोधी वर्ग भएको समाज।</li>
+                    <li><strong>सामन्तवादी समाज:</strong> जमिनदार (भूस्वामी) र किसान/भूदासबिच शोषणमूलक सम्बन्ध रहेको समाज।</li>
+                    <li><strong>पुँजीवादी समाज:</strong> उद्योग, प्रविधि र निजी पुँजीमा आधारित आधुनिक बजार समाज।</li>
+                </ol>
+
+                <p><strong>ख) इ. बी. टेलर र ए. एल. मोर्गनका अनुसार समाज विकासका ३ चरणहरू:</strong></p>
+                <ol>
+                    <li><strong>ढुङ्गे युग वा जङ्गली अवस्था (Savagery Stage):</strong> प्रविधिको अभावमा घुमन्ते र सिकारी जीवन बिताउने प्रारम्भिक चरण।</li>
+                    <li><strong>बर्बर युग वा मध्यकालीन अवस्था (Barbarism Stage):</strong> मिट्टीका भाँडा, पशुपालन र प्रारम्भिक कृषिको विकास भएको चरण।</li>
+                    <li><strong>सभ्य युग वा आधुनिक अवस्था (Civilization Stage):</strong> लिपि, नगर, कानुन र जटिल सामाजिक संस्थाहरूको विकास भएको उच्च चरण।</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- प्रश्न २ -->
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्रश्न २:</span> तपाईँ बस्ने समाज समाज विकासका कुन चरणसँग मिल्दोजुल्दो छ, आफ्नो तर्क लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> म हाल बसोबास गरिरहेको काठमाडौँ उपत्यकाको सहरी समाज समाज विकासका दृष्टिकोणले <strong>'पुँजीवादी तथा सभ्य/आधुनिक चरण'</strong> सँग पूर्ण रूपमा मिल्दोजुल्दो छ। यसका पक्षमा मेरा तर्कहरू निम्नलिखित छन्:</p>
+                <ol>
+                    <li><strong>उद्योग, व्यापार र पुँजीको प्रधानता:</strong> यहाँका अधिकांश मानिसहरू कृषिमा भन्दा उद्योग, व्यापार, वित्तीय संस्था, सूचना प्रविधि र सेवा क्षेत्रमा संलग्न छन्।</li>
+                    <li><strong>निजी सम्पत्ति र बजार व्यवस्था:</strong> उत्पादन र सेवाका साधनहरूमा निजी स्वामित्व छ र प्रतिस्पर्धात्मक बजार अर्थतन्त्र कायम छ।</li>
+                    <li><strong>आधुनिक सुविधाहरू र प्रविधि:</strong> सञ्चार, यातायात, शिक्षा, स्वास्थ्य र डिजिटल प्रविधिको व्यापक प्रयोग छ, जुन सभ्य युगको मुख्य विशेषता हो।</li>
+                    <li><strong>श्रम विभाजन र विशिष्टीकरण:</strong> समाजमा डाक्टर, इन्जिनियर, शिक्षक, व्यापारी, र प्रविधिज्ञ जस्ता विविध पेसागत श्रम विभाजन कायम छ।</li>
+                </ol>
+                <p>तसर्थ, मेरो समाज कार्ल मार्क्सको 'पुँजीवादी समाज' र मोर्गनको 'सभ्य युग' को विशेषताहरूसँग मेल खान्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न ३ -->
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्रश्न ३:</span> नवपाषाण युगको सामाजिक-सांस्कृतिक विशेषताहरू उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नवपाषाण युग (Neolithic Age) मानव समाजको विकासमा अत्यन्तै महत्त्वपूर्ण कालखण्ड हो। यस युगका प्रमुख सामाजिक-सांस्कृतिक विशेषताहरू निम्नानुसार छन्:</p>
+                <ol>
+                    <li><strong>स्थायी बसोबासको सुरुवात:</strong> घुमन्ते जीवनको अन्त्य भई नदी किनार तथा मलिला क्षेत्रहरूमा स्थायी गाउँ र घरहरू निर्माण गरी बस्न थालियो।</li>
+                    <li><strong>व्यवस्थित कृषि र पशुपालन:</strong> गहुँ, जौ, धान, मकै आदिको खेती र गाई, भैँसी, भेडा, बाख्रा, कुकुर आदिलाई घरपालुवा बनाइयो।</li>
+                    <li><strong>पालिस गरिएका परिष्कृत औजारहरू:</strong> ढुङ्गालाई ताछेर र घटेर चिल्ला, तिखा र उपयोग गरिने औजारहरू (जस्तै: बन्चरो, कोदालो, हँसिया) बनाइयो।</li>
+                    <li><strong>निजी सम्पत्तिको अवधारणा:</strong> जमिन र उब्जनीमा व्यक्तिगत अधिकार सुरु भयो, जसले गर्दा धनी र गरिबबिच सामाजिक असमानताको बिजारोपण भयो।</li>
+                    <li><strong>श्रम विभाजन र प्रविधि:</strong> माटाका भाँडाकुँडा (Pottery) बनाउने, कपडा बुन्ने (Weaving), र टोकरी बुन्ने जस्ता सीप र प्रविधिको विकास भयो।</li>
+                    <li><strong>धातु युगको थालनी:</strong> नवपाषाण युगको अन्त्यतिर ताँबो जस्ता धातुको खोज भई प्रागैतिहासिक सभ्यताको विकास भयो।</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- प्रश्न ४ -->
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्रश्न ४:</span> नवपाषाण युग (Neolithic period) लाई क्रान्तिकारी युग भनिन्छ। आफ्नो तर्कसहित पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नवपाषाण युगलाई मानव इतिहासमा <strong>'नवपाषाण क्रान्ति' (Neolithic Revolution)</strong> वा क्रान्तिकारी युग भनिन्छ। यस भनाइलाई पुष्टि गर्ने बलिया तर्कहरू निम्नलिखित छन्:</p>
+                <ol>
+                    <li><strong>जीविकोपार्जनमा गुणात्मक परिवर्तन:</strong> मानिसहरू प्रकृतिबाट केवल खाद्यवस्तु सङ्कलन गर्ने (Food Gatherers) अवस्थाबाट आफैँ भोजन उत्पादन गर्ने (Food Producers) अवस्थामा रूपान्तरण भए।</li>
+                    <li><strong>स्थायी समाज र परिवारको जग:</strong> लाखौँ वर्षदेखिको अस्थित्वहीन घुमन्ते जीवनको अन्त्य भई स्थायी गाउँ, घर र परिवार प्रणालीको जग बस्यो।</li>
+                    <li><strong>उत्पादनमा बचत र श्रम विभाजन:</strong> व्यवस्थित कृषि र पशुपालनले गर्दा आवश्यकताभन्दा बढी खाद्यान्न उत्पादन (Surplus Production) हुन थाल्यो, जसले मानिसहरूलाई अन्य सिर्जनात्मक काम (भाँडाकुँडा बनाउने, कपडा बुन्ने, व्यापार गर्ने) मा लाग्न अवसर दियो।</li>
+                    <li><strong>सभ्यता र राज्यको विकास:</strong> यसै युगको सामाजिक जगमा पछि गएर मेसोपोटामिया, इजिप्ट, सिन्धुघाँटी जस्ता महान् विश्व सभ्यताहरू र राज्य प्रणालीको जन्म भयो।</li>
+                </ol>
+                <p>अतः नवपाषाण युगले मानिसलाई जङ्गली अवस्थाबाट मुक्त गराई आधुनिक मानव सभ्यताको स्थायी मार्गमा दोहोर्‍याएकाले यसलाई क्रान्तिकारी युग भन्नु पूर्ण रूपमा तर्कसङ्गत छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ५: परीक्षा विशेष प्रश्नोत्तर ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh5" id="exam-qa">
+            <i class="fas fa-bullseye"></i>
+            खण्ड ५: परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="section-num">Exam Practice</span>
+        </div>
+
+        <!-- अति संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (१ अङ्क भार)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्रश्न १:</span> आदिम साम्यवाद भनेको के हो?</div>
+            <div class="a"><p><strong>उत्तर:</strong> निजी सम्पत्ति र वर्ग विभाजन नभएको, सम्पूर्ण उत्पादनका साधनहरूमा समाजको साझा स्वामित्व रहेको मानव समाजको प्रारम्भिक चरणलाई आदिम साम्यवाद भनिन्छ।</p></div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्रश्न २:</span> पुरापाषाण युगलाई कति भागमा विभाजन गरिएको छ?</div>
+            <div class="a"><p><strong>उत्तर:</strong> पुरापाषाण युगलाई निम्न पुरापाषाण, मध्य पुरापाषाण र उच्च पुरापाषाण गरी ३ भागमा विभाजन गरिएको छ।</p></div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्रश्न ३:</span> मस्टेरियन संस्कृति कुन मानव जातिसँग सम्बन्धित छ?</div>
+            <div class="a"><p><strong>उत्तर:</strong> मस्टेरियन संस्कृति मध्य पुरापाषाण कालका नियन्डरथल (Neanderthal) मानव जातिसँग सम्बन्धित छ।</p></div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्रश्न ४:</span> 'नवपाषाण क्रान्ति' को मुख्य देन के हो?</div>
+            <div class="a"><p><strong>उत्तर:</strong> नवपाषाण क्रान्तिको मुख्य देन घुमन्ते जीवनको अन्त्य गरी स्थायी बसोबास, व्यवस्थित कृषि र पशुपालनको सुरुवात गर्नु हो।</p></div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्रश्न ५:</span> इ. बी. टेलरका अनुसार समाज विकासका तीन चरणहरू के-के हुन्?</div>
+            <div class="a"><p><strong>उत्तर:</strong> इ. बी. टेलरका अनुसार समाज विकासका तीन चरणहरू ढुङ्गे/जङ्गली युग, बर्बर युग र सभ्य युग हुन्।</p></div>
+        </div>
+
+        <!-- संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तरहरू (५ अङ्क भार)</div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">प्रश्न १:</span> पुरापाषाण युगका तीन चरणहरूको संक्षिप्त परिचय दिनुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> आजभन्दा २५ लाख वर्षअघिदेखि १० हजार वर्ष अगाडिसम्मको समयलाई पुरापाषाण युग भनिन्छ। यसका तीन चरणहरू निम्नानुसार छन्:</p>
+                <ul>
+                    <li><strong>१. निम्न पुरापाषाण काल (२५ लाख – २ लाख वर्ष अगाडि):</strong> यस कालमा होमो इरेक्टस मानवले भद्दा ढुङ्गाका हाते बन्चरो प्रयोग गर्थे र आगोको नियन्त्रित प्रयोग सुरु गरे।</li>
+                    <li><strong>२. मध्य पुरापाषाण काल (२ लाख – ४० हजार वर्ष अगाडि):</strong> यस कालमा नियन्डरथल मानवले मस्टेरियन प्रविधिबाट तिखा चोइटा औजारहरू बनाए र मरेका मानिस गाड्ने संस्कार सुरु गरे।</li>
+                    <li><strong>३. उच्च पुरापाषाण काल (४० हजार – १० हजार वर्ष अगाडि):</strong> यस कालमा आधुनिक होमो सेपियन्सले परिष्कृत भाला, धनुषबाण बनाए, गुफामा चित्रकला कोरे र कपडा लगाउन थाले।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- लामो -->
+        <div class="sub-head"><i class="fas fa-star"></i> लामो उत्तरात्मक प्रश्न (८ अङ्क भार - NEB ढाँचा)</div>
+
+        <div class="qa-block color7" style="border-left-color:#1A237E;">
+            <div class="q"><span class="qnum">प्रश्न:</span> 'मानव समाजको विकासक्रम ढुङ्गे युगको प्राकृतिक जीवनशैलीबाट सुरु भएर आजको आधुनिक प्रविधिमैत्री अवस्थामा आइपुगेको हो।' यस भनाइलाई नवपाषाण युगको सामाजिक परिवर्तन र मार्क्सवादी तथा मानवशास्त्रीय दृष्टिकोणका आधारमा विस्तृत विवेचना गर्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> मानव समाज एकैपटक वर्तमान प्रविधिमैत्री अवस्थामा आइपुगेको होइन। आजभन्दा लाखौँ वर्षअगाडि प्रकृतिमा पूर्ण रूपमा निर्भर रहेर जङ्गली र घुमन्ते जीवन बिताउने हाम्रा पुर्खाहरूको निरन्तर श्रम, सङ्घर्ष र चेतनाको विकासबाट आधुनिक समाजको निर्माण भएको हो। मानव इतिहासको प्रारम्भिक जग ढुङ्गे युग हो, जहाँ मानिसले आफ्नो सुरक्षा र भोजनका लागि ढुङ्गाका औजार बनाउन सिक्यो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. मुख्य विश्लेषण तथा तर्क:</span> मानव समाजको यस विकासक्रमलाई विद्वान्‌हरूले विभिन्न दृष्टिकोणबाट व्याख्या गरेका छन्:</p>
+
+                <ul>
+                    <li><strong>कार्ल मार्क्सको भौतिकवादी दृष्टिकोण:</strong> मार्क्सका अनुसार समाज उत्पादनको साधन र उत्पादन सम्बन्धका आधारमा ४ चरणमा विकसित भयो:
+                        <ul>
+                            <li><em>आदिम साम्यवाद:</em> जहाँ शिकार र भोजनमा सबैको साझा अधिकार थियो।</li>
+                            <li><em>दासप्रथा र सामन्तवाद:</em> कृषि र निजी सम्पत्तिको विकाससँगै समाजमा मालिक-दास र जमिनदार-किसानबिच वर्ग विभाजन भयो।</li>
+                            <li><em>पुँजीवादी समाज:</em> औद्योगिकीकरणसँगै आजको पुँजी र प्रविधिमा आधारित आधुनिक बजार समाज बन्यो।</li>
+                        </ul>
+                    </li>
+                    <li><strong>मानवशास्त्रीय दृष्टिकोण (टेलर र मोर्गन):</strong> उनीहरूका अनुसार समाज जङ्गली/ढुङ्गे युग, बर्बर युग (कृषि-पशुपालन) हुँदै आजको सभ्य युग (लिपि, नगर, राज्य) मा प्रवेश गरेको हो।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">३. नवपाषाण युग: समाज विकासको वास्तविक मोड (व्यावहारिक उदाहरण):</span> मानव समाजलाई प्राकृतिक जीवनशैलीबाट सामाजिक जीवनतर्फ मोड्ने सबैभन्दा ठुलो घटना <strong>'नवपाषाण क्रान्ति'</strong> हो। उदाहरणका लागि, मेसोपोटामिया वा चीनका नदीघाँटीहरूमा जब मानिसले गहुँ र धानको खेती गर्न थाले, उनीहरू बाली कुर्नका लागि एकै ठाउँमा घर बनाएर बस्न बाध्य भए। यसले गर्दा:
+                <ul>
+                    <li>गाउँ, टोल र परिवारको स्थायी संरचना बन्यो।</li>
+                    <li>कुकुर, गाई, भेडा पाल्न थालेपछि दुग्ध र मासुजन्य उत्पादनमा वृद्धि भयो।</li>
+                    <li>उब्जनीको बचतले गर्दा मानिसहरू भाँडाकुँडा बनाउने, कपडा बुन्ने र व्यापार गर्ने सीपमा लागे।</li>
+                    <li>निजी सम्पत्तिको रक्षाका लागि कानुन, धर्म र राजनीतिक नेतृत्वको जन्म भयो।</li>
+                </ul>
+                </p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">४. निष्कर्ष:</span> निष्कर्षमा, ढुङ्गे युगको पुरापाषाण कालमा ओडार र गुफामा जीवन बिताउने आदिम मानवले नवपाषाण कालमा अङ्गालेको कृषि र स्थायी बसोबास नै आजको आधुनिक प्रविधिमैत्री समाजको आधारशीला हो। पुर्खाहरूको यही ऐतिहासिक क्रमिक विकासकै कारण आज हामी जटिल कानुनी राज्य, डिजिटल प्रविधि र वैश्विक समाजको उपभोग गरिरहेका छौँ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" id="finaltip" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> यो एकाइ ४, पाठ २ को परीक्षा क्याप्सुल नोट हो। ढुङ्गे युगका ५ चरणहरू — <strong>निम्न पुरापाषाण → मध्य पुरापाषाण → उच्च पुरापाषाण → मध्यपाषाण → नवपाषाण</strong> — क्रम, समय, मानव प्रजाति र विशेषतासहित शुद्ध रूपमा याद गर्नुहोस्। कार्ल मार्क्सका ४ चरण र टेलर/मोर्गनका ३ चरणबिचको फरक स्पष्ट पार्नुहोस्। NEB परीक्षामा ५ र ८ अङ्कका उत्तरहरू अनिवार्य रूपमा <strong>३-स्तरीय ढाँचा</strong> (परिचय → विश्लेषण → निष्कर्ष) मा लेख्नुहोस्। शुभकामना!
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ४, पाठ २</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
