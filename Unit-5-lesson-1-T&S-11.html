@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ५, पाठ १ – विश्वमा नेपाल (कक्षा ११)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(180deg, #e1f5fe 0%, #f0f8ff 35%, #fef9e7 100%);
+            background-attachment: fixed;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fefeff;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(1, 87, 155, 0.14);
+            padding: 28px 22px 40px;
+            position: relative;
+            border: 1px solid rgba(1, 87, 155, 0.08);
+        }
+
+        h1, h2, h3, h4, .section-head, .sub-head, .main-header h1 {
+            font-family: 'Rozha One', 'Noto Sans Devanagari', serif;
+            letter-spacing: 0.3px;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #b3e5fc;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.95rem;
+            font-weight: 400;
+            color: #01579B;
+            line-height: 1.35;
+        }
+
+        .main-header h1 i { color: #F9A825; margin-right: 10px; }
+
+        .main-header .subtitle {
+            font-size: 1.12rem;
+            color: #4d5a80;
+            font-weight: 600;
+            margin-top: 4px;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .badge-class {
+            background: linear-gradient(135deg, #F9A825 0%, #F57F17 100%);
+            color: #fff;
+            font-size: 0.78rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+            box-shadow: 0 2px 8px rgba(249, 168, 37, 0.4);
+        }
+
+        .credit-bar {
+            background: linear-gradient(90deg, #e1f5fe 0%, #fef9e7 100%);
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b3e5fc;
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name { color: #01579B; font-weight: 800; font-size: 1.12rem; }
+        .credit-bar .email { color: #E65100; font-weight: 700; }
+        .credit-bar i { color: #0277BD; margin-right: 6px; }
+
+        /* ----- REQUEST BOX ----- */
+        .request-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #fef9e7 100%);
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 12px 0 24px;
+            border: 2px solid #FFE082;
+            border-left: 6px solid #F9A825;
+            box-shadow: 0 2px 10px rgba(249, 168, 37, 0.1);
+        }
+
+        .request-box .req-title {
+            font-family: 'Rozha One', serif;
+            font-weight: 400;
+            color: #B45309;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .request-box p { font-size: 1.02rem; color: #4a3500; font-weight: 500; line-height: 1.85; }
+        .request-box strong { color: #B45309; font-weight: 700; }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: linear-gradient(135deg, #01579B 0%, #013a6b 100%);
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #0277BD;
+            box-shadow: 0 4px 16px rgba(1, 87, 155, 0.28);
+        }
+
+        .toc-section h3 {
+            font-family: 'Rozha One', serif;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 1.32rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i { color: #FFD54F; font-size: 1.25rem; }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e1f5fe;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 5px 0 5px 8px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-grid a:hover {
+            color: #FFD54F;
+            border-bottom-color: #FFD54F;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i { color: #FFD54F; font-size: 0.55rem; min-width: 14px; }
+
+        @media (max-width: 700px) { .toc-grid { grid-template-columns: 1fr; } .toc-grid a { font-size: 15px; } }
+
+        /* ----- QUICK STATS ----- */
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin: 20px 0 24px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f5fbff 100%);
+            border-radius: 14px;
+            padding: 14px 18px;
+            border-left: 5px solid #0277BD;
+            border-top: 2px solid #e1f5fe;
+            border-right: 2px solid #e1f5fe;
+            border-bottom: 2px solid #e1f5fe;
+            transition: all 0.25s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(1, 87, 155, 0.15);
+            border-left-color: #F9A825;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.82rem;
+            color: #01579B;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-card .stat-value {
+            font-family: 'Rozha One', serif;
+            font-size: 1.45rem;
+            font-weight: 400;
+            color: #013a6b;
+            line-height: 1.3;
+        }
+
+        .stat-card .stat-detail {
+            font-size: 0.92rem;
+            color: #4d5a80;
+            font-weight: 500;
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.55rem;
+            font-weight: 400;
+            color: #ffffff;
+            background: linear-gradient(135deg, #01579B 0%, #013a6b 100%);
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 14px rgba(1, 87, 155, 0.35);
+        }
+
+        .section-head i { font-size: 1.4rem; color: #FFD54F; }
+
+        .section-head .mark-badge {
+            color: #01579B;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .section-head .mark-badge.gold { background: #FFD54F; color: #4a3500; }
+        .section-head .mark-badge.green { background: #81C784; color: #0D3D13; }
+        .section-head .mark-badge.purple { background: #CE93D8; color: #4A148C; }
+        .section-head .mark-badge.blue { background: #64B5F6; color: #0D47A1; }
+        .section-head .mark-badge.pink { background: #F48FB1; color: #880E4F; }
+        .section-head .mark-badge.orange { background: #FFB74D; color: #4a3500; }
+
+        .sub-head {
+            font-size: 1.22rem;
+            font-weight: 400;
+            color: #01579B;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #F9A825;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i { color: #E65100; font-size: 1.1rem; }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #01579B;
+            font-weight: 400;
+            line-height: 1.95;
+        }
+
+        .content-box p, .content-box ul, .content-box ol, .content-box li {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul, .content-box ol { padding-left: 28px; margin: 8px 0 8px; }
+        .content-box li { margin-bottom: 6px; }
+        .content-box strong { color: #013a6b; font-weight: 700; }
+
+        .content-box.sky-light { border-left-color: #01579B; background: #f0f8ff; }
+        .content-box.sand-light { border-left-color: #F9A825; background: #fff8e1; }
+        .content-box.gold-light { border-left-color: #b45309; background: #fef8ee; }
+        .content-box.green-light { border-left-color: #1f7a4a; background: #eef8f2; }
+        .content-box.purple-light { border-left-color: #6A1B9A; background: #f4eef8; }
+        .content-box.teal-light { border-left-color: #00695C; background: #e8f3f0; }
+        .content-box.coral-light { border-left-color: #D84315; background: #fef4f0; }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f5fbff 100%);
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #0277BD;
+            transition: all 0.2s;
+            box-shadow: 0 1px 4px rgba(1, 87, 155, 0.06);
+        }
+
+        .glossary-item:hover {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e1f5fe 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(1, 87, 155, 0.12);
+            border-left-color: #F9A825;
+        }
+
+        .glossary-item strong { color: #013a6b; font-size: 1.05rem; font-weight: 700; }
+        .glossary-item p { margin-top: 3px; font-size: 1.02rem; color: #2d3a4a; font-weight: 400; }
+
+        @media (max-width: 700px) { .glossary-grid { grid-template-columns: 1fr; } }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b3e5fc;
+            box-shadow: 0 2px 8px rgba(1, 87, 155, 0.06);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.98rem;
+            min-width: 500px;
+        }
+
+        th, td {
+            padding: 10px 12px;
+            border: 1px solid #b3e5fc;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: linear-gradient(135deg, #01579B 0%, #013a6b 100%);
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 0.96rem;
+            text-align: center;
+        }
+
+        td { font-weight: 400; font-size: 0.96rem; }
+        td.ctr { text-align: center; }
+        td.strong-cell { font-weight: 700; color: #013a6b; background: #f0f8ff !important; }
+
+        tr:nth-child(even) td { background: #f5fbff; }
+        tr:hover td { background: #e1f5fe; }
+
+        .table-caption {
+            background: #e1f5fe;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #01579B;
+            border-bottom: 2px solid #b3e5fc;
+        }
+
+        /* ----- FLOWCHART (Nepal Identity Pillars) ----- */
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin: 24px 0;
+            padding: 24px 16px;
+            background: linear-gradient(180deg, #e1f5fe 0%, #fef9e7 100%);
+            border-radius: 20px;
+            border: 2px dashed #b3e5fc;
+        }
+
+        .flowchart-root {
+            background: linear-gradient(135deg, #01579B 0%, #013a6b 100%);
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-family: 'Rozha One', serif;
+            font-size: 1.12rem;
+            font-weight: 400;
+            box-shadow: 0 4px 14px rgba(1, 87, 155, 0.35);
+            text-align: center;
+        }
+
+        .flowchart-arrow {
+            font-size: 1.6rem;
+            color: #F9A825;
+            line-height: 1;
+        }
+
+        .flowchart-branches {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 640px) { .flowchart-branches { grid-template-columns: 1fr; } }
+
+        .flowchart-column {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 16px 18px;
+            border: 2px solid #b3e5fc;
+            border-top: 5px solid #0277BD;
+            box-shadow: 0 2px 8px rgba(1, 87, 155, 0.08);
+        }
+
+        .flowchart-column.cultural {
+            border-top-color: #F9A825;
+        }
+
+        .flowchart-column .fc-head {
+            font-family: 'Rozha One', serif;
+            font-weight: 400;
+            color: #01579B;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            text-align: center;
+            padding-bottom: 6px;
+            border-bottom: 2px dashed #b3e5fc;
+        }
+
+        .flowchart-column.cultural .fc-head { color: #B45309; border-bottom-color: #FFE082; }
+
+        .flowchart-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .flowchart-column li {
+            font-size: 0.96rem;
+            color: #2d3a4a;
+            padding: 6px 0 6px 28px;
+            position: relative;
+            border-bottom: 1px dashed #e1f5fe;
+        }
+
+        .flowchart-column.cultural li { border-bottom-color: #fff8e1; }
+
+        .flowchart-column li:last-child { border-bottom: none; }
+
+        .flowchart-column li::before {
+            content: '▲';
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            color: #0277BD;
+            font-size: 0.7rem;
+            font-weight: 900;
+        }
+
+        .flowchart-column.cultural li::before {
+            content: '☸';
+            color: #F9A825;
+            font-size: 0.95rem;
+            top: 4px;
+        }
+
+        /* ----- BROCHURE (Special Design) ----- */
+        .brochure-wrap {
+            background: linear-gradient(135deg, #01579B 0%, #013a6b 100%);
+            border-radius: 20px;
+            padding: 8px;
+            margin: 24px 0;
+            box-shadow: 0 8px 28px rgba(1, 87, 155, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brochure-wrap::before {
+            content: '🏔️';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 10rem;
+            opacity: 0.08;
+            transform: rotate(-15deg);
+        }
+
+        .brochure-inner {
+            background: #fefeff;
+            border-radius: 14px;
+            padding: 24px 28px;
+            position: relative;
+        }
+
+        .brochure-header {
+            text-align: center;
+            padding: 18px 10px;
+            border-bottom: 3px double #F9A825;
+            margin-bottom: 18px;
+        }
+
+        .brochure-flag {
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+
+        .brochure-title {
+            font-family: 'Rozha One', serif;
+            font-size: 1.55rem;
+            color: #01579B;
+            line-height: 1.35;
+            margin-bottom: 4px;
+        }
+
+        .brochure-subtitle {
+            font-family: 'Rozha One', serif;
+            font-size: 1.05rem;
+            color: #B45309;
+        }
+
+        .brochure-section {
+            margin: 16px 0;
+        }
+
+        .brochure-section .bs-head {
+            font-family: 'Rozha One', serif;
+            font-weight: 400;
+            color: #0277BD;
+            font-size: 1.08rem;
+            padding: 6px 12px;
+            background: linear-gradient(90deg, #e1f5fe 0%, transparent 100%);
+            border-left: 4px solid #F9A825;
+            margin-bottom: 8px;
+        }
+
+        .brochure-section p {
+            font-size: 1rem;
+            color: #2d3a4a;
+            line-height: 1.8;
+            margin-bottom: 6px;
+        }
+
+        .brochure-section ul {
+            padding-left: 24px;
+            margin: 6px 0;
+        }
+
+        .brochure-section li {
+            font-size: 1rem;
+            color: #2d3a4a;
+            line-height: 1.75;
+            margin-bottom: 4px;
+        }
+
+        .brochure-section li strong { color: #01579B; }
+
+        .brochure-footer {
+            text-align: center;
+            padding: 14px 10px 4px;
+            border-top: 2px dashed #FFE082;
+            margin-top: 14px;
+            font-family: 'Rozha One', serif;
+            color: #B45309;
+            font-size: 1.05rem;
+        }
+
+        /* ----- INSIGHT BOX ----- */
+        .insight-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-radius: 12px;
+            padding: 14px 20px;
+            margin: 12px 0 18px;
+            border-left: 5px solid #F9A825;
+            border-top: 1px solid #FFE082;
+            border-right: 1px solid #FFE082;
+            border-bottom: 1px solid #FFE082;
+        }
+
+        .insight-box .insight-title {
+            font-family: 'Rozha One', serif;
+            font-weight: 400;
+            color: #B45309;
+            font-size: 1.02rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .insight-box .insight-title i { color: #E65100; }
+        .insight-box p, .insight-box li { font-size: 1rem; color: #4a3500; font-weight: 400; margin-bottom: 3px; }
+        .insight-box ul { padding-left: 22px; margin: 4px 0; }
+
+        /* ----- QA BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #01579B;
+        }
+
+        .qa-block.color1 { border-left-color: #01579B; background: #f0f8ff; }
+        .qa-block.color2 { border-left-color: #1565C0; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #F9A825; background: #fff8e1; }
+        .qa-block.color4 { border-left-color: #6A1B9A; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #00695C; background: #eef8f8; }
+
+        .qa-block .q {
+            font-family: 'Rozha One', serif;
+            font-weight: 400;
+            color: #013a6b;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.18rem;
+            line-height: 1.5;
+        }
+
+        .qa-block .q .qnum { color: #F9A825; font-weight: 400; min-width: 30px; font-size: 1.25rem; }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        .qa-block .a ul, .qa-block .a ol { padding-left: 24px; margin: 6px 0 6px; }
+        .qa-block .a li { margin-bottom: 5px; font-weight: 400; }
+        .qa-block .a strong { color: #013a6b; font-weight: 700; }
+        .qa-block .a .step-icon { display: inline-block; margin-right: 6px; font-weight: 800; }
+        .qa-block .a .step-title {
+            font-family: 'Rozha One', serif;
+            font-weight: 400;
+            color: #01579B;
+            font-size: 1.08rem;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: linear-gradient(135deg, #0277BD 0%, #01579B 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.7rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(1, 87, 155, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        #scrollUpBtn:hover { background: #F9A825; transform: scale(1.08); box-shadow: 0 6px 28px rgba(249, 168, 37, 0.55); }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #b3e5fc;
+            text-align: center;
+            font-size: 0.93rem;
+            color: #4d5a80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i { color: #01579B; margin-right: 6px; }
+        .footer-copy .highlight { font-weight: 800; color: #013a6b; }
+
+        hr { border: none; border-top: 3px dotted #b3e5fc; margin: 28px 0 10px; }
+
+        .tip-box {
+            background: linear-gradient(135deg, #01579B 0%, #013a6b 100%);
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 400;
+            font-size: 1.02rem;
+            box-shadow: 0 3px 14px rgba(1, 87, 155, 0.3);
+        }
+
+        .tip-box i { margin-right: 8px; }
+        .tip-box strong { color: #FFD54F; font-family: 'Rozha One', serif; font-weight: 400; }
+
+        .back-toc {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            padding: 6px 16px;
+            background: #e1f5fe;
+            color: #01579B;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.86rem;
+            text-decoration: none;
+            border: 1.5px solid #b3e5fc;
+            transition: all 0.2s;
+        }
+
+        .back-toc:hover { background: #01579B; color: #fff; border-color: #01579B; }
+
+        /* ----- MOUNTAIN DIVIDER ----- */
+        .mountain-divider {
+            text-align: center;
+            margin: 24px 0 12px;
+            color: #0277BD;
+            font-size: 1.3rem;
+            letter-spacing: 8px;
+            opacity: 0.5;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container { padding: 16px 12px 24px; border-radius: 20px; }
+            .main-header h1 { font-size: 1.28rem; }
+            .section-head { font-size: 1.15rem; padding: 10px 14px; }
+            .sub-head { font-size: 1.05rem; }
+            .qa-block .a { padding-left: 12px; font-size: 1.02rem; }
+            .qa-block .q { font-size: 1.02rem; flex-wrap: wrap; }
+            .credit-bar { flex-direction: column; align-items: flex-start; gap: 4px; font-size: 0.9rem; padding: 10px 16px; }
+            #scrollUpBtn { width: 50px; height: 50px; font-size: 1.3rem; bottom: 18px; right: 18px; }
+            .toc-section { padding: 14px 16px; }
+            .content-box { padding: 14px 16px; }
+            .content-box p, .content-box ul, .content-box ol, .content-box li { font-size: 1rem; }
+            table { font-size: 0.82rem; min-width: 500px; }
+            th, td { font-size: 0.82rem; padding: 6px 8px; }
+            .insight-box p, .insight-box li { font-size: 0.95rem; }
+            .stat-card .stat-value { font-size: 1.2rem; }
+            .toc-grid a { font-size: 15px; }
+            .glossary-item strong { font-size: 1rem; }
+            .glossary-item p { font-size: 0.94rem; }
+            .flowchart-root { font-size: 1rem; padding: 10px 20px; }
+            .brochure-title { font-size: 1.25rem; }
+            .brochure-inner { padding: 16px 18px; }
+            .request-box { padding: 14px 18px; }
+            .request-box p { font-size: 0.98rem; }
+        }
+
+        @media (min-width: 768px) { .container { padding: 36px 46px 50px; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-mountain"></i>
+                    एकाइ ५, पाठ १: विश्वमा नेपाल
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> NEB परीक्षा क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="credit-bar">
+            <span><i class="fas fa-user-edit"></i> <span class="name">Prepared by: Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> <span class="email">nregmi511@gmail.com</span></span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ५, पाठ १</span>
+        </div>
+
+        <!-- ===== REQUEST BOX ===== -->
+        <div class="request-box">
+            <div class="req-title"><i class="fas fa-bullseye"></i> परीक्षा उत्कृष्टताका लागि विशेष अनुरोध</div>
+            <p>यो क्याप्सुल नोट <strong>NEB नयाँ पाठ्यक्रम र विशिष्टीकरण तालिका (Specification Grid)</strong> लाई ध्यानमा राखी परीक्षामा उत्कृष्ट अङ्क प्राप्त गर्ने (८ अङ्कको लामो उत्तरमा ७.५ सम्म र ५ अङ्कको छोटो उत्तरमा ४.५ सम्म) सुनिश्चितताका लागि तयार पारिएको हो। यस नोटभरि नेपाली व्याकरणको पूर्ण शुद्धता कायम गर्दै <strong>'सीप'</strong> र <strong>'सीपहरू'</strong> (दीर्घ) शब्दको मात्र सही प्रयोग गरिएको छ <span class="ref">[५]</span>।</p>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची (जल्दी नेभिगेसन)</h3>
+            <div class="toc-grid">
+                <a href="#quick-stats"><i class="fas fa-chevron-right"></i> तथ्याङ्क झलक</a>
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> विस्तृत प्राज्ञिक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== QUICK STATS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="quick-stats">
+            <i class="fas fa-bolt"></i>
+            तथ्याङ्क झलक (Quick Stats)
+            <span class="mark-badge gold">Overview</span>
+        </div>
+
+        <div class="quick-stats">
+            <div class="stat-card">
+                <div class="stat-label">क्षेत्रफल (विश्व)</div>
+                <div class="stat-value">०.०३%</div>
+                <div class="stat-detail">एसियाको ०.३%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">अक्षांश विस्तार</div>
+                <div class="stat-value">२६°२२' – ३०°२७'</div>
+                <div class="stat-detail">उत्तरी अक्षांश</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">देशान्तर विस्तार</div>
+                <div class="stat-value">८०°४' – ८८°१२'</div>
+                <div class="stat-detail">पूर्वी देशान्तर</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">उचाइ सीमा</div>
+                <div class="stat-value">५९ – ८,८४८.८६</div>
+                <div class="stat-detail">मुसहरनिया – सगरमाथा (मि.)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">८,००० मि.+ शिखर</div>
+                <div class="stat-value">८ / १४</div>
+                <div class="stat-detail">विश्वका १४ मध्ये ८ नेपालमा</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">जलविद्युत् क्षमता</div>
+                <div class="stat-value">४२,००० MW</div>
+                <div class="stat-detail">व्यावसायिक सम्भाव्यता</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">पृथ्वीको व्यास</div>
+                <div class="stat-value">४२ कि.मि.</div>
+                <div class="stat-detail">ध्रुवीय-भूमध्ये फरक</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">बुद्ध जन्मस्थल</div>
+                <div class="stat-value">लुम्बिनी</div>
+                <div class="stat-detail">विश्व शान्तिको केन्द्र</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-map-marker-alt" style="color:#0277BD; margin-right:6px;"></i> १. भौगोलिक अवस्थिति (Geographical Location)</strong>
+                <p>पृथ्वीको सतहमा कुनै पनि देश वा ठाउँको अक्षांश (Latitude) र देशान्तर (Longitude) रेखाका आधारमा तोकिएको निश्चित स्थान <span class="ref">[५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-lock" style="color:#0277BD; margin-right:6px;"></i> २. भूपरिवेष्ठित देश (Landlocked Country)</strong>
+                <p>चारैतिरबाट जमिन (अन्य राष्ट्रहरू) ले घेरिएको र आफ्नै समुद्री सिमाना वा पहुँच नभएको राष्ट्र <span class="ref">[५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrows-alt-h" style="color:#0277BD; margin-right:6px;"></i> ३. अक्षांश (Latitude)</strong>
+                <p>भूमध्यरेखाबाट उत्तर वा दक्षिणतर्फ कोण बनाइ खिचिएका काल्पनिक कोणात्मक रेखा, जसले कुनै स्थानको हावापानी र तापमान निर्धारण गर्दछ <span class="ref">[५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrows-alt-v" style="color:#0277BD; margin-right:6px;"></i> ४. देशान्तर (Longitude)</strong>
+                <p>प्रधान मध्याह्न रेखाबाट पूर्व वा पश्चिमका काल्पनिक रेखा, जसले कुनै देश वा स्थानको प्रामाणिक समय (Standard Time) निर्धारण गर्दछ <span class="ref">[५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-circle" style="color:#0277BD; margin-right:6px;"></i> ५. ध्रुवीय व्यास (Polar Diameter)</strong>
+                <p>उत्तर ध्रुवदेखि दक्षिण ध्रुवसम्म पृथ्वीको केन्द्र भएर जाने काल्पनिक रेखाको लम्बाइ (नेपालको पाठ्यपुस्तक अनुसार <strong>१२,७१४ कि.मि.</strong>) <span class="ref">[५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-circle-notch" style="color:#0277BD; margin-right:6px;"></i> ६. भूमध्यरेखीय व्यास (Equatorial Diameter)</strong>
+                <p>भूमध्यरेखाको एक छेउदेखि अर्को छेउसम्म पृथ्वीको केन्द्र भएर जाने लम्बाइ (<strong>१२,७५६ कि.मि.</strong>), जुन ध्रुवीय व्यासभन्दा ४२ कि.मि. बढी छ <span class="ref">[५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-leaf" style="color:#0277BD; margin-right:6px;"></i> ७. जैविक विविधता (Biodiversity)</strong>
+                <p>निश्चित भौगोलिक वातावरणभित्र पाइने विभिन्न प्रजातिका वनस्पति, जीवजन्तु, किराफट्याङ्ग्रा र सूक्ष्म जीवहरूको विविधता <span class="ref">[५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-bolt" style="color:#0277BD; margin-right:6px;"></i> ८. जलविद्युत् सम्भाव्यता (Hydroelectric Potential)</strong>
+                <p>नदीनाला र प्राकृतिक जलस्रोतबाट व्यावसायिक रूपमा बिजुली उत्पादन गर्न सकिने अधिकतम क्षमता (नेपालको <strong>४२,००० मेगावाट</strong>) <span class="ref">[५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-om" style="color:#0277BD; margin-right:6px;"></i> ९. सांस्कृतिक पहिचान (Cultural Identity)</strong>
+                <p>कुनै देश वा समुदायको ऐतिहासिक रीतिरिवाज, धर्म, मन्दिर, गुम्बा, कला र परम्पराले निर्माण गरेको विशिष्ट चिनारी <span class="ref">[५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-dove" style="color:#0277BD; margin-right:6px;"></i> १०. शान्तिका अग्रदूत (Apostle of Peace)</strong>
+                <p>अहिंसा, करुणा र विश्व शान्तिको सन्देश फैलाउने व्यक्ति (जस्तै: लुम्बिनीमा जन्मिएका गौतम बुद्ध) <span class="ref">[५]</span>।</p>
+            </div>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. विस्तृत प्राज्ञिक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-globe-asia"></i>
+            २. विस्तृत प्राज्ञिक नोट (Detailed Study Notes)
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-earth-americas"></i> २.१ पृथ्वीको भौतिक तथा भौगोलिक परिचय</div>
+
+        <div class="content-box sky-light">
+            <p>पृथ्वी ब्रह्माण्डको एक मात्र यस्तो ग्रह हो जहाँ जीवनका लागि आवश्यक हावा, पानी, तापक्रम र प्रकाशको अनुकूल समन्वय रहेको छ <span class="ref">[५]</span>।</p>
+        </div>
+
+        <div class="table-wrap">
+            <div class="table-caption"><i class="fas fa-table" style="margin-right:6px; color:#01579B;"></i> पृथ्वीका मुख्य खगोलीय तथा भौगोलिक सूचकहरू <span class="ref">[५]</span></div>
+            <table style="min-width:400px;">
+                <thead>
+                    <tr>
+                        <th style="width:8%;">क्र.</th>
+                        <th style="width:42%;">खगोलीय तथा भौगोलिक सूचक</th>
+                        <th style="width:50%;">तथ्याङ्क / विवरण</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="ctr">१</td><td><strong>कुल क्षेत्रफल</strong></td><td>५१ करोड वर्ग किलोमिटर (७१% जल, २९% स्थल)</td></tr>
+                    <tr><td class="ctr">२</td><td><strong>महादेश र महासागर</strong></td><td>७ वटा महादेश र ५ वटा महासागर</td></tr>
+                    <tr><td class="ctr">३</td><td><strong>अनुमानित तौल</strong></td><td>५.९७२ × १०²⁴ किलोग्राम</td></tr>
+                    <tr><td class="ctr">४</td><td><strong>ध्रुवीय र भूमध्यरेखीय व्यास</strong></td><td>ध्रुवीय: <strong>१२,७१४ कि.मि.</strong> | भूमध्ये: <strong>१२,७५६ कि.मि.</strong> (फरक: ४२ कि.मि.)</td></tr>
+                    <tr><td class="ctr">५</td><td><strong>भूमध्यरेखीय र ध्रुवीय परिधि</strong></td><td>भूमध्ये: ४०,०७५ कि.मि. | ध्रुवीय: ४०,००८ कि.मि.</td></tr>
+                    <tr><td class="ctr">६</td><td><strong>वार्षिक गति (सूर्य परिक्रमा)</strong></td><td>३६५ दिन ५ घण्टा ४८ मिनेट</td></tr>
+                    <tr><td class="ctr">७</td><td><strong>दैनिक गति (अक्ष परिक्रमा)</strong></td><td>२३ घण्टा ५६ मिनेट ४.०९ सेकेन्ड</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-map-marked-alt"></i> २.२ विश्व मानचित्रमा नेपालको अवस्थिति</div>
+
+        <div class="content-box sand-light">
+            <ul>
+                <li><strong>अक्षांश विस्तार:</strong> <strong>२६° २२'</strong> उत्तरी अक्षांशदेखि <strong>३०° २७'</strong> उत्तरी अक्षांशसम्म <span class="ref">[५]</span>।</li>
+                <li><strong>देशान्तर विस्तार:</strong> <strong>८०° ४'</strong> पूर्वी देशान्तरदेखि <strong>८८° १२'</strong> पूर्वी देशान्तरसम्म <span class="ref">[५]</span>।</li>
+                <li><strong>क्षेत्रफलको अनुपात:</strong> कुल पृथ्वीको भूभागको <strong>०.०३%</strong> र एसिया महादेशको <strong>०.३%</strong> भूभाग <span class="ref">[५]</span>।</li>
+                <li><strong>उचाइगत विविधता:</strong> धनुषाको मुखियापट्टी मुसहरनिया (समुद्र सतहबाट <strong>५९ मिटर</strong>) देखि सर्वोच्च शिखर सगरमाथा (<strong>८,८४८.८६ मिटर</strong>) सम्म। मात्र २०० कि.मि. को दुरीमा यस्तो व्यापक उचाइको भिन्नता संसारमै दुर्लभ छ <span class="ref">[५]</span>।</li>
+            </ul>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-sitemap"></i> २.३ नेपाललाई विश्वमा चिनाउने प्रमुख स्तम्भहरू</div>
+
+        <div class="content-box purple-light">
+            <p>नेपालले विश्वमा आफ्नो छुट्टै पहिचान बनाएका मुख्य स्तम्भहरूलाई दुई प्रमुख कोटीमा विभाजन गर्न सकिन्छ — <strong>भौगोलिक/प्राकृतिक पक्ष</strong> र <strong>सांस्कृतिक/ऐतिहासिक पक्ष</strong> <span class="ref">[५]</span>।</p>
+        </div>
+
+        <div class="flowchart">
+            <div class="flowchart-root">विश्व मानचित्रमा नेपालको अद्वितीय पहिचान</div>
+            <div class="flowchart-arrow">▼</div>
+
+            <div class="flowchart-branches">
+                <div class="flowchart-column">
+                    <div class="fc-head">🏔️ भौगोलिक तथा प्राकृतिक पक्ष</div>
+                    <ul>
+                        <li>सगरमाथा (८,८४८.८६ मि.) र कञ्चनजङ्घा — सर्वोच्च शिखरहरू</li>
+                        <li>८,००० मि. भन्दा अग्ला १४ मध्ये ८ टाकुरा नेपालमा</li>
+                        <li>५९ मि. देखि ८,८४८ मि. सम्मको उचाइगत विविधता</li>
+                        <li>४२,००० मेगावाट व्यावसायिक जलविद्युत् क्षमता</li>
+                        <li>तीव्र जैविक विविधता र दुर्लभ जडीबुटी</li>
+                    </ul>
+                </div>
+                <div class="flowchart-column cultural">
+                    <div class="fc-head">☸️ सांस्कृतिक तथा ऐतिहासिक पक्ष</div>
+                    <ul>
+                        <li>शान्तिका अग्रदूत गौतम बुद्धको जन्मस्थल — लुम्बिनी</li>
+                        <li>वीर गोर्खालीहरूको देश — ऐतिहासिक पहिचान</li>
+                        <li>मन्दिरै मन्दिरको देश — पशुपतिनाथ, मुक्तिनाथ, जानकी</li>
+                        <li>बहुभाषिक, बहुसांस्कृतिक र बहुजातीय एकता</li>
+                        <li>युनेस्को विश्व सम्पदा सूचीकृत सांस्कृतिक सम्पदाहरू</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="insight-box">
+            <div class="insight-title"><i class="fas fa-lightbulb"></i> मुख्य अवलोकन</div>
+            <ul>
+                <li><strong>विश्वको सर्वोच्च शिखर:</strong> सगरमाथा — नेपालकै गौरव <span class="ref">[५]</span>।</li>
+                <li><strong>प्राकृतिक विविधता:</strong> ५९ मिटरदेखि ८,८४८.८६ मिटरसम्म — मात्र २०० कि.मि. मा <span class="ref">[५]</span>।</li>
+                <li><strong>शान्तिको देश:</strong> बुद्ध जन्मस्थल लुम्बिनी — विश्व शान्तिको केन्द्र <span class="ref">[५]</span>।</li>
+                <li><strong>ऊर्जा सम्पदा:</strong> ४२,००० मेगावाट जलविद्युत् सम्भाव्यता <span class="ref">[५]</span>।</li>
+            </ul>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलाप समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-table"></i> क्रियाकलाप १: नेपाललाई विश्वमा चिनाउने विविध प्राकृतिक र सांस्कृतिक विशेषता</div>
+
+        <div class="table-wrap">
+            <div class="table-caption"><i class="fas fa-table" style="margin-right:6px; color:#01579B;"></i> नेपालका प्राकृतिक तथा सांस्कृतिक विशेषताहरूको तुलनात्मक तालिका <span class="ref">[५]</span></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:50%;">प्राकृतिक/भौगोलिक विशेषताहरू</th>
+                        <th style="width:50%;">सांस्कृतिक तथा ऐतिहासिक विशेषताहरू</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१. सर्वोच्च शिखर:</strong> विश्वकै सर्वोच्च शिखर सगरमाथा (८,८४८.८६ मि.) र तेस्रो अग्लो कञ्चनजङ्घा</td>
+                        <td><strong>१. बुद्धको जन्मस्थल:</strong> विश्व शान्तिका अग्रदूत गौतम बुद्धको पावन जन्मभूमि लुम्बिनी</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२. अग्ला हिमशिखरहरू:</strong> ८,००० मिटरभन्दा अग्ला विश्वका १४ वटा चुचुराहरूमध्ये ८ वटा नेपालमा</td>
+                        <td><strong>२. वीर गोर्खालीको देश:</strong> स्वाभिमान र साहसका लागि विश्वभर चिनिएका वीर गोर्खालीको पहिचान</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३. जलस्रोतको धनी:</strong> व्यावसायिक रूपमा ४२,००० मेगावाट सम्भाव्यता भएको जलविद्युत्को धनी देश</td>
+                        <td><strong>३. धार्मिक सहिष्णुता:</strong> पशुपतिनाथ, मुक्तिनाथ, जानकी मन्दिर, बौद्धनाथ जस्ता आस्थाका केन्द्रहरू</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४. तीव्र जैविक विविधता:</strong> ५९ मिटरदेखि सगरमाथासम्म पाइने बहुविध हावापानी र वनस्पति</td>
+                        <td><strong>४. सांस्कृतिक सम्पदा:</strong> युनेस्कोको विश्व सम्पदा सूचीमा सूचीकृत काठमाडौँ उपत्यकाका गुम्बा र स्तूपहरू</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-booklet"></i> क्रियाकलाप ४: विदेश जाने मानिसहरूका लागि नेपालबारे परिचयात्मक पुस्तिका (Brochure)</div>
+
+        <div class="brochure-wrap">
+            <div class="brochure-inner">
+                <div class="brochure-header">
+                    <div class="brochure-flag">🇳🇵</div>
+                    <div class="brochure-title">NEPAL: The Land of Himalayas & Peace</div>
+                    <div class="brochure-subtitle">नेपाल: हिमाल र शान्तिको देश</div>
+                </div>
+
+                <div class="brochure-section">
+                    <div class="bs-head"><i class="fas fa-info-circle" style="margin-right:6px;"></i> १. परिचय (Introduction)</div>
+                    <p>नेपाल दक्षिण एसियामा अवस्थित एक सुन्दर, शान्त र भूपरिवेष्ठित देश हो। उत्तरमा विशाल हिमाल र दक्षिणमा हरियाली तराई भएको यो देश प्रकृति र संस्कृतिको सङ्गमस्थल हो <span class="ref">[५]</span>।</p>
+                </div>
+
+                <div class="brochure-section">
+                    <div class="bs-head"><i class="fas fa-mountain" style="margin-right:6px;"></i> २. भौगोलिक आकर्षण (Geographical Highlights)</div>
+                    <ul>
+                        <li>सर्वोच्च शिखर <strong>सगरमाथा</strong> (Mount Everest — ८,८४८.८६ मि.) र कञ्चनजङ्घा <span class="ref">[५]</span>।</li>
+                        <li>विश्वका ८,००० मिटरभन्दा अग्ला १४ मध्ये <strong>८ वटा हिमशिखरहरू</strong> <span class="ref">[५]</span>।</li>
+                        <li>मात्र २०० कि.मि. को दुरीमा उष्ण प्रदेशीय हावापानीदेखि टुन्ड्रा हिमाली हावापानीसम्म <span class="ref">[५]</span>।</li>
+                    </ul>
+                </div>
+
+                <div class="brochure-section">
+                    <div class="bs-head"><i class="fas fa-om" style="margin-right:6px;"></i> ३. सांस्कृतिक र ऐतिहासिक पहिचान</div>
+                    <ul>
+                        <li>विश्व शान्तिका दूत गौतम बुद्धको जन्मस्थल — <strong>लुम्बिनी</strong> <span class="ref">[५]</span>।</li>
+                        <li>हिन्दुहरूको पवित्र तीर्थस्थल — <strong>पशुपतिनाथ, मुक्तिनाथ र जानकी मन्दिर</strong> <span class="ref">[५]</span>।</li>
+                        <li>बहुसांस्कृतिक एकता, अद्वितीय अतिथि सत्कार र वीर गोर्खालीहरूको ऐतिहासिक गौरव <span class="ref">[५]</span>।</li>
+                    </ul>
+                </div>
+
+                <div class="brochure-section">
+                    <div class="bs-head"><i class="fas fa-hiking" style="margin-right:6px;"></i> ४. साहसिक पर्यटन (Adventure Tourism)</div>
+                    <p>टेकिङ, पर्वतारोहण, र्‍याफ्टिङ, प्याराग्लाइडिङ, र जङ्गल सफारीका लागि विश्वकै उत्कृष्ट गन्तव्य <span class="ref">[५]</span>।</p>
+                </div>
+
+                <div class="brochure-footer">
+                    ✨ Welcome to Nepal — Once is not enough! ✨<br>
+                    <span style="font-size:0.9rem; opacity:0.8;">नेपाल भ्रमणका लागि हार्दिक स्वागत छ!</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यास प्रश्नहरूको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्रश्न १:</span> "विश्व मानचित्रमा नेपाल एक विशिष्ट विशेषताहरू भएको गौरवशाली देशका रूपमा चिनिन्छ।" यस भनाइलाई पाठमा दिइएका आधारहरू र थप बुँदाहरू समेटर पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नेपाल क्षेत्रफलका हिसाबले विश्वको ०.०३% र एसियाको ०.३% भूभाग ओगट्ने सानो देश भए तापनि यसको प्राकृतिक, भौगोलिक र सांस्कृतिक विशिष्टता भने अतुलनीय छ <span class="ref">[५]</span>। नेपाललाई विश्व मानचित्रमा एक गौरवशाली देशका रूपमा स्थापित गराउने मुख्य आधारहरू निम्न बमोजिम छन्:</p>
+                <ol>
+                    <li><strong>सर्वोच्च हिमशिखरहरूको उपस्थिति:</strong> विश्वको सर्वोच्च शिखर सगरमाथा (८,८४८.८६ मि.) र तेस्रो अग्लो कञ्चनजङ्घा हिमाल नेपालमै रहेका छन्। साथै, विश्वका ८,००० मिटरभन्दा अग्ला १४ वटा हिमशिखरहरूमध्ये ८ वटा नेपालमै पर्नु नेपालको ठुलो प्राकृतिक गौरव हो <span class="ref">[५]</span>।</li>
+                    <li><strong>अद्वितीय उचाइ र जैविक विविधता:</strong> दक्षिणमा समुद्र सतहबाट ५९ मिटरको उचाइ (धनुषाको मुखियापट्टी मुसहरनिया) देखि उत्तरमा ८,८४८.८६ मिटरको सगरमाथासम्मको दुरी मात्र २०० कि.मि. रहेको छ। यस छोटो दुरीमा विश्वमा पाइने प्रायः सबै प्रकारका हावापानी, वनस्पति र जीवजन्तु पाइने हुनाले नेपाल जैविक विविधताको धनी देश हो <span class="ref">[५]</span>।</li>
+                    <li><strong>शान्तिका अग्रदूतको जन्मभूमि:</strong> बौद्ध धर्मावलम्बीहरूका सर्वोच्च आस्थाका केन्द्र तथा विश्व शान्तिका अग्रदूत गौतम बुद्धको जन्मस्थल लुम्बिनी नेपालमा हुनुले नेपाललाई अन्तर्राष्ट्रिय जगत्‌मा शान्तिको देशका रूपमा चिनाएको छ <span class="ref">[५]</span>।</li>
+                    <li><strong>अपार जलस्रोतको धनी:</strong> नेपालका नदीनालाहरूबाट व्यावसायिक रूपमा ४२,००० मेगावाट जलविद्युत् उत्पादन गर्न सकिने क्षमता छ, जसले नेपाललाई ऊर्जा क्षेत्रमा समृद्ध बनाएको छ <span class="ref">[५]</span>।</li>
+                    <li><strong>सांस्कृतिक विविधता र धार्मिक सहिष्णुता:</strong> पशुपतिनाथ, मुक्तिनाथ, जानकी मन्दिर, बौद्धनाथ जस्ता प्रसिद्ध धार्मिक स्थलहरू र मन्दिरै मन्दिरको देशका रूपमा चिनिने काठमाडौँ उपत्यकाले नेपालको सांस्कृतिक वैभव दर्शाउँछ <span class="ref">[५]</span>।</li>
+                </ol>
+                <p style="margin-top:10px;"><strong>निष्कर्ष:</strong> तसर्थ, सानो भूगोलभित्र अपार प्राकृतिक सौन्दर्य, सर्वोच्च हिमाल, समृद्ध जलस्रोत, ऐतिहासिक वीर गाथा र सांस्कृतिक सहिष्णुता बोकेको नेपाल विश्व मानचित्रमा एक विशिष्ट र गौरवशाली राष्ट्र हो <span class="ref">[५]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्रश्न २:</span> "भौगोलिक अवस्था र जनजीवनबिच घनिष्ठ सम्बन्ध रहेको हुन्छ।" यस भनाइलाई पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानव समाजको विकास, खानपान, पोसाक, पेसा, बसोबास र सांस्कृतिक गतिविधिहरू प्रत्यक्ष वा अप्रत्यक्ष रूपमा उनीहरू बसोबास गर्ने ठाउँको भौगोलिक अवस्थाद्वारा प्रभावित हुन्छन्। भौगोलिक अवस्था र जनजीवनबिचको घनिष्ठ सम्बन्धलाई निम्न आधारहरूमा पुष्टि गर्न सकिन्छ <span class="ref">[५]</span>:</p>
+                <ol>
+                    <li><strong>हावापानी र पोसाक तथा खानपान:</strong> हिमाली तथा उच्च पहाडी क्षेत्रका मानिसहरू चिसो हावापानीका कारण बाक्लो ऊनी कपडा (बख्खु, दोछा) लगाउँछन् र ढिँडो, फापर, आलु, भेडा-च्याङ्ग्राको मासु खान्छन्। यता तराईका मानिसहरू गर्मीका कारण पातलो सुती कपडा (धोती, कुर्ता) लगाउँछन् र भात, दाल, माछा, तरकारी मुख्य आहारका रूपमा प्रयोग गर्दछन् <span class="ref">[५]</span>।</li>
+                    <li><strong>धरातलीय स्वरूप र पेसा/व्यवसाय:</strong> समथर तराई क्षेत्रमा उर्वर माटो र सिँचाइको सुविधा भएकाले मानिसहरूको मुख्य पेसा गहन कृषि र उद्योग-व्यापार हो। पहाडी र हिमाली क्षेत्रमा भिरालो जमिन र चिसो वातावरणका कारण पशुपालन, फलफूल खेती, जडीबुटी सङ्कलन र पर्वतीय पर्यटन मुख्य जीवनयापनको आधार बनेको छ <span class="ref">[५]</span>।</li>
+                    <li><strong>यातायात र बसोबासको ढाँचा:</strong> समथर मैदानमा यातायातका साधन सजिलै सञ्चालन हुने हुनाले घना बसोबास र ठुला शहरहरू (जस्तै: जनकपुर, वीरगन्ज, विराटनगर) विकास भएका छन्। पहाडी र हिमाली क्षेत्रमा विकट भूगोलका कारण छरिएका साना बस्तीहरू र कठिन जीवनशैली पाइन्छ <span class="ref">[५]</span>।</li>
+                    <li><strong>सांस्कृतिक विविधता:</strong> भौगोलिक दूरी र प्राकृतिक अवरोधका कारण फरक-फरक क्षेत्रमा बसोबास गर्ने मानिसहरूले आफ्नै मौलिक भाषा, चाडपर्व र जीवनशैलीको विकास गरेका छन् <span class="ref">[५]</span>।</li>
+                </ol>
+                <p style="margin-top:10px;"><strong>निष्कर्ष:</strong> तसर्थ, भूगोलले मानिसलाई जीवनयापनका सम्भावना र सीमाहरू प्रदान गर्दछ भने मानिसले सोही भूगोल अनुकूल आफ्नो जीवनशैली ढालाउँछ। यसरी भूगोल र मानव जनजीवन एकअर्काका परिपूरक हुन् <span class="ref">[५]</span>।</p>
+            </div>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">१.</span> नेपालको अक्षांशीय र देशान्तरीय अवस्थिति उल्लेख गर्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> नेपाल <strong>२६° २२'</strong> उत्तरी अक्षांशदेखि <strong>३०° २७'</strong> उत्तरी अक्षांश र <strong>८०° ४'</strong> पूर्वी देशान्तरदेखि <strong>८८° १२'</strong> पूर्वी देशान्तरबिच अवस्थित छ <span class="ref">[५]</span>।</div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">२.</span> नेपालको सबैभन्दा होचो र सबैभन्दा अग्लो भूभाग कुन-कुन हुन्?</div>
+            <div class="a"><strong>उत्तर:</strong> नेपालको सबैभन्दा होचो भूभाग समुद्र सतहबाट <strong>५९ मिटर</strong> उचाइमा रहेको धनुषाको मुखियापट्टी <strong>मुसहरनिया</strong> हो भने सबैभन्दा अग्लो भूभाग <strong>८,८४८.८६ मिटर</strong> उचाइको <strong>सगरमाथा</strong> हो <span class="ref">[५]</span>।</div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">३.</span> नेपालले विश्व र एसिया महादेशको कति प्रतिशत भूभाग ओगटेको छ?</div>
+            <div class="a"><strong>उत्तर:</strong> नेपालले कुल विश्वको <strong>०.०३%</strong> र एसिया महादेशको <strong>०.३%</strong> भूभाग ओगटेको छ <span class="ref">[५]</span>।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">४.</span> ध्रुवीय व्यास र भूमध्यरेखीय व्यास बिच कति फरक रहेको छ?</div>
+            <div class="a"><strong>उत्तर:</strong> पृथ्वीको भूमध्यरेखीय व्यास (१२,७५६ कि.मि.) र ध्रुवीय व्यास (१२,७१४ कि.मि.) बिच <strong>४२ किलोमिटर</strong>को फरक रहेको छ <span class="ref">[५]</span>।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">५.</span> नेपालमा व्यावसायिक रूपमा जलविद्युत् उत्पादन गर्न सकिने क्षमता कति रहेको छ?</div>
+            <div class="a"><strong>उत्तर:</strong> नेपालका नदीनालाहरूबाट व्यावसायिक रूपमा <strong>४२,००० मेगावाट</strong> जलविद्युत् उत्पादन गर्न सकिने क्षमता रहेको छ <span class="ref">[५]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अङ्क) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">१.</span> "नेपाल जलस्रोत र जैविक विविधताको धनी देश हो।" यस भनाइलाई पाठ्यपुस्तकका आधारमा ५ वटा बुँदामा स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नेपाल क्षेत्रफलमा सानो भए तापनि जलस्रोत र जैविक विविधताका दृष्टिले विश्वकै एक सम्पन्न राष्ट्र हो। यसलाई निम्न ५ बुँदामा स्पष्ट पार्न सकिन्छ <span class="ref">[५]</span>:</p>
+                <ol>
+                    <li><strong>अद्वितीय उचाइगत विविधता:</strong> धनुषाको ५९ मिटर होचो भूभागदेखि सगरमाथाको ८,८४८.८६ मिटरसम्मको उचाइले गर्दा उष्ण प्रदेशीयदेखि टुन्ड्रा हिमाली क्षेत्रसम्मका बहुविध हावापानी नेपालमै पाइन्छ <span class="ref">[५]</span>।</li>
+                    <li><strong>प्रचुर जलविद्युत् क्षमता:</strong> नेपालका नदीनालाहरूबाट व्यावसायिक रूपमा ४२,००० मेगावाट विद्युत् उत्पादन गर्न सकिने क्षमता छ, जसले आर्थिक समृद्धिको ढोका खोलेको छ <span class="ref">[५]</span>।</li>
+                    <li><strong>संसारभरका वनस्पति र जीवजन्तु:</strong> नेपालमा उष्ण सदाबहार जङ्गलदेखि हिमाली घाँसे मैदानसम्म पाइने हुनाले दुर्लभ चराचुरुङ्गी, वन्यजन्तु र जडीबुटीको प्रचुरता छ <span class="ref">[५]</span>।</li>
+                    <li><strong>अन्तर्राष्ट्रिय हिमालहरूको उपस्थिति:</strong> विश्वका ८,००० मिटरभन्दा अग्ला १४ टाकुरामध्ये ८ वटा नेपालमै रहेकाले पर्वतीय वातावरण र जलस्रोतको मुख्य स्रोत हिमाल बनेका छन् <span class="ref">[५]</span>।</li>
+                    <li><strong>पर्यावरणीय सन्तुलन र पर्यटन:</strong> तीव्र भौगोलिक भिन्नताले गर्दा प्राकृतिक सौन्दर्य र जैविक विविधता फस्टाएको छ, जसले विश्वभरका पर्यटक र अनुसन्धानकर्ताहरूलाई आकर्षित गर्दछ <span class="ref">[५]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- लामो (८ अङ्क) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color3" style="border-left-color:#01579B;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "विश्व मानचित्रमा नेपालको भौतिक, प्राकृतिक र सांस्कृतिक अवस्थितिको समीक्षा गर्दै, नेपाललाई विश्वसामु थप परिचित गराउन अपनाउनुपर्ने कदमहरूको विश्लेषणात्मक चर्चा गर्नुहोस्।"</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> दक्षिण एसियाको मध्यभागमा अवस्थित नेपाल एक भूपरिवेष्ठित, बहुसांस्कृतिक र अति नै मनोरम प्राकृतिक सौन्दर्यले भरिपूर्ण राष्ट्र हो। २६° २२' देखि ३०° २७' उत्तरी अक्षांश र ८०° ४' देखि ८८° १२' पूर्वी देशान्तरबिच फैलिएको नेपालले कुल विश्वको ०.०३% र एसियाको ०.३% भूभाग ओगटेको छ <span class="ref">[५]</span>। आकारमा सानो भए पनि भौगोलिक, प्राकृतिक र सांस्कृतिक दृष्टिकोणले नेपाल विश्वकै एक अद्वितीय र समृद्ध देशका रूपमा स्थापित छ <span class="ref">[५]</span>।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. नेपालको भौतिक, प्राकृतिक र सांस्कृतिक अवस्थितिको विश्लेषण:</span></p>
+
+                <p><strong>(क) भौगोलिक तथा प्राकृतिक अवस्थिति:</strong></p>
+                <ul>
+                    <li>नेपालको धरातलीय स्वरूप दक्षिणमा ५९ मिटरको होचो तराई भूभागदेखि उत्तरमा ८,८४८.८६ मिटर अग्लो सगरमाथासम्म फैलिएको छ <span class="ref">[५]</span>।</li>
+                    <li>विश्वका ८,००० मिटरभन्दा अग्ला १४ वटा हिमशिखरहरूमध्ये ८ वटा नेपालमै पर्नु हाम्रो ठुलो प्राकृतिक गौरव हो <span class="ref">[५]</span>।</li>
+                    <li>केवल २०० कि.मि. को दुरीमा पाइने यो उचाइको भिन्नताका कारण नेपालमा बहुविध हावापानी, वनस्पति र तीव्र जैविक विविधता पाइन्छ <span class="ref">[५]</span>।</li>
+                    <li>४२,००० मेगावाट जलविद्युत् उत्पादन सम्भाव्यता बोकेका नदीनालाहरू नेपालका जलस्रोतका मुख्य आधार हुन् <span class="ref">[५]</span>।</li>
+                </ul>
+
+                <p><strong>(ख) सांस्कृतिक तथा ऐतिहासिक अवस्थिति:</strong></p>
+                <ul>
+                    <li>नेपाल विश्व शान्तिका अग्रदूत गौतम बुद्धको जन्मस्थल लुम्बिनी र हिन्दुहरूको पवित्र आस्थाको केन्द्र पशुपतिनाथ, मुक्तिनाथ तथा जानकी मन्दिरको देश हो <span class="ref">[५]</span>।</li>
+                    <li>काठमाडौँ उपत्यकाका ऐतिहासिक कला, गुम्बा, स्तूप र बहुसांस्कृतिक चाडपर्वहरूले नेपाललाई 'मन्दिरै मन्दिरको देश' र 'सांस्कृतिक सङ्गमस्थल' का रूपमा परिचित गराएका छन् <span class="ref">[५]</span>।</li>
+                    <li>वीर गोर्खालीहरूको साहस र स्वाभिमानको इतिहासले पनि नेपाललाई विश्वसामु विशिष्ट बनाएको छ <span class="ref">[५]</span>।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">३. नेपाललाई विश्वसामु थप परिचित गराउन अपनाउनुपर्ने कदमहरू:</span></p>
+                <ol>
+                    <li><strong>साहसिक र सांस्कृतिक पर्यटनको प्रवर्द्धन:</strong> सगरमाथा, अन्नपूर्ण पदमार्ग, लुम्बिनी र पशुपतिनाथ जस्ता ऐतिहासिक/प्राकृतिक सम्पदाहरूको डिजिटल माध्यम र अन्तर्राष्ट्रिय कूटनीतिक नीतिमार्फत विश्वभर व्यापक प्रचारप्रसार गर्ने <span class="ref">[५]</span>।</li>
+                    <li><strong>जलविद्युत् र हरित ऊर्जाको निर्यात:</strong> ४२,००० मेगावाटको विद्युत् सम्भाव्यतालाई प्रयोग गरी दक्षिण एसियाली क्षेत्रमा हरित ऊर्जा निर्यात गरी आर्थिक स्वाभिमानी राष्ट्र बन्ने <span class="ref">[५]</span>।</li>
+                    <li><strong>अन्तर्राष्ट्रिय खेलकुद र सभा-समारोह आयोजना:</strong> उच्च हिमाली क्षेत्रमा साहसिक खेलकुद (Sports Tourism) र जलयात्रा (White Water Rafting) को अन्तर्राष्ट्रिय प्रतियोगिता सञ्चालन गर्ने <span class="ref">[५]</span>।</li>
+                    <li><strong>जैविक विविधता र जडीबुटीको ब्रान्डिङ:</strong> हिमाली जडीबुटी र दुर्लभ जैविक विविधताको अनुसन्धान गरी औषधि र जैविक उत्पादनहरू विश्व बजारमा पठाउने <span class="ref">[५]</span>।</li>
+                    <li><strong>सभ्य र सुरक्षित वातावरण निर्माण:</strong> वैदेशिक पर्यटकहरूका लागि भरपर्दो पूर्वाधार (सडक, विमानस्थल), सुरक्षा र मौलिक अतिथि सत्कार (Atithi Devo Bhava) को प्रत्याभूति दिने <span class="ref">[५]</span>।</li>
+                </ol>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">४. निष्कर्ष:</span> सङ्क्षेपमा, नेपाल केवल भूगोलको सानो टुकडा मात्र नभई हिमालको देश, शान्तिको मुहान, जलस्रोतको भण्डार र सांस्कृतिक धरोहरको सङ्गम हो <span class="ref">[५]</span>। नेपालको यो अद्वितीय भौगोलिक र सांस्कृतिक पहिचानलाई संरक्षण गर्दै आधुनिक प्रविधि, दिगो विकास र प्रभावकारी कूटनीतिका माध्यमबाट विश्वसामु उजागर गर्न सके नेपाल विश्वकै एक समृद्ध र आकर्षणको केन्द्र बन्न सक्दछ <span class="ref">[५]</span>।</p>
+            </div>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="margin-top:20px;">
+            <i class="fas fa-trophy" style="color:#FFD54F;"></i>
+            <strong>अन्तिम सल्लाह:</strong> परीक्षामा "नेपालको भौगोलिक अवस्थिति (अक्षांश-देशान्तर)", "उचाइगत विविधता (५९ मिटर–८,८४८.८६ मिटर)", "शान्तिका अग्रदूत बुद्धको जन्मस्थल लुम्बिनी", र "जलविद्युत् सम्भाव्यता ४२,००० MW" — यी ४ तथ्याङ्क बारम्बार सोधिन्छन्। साथै, "भौगोलिक अवस्था र जनजीवनबिचको सम्बन्ध" बारे तुलनात्मक उत्तर लेख्न अभ्यास गर्नुहोस्। ५ मुख्य बुँदा + उदाहरण + निष्कर्ष — यो ढाँचाले ५ र ८ अङ्क दुवैमा उच्च अङ्क दिलाउँछ!
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ५, पाठ १</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) { btn.classList.add('visible'); }
+                else { btn.classList.remove('visible'); }
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+
+</body>
+</html>
