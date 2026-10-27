@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ४ मास्टर रिभिजन गाइड – मानव तथा समाजको उद्भव र विकास (कक्षा ११)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #eef1f8 0%, #f3f5fb 50%, #fef4f0 100%);
+            background-attachment: fixed;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fdfdff;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(26, 35, 126, 0.14);
+            padding: 28px 22px 40px;
+            position: relative;
+            border: 1px solid rgba(26, 35, 126, 0.06);
+        }
+
+        h1, h2, h3, h4, .section-head, .sub-head, .main-header h1 {
+            font-family: 'Tiro Devanagari Hindi', 'Noto Sans Devanagari', serif;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #c5cae9;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1A237E;
+            line-height: 1.3;
+        }
+
+        .main-header h1 i { color: #FF7043; margin-right: 10px; }
+
+        .main-header .subtitle {
+            font-size: 1.14rem;
+            color: #4d5a80;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: linear-gradient(135deg, #FF7043 0%, #E64A19 100%);
+            color: #fff;
+            font-size: 0.78rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+            box-shadow: 0 2px 8px rgba(255, 112, 67, 0.35);
+        }
+
+        .credit-bar {
+            background: linear-gradient(90deg, #e8eaf6 0%, #f3f5fb 100%);
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c5cae9;
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name { color: #1A237E; font-weight: 800; font-size: 1.12rem; }
+        .credit-bar .email { color: #E64A19; font-weight: 700; }
+        .credit-bar i { color: #1A237E; margin-right: 6px; }
+
+        /* ----- LESSON NAVIGATION PILLS ----- */
+        .lesson-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0 24px;
+            padding: 16px 18px;
+            background: linear-gradient(135deg, #f8f9fc 0%, #fef4f0 100%);
+            border-radius: 16px;
+            border: 2px dashed #c5cae9;
+        }
+
+        .lesson-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: #ffffff;
+            color: #1A237E;
+            border: 2px solid #c5cae9;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            transition: all 0.25s;
+            box-shadow: 0 1px 4px rgba(26, 35, 126, 0.06);
+        }
+
+        .lesson-pill:hover {
+            background: linear-gradient(135deg, #1A237E 0%, #0D1454 100%);
+            color: #ffffff;
+            border-color: #1A237E;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 35, 126, 0.3);
+        }
+
+        .lesson-pill .pill-num {
+            background: #FF7043;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 900;
+        }
+
+        .lesson-pill:hover .pill-num { background: #ffffff; color: #1A237E; }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: linear-gradient(135deg, #1A237E 0%, #0D1454 100%);
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #283593;
+            box-shadow: 0 4px 16px rgba(26, 35, 126, 0.25);
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i { color: #FFB74D; font-size: 1.25rem; }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e8eaf6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 5px 0 5px 8px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-grid a:hover {
+            color: #FFB74D;
+            border-bottom-color: #FFB74D;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i { color: #FFB74D; font-size: 0.55rem; min-width: 14px; }
+
+        @media (max-width: 700px) { .toc-grid { grid-template-columns: 1fr; } .toc-grid a { font-size: 15px; } }
+
+        /* ----- QUICK STATS ----- */
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin: 20px 0 24px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
+            border-radius: 14px;
+            padding: 14px 18px;
+            border-left: 5px solid #1A237E;
+            border-top: 2px solid #e8eaf6;
+            border-right: 2px solid #e8eaf6;
+            border-bottom: 2px solid #e8eaf6;
+            transition: all 0.25s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(26, 35, 126, 0.15);
+            border-left-color: #FF7043;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.82rem;
+            color: #1A237E;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-card .stat-value {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #0D1454;
+            line-height: 1.3;
+            font-family: 'Tiro Devanagari Hindi', serif;
+        }
+
+        .stat-card .stat-detail {
+            font-size: 0.92rem;
+            color: #4d5a80;
+            font-weight: 500;
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1A237E 0%, #0D1454 100%);
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 14px rgba(26, 35, 126, 0.35);
+        }
+
+        .section-head i { font-size: 1.4rem; color: #FFB74D; }
+
+        .section-head .mark-badge {
+            color: #1A237E;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #FFB74D; color: #0D1454; }
+        .section-head .mark-badge.green { background: #81C784; color: #0D1454; }
+        .section-head .mark-badge.purple { background: #CE93D8; color: #4A148C; }
+        .section-head .mark-badge.blue { background: #64B5F6; color: #0D47A1; }
+        .section-head .mark-badge.pink { background: #F48FB1; color: #880E4F; }
+
+        .sub-head {
+            font-size: 1.24rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #FF7043;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i { color: #E64A19; font-size: 1.1rem; }
+
+        .sub-head-sm {
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: #0D1454;
+            margin: 20px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i { color: #FF7043; }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 400;
+            line-height: 1.95;
+        }
+
+        .content-box p, .content-box ul, .content-box ol, .content-box li {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul, .content-box ol { padding-left: 28px; margin: 8px 0 8px; }
+        .content-box li { margin-bottom: 6px; }
+        .content-box strong { color: #0D1454; font-weight: 700; }
+
+        .content-box.navy-light { border-left-color: #1A237E; background: #eef1f8; }
+        .content-box.coral-light { border-left-color: #FF7043; background: #fef4f0; }
+        .content-box.gold-light { border-left-color: #b45309; background: #fef8ee; }
+        .content-box.green-light { border-left-color: #1f7a4a; background: #eef8f2; }
+        .content-box.purple-light { border-left-color: #6A1B9A; background: #f4eef8; }
+        .content-box.blue-light { border-left-color: #1565C0; background: #e8f0fa; }
+        .content-box.teal-light { border-left-color: #00695C; background: #e8f3f0; }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1A237E;
+            transition: all 0.2s;
+            box-shadow: 0 1px 4px rgba(26, 35, 126, 0.06);
+        }
+
+        .glossary-item:hover {
+            background: linear-gradient(135deg, #eef1f8 0%, #e8eaf6 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.12);
+            border-left-color: #FF7043;
+        }
+
+        .glossary-item strong { color: #0D1454; font-size: 1.08rem; font-weight: 800; }
+        .glossary-item p { margin-top: 3px; font-size: 1.02rem; color: #2d3a4a; font-weight: 400; }
+
+        @media (max-width: 700px) { .glossary-grid { grid-template-columns: 1fr; } }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c5cae9;
+            box-shadow: 0 2px 8px rgba(26, 35, 126, 0.06);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.98rem;
+            min-width: 500px;
+        }
+
+        th, td {
+            padding: 10px 12px;
+            border: 1px solid #c5cae9;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: linear-gradient(135deg, #1A237E 0%, #0D1454 100%);
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        td { font-weight: 400; font-size: 0.95rem; }
+        td.ctr { text-align: center; }
+        td.strong-cell { font-weight: 700; color: #0D1454; background: #f4f6fc !important; }
+
+        tr:nth-child(even) td { background: #f8f9fc; }
+        tr:hover td { background: #eef1f8; }
+
+        .table-caption {
+            background: #e8eaf6;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1A237E;
+            border-bottom: 2px solid #c5cae9;
+            font-family: 'Tiro Devanagari Hindi', serif;
+        }
+
+        /* ----- MASTER TIMELINE ----- */
+        .master-timeline {
+            position: relative;
+            margin: 30px 0;
+            padding: 20px 0;
+        }
+
+        .master-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #8d6e63 0%, #FF7043 50%, #1A237E 100%);
+            border-radius: 2px;
+        }
+
+        .mt-item {
+            position: relative;
+            padding: 12px 20px 12px 70px;
+            margin-bottom: 16px;
+        }
+
+        .mt-item::before {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background: #fff;
+            border: 4px solid #1A237E;
+            border-radius: 50%;
+            left: 19px;
+            top: 20px;
+            z-index: 2;
+            box-shadow: 0 0 0 4px #eef1f8;
+        }
+
+        .mt-item.highlight::before {
+            border-color: #FF7043;
+            background: #FF7043;
+            box-shadow: 0 0 0 4px #fef4f0;
+        }
+
+        .mt-content {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
+            padding: 14px 20px;
+            border-radius: 14px;
+            border: 2px solid #c5cae9;
+            border-left: 5px solid #1A237E;
+            box-shadow: 0 2px 8px rgba(26, 35, 126, 0.08);
+            transition: all 0.2s;
+        }
+
+        .mt-item.highlight .mt-content {
+            border-left-color: #FF7043;
+            background: linear-gradient(135deg, #ffffff 0%, #fef4f0 100%);
+        }
+
+        .mt-content .mt-era {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-weight: 800;
+            color: #1A237E;
+            font-size: 1.08rem;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mt-item.highlight .mt-era { color: #E64A19; }
+
+        .mt-content .mt-desc {
+            font-size: 0.98rem;
+            color: #2d3a4a;
+            line-height: 1.75;
+        }
+
+        /* ----- HERO EXAM STRATEGY BOX ----- */
+        .strategy-box {
+            background: linear-gradient(135deg, #1A237E 0%, #0D1454 100%);
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 24px 30px;
+            margin: 16px 0 24px;
+            border: 3px solid #FFB74D;
+            box-shadow: 0 6px 24px rgba(26, 35, 126, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .strategy-box::before {
+            content: '🎯';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 8rem;
+            opacity: 0.08;
+            transform: rotate(-15deg);
+        }
+
+        .strategy-box h3 {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.3rem;
+            color: #FFB74D;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .strategy-box h3 i { color: #FF7043; }
+
+        .strategy-box p {
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.9;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .strategy-box strong { color: #FFB74D; font-weight: 700; }
+
+        .mark-distribution {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            margin-top: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mark-item {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 10px 14px;
+            border: 1px solid rgba(255, 183, 77, 0.3);
+            text-align: center;
+        }
+
+        .mark-item .mark-num {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #FFB74D;
+            line-height: 1.2;
+        }
+
+        .mark-item .mark-label {
+            font-size: 0.82rem;
+            color: #e8eaf6;
+            font-weight: 500;
+        }
+
+        /* ----- INSIGHT BOX ----- */
+        .insight-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-radius: 12px;
+            padding: 14px 20px;
+            margin: 12px 0 18px;
+            border-left: 5px solid #FFC107;
+            border-top: 1px solid #FFE082;
+            border-right: 1px solid #FFE082;
+            border-bottom: 1px solid #FFE082;
+        }
+
+        .insight-box .insight-title {
+            font-weight: 800;
+            color: #b45309;
+            font-size: 1.02rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+            font-family: 'Tiro Devanagari Hindi', serif;
+        }
+
+        .insight-box .insight-title i { color: #E64A19; }
+        .insight-box p, .insight-box li { font-size: 1rem; color: #4a3500; font-weight: 400; margin-bottom: 3px; }
+        .insight-box ul { padding-left: 22px; margin: 4px 0; }
+
+        /* ----- FEATURE CARDS ----- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 14px 0;
+        }
+
+        @media (max-width: 640px) { .feature-grid { grid-template-columns: 1fr; } }
+
+        .feature-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
+            border-radius: 14px;
+            padding: 16px 20px;
+            border: 2px solid #c5cae9;
+            border-top: 5px solid #1A237E;
+            transition: all 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(26, 35, 126, 0.12);
+            border-top-color: #FF7043;
+        }
+
+        .feature-card .fc-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-weight: 800;
+            color: #1A237E;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-card .fc-title i { color: #FF7043; }
+        .feature-card p { font-size: 0.98rem; color: #2d3a4a; line-height: 1.7; }
+
+        /* ----- ACCULTURATION vs ASSIMILATION ----- */
+        .vs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        @media (max-width: 640px) { .vs-grid { grid-template-columns: 1fr; } }
+
+        .vs-card {
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid;
+        }
+
+        .vs-card.accult {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border-color: #66BB6A;
+        }
+
+        .vs-card.assim {
+            background: linear-gradient(135deg, #ffebee 0%, #fef0f2 100%);
+            border-color: #EF5350;
+        }
+
+        .vs-card .vs-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px dashed;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .vs-card.accult .vs-title { color: #1B5E20; border-color: #a5d6a7; }
+        .vs-card.assim .vs-title { color: #b71c1c; border-color: #ef9a9a; }
+
+        .vs-card p { font-size: 1rem; margin-bottom: 8px; line-height: 1.75; color: #2d3a4a; }
+        .vs-card strong { font-weight: 700; }
+
+        /* ----- ANSWER TIPS ----- */
+        .tips-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 16px 0;
+        }
+
+        .tip-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
+            border-radius: 14px;
+            padding: 16px 22px 16px 68px;
+            position: relative;
+            border: 2px solid #c5cae9;
+            border-left: 5px solid #1A237E;
+            transition: all 0.2s;
+        }
+
+        .tip-item:hover {
+            transform: translateX(4px);
+            border-left-color: #FF7043;
+            box-shadow: 0 4px 14px rgba(26, 35, 126, 0.1);
+        }
+
+        .tip-num {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #FF7043 0%, #E64A19 100%);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.15rem;
+            box-shadow: 0 3px 10px rgba(255, 112, 67, 0.4);
+            font-family: 'Tiro Devanagari Hindi', serif;
+        }
+
+        .tip-item .tip-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-weight: 800;
+            color: #1A237E;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+
+        .tip-item p { font-size: 1rem; color: #2d3a4a; line-height: 1.75; }
+
+        /* ----- KEY TERM CARDS (High-Yield) ----- */
+        .keyterm-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 16px 0;
+        }
+
+        .keyterm {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
+            border-radius: 12px;
+            padding: 12px 18px;
+            border-left: 5px solid #1A237E;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 12px;
+            align-items: start;
+            transition: all 0.2s;
+            border-top: 1px solid #e8eaf6;
+            border-right: 1px solid #e8eaf6;
+            border-bottom: 1px solid #e8eaf6;
+        }
+
+        .keyterm:hover {
+            background: linear-gradient(135deg, #eef1f8 0%, #e8eaf6 100%);
+            border-left-color: #FF7043;
+        }
+
+        .keyterm .kt-num {
+            background: linear-gradient(135deg, #1A237E 0%, #0D1454 100%);
+            color: #FFB74D;
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.85rem;
+            margin-top: 3px;
+        }
+
+        .keyterm .kt-content { }
+        .keyterm .kt-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-weight: 800;
+            color: #1A237E;
+            font-size: 1.02rem;
+        }
+        .keyterm .kt-def { font-size: 0.98rem; color: #2d3a4a; line-height: 1.7; margin-top: 2px; }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: linear-gradient(135deg, #1A237E 0%, #0D1454 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.7rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        #scrollUpBtn:hover { background: #FF7043; transform: scale(1.08); box-shadow: 0 6px 28px rgba(255, 112, 67, 0.55); }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #c5cae9;
+            text-align: center;
+            font-size: 0.93rem;
+            color: #4d5a80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i { color: #1A237E; margin-right: 6px; }
+        .footer-copy .highlight { font-weight: 800; color: #0D1454; }
+
+        hr { border: none; border-top: 3px dotted #c5cae9; margin: 28px 0 10px; }
+
+        .tip-box {
+            background: linear-gradient(135deg, #1A237E 0%, #0D1454 100%);
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 400;
+            font-size: 1.02rem;
+            box-shadow: 0 3px 14px rgba(26, 35, 126, 0.3);
+        }
+
+        .tip-box i { margin-right: 8px; }
+        .tip-box strong { color: #FFB74D; }
+
+        .back-toc {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            padding: 6px 16px;
+            background: #e8eaf6;
+            color: #1A237E;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.86rem;
+            text-decoration: none;
+            border: 1.5px solid #c5cae9;
+            transition: all 0.2s;
+        }
+
+        .back-toc:hover { background: #1A237E; color: #fff; border-color: #1A237E; }
+
+        /* ----- LESSON DIVIDER ----- */
+        .lesson-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #FF7043 0%, #E64A19 100%);
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 0.82rem;
+            margin-left: 8px;
+            box-shadow: 0 2px 6px rgba(255, 112, 67, 0.3);
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container { padding: 16px 12px 24px; border-radius: 20px; }
+            .main-header h1 { font-size: 1.28rem; }
+            .section-head { font-size: 1.15rem; padding: 10px 14px; }
+            .sub-head { font-size: 1.05rem; }
+            .credit-bar { flex-direction: column; align-items: flex-start; gap: 4px; font-size: 0.9rem; padding: 10px 16px; }
+            #scrollUpBtn { width: 50px; height: 50px; font-size: 1.3rem; bottom: 18px; right: 18px; }
+            .toc-section { padding: 14px 16px; }
+            .content-box { padding: 14px 16px; }
+            .content-box p, .content-box ul, .content-box ol, .content-box li { font-size: 1rem; }
+            table { font-size: 0.82rem; min-width: 500px; }
+            th, td { font-size: 0.82rem; padding: 6px 8px; }
+            .insight-box p, .insight-box li { font-size: 0.95rem; }
+            .stat-card .stat-value { font-size: 1.2rem; }
+            .toc-grid a { font-size: 15px; }
+            .glossary-item strong { font-size: 1rem; }
+            .glossary-item p { font-size: 0.94rem; }
+            .strategy-box { padding: 18px 20px; }
+            .strategy-box h3 { font-size: 1.1rem; }
+            .strategy-box p { font-size: 0.98rem; }
+            .master-timeline::before { left: 20px; }
+            .mt-item { padding-left: 50px; }
+            .mt-item::before { left: 9px; }
+            .tip-item { padding: 14px 16px 14px 58px; }
+            .tip-num { width: 34px; height: 34px; font-size: 1rem; left: 12px; }
+            .keyterm { grid-template-columns: 24px 1fr; padding: 10px 14px; }
+            .lesson-nav { padding: 12px 14px; }
+            .lesson-pill { font-size: 0.82rem; padding: 6px 14px; }
+        }
+
+        @media (min-width: 768px) { .container { padding: 36px 46px 50px; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-scroll"></i>
+                    एकाइ ४: मानव तथा समाजको उद्भव र विकास
+                </h1>
+                <div class="subtitle">
+                    कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-trophy"></i> मास्टर रिभिजन गाइड</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="credit-bar">
+            <span><i class="fas fa-user-edit"></i> <span class="name">Prepared by: Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> <span class="email">nregmi511@gmail.com</span></span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ४ (पूर्ण)</span>
+        </div>
+
+        <!-- ===== LESSON NAVIGATION PILLS ===== -->
+        <div class="lesson-nav">
+            <a href="#lesson1" class="lesson-pill"><span class="pill-num">१</span> जैविक उत्पत्ति</a>
+            <a href="#lesson2" class="lesson-pill"><span class="pill-num">२</span> ढुङ्गे युग</a>
+            <a href="#lesson3" class="lesson-pill"><span class="pill-num">३</span> कृषि युग</a>
+            <a href="#lesson4" class="lesson-pill"><span class="pill-num">४</span> आधुनिक समाज</a>
+            <a href="#high-yield" class="lesson-pill" style="background:#FFB74D; border-color:#FFB74D;"><span class="pill-num" style="background:#1A237E;">★</span> मार्क-बुस्टर</a>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== HERO EXAM STRATEGY ===== -->
+        <!-- ========================================================== -->
+
+        <div class="strategy-box">
+            <h3><i class="fas fa-crosshairs"></i> परीक्षा रणनीति (Exam Strategy)</h3>
+            <p>मानव समाजको वर्तमान रूप एकैपटक निर्माण भएको नभई यो <strong>करोडौँ वर्षको जैविक उद्विकास</strong> र <strong>हजारौँ वर्षको सामाजिक-सांस्कृतिक विकासक्रम</strong>को प्रतिफल हो। नाङ्गो आँखाले देख्न नसकिने एककोषीय जीवबाट सुरु भएको यो जैविक यात्रा बहुकोषीय हुँदै अस्ट्रालोपियेकस र होमो प्रजातिका क्रमिक चरणहरू पार गरेर आधुनिक होमो सेपियन्ससम्म आइपुगेको छ <span class="ref">[४]</span>।</p>
+            <p>राष्ट्रिय परीक्षा बोर्ड (NEB) को वार्षिक परीक्षाका लागि यो एकाइ विषयवस्तु र अङ्कभार दुवै दृष्टिकोणले अत्यन्तै महत्त्वपूर्ण मानिन्छ <span class="ref">[४]</span>।</p>
+
+            <div class="mark-distribution">
+                <div class="mark-item">
+                    <div class="mark-num">१</div>
+                    <div class="mark-label">अति संक्षिप्त प्रश्न<br>(सिद्धान्त/परिभाषा)</div>
+                </div>
+                <div class="mark-item">
+                    <div class="mark-num">५</div>
+                    <div class="mark-label">संक्षिप्त उत्तर<br>(तुलनात्मक/विश्लेषणात्मक)</div>
+                </div>
+                <div class="mark-item">
+                    <div class="mark-num">८</div>
+                    <div class="mark-label">लामो उत्तर<br>(समग्र विकासक्रम)</div>
+                </div>
+            </div>
+            <p style="margin-top:14px; font-size:0.95rem;">परीक्षामा <strong>जैविक उद्विकासका चरणहरू, आगोको आविष्कारको महत्त्व, नवपाषाण क्रान्ति, र सामन्ती युगदेखि आधुनिक समाजसम्मको रूपान्तरण</strong> बारे बहुआयामिक प्रश्नहरू सोधिने हुनाले विषयवस्तुलाई तालिका र बुँदागत रूपमा विश्लेषणात्मक ढाँचामा बुझ्नु आवश्यक छ <span class="ref">[४]</span>।</p>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची (Master Navigation)</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पाठ १: मानवको जैविक उत्पत्ति र विकासक्रम</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठ २: मानव समाजको विकासक्रम र ढुङ्गे युग</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> पाठ ३: कृषि युगको सुरुवात र विकास</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> पाठ ४: आधुनिक समाज र यसका विशेषताहरू</a>
+                <a href="#high-yield"><i class="fas fa-chevron-right"></i> मार्क-बुस्टर: शब्दावली र उत्तर सीप</a>
+                <a href="#master-timeline"><i class="fas fa-chevron-right"></i> मास्टर टाइमलाइन (समग्र यात्रा)</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== QUICK STATS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="quick-stats">
+            <div class="stat-card">
+                <div class="stat-label">मानव विकास चरण</div>
+                <div class="stat-value">५ वटा</div>
+                <div class="stat-detail">अस्ट्रालोपियेकसदेखि होमो सेपियन्ससम्म</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">समाज विकास सिद्धान्त</div>
+                <div class="stat-value">३ वटा</div>
+                <div class="stat-detail">मार्क्स, मोर्गन-टेलर, मानवशास्त्रीय</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">ढुङ्गे युग चरण</div>
+                <div class="stat-value">३ वटा</div>
+                <div class="stat-detail">पुरा, मध्य, नवपाषाण</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">कृषिको उद्गम</div>
+                <div class="stat-value">Fertile Crescent</div>
+                <div class="stat-detail">मेसोपोटामिया, सिरिया, इजिप्ट</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">औद्योगिक क्रान्ति</div>
+                <div class="stat-value">१८औँ शताब्दी</div>
+                <div class="stat-detail">युरोपबाट सुरु</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">परीक्षा-मुख्य शब्द</div>
+                <div class="stat-value">१० वटा</div>
+                <div class="stat-detail">High-Yield Terminology</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== SECTION 1: LESSON 1 — BIOLOGICAL EVOLUTION ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-dna"></i>
+            पाठ १: मानवको जैविक उत्पत्ति र विकासक्रम
+            <span class="lesson-badge">Lesson 1</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-microscope"></i> १.१ जैविक उद्विकासको अवधारणा</div>
+
+        <div class="content-box navy-light">
+            <p>वैज्ञानिक अनुसन्धान अनुसार मानव शरीर करोडौँ साना सूक्ष्म कोषाणूहरू (Cells) मिलेर बनेको छ। पृथ्वीमा जीवको उत्पत्ति हुँदा सुरुमा एउटा मात्र कोष भएको <strong>एककोषीय जीव (Unicellular Organism)</strong> को उत्पत्ति भएको थियो <span class="ref">[४]</span>। हजारौँ र लाखौँ वर्षको अवधिमा प्राकृतिक अनुकूलन र क्रमिक परिवर्तन हुँदै सो एककोषीय जीव <strong>बहुकोषीय जीव (Multicellular Organism)</strong> मा रूपान्तरण भयो <span class="ref">[४]</span>।</p>
+            <p>यसरी सरलताबाटै जटिलतातर्फ हुने प्राकृतिक, जैविक र शारीरिक परिवर्तनको क्रमिक प्रक्रिया नै <strong>जैविक उद्विकास (Biological Evolution)</strong> हो। मानव जाति पनि यसै जैविक उद्विकासको लामो प्रक्रियाबाट आजको आधुनिक रूपमा विकसित भएको हो <span class="ref">[४]</span>।</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-users"></i> १.२ मानव विकासका ५ क्रमिक चरणहरू</div>
+
+        <div class="table-wrap">
+            <div class="table-caption"><i class="fas fa-table" style="margin-right:6px; color:#1A237E;"></i> मानव प्रजातिको विकासक्रम (५ चरण) <span class="ref">[४]</span></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>मानव प्रजाति</th>
+                        <th>समय/अवधि</th>
+                        <th>मुख्य शारीरिक/जैविक विशेषताहरू</th>
+                        <th>औजार तथा जीवनशैली</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="strong-cell">अस्ट्रालोपियेकस<br>(Australopithecus)</td>
+                        <td class="ctr">आजभन्दा १०–४० लाख वर्ष अगाडि</td>
+                        <td>होमो जातिको विकास हुनुअघिको प्रारम्भिक पूर्वज; शारीरिक रूपमा बाँदर प्रजातिसँग धेरै नजिक</td>
+                        <td>कन्दमूल र प्राकृतिक फलफूल सङ्कलनमा निर्भर; प्रारम्भिक घुमन्ते जीवन</td>
+                    </tr>
+                    <tr>
+                        <td class="strong-cell">होमो ह्याबिलिस<br>(Homo habilis)</td>
+                        <td class="ctr">आजभन्दा १५–२३ लाख वर्ष अगाडि</td>
+                        <td>अस्ट्रालोपियेकसबाट विकसित होमो जातिको पहिलो क्रमिक प्रजाति; मस्तिष्कको आकारमा वृद्धि</td>
+                        <td>समूह वा झुण्ड बनाएर बस्ने; लट्ठीले खनेर कन्दमूल निकाल्ने र सिकारका लागि साना ढुङ्गाको प्रयोग</td>
+                    </tr>
+                    <tr>
+                        <td class="strong-cell">होमो इरेक्टस<br>(Homo erectus)</td>
+                        <td class="ctr">होमो ह्याबिलिसपछिको विकसित चरण</td>
+                        <td>गाला र च्यापु ठुलो आकारको; दाँत साना भएका; बङ्गाराको संरचनामा परिमार्जन</td>
+                        <td><strong>आगोको आविष्कार</strong> गरेको; अफ्रिकाबाट एसिया र युरोपमा फैलिएको पहिलो प्रजाति (सन् १८९० मा इन्डोनेसियाको जाभामा अवशेष प्राप्त; नेपालीका पुर्खा मानिने)</td>
+                    </tr>
+                    <tr>
+                        <td class="strong-cell">होमो नियन्डरथलेन्सिस<br>(Homo neanderthalensis)</td>
+                        <td class="ctr">१.५ लाख–३० हजार वर्ष अगाडि</td>
+                        <td>दाँत होमो इरेक्टसभन्दा साना; औंला र शरीरको तल्लो भाग आधुनिक मानवभन्दा साना/होचा; कङ्काल प्रणालीमा भिन्नता</td>
+                        <td>आधुनिक मानवभन्दा ठीक अगाडिको अवस्था; ३० हजार वर्ष अगाडि लोप भएको वा होमो सेपियन्समा समाहित भएको मानिने</td>
+                    </tr>
+                    <tr>
+                        <td class="strong-cell">होमो सेपियन्स<br>(Homo sapiens)</td>
+                        <td class="ctr">आजभन्दा १.५ लाख वर्ष अगाडिदेखि हालसम्म</td>
+                        <td><strong>आधुनिक मानवको वैज्ञानिक नाम</strong>; पूर्ण रूपमा विकसित मस्तिष्क र सोच्न सक्ने चेतना</td>
+                        <td>सामाजिक संस्कारको विकास (मरेका मानिस गाड्ने चलन); परिष्कृत औजारको निर्माण र सङ्गठित सामाजिक जीवन</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-fingerprint"></i> १.३ उद्विकासका मुख्य शारीरिक र जैविक विशेषताहरू</div>
+
+        <div class="content-box coral-light">
+            <p>मानव उद्विकासको प्रक्रियामा शारीरिक र जैविक बनावटमा आएका प्रमुख परिवर्तनहरू र तिनले मानव जीवनशैलीमा पारेका प्रत्यक्ष प्रभावहरू निम्नलिखित छन् <span class="ref">[४]</span>:</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="fc-title"><i class="fas fa-tooth"></i> दाँत र बङ्गाराको संरचना</div>
+                    <p>होमो इरेक्टस र नियन्डरथलेन्सिसको चरणमा गाला र च्यापु ठुलो भए तापनि दाँत र बङ्गारा साना हुँदै गए।<br><strong>फाइदा:</strong> पाकेको वा आगोमा पोलिएको नरम खाना खान सजिलो भयो।</p>
+                </div>
+                <div class="feature-card">
+                    <div class="fc-title"><i class="fas fa-hand-paper"></i> औंला र कङ्काल प्रणाली</div>
+                    <p>होमो नियन्डरथलेन्सिस र सेपियन्समा औंलाहरू सूक्ष्म कार्यका लागि परिमार्जित भए र कङ्काल प्रणाली सीधा उभिन सक्ने गरी अनुकूलित भयो।<br><strong>फाइदा:</strong> औजार बलियोसँग समात्न, साना वस्तु परिचालन गर्न सहज।</p>
+                </div>
+                <div class="feature-card">
+                    <div class="fc-title"><i class="fas fa-fire"></i> आगोको प्रयोग र नियन्त्रण</div>
+                    <p>होमो इरेक्टसद्वारा आगोको आविष्कार र नियन्त्रण भयो।<br><strong>फाइदा:</strong> काँचो मासु र कन्दमूल पोलेर खान, जङ्गली जनावरबाट जोगिन र जाडोमा शरीर न्यानो राख्न मद्दत।</p>
+                </div>
+                <div class="feature-card">
+                    <div class="fc-title"><i class="fas fa-hands-praying"></i> सामाजिक संस्कार र चेतना</div>
+                    <p>होमो सेपियन्सको आगमनसँगै मरेका मानिसहरूलाई गाड्ने जस्ता कार्यहरू सुरु भए।<br><strong>फाइदा:</strong> मानवमा भावनात्मक सम्बन्ध, सांस्कृतिक मान्यता र सामाजिक संस्कारको जग बस्यो।</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="insight-box">
+            <div class="insight-title"><i class="fas fa-lightbulb"></i> मुख्य अवलोकन</div>
+            <ul>
+                <li><strong>आगोको आविष्कार:</strong> होमो इरेक्टसले गरे — मानव विकासको सबैभन्दा क्रान्तिकारी उपलब्धि <span class="ref">[४]</span>।</li>
+                <li><strong>पहिलो होमो प्रजाति:</strong> होमो ह्याबिलिस (१५–२३ लाख वर्ष अगाडि) <span class="ref">[४]</span>।</li>
+                <li><strong>आधुनिक मानव:</strong> होमो सेपियन्स (१.५ लाख वर्ष अगाडिदेखि) — मस्तिष्क र चेतना पूर्ण विकसित <span class="ref">[४]</span>।</li>
+                <li><strong>अफ्रिकाबाट बाहिर फैलिने पहिलो:</strong> होमो इरेक्टस (जाभा, इन्डोनेसिया — सन् १८९०) <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== SECTION 2: LESSON 2 — STONE AGE ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-hammer"></i>
+            पाठ २: मानव समाजको विकासक्रम र ढुङ्गे युग
+            <span class="lesson-badge">Lesson 2</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-balance-scale"></i> २.१ समाज विकास सम्बन्धी प्रमुख सिद्धान्तहरू</div>
+
+        <div class="content-box blue-light">
+            <p>मानव समाजको क्रमिक विकासलाई बुझ्न समाजशास्त्रीय, मानवशास्त्रीय र आर्थिक-राजनीतिक सिद्धान्तहरू महत्त्वपूर्ण मानिन्छन्। कार्ल मार्क्सको भौतिकवादी दृष्टिकोण र मोर्गन/टेलरको सांस्कृतिक-प्रविधिक दृष्टिकोणलाई तल प्रस्तुत तालिकामा स्पष्ट पारिएको छ <span class="ref">[४]</span>:</p>
+        </div>
+
+        <div class="table-wrap">
+            <div class="table-caption"><i class="fas fa-table" style="margin-right:6px; color:#1A237E;"></i> समाज विकासका प्रमुख सिद्धान्तहरू <span class="ref">[४]</span></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>विचार/विद्वान्</th>
+                        <th>विकासका चरणहरू</th>
+                        <th>मुख्य आधार</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="strong-cell">कार्ल मार्क्स<br>(Karl Marx)</td>
+                        <td>आदिम साम्यवाद → दास युग → सामन्ती युग → पुँजीवादी युग → समाजवादी/साम्यवादी युग</td>
+                        <td><strong>उत्पादन सम्बन्ध र स्वामित्व:</strong> उत्पादनका साधनहरूमाथिको नियन्त्रण, वर्गीय सङ्घर्ष र आर्थिक प्रणालीको रूपान्तरण</td>
+                    </tr>
+                    <tr>
+                        <td class="strong-cell">लुइस हेनरी मोर्गन र एडवर्ड टेलर<br>(Morgan & Tylor)</td>
+                        <td>जङ्गली अवस्था → बर्बर अवस्था → सभ्य अवस्था</td>
+                        <td><strong>प्रविधि र संस्कृति:</strong> औजारको प्रयोग, आगो र कृषिको आविष्कार तथा सांस्कृतिक जटिलताको विकास</td>
+                    </tr>
+                    <tr>
+                        <td class="strong-cell">सामान्य मानवशास्त्रीय दृष्टिकोण<br>(Anthropology)</td>
+                        <td>जैविक उत्पत्ति → सामाजिक सङ्गठन → सांस्कृतिक सभ्यता</td>
+                        <td><strong>मानव जातिको शारीरिक उद्विकास:</strong> सामूहिक बसोबास र संस्थागत सभ्यताको निर्माण</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-layer-group"></i> २.२ ढुङ्गे युगका चरणहरू</div>
+
+        <div class="content-box green-light">
+            <p>होमो ह्याबिलिसदेखि होमो सेपियन्ससम्मका प्रारम्भिक मानवको जीवन मुख्यतः ढुङ्गामा आधारित थियो। यस <strong>ढुङ्गे युग (Stone Age)</strong> लाई ३ मुख्य चरणहरूमा वर्गीकरण गरिन्छ <span class="ref">[४]</span>:</p>
+
+            <p style="margin-top:12px;"><strong>🪨 पुरापाषाण युग (Paleolithic Age):</strong></p>
+            <ul>
+                <li>मानवले प्राकृतिक रूपमा पाइने अनगढ (कच्चा) ढुङ्गा र लट्ठीको सीधा प्रयोग गर्दथे <span class="ref">[४]</span>।</li>
+                <li>पूर्णतः सिकार र खाद्य सङ्कलनमा निर्भर घुमन्ते जीवनशैली थियो <span class="ref">[४]</span>।</li>
+                <li><strong>होमो इरेक्टसद्वारा आगोको आविष्कार</strong> हुनु यस युगको क्रान्तिकारी उपलब्धि थियो <span class="ref">[४]</span>।</li>
+            </ul>
+
+            <p style="margin-top:12px;"><strong>🪨 मध्यपाषाण युग (Mesolithic Age):</strong></p>
+            <ul>
+                <li>पुरापाषाण र नवपाषाण युगबिचको <strong>सङ्क्रमणकालीन चरण</strong> <span class="ref">[४]</span>।</li>
+                <li>साना, तिखा र परिमार्जित ढुङ्गे औजारहरू (<strong>Microliths</strong>) को निर्माण र प्रयोग सुरु भयो <span class="ref">[४]</span>।</li>
+                <li>सिकारका साथै प्रारम्भिक पशुपालनको थालनी र अस्थायी बसोबासको सुरुआत भयो <span class="ref">[४]</span>।</li>
+            </ul>
+
+            <p style="margin-top:12px;"><strong>🪨 नवपाषाण युग (Neolithic Age):</strong></p>
+            <ul>
+                <li>ढुङ्गालाई ताछेर, तिखारेर र धार लगाएर <strong>चिल्ला तथा परिष्कृत औजारहरू</strong> बनाउन थालियो <span class="ref">[४]</span>।</li>
+                <li><strong>कृषिको थालनी</strong>, स्थायी गाउँ बसोबास र भाँडाकुँडा (मृण्मय पात्र) को निर्माण भयो <span class="ref">[४]</span>।</li>
+                <li>सामाजिक संस्कार (जस्तै: मृतक गाड्ने कार्य) र सांस्कृतिक जीवनको आधार बस्यो <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-seedling"></i> २.३ नवपाषाण क्रान्ति (Neolithic Revolution)</div>
+
+        <div class="content-box gold-light">
+            <p>नवपाषाण युगमा मानवले धारिला र परिष्कृत ढुङ्गे औजारको विकास गर्नुका साथै <strong>व्यवस्थित कृषि र पशुपालनको थालनी</strong> गरे। केवल सिकार र खाना सङ्कलनमा निर्भर रहने घुमन्ते मानव समाजले यही युगबाट अन्न उत्पादन, स्थायी बसोबास र मृतक गाड्ने जस्ता सामाजिक संस्कारको थालनी गर्‍यो <span class="ref">[४]</span>।</p>
+            <p style="margin-top:10px;"><strong>सिकारी र सङ्कलनकर्ता (Hunter-Gatherer) बाट उत्पादक (Producer) मा भएको मानव समाजको यो व्यापक सामाजिक-आर्थिक रूपान्तरण नै 'नवपाषाण क्रान्ति' हो</strong> <span class="ref">[४]</span>।</p>
+        </div>
+
+        <div class="insight-box">
+            <div class="insight-title"><i class="fas fa-lightbulb"></i> मुख्य अवलोकन</div>
+            <ul>
+                <li><strong>आगोको आविष्कार:</strong> पुरापाषाण युग (होमो इरेक्टसद्वारा) <span class="ref">[४]</span>।</li>
+                <li><strong>Microliths (साना तिखा औजार):</strong> मध्यपाषाण युगको विशेषता <span class="ref">[४]</span>।</li>
+                <li><strong>कृषि र स्थायी बसोबास:</strong> नवपाषाण युगमा सुरु — नै 'नवपाषाण क्रान्ति' <span class="ref">[४]</span>।</li>
+                <li><strong>रूपान्तरण:</strong> Hunter-Gatherer → Producer (उत्पादक) <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== SECTION 3: LESSON 3 — AGRICULTURAL ERA ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-wheat-awn"></i>
+            पाठ ३: कृषि युगको सुरुवात र विकास
+            <span class="lesson-badge">Lesson 3</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-water"></i> ३.१ कृषिको थालनी र उर्वर अर्धचन्द्राकार क्षेत्र</div>
+
+        <div class="content-box teal-light">
+            <p>ढुङ्गे युगको अन्त्यतिर मानवले प्रकृतिमा रहेका बिउबिजनको विकासक्रम र वनस्पतिहरूबारे व्यावहारिक ज्ञान हासिल गरे। लट्ठी र तिखारेका ढुङ्गाले जमिन खनेर कन्दमूल निकाल्ने क्रमबाट सुरु भएको अनुभवले बिउ रोपेर अन्न उब्जाउने <strong>कृषिको थालनी</strong> गरायो <span class="ref">[४]</span>।</p>
+            <p style="margin-top:10px;">पश्चिम एसियाको <strong>'उर्वर अर्धचन्द्राकार क्षेत्र' (Fertile Crescent)</strong> — जसमा मेसोपोटामिया (हालको इराक), सिरिया र इजिप्टका नदी घाटी क्षेत्रहरू पर्दछन् — त्यहाँ कृषिको विकास तीव्र रूपमा भयो <span class="ref">[४]</span>।</p>
+            <p style="margin-top:10px;">विशेषगरी <strong>मेसोपोटामियाको नहर प्रणाली (Mesopotamia Canal System)</strong> ले टाइग्रिस र यूफ्रेटिस नदीको पानीलाई नियमित सिँचाइका लागि खेतसम्म पुर्‍याउने प्रविधि भित्र्यायो। यस नहर प्रणालीले मौसमी कृषिमाथिको निर्भरता हटाएर बाह्रैमास खेती गर्न सम्भव बनायो, जसले गर्दा अनिश्चित सिकारी जीवन समाप्त भई साङ्गठनिक अन्न उत्पादनको युग सुरु भयो <span class="ref">[४]</span>।</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-home"></i> ३.२ स्थायी बसोबास, पशुपालन र वस्तु विनिमय</div>
+
+        <div class="content-box coral-light">
+            <p>कृषि युगको विस्तारले मानव समाजमा निम्नलिखित ३ वटा क्रान्तिकारी सामाजिक-आर्थिक परिवर्तनहरू ल्यायो <span class="ref">[४]</span>:</p>
+
+            <p style="margin-top:12px;"><strong>१. स्थायी बसोबास र गाउँ/सहरको विकास:</strong></p>
+            <ul>
+                <li>बालीनालीको नियमित गोडमेल र संरक्षण गर्न एकै ठाउँमा बस्नुपर्ने बाध्यता भयो <span class="ref">[४]</span>।</li>
+                <li>यसबाट ओडारको घुमन्ते जीवन समाप्त भई नदी किनारहरूमा स्थायी घर, गाउँ र कालान्तरमा <strong>नगर सभ्यताहरूको विकास</strong> भयो <span class="ref">[४]</span>।</li>
+            </ul>
+
+            <p style="margin-top:12px;"><strong>२. पशुपालन र बचत उत्पादन (Surplus Production):</strong></p>
+            <ul>
+                <li>खेतीपातीमा सघाउन तथा मासु र दूधका लागि जनावर पाल्ने क्रम (पशुपालन) सुरु भयो <span class="ref">[४]</span>।</li>
+                <li>व्यवस्थित कृषि र सिँचाइले गर्दा उपभोगभन्दा बढी अन्न उत्पादन हुन थाल्यो। यस <strong>बचत उत्पादन</strong>ले भविष्यका लागि खाद्य भण्डारण र श्रम विभाजनको सुरुआत गरायो <span class="ref">[४]</span>।</li>
+            </ul>
+
+            <p style="margin-top:12px;"><strong>३. वस्तु विनिमय प्रणाली (Barter System):</strong></p>
+            <ul>
+                <li>भौतिक मुद्रा वा सिक्काको आविष्कार भइनसकेको अवस्थामा मानिसहरूले आफ्ना विविध आवश्यकता पूरा गर्न एउटा वस्तु दिएर अर्को वस्तु लिने <strong>वस्तु विनिमय प्रणाली</strong> अपनाए <span class="ref">[४]</span>।</li>
+                <li><em>उदाहरण:</em> यदि कुनै कृषकसँग धान बढी छ र अर्कोसँग आलु वा पशुधन छ भने, उनीहरूले आपसमा धानसँग आलु वा सामग्री साटासाट गरी आफ्ना आवश्यकता पूरा गर्दथे <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-crown"></i> ३.३ सामन्ती समाज र वर्गीय विभाजन</div>
+
+        <div class="content-box purple-light">
+            <p>कृषि युगको विस्तार र बचत उत्पादनसँगै समाजमा निजी सम्पत्तिको अवधारणा र वर्गीय विभाजनको बीजरूपण भयो <span class="ref">[४]</span>:</p>
+            <ul>
+                <li><strong>सम्पत्ति र शक्तिमा असमानता:</strong> खेतीयोग्य जमिन, नहर प्रणाली र पशुधनमाथि जसको नियन्त्रण कायम भयो, उनीहरू शक्तिशाली बने <span class="ref">[४]</span>।</li>
+                <li><strong>सामन्ती व्यवस्थाको उदय:</strong> जमिनको स्वामित्व कब्जा गर्नेहरू <strong>सामन्त/मालिक</strong> बने भने जमिनविहीन मानिसहरू उनीहरूमाथि निर्भर रहने <strong>दास वा किसान</strong> बने <span class="ref">[४]</span>।</li>
+                <li><strong>शोषक र शोषित वर्ग:</strong> समाज स्पष्ट रूपमा दुई वर्ग — <strong>जमिनदार/सामन्त (शोषक)</strong> र <strong>भूदास/किसान (शोषित)</strong> — मा विभाजित भयो। यसबाट सामन्ती सामाजिक-आर्थिक संरचना कायम भयो <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <div class="insight-box">
+            <div class="insight-title"><i class="fas fa-lightbulb"></i> मुख्य अवलोकन</div>
+            <ul>
+                <li><strong>Fertile Crescent:</strong> मेसोपोटामिया, सिरिया, इजिप्ट — कृषिको उद्गमस्थल <span class="ref">[४]</span>।</li>
+                <li><strong>नहर प्रणाली:</strong> बाह्रैमास खेती सम्भव बनायो — टाइग्रिस/यूफ्रेटिस नदीबाट <span class="ref">[४]</span>।</li>
+                <li><strong>बचत उत्पादन:</strong> खाद्य भण्डारण + श्रम विभाजनको आधार <span class="ref">[४]</span>।</li>
+                <li><strong>वर्गीय विभाजन:</strong> सामन्त (शोषक) र किसान/दास (शोषित) <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== SECTION 4: LESSON 4 — MODERN SOCIETY ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-city"></i>
+            पाठ ४: आधुनिक समाज र यसका विशेषताहरू
+            <span class="lesson-badge">Lesson 4</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-industry"></i> ४.१ औद्योगिक क्रान्ति, पुँजीवाद र सहरीकरण</div>
+
+        <div class="content-box navy-light">
+            <p>१८औँ शताब्दीमा युरोपबाट सुरु भएको <strong>औद्योगिक क्रान्ति</strong>ले मानव समाजलाई कृषि/सामन्ती युगबाट आधुनिक युगमा रूपान्तरण गर्‍यो। आधुनिक समाजका मुख्य आधारहरू निम्नानुसार छन् <span class="ref">[४]</span>:</p>
+            <ul>
+                <li><strong>प्रविधि र मेसिनरी उत्पादन:</strong> हाते औजार र पशु श्रमको सट्टा वाष्प इन्जिन, कारखाना र विद्युतीय प्रविधिको प्रयोगले विशाल मात्रामा (<strong>Mass Production</strong>) उत्पादन सम्भव भयो <span class="ref">[४]</span>।</li>
+                <li><strong>पुँजीवाद र डिजिटल वित्तीय प्रणाली:</strong> उत्पादनका साधनमाथि निजी स्वामित्व रहने पुँजीवादी व्यवस्थाको विकास भयो। आधुनिक युगमा भौतिक नगदको सट्टा <strong>अनलाइन भुक्तानी (Cashless Payment)</strong>, डेबिट/क्रेडिट कार्ड, मोबाइल बैंकिङ र डिजिटल वालेटहरू व्यापक प्रयोगमा आएका छन् <span class="ref">[४]</span>।</li>
+                <li><strong>तीव्र सहरीकरण र व्यावसायिक दक्षता:</strong> कारखाना र सेवा क्षेत्रको विस्तारले मानिसहरू सहरतर्फ स्थानान्तरण भए। यसले गर्दा जटिल श्रम विभाजन, सहरी जीवनशैली र नयाँ पेसागत <strong>व्यावसायिक दक्षता</strong> को जन्म भयो <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-globe"></i> ४.२ विश्वव्यापीकरण र बहुसंस्कृतिकता</div>
+
+        <div class="content-box blue-light">
+            <p>सूचना प्रविधि, इन्टरनेट र आधुनिक यातायातले गर्दा आजको विश्व एउटा सानो गाउँ (<strong>Global Village</strong>) मा परिणत भएको छ <span class="ref">[४]</span>:</p>
+            <ul>
+                <li><strong>विश्वव्यापी अन्तरसम्बन्ध:</strong> इन्टरनेट र सञ्चार माध्यमले भौगोलिक दूरी समाप्त पारी विचार, पुँजी र प्रविधिको निर्वाध प्रवाह सम्भव बनाएका छन् <span class="ref">[४]</span>।</li>
+                <li><strong>विश्व भ्रातृत्व (Universal Brotherhood):</strong> आधुनिक समाजले मानिसलाई सङ्कुचित जातीय वा भौगोलिक परिधिबाट माथि उठाई सम्पूर्ण मानव जातिप्रति समान आदर, सहअस्तित्व र दायित्वबोध गराउने <strong>विश्व भ्रातृत्व</strong> को भावना विकास गराउँछ <span class="ref">[४]</span>।</li>
+                <li><strong>बहुसंस्कृतिकता (Multiculturalism):</strong> बसाइँसराइ र विश्वव्यापीकरणले गर्दा भिन्न-भिन्न धर्म, भाषा र संस्कृतिका मानिसहरू एकै समाजमा मिलेर बस्ने र एक-अर्काको संस्कृतिको सम्मान गर्ने वातावरण बनेको छ <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-exchange-alt"></i> ४.३ परसंस्कृति ग्रहण र आत्मसात्</div>
+
+        <div class="content-box coral-light">
+            <p>आधुनिक बहुसंस्कृतिक समाजमा विभिन्न संस्कृतिबिच हुने अन्तरक्रियाका दुई मुख्य प्रक्रियालाई तलको तुलनामा प्रस्तुत गरिएको छ <span class="ref">[४]</span>:</p>
+        </div>
+
+        <div class="vs-grid">
+            <div class="vs-card accult">
+                <div class="vs-title"><i class="fas fa-handshake"></i> परसंस्कृति ग्रहण<br><span style="font-size:0.85rem; font-weight:600;">Acculturation</span></div>
+                <p><strong>परिभाषा:</strong> आफ्नो मौलिक सांस्कृतिक पहिचान कायम राख्दै अर्को संस्कृतिका उपयोगी पक्षहरू सिक्ने र अपनाउने प्रक्रिया <span class="ref">[४]</span>।</p>
+                <p><strong>प्रक्रिया:</strong> अनुकूलन र रूपान्तरण (द्वि-सांस्कृतिक पहिचान कायम रहन्छ) <span class="ref">[४]</span>।</p>
+                <p><strong>उदाहरण:</strong> नेपालीले आफ्नो मौलिक 'नमस्कार' संस्कृति कायम राख्दै पश्चिमा जीवनशैलीका व्यावहारिक 'हात मिलाउने' वा शिष्टाचारका शैलीहरू अपनाउनु <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="vs-card assim">
+                <div class="vs-title"><i class="fas fa-water"></i> आत्मसात्<br><span style="font-size:0.85rem; font-weight:600;">Assimilation</span></div>
+                <p><strong>परिभाषा:</strong> अर्को समाज वा संस्कृतिमा यसरी घुलमिल हुनु कि आफ्नो मौलिक भाषा, भेषभूषा र संस्कृति पूर्ण रूपमा त्यागेर नयाँ संस्कृतिमा लीन हुनु <span class="ref">[४]</span>।</p>
+                <p><strong>प्रक्रिया:</strong> पूर्ण विसर्जन वा विलय (मौलिक पहिचान समाप्त हुन्छ) <span class="ref">[४]</span>।</p>
+                <p><strong>उदाहरण:</strong> कुनै भिन्न सांस्कृतिक वातावरण वा देशमा बसाइँसराइ गर्दा आफ्ना परम्परागत रीतिरिवाज र भाषा पूर्ण रूपमा त्यागी स्थानीय संस्कृतिमा पूर्णतः समाहित हुनु <span class="ref">[४]</span>।</p>
+            </div>
+        </div>
+
+        <div class="insight-box">
+            <div class="insight-title"><i class="fas fa-lightbulb"></i> मुख्य अवलोकन</div>
+            <ul>
+                <li><strong>औद्योगिक क्रान्ति:</strong> १८औँ शताब्दी, युरोप — वाष्प इन्जिन + कारखाना <span class="ref">[४]</span>।</li>
+                <li><strong>Global Village:</strong> इन्टरनेट + सञ्चार + यातायातको उपज <span class="ref">[४]</span>।</li>
+                <li><strong>परसंस्कृति ग्रहण:</strong> मौलिकता जोगिन्छ (द्वि-सांस्कृतिक पहिचान) <span class="ref">[४]</span>।</li>
+                <li><strong>आत्मसात्:</strong> मौलिकता हराउँछ (पूर्ण विलय) <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== SECTION 5: MASTER TIMELINE ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="master-timeline">
+            <i class="fas fa-history"></i>
+            मास्टर टाइमलाइन: मानव सभ्यताको समग्र यात्रा
+            <span class="mark-badge gold">Complete Journey</span>
+        </div>
+
+        <div class="content-box navy-light">
+            <p>एककोषीय जीवबाट सुरु भएको मानव यात्रा होमो सेपियन्ससम्म, त्यसपछि ढुङ्गे युग, कृषि युग, सामन्ती युग र अन्ततः आधुनिक युगसम्मको समग्र विकासक्रमलाई दृष्टिगत रूपमा हेर्नुहोस् <span class="ref">[४]</span>:</p>
+        </div>
+
+        <div class="master-timeline">
+            <div class="mt-item">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-bacteria" style="color:#8d6e63;"></i> एककोषीय जीव</div>
+                    <div class="mt-desc">पृथ्वीमा जीवको उत्पत्ति — सरलताबाट जटिलतातर्फको यात्रा सुरु। एककोषीयदेखि बहुकोषीयसम्म <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-person-walking" style="color:#8d6e63;"></i> अस्ट्रालोपियेकस</div>
+                    <div class="mt-desc">आजभन्दा १०–४० लाख वर्ष अगाडि — प्रारम्भिक पूर्वज, बाँदरसँग नजिक <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-brain" style="color:#8d6e63;"></i> होमो ह्याबिलिस</div>
+                    <div class="mt-desc">१५–२३ लाख वर्ष अगाडि — पहिलो होमो प्रजाति, मस्तिष्क वृद्धि <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item highlight">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-fire" style="color:#E64A19;"></i> होमो इरेक्टस</div>
+                    <div class="mt-desc"><strong>आगोको आविष्कार</strong> — अफ्रिकाबाट एसिया/युरोपमा फैलिने पहिलो प्रजाति <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-skull" style="color:#8d6e63;"></i> होमो नियन्डरथलेन्सिस</div>
+                    <div class="mt-desc">१.५ लाख–३० हजार वर्ष अगाडि — आधुनिक मानवभन्दा ठीक अगाडिको अवस्था <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item highlight">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-user-astronaut" style="color:#E64A19;"></i> होमो सेपियन्स (आधुनिक मानव)</div>
+                    <div class="mt-desc">१.५ लाख वर्ष अगाडिदेखि — पूर्ण विकसित मस्तिष्क, सामाजिक संस्कार, परिष्कृत औजार <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-hammer" style="color:#8d6e63;"></i> ढुङ्गे युग (३ चरण)</div>
+                    <div class="mt-desc">पुरापाषाण (कच्चा ढुङ्गा, आगो) → मध्यपाषाण (Microliths, पशुपालन) → नवपाषाण (परिष्कृत औजार, कृषि, स्थायी बसोबास) <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item highlight">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-seedling" style="color:#E64A19;"></i> कृषि युग (नवपाषाण क्रान्ति)</div>
+                    <div class="mt-desc">Fertile Crescent — मेसोपोटामिया नहर प्रणाली, स्थायी बसोबास, बचत उत्पादन, वस्तु विनिमय <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-crown" style="color:#8d6e63;"></i> सामन्ती युग</div>
+                    <div class="mt-desc">वर्गीय विभाजन — सामन्त (शोषक) र किसान/दास (शोषित) <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item highlight">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-industry" style="color:#E64A19;"></i> औद्योगिक युग</div>
+                    <div class="mt-desc">१८औँ शताब्दी — वाष्प इन्जिन, कारखाना, पुँजीवाद, सहरीकरण <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="mt-item highlight">
+                <div class="mt-content">
+                    <div class="mt-era"><i class="fas fa-globe-asia" style="color:#E64A19;"></i> आधुनिक युग</div>
+                    <div class="mt-desc">सूचना प्रविधि, डिजिटल भुक्तानी, Global Village, बहुसंस्कृतिकता, विश्व भ्रातृत्व <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== SECTION 6: HIGH-YIELD MARK-BOOSTER ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="high-yield">
+            <i class="fas fa-star"></i>
+            ६. परीक्षा विशेष मास्टर रिभिजन तथा मार्क-बुस्टर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-bookmark"></i> ६.१ अति महत्त्वपूर्ण शब्दावली र परिभाषाहरू</div>
+
+        <div class="keyterm-grid">
+            <div class="keyterm">
+                <div class="kt-num">१</div>
+                <div class="kt-content">
+                    <div class="kt-title">जैविक उद्विकास (Biological Evolution)</div>
+                    <div class="kt-def">एककोषीय जीवबाट सुरु भई लाखौँ वर्षको क्रमिक प्राकृतिक र शारीरिक रूपान्तरणमार्फत बहुकोषीय हुँदै मानवसम्म भएको वैज्ञानिक विकासक्रम <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="keyterm">
+                <div class="kt-num">२</div>
+                <div class="kt-content">
+                    <div class="kt-title">होमो सेपियन्स (Homo sapiens)</div>
+                    <div class="kt-def">मरेका मानिस गाड्ने जस्ता सामाजिक संस्कारको विकास गरेको र पूर्ण मस्तिष्क क्षमता भएको आधुनिक मानवको वैज्ञानिक नाम <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="keyterm">
+                <div class="kt-num">३</div>
+                <div class="kt-content">
+                    <div class="kt-title">होमो इरेक्टस (Homo erectus)</div>
+                    <div class="kt-def">आगोको आविष्कार गर्ने, च्यापु र दाँतमा संरचनात्मक परिवर्तन आएको तथा अफ्रिकाबाट अन्य महादेशमा फैलिएको पहिलो मानव प्रजाति <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="keyterm">
+                <div class="kt-num">४</div>
+                <div class="kt-content">
+                    <div class="kt-title">नवपाषाण क्रान्ति (Neolithic Revolution)</div>
+                    <div class="kt-def">नवपाषाण युगमा धारिला औजारको निर्माणसँगै सिकारी जीवन छाडेर कृषिको थालनी, स्थायी बसोबास र उत्पादकत्वमा भएको व्यापक रूपान्तरण <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="keyterm">
+                <div class="kt-num">५</div>
+                <div class="kt-content">
+                    <div class="kt-title">वस्तु विनिमय प्रणाली (Barter System)</div>
+                    <div class="kt-def">भौतिक मुद्राको प्रचलन हुनुअघि मानिसहरूले आफ्ना आवश्यकता पूरा गर्न एउटा वस्तु (जस्तै: धान) सँग अर्को वस्तु (जस्तै: आलु) साटासाट गर्ने प्रणाली <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="keyterm">
+                <div class="kt-num">६</div>
+                <div class="kt-content">
+                    <div class="kt-title">उर्वर अर्धचन्द्राकार क्षेत्र (Fertile Crescent)</div>
+                    <div class="kt-def">पश्चिम एसियाको मेसोपोटामिया, सिरिया र इजिप्टका नदी घाटी क्षेत्रहरू, जहाँ विश्वमै सर्वप्रथम व्यवस्थित कृषि र सिँचाइ प्रणालीको विकास भएको थियो <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="keyterm">
+                <div class="kt-num">७</div>
+                <div class="kt-content">
+                    <div class="kt-title">सामन्तवाद (Feudalism)</div>
+                    <div class="kt-def">कृषि युगमा खेतीयोग्य जमिनको स्वामित्व थोरै जमिनदार/सामन्तको हातमा रहने र बहुसङ्ख्यक किसान वा दासहरू उनीहरूमाथि निर्भर रहने शोषक-शोषितमा आधारित व्यवस्था <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="keyterm">
+                <div class="kt-num">८</div>
+                <div class="kt-content">
+                    <div class="kt-title">बहुसांस्कृतिकता (Multiculturalism)</div>
+                    <div class="kt-def">एउटै समाज वा भूगोलभित्र विविध भाषा, धर्म र संस्कृतिका मानिसहरू सहअस्तित्वका साथ समान अधिकार उपभोग गर्दै बस्ने अवधारणा <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="keyterm">
+                <div class="kt-num">९</div>
+                <div class="kt-content">
+                    <div class="kt-title">परसंस्कृति ग्रहण (Acculturation)</div>
+                    <div class="kt-def">आफ्नो मौलिक सांस्कृतिक पहिचान र परम्परालाई जोगाउँदै अर्को संस्कृतिका सकारात्मक वा व्यावहारिक पक्षहरूलाई सिक्ने प्रक्रिया <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+            <div class="keyterm">
+                <div class="kt-num">१०</div>
+                <div class="kt-content">
+                    <div class="kt-title">आत्मसात् (Assimilation)</div>
+                    <div class="kt-def">अर्को सांस्कृतिक समूह वा समाजमा घुलमिल हुने क्रममा आफ्नो मौलिक भाषा, भेषभूषा र सांस्कृतिक पहिचानलाई पूर्ण रूपमा त्यागी नयाँ संस्कृतिमा समाहित हुने प्रक्रिया <span class="ref">[४]</span>।</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-pen-fancy"></i> ६.२ उत्कृष्ट अङ्क ल्याउने उत्तर लेखन सीपहरू</div>
+
+        <div class="content-box green-light">
+            <p>परीक्षार्थीले NEB को परीक्षामा सामाजिक अध्ययन विषयमा अधिकतम अङ्क प्राप्त गर्न उत्तर लेख्दा निम्नलिखित ३ वटा व्यवहार-कुशल सीपहरू प्रयोग गर्नुपर्छ <span class="ref">[४]</span>:</p>
+        </div>
+
+        <div class="tips-list">
+            <div class="tip-item">
+                <div class="tip-num">१</div>
+                <div class="tip-title">बुँदागत प्रस्तुति र सो-व्हाट (So-What?) विश्लेषण सीप</div>
+                <p>उत्तर लेख्दा अस्म्बन्धित र लामा अनुच्छेदहरू लेख्नुको सट्टा मुख्य हेडिङ दिएर बुँदागत रूपमा उत्तर प्रस्तुत गर्ने सीपहरू अपनाउनुपर्छ। <strong>प्रत्येक बुँदामा कारण र त्यसको सामाजिक प्रभाव स्पष्ट पारिनुपर्छ</strong> <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="tip-item">
+                <div class="tip-num">२</div>
+                <div class="tip-title">तुलनात्मक तालिका र प्रमाणको प्रयोग सीप</div>
+                <p>मानव विकासका चरणहरू, समाज विकासका सिद्धान्त वा परसंस्कृति ग्रहण र आत्मसात् जस्ता तुलनात्मक प्रश्नहरूमा अनिवार्य रूपमा <strong>२ वा ४ स्तम्भ भएको मार्किङ तालिका</strong> बनाएर उत्तर लेख्ने सीपहरू प्रदर्शन गर्नुपर्छ <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="tip-item">
+                <div class="tip-num">३</div>
+                <div class="tip-title">प्राज्ञिक तथा ऐतिहासिक-वैज्ञानिक शब्दावलीको सही प्रयोग सीप</div>
+                <p>उत्तरमा सर्वसाधारणले बोल्ने सामान्य भाषाको सट्टा <strong>'एककोषीय', 'होमो सेपियन्स', 'नवपाषाण क्रान्ति', 'वस्तु विनिमय', 'सामन्तवाद', र 'विश्व भ्रातृत्व'</strong> जस्ता एकाइ ४ का मानक प्राज्ञिक शब्दावलीहरूको सही प्रयोग गर्न सीपहरू विकास गर्नुपर्छ <span class="ref">[४]</span>।</p>
+            </div>
+        </div>
+
+        <a href="#toc" class="back-toc"><i class="fas fa-arrow-up"></i> विषयसूचीमा फर्कनुहोस्</a>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="margin-top:20px;">
+            <i class="fas fa-trophy" style="color:#FFB74D;"></i>
+            <strong>अन्तिम सल्लाह:</strong> एकाइ ४ "मानव तथा समाजको उद्भव र विकास" परीक्षाको दृष्टिले अत्यन्तै महत्त्वपूर्ण छ। <strong>जैविक उद्विकासका ५ चरण, समाज विकासका ३ सिद्धान्त, ढुङ्गे युगका ३ चरण, नवपाषाण क्रान्ति, र परसंस्कृति-आत्मसात् बिचको भिन्नता</strong> — यी ५ विषयहरूलाई तालिकाबद्ध रूपमा कण्ठ गर्नुहोस्। उत्तर लेख्दा बुँदागत शैली + तुलनात्मक तालिका + प्राज्ञिक शब्दावली — यी तीन सीपले ८ अङ्कमा ७.५ र ५ अङ्कमा ४.५ सम्म ल्याउन सकिन्छ!
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ४ (मास्टर गाइड)</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) { btn.classList.add('visible'); }
+                else { btn.classList.remove('visible'); }
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+
+</body>
+</html>
