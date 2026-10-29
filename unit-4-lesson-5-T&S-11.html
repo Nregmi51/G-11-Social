@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ४, पाठ ५ – वर्तमान विश्व परिवेश र सामाजिक व्यवहार (कक्षा ११)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family:'Noto Sans Devanagari', sans-serif;
+            background:#f3edf5;
+            color:#2d2a36;
+            padding:16px 12px 30px;
+            line-height:2;
+            scroll-behavior:smooth;
+        }
+        .container {
+            max-width:1150px; margin:0 auto;
+            background:#fcfdfc; color:#2d2a36;
+            border-radius:32px;
+            box-shadow:0 16px 56px rgba(0,0,0,0.08);
+            padding:28px 22px 40px;
+            position:relative;
+        }
+        .main-header {
+            border-bottom:4px solid #c8b0d0;
+            padding-bottom:16px; margin-bottom:16px;
+            display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:8px;
+        }
+        .main-header h1 {
+            font-size:2rem; font-weight:900; color:#4A148C; line-height:1.2;
+        }
+        .main-header h1 i { color:#6A1B9A; margin-right:10px; }
+        .main-header .subtitle {
+            font-size:1.16rem; color:#4d5f72; font-weight:600; margin-top:4px;
+        }
+        .badge-class {
+            background:#6A1B9A; color:#fff;
+            font-size:0.8rem; font-weight:800;
+            padding:4px 18px; border-radius:40px;
+            letter-spacing:0.5px; display:inline-block; margin-left:6px;
+        }
+        .credit-bar {
+            background:#f0e6f4; border-radius:60px;
+            padding:14px 28px;
+            display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;
+            gap:8px 20px; margin:6px 0 24px;
+            border:2px solid #c8b0d0;
+            font-size:1.05rem; font-weight:700; color:#2d2a36;
+        }
+        .credit-bar .name { color:#0b2b4a; font-weight:800; font-size:1.15rem; }
+        .credit-bar .email { color:#6A1B9A; font-weight:700; }
+        .credit-bar i { color:#6A1B9A; margin-right:6px; }
+
+        .intro-note {
+            background:#faf5fc;
+            border:2px dashed #c8b0d0;
+            border-left:6px solid #6A1B9A;
+            border-radius:16px;
+            padding:14px 22px;
+            margin:6px 0 24px;
+            font-weight:500;
+            font-size:1.05rem;
+            color:#3a3045;
+        }
+        .intro-note i { color:#6A1B9A; margin-right:8px; }
+        .intro-note strong { color:#4A148C; font-weight:900; }
+
+        .toc-section {
+            background:#6A1B9A; border-radius:20px;
+            padding:18px 24px; margin:6px 0 28px;
+            border:2px solid #8E24AA;
+        }
+        .toc-section h3 {
+            font-weight:800; color:#fff; font-size:1.36rem; margin-bottom:12px;
+            display:flex; align-items:center; gap:12px;
+        }
+        .toc-section h3 i { color:#f5d742; font-size:1.3rem; }
+        .toc-grid {
+            display:grid; grid-template-columns:1fr 1fr 1fr; gap:4px 16px;
+        }
+        .toc-grid a {
+            color:#f0e0f5; text-decoration:none;
+            font-weight:600; font-size:16.5px;
+            padding:4px 0 4px 6px;
+            border-bottom:2px solid transparent;
+            transition:all 0.2s ease;
+            display:flex; align-items:center; gap:6px;
+        }
+        .toc-grid a:hover { color:#f5d742; border-bottom-color:#f5d742; transform:translateX(4px); }
+        .toc-grid a i { color:#f5d742; font-size:0.6rem; min-width:14px; }
+
+        @media (max-width:700px) { .toc-grid { grid-template-columns:1fr 1fr; } .toc-grid a { font-size:15px; } }
+        @media (max-width:480px) { .toc-grid { grid-template-columns:1fr; } .toc-grid a { font-size:14px; } }
+
+        .section-head {
+            font-size:1.7rem; font-weight:900; color:#fff;
+            background:#6A1B9A;
+            margin:42px 0 16px; padding:12px 22px; border-radius:12px;
+            display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+            scroll-margin-top:80px;
+            box-shadow:0 3px 12px rgba(106,27,154,0.35);
+        }
+        .section-head i { font-size:1.5rem; color:#f5d742; }
+        .section-head .mark-badge {
+            color:#6A1B9A; font-size:0.7rem; font-weight:800;
+            padding:3px 14px; border-radius:40px; margin-left:4px; background:#fff;
+        }
+        .section-head .mark-badge.gold { background:#f5d742; color:#0b2b4a; }
+        .section-head .mark-badge.green { background:#7dcea0; color:#0b2b4a; }
+        .section-head .mark-badge.purple { background:#b39ddb; color:#0b2b4a; }
+        .section-head .mark-badge.blue { background:#81d4fa; color:#0b2b4a; }
+        .section-head .mark-badge.pink { background:#f48fb1; color:#0b2b4a; }
+
+        .sub-head {
+            font-size:1.3rem; font-weight:800; color:#4A148C;
+            margin:28px 0 12px; padding-left:14px;
+            border-left:6px solid #6A1B9A;
+            display:flex; align-items:center; gap:10px;
+            scroll-margin-top:80px;
+        }
+        .sub-head i { color:#6A1B9A; font-size:1.1rem; }
+
+        .content-box {
+            border-radius:16px; padding:20px 26px; margin:14px 0 18px;
+            border-left:6px solid #6A1B9A; font-weight:500; line-height:2;
+        }
+        .content-box p, .content-box ul, .content-box ol, .content-box li {
+            font-size:1.19rem; font-weight:500; margin-bottom:8px;
+        }
+        .content-box ul, .content-box ol { padding-left:28px; margin:8px 0 8px; }
+        .content-box li { margin-bottom:6px; }
+        .content-box strong { color:#4A148C; font-weight:900; }
+
+        .content-box.purple-light { border-left-color:#6A1B9A; background:#f6eff8; }
+        .content-box.blue-light { border-left-color:#1a3a5c; background:#e8f0f8; }
+        .content-box.gold-light { border-left-color:#b45309; background:#fef8ee; }
+        .content-box.green-light { border-left-color:#1f7a4a; background:#eef8f2; }
+        .content-box.pink-light { border-left-color:#a03a5a; background:#f8eef2; }
+        .content-box.teal-light { border-left-color:#0f7a7a; background:#eef8f8; }
+        .content-box.orange-light { border-left-color:#d97706; background:#fef6ed; }
+
+        .table-wrap {
+            overflow-x:auto; margin:16px 0 14px;
+            border-radius:14px; border:2px solid #c8b0d0;
+        }
+        table {
+            width:100%; border-collapse:collapse; font-size:1.05rem; min-width:280px;
+        }
+        th, td {
+            padding:12px 16px; border:1px solid #c8b0d0;
+            text-align:left; vertical-align:top;
+        }
+        th {
+            background:#6A1B9A; font-weight:800; color:#fff; font-size:1.08rem;
+        }
+        td { font-weight:500; font-size:1.05rem; }
+        .table-caption {
+            background:#f0e6f4; padding:10px 18px;
+            font-weight:700; font-size:1.08rem; color:#4A148C;
+            border-bottom:2px solid #c8b0d0;
+        }
+
+        .qa-block {
+            border-radius:16px; padding:18px 24px; margin:14px 0 18px;
+            border-left:6px solid #6A1B9A;
+        }
+        .qa-block.color1 { border-left-color:#6A1B9A; background:#f6eff8; }
+        .qa-block.color2 { border-left-color:#1a3a5c; background:#f0f5fa; }
+        .qa-block.color3 { border-left-color:#1f7a4a; background:#f2f8f5; }
+        .qa-block.color4 { border-left-color:#6b3fa0; background:#f6f2f8; }
+        .qa-block.color5 { border-left-color:#b45309; background:#fcf9f4; }
+        .qa-block.color6 { border-left-color:#0f7a7a; background:#eef8f8; }
+        .qa-block.color7 { border-left-color:#a03a5a; background:#fcf5f8; }
+        .qa-block.color8 { border-left-color:#d97706; background:#fef8ef; }
+
+        .qa-block .q {
+            font-weight:900; color:#4A148C;
+            display:flex; gap:10px; align-items:baseline;
+            font-size:1.22rem;
+        }
+        .qa-block .q .qnum { color:#6A1B9A; font-weight:900; min-width:30px; }
+        .qa-block .a {
+            margin-top:6px; padding-left:46px;
+            color:#2d2a36; font-weight:500; font-size:1.19rem;
+        }
+        .qa-block .a ul, .qa-block .a ol { padding-left:24px; margin:6px 0 6px; }
+        .qa-block .a li { margin-bottom:5px; font-weight:500; }
+        .qa-block .a strong { color:#4A148C; font-weight:900; }
+        .qa-block .a .step-icon { display:inline-block; margin-right:6px; font-weight:900; }
+        .qa-block .a .step-title { font-weight:700; color:#4A148C; font-size:1.1rem; }
+
+        .glossary-grid {
+            display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0 8px;
+        }
+        .glossary-item {
+            background:#faf5fc; border-radius:12px;
+            padding:14px 18px; border-left:5px solid #6A1B9A;
+        }
+        .glossary-item strong { color:#4A148C; font-size:1.15rem; font-weight:900; }
+        .glossary-item p { margin-top:3px; font-size:1.125rem; color:#2d2a36; font-weight:500; }
+
+        .mermaid-flow {
+            display:flex; flex-direction:column; align-items:center; gap:6px;
+            margin:16px 0; padding:14px 10px;
+            background:#f6eff8; border-radius:20px; border:2px dashed #8E24AA;
+        }
+        .mermaid-step {
+            background:#fff; padding:8px 22px; border-radius:40px;
+            font-weight:800; font-size:1rem; color:#4A148C;
+            box-shadow:0 2px 6px rgba(0,0,0,0.04);
+            border:2px solid #6A1B9A; text-align:center; min-width:160px;
+        }
+        .mermaid-arrow { font-size:1.6rem; color:#7f8fa6; line-height:1; }
+
+        @media (max-width:600px) {
+            .mermaid-step { font-size:0.85rem; padding:6px 14px; min-width:120px; }
+        }
+        @media (min-width:768px) {
+            .mermaid-flow { flex-direction:row; flex-wrap:wrap; justify-content:center; gap:4px 14px; }
+            .mermaid-arrow { transform:rotate(0deg); }
+        }
+
+        .analysis-box, .activity-box, .dialogue-box {
+            border-radius:16px; padding:20px 26px;
+            border:2px solid #c8b0d0; margin:12px 0;
+        }
+        .analysis-box, .dialogue-box { background:#faf5fc; }
+        .activity-box { background:#f5eff8; }
+        .analysis-box .analysis-title, .activity-box .act-title, .dialogue-box .dialogue-title {
+            font-weight:900; color:#4A148C; font-size:1.15rem;
+        }
+        .dialogue-box .dialogue-title { text-align:center; }
+        .analysis-box p, .analysis-box li,
+        .activity-box p, .activity-box li,
+        .dialogue-box p {
+            font-weight:500; font-size:1.12rem; margin-bottom:4px;
+        }
+        .analysis-box ul, .analysis-box ol,
+        .activity-box ul, .activity-box ol {
+            padding-left:24px;
+        }
+        .dialogue-box .speaker { font-weight:700; color:#6A1B9A; }
+
+        .ref {
+            display:inline; font-size:0.72em; color:#6A1B9A; font-weight:700;
+            vertical-align:super; margin-left:2px; letter-spacing:0.5px;
+        }
+
+        #scrollUpBtn {
+            position:fixed; bottom:28px; right:28px;
+            background:#6A1B9A; color:#fff; border:none; border-radius:50%;
+            width:60px; height:60px; font-size:1.8rem; cursor:pointer;
+            box-shadow:0 4px 20px rgba(106,27,154,0.4);
+            transition:all 0.3s ease;
+            display:flex; align-items:center; justify-content:center;
+            z-index:999; opacity:0; visibility:hidden; transform:translateY(20px);
+        }
+        #scrollUpBtn.visible { opacity:1; visibility:visible; transform:translateY(0); }
+        #scrollUpBtn:hover { background:#4A148C; transform:scale(1.08); box-shadow:0 6px 28px rgba(106,27,154,0.5); }
+
+        .footer-copy {
+            margin-top:40px; padding-top:18px; border-top:3px solid #c8b0d0;
+            text-align:center; font-size:0.95rem; color:#5f6f80;
+            display:flex; flex-wrap:wrap; justify-content:center; gap:6px 28px; font-weight:600;
+        }
+        .footer-copy i { color:#6A1B9A; margin-right:6px; }
+        .footer-copy .highlight { font-weight:800; color:#0b2b4a; }
+
+        hr { border:none; border-top:3px dotted #c8b0d0; margin:28px 0 10px; }
+
+        .tip-box {
+            background:#6A1B9A; color:#fff; border-radius:14px;
+            padding:16px 22px; margin:12px 0; font-weight:500; font-size:1.1rem;
+        }
+        .tip-box i { margin-right:8px; }
+        .tip-box strong { color:#f5d742; }
+        .tip-box p { color:#fff; }
+
+        @media (max-width:600px) {
+            .container { padding:16px 12px 24px; border-radius:20px; }
+            .main-header h1 { font-size:1.5rem; }
+            .section-head { font-size:1.35rem; padding:10px 16px; }
+            .sub-head { font-size:1.15rem; }
+            .qa-block .a { padding-left:12px; }
+            .qa-block .q { font-size:1.05rem; flex-wrap:wrap; }
+            .credit-bar { flex-direction:column; align-items:flex-start; gap:4px; font-size:0.9rem; padding:10px 16px; }
+            .glossary-grid { grid-template-columns:1fr; }
+            #scrollUpBtn { width:50px; height:50px; font-size:1.3rem; bottom:18px; right:18px; }
+            .toc-section { padding:14px 16px; }
+            .content-box { padding:14px 16px; }
+            .content-box p, .content-box ul, .content-box ol, .content-box li { font-size:1.02rem; }
+            .qa-block .a { font-size:1.02rem; }
+            table { font-size:0.9rem; }
+            th, td { font-size:0.9rem; padding:6px 8px; }
+            .glossary-item strong { font-size:1.05rem; }
+            .glossary-item p { font-size:0.98rem; }
+            .activity-box p, .activity-box li,
+            .analysis-box p, .analysis-box li,
+            .dialogue-box p { font-size:1.02rem; }
+            .mermaid-step { font-size:0.8rem; padding:4px 12px; min-width:100px; }
+            .toc-grid a { font-size:15px; }
+        }
+        @media (min-width:768px) {
+            .container { padding:36px 46px 50px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="main-header">
+        <div>
+            <h1>
+                <i class="fas fa-globe-asia"></i>
+                एकाइ ४, पाठ ५: वर्तमान विश्व परिवेश र सामाजिक व्यवहार
+            </h1>
+            <div class="subtitle">
+                कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                <span class="badge-class"><i class="fas fa-check-circle"></i> NEB परीक्षा विशेष क्याप्सुल</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="credit-bar">
+        <span><i class="fas fa-user-edit"></i> <span class="name">Prepared by: Narayan Sir</span></span>
+        <span><i class="fas fa-envelope"></i> <span class="email">nregmi511@gmail.com</span></span>
+        <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ४, पाठ ५</span>
+    </div>
+
+    <div class="intro-note">
+        <i class="fas fa-info-circle"></i>
+        यो क्याप्सुल नोट राष्ट्रिय परीक्षा बोर्ड (NEB) को नयाँ पाठ्यक्रम र विशिष्टीकरण तालिका (Specification Grid) लाई ध्यानमा राखी परीक्षामा <strong>८ अङ्कको लामो उत्तरमा ७.५ सम्म र ५ अङ्कको छोटो उत्तरमा ४.५ सम्म</strong> प्राप्त गर्ने सुनिश्चितताका लागि तयार पारिएको हो।
+    </div>
+
+    <div class="toc-section" id="toc">
+        <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+        <div class="toc-grid">
+            <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+            <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+            <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+            <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+            <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+        </div>
+    </div>
+
+    <div class="section-head" id="section1">
+        <i class="fas fa-book-open"></i>
+        १. विषयगत पारिभाषिक शब्दावली
+        <span class="mark-badge blue">Glossary</span>
+    </div>
+
+    <div class="glossary-grid">
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> वर्तमान विश्व परिवेश (Contemporary World Environment)</strong>
+            <p>आमसञ्चार, सामाजिक सञ्चार, इन्टरनेट र यातायातको तीव्र विकासले गर्दा भौगोलिक दूरी घटाएर सम्पूर्ण पृथ्वीलाई एउटा अन्तरसम्बन्धित 'साझा गाउँ' (Global Village) बनाएको समकालीन परिस्थिति।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> सहरीकरण (Urbanization)</strong>
+            <p>व्यापार, उद्योग, रोजगार, शिक्षा र आधुनिक सेवासुविधाका कारण ग्रामीण क्षेत्रबाट सहरी क्षेत्रतर्फ जनसङ्ख्याको तीव्र स्थानान्तरण र सहरहरूको विस्तार हुने प्रक्रिया।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> विश्वव्यापीकरण (Globalization)</strong>
+            <p>सूचना, प्रविधि, पुँजी, वस्तु, सेवा, र संस्कृतिको विश्वभर निर्वाध प्रवाह भई संसारका विभिन्न देशबिच आर्थिक, सामाजिक र सांस्कृतिक अन्तरनिर्भरता कायम हुने प्रक्रिया।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> बहुसांस्कृतिकता (Multiculturalism)</strong>
+            <p>एउटै समाज वा राष्ट्रभित्र फरक-फरक जातीय, भाषिक, धार्मिक, र सांस्कृतिक पहिचान बोकेका मानिसहरू सहअस्तित्व, सम्मान र समानताका साथ बसोबास गर्ने सामाजिक अवस्था।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> सामाजिक संरचना (Social Structure)</strong>
+            <p>समाजमा मानिसहरूका पद, भूमिका, वर्ग, जात, संस्था र सामाजिक सम्बन्धहरू जोडिएर बनेको व्यवस्थित र स्थायी ढाँचा।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> परसंस्कृति ग्रहण (Acculturation)</strong>
+            <p>दुई वा सोभन्दा बढी फरक सांस्कृतिक समूहबिचको निरन्तर सम्पर्कका कारण आफ्नो मौलिक पहिचान कायम राख्दै अर्को समूहका सांस्कृतिक गुणहरू अपनाउँदै जाने प्रक्रिया।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> आत्मसात् (Assimilation)</strong>
+            <p>आफ्नो मौलिक सामाजिक-सांस्कृतिक विशेषताहरू पूर्ण रूपमा परित्याग गरी अर्को प्रभुत्वशाली संस्कृतिमा सर्वस्व विलय वा समाहित हुने प्रक्रिया।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> अनुकूलन (Adaptation)</strong>
+            <p>नयाँ वा परिवर्तित भौगोलिक, सामाजिक र सांस्कृतिक वातावरणमा सहज रूपमा जीवनयापन गर्न मानिस वा समूहले आफ्नो व्यवहार र जीवनशैलीमा ल्याउने परिवर्तन।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> सामाजिक प्रक्रिया (Social Process)</strong>
+            <p>समाजमा मानिसहरूबिच आवश्यकता पूर्ति र सामाजिक सम्बन्ध स्थापनाका लागि निरन्तर भइरहने अन्तरक्रियात्मक व्यवहारहरू (जस्तै: सहकार्य, प्रतिस्पर्धा, सम्झौता आदि)।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#6A1B9A; margin-right:4px;"></i> सामाजिक सामाजीकरण (Socialization)</strong>
+            <p>मानिसले समाजका मूल्य, मान्यता, संस्कृति, व्यवहार र सीपहरू सिकेर समाजको क्रियाशील र उत्तरदायी सदस्य बन्ने जीवनपर्यन्त चलिरहने प्रक्रिया।</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section-head" id="section2">
+        <i class="fas fa-lightbulb"></i>
+        २. "वर्तमान विश्व परिवेश र सामाजिक व्यवहार" — विस्तृत प्राज्ञिक नोट
+        <span class="mark-badge gold">Core Notes</span>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-gem"></i> १. वर्तमान विश्वका मूलभूत ७ विशेषताहरू</div>
+
+    <div class="content-box purple-light">
+        <p>समकालीन विश्व परिवेशलाई प्रतिनिधित्व गर्ने प्रमुख ७ वटा विशेषताहरू निम्न बमोजिम छन्:</p>
+        <ul>
+            <li><strong>बढ्दो सहरीकरण:</strong> सन् २०१० को दशकको सुरुवातदेखि नै संसारका आधाभन्दा बढी मानिसहरू सहरमा बसोबास गर्न थालेका छन्।</li>
+            <li><strong>विश्वव्यापीकरण:</strong> प्रविधि र सञ्चारले विश्वका कुनै एक कुनाको उत्पादन, सूचना वा घटनालाई क्षणभरमै विश्वभर फैलाउने वातावरण बनाएको छ।</li>
+            <li><strong>बसाइँसराइ:</strong> आन्तरिक (गाउँबाट सहर) र अन्तर्राष्ट्रिय (वैदेशिक रोजगारी र अध्ययन) बसाइँसराइले विश्वव्यापी जनसाङ्ख्यिक परिदृश्य फेरिएको छ।</li>
+            <li><strong>प्रविधिमा पहुँचको विस्तार:</strong> इन्टरनेट, स्मार्टफोन, र डिजिटल एप्लिकेसनहरू मानव जीवनका आधारभूत आवश्यकता बनेका छन्।</li>
+            <li><strong>पुँजीवादी चरित्र:</strong> उत्पादन र व्यापारमा पुँजीवाद हाबी हुँदै जाँदा बजार प्रतिस्पर्धा र आर्थिक अन्तरनिर्भरता बढेको छ।</li>
+            <li><strong>व्यक्तिवादी प्रवृत्तिमा वृद्धि:</strong> सामूहिक वा पारिवारिक हितभन्दा व्यक्तिगत सफलता, स्वतन्त्रता र निजी स्वार्थलाई बढी प्राथमिकता दिने सोच बढेको छ।</li>
+            <li><strong>बहुसांस्कृतिकता:</strong> एउटै मुलुक वा सहरमा फरक-फरक देश, धर्म र जातिका मानिसहरू सँगै बस्ने वातावरण बनेको छ (जस्तै: नेपालमा अंग्रेजी न्यु इयर र अमेरिकामा तीज/होली मनाइनु)।</li>
+        </ul>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-list-ol"></i> २. समकालीन विश्वका मूल विशेषता र सामाजिक प्रक्रियाहरूको प्रवाहचित्र</div>
+
+    <div class="content-box blue-light">
+        <p>वर्तमान विश्व परिवेशका मूल विशेषता र सामाजिक प्रक्रियाहरूबिचको अन्तरसम्बन्धलाई देहायको प्रवाह चित्रले स्पष्ट पार्दछ:</p>
+
+        <div class="mermaid-flow">
+            <div class="mermaid-step">वर्तमान विश्व परिवेश</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">मूलभूत विशेषताहरू<br><span style="font-weight:400; font-size:0.85em;">विश्वव्यापीकरण, सहरीकरण, प्रविधि, बहुसांस्कृतिकता</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">सामाजिक प्रक्रियाहरू<br><span style="font-weight:400; font-size:0.85em;">परसंस्कृति ग्रहण, आत्मसात्, सहकार्य, द्वन्द्व</span></div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">सामाजिक व्यवहार र सम्बन्धको रूपान्तरण</div>
+        </div>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-users"></i> ३. समकालीन विश्वमा सामाजिक विविधता</div>
+
+    <div class="content-box green-light">
+        <p>विश्वका समाजहरू बहुविध सामाजिक विविधताले भरिपूर्ण छन्:</p>
+        <ul>
+            <li><strong>भाषिक विविधता:</strong> युनेस्को (UNESCO) का अनुसार विश्वमा करिब ६,००० भन्दा बढी भाषाहरू बोलिन्छन्।</li>
+            <li><strong>धार्मिक विविधता:</strong> विश्व जनसङ्ख्याको कम्तीमा १% भन्दा बढी आस्था रहेका प्रमुख धर्महरूमा इसाई, इस्लाम, हिन्दु र बौद्ध धर्म पर्दछन्।</li>
+            <li><strong>वर्गीय र राजनीतिक विविधता:</strong> उच्च, मध्यम र निम्न आर्थिक वर्गका साथै प्रजातन्त्र, संवैधानिक राजतन्त्र, र पूर्ण राजतन्त्र जस्ता विविध राजनीतिक प्रणालीहरू विद्यमान छन्।</li>
+            <li><strong>पारिवारिक र सामाजिक विविधता:</strong> पूर्वीय समाजमा संयुक्त परिवार र पश्चिमी समाजमा एकल परिवार तथा फरक-फरक विवाह/नातासम्बन्ध प्रणाली पाइन्छ।</li>
+        </ul>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-handshake"></i> ४. सामाजिक प्रक्रियाहरू</div>
+
+    <div class="content-box orange-light">
+        <p>मानिसका सामाजिक व्यवहारहरू मुख्यतया देहायका ८ वटा सामाजिक प्रक्रियामार्फत सञ्चालित हुन्छन्:</p>
+        <ol>
+            <li><strong>परसंस्कृति ग्रहण (Acculturation):</strong> अन्य संस्कृतिसँगको सम्पर्कबाट नयाँ गुण सिक्ने तर मौलिक पहिचान जोगाउने।</li>
+            <li><strong>आत्मसात् (Assimilation):</strong> अर्को संस्कृतिमा पूर्ण रूपमा लीन भई आफ्नो मौलिकता गुमाउने।</li>
+            <li><strong>एकता (Integration):</strong> विविधताका बाबजुद साझा लक्ष्यका लागि एकताबद्ध हुने।</li>
+            <li><strong>सम्झौता (Accommodation):</strong> मतभेद वा द्वन्द्व समाधान गरी आपसी सहमतिमा रहने।</li>
+            <li><strong>प्रतिस्पर्धा (Competition):</strong> सीमित स्रोत र अवसर प्राप्तिका लागि गरिने स्वस्थ होडबाजी।</li>
+            <li><strong>सहकार्य (Cooperation):</strong> साझा आवश्यकता र उद्देश्य पूर्तिका लागि मिलेर काम गर्ने।</li>
+            <li><strong>द्वन्द्व (Conflict):</strong> असहमति, विचारको बेमेल वा स्वार्थको बाझाइबाट उत्पन्न हुने स्थिति।</li>
+            <li><strong>अनुकूलन (Adaptation):</strong> नयाँ भौगोलिक वा सामाजिक वातावरणमा आफूलाई सहज रूपमा ढाल्ने कार्य।</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <div class="section-head" id="section3">
+        <i class="fas fa-hands"></i>
+        ३. पाठ्यपुस्तकका क्रियाकलापहरूको पूर्ण समाधान
+        <span class="mark-badge green">Activities</span>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-comment-dots"></i> क्रियाकलाप १ (पृष्ठ ७४): आजको विश्वका मूल विशेषताहरू उल्लेख गर्दै साथीबिच हुने संवादको नमुना</div>
+
+    <div class="activity-box">
+        <p class="act-title"><i class="fas fa-question-circle" style="color:#6A1B9A; margin-right:8px;"></i> प्रश्न:</p>
+        <p>आजको विश्वका मूल विशेषताहरू उल्लेख गर्दै साथीबिच हुने संवादको नमुना तयार गर्नुहोस्।</p>
+    </div>
+
+    <div class="dialogue-box">
+        <p class="dialogue-title"><i class="fas fa-pen-fancy" style="color:#6A1B9A; margin-right:8px;"></i> संवाद: वर्तमान विश्व परिवेश र सामाजिक व्यवहार</p>
+        <p><strong>पात्रहरू:</strong> प्रतीक र प्रकृति (कक्षा ११ का सहपाठीहरू)</p>
+
+        <p><span class="speaker">प्रतीक:</span> नमस्ते प्रकृति! आजको सामाजिक अध्ययन कक्षामा सरले पढाउनुभएको 'वर्तमान विश्व परिवेश' विषय तिमीलाई कस्तो लाग्यो?</p>
+        <p><span class="speaker">प्रकृति:</span> नमस्ते प्रतीक! मलाई त निकै रोचक लाग्यो। विशेष गरी सूचना प्रविधि र विश्वव्यापीकरणले सिङ्गो संसारलाई कसरी एउटा 'ग्लोबल भिलेज' बनाएको छ भन्ने कुरा साँच्चै मननयोग्य छ।</p>
+        <p><span class="speaker">प्रतीक:</span> हो नि! आज हामी घरमै बसेर विश्वभरका घटनाहरू तुरुन्तै थाहा पाउन सक्छौँ। तर यसका साथै <strong>बढ्दो सहरीकरण</strong>, <strong>बसाइँसराइ</strong>, र <strong>बहुसांस्कृतिकता</strong>ले हाम्रा सामाजिक व्यवहार र जीवनशैलीमा ठुलो परिवर्तन ल्याएका छन्।</p>
+        <p><span class="speaker">प्रकृति:</span> एकदम सही भन्यौ! तर विश्वव्यापीकरणसँगै <strong>व्यक्तिवादी प्रवृत्ति</strong> बढ्दै जानु र आफ्ना मौलिक सांस्कृतिक मूल्यमान्यताहरू हराउँदै जानु भने चिन्ताको विषय हो।</p>
+        <p><span class="speaker">प्रतीक र प्रकृति (साझा निष्कर्ष):</span> त्यसैले हामीले विश्वव्यापीकरणका सकारात्मक प्रविधि र ज्ञानलाई अपनाउँदै आफ्ना मौलिक सामाजिक-सांस्कृतिक पहिचान र आत्मीयतालाई जोगाउनुपर्छ।</p>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-table"></i> क्रियाकलाप २ (पृष्ठ ७४): सामाजिक सम्बन्धको विकासमा सहयोग पुर्‍याउने सामाजिक व्यवहारहरूको सूची र भूमिका</div>
+
+    <div class="activity-box">
+        <p class="act-title"><i class="fas fa-question-circle" style="color:#6A1B9A; margin-right:8px;"></i> प्रश्न:</p>
+        <p>सामाजिक सम्बन्धको विकासमा सहयोग पुर्‍याउने सामाजिक व्यवहारहरूको सूची तयार गरी तिनको भूमिका उल्लेख गर्नुहोस्।</p>
+    </div>
+
+    <div class="analysis-box">
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: सामाजिक सम्बन्ध विकासमा सामाजिक व्यवहारहरूको भूमिका</div>
+            <table>
+                <thead>
+                    <tr><th>क्र.सं.</th><th>सामाजिक व्यवहार / प्रक्रिया</th><th>सामाजिक सम्बन्ध विकासमा खेल्ने भूमिका</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१</strong></td>
+                        <td><strong>सहकार्य (Cooperation)</strong></td>
+                        <td>छिमेकी तथा समुदायमा परेका कामहरू (ऐँचोपाँचो, मेलापात, सरसफाइ) मिलेर गर्दा भाइचारा र विश्वास बढाउँछ।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२</strong></td>
+                        <td><strong>सम्झौता (Accommodation)</strong></td>
+                        <td>समाजमा देखिने सानातिना विवाद वा मतभेदहरूलाई संवादमार्फत समाधान गरी शान्ति र सद्भाव कायम राख्छ।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३</strong></td>
+                        <td><strong>एकता (Integration)</strong></td>
+                        <td>धार्मिक, भाषिक र सांस्कृतिक विविधता भए पनि साझा समृद्धिका लागि एकताबद्ध हुन सिकाउँछ।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४</strong></td>
+                        <td><strong>अनुकूलन (Adaptation)</strong></td>
+                        <td>नयाँ ठाउँमा बसाइँ सर्दा वा नयाँ वातावरणमा पुग्दा स्थानीय समाजसँग सजिलै घुलमिल हुन मद्दत गर्छ।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section-head" id="section4">
+        <i class="fas fa-check-double"></i>
+        ४. अभ्यास र परियोजना कार्यको पूर्ण समाधान
+        <span class="mark-badge purple">Exercise</span>
+    </div>
+
+    <div class="qa-block color1">
+        <div class="q"><span class="qnum">प्रश्न १.</span> 'बढ्दो विश्वव्यापीकरण र बसाइँसराइका कारण विश्वका मुलुकहरू बहुसांस्कृतिक बन्दै गएका छन्।' यस भनाइलाई पुष्टि गर्नुहोस्।</div>
+        <div class="a">
+            <p><strong>उत्तर:</strong> आजको २१औँ शताब्दीमा <strong>विश्वव्यापीकरण (Globalization)</strong> र <strong>बसाइँसराइ (Migration)</strong> का कारण विश्वका लगभग सम्पूर्ण मुलुकहरू <strong>बहुसांस्कृतिक (Multicultural)</strong> समाजमा रूपान्तरण भइरहेका छन्। यस भनाइलाई देहायका आधारहरूमा पुष्टि गर्न सकिन्छ:</p>
+            <ol>
+                <li><strong>प्रविधि र सञ्चारको प्रभाव:</strong> इन्टरनेट, टेलिभिजन र सामाजिक सञ्जालका कारण एउटा देशको भाषा, सङ्गीत, खानपान र चाडपर्वहरू अर्को देशमा सहजै भित्रिएका छन्। उदाहरणका लागि, नेपालमा अंग्रेजी नयाँ वर्ष, भ्यालेन्टाइन डे मनाइनु यसैको प्रमाण हो।</li>
+                <li><strong>अन्तर्राष्ट्रिय बसाइँसराइ:</strong> शिक्षा, रोजगारी र व्यावसायिक अवसरका लागि मानिसहरू एक देशबाट अर्को देशमा बसाइँ सर्दा आफ्नो मौलिक संस्कृति, भाषा र परम्परा पनि साथै लैजान्छन्। आज अमेरिका, क्यानडा, अस्ट्रेलिया, र बेलायत जस्ता देशहरूमा तीज, होली र ल्होसार धुमधामका साथ मनाइन्छ।</li>
+                <li><strong>सांस्कृतिक सहअस्तित्व:</strong> आजका आधुनिक नगर र महानगरहरूमा विभिन्न जातजाति, भाषा र धर्म मान्ने मानिसहरू एकै ठाउँमा बसेर काम गर्दछन्, जसले गर्दा समाजमा सांस्कृतिक आदानप्रदान (Acculturation) र सहअस्तित्वको भावना बलियो बनेको छ।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-block color2">
+        <div class="q"><span class="qnum">प्रश्न २.</span> 'समकालीन विश्व भाषिक, धार्मिक, वर्गीय, लैङ्गिक र राजनीतिक प्रणालीगत विविधता जस्ता सामाजिक विविधताहरूले भरिपूर्ण छ।' आफ्नो तर्कसहित व्याख्या गर्नुहोस्।</div>
+        <div class="a">
+            <p><strong>उत्तर:</strong> वर्तमान विश्व परिवेश विविधताको सुन्दर सङ्गम हो। मानव समाजमा पाइने प्रमुख सामाजिक विविधताहरूलाई निम्न अनुसार व्याख्या गर्न सकिन्छ:</p>
+            <ul>
+                <li><strong>भाषिक विविधता:</strong> युनेस्कोको प्रतिवेदन अनुसार विश्वमा ६ हजारभन्दा बढी भाषाहरू बोलिन्छन्, जसले मानव चेतना र साहित्यको धनी रूप दर्शाउँछ।</li>
+                <li><strong>धार्मिक विविधता:</strong> विश्वमा इसाई, इस्लाम, हिन्दु, बौद्ध, सिख आदि विविध धार्मिक आस्था भएका समुदायहरू बसोबास गर्दछन्।</li>
+                <li><strong>वर्गीय र राजनीतिक विविधता:</strong> आर्थिक सम्पन्नताका आधारमा समाज उच्च, मध्यम र निम्न वर्गमा विभाजित छ। त्यसैगरी राजनीतिक प्रणालीतर्फ लोकतन्त्र, संवैधानिक राजतन्त्र, र अन्य शासन व्यवस्थाहरू कायम छन्।</li>
+                <li><strong>पारिवारिक तथा सामाजिक स्त्रीकरण:</strong> पूर्वीय समाजमा संयुक्त परिवार र पश्चिमी समाजमा एकल परिवारको बाहुल्य छ। यसका साथै जात, वर्ण, र लैङ्गिक आधारमा समाजमा विविध संरचनाहरू पाइन्छन्।</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="qa-block color3">
+        <div class="q"><span class="qnum">प्रश्न ३.</span> मानवका आधारभूत सामाजिक आवश्यकताहरू के के हुन्, उल्लेख गर्नुहोस्।</div>
+        <div class="a">
+            <p><strong>उत्तर:</strong> मानिस एक सामाजिक प्राणी भएकाले जैविक आवश्यकता (गाँस, बास, कपास) का अतिरिक्त समाजमा सम्मानपूर्वक बाँच्न देहायका आधारभूत <strong>सामाजिक आवश्यकताहरू</strong> अपरिहार्य हुन्छन्:</p>
+            <ol>
+                <li><strong>सुरक्षा र संरक्षणको आवश्यकता:</strong> समाजमा शान्ति, सुरक्षा, र कानुनी संरक्षण पाउने अधिकार।</li>
+                <li><strong>सञ्चार र अन्तरक्रियाको आवश्यकता:</strong> आफ्ना भावना, विचार र भावनाहरू साटासाट गर्ने माध्यम।</li>
+                <li><strong>सहयोग र सहकार्यको आवश्यकता:</strong> बिरामी पर्दा, घर निर्माण गर्दा वा आपत्विपत् पर्दा छिमेकी र समाजको सहयोग पाउनु।</li>
+                <li><strong>पहिचान र आत्मीयताको आवश्यकता:</strong> परिवार, नातागोता र सामाजिक समूहमा आबद्ध भई माया, आदर र पहिचान प्राप्त गर्नु।</li>
+                <li><strong>शिक्षा, स्वास्थ्य र सामाजीकरणको आवश्यकता:</strong> समाजका मूल्य, मान्यता र सीपहरू सिकेर दक्ष नागरिक बन्ने अवसर।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-clipboard-list"></i> परियोजना कार्य (Project Work): समुदायका विशेषताहरू खोजी गरी तयार पारिएको प्रतिवेदनको नमुना</div>
+
+    <div class="analysis-box">
+        <p class="analysis-title"><i class="fas fa-project-diagram" style="color:#6A1B9A; margin-right:8px;"></i> शीर्षक: चन्द्रागिरि नगरपालिका वडा नं. ५ को सामाजिक-सांस्कृतिक विशेषताहरूको अध्ययन प्रतिवेदन</p>
+
+        <p><strong>१. परिचय:</strong> काठमाडौँ उपत्यकाको पश्चिममा अवस्थित यो क्षेत्र परम्परागत र आधुनिक विशेषताहरूको सुन्दर मिश्रण हो।</p>
+
+        <p><strong>२. मुख्य सामाजिक-सांस्कृतिक विशेषताहरू:</strong></p>
+        <ul>
+            <li><strong>सांस्कृतिक विविधता:</strong> यहाँ नेवार, क्षेत्री, बाहुन, तामाङ, र गुरुङ जातिको बसोबास रहेको छ। यहाँ इन्द्रजात्रा, दशैँ, र ल्होसार समान उत्साहका साथ मनाइन्छ।</li>
+            <li><strong>बढ्दो सहरीकरण:</strong> विगत एक दशकमा व्यापार र यातायातको विकासले गर्दा कृषि पेसा छाडेर व्यापार र सेवा क्षेत्रमा संलग्न हुनेहरूको सङ्ख्या बढेको छ।</li>
+            <li><strong>ऐँचोपाँचो र सहकार्य:</strong> सहरीकरण बढे पनि टोल सुधार समिति र आमा समूहहरूमार्फत सरसफाइ र विपद् व्यवस्थापनमा सहकार्य गर्ने परम्परा जीवन्त छ।</li>
+        </ul>
+
+        <p><strong>३. निष्कर्ष:</strong> आधुनिकता र विश्वव्यापीकरणको प्रभाव परे तापनि स्थानीय समुदायले आफ्ना मौलिक धार्मिक र सामाजिक मूल्यमान्यताहरू जोगाइराखेको छ।</p>
+    </div>
+
+    <hr>
+
+    <div class="section-head" id="section5">
+        <i class="fas fa-bullseye"></i>
+        ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+        <span class="mark-badge pink">High-Yield</span>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (अङ्क भार: १)</div>
+
+    <div class="qa-block color4">
+        <div class="q"><span class="qnum">१.</span> 'ग्लोबल भिलेज' (Global Village) भन्नाले के बुझिन्छ?</div>
+        <div class="a"><strong>उत्तर:</strong> सूचना, प्रविधि र सञ्चारको विकासले सम्पूर्ण विश्वका मानिसहरूलाई एकआपसमा नजिक ल्याई सिङ्गो संसारलाई एउटा सानो साझा गाउँ जस्तै बनाउने अवधारणालाई <strong>'ग्लोबल भिलेज'</strong> भनिन्छ।</div>
+    </div>
+
+    <div class="qa-block color5">
+        <div class="q"><span class="qnum">२.</span> परसंस्कृति ग्रहण (Acculturation) र आत्मसात् (Assimilation) बिचको मुख्य भिन्नता के हो?</div>
+        <div class="a"><strong>उत्तर:</strong> परसंस्कृति ग्रहणमा आफ्नो मौलिक संस्कृति जोगाउँदै अर्को संस्कृति सिकिन्छ भने आत्मसात्मा आफ्नो मौलिक संस्कृति पूर्ण रूपमा त्यागेर अर्को संस्कृतिमा विलय भइन्छ।</div>
+    </div>
+
+    <div class="qa-block color6">
+        <div class="q"><span class="qnum">३.</span> युनेस्को (UNESCO) का अनुसार विश्वमा करिब कति भाषाहरू बोलिन्छन्?</div>
+        <div class="a"><strong>उत्तर:</strong> युनेस्कोका अनुसार विश्वमा करिब <strong>६,००० भन्दा बढी</strong> भाषाहरू बोलिन्छन्।</div>
+    </div>
+
+    <div class="qa-block color7">
+        <div class="q"><span class="qnum">४.</span> सामाजिक सामाजीकरण (Socialization) भनेको के हो?</div>
+        <div class="a"><strong>उत्तर:</strong> मानिसले समाजका मूल्य, मान्यता, संस्कृति र सीपहरू सिकेर समाजको क्रियाशील सदस्य बन्ने प्रक्रियालाई <strong>सामाजीकरण</strong> भनिन्छ।</div>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तरहरू (अङ्क भार: ५)</div>
+
+    <div class="qa-block color8">
+        <div class="q"><span class="qnum">१.</span> वर्तमान विश्वमा सामाजिक सम्बन्ध सुधार गर्न सहयोग पुर्‍याउने प्रमुख ५ वटा सामाजिक प्रक्रियाहरूको चर्चा गर्नुहोस्।</div>
+        <div class="a">
+            <p><strong>उत्तर:</strong> मानव समाजमा सामाजिक सम्बन्धलाई सुमधुर र व्यवस्थित बनाउन देहायका ५ वटा सामाजिक प्रक्रियाहरूले महत्त्वपूर्ण भूमिका खेल्छन्:</p>
+            <ol>
+                <li><strong>सहकार्य (Cooperation):</strong> साझा लक्ष्य प्राप्तिका लागि समाजका सदस्यहरू मिलेर काम गर्दा एकापसमा आत्मीयता र विश्वास अभिवृद्धि हुन्छ।</li>
+                <li><strong>सम्झौता (Accommodation):</strong> समाजमा सिर्जित मतभेद, विवाद वा तनावलाई संवादमार्फत समाधान गरी असमझदारी अन्त्य गर्छ।</li>
+                <li><strong>एकता (Integration):</strong> जातीय, धार्मिक वा भाषिक विविधताका बाबजुद राष्ट्रिय र सामाजिक हितका लागि एकताबद्ध बनाउँछ।</li>
+                <li><strong>अनुकूलन (Adaptation):</strong> नयाँ भौगोलिक वा सांस्कृतिक वातावरणमा मानिसलाई सहज रूपमा समायोजन हुन मद्दत गर्दछ।</li>
+                <li><strong>परसंस्कृति ग्रहण (Acculturation):</strong> अन्य संस्कृतिका सकारात्मक पक्षहरू सिक्दै मौलिक पहिचान रक्षा गर्न सिकाउँछ।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तरात्मक प्रश्न (अङ्क भार: ८)</div>
+
+    <div class="qa-block color1" style="border-left-color:#6A1B9A;">
+        <div class="q"><span class="qnum">प्रश्न:</span> "विश्वव्यापीकरण, सूचना प्रविधि र तीव्र बसाइँसराइले वर्तमान विश्वलाई बहुसांस्कृतिक र प्रविधियुक्त बनाए तापनि यसले व्यक्तिवाद र सांस्कृतिक विस्थापन जस्ता नयाँ चुनौतीहरू थपेको छ।" यस भनाइलाई पाठ्यपुस्तकका आधारमा विश्लेषणात्मक विवेचना गर्नुहोस्।</div>
+        <div class="a">
+
+            <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> २१औँ शताब्दीको वर्तमान विश्व परिवेश <strong>विश्वव्यापीकरण (Globalization)</strong>, सूचना प्रविधिको विकास, र तीव्र <strong>बसाइँसराइ (Migration)</strong> ले गर्दा अभूतपूर्व रूपान्तरणबाट गुज्रिरहेको छ। यातायात र सञ्चारका माध्यमहरूले भौगोलिक दूरीलाई निष्प्रभावी बनाउँदै सिङ्गो पृथ्वीलाई एउटा 'ग्लोबल भिलेज' मा परिणत गरिदिएका छन्। यसले मानव जीवनलाई सुविधायुक्त, बहुसांस्कृतिक र ज्ञानमा आधारित बनाएको छ भने अर्कातिर सामाजिक विघटन र सांस्कृतिक सङ्कट जस्ता गम्भीर चुनौतीहरू सिर्जना गरेको छ।</p>
+
+            <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण तथा तर्क:</span> वर्तमान विश्व परिवेशका सकारात्मक उपलब्धिहरू र यसले थपेका चुनौतीहरूलाई देहाय बमोजिम विश्लेषण गर्न सकिन्छ:</p>
+
+            <p><strong>क) सकारात्मक पक्षहरू (सबल अङ्गहरू):</strong></p>
+            <ul>
+                <li><strong>बहुसांस्कृतिक सहअस्तित्व:</strong> बसाइँसराइ र विश्वव्यापीकरणले गर्दा भिन्न-भिन्न देश, धर्म र जातिका मानिसहरू एउटै समाजमा सम्मानका साथ बस्ने वातावरण बनेको छ।</li>
+                <li><strong>ज्ञान र प्रविधिमा सहज पहुँच:</strong> सूचना प्रविधि (इन्टरनेट, एआई, डिजिटल सञ्जाल) ले शिक्षा, स्वास्थ्य र व्यापारलाई सरल र छरितो बनाएको छ।</li>
+                <li><strong>सांस्कृतिक आदानप्रदान (Acculturation):</strong> मानिसहरूले एकअर्काका राम्रा चाडपर्व, खानपान र जीवनशैली अपनाउँदै विश्वबन्धुत्वको भावना विकास गरेका छन्।</li>
+            </ul>
+
+            <p><strong>ख) चुनौतीपूर्ण पक्षहरू (दुर्बल पक्षहरू):</strong></p>
+            <ul>
+                <li><strong>व्यक्तिवादी प्रवृत्तिमा वृद्धि:</strong> आधुनिकतासँगै सामूहिक र पारिवारिक हितभन्दा व्यक्तिगत सफलता र स्वार्थलाई प्राथमिकता दिने होडबाजी बढेको छ, जसले गर्दा पारिवारिक सामीप्यता र ऐँचोपाँचोको परम्परा घट्दै गएको छ।</li>
+                <li><strong>सांस्कृतिक विस्थापन र आत्मसात् (Assimilation):</strong> ठुला र शक्तिशाली पश्चिमी संस्कृतिहरूको प्रभावका कारण साना र मौलिक भाषा, लिपि तथा सांस्कृतिक पहिचानहरू सङ्कटमा पर्दै गएका छन्।</li>
+                <li><strong>डिजिटल विभाजन र असमानता:</strong> प्रविधिमा पहुँच हुने र नहुनेबिच नयाँ प्रकारको सामाजिक-आर्थिक खाडल (Digital Divide) सिर्जना भएको छ।</li>
+            </ul>
+
+            <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> उदाहरणका लागि, नेपालमा वैदेशिक रोजगारी र उच्च शिक्षाका लागि लाखौँ युवाहरू अमेरिका, युरोप, र खाडी मुलुकहरूमा पुगेका छन्। यसले नेपालमा विप्रेषण (Remittance) र नयाँ प्रविधि भित्र्याएको छ भने अर्कातिर क्यानडा वा अस्ट्रेलियामा बस्ने नेपालीहरूले तीज र दसैँ मनाएर आफ्नो संस्कृति जोगाएका छन्। तर, अर्कातिर गाउँघरमा वृद्धवृद्धा मात्र बाँकी रहने, परम्परागत श्रम र सांस्कृतिक उत्सवहरू सुनसान हुने, र नयाँ पुस्ताले मौलिक भाषा बिर्सँदै जाने गम्भीर समस्या देखिएको छ।</p>
+
+            <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, वर्तमान विश्व परिवेश प्रविधि र बहुसांस्कृतिकताको अद्भुत युग हो। विश्वव्यापीकरणका असीमित फाइदाहरू लिँदै गर्दा यसले निम्त्याएको व्यक्तिवाद, सांस्कृतिक क्षय र वातावरणीय सङ्कटप्रति सजग हुन आवश्यक छ। तसर्थ, <strong>"आफ्नो मौलिक संस्कृति र पहिचान जोगाऔँ, नयाँ ज्ञान र प्रविधिलाई अङ्गीकार गरौँ"</strong> भन्ने मूल मन्त्रका साथ <strong>विश्व नागरिक (Global Citizen)</strong> बन्ने दिशामा अगाडि बढ्नु नै आजको आवश्यकता हो।</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="tip-box" style="background:#6A1B9A; margin-top:20px;">
+        <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+        <strong>अन्तिम सल्लाह:</strong> वर्तमान विश्व परिवेश बहुआयामिक छ — विश्वव्यापीकरण, सहरीकरण, बहुसांस्कृतिकता र प्रविधि यसका मुख्य विशेषता हुन्। परीक्षामा सामाजिक प्रक्रिया (सहकार्य, सम्झौता, अनुकूलन) र सांस्कृतिक सहअस्तित्वका बुँदाहरू तालिका र वर्गीकृत ढाँचामा लेख्दा राम्रो अङ्क प्राप्त गर्न सकिन्छ। स्मरण राख्नुहोस् — <strong>"मौलिकता जोगाऔँ, नवीनता अङ्गालौँ"</strong> भन्ने मूल मन्त्र नै आजको आवश्यकता हो।
+    </div>
+
+    <div class="footer-copy">
+        <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+        <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+        <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ४, पाठ ५</span>
+        <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+    </div>
+
+</div>
+
+<button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+    (function() {
+        const btn = document.getElementById('scrollUpBtn');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+        btn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    })();
+</script>
+
+</body>
+</html>
