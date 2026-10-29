@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ४, पाठ ४ – पुँजीवादी युग र औद्योगिक विश्व (कक्षा ११)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family:'Noto Sans Devanagari', sans-serif;
+            background:#f5ede8;
+            color:#2d2a26;
+            padding:16px 12px 30px;
+            line-height:2;
+            scroll-behavior:smooth;
+        }
+        .container {
+            max-width:1150px; margin:0 auto;
+            background:#fcfdfc; color:#2d2a26;
+            border-radius:32px;
+            box-shadow:0 16px 56px rgba(0,0,0,0.08);
+            padding:28px 22px 40px;
+            position:relative;
+        }
+        .main-header {
+            border-bottom:4px solid #d0b8a0;
+            padding-bottom:16px; margin-bottom:16px;
+            display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:8px;
+        }
+        .main-header h1 {
+            font-size:2rem; font-weight:900; color:#7A2400; line-height:1.2;
+        }
+        .main-header h1 i { color:#BF360C; margin-right:10px; }
+        .main-header .subtitle {
+            font-size:1.16rem; color:#4d5f72; font-weight:600; margin-top:4px;
+        }
+        .badge-class {
+            background:#BF360C; color:#fff;
+            font-size:0.8rem; font-weight:800;
+            padding:4px 18px; border-radius:40px;
+            letter-spacing:0.5px; display:inline-block; margin-left:6px;
+        }
+        .credit-bar {
+            background:#f5e8dc; border-radius:60px;
+            padding:14px 28px;
+            display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;
+            gap:8px 20px; margin:6px 0 24px;
+            border:2px solid #d4b8a0;
+            font-size:1.05rem; font-weight:700; color:#2d2a26;
+        }
+        .credit-bar .name { color:#0b2b4a; font-weight:800; font-size:1.15rem; }
+        .credit-bar .email { color:#BF360C; font-weight:700; }
+        .credit-bar i { color:#BF360C; margin-right:6px; }
+        
+        .intro-note {
+            background:#fdf6ee;
+            border:2px dashed #d4b8a0;
+            border-left:6px solid #BF360C;
+            border-radius:16px;
+            padding:14px 22px;
+            margin:6px 0 24px;
+            font-weight:500;
+            font-size:1.05rem;
+            color:#4a3a2a;
+        }
+        .intro-note i { color:#BF360C; margin-right:8px; }
+        .intro-note strong { color:#7A2400; font-weight:900; }
+
+        .toc-section {
+            background:#BF360C; border-radius:20px;
+            padding:18px 24px; margin:6px 0 28px;
+            border:2px solid #E64A19;
+        }
+        .toc-section h3 {
+            font-weight:800; color:#fff; font-size:1.36rem; margin-bottom:12px;
+            display:flex; align-items:center; gap:12px;
+        }
+        .toc-section h3 i { color:#f5d742; font-size:1.3rem; }
+        .toc-grid {
+            display:grid; grid-template-columns:1fr 1fr 1fr; gap:4px 16px;
+        }
+        .toc-grid a {
+            color:#fde8dc; text-decoration:none;
+            font-weight:600; font-size:16.5px;
+            padding:4px 0 4px 6px;
+            border-bottom:2px solid transparent;
+            transition:all 0.2s ease;
+            display:flex; align-items:center; gap:6px;
+        }
+        .toc-grid a:hover { color:#f5d742; border-bottom-color:#f5d742; transform:translateX(4px); }
+        .toc-grid a i { color:#f5d742; font-size:0.6rem; min-width:14px; }
+
+        @media (max-width:700px) { .toc-grid { grid-template-columns:1fr 1fr; } .toc-grid a { font-size:15px; } }
+        @media (max-width:480px) { .toc-grid { grid-template-columns:1fr; } .toc-grid a { font-size:14px; } }
+
+        .section-head {
+            font-size:1.7rem; font-weight:900; color:#fff;
+            background:#BF360C;
+            margin:42px 0 16px; padding:12px 22px; border-radius:12px;
+            display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+            scroll-margin-top:80px;
+            box-shadow:0 3px 12px rgba(191,54,12,0.35);
+        }
+        .section-head i { font-size:1.5rem; color:#f5d742; }
+        .section-head .mark-badge {
+            color:#BF360C; font-size:0.7rem; font-weight:800;
+            padding:3px 14px; border-radius:40px; margin-left:4px; background:#fff;
+        }
+        .section-head .mark-badge.gold { background:#f5d742; color:#0b2b4a; }
+        .section-head .mark-badge.green { background:#7dcea0; color:#0b2b4a; }
+        .section-head .mark-badge.purple { background:#b39ddb; color:#0b2b4a; }
+        .section-head .mark-badge.blue { background:#81d4fa; color:#0b2b4a; }
+        .section-head .mark-badge.pink { background:#f48fb1; color:#0b2b4a; }
+
+        .sub-head {
+            font-size:1.3rem; font-weight:800; color:#7A2400;
+            margin:28px 0 12px; padding-left:14px;
+            border-left:6px solid #BF360C;
+            display:flex; align-items:center; gap:10px;
+            scroll-margin-top:80px;
+        }
+        .sub-head i { color:#BF360C; font-size:1.1rem; }
+
+        .content-box {
+            border-radius:16px; padding:20px 26px; margin:14px 0 18px;
+            border-left:6px solid #BF360C; font-weight:500; line-height:2;
+        }
+        .content-box p, .content-box ul, .content-box ol, .content-box li {
+            font-size:1.19rem; font-weight:500; margin-bottom:8px;
+        }
+        .content-box ul, .content-box ol { padding-left:28px; margin:8px 0 8px; }
+        .content-box li { margin-bottom:6px; }
+        .content-box strong { color:#7A2400; font-weight:900; }
+
+        .content-box.bronze-light { border-left-color:#BF360C; background:#fbeee8; }
+        .content-box.blue-light { border-left-color:#1a3a5c; background:#e8f0f8; }
+        .content-box.gold-light { border-left-color:#b45309; background:#fef8ee; }
+        .content-box.green-light { border-left-color:#1f7a4a; background:#eef8f2; }
+        .content-box.purple-light { border-left-color:#6A1B9A; background:#f4eef8; }
+        .content-box.pink-light { border-left-color:#a03a5a; background:#f8eef2; }
+        .content-box.teal-light { border-left-color:#0f7a7a; background:#eef8f8; }
+        .content-box.orange-light { border-left-color:#d97706; background:#fef6ed; }
+
+        .table-wrap {
+            overflow-x:auto; margin:16px 0 14px;
+            border-radius:14px; border:2px solid #d4b8a0;
+        }
+        table {
+            width:100%; border-collapse:collapse; font-size:1.05rem; min-width:280px;
+        }
+        th, td {
+            padding:12px 16px; border:1px solid #d4b8a0;
+            text-align:left; vertical-align:top;
+        }
+        th {
+            background:#BF360C; font-weight:800; color:#fff; font-size:1.08rem;
+        }
+        td { font-weight:500; font-size:1.05rem; }
+        .table-caption {
+            background:#f5e8dc; padding:10px 18px;
+            font-weight:700; font-size:1.08rem; color:#7A2400;
+            border-bottom:2px solid #d4b8a0;
+        }
+
+        .qa-block {
+            border-radius:16px; padding:18px 24px; margin:14px 0 18px;
+            border-left:6px solid #BF360C;
+        }
+        .qa-block.color1 { border-left-color:#BF360C; background:#fbeee8; }
+        .qa-block.color2 { border-left-color:#1a3a5c; background:#f0f5fa; }
+        .qa-block.color3 { border-left-color:#1f7a4a; background:#f2f8f5; }
+        .qa-block.color4 { border-left-color:#6b3fa0; background:#f6f2f8; }
+        .qa-block.color5 { border-left-color:#b45309; background:#fcf9f4; }
+        .qa-block.color6 { border-left-color:#0f7a7a; background:#eef8f8; }
+        .qa-block.color7 { border-left-color:#a03a5a; background:#fcf5f8; }
+        .qa-block.color8 { border-left-color:#d97706; background:#fef8ef; }
+
+        .qa-block .q {
+            font-weight:900; color:#7A2400;
+            display:flex; gap:10px; align-items:baseline;
+            font-size:1.22rem;
+        }
+        .qa-block .q .qnum { color:#BF360C; font-weight:900; min-width:30px; }
+        .qa-block .a {
+            margin-top:6px; padding-left:46px;
+            color:#2d2a26; font-weight:500; font-size:1.19rem;
+        }
+        .qa-block .a ul, .qa-block .a ol { padding-left:24px; margin:6px 0 6px; }
+        .qa-block .a li { margin-bottom:5px; font-weight:500; }
+        .qa-block .a strong { color:#7A2400; font-weight:900; }
+        .qa-block .a .step-icon { display:inline-block; margin-right:6px; font-weight:900; }
+        .qa-block .a .step-title { font-weight:700; color:#7A2400; font-size:1.1rem; }
+
+        .glossary-grid {
+            display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0 8px;
+        }
+        .glossary-item {
+            background:#fdf6ee; border-radius:12px;
+            padding:14px 18px; border-left:5px solid #BF360C;
+        }
+        .glossary-item strong { color:#7A2400; font-size:1.15rem; font-weight:900; }
+        .glossary-item p { margin-top:3px; font-size:1.125rem; color:#2d2a26; font-weight:500; }
+
+        .mermaid-flow {
+            display:flex; flex-direction:column; align-items:center; gap:6px;
+            margin:16px 0; padding:14px 10px;
+            background:#fbeee8; border-radius:20px; border:2px dashed #E64A19;
+        }
+        .mermaid-step {
+            background:#fff; padding:8px 22px; border-radius:40px;
+            font-weight:800; font-size:1rem; color:#7A2400;
+            box-shadow:0 2px 6px rgba(0,0,0,0.04);
+            border:2px solid #BF360C; text-align:center; min-width:160px;
+        }
+        .mermaid-arrow { font-size:1.6rem; color:#7f8fa6; line-height:1; }
+
+        @media (max-width:600px) {
+            .mermaid-step { font-size:0.85rem; padding:6px 14px; min-width:120px; }
+        }
+        @media (min-width:768px) {
+            .mermaid-flow { flex-direction:row; flex-wrap:wrap; justify-content:center; gap:4px 14px; }
+            .mermaid-arrow { transform:rotate(0deg); }
+        }
+
+        .analysis-box, .activity-box, .dialogue-box {
+            border-radius:16px; padding:20px 26px;
+            border:2px solid #d4b8a0; margin:12px 0;
+        }
+        .analysis-box, .dialogue-box { background:#fdf6ee; }
+        .activity-box { background:#f8f1e8; }
+        .analysis-box .analysis-title, .activity-box .act-title, .dialogue-box .dialogue-title {
+            font-weight:900; color:#7A2400; font-size:1.15rem;
+        }
+        .dialogue-box .dialogue-title { text-align:center; }
+        .analysis-box p, .analysis-box li,
+        .activity-box p, .activity-box li,
+        .dialogue-box p {
+            font-weight:500; font-size:1.12rem; margin-bottom:4px;
+        }
+        .analysis-box ul, .analysis-box ol,
+        .activity-box ul, .activity-box ol {
+            padding-left:24px;
+        }
+        .dialogue-box .speaker { font-weight:700; color:#BF360C; }
+
+        .ref {
+            display:inline; font-size:0.72em; color:#BF360C; font-weight:700;
+            vertical-align:super; margin-left:2px; letter-spacing:0.5px;
+        }
+
+        #scrollUpBtn {
+            position:fixed; bottom:28px; right:28px;
+            background:#BF360C; color:#fff; border:none; border-radius:50%;
+            width:60px; height:60px; font-size:1.8rem; cursor:pointer;
+            box-shadow:0 4px 20px rgba(191,54,12,0.4);
+            transition:all 0.3s ease;
+            display:flex; align-items:center; justify-content:center;
+            z-index:999; opacity:0; visibility:hidden; transform:translateY(20px);
+        }
+        #scrollUpBtn.visible { opacity:1; visibility:visible; transform:translateY(0); }
+        #scrollUpBtn:hover { background:#7A2400; transform:scale(1.08); box-shadow:0 6px 28px rgba(191,54,12,0.5); }
+
+        .footer-copy {
+            margin-top:40px; padding-top:18px; border-top:3px solid #d0b8a0;
+            text-align:center; font-size:0.95rem; color:#5f6f80;
+            display:flex; flex-wrap:wrap; justify-content:center; gap:6px 28px; font-weight:600;
+        }
+        .footer-copy i { color:#BF360C; margin-right:6px; }
+        .footer-copy .highlight { font-weight:800; color:#0b2b4a; }
+
+        hr { border:none; border-top:3px dotted #d4b8a0; margin:28px 0 10px; }
+
+        .tip-box {
+            background:#BF360C; color:#fff; border-radius:14px;
+            padding:16px 22px; margin:12px 0; font-weight:500; font-size:1.1rem;
+        }
+        .tip-box i { margin-right:8px; }
+        .tip-box strong { color:#f5d742; }
+        .tip-box p { color:#fff; }
+
+        @media (max-width:600px) {
+            .container { padding:16px 12px 24px; border-radius:20px; }
+            .main-header h1 { font-size:1.5rem; }
+            .section-head { font-size:1.35rem; padding:10px 16px; }
+            .sub-head { font-size:1.15rem; }
+            .qa-block .a { padding-left:12px; }
+            .qa-block .q { font-size:1.05rem; flex-wrap:wrap; }
+            .credit-bar { flex-direction:column; align-items:flex-start; gap:4px; font-size:0.9rem; padding:10px 16px; }
+            .glossary-grid { grid-template-columns:1fr; }
+            #scrollUpBtn { width:50px; height:50px; font-size:1.3rem; bottom:18px; right:18px; }
+            .toc-section { padding:14px 16px; }
+            .content-box { padding:14px 16px; }
+            .content-box p, .content-box ul, .content-box ol, .content-box li { font-size:1.02rem; }
+            .qa-block .a { font-size:1.02rem; }
+            table { font-size:0.9rem; }
+            th, td { font-size:0.9rem; padding:6px 8px; }
+            .glossary-item strong { font-size:1.05rem; }
+            .glossary-item p { font-size:0.98rem; }
+            .activity-box p, .activity-box li,
+            .analysis-box p, .analysis-box li,
+            .dialogue-box p { font-size:1.02rem; }
+            .mermaid-step { font-size:0.8rem; padding:4px 12px; min-width:100px; }
+            .toc-grid a { font-size:15px; }
+        }
+        @media (min-width:768px) {
+            .container { padding:36px 46px 50px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="main-header">
+        <div>
+            <h1>
+                <i class="fas fa-industry"></i>
+                एकाइ ४, पाठ ४: पुँजीवादी युग र औद्योगिक विश्व
+            </h1>
+            <div class="subtitle">
+                कक्षा ११ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                <span class="badge-class"><i class="fas fa-check-circle"></i> NEB परीक्षा विशेष क्याप्सुल</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="credit-bar">
+        <span><i class="fas fa-user-edit"></i> <span class="name">Prepared by: Narayan Sir</span></span>
+        <span><i class="fas fa-envelope"></i> <span class="email">nregmi511@gmail.com</span></span>
+        <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ४, पाठ ४</span>
+    </div>
+
+    <div class="intro-note">
+        <i class="fas fa-info-circle"></i>
+        यो क्याप्सुल नोट राष्ट्रिय परीक्षा बोर्ड (NEB) को नयाँ पाठ्यक्रम र पाठ्यपुस्तक (<strong>पृष्ठ ६६–६८</strong>) का सम्पूर्ण क्रियाकलाप, अभ्यासका <strong>५ वटै प्रश्नहरू</strong>, र परियोजना कार्यलाई १००% शुद्धताका साथ समेटी तयार पारिएको हो।
+    </div>
+
+    <div class="toc-section" id="toc">
+        <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+        <div class="toc-grid">
+            <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+            <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+            <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+            <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+            <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+        </div>
+    </div>
+
+    <div class="section-head" id="section1">
+        <i class="fas fa-book-open"></i>
+        १. विषयगत पारिभाषिक शब्दावली
+        <span class="mark-badge blue">Glossary</span>
+    </div>
+
+    <div class="glossary-grid">
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> पुँजीवादी अर्थव्यवस्था (Capitalist Economy)</strong>
+            <p>उत्पादनका साधनहरू (कलकारखाना, पुँजी, प्रविधि) मा निजी स्वामित्व रहने, खुल्ला बजार प्रतिस्पर्धा र नाफा आर्जन मुख्य उद्देश्य हुने आर्थिक प्रणाली <span class="ref">[१२]</span>।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> औद्योगिक क्रान्ति (Industrial Revolution)</strong>
+            <p>१८औँ शताब्दीको उत्तरार्धमा बेलायतबाट सुरु भई मानवीय श्रमको सट्टा मेसिन, जीवाश्म इन्धन र कारखाना प्रणालीको प्रयोगद्वारा उत्पादनमा आएको युगान्तकारी परिवर्तन <span class="ref">[१२]</span>।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> उत्पादनका साधनहरू (Means of Production)</strong>
+            <p>वस्तु तथा सेवा उत्पादन गर्न आवश्यक पर्ने भूभाग, कच्चा पदार्थ, मेसिन, औजार, प्रविधि र पुँजी <span class="ref">[१२]</span>।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> बजारीकरण (Marketization)</strong>
+            <p>उत्पादित वस्तु तथा सेवाहरूलाई उपभोगका लागि खुला बजारमा बिक्री-वितरण गर्ने र आर्थिक कारोबारलाई मूल्यसँग जोड्ने प्रक्रिया <span class="ref">[१२]</span>।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> सहरीकरण (Urbanization)</strong>
+            <p>उद्योग, कलकारखाना र रोजगारीका अवसरका कारण गाउँबाट मानिसहरू सहरतर्फ बसाइँसरी सहरहरूको सङ्ख्या र जनघनत्व बढ्ने प्रक्रिया <span class="ref">[१२]</span>।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> व्यक्तिवाद (Individualism)</strong>
+            <p>सामूहिक वा पारिवारिक स्वार्थभन्दा व्यक्तिको स्वतन्त्रता, निजी अधिकार, र व्यक्तिगत सफलतालाई प्राथमिकता दिने आधुनिक सोच <span class="ref">[१३]</span>।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> उपभोगवाद (Consumerism)</strong>
+            <p>आवश्यकताभन्दा बढी सेवा र भौतिक वस्तुहरू खरिद तथा प्रयोग गर्ने आधुनिक समाजको जीवनशैली र प्रवृत्ति <span class="ref">[१३]</span>।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> महिला सशक्तीकरण (Women Empowerment)</strong>
+            <p>महिलाहरूलाई आर्थिक, सामाजिक, र राजनीतिक रूपमा सक्षम, आत्मनिर्भर र निर्णय प्रक्रियामा सहभागी गराउने प्रक्रिया <span class="ref">[१३]</span>।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> श्रमको मूल्य/ज्याला (Price of Labor)</strong>
+            <p>औद्योगिक समाजमा श्रमिकहरूले आफ्नो शारीरिक वा मानसिक श्रम पुँजीपतिलाई बेचेबापत प्राप्त गर्ने आर्थिक प्रतिफल <span class="ref">[१३]</span>।</p>
+        </div>
+        <div class="glossary-item">
+            <strong><i class="fas fa-arrow-right" style="color:#BF360C; margin-right:4px;"></i> सामाजिक वर्ग विभाजन (Social Class Stratification)</strong>
+            <p>पुँजीपति (मालिक/Owner) र श्रमिक (मजदुर/Worker) गरी समाज दुई मुख्य आर्थिक वर्गमा विभाजन हुने प्रक्रिया <span class="ref">[१३]</span>।</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section-head" id="section2">
+        <i class="fas fa-lightbulb"></i>
+        २. "पुँजीवादी युग र औद्योगिक विश्व" — विस्तृत प्राज्ञिक नोट
+        <span class="mark-badge gold">Core Notes</span>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-gem"></i> १. पुँजीवादी युग र औद्योगिक समाजको उद्विकासक्रम</div>
+
+    <div class="content-box bronze-light">
+        <ul>
+            <li><strong>ऐतिहासिक पृष्ठभूमि:</strong> १७औँ शताब्दीदेखि विकास भएको पुँजीवाद र १८औँ शताब्दीको बेलायती औद्योगिक क्रान्तिले मानव समाजलाई कृषि युगबाट औद्योगिक युगमा रूपान्तरण गर्‍यो <span class="ref">[१२]</span>।</li>
+            <li><strong>उत्पादन प्रणालीमा परिवर्तन:</strong> गुजाराकालिक कृषि उत्पादनलाई ठुलो परिमाणको मेसिनरी उत्पादन प्रणालीले प्रतिस्थापन गर्‍यो <span class="ref">[१२]</span>। कोइला, खनिज तेल र जलविद्युत् जस्ता ऊर्जाका नयाँ स्रोतहरूको प्रयोग सुरु भयो <span class="ref">[१२]</span>।</li>
+            <li><strong>सामाजिक र आर्थिक संरचना:</strong> रेलमार्ग, पानीजहाज र टेलिफोनको विकासले यातायात र सञ्चारमा क्रान्ति ल्यायो <span class="ref">[१२, १३]</span>। यसले एकातिर शिक्षा, स्वास्थ्य र महिला सशक्तीकरणमा योगदान पुर्‍यायो भने अर्कातिर वर्गीय असमानता, उपभोगवाद र वातावरणीय समस्या निम्त्यायो <span class="ref">[१३]</span>।</li>
+        </ul>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-list-ol"></i> २. औद्योगिक क्रान्ति र पुँजीवादको विकासक्रम</div>
+
+    <div class="content-box blue-light">
+        <p>औद्योगिक क्रान्तिको थालनीदेखि पुँजीवादी व्यवस्थाको सुदृढीकरणसम्मको क्रमलाई देहायको प्रवाह चित्रले स्पष्ट पार्दछ <span class="ref">[१२]</span>:</p>
+
+        <div class="mermaid-flow">
+            <div class="mermaid-step">१. १८औँ शताब्दीको बेलायती औद्योगिक क्रान्ति</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">२. मेसिन र जीवाश्म इन्धनको व्यापक प्रयोग</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">३. कारखाना प्रणाली र ठुलो परिमाणमा उत्पादन</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">४. पुँजीवादी अर्थव्यवस्था र खुल्ला बजार</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">५. सहरीकरण, यातायात र सञ्चारको विकास</div>
+            <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="mermaid-step">६. पुँजीपति र श्रमिक वर्गको जन्म</div>
+        </div>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-balance-scale"></i> ३. पुँजीवादी समाजका मुख्य विशेषताहरू</div>
+
+    <div class="content-box green-light">
+        <p>पुँजीवादी समाजका आधारभूत विशेषताहरूलाई देहायको तालिकामा सङ्क्षेपमा प्रस्तुत गरिएको छ <span class="ref">[१२, १३]</span>:</p>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: पुँजीवादी समाजका मुख्य विशेषताहरू</div>
+            <table>
+                <thead>
+                    <tr><th>क्र.सं.</th><th>विशेषता</th><th>सङ्क्षिप्त व्याख्या</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१</strong></td>
+                        <td><strong>निजी सम्पत्ति</strong></td>
+                        <td>उत्पादनका साधनहरूमा व्यक्तिगत स्वामित्व रहन्छ र त्यसको कानुनी सुरक्षा प्राप्त हुन्छ <span class="ref">[१२]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२</strong></td>
+                        <td><strong>नाफा र प्रतिस्पर्धा</strong></td>
+                        <td>खुल्ला बजारमा प्रतिस्पर्धा गरी अधिकतम मुनाफा आर्जन गर्ने प्रेरणा मुख्य हुन्छ <span class="ref">[१२]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३</strong></td>
+                        <td><strong>श्रमको बजारीकरण</strong></td>
+                        <td>श्रमिकहरूले आफ्नो श्रम पुँजीपतिलाई ज्यालाको रूपमा बेच्नुपर्ने हुन्छ <span class="ref">[१३]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४</strong></td>
+                        <td><strong>वर्ग विभाजन</strong></td>
+                        <td>समाज मुख्यतया पुँजीपति (मालिक) र श्रमिक (मजदुर) गरी दुई वर्गमा विभाजित हुन्छ <span class="ref">[१३]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>५</strong></td>
+                        <td><strong>व्यक्तिवाद र उपभोगवाद</strong></td>
+                        <td>व्यक्तिगत स्वतन्त्रता र भौतिक उपभोगलाई बढी प्राथमिकता दिइन्छ <span class="ref">[१३]</span>।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section-head" id="section3">
+        <i class="fas fa-hands"></i>
+        ३. पाठ्यपुस्तकका क्रियाकलापहरूको पूर्ण समाधान
+        <span class="mark-badge green">Activities</span>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-clipboard-list"></i> क्रियाकलाप १: पुँजीवादी र औद्योगिक समाजका सकारात्मक र नकारात्मक परिवर्तनहरू</div>
+
+    <div class="activity-box">
+        <p class="act-title"><i class="fas fa-question-circle" style="color:#BF360C; margin-right:8px;"></i> प्रश्न:</p>
+        <p>पुँजीवादी र औद्योगिक समाजको विकासले मानव समाजमा पारेका सकारात्मक र नकारात्मक परिवर्तनहरूको सूची तयार गरी कक्षामा छलफल गर्नुहोस्।</p>
+    </div>
+
+    <div class="analysis-box">
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: सकारात्मक र नकारात्मक परिवर्तनहरू</div>
+            <table>
+                <thead>
+                    <tr><th>क्र.सं.</th><th>सकारात्मक परिवर्तनहरू (Positive Impacts)</th><th>नकारात्मक परिवर्तनहरू (Negative Impacts)</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>१</strong></td>
+                        <td>मेसिन र प्रविधिको प्रयोगले वस्तु उत्पादनमा तीव्र वृद्धि भई मानव जीवन सहज भएको <span class="ref">[१२]</span>।</td>
+                        <td>पुँजीपति (मालिक) र श्रमिक (मजदुर) बिच आर्थिक असमानता र वर्गीय खाडल बढेको <span class="ref">[१३]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>२</strong></td>
+                        <td>रेलमार्ग, पानीजहाज, टेलिफोन र इन्टरनेटले यातायात र सञ्चारमा युगान्तकारी क्रान्ति ल्याएको <span class="ref">[१२, १३]</span>।</td>
+                        <td>कलकारखाना र खनिज इन्धनको प्रयोगले प्रदूषण र वातावरणीय सन्तुलन बिग्रिएको <span class="ref">[१२]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>३</strong></td>
+                        <td>उद्योग र सेवा क्षेत्रको विस्तारले रोजगारी र आर्थिक वृद्धि गराएको <span class="ref">[१२]</span>।</td>
+                        <td>मानिसहरूमा व्यक्तिवादी सोच र अत्यधिक उपभोगवादी (Consumerist) संस्कृति बढेको <span class="ref">[१३]</span>।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>४</strong></td>
+                        <td>महिला सशक्तीकरण, साक्षरता र स्वास्थ्य सेवाको क्षेत्रमा व्यापक सुधार भएको <span class="ref">[१३]</span>।</td>
+                        <td>परम्परागत कुटिर उद्योग, मौलिक सीप र संयुक्त पारिवारिक सामीप्यता घट्दै गएको <span class="ref">[१३]</span>।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-female"></i> क्रियाकलाप २: महिला सशक्तीकरणमा पुँजीवादी र औद्योगिक समाजको प्रभाव</div>
+
+    <div class="activity-box">
+        <p class="act-title"><i class="fas fa-question-circle" style="color:#BF360C; margin-right:8px;"></i> प्रश्न:</p>
+        <p>पुँजीवादी र औद्योगिक समाजको विकासले महिला सशक्तीकरणमा पारेका प्रभावहरूको विश्लेषण गर्नुहोस्।</p>
+    </div>
+
+    <div class="analysis-box">
+        <p>पुँजीवादी र औद्योगिक समाजको विकासले महिला सशक्तीकरणमा पारेका मुख्य प्रभावहरू देहाय बमोजिम छन् <span class="ref">[१३]</span>:</p>
+        <ol>
+            <li><strong>घरायसी दायराबाट मुक्ति:</strong> परम्परागत रूपमा घरायसी काममा मात्र सीमित महिलाहरू घरबाहिर निस्केर कलकारखाना, कार्यालय र व्यापारमा सहभागी हुने अवसर पाएका छन् <span class="ref">[१३]</span>।</li>
+            <li><strong>आर्थिक आत्मनिर्भरता:</strong> श्रमको उचित ज्याला र आर्थिक उपार्जनमा पहुँच बढेकाले महिलाहरू आर्थिक रूपमा आत्मनिर्भर बनेका छन् <span class="ref">[१३]</span>।</li>
+            <li><strong>शिक्षा र स्वास्थ्यमा पहुँच:</strong> औद्योगिक समाजमा शिक्षित र कुशल जनशक्तिको माग बढेकाले महिला शिक्षा, व्यावसायिक तालिम र स्वास्थ्य उपचारमा सुधार भएको छ <span class="ref">[१३]</span>।</li>
+            <li><strong>निर्णय प्रक्रियामा भूमिका:</strong> आर्थिक योगदानसँगै परिवार र समाजको निर्णय प्रक्रियामा महिलाहरूको पहुँच र अधिकार अभिवृद्धि भएको छ <span class="ref">[१३]</span>।</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <div class="section-head" id="section4">
+        <i class="fas fa-check-double"></i>
+        ४. पाठ्यपुस्तकका अभ्यासहरूको पूर्ण समाधान
+        <span class="mark-badge purple">Exercise</span>
+    </div>
+
+    <div class="qa-block color1">
+        <div class="q"><span class="qnum">प्रश्न १.</span> पुँजीवादी व्यवस्था र सामन्ती व्यवस्थाबीचको फरक छुट्ट्याउनुहोस्।</div>
+        <div class="a">
+            <p><strong>उत्तर:</strong> पुँजीवादी व्यवस्था र सामन्ती व्यवस्थाबीचका मुख्य भिन्नताहरूलाई देहायको तुलनात्मक तालिकामा प्रस्तुत गरिएको छ <span class="ref">[१२, १३]</span>:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: सामन्ती र पुँजीवादी व्यवस्थाबीचको तुलना</div>
+                <table>
+                    <thead>
+                        <tr><th>तुलनाको आधार</th><th>सामन्ती व्यवस्था (Feudal System)</th><th>पुँजीवादी व्यवस्था (Capitalist System)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>१. उत्पादनको मुख्य आधार</strong></td>
+                            <td>जमिन (भूमि) र कृषि श्रम उत्पादनको मुख्य आधार हुन्छ <span class="ref">[१२]</span>।</td>
+                            <td>कलकारखाना, प्रविधि, मेसिन र पुँजी मुख्य आधार हुन्छ <span class="ref">[१२]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>२. मुख्य सामाजिक वर्ग</strong></td>
+                            <td>भूमिपति (सामन्त) र भूदास/किसान गरी दुई वर्ग हुन्छन्।</td>
+                            <td>पुँजीपति (मालिक) र औद्योगिक श्रमिक (मजदुर) वर्ग हुन्छन् <span class="ref">[१३]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>३. बजार र व्यापार</strong></td>
+                            <td>वस्तु विनिमय र स्थानीय स्तरको सीमित व्यापार हुन्छ।</td>
+                            <td>खुल्ला बजार प्रतिस्पर्धा र विश्वव्यापी व्यापार हुन्छ <span class="ref">[१२]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>४. प्रविधि र उत्पादन</strong></td>
+                            <td>परम्परागत हाते औजार र पशु श्रमको प्रयोग गरिन्छ।</td>
+                            <td>अत्याधुनिक मेसिन, इन्धन र स्वचालित प्रविधिको प्रयोग हुन्छ <span class="ref">[१२]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>५. शासन र विचार</strong></td>
+                            <td>परम्परागत, धार्मिक र निरङ्कुश सोच हाबी हुन्छ।</td>
+                            <td>व्यक्तिवाद, प्रजातान्त्रिक मूल्य र कानुनको शासन हुन्छ <span class="ref">[१३]</span>।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="qa-block color2">
+        <div class="q"><span class="qnum">प्रश्न २.</span> युरोपको औद्योगिक क्रान्ति र यसले मानव समाजमा पारेको प्रभाव उल्लेख गर्दै एक संवाद तयार गर्नुहोस्।</div>
+        <div class="a">
+            <div class="dialogue-box">
+                <p class="dialogue-title"><i class="fas fa-pen-fancy" style="color:#BF360C; margin-right:8px;"></i> शीर्षक: औद्योगिक क्रान्ति र यसका सामाजिक प्रभावहरू</p>
+                <p><strong>पात्रहरू:</strong> अनुप (सामाजिक अध्ययनको विद्यार्थी) र प्राञ्जल (इतिहासका शिक्षक)</p>
+
+                <p><span class="speaker">अनुप:</span> सप्रेम नमस्ते सर! आजको पाठमा १८औँ शताब्दीको बेलायती 'औद्योगिक क्रान्ति' को प्रसङ्ग आयो, यसले मानव समाजलाई कसरी बदल्यो होला?</p>
+                <p><span class="speaker">शिक्षक:</span> नमस्ते अनुप! औद्योगिक क्रान्तिले मानव इतिहासलाई नै नयाँ दिशा दियो। यसअघि मानिसहरू हात र पशु श्रमबाट उत्पादन गर्थे, तर औद्योगिक क्रान्तिपछि कोइला, बाफ र मेसिनको प्रयोग गरी कारखानाबाट ठुलो परिमाणमा सामान उत्पादन हुन थाल्यो।</p>
+                <p><span class="speaker">अनुप:</span> सर, यसले मानव समाजमा कस्ता सकारात्मक प्रभावहरू पार्‍यो त?</p>
+                <p><span class="speaker">शिक्षक:</span> एकदम राम्रो प्रश्न! यसले रेलमार्ग, पानीजहाज र टेलिफोन जस्ता यातायात र सञ्चारका साधन विकास गर्‍यो। सहरहरूको विकास भयो, मानिसहरूको जीवनस्तर उठ्यो, र महिला सशक्तीकरण तथा शिक्षाको क्षेत्रमा व्यापक प्रगति भयो।</p>
+                <p><span class="speaker">अनुप:</span> अनि यसका केही नकारात्मक असरहरू पनि परे कि सर?</p>
+                <p><span class="speaker">शिक्षक:</span> पक्कै पनि! औद्योगिक क्रान्तिले समाजलाई पुँजीपति र श्रमिक गरी दुई वर्गमा बाँड्यो। श्रमिकहरूको शोषण भयो, वातावरणीय प्रदूषण बढ्यो र मानिसहरूमा व्यक्तिवादी तथा उपभोगवादी संस्कृति हाबी भयो।</p>
+                <p><span class="speaker">अनुप:</span> धेरै धेरै धन्यवाद सर! औद्योगिक क्रान्तिका दुवै पक्ष प्रस्टसँग बुझेँ।</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="qa-block color3">
+        <div class="q"><span class="qnum">प्रश्न ३.</span> पुँजीवादी समाज र औद्योगिकीकरणबीचको सम्बन्ध प्रस्ट पार्नुहोस्।</div>
+        <div class="a">
+            <p><strong>उत्तर:</strong> पुँजीवादी समाज र औद्योगिकीकरण (Industrialization) बिच अन्योन्याश्रित र घनिष्ठ सम्बन्ध रहेको छ <span class="ref">[१२, १३]</span>। यी दुई अवधारणालाई देहायका बुँदाहरूबाट प्रस्ट पार्न सकिन्छ:</p>
+            <ol>
+                <li><strong>एकअर्काका परिपूरक:</strong> औद्योगिकीकरणले प्रविधि र मेसिनमार्फत ठुलो परिमाणमा उत्पादन सम्भव बनाउँछ भने पुँजीवादले सो उत्पादनका लागि आवश्यक वित्तीय पुँजी र खुल्ला बजार प्रदान गर्दछ <span class="ref">[१२]</span>।</li>
+                <li><strong>निजी सम्पत्तिको प्रवर्द्धन:</strong> औद्योगिकीकरणले नयाँ-नयाँ उद्योग र व्यवसाय स्थापना गर्छ, जसले पुँजीवादी अवधारणा अनुसार निजी सम्पत्ति र मुनाफा आर्जनको बाटो खोल्छ <span class="ref">[१२]</span>।</li>
+                <li><strong>श्रमको बजारीकरण:</strong> औद्योगिकीकरणले कृषिमा आधारित मानिसहरूलाई कारखानाको श्रमिकमा रूपान्तरण गर्छ, जुन पुँजीवादी प्रणालीको मुख्य आर्थिक आधार हो <span class="ref">[१२, १३]</span>।</li>
+                <li><strong>सहरीकरण र बजार विस्तार:</strong> औद्योगिकीकरणले औद्योगिक नगरहरूको निर्माण गर्छ र पुँजीवादले ती सहरहरूमा वस्तु र सेवाको विश्वव्यापी बजार फैलाउँछ <span class="ref">[१२]</span>।</li>
+            </ol>
+            <p>अतः, औद्योगिकीकरण पुँजीवादको 'भौतिक आधार' हो भने पुँजीवाद औद्योगिकीकरणको 'आर्थिक तथा सञ्चालक इन्जिन' हो <span class="ref">[१२]</span>।</p>
+        </div>
+    </div>
+
+    <div class="qa-block color4">
+        <div class="q"><span class="qnum">प्रश्न ४.</span> पुँजीवादी समाजमा निजी सम्पत्तिको महत्त्व बढी हुनुका कारणहरू उल्लेख गर्नुहोस्।</div>
+        <div class="a">
+            <p><strong>उत्तर:</strong> पुँजीवादी समाजमा निजी सम्पत्ति (Private Property) लाई सफलता र अधिकारको मेरुदण्ड मानिन्छ। यसको महत्त्व बढी हुनुका मुख्य कारणहरू निम्नलिखित छन् <span class="ref">[१२, १३]</span>:</p>
+            <ol>
+                <li><strong>उत्पादनको मुख्य स्रोत:</strong> पुँजीवादी व्यवस्थामा कलकारखाना, जमिन, प्रविधि र पुँजीमा निजी स्वामित्व रहेकाले व्यक्तिले आफ्नो सम्पत्ति प्रयोग गरी थप आम्दानी गर्न पाउँछ <span class="ref">[१२]</span>।</li>
+                <li><strong>प्रतिस्पर्धा र नाफाको प्रेरणा:</strong> निजी सम्पत्तिको अधिकारले व्यक्तिलाई नयाँ आविष्कार गर्न, लगानी बढाउन र खुल्ला बजारमा प्रतिस्पर्धा गरी मुनाफा कमाउन प्रेरित गर्दछ <span class="ref">[१२]</span>।</li>
+                <li><strong>व्यक्तिगत स्वतन्त्रता र अधिकार:</strong> पुँजीवादी समाजले सामूहिक अधिकारभन्दा व्यक्तिगत स्वतन्त्रता र निजी सम्पत्तिको कानुनी सुरक्षालाई जोड दिन्छ <span class="ref">[१३]</span>।</li>
+                <li><strong>सामाजिक प्रतिष्ठा र वर्ग:</strong> पुँजीवादी समाजमा व्यक्तिको सामाजिक स्थिति, शक्ति र पहुँच उसको निजी सम्पत्तिको आकारले निर्धारण गर्दछ <span class="ref">[१३]</span>।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-block color5">
+        <div class="q"><span class="qnum">प्रश्न ५.</span> औद्योगिक समाज र पुँजीवादी समाज एकअर्कामा अन्तरसम्बन्धित छन्। यस भनाइलाई पुष्टि गर्नुहोस्।</div>
+        <div class="a">
+            <p><strong>उत्तर:</strong> "औद्योगिक समाज र पुँजीवादी समाज एकअर्कामा अन्तरसम्बन्धित छन्" भन्ने भनाइ पूर्ण रूपमा सत्य र ऐतिहासिक तथ्यमा आधारित छ <span class="ref">[१२, १३]</span>। यसलाई देहायका तर्कहरूद्वारा पुष्टि गर्न सकिन्छ:</p>
+            <ol>
+                <li><strong>ऐतिहासिक सह-उद्विकास (Co-evolution):</strong> १८औँ शताब्दीमा युरोपमा औद्योगिक क्रान्तिको थालनीसँगै मेसिनरी उत्पादन सुरु भयो र त्यसै उत्पादन प्रणालीलाई सञ्चालन गर्न पुँजीवादी आर्थिक व्यवस्थाको उदय भयो <span class="ref">[१२]</span>।</li>
+                <li><strong>उत्पादन प्रणाली र स्वामित्वको सम्बन्ध:</strong> औद्योगिक समाजले उत्पादनको प्रविधि (मेसिन, इन्धन, कारखाना) तय गर्छ भने पुँजीवादी समाजले त्यसको स्वामित्व (निजी पुँजीपति) र लाभांशको वितरण तय गर्छ <span class="ref">[१२]</span>।</li>
+                <li><strong>श्रम र वर्ग संरचना:</strong> औद्योगिक समाजले लाखौँ श्रमिकहरूलाई एउटै कारखानामा ल्याएर काम गराउँछ भने पुँजीवादी व्यवस्थाले तिनलाई 'श्रमको ज्याला' दिएर पुँजीपति र मजदुर वर्गको सामाजिक सम्बन्ध कायम गर्छ <span class="ref">[१३]</span>।</li>
+                <li><strong>सहरीकरण र बजार व्यवस्था:</strong> औद्योगिक समाजले औद्योगिक सहर र प्रविधि निर्माण गर्छ भने पुँजीवादले ती सहरहरूमा उपभोगवादी संस्कृति र बजारीकरणलाई निरन्तरता दिन्छ <span class="ref">[१२, १३]</span>।</li>
+            </ol>
+            <p><strong>निष्कर्ष:</strong> औद्योगिक समाज 'उत्पादनको भौतिक स्वरूप' हो भने पुँजीवादी समाज 'उत्पादनको सामाजिक-आर्थिक सम्बन्ध' हो। त्यसैले यी दुवै एकअर्काका परिपूरक र अविभाज्य छन् <span class="ref">[१२, १३]</span>।</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section-head" id="section5">
+        <i class="fas fa-bullseye"></i>
+        ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+        <span class="mark-badge pink">High-Yield</span>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त प्रश्नोत्तरहरू (अङ्क भार: १)</div>
+
+    <div class="qa-block color6">
+        <div class="q"><span class="qnum">१.</span> पुँजीवादी अर्थव्यवस्था भनेको के हो?</div>
+        <div class="a"><strong>उत्तर:</strong> उत्पादनका साधनहरूमा निजी स्वामित्व रहने, खुल्ला बजार प्रतिस्पर्धा हुने र नाफा आर्जन मुख्य उद्देश्य हुने आर्थिक प्रणाली नै <strong>पुँजीवादी अर्थव्यवस्था</strong> हो <span class="ref">[१२]</span>।</div>
+    </div>
+
+    <div class="qa-block color7">
+        <div class="q"><span class="qnum">२.</span> औद्योगिक क्रान्तिको सुरुवात कहाँबाट र कहिले भयो?</div>
+        <div class="a"><strong>उत्तर:</strong> औद्योगिक क्रान्तिको सुरुवात <strong>१८औँ शताब्दीको उत्तरार्धमा बेलायतबाट</strong> भएको थियो <span class="ref">[१२]</span>।</div>
+    </div>
+
+    <div class="qa-block color8">
+        <div class="q"><span class="qnum">३.</span> 'उत्पादनका साधनहरू' भन्नाले के बुझिन्छ?</div>
+        <div class="a"><strong>उत्तर:</strong> वस्तु तथा सेवा उत्पादन गर्न आवश्यक पर्ने भूभाग, कच्चा पदार्थ, मेसिन, औजार, प्रविधि र पुँजी नै <strong>उत्पादनका साधनहरू</strong> हुन् <span class="ref">[१२]</span>।</div>
+    </div>
+
+    <div class="qa-block color1">
+        <div class="q"><span class="qnum">४.</span> औद्योगिक क्रान्तिले सामाजिक वर्ग संरचनामा के परिवर्तन ल्यायो?</div>
+        <div class="a"><strong>उत्तर:</strong> औद्योगिक क्रान्तिले समाजलाई <strong>पुँजीपति (मालिक) र श्रमिक (मजदुर)</strong> गरी दुई मुख्य आर्थिक वर्गमा विभाजित गर्‍यो <span class="ref">[१३]</span>।</div>
+    </div>
+
+    <div class="qa-block color2">
+        <div class="q"><span class="qnum">५.</span> उपभोगवाद भन्नाले के बुझिन्छ?</div>
+        <div class="a"><strong>उत्तर:</strong> आवश्यकताभन्दा बढी सेवा र भौतिक वस्तुहरू खरिद तथा प्रयोग गर्ने आधुनिक समाजको जीवनशैली र प्रवृत्तिलाई <strong>उपभोगवाद</strong> भनिन्छ <span class="ref">[१३]</span>।</div>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त प्रश्नोत्तरहरू (अङ्क भार: ५)</div>
+
+    <div class="qa-block color3">
+        <div class="q"><span class="qnum">१.</span> औद्योगिक क्रान्तिले मानव समाजमा पारेका सकारात्मक र नकारात्मक प्रभावहरूको चर्चा गर्नुहोस्।</div>
+        <div class="a">
+            <p><strong>पृष्ठभूमि:</strong> १८औँ शताब्दीको बेलायती औद्योगिक क्रान्तिले मानव सभ्यतालाई कृषि युगबाट औद्योगिक युगमा प्रवेश गरायो। यसका दुवै पक्षहरू निम्न छन् <span class="ref">[१२, १३]</span>:</p>
+
+            <p><strong>सकारात्मक प्रभावहरू:</strong></p>
+            <ul>
+                <li><strong>उत्पादनमा वृद्धि:</strong> मेसिन र प्रविधिको प्रयोगले वस्तु उत्पादनमा तीव्र वृद्धि भई मानव जीवन सहज भयो <span class="ref">[१२]</span>।</li>
+                <li><strong>यातायात र सञ्चार विकास:</strong> रेलमार्ग, पानीजहाज, टेलिफोन र पछि इन्टरनेटले सञ्चारमा युगान्तकारी क्रान्ति ल्याए <span class="ref">[१२]</span>।</li>
+                <li><strong>रोजगारी र आर्थिक वृद्धि:</strong> उद्योग र सेवा क्षेत्रको विस्तारले नयाँ रोजगारी सिर्जना गर्‍यो <span class="ref">[१२]</span>।</li>
+                <li><strong>महिला सशक्तीकरण र शिक्षा:</strong> महिला, साक्षरता र स्वास्थ्य सेवामा व्यापक सुधार भयो <span class="ref">[१३]</span>।</li>
+            </ul>
+
+            <p><strong>नकारात्मक प्रभावहरू:</strong></p>
+            <ul>
+                <li><strong>वर्गीय असमानता:</strong> पुँजीपति र श्रमिकबिच आर्थिक खाडल र शोषण बढ्यो <span class="ref">[१३]</span>।</li>
+                <li><strong>वातावरणीय प्रदूषण:</strong> कलकारखाना र जीवाश्म इन्धनको प्रयोगले वातावरणीय सन्तुलन बिग्र्यो <span class="ref">[१२]</span>।</li>
+                <li><strong>व्यक्तिवाद र उपभोगवाद:</strong> सामूहिकताको सट्टा व्यक्तिवादी र उपभोगवादी संस्कृति हाबी भयो <span class="ref">[१३]</span>।</li>
+                <li><strong>परम्परागत सीपको ह्रास:</strong> कुटिर उद्योग र संयुक्त पारिवारिक सामीप्यता घट्दै गयो <span class="ref">[१३]</span>।</li>
+            </ul>
+
+            <p><strong>निष्कर्ष:</strong> अतः औद्योगिक क्रान्ति एक 'दोधारे तरबार' सावित भयो — यसले प्रगति र समृद्धि ल्याउँदै गर्दा सामाजिक असमानता र वातावरणीय सङ्कट पनि निम्त्यायो <span class="ref">[१२, १३]</span>।</p>
+        </div>
+    </div>
+
+    <div class="qa-block color4">
+        <div class="q"><span class="qnum">२.</span> पुँजीवादी समाजमा निजी सम्पत्तिको महत्त्व र यसका प्रभावहरू व्याख्या गर्नुहोस्।</div>
+        <div class="a">
+            <p><strong>पृष्ठभूमि:</strong> पुँजीवादी व्यवस्थामा निजी सम्पत्ति भनेको व्यक्तिको आर्थिक स्वतन्त्रता र सामाजिक प्रतिष्ठाको मुख्य आधार हो <span class="ref">[१२, १३]</span>।</p>
+
+            <p><strong>निजी सम्पत्तिको महत्त्व:</strong></p>
+            <ul>
+                <li><strong>लगानी र उत्पादनको स्रोत:</strong> व्यक्तिले आफ्नो पुँजी र सम्पत्ति प्रयोग गरी उद्योग, व्यवसाय र लगानी विस्तार गर्न पाउँछ <span class="ref">[१२]</span>।</li>
+                <li><strong>प्रतिस्पर्धा र नवप्रवर्तन:</strong> नाफा र निजी सम्पत्तिको सुरक्षाले व्यक्तिलाई नयाँ आविष्कार र प्रतिस्पर्धामा प्रेरित गर्छ <span class="ref">[१२]</span>।</li>
+                <li><strong>व्यक्तिगत स्वतन्त्रता:</strong> पुँजीवादले व्यक्तिगत स्वतन्त्रता र कानुनी सुरक्षालाई प्राथमिकता दिन्छ <span class="ref">[१३]</span>।</li>
+                <li><strong>सामाजिक प्रतिष्ठा:</strong> सम्पत्तिको आकारले व्यक्तिको सामाजिक स्थिति र शक्ति निर्धारण गर्छ <span class="ref">[१३]</span>।</li>
+            </ul>
+
+            <p><strong>यसका प्रभावहरू:</strong></p>
+            <ul>
+                <li>सकारात्मक रूपमा यसले आर्थिक वृद्धि, नवप्रवर्तन र प्रतिस्पर्धात्मक क्षमता बढाउँछ।</li>
+                <li>नकारात्मक रूपमा यसले आर्थिक असमानता, वर्गीय खाडल र सीमित वर्गमा सम्पत्ति केन्द्रित हुने प्रवृत्ति निम्त्याउँछ <span class="ref">[१३]</span>।</li>
+            </ul>
+
+            <p><strong>निष्कर्ष:</strong> निजी सम्पत्ति पुँजीवादको मेरुदण्ड भए पनि यसको सन्तुलित वितरण र सामाजिक उत्तरदायित्वबिना दिगो समृद्धि सम्भव छैन।</p>
+        </div>
+    </div>
+
+    <div class="qa-block color5">
+        <div class="q"><span class="qnum">३.</span> महिला सशक्तीकरणमा औद्योगिक समाजको योगदान र सीमाहरूको विश्लेषण गर्नुहोस्।</div>
+        <div class="a">
+            <p><strong>पृष्ठभूमि:</strong> औद्योगिक समाजको विकासले महिलाहरूको सामाजिक, आर्थिक र राजनीतिक जीवनमा महत्त्वपूर्ण परिवर्तन ल्यायो <span class="ref">[१३]</span>।</p>
+
+            <p><strong>योगदानहरू:</strong></p>
+            <ul>
+                <li><strong>घरायसी दायराबाट मुक्ति:</strong> महिलाहरू कलकारखाना, कार्यालय र व्यापारमा सहभागी हुन थाले <span class="ref">[१३]</span>।</li>
+                <li><strong>आर्थिक आत्मनिर्भरता:</strong> ज्याला र आर्थिक उपार्जनमा पहुँच बढेकाले महिला आर्थिक रूपमा स्वतन्त्र बने <span class="ref">[१३]</span>।</li>
+                <li><strong>शिक्षा र स्वास्थ्यमा पहुँच:</strong> शिक्षित र कुशल जनशक्तिको माग बढेकाले महिला शिक्षा र स्वास्थ्यमा सुधार भयो <span class="ref">[१३]</span>।</li>
+                <li><strong>निर्णय प्रक्रियामा सहभागिता:</strong> आर्थिक योगदानसँगै परिवार र समाजको निर्णयमा महिलाको भूमिका बढ्यो <span class="ref">[१३]</span>।</li>
+            </ul>
+
+            <p><strong>सीमाहरू:</strong></p>
+            <ul>
+                <li>औद्योगिक कारखानाहरूमा महिला श्रमिकलाई पुरुषभन्दा कम ज्याला र असुरक्षित कार्यवातावरण दिइयो।</li>
+                <li>माथिल्लो व्यवस्थापन र नेतृत्व तहमा महिलाको सहभागिता न्यून रह्यो।</li>
+                <li>घरायसी जिम्मेवारी र कार्यस्थलको दोहोरो भारले महिलामाथि थप तनाव सिर्जना गर्‍यो।</li>
+            </ul>
+
+            <p><strong>निष्कर्ष:</strong> औद्योगिक समाजले महिला सशक्तीकरणको ढोका खोले पनि वास्तविक समानता र न्यायका लागि थप कानुनी र सामाजिक सुधार आवश्यक छ।</p>
+        </div>
+    </div>
+
+    <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तरात्मक प्रश्न (अङ्क भार: ८)</div>
+
+    <div class="qa-block color6" style="border-left-color:#BF360C;">
+        <div class="q"><span class="qnum">प्रश्न:</span> "औद्योगिक क्रान्ति र पुँजीवादले मानव सभ्यतालाई नयाँ युगमा प्रवेश गरायो तर यसले निम्त्याएका सामाजिक-आर्थिक असमानता र वातावरणीय सङ्कट आज पनि चुनौती बनेका छन्।" यस भनाइको विवेचना गर्नुहोस्।</div>
+        <div class="a">
+
+            <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> १८औँ शताब्दीको उत्तरार्धमा बेलायतबाट सुरु भएको औद्योगिक क्रान्ति र त्यससँगै विकसित पुँजीवादी व्यवस्थाले मानव इतिहासको मोड नै बदलिदियो। हाते औजार र पशु श्रमको सट्टा मेसिन, बाफ, कोइला र कारखाना प्रणालीको प्रयोगले उत्पादनमा अभूतपूर्व वृद्धि ल्यायो <span class="ref">[१२]</span>। यसले कृषि युगबाट औद्योगिक युगमा रूपान्तरण गर्दै मानव जीवनलाई सहज, गतिशील र समृद्ध बनायो। तर यही क्रान्तिले पुँजीपति र श्रमिकबिचको वर्गीय खाडल, श्रम शोषण, उपभोगवाद र वातावरणीय विनाश जस्ता गम्भीर समस्या पनि निम्त्यायो <span class="ref">[१३]</span>। आज २१औँ शताब्दीमा पनि यी समस्या विश्वव्यापी रूपमा चुनौती बनेका छन्।</p>
+
+            <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+
+            <p><strong>क) औद्योगिक क्रान्ति र पुँजीवादका सकारात्मक उपलब्धिहरू:</strong></p>
+            <ul>
+                <li><strong>उत्पादनमा क्रान्ति:</strong> मेसिन र प्रविधिको प्रयोगले वस्तु उत्पादन बहुगुणित भई मानव जीवनस्तर उकासियो <span class="ref">[१२]</span>।</li>
+                <li><strong>यातायात र सञ्चार:</strong> रेलमार्ग, पानीजहाज, टेलिफोन र इन्टरनेटले विश्वलाई सङ्कुचित गर्‍यो <span class="ref">[१२, १३]</span>।</li>
+                <li><strong>सहरीकरण र शिक्षा:</strong> सहरहरूको विकास, साक्षरता वृद्धि र महिला सशक्तीकरणमा प्रगति भयो <span class="ref">[१३]</span>।</li>
+                <li><strong>वैज्ञानिक सोच:</strong> तर्क, प्रमाण र प्रविधिमा आधारित सोचाइले समाजलाई अगाडि बढायो।</li>
+            </ul>
+
+            <p><strong>ख) निम्त्याएका सामाजिक-आर्थिक असमानता र सङ्कटहरू:</strong></p>
+            <ul>
+                <li><strong>वर्गीय खाडल:</strong> पुँजीपति (मालिक) र श्रमिक (मजदुर) बिचको आर्थिक असमानता गहिरिँदै गयो <span class="ref">[१३]</span>।</li>
+                <li><strong>श्रम शोषण:</strong> श्रमिकहरूलाई कम ज्याला, लामो कार्यघण्टा र असुरक्षित वातावरणमा काम गराइयो।</li>
+                <li><strong>उपभोगवाद र व्यक्तिवाद:</strong> सामूहिक र पारिवारिक मूल्यमान्यताको ह्रास भई भौतिक उपभोग हाबी भयो <span class="ref">[१३]</span>।</li>
+                <li><strong>वातावरणीय सङ्कट:</strong> कलकारखाना, जीवाश्म इन्धन र औद्योगिक फोहोरले वायु, जल र भूमि प्रदूषण गरी जलवायु परिवर्तन निम्त्यायो <span class="ref">[१२]</span>।</li>
+                <li><strong>परम्परागत सीपको ह्रास:</strong> कुटिर उद्योग, हस्तकला र संयुक्त पारिवारिक सामीप्यता घट्दै गयो <span class="ref">[१३]</span>।</li>
+            </ul>
+
+            <p><strong>ग) आजका चुनौतीहरू:</strong> विश्वका धेरै देशमा आय असमानता, श्रमिक शोषण, बालश्रम, जलवायु परिवर्तन, वायु प्रदूषण र प्राकृतिक स्रोतको अत्यधिक दोहन आज पनि गम्भीर समस्या बनेका छन्। नेपालजस्तो विकासोन्मुख देशमा पनि औद्योगिक विकासको नाममा कृषि भूमि विनाश, वातावरणीय प्रदूषण र स्थानीय समुदायको विस्थापन देखिन्छ।</p>
+
+            <p><strong>घ) समाधानको बाटो:</strong> दिगो औद्योगिक विकास, हरित प्रविधि, न्यूनतम ज्याला र सामाजिक सुरक्षाको कानुनी व्यवस्था, श्रमिक अधिकारको संरक्षण, र परम्परागत सीपको संरक्षणबाट मात्र यी चुनौतीको सामना गर्न सकिन्छ।</p>
+
+            <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपालको सन्दर्भमा काठमाडौँ उपत्यकाका इट्टा उद्योगहरू यसका उदाहरण हुन् — यसले हजारौँ श्रमिकलाई रोजगारी दिए पनि उनीहरूको ज्याला न्यून, कार्यवातावरण असुरक्षित र वरपरको वायु प्रदूषण गम्भीर छ। यसैगरी विराटनगर, बुटवल र हेटौंडाका औद्योगिक कोरिडोरले आर्थिक वृद्धि गरे पनि नदी प्रदूषण र कृषि भूमिको ह्रास निम्त्याएका छन्। यसले देखाउँछ कि औद्योगिक विकास र वातावरणीय संरक्षणबिच सन्तुलन आज पनि मुख्य चुनौती हो।</p>
+
+            <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> अन्त्यमा, औद्योगिक क्रान्ति र पुँजीवादले मानव सभ्यतालाई निस्सन्देह नयाँ युगमा प्रवेश गराए र भौतिक समृद्धि हासिल गरे। तर यसका साथै आएका सामाजिक-आर्थिक असमानता, श्रम शोषण र वातावरणीय सङ्कटलाई पनि बेवास्ता गर्न मिल्दैन। दिगो, समावेशी र मानवमुखी औद्योगिक विकासको मार्ग अपनाएर मात्र यी चुनौतीको समाधान गर्दै सबैका लागि समृद्ध र शान्त विश्व निर्माण गर्न सकिन्छ <span class="ref">[१२, १३]</span>।</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="tip-box" style="background:#BF360C; margin-top:20px;">
+        <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+        <strong>अन्तिम सल्लाह:</strong> औद्योगिक क्रान्ति र पुँजीवादका दुवै पक्ष — सकारात्मक उपलब्धि र नकारात्मक प्रभाव — लाई सन्तुलित रूपमा बुझ्नुहोस्। परीक्षामा तालिका, संवाद, र वर्गीकृत बुँदाहरू प्रयोग गर्दा राम्रो अङ्क प्राप्त गर्न सकिन्छ। स्मरण राख्नुहोस् — हरेक ऐतिहासिक प्रक्रियाका दुवै पाटा हुन्छन्, र विवेकशील विद्यार्थीले दुवैलाई समान महत्त्व दिन्छ।
+    </div>
+
+    <div class="footer-copy">
+        <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+        <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+        <span><i class="fas fa-copyright"></i> कक्षा ११ – एकाइ ४, पाठ ४</span>
+        <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+    </div>
+
+</div>
+
+<button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+    (function() {
+        const btn = document.getElementById('scrollUpBtn');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+        btn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    })();
+</script>
+
+</body>
+</html>
