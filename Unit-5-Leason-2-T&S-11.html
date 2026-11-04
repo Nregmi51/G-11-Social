@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>कक्षा ११ सामाजिक — एकाइ ५ पाठ २: मानव र वातावरण</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===================== BASE ===================== */
+*,*::before,*::after{box-sizing:border-box;}
+:root{
+  --ink:#1a2e2a;
+  --soft:#4a5d58;
+  --paper:#ffffff;
+  --line:#dcece6;
+  --forest:#14532d;
+  --forest-mid:#15803d;
+  --leaf:#16a34a;
+  --earth:#92400e;
+  --earth-soft:#fef3c7;
+  --sky:#0369a1;
+  --sky-soft:#e0f2fe;
+  --rose:#be123c;
+  --shadow:0 10px 30px rgba(20,83,45,.10);
+  --radius:22px;
+}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Mukta','Noto Sans Devanagari',system-ui,sans-serif;
+  font-size:21px;
+  line-height:1.88;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 620px at 6% -10%, #dcfce7 0%, transparent 58%),
+    radial-gradient(1000px 540px at 102% 0%, #fef3c7 0%, transparent 55%),
+    linear-gradient(180deg,#f0fdf4,#fafaf9 45%,#fffbeb 100%);
+  background-attachment:fixed;
+  min-height:100vh;
+  -webkit-text-size-adjust:100%;
+}
+[id]{scroll-margin-top:100px;}
+strong,b{font-weight:800;}
+em{font-style:italic;}
+
+/* ===================== TOP BAR ===================== */
+.topbar{
+  position:sticky; top:0; z-index:60;
+  display:flex; align-items:center; gap:14px;
+  padding:12px 18px;
+  background:linear-gradient(120deg,#14532d 0%,#15803d 45%,#b45309 100%);
+  color:#fff;
+  box-shadow:0 6px 24px rgba(20,83,45,.32);
+}
+.brand{display:flex; flex-direction:column; line-height:1.2; flex:1 1 auto; min-width:0;}
+.brand h1{
+  margin:0;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:22px; font-weight:800; letter-spacing:.2px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.brand-sub{font-size:14px; font-weight:600; opacity:.92;}
+.hamburger{
+  display:none; align-items:center; justify-content:center;
+  width:46px; height:46px; flex:0 0 auto;
+  border-radius:13px; border:1px solid rgba(255,255,255,.38);
+  background:rgba(255,255,255,.16); color:#fff;
+  font-size:22px; cursor:pointer; transition:.2s;
+}
+.hamburger:hover{background:rgba(255,255,255,.28);}
+.top-link{
+  flex:0 0 auto; text-decoration:none; color:#fff;
+  font-size:16px; font-weight:700;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.38);
+  padding:8px 14px; border-radius:999px; transition:.2s;
+}
+.top-link:hover{background:rgba(255,255,255,.32);}
+
+/* ===================== LAYOUT ===================== */
+.layout{
+  display:flex; align-items:flex-start; gap:26px;
+  max-width:1440px; margin:0 auto;
+  padding:26px 20px 70px;
+}
+.content{flex:1 1 auto; min-width:0;}
+
+/* ===================== SIDE NAV ===================== */
+.sidenav{
+  width:312px; flex:0 0 312px;
+  position:sticky; top:88px;
+  max-height:calc(100vh - 110px);
+  overflow-y:auto;
+  background:rgba(255,255,255,.95);
+  border:1px solid #d1fae5;
+  border-radius:var(--radius);
+  padding:18px 14px 22px;
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(10px);
+}
+.sidenav-head{
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:18px; font-weight:800; color:var(--forest);
+  display:flex; align-items:center; gap:8px;
+  padding-bottom:12px; margin-bottom:8px;
+  border-bottom:3px solid #fde68a;
+}
+.nav-main{
+  display:block; text-decoration:none;
+  font-size:18px; font-weight:800; line-height:1.5;
+  color:var(--ink);
+  padding:11px 13px; border-radius:12px;
+  border-left:5px solid transparent; transition:.22s;
+}
+.nav-main:hover,.nav-main.active{
+  background:linear-gradient(90deg,#dcfce7,#fef3c7);
+  border-left-color:var(--leaf);
+  color:var(--forest);
+  transform:translateX(3px);
+}
+.nav-sub{display:flex; flex-wrap:wrap; gap:6px; margin:2px 0 12px 14px;}
+.nav-sub a{
+  text-decoration:none; font-size:14px; font-weight:700;
+  color:var(--soft); background:#f4faf7;
+  border:1px solid #dcece6; padding:4px 11px;
+  border-radius:999px; transition:.2s;
+}
+.nav-sub a:hover{background:#dcfce7; color:var(--forest); border-color:#a7f3d0;}
+.nav-sub.amber a:hover{background:#fef3c7; color:var(--earth); border-color:#fde68a;}
+.nav-sub.sky a:hover{background:#e0f2fe; color:var(--sky); border-color:#bae6fd;}
+.nav-note{
+  margin-top:18px; padding:13px 15px;
+  font-size:15px; font-weight:700; line-height:1.65;
+  color:#14532d;
+  background:linear-gradient(135deg,#dcfce7,#fef3c7);
+  border-radius:14px;
+}
+.overlay{
+  position:fixed; inset:0; z-index:70;
+  background:rgba(15,23,42,.48);
+  opacity:0; visibility:hidden; transition:.3s;
+}
+.overlay.show{opacity:1; visibility:visible;}
+
+/* ===================== CARD ===================== */
+.card{
+  --acc:#15803d;
+  --acc-soft:#dcfce7;
+  background:var(--paper);
+  border:1px solid #eef3f0;
+  border-top:9px solid var(--acc);
+  border-radius:var(--radius);
+  padding:26px 26px 32px;
+  margin-bottom:30px;
+  box-shadow:var(--shadow);
+}
+.card.intro{--acc:#14532d; --acc-soft:#dcfce7;}
+.card.c1{--acc:#15803d; --acc-soft:#dcfce7;}
+.card.c2{--acc:#0369a1; --acc-soft:#e0f2fe;}
+.card.c3{--acc:#92400e; --acc-soft:#fef3c7;}
+.card.c4{--acc:#be123c; --acc-soft:#ffe4e6;}
+.card.c5{--acc:#7c3aed; --acc-soft:#f3e8ff;}
+
+.card-head{display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:6px;}
+.pill{
+  font-family:'Poppins',sans-serif;
+  font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+  color:#fff; background:var(--acc);
+  padding:6px 15px; border-radius:999px;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+h2{
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:27px; font-weight:800; line-height:1.4;
+  margin:0; color:var(--ink);
+}
+.lead{
+  margin:10px 0 0; font-size:20px; font-weight:600; color:var(--soft);
+  line-height:1.8;
+}
+
+/* ===================== INFO BANNER ===================== */
+.info-banner{
+  background:linear-gradient(135deg,#dcfce7,#fef3c7);
+  border:1.5px dashed #86efac;
+  border-radius:16px;
+  padding:16px 20px;
+  margin:14px 0 4px;
+  font-size:19px; font-weight:600; color:#14532d;
+  line-height:1.85;
+}
+.info-banner strong{color:var(--forest-mid);}
+
+/* ===================== SECTION TITLES ===================== */
+.sect{
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:21px; font-weight:800; line-height:1.55;
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:10px;
+  justify-content:space-between;
+  margin:34px 0 16px;
+  padding:13px 18px;
+  background:linear-gradient(90deg,var(--acc-soft),#ffffff);
+  border:1px solid var(--line);
+  border-left:7px solid var(--acc);
+  border-radius:0 14px 14px 0;
+  color:var(--ink);
+}
+.sect:first-of-type{margin-top:22px;}
+.marks{
+  flex:0 0 auto; font-size:14px; font-weight:800;
+  color:#fff; background:var(--acc);
+  padding:3px 13px; border-radius:999px; white-space:nowrap;
+}
+
+/* ===================== GLOSSARY ===================== */
+.glossary{display:flex; flex-direction:column; gap:12px; margin-top:6px;}
+.gloss-item{
+  display:grid; grid-template-columns:52px 1fr; gap:14px;
+  align-items:start;
+  background:#f6fdf8;
+  border:1px solid #dcfce7;
+  border-radius:15px;
+  padding:14px 16px;
+  transition:.2s;
+}
+.gloss-item:hover{background:#ecfdf5; border-color:#86efac; transform:translateX(3px);}
+.gloss-no{
+  display:flex; align-items:center; justify-content:center;
+  width:52px; height:52px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#15803d,#16a34a);
+  color:#fff; font-family:'Poppins',sans-serif;
+  font-size:19px; font-weight:800;
+  box-shadow:0 5px 14px rgba(21,128,61,.3);
+}
+.gloss-term{
+  display:block; font-weight:800; font-size:20px;
+  color:var(--forest); margin-bottom:3px;
+}
+.gloss-def{
+  margin:0; font-size:20px; font-weight:600; color:#334155;
+  line-height:1.78;
+}
+
+/* ===================== STUDY NOTES ===================== */
+.note-block{
+  background:#f6fdf8;
+  border:1px solid #dcfce7;
+  border-left:6px solid var(--leaf);
+  border-radius:0 15px 15px 0;
+  padding:16px 20px;
+  margin:16px 0;
+}
+.note-block h4{
+  margin:0 0 8px;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:20px; font-weight:800; color:var(--forest);
+  line-height:1.5;
+}
+.note-block p{margin:0 0 8px; font-size:20px; line-height:1.85; color:#334155;}
+.note-block p:last-child{margin-bottom:0;}
+
+/* ===================== 4 STAGE STEPS ===================== */
+.stages{display:flex; flex-direction:column; gap:12px; margin-top:12px;}
+.stage{
+  display:grid; grid-template-columns:56px 1fr; gap:16px;
+  align-items:start;
+  background:#ffffff;
+  border:1px solid #e2ece7;
+  border-radius:15px;
+  padding:14px 18px;
+  transition:.2s;
+}
+.stage:hover{background:#f6fdf8; border-color:#a7f3d0;}
+.stage-no{
+  display:flex; align-items:center; justify-content:center;
+  width:56px; height:56px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#0f766e,#22c55e);
+  color:#fff; font-family:'Poppins',sans-serif;
+  font-size:22px; font-weight:800;
+  box-shadow:0 5px 14px rgba(15,118,110,.3);
+}
+.stage-body{padding-top:2px;}
+.stage-title{
+  display:block; font-size:20px; font-weight:800;
+  color:var(--forest); margin-bottom:4px;
+}
+.stage-desc{
+  margin:0; font-size:19px; font-weight:600;
+  color:#334155; line-height:1.75;
+}
+
+/* ===================== FLOW CHART ===================== */
+.flow-chart{
+  background:linear-gradient(135deg,#dcfce7,#e0f2fe);
+  border:1.5px dashed #86efac;
+  border-radius:18px;
+  padding:22px 20px;
+  margin:18px 0;
+}
+.flow-title{
+  text-align:center;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:19px; font-weight:800; color:var(--forest);
+  margin-bottom:18px;
+}
+.flow-start{
+  background:#fff;
+  border:2px solid var(--forest-mid);
+  border-radius:14px;
+  padding:14px 18px;
+  text-align:center;
+  font-weight:800; font-size:19px;
+  color:var(--forest);
+  margin-bottom:8px;
+  box-shadow:0 4px 12px rgba(21,128,61,.15);
+}
+.flow-arrow{
+  text-align:center; font-size:28px; font-weight:800;
+  color:var(--leaf); line-height:1; margin:4px 0;
+}
+.flow-mid{
+  background:#fff;
+  border:2px solid var(--sky);
+  border-radius:14px;
+  padding:12px 18px;
+  text-align:center;
+  font-weight:800; font-size:18px;
+  color:var(--sky);
+  margin:0 auto;
+  max-width:340px;
+  box-shadow:0 4px 12px rgba(3,105,161,.15);
+}
+.flow-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:4px;
+}
+.flow-branch{
+  background:#fff;
+  border-radius:13px;
+  padding:14px 16px;
+  text-align:center;
+  font-size:17px; font-weight:700; line-height:1.6;
+}
+.flow-branch.pos{border:2px solid var(--leaf); color:#15803d;}
+.flow-branch.neg{border:2px solid var(--rose); color:#be123c;}
+.flow-branch .h{
+  display:block; font-family:'Poppins',sans-serif;
+  font-size:13px; font-weight:800; letter-spacing:.06em;
+  text-transform:uppercase; margin-bottom:4px;
+  opacity:.85;
+}
+.flow-branch.pos .h{color:#15803d;}
+.flow-branch.neg .h{color:#be123c;}
+
+/* ===================== TABLES ===================== */
+.table-wrap{
+  overflow-x:auto; -webkit-overflow-scrolling:touch;
+  border:1px solid var(--line); border-radius:15px;
+  margin:16px 0; box-shadow:0 4px 16px rgba(15,23,42,.05);
+}
+table{width:100%; border-collapse:collapse; min-width:600px; font-size:19px;}
+th{
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:17px; font-weight:800; text-align:left;
+  color:#fff; background:var(--acc);
+  padding:13px 14px; letter-spacing:.02em;
+  line-height:1.5;
+}
+td{padding:12px 14px; border-top:1px solid #eef1f7; font-weight:600; vertical-align:top;}
+tbody tr:nth-child(even){background:#f6fdf8;}
+tbody tr:hover{background:#ecfdf5;}
+
+/* ===================== ACTIVITY / DIALOGUE ===================== */
+.article-box{
+  background:linear-gradient(135deg,#fffbeb,#fef9e7);
+  border:1.5px solid #fcd34d;
+  border-radius:16px;
+  padding:20px 24px;
+  margin:16px 0;
+}
+.article-box h4{
+  margin:0 0 12px;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:20px; font-weight:800; color:var(--earth);
+  line-height:1.55;
+}
+.article-box p{margin:0 0 12px; font-size:20px; line-height:1.9; color:#3f2d08;}
+.article-box p:last-child{margin-bottom:0;}
+
+.dialogue{
+  background:#ffffff;
+  border:1px solid #e2ece7;
+  border-radius:16px;
+  padding:20px 22px;
+  margin:16px 0;
+  display:flex; flex-direction:column; gap:14px;
+}
+.speaker{
+  display:grid; grid-template-columns:auto 1fr; gap:12px;
+  align-items:start;
+}
+.speaker-name{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:110px;
+  font-size:15px; font-weight:800;
+  color:#fff; background:linear-gradient(135deg,#15803d,#16a34a);
+  padding:7px 14px; border-radius:12px;
+  text-align:center;
+  line-height:1.3;
+}
+.speaker-name.s2{
+  background:linear-gradient(135deg,#0369a1,#0ea5e9);
+}
+.speaker-text{
+  background:#f6fdf8;
+  border:1px solid #dcfce7;
+  border-radius:13px;
+  padding:12px 16px;
+  font-size:20px; font-weight:600; line-height:1.8;
+  color:#334155;
+}
+
+/* ===================== Q & A ===================== */
+.qa{
+  background:#fafbfe;
+  border:1px solid #eef1f7;
+  border-radius:15px;
+  padding:16px 18px;
+  margin:15px 0;
+  transition:.2s;
+}
+.qa:hover{background:#f6f9ff; border-color:#dde6f6;}
+.qa-q{
+  margin:0 0 12px; font-size:21px; font-weight:800;
+  line-height:1.6; color:#111827;
+  display:flex; gap:11px; align-items:flex-start;
+}
+.qnum{
+  display:inline-flex; align-items:center; justify-content:center;
+  flex:0 0 auto; min-width:44px; height:44px; padding:0 8px;
+  background:var(--acc); color:#fff;
+  border-radius:12px; font-size:15px; font-weight:800;
+  margin-top:2px;
+}
+.qa-a{
+  margin:0; padding:14px 18px;
+  background:#ffffff;
+  border-left:5px solid var(--acc);
+  border-radius:0 12px 12px 0;
+  font-size:21px; line-height:1.9;
+  color:#243043;
+}
+.qa-a .lbl{
+  display:block; margin-bottom:6px;
+  font-family:'Poppins',sans-serif;
+  font-size:13px; font-weight:800; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--acc);
+}
+.qa-a p{margin:0 0 10px;}
+.qa-a p:last-child{margin-bottom:0;}
+
+/* ===================== LONG ANSWER ===================== */
+.long-q{
+  background:#ffffff;
+  border:1px solid #eef1f7;
+  border-radius:18px;
+  padding:22px 24px 22px;
+  margin:22px 0;
+  box-shadow:0 6px 20px rgba(15,23,42,.06);
+}
+.long-q .q-title{
+  font-size:21px; font-weight:800; color:#0f172a;
+  background:linear-gradient(135deg,var(--acc-soft),#ffffff);
+  border-left:6px solid var(--acc);
+  padding:13px 18px;
+  border-radius:0 12px 12px 0;
+  margin:0 0 18px;
+  line-height:1.65;
+}
+.lead-block{
+  background:linear-gradient(135deg,#f6fdf8,#ffffff);
+  border:1px solid #dcfce7;
+  border-left:5px solid var(--leaf);
+  border-radius:0 13px 13px 0;
+  padding:14px 18px;
+  margin:14px 0;
+  font-weight:600;
+  font-size:20px;
+  color:#334155;
+  line-height:1.85;
+}
+.lead-block strong{color:var(--forest);}
+.block-head{
+  display:inline-block;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:18px; font-weight:800;
+  color:#fff; background:var(--acc);
+  padding:5px 18px; border-radius:22px;
+  margin:22px 0 10px;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+.mini-list{list-style:none; padding:0; margin:12px 0; counter-reset:mini;}
+.mini-list li{
+  counter-increment:mini;
+  position:relative;
+  background:#f6fdf8;
+  border:1px solid #dcfce7;
+  border-radius:13px;
+  padding:12px 16px 12px 52px;
+  margin:9px 0;
+  font-size:20px; font-weight:600; line-height:1.8;
+  color:#334155;
+  transition:.2s;
+}
+.mini-list li:hover{background:#ecfdf5; border-color:#a7f3d0;}
+.mini-list li::before{
+  content:counter(mini) ".";
+  position:absolute; left:15px; top:12px;
+  width:28px; height:28px;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--acc); color:#fff;
+  border-radius:8px;
+  font-family:'Poppins',sans-serif;
+  font-size:14px; font-weight:800;
+}
+.mini-list li strong{color:var(--forest);}
+.conclusion{
+  background:linear-gradient(90deg,#fef3c7,#fffbeb);
+  border-left:6px solid #d97706;
+  border-radius:0 12px 12px 0;
+  padding:14px 18px;
+  margin:18px 0 6px;
+  font-size:20px; font-weight:700; line-height:1.85;
+  color:#3f2d08;
+}
+.conclusion strong{color:#b45309;}
+
+/* ===================== TIP BOX ===================== */
+.tipbox{
+  background:linear-gradient(135deg,#dcfce7,#e0f2fe);
+  border:1px solid #99f6e4;
+  border-radius:15px;
+  padding:16px 18px;
+  margin-top:20px;
+}
+.tipbox h4{
+  margin:0 0 8px;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:17px; font-weight:800; color:var(--forest);
+  letter-spacing:.04em;
+}
+.tipbox p{margin:0; font-size:19px; font-weight:600; color:#334155; line-height:1.8;}
+
+/* ===================== FOOTER ===================== */
+.footer{
+  margin-top:10px;
+  background:linear-gradient(135deg,#14532d,#1c1917);
+  color:#fff; text-align:center;
+  padding:30px 20px;
+  border-radius:22px 22px 0 0;
+}
+.footer .big{font-family:'Mukta','Poppins',sans-serif; font-size:21px; font-weight:800; color:#fcd34d;}
+.footer .small{font-size:16px; opacity:.88; margin-top:6px;}
+
+/* ===================== BACK TO TOP ===================== */
+#toTop{
+  position:fixed; right:20px; bottom:24px; z-index:90;
+  width:56px; height:56px; border-radius:50%;
+  border:none; cursor:pointer;
+  font-size:24px; font-weight:800; color:#fff;
+  background:linear-gradient(135deg,#15803d,#0369a1);
+  box-shadow:0 10px 26px rgba(21,128,61,.42);
+  display:none; align-items:center; justify-content:center;
+  transition:transform .25s, box-shadow .25s;
+}
+#toTop:hover{transform:translateY(-4px) scale(1.06);}
+#toTop.show{display:flex;}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:1023px){
+  .hamburger{display:inline-flex;}
+  .layout{padding:18px 14px 80px; gap:0;}
+  .sidenav{
+    position:fixed; top:0; left:0; z-index:80;
+    width:310px; flex:none; height:100%;
+    max-height:none; border-radius:0 18px 18px 0;
+    padding:78px 14px 40px;
+    transform:translateX(-108%);
+    transition:transform .32s ease;
+    border:none;
+  }
+  .sidenav.open{transform:translateX(0);}
+}
+@media (max-width:640px){
+  body{font-size:20px;}
+  .brand h1{font-size:18px;}
+  .brand-sub{display:none;}
+  .top-link{display:none;}
+  .card{padding:20px 16px 26px; border-top-width:7px;}
+  h2{font-size:22px;}
+  .lead{font-size:18px;}
+  .sect{font-size:18px; padding:11px 13px;}
+  .gloss-item{grid-template-columns:44px 1fr; gap:11px; padding:11px 12px;}
+  .gloss-no{width:44px; height:44px; font-size:17px; border-radius:12px;}
+  .gloss-term,.gloss-def{font-size:18px;}
+  .stage{grid-template-columns:46px 1fr; gap:12px; padding:11px 13px;}
+  .stage-no{width:46px; height:46px; font-size:19px; border-radius:13px;}
+  .stage-title{font-size:18px;}
+  .stage-desc{font-size:17px;}
+  .flow-split{grid-template-columns:1fr;}
+  .speaker{grid-template-columns:1fr; gap:7px;}
+  .speaker-name{justify-self:start; min-width:0;}
+  .qa{padding:13px 14px;}
+  .qa-q{font-size:19px;}
+  .qa-a{font-size:19px; padding:11px 13px;}
+  .qnum{min-width:40px; height:40px; font-size:13px;}
+  .mini-list li{font-size:18px; padding:11px 13px 11px 46px;}
+  .lead-block,.article-box p,.dialogue .speaker-text{font-size:18px;}
+  .long-q{padding:16px 14px;}
+  .long-q .q-title{font-size:18px; padding:11px 13px;}
+  .pill{font-size:12px;}
+}
+@media (max-width:400px){
+  body{font-size:19px;}
+  .qa-q,.mini-list li,.stage-desc{font-size:17px;}
+}
+
+/* ===================== PRINT ===================== */
+@media print{
+  .topbar,.sidenav,.overlay,#toTop{display:none !important;}
+  .layout{padding:0;}
+  .card{box-shadow:none; border:1px solid #ddd; page-break-inside:avoid;}
+  body{background:#fff; font-size:13pt;}
+  .qa,.gloss-item,.stage,.long-q{break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar" id="top">
+  <button class="hamburger" id="menuBtn" aria-label="खोल्नुहोस्" aria-controls="sidenav" aria-expanded="false">☰</button>
+  <div class="brand">
+    <h1>कक्षा ११ सामाजिक — एकाइ ५ · पाठ २</h1>
+    <span class="brand-sub">मानव र वातावरण · परीक्षा क्याप्सुल नोट</span>
+  </div>
+  <a class="top-link" href="#top">↑ माथि</a>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="layout">
+
+  <!-- ================= SIDE NAVIGATION ================= -->
+  <nav class="sidenav" id="sidenav" aria-label="विषयसूची">
+    <div class="sidenav-head">📑 विषयसूची</div>
+
+    <a class="nav-main" href="#intro">🌏 परिचय</a>
+
+    <a class="nav-main" href="#sec1">📌 खण्ड १ — पारिभाषिक शब्दावली</a>
+
+    <a class="nav-main" href="#sec2">📚 खण्ड २ — विस्तृत नोट</a>
+    <div class="nav-sub sky">
+      <a href="#relation">मानव–वातावरण सम्बन्ध</a>
+      <a href="#stages">विकासका ४ चरण</a>
+      <a href="#flow">प्रवाहचित्र</a>
+      <a href="#theories">सिद्धान्त तुलना</a>
+      <a href="#sdg">SDGs</a>
+    </div>
+
+    <a class="nav-main" href="#sec3">✍️ खण्ड ३ — क्रियाकलाप समाधान</a>
+    <div class="nav-sub amber">
+      <a href="#act1">लेख</a>
+      <a href="#act2">संवाद</a>
+    </div>
+
+    <a class="nav-main" href="#sec4">📝 खण्ड ४ — अभ्यास समाधान</a>
+    <div class="nav-sub">
+      <a href="#ex1">तालिका</a>
+      <a href="#ex2">मानिसको भूमिका</a>
+      <a href="#project">परियोजना</a>
+    </div>
+
+    <a class="nav-main" href="#sec5">🎯 खण्ड ५ — परीक्षा प्रश्नोत्तर</a>
+    <div class="nav-sub">
+      <a href="#q1">१ अङ्क</a>
+      <a href="#q5">५ अङ्क</a>
+      <a href="#q8">८ अङ्क</a>
+    </div>
+
+    <div class="nav-note">
+      💡 जुनसुकै शीर्षकमा क्लिक गर्नुहोस् — सिधै त्यही भागमा पुग्नुहुनेछ।
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="content">
+
+    <!-- ================= INTRO ================= -->
+    <article class="card intro" id="intro">
+      <div class="card-head">
+        <span class="pill">Capsule Note</span>
+      </div>
+      <h2>🌏 एकाइ ५: भूगोल र सामाजिक सम्बन्ध</h2>
+      <p class="lead" style="font-size:22px; color:#14532d; font-weight:800;">पाठ २: मानव र वातावरण (Human and Environment)</p>
+
+      <div class="info-banner">
+        <strong>आदरणीय प्राध्यापक तथा विद्यार्थी वर्गमा विशेष अनुरोध:</strong> यो क्याप्सुल नोट राष्ट्रिय परीक्षा बोर्ड (NEB) को नयाँ पाठ्यक्रम र विशिष्टीकरण तालिका (Specification Grid) लाई ध्यानमा राखी परीक्षामा उत्कृष्ट अङ्क प्राप्त गर्ने (८ अङ्कको लामो उत्तरमा ७.५ सम्म र ५ अङ्कको छोटो उत्तरमा ४.५ सम्म) सुनिश्चितताका लागि तयार पारिएको हो। यस नोटभरि नेपाली व्याकरणको पूर्ण शुद्धता कायम गर्दै <strong>'सीप'</strong> र <strong>'सीपहरू' (दीर्घ)</strong> शब्दको मात्र सही प्रयोग गरिएको छ।
+      </div>
+    </article>
+
+    <!-- ================= SECTION 1: GLOSSARY ================= -->
+    <article class="card c1" id="sec1">
+      <div class="card-head">
+        <span class="pill">खण्ड १</span>
+      </div>
+      <h2>📌 विषयगत पारिभाषिक शब्दावली</h2>
+      <p class="lead">परीक्षा-उपयोगी र प्राज्ञिक परिभाषा — छोटो र स्पष्ट रूपमा।</p>
+
+      <div class="glossary">
+
+        <div class="gloss-item">
+          <div class="gloss-no">१</div>
+          <div>
+            <span class="gloss-term">वातावरण (Environment)</span>
+            <p class="gloss-def">हाम्रो वरपर रहेका जैविक (जीवजन्तु, वनस्पति, मानव) र अजैविक (हावा, पानी, माटो, घाम, पहाड) प्राकृतिक तत्त्वहरूका साथै मानव निर्मित सामाजिक-सांस्कृतिक संरचनाहरूको समग्र रूप।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">२</div>
+          <div>
+            <span class="gloss-term">सांस्कृतिक वातावरण (Cultural Environment)</span>
+            <p class="gloss-def">मानवले आफ्नो आवश्यकता पूर्ति गर्न प्राकृतिक वातावरणमाथि बुद्धि, प्रविधि र सीपको प्रयोग गरी निर्माण गरेका भौतिक पूर्वाधार (घर, सडक, पुल, सञ्चार, उद्योग, बस्ती) र सामाजिक मूल्यमान्यताहरूको योग।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">३</div>
+          <div>
+            <span class="gloss-term">पर्यावरणीय नियतिवाद (Environmental Determinism)</span>
+            <p class="gloss-def">प्रकृतिले नै मानिसको शारीरिक बनोट, स्वभाव, बुद्धिमत्ता, जीवनशैली र आर्थिक क्रियाकलापलाई प्रत्यक्ष रूपमा नियन्त्रण र निर्देशन गर्छ भन्ने भौगोलिक सिद्धान्त।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">४</div>
+          <div>
+            <span class="gloss-term">सम्भववाद (Possibilism)</span>
+            <p class="gloss-def">प्रकृतिले मानवका अगाडि अनेकौँ सम्भावनाहरू प्रस्तुत गर्छ र मानिसले आफ्नो ज्ञान, बुद्धि र प्रविधिको प्रयोग गरी ती सम्भावनाहरूलाई आफ्नो अनुकूल ढाल्न सक्छ भन्ने सिद्धान्त।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">५</div>
+          <div>
+            <span class="gloss-term">प्राकृतिक दोहन (Resource Exploitation)</span>
+            <p class="gloss-def">मानवले आफ्नो असीमित भौतिक चाहना र आर्थिक नाफा पूर्तिका लागि प्राकृतिक स्रोत-साधन (खनिज, जल, वनजङ्गल) को तीव्र र अविवेकपूर्ण रूपमा उपभोग वा विनाश गर्ने कार्य।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">६</div>
+          <div>
+            <span class="gloss-term">जलवायु परिवर्तन (Climate Change)</span>
+            <p class="gloss-def">मानवीय क्रियाकलाप (जीवाश्म इन्धनको प्रयोग, वन विनाश) का कारण वायुमण्डलमा हरितगृह ग्यासको मात्रा बढी पृथ्वीको औसत तापक्रममा वृद्धि भई दीर्घकालीन रूपमा मौसम र जलवायुमा आउने अस्वाभाविक परिवर्तन।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">७</div>
+          <div>
+            <span class="gloss-term">ओजोन तह क्षयीकरण (Ozone Layer Depletion)</span>
+            <p class="gloss-def">CFCs जस्ता औद्योगिक रसायनको अत्यधिक प्रयोगका कारण समतापमण्डल (Stratosphere) मा रहेको ओजोन तह (O₃) पातलिँदै गई सूर्यका हानिकारक पराबैजनी किरणहरू सोझै पृथ्वीमा आउने समस्या।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">८</div>
+          <div>
+            <span class="gloss-term">दिगो विकास (Sustainable Development)</span>
+            <p class="gloss-def">भावी पुस्ताको आवश्यकता र अधिकारलाई असर नपुर्‍याई वर्तमान पुस्ताका मानवीय र आर्थिक आवश्यकताहरू पूरा गर्ने वातावरणीय सन्तुलनमा आधारित विकास अवधारणा।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">९</div>
+          <div>
+            <span class="gloss-term">दिगो विकास लक्ष्यहरू (SDGs 2016–2030)</span>
+            <p class="gloss-def">संयुक्त राष्ट्रसङ्घद्वारा सन् २०१६ देखि २०३० सम्मका लागि घोषित १७ वटा अन्तर्राष्ट्रिय लक्ष्यहरू, जसले गरिबी निवारण, वातावरणीय संरक्षण र समृद्धिको मार्गदर्शन गर्दछन्।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">१०</div>
+          <div>
+            <span class="gloss-term">वातावरणीय अनुकूलन (Environmental Adaptation)</span>
+            <p class="gloss-def">मानिस वा अन्य जीवहरूले भौगोलिक र वातावरणीय परिस्थिति अनुरूप आफ्नो शारीरिक, जैविक र व्यवहारगत जीवनशैलीमा ल्याउने समायोजन।</p>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ================= SECTION 2: STUDY NOTES ================= -->
+    <article class="card c2" id="sec2">
+      <div class="card-head">
+        <span class="pill">खण्ड २</span>
+      </div>
+      <h2>📚 विस्तृत प्राज्ञिक नोट</h2>
+      <p class="lead">पाठका मुख्य सिद्धान्त, चरण, तुलना र SDGs को सारांश।</p>
+
+      <!-- 2.1 Relation -->
+      <h3 class="sect" id="relation">
+        <span>२.१ मानव र वातावरणबिचको सम्बन्ध र यसका आयाम</span>
+      </h3>
+
+      <div class="note-block">
+        <h4>द्विमुखी अन्तरसम्बन्ध</h4>
+        <p>मानव र वातावरणबिच घनिष्ठ र अन्योन्याश्रित सम्बन्ध हुन्छ। वातावरणले मानिसलाई जीवन यापनका लागि आवश्यक हावा, पानी, भोजन र बासस्थान दिन्छ भने मानिसले वातावरणमाथि विभिन्न भौतिक र सामाजिक क्रियाकलाप सञ्चालन गर्दछ।</p>
+      </div>
+
+      <!-- 2.2 Stages -->
+      <h3 class="sect" id="stages">
+        <span>२.२ विकासक्रमका ४ मुख्य चरणहरू</span>
+      </h3>
+
+      <div class="stages">
+        <div class="stage">
+          <div class="stage-no">१</div>
+          <div class="stage-body">
+            <span class="stage-title">प्रकृतिको नियन्त्रण (प्राकृतिक अवस्था)</span>
+            <p class="stage-desc">आदिमकालमा मानिस पूर्ण रूपमा प्रकृतिमा आश्रित थियो। प्रकृतिको कठोरता (गर्मी, जाडो, वर्षा) सहनुबाहेक मानिससँग अन्य विकल्प थिएन।</p>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-no">२</div>
+          <div class="stage-body">
+            <span class="stage-title">प्रकृतिको उपयोग (कृषि युग)</span>
+            <p class="stage-desc">आगो, औजार, खेतीपाती र पशुपालनको आविष्कारसँगै मानिसले प्रकृतिलाई आफ्नो हितमा उपयोग गर्न थाल्यो।</p>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-no">३</div>
+          <div class="stage-body">
+            <span class="stage-title">प्रकृतिमाथि अतिक्रमण (औद्योगिक युग)</span>
+            <p class="stage-desc">१८औँ शताब्दीको औद्योगिक क्रान्तिपछि कलकारखाना, खनिज दोहन, रासायनिक मल र प्रविधिको अत्यधिक प्रयोगले प्राकृतिक सन्तुलन बिग्रन गयो।</p>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-no">४</div>
+          <div class="stage-body">
+            <span class="stage-title">प्रकृति संरक्षण र दिगो विकास (आधुनिक युग)</span>
+            <p class="stage-desc">वातावरणीय विनाशका कारण बाढी, पहिरो, महामारी र जलवायु परिवर्तनको सङ्कट आएपछि मानिसमा प्राकृतिक संरक्षण र दिगो विकासको चेतना जागृत भएको छ।</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2.3 Flow -->
+      <h3 class="sect" id="flow">
+        <span>२.३ मानव र वातावरणबिचको अन्तरसम्बन्ध (प्रवाहचित्र)</span>
+      </h3>
+
+      <div class="flow-chart">
+        <div class="flow-title">🌱 प्राकृतिक वातावरण र मानवीय क्रियाकलापबिचको चक्र</div>
+
+        <div class="flow-start">🌍 प्राकृतिक वातावरण<br><small style="font-weight:600; font-size:16px;">हावा, पानी, माटो, वनजङ्गल, जीवजन्तु</small></div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-mid">👥 मानवीय क्रियाकलाप र आवश्यकता</div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-split">
+          <div class="flow-branch pos">
+            <span class="h">✅ सकारात्मक</span>
+            दिगो विकास, वृक्षारोपण, जैविक संरक्षण
+          </div>
+          <div class="flow-branch neg">
+            <span class="h">⚠️ नकारात्मक</span>
+            वन फँडानी, भूक्षय, प्रदूषण, ओजोन क्षय
+          </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+        <div class="flow-split">
+          <div class="flow-branch pos">
+            <span class="h">🌿 परिणाम</span>
+            सन्तुलित पर्यावरण र सुरक्षित मानव जीवन
+          </div>
+          <div class="flow-branch neg">
+            <span class="h">🌪️ परिणाम</span>
+            जलवायु परिवर्तन, विपद् र अस्तित्व सङ्कट
+          </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+        <div class="flow-mid" style="border-color:#d97706; color:#92400e;">♻️ चेतना र पुनर्स्थापना<br><small style="font-weight:600; font-size:15px;">SDGs 2016–2030</small></div>
+        <div class="flow-arrow">↺</div>
+        <div class="flow-start" style="margin-bottom:0; font-size:17px;">🌿 सन्तुलित पर्यावरणतर्फ पुनः फर्काउने</div>
+      </div>
+
+      <!-- 2.4 Theories -->
+      <h3 class="sect" id="theories">
+        <span>२.४ प्रमुख सिद्धान्तहरूको तुलनात्मक तालिका</span>
+      </h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>तुलनाको आधार</th>
+              <th>पर्यावरणीय नियतिवाद</th>
+              <th>सम्भववाद</th>
+              <th>दिगो विकास</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>मुख्य विचार</strong></td>
+              <td>प्रकृति सर्वश्रेष्ठ छ; मानव प्रकृतिको दास हो।</td>
+              <td>मानव सर्वश्रेष्ठ छ; प्रविधिका बलमा प्रकृतिलाई ढाल्न सकिन्छ।</td>
+              <td>मानव र प्रकृति समान छन्; दुवैको सहअस्तित्व अपरिहार्य छ।</td>
+            </tr>
+            <tr>
+              <td><strong>मानव भूमिका</strong></td>
+              <td>निष्क्रिय र प्रकृतिको नियम पालन गर्ने।</td>
+              <td>सक्रिय र प्राकृतिक स्रोतको दोहनकर्ता।</td>
+              <td>विवेकशील, संरक्षक र उत्तरदायी साझेदार।</td>
+            </tr>
+            <tr>
+              <td><strong>मुख्य नतिजा</strong></td>
+              <td>सन्तुलित तर सीमित प्रविधि र विकास।</td>
+              <td>तीव्र भौतिक विकास तर वातावरणीय विनाश र सङ्कट।</td>
+              <td>सन्तुलित विकास, वातावरणीय न्याय र भावी पुस्ताको सुरक्षा।</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 2.5 SDGs -->
+      <h3 class="sect" id="sdg">
+        <span>२.५ दिगो विकासका १७ लक्ष्यहरू (SDGs) र वातावरण संरक्षण</span>
+      </h3>
+
+      <div class="note-block">
+        <h4>🌐 SDGs को परिचय</h4>
+        <p>संयुक्त राष्ट्रसङ्घले सन् २०१६ देखि २०३० सम्मका लागि <strong>१७ वटा दिगो विकास लक्ष्यहरू (SDGs)</strong> कार्यान्वयनमा ल्याएको छ।</p>
+        <p>यसमा <strong>लक्ष्य १३ (जलवायु कारबाही — Climate Action)</strong>, <strong>लक्ष्य १४ (जलमुनिको जीवन — Life Below Water)</strong> र <strong>लक्ष्य १५ (स्थलको जीवन — Life on Land)</strong> सोझै वातावरण संरक्षणसँग सम्बन्धित छन्।</p>
+        <p>नेपालले पनि आफ्ना आवधिक योजना र नीतिहरूमा दिगो विकासका लक्ष्यहरूलाई प्राथमिकताका साथ समावेश गरेको छ।</p>
+      </div>
+    </article>
+
+    <!-- ================= SECTION 3: ACTIVITIES ================= -->
+    <article class="card c3" id="sec3">
+      <div class="card-head">
+        <span class="pill">खण्ड ३</span>
+      </div>
+      <h2>✍️ क्रियाकलापको पूर्ण समाधान</h2>
+      <p class="lead">पाठ्यपुस्तकका दुई क्रियाकलापको नमुना उत्तर।</p>
+
+      <!-- Activity 1 -->
+      <h3 class="sect" id="act1">
+        <span>क्रियाकलाप १ (पृष्ठ ७९) — सम्पादकीय लेख</span>
+        <span class="marks">लेख</span>
+      </h3>
+
+      <div class="article-box">
+        <h4>शीर्षक: मानव र वातावरणको सहअस्तित्व — दिगो भविष्यको आधार</h4>
+        <p>मानव र वातावरणबिचको सम्बन्ध अनन्तकालदेखि चलिआएको छ। यी दुईबिचको सम्बन्ध केवल उपयोगको मात्र नभई परिपूरकताको हो। वातावरणविना मानव जीवनको अस्तित्व कल्पना गर्न सकिँदैन भने मानव चेतनाविना वातावरणको संरक्षण र व्यवस्थापन सम्भव छैन।</p>
+        <p>वातावरणले मानिसलाई जीवित रहनका लागि आवश्यक अक्सिजन, शुद्ध जल, खाद्यान्न र आवासका लागि भूमि प्रदान गर्दछ। बदलामा मानिसले प्रकृतिको मर्यादा राख्दै यसको संरक्षण, सम्वर्द्धन र वृक्षारोपणजस्ता कार्यमार्फत वातावरणीय सन्तुलन कायम राख्नुपर्छ।</p>
+        <p>तर आधुनिक युगमा औद्योगिकीकरण र सहरीकरणको नाममा भएको अव्यवस्थित दोहनले मानव र वातावरणबिचको परिपूरकताको चक्र बिग्रिएको छ। बाढी, पहिरो, खडेरी र जलवायु परिवर्तनजस्ता विपद्हरू यसैका दुष्परिणाम हुन्।</p>
+        <p>अतः पृथ्वीलाई सबै जीवहरूको सुरक्षित साझा घर बनाउन मानवले प्रकृतिको दोहन होइन, सहअस्तित्व र संरक्षणको नीति अङ्गीकार गर्नु आजको परम आवश्यकता हो।</p>
+      </div>
+
+      <!-- Activity 2 -->
+      <h3 class="sect" id="act2">
+        <span>क्रियाकलाप २ (पृष्ठ ७९) — संवाद</span>
+        <span class="marks">डोजर आतङ्क बनाम दिगो विकास</span>
+      </h3>
+
+      <div class="dialogue">
+        <div class="speaker">
+          <span class="speaker-name">वडाध्यक्ष<br>रमेशजी</span>
+          <p class="speaker-text">सुमनजी! चुनावी बाचा अनुसार मैले त गाउँ-गाउँमा डोजर लगाएर बाटो पुर्‍याउने काम सुरु गरिसकेँ। विकास त गर्नैपर्‍यो नि!</p>
+        </div>
+
+        <div class="speaker">
+          <span class="speaker-name s2">सचेत नागरिक<br>सुमन</span>
+          <p class="speaker-text">रमेशजी, बाटो पुर्‍याउनु राम्रो कुरा हो। तर प्राविधिक इञ्जिनियरिङ र वातावरणीय प्रभाव मूल्याङ्कन (EIA) बिना जथाभावी पहाड खन्दा भोलि पहिरो गएर सिङ्गो गाउँ नै बगाउने जोखिम छ नि!</p>
+        </div>
+
+        <div class="speaker">
+          <span class="speaker-name">वडाध्यक्ष<br>रमेशजी</span>
+          <p class="speaker-text">खै, अब जनताले तत्काल बाटो खोज्छन्। वातावरणको कुरा गरेर विकास रोक्न त भएन नि!</p>
+        </div>
+
+        <div class="speaker">
+          <span class="speaker-name s2">सचेत नागरिक<br>सुमन</span>
+          <p class="speaker-text">विकास रोक्ने भनेको होइन रमेशजी! वातावरण विनाश नगरी गरिने विकास नै <strong>‘दिगो विकास’</strong> हो। डोजर चलाएर गाउँ जोड्ने तर पानीका मुहान सुक्ने, खेतीयोग्य जमिन पुरिने र पहिरोको डर हुने विकासले जनतालाई फाइदा भन्दा बढी क्षति पुर्‍याउँछ।</p>
+        </div>
+
+        <div class="speaker">
+          <span class="speaker-name">वडाध्यक्ष<br>रमेशजी</span>
+          <p class="speaker-text">तपाईँको कुरा पनि घोत्लिनुपर्ने खालको रहेछ। अब कसरी अगाडि बढ्ने त?</p>
+        </div>
+
+        <div class="speaker">
+          <span class="speaker-name s2">सचेत नागरिक<br>सुमन</span>
+          <p class="speaker-text">वातावरणीय क्षति कम हुने गरी हरित सडक (Green Road) को अवधारणा अपनाऔँ, रुख कटान कम गरौँ, र खनिएका डिलहरूमा तत्काल अम्रिसो वा घाँस रोपौँ। यसले विकास पनि हुन्छ र वातावरण पनि जोगिन्छ।</p>
+        </div>
+
+        <div class="speaker">
+          <span class="speaker-name">वडाध्यक्ष<br>रमेशजी</span>
+          <p class="speaker-text">धेरै धन्यवाद सुमनजी! अबदेखि म प्राविधिक र वातावरणीय सन्तुलन मिलाएर मात्र विकासका काम अगाडि बढाउनेछु।</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= SECTION 4: EXERCISES ================= -->
+    <article class="card c4" id="sec4">
+      <div class="card-head">
+        <span class="pill">खण्ड ४</span>
+      </div>
+      <h2>📝 अभ्यास तथा परियोजना कार्यको समाधान</h2>
+      <p class="lead">पाठ्यपुस्तकका अभ्यास प्रश्न र परियोजना कार्यको नमुना उत्तर।</p>
+
+      <!-- Exercise 1 -->
+      <h3 class="sect" id="ex1">
+        <span>अभ्यास प्रश्न १ — संरक्षणका फाइदा र विनाशका समस्या</span>
+      </h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:60px;">क्र.सं.</th>
+              <th>वातावरण संरक्षण गर्दा हुने फाइदाहरू</th>
+              <th>वातावरण विनाश गर्दा आइपर्ने समस्याहरू</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>१.</td><td>स्वच्छ हावा, शुद्ध खानेपानी र स्वस्थ जीवनको सुनिश्चितता हुन्छ।</td><td>वायु, जल र ध्वनि प्रदूषण भई विभिन्न सरुवा तथा जटिल रोगहरू फैलिन्छन्।</td></tr>
+            <tr><td>२.</td><td>प्राकृतिक विपद् (बाढी, पहिरो, खडेरी) को जोखिम न्यूनीकरण हुन्छ।</td><td>बाढी, पहिरो, भूक्षय र अतिवृष्टिजस्ता प्राकृतिक प्रकोपहरू बढ्छन्।</td></tr>
+            <tr><td>३.</td><td>कृषि उत्पादकत्व वृद्धि भई खाद्यान्न सुरक्षा कायम हुन्छ।</td><td>माटोको उर्वराशक्ति ह्रास भई मरुभूमीकरण र खाद्यान्न सङ्कट निम्तिन्छ।</td></tr>
+            <tr><td>४.</td><td>जैविक विविधता र दुर्लभ वन्यजन्तुको संरक्षण हुन्छ।</td><td>वन्यजन्तुको बासस्थान विनाश भई जैविक विविधता र जीवहरू लोप हुन्छन्।</td></tr>
+            <tr><td>५.</td><td>जलवायु परिवर्तनको गति ढिलो भई सन्तानका लागि सुरक्षित वातावरण रहन्छ।</td><td>वैश्विक तापमान वृद्धि भई हिमताल फुट्ने र वातावरणीय सन्तुलन बिग्रन्छ।</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Exercise 2 -->
+      <h3 class="sect" id="ex2">
+        <span>अभ्यास प्रश्न २ — वातावरण संरक्षणमा मानिसको भूमिका</span>
+      </h3>
+
+      <div class="long-q">
+        <p class="q-title">वातावरण संरक्षणमा मानिसको भूमिका बढी जिम्मेवार हुन्छ — आफ्ना विचारहरू प्रस्तुत गर्नुहोस्।</p>
+
+        <p class="lead-block"><strong>उत्तर:</strong> वातावरणमा रहेका सम्पूर्ण जीवहरूमध्ये मानिस मात्र एक यस्तो प्राणी हो जोसँग <strong>चेतना, विवेक, ज्ञान र प्रविधि</strong> प्रयोग गर्ने क्षमता छ। त्यसैले वातावरण संरक्षणमा मानिसको भूमिका नै सबैभन्दा बढी जिम्मेवार हुन्छ।</p>
+
+        <ol class="mini-list">
+          <li><strong>विनाशको कारक मानव नै हो:</strong> औद्योगिक क्रान्ति, वन फँडानी, प्लाष्टिकको प्रयोग र जीवाश्म इन्धनको दोहन गरी वातावरण बिगार्ने मुख्य कर्ता मानिस नै हो। जसले समस्या सिर्जना गर्छ, समाधानको जिम्मेवारी पनि उसैको हुन्छ।</li>
+          <li><strong>विवेक र चेतनाको प्रयोग:</strong> मानिसले मात्र वातावरणको महत्त्व बुझ्न, नीति-नियम बनाउन र संरक्षणका योजनाहरू कार्यान्वयन गर्न सक्छ।</li>
+          <li><strong>सकारात्मक हस्तक्षेपको क्षमता:</strong> वृक्षारोपण गर्ने, फोहोरमैला व्यवस्थापन गर्ने र नवीकरणीय ऊर्जा (सौर, जलविद्युत्) को प्रयोग बढाउने क्षमता मानिससँग मात्र छ।</li>
+          <li><strong>भावी पुस्ताप्रतिको दायित्व:</strong> मानिसले आफ्ना भावी सन्ततिका लागि सुरक्षित र स्वच्छ पृथ्वी हस्तान्तरण गर्नुपर्ने नैतिक र सामाजिक दायित्व बोकेको हुन्छ।</li>
+        </ol>
+      </div>
+
+      <!-- Project Work -->
+      <h3 class="sect" id="project">
+        <span>परियोजना कार्य — वातावरण संरक्षण योजना</span>
+        <span class="marks">नमुना</span>
+      </h3>
+
+      <div class="note-block">
+        <h4>१. शीर्षक</h4>
+        <p>चन्द्रागिरि वडा नं. ४ मा सञ्चालित "हरियाली र फोहोरमुक्त समुदाय" अभियान प्रतिवेदन।</p>
+
+        <h4>२. उद्देश्य</h4>
+        <p>टोलमा फोहोरमैला वर्गीकरण (शीशा, प्लाष्टिक र प्राङ्गारिक) गर्ने र सडक छेउमा ५०० वटा रुख रोप्ने।</p>
+
+        <h4>३. कार्यप्रगति</h4>
+        <p>स्थानीय युवा क्लब र आमा समूहको सहकार्यमा शनिबार सरसफाइ गरी कुहिने फोहोरबाट मल बनाउने काम सुरु गरिएको र ३०० वटा कलमी बिरुवा रोपिएको।</p>
+
+        <h4>४. निष्कर्ष</h4>
+        <p>समुदायको सानो प्रयासले पनि वातावरणीय स्वच्छता र सौन्दर्य अभिवृद्धि गर्न सकिन्छ।</p>
+      </div>
+    </article>
+
+    <!-- ================= SECTION 5: EXAM Q&A ================= -->
+    <article class="card c5" id="sec5">
+      <div class="card-head">
+        <span class="pill">खण्ड ५</span>
+      </div>
+      <h2>🎯 परीक्षा विशेष सम्भावित प्रश्नोत्तर</h2>
+      <p class="lead">१, ५ र ८ अङ्कका प्रश्नहरू — बोर्ड ढाँचामा उत्तरकुञ्जी सहित।</p>
+
+      <!-- 1 mark -->
+      <h3 class="sect" id="q1">
+        <span>अति संक्षिप्त प्रश्नोत्तरहरू</span>
+        <span class="marks">१ अङ्क</span>
+      </h3>
+
+      <div class="qa">
+        <p class="qa-q"><span class="qnum">१</span>‘पर्यावरणीय नियतिवाद’ भनेको के हो?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>मानिसको शारीरिक बनोट, स्वभाव र जीवनशैली प्रकृतिको भौगोलिक अवस्थाद्वारा नै निर्धारित हुन्छ भन्ने मान्यतालाई ‘पर्यावरणीय नियतिवाद’ भनिन्छ।</p>
+        </div>
+      </div>
+
+      <div class="qa">
+        <p class="qa-q"><span class="qnum">२</span>दिगो विकासका १७ वटा लक्ष्यहरू (SDGs) कहिलेदेखि कहिलेसम्मका लागि निर्धारण गरिएका हुन्?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>दिगो विकासका १७ वटा लक्ष्यहरू सन् २०१६ देखि २०३० सम्म (१५ वर्ष) का लागि निर्धारण गरिएका हुन्।</p>
+        </div>
+      </div>
+
+      <div class="qa">
+        <p class="qa-q"><span class="qnum">३</span>वातावरणीय प्रभाव मूल्याङ्कन (EIA) भनेको के हो?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>कुनै पनि विकास निर्माण कार्य सुरु गर्नुअघि त्यसबाट वातावरणमा पर्न सक्ने सम्भावित नकारात्मक प्रभाव र समाधानका उपायहरूको वैज्ञानिक अध्ययन गर्ने प्रक्रियालाई EIA भनिन्छ।</p>
+        </div>
+      </div>
+
+      <div class="qa">
+        <p class="qa-q"><span class="qnum">४</span>‘सम्भववाद’ का प्रतिपादक को हुन्?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>सम्भववादी सिद्धान्तका मुख्य समर्थक फ्रान्सेली भूगोलविद् भिदाल दे ला व्लास (Vidal de la Blache) हुन्।</p>
+        </div>
+      </div>
+
+      <!-- 5 mark -->
+      <h3 class="sect" id="q5">
+        <span>संक्षिप्त प्रश्नोत्तर</span>
+        <span class="marks">५ अङ्क</span>
+      </h3>
+
+      <div class="long-q">
+        <p class="q-title">मानवीय गतिविधिका कारण सिर्जित ५ वटा प्रमुख वातावरणीय समस्याहरू र तिनका समाधानका उपायहरू लेख्नुहोस्।</p>
+
+        <p class="lead-block"><strong>उत्तर:</strong> मानवीय गतिविधिका कारण सिर्जित वातावरणीय समस्या र समाधानका उपायहरू निम्न बमोजिम छन्:</p>
+
+        <ol class="mini-list">
+          <li><strong>वन विनाश र भूक्षय:</strong> अत्यधिक रुख कटानीले भूक्षय बढेको छ। <em>समाधान:</em> व्यापक वृक्षारोपण र सामुदायिक वनको प्रवर्द्धन गर्ने।</li>
+          <li><strong>जलवायु परिवर्तन र तापक्रम वृद्धि:</strong> औद्योगिक प्रदूषणले तापक्रम बढेको छ। <em>समाधान:</em> खनिज तेलको सट्टा जलविद्युत् र सौर्य ऊर्जा प्रयोग गर्ने।</li>
+          <li><strong>अव्यवस्थित फोहोरमैला:</strong> सहरी क्षेत्रमा प्लाष्टिक फोहोर बढेको छ। <em>समाधान:</em> फोहोरको ३-R (Reduce, Reuse, Recycle) सिद्धान्त अपनाउने।</li>
+          <li><strong>जल र वायु प्रदूषण:</strong> उद्योग र सवारी साधनको धूवाँले हावा-पानी बिग्रिएको छ। <em>समाधान:</em> विद्युतीय सवारी साधन र उद्योगमा प्रदूषण नियन्त्रण यन्त्र अनिवार्य गर्ने।</li>
+          <li><strong>अव्यवस्थित पूर्वाधार निर्माण:</strong> डोजरको जथाभावी प्रयोगले वातावरण बिग्रिएको छ। <em>समाधान:</em> अनिवार्य वातावरणीय प्रभाव मूल्याङ्कन (EIA) गरी दिगो पूर्वाधार निर्माण गर्ने।</li>
+        </ol>
+      </div>
+
+      <!-- 8 mark -->
+      <h3 class="sect" id="q8">
+        <span>लामो उत्तरात्मक प्रश्न</span>
+        <span class="marks">८ अङ्क · NEB ४-चरण</span>
+      </h3>
+
+      <div class="long-q">
+        <p class="q-title">"विकास र वातावरण एकअर्काका विरोधी होइनन्, दिगो विकास नै वर्तमान विश्वको निर्विकल्प मार्ग हो।" — यस भनाइलाई पाठ्यपुस्तकका आधारमा विश्लेषणात्मक विवेचना गर्नुहोस्।</p>
+
+        <span class="block-head">१. परिचय (Introduction)</span>
+        <p class="lead-block">मानव सभ्यताको सुरुवातदेखि नै विकास र वातावरण एकआपसमा जोडिएका छन्। मानिसले आफ्नो जीवनलाई सहज, सुविधायुक्त र समृद्ध बनाउन गर्ने सम्पूर्ण प्रयत्नहरू <strong>विकास</strong> हुन् भने ती प्रयत्नहरू सञ्चालन हुने धरातल <strong>वातावरण</strong> हो। विगतमा विकास र वातावरणलाई एकअर्काको विरोधीका रूपमा हेरिन्थ्यो — अर्थात् विकास गर्दा वातावरण विनाश हुनु स्वाभाविक मानिन्थ्यो। तर आधुनिक युगमा <strong>दिगो विकास (Sustainable Development)</strong> को अवधारणा आएपछि विकास र वातावरण विरोधी नभई एकअर्काका परिपूरक हुन् भन्ने तथ्य स्थापित भएको छ।</p>
+
+        <span class="block-head">२. मुख्य विश्लेषण तथा तर्क</span>
+        <p class="lead-block">विकास र वातावरणबिचको सन्तुलन र दिगो विकासको आवश्यकतालाई देहायका तर्कहरूद्वारा विश्लेषण गर्न सकिन्छ:</p>
+
+        <ol class="mini-list">
+          <li><strong>पर्यावरणीय सीमा र भौतिक विकास:</strong> प्रकृतिसँग सहन सक्ने निश्चित क्षमता (Carrying Capacity) हुन्छ। यदि मानिसले सीमाभन्दा बढी प्रकृतिमाथि अतिक्रमण गर्छ भने बाढी, पहिरो, प्रदूषण र जलवायु परिवर्तनजस्ता विपद् आउँछन्, जसले अन्ततः मानव विकासलाई नै ध्वस्त पारिदिन्छ।</li>
+          <li><strong>दिगो विकासको अवधारणा:</strong> सन् १९८७ को ‘ब्रन्टल्याण्ड कमिसन’ (Brundtland Commission) को प्रतिवेदन ‘हाम्रो साझा भविष्य’ (Our Common Future) ले दिगो विकासको परिभाषा दियो। यस अनुसार भावी पुस्ताको आवश्यकतासँग सम्झौता नगरी वर्तमानको आवश्यकता पूरा गर्नु नै दिगो विकास हो।</li>
+          <li><strong>नेपालको सन्दर्भ र तीन Pillar:</strong> दिगो विकासका तीन मुख्य स्तम्भहरू — <strong>आर्थिक वृद्धि, सामाजिक समावेशिता र वातावरणीय संरक्षण</strong> हुन्। यी तीनवटाबिच सन्तुलन कायम भएमा मात्र विकास टिकाउ र फलदायी हुन्छ।</li>
+        </ol>
+
+        <span class="block-head">३. व्यावहारिक र ऐतिहासिक उदाहरण</span>
+        <p class="lead-block">नेपालको पहाडी क्षेत्रमा हाल भइरहेको <strong>"डोजारे विकास"</strong> यसको ज्वलन्त उदाहरण हो। बिना इञ्जिनियरिङ र बिना वातावरणीय अध्ययन डाँडाकाँडा खनेर बाटो पुर्‍याउँदा वर्षायाममा पहिरो जाने, खानेपानीका मुहान सुक्ने र बस्ती नै जोखिममा पर्ने गरेको छ। यो वातावरण विरोधी विकासको नकारात्मक नतिजा हो।</p>
+        <p class="lead-block">अर्कातिर, नेपालको <strong>सामुदायिक वन कार्यक्रम (Community Forestry)</strong> र <strong>जलविद्युत् प्रवर्द्धन</strong> दिगो विकासका उत्कृष्ट उदाहरण हुन्, जसले एकातिर आर्थिक लाभ दिएको छ भने अर्कातिर हरियाली र वातावरण संरक्षणमा विश्वमै उदाहरणीय योगदान पुर्‍याएको छ।</p>
+
+        <span class="block-head">४. निष्कर्ष (Conclusion)</span>
+        <p class="conclusion">निष्कर्षमा, वातावरणविनाको विकास अल्पकालिक र विनाशकारी हुन्छ भने विकासविनाको वातावरणले मानव गरिबी निवारण गर्न सक्दैन। त्यसैले विकास र वातावरणलाई सँगसँगै लैजानु नै बुद्धिमत्ता हो। वातावरणीय प्रभाव मूल्याङ्कन (EIA) गर्ने, हरित प्रविधि (Green Technology) अपनाउने, नवीकरणीय ऊर्जाको प्रयोग बढाउने र संयुक्त राष्ट्रसङ्घका दिगो विकास लक्ष्यहरू (SDGs) इमानदारीपूर्वक कार्यान्वयन गर्नु नै वर्तमान र भावी पुस्ताका लागि निर्विकल्प मार्ग हो।</p>
+      </div>
+
+      <div class="tipbox">
+        <h4>💡 परीक्षा सुझाव</h4>
+        <p>१ अङ्कमा सिधा एक-दुई वाक्य, ५ अङ्कमा परिचय + ५ बुँदा + निष्कर्ष, र ८ अङ्कमा ४-चरण ढाँचा (परिचय → विश्लेषण → उदाहरण → निष्कर्ष) अनिवार्य पालना गर्नुहोस्। तालिका, नम्बर, र प्रमुख शब्द रेखाङ्कन गर्दा अङ्क बढी पाइन्छ।</p>
+      </div>
+    </article>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="big">✨ कक्षा ११ सामाजिक — एकाइ ५ · पाठ २ ✨</div>
+      <div class="small">मानव र वातावरण · परीक्षा क्याप्सुल नोट</div>
+      <div class="small" style="margin-top:10px; font-size:15px;">
+        नोट पढ्नुहोस् → सिद्धान्त कण्ठ गर्नुहोस् → उत्तर अभ्यास गर्नुहोस्। यही तरिकाले अङ्क स्थिर हुन्छ।
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="माथि जानुहोस्">↑</button>
+
+<script>
+(function () {
+  const menuBtn = document.getElementById('menuBtn');
+  const sidenav  = document.getElementById('sidenav');
+  const overlay  = document.getElementById('overlay');
+
+  function openNav() {
+    sidenav.classList.add('open');
+    overlay.classList.add('show');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    sidenav.classList.remove('open');
+    overlay.classList.remove('show');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  menuBtn.addEventListener('click', function () {
+    sidenav.classList.contains('open') ? closeNav() : openNav();
+  });
+  overlay.addEventListener('click', closeNav);
+
+  document.querySelectorAll('.sidenav a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (window.innerWidth < 1024) closeNav();
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeNav();
+  });
+
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 420) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  });
+
+  const sections = document.querySelectorAll('article[id]');
+  const navLinks = document.querySelectorAll('.nav-main');
+  window.addEventListener('scroll', function () {
+    let current = '';
+    sections.forEach(function (sec) {
+      if (window.scrollY >= sec.offsetTop - 140) current = sec.id;
+    });
+    navLinks.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+})();
+</script>
+</body>
+</html>
