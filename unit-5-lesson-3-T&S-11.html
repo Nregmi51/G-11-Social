@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>कक्षा ११ सामाजिक — एकाइ ५ पाठ ३: विश्वका भौगोलिक विविधता र जनजीवन</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===================== BASE ===================== */
+*,*::before,*::after{box-sizing:border-box;}
+:root{
+  --ink:#0f172a;
+  --soft:#475569;
+  --paper:#ffffff;
+  --line:#e6eef3;
+  --green:#15803d;
+  --green-deep:#14532d;
+  --green-soft:#f0fdf4;
+  --sky:#0369a1;
+  --sky-deep:#075985;
+  --sky-soft:#e0f2fe;
+  --earth:#b45309;
+  --earth-deep:#78350f;
+  --earth-soft:#fffbeb;
+  --rose:#be123c;
+  --rose-soft:#fff1f2;
+  --violet:#6d28d9;
+  --violet-soft:#f5f3ff;
+  --shadow:0 10px 30px rgba(20,83,45,.10);
+  --radius:22px;
+}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Mukta','Noto Sans Devanagari',system-ui,sans-serif;
+  font-size:21px;
+  line-height:1.88;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 620px at 6% -10%, #dcfce7 0%, transparent 58%),
+    radial-gradient(1000px 540px at 102% 0%, #e0f2fe 0%, transparent 55%),
+    linear-gradient(180deg,#f0fdf4,#fafaf9 45%,#fffbeb 100%);
+  background-attachment:fixed;
+  min-height:100vh;
+  -webkit-text-size-adjust:100%;
+}
+[id]{scroll-margin-top:100px;}
+strong,b{font-weight:800;}
+em{font-style:italic;}
+
+/* ===================== TOP BAR ===================== */
+.topbar{
+  position:sticky; top:0; z-index:60;
+  display:flex; align-items:center; gap:14px;
+  padding:12px 18px;
+  background:linear-gradient(120deg,#14532d 0%,#15803d 45%,#0369a1 100%);
+  color:#fff;
+  box-shadow:0 6px 24px rgba(20,83,45,.32);
+}
+.brand{display:flex; flex-direction:column; line-height:1.2; flex:1 1 auto; min-width:0;}
+.brand h1{
+  margin:0;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:22px; font-weight:800; letter-spacing:.2px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.brand-sub{font-size:14px; font-weight:600; opacity:.92;}
+.hamburger{
+  display:none; align-items:center; justify-content:center;
+  width:46px; height:46px; flex:0 0 auto;
+  border-radius:13px; border:1px solid rgba(255,255,255,.38);
+  background:rgba(255,255,255,.16); color:#fff;
+  font-size:22px; cursor:pointer; transition:.2s;
+}
+.hamburger:hover{background:rgba(255,255,255,.28);}
+.top-link{
+  flex:0 0 auto; text-decoration:none; color:#fff;
+  font-size:16px; font-weight:700;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.38);
+  padding:8px 14px; border-radius:999px; transition:.2s;
+}
+.top-link:hover{background:rgba(255,255,255,.32);}
+
+/* ===================== LAYOUT ===================== */
+.layout{
+  display:flex; align-items:flex-start; gap:26px;
+  max-width:1440px; margin:0 auto;
+  padding:26px 20px 70px;
+}
+.content{flex:1 1 auto; min-width:0;}
+
+/* ===================== SIDE NAV ===================== */
+.sidenav{
+  width:322px; flex:0 0 322px;
+  position:sticky; top:88px;
+  max-height:calc(100vh - 110px);
+  overflow-y:auto;
+  background:rgba(255,255,255,.96);
+  border:1px solid #d1fae5;
+  border-radius:var(--radius);
+  padding:18px 14px 22px;
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(10px);
+}
+.sidenav-head{
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:18px; font-weight:800; color:var(--green-deep);
+  display:flex; align-items:center; gap:8px;
+  padding-bottom:12px; margin-bottom:8px;
+  border-bottom:3px solid #fde68a;
+}
+.nav-main{
+  display:block; text-decoration:none;
+  font-size:18px; font-weight:800; line-height:1.5;
+  color:var(--ink);
+  padding:11px 13px; border-radius:12px;
+  border-left:5px solid transparent; transition:.22s;
+}
+.nav-main:hover,.nav-main.active{
+  background:linear-gradient(90deg,#dcfce7,#e0f2fe);
+  border-left-color:var(--green);
+  color:var(--green-deep);
+  transform:translateX(3px);
+}
+.nav-group{
+  margin-top:6px;
+  padding:8px 12px;
+  background:#f6fdf8;
+  border:1px dashed #bbf7d0;
+  border-radius:12px;
+}
+.nav-group-title{
+  display:block;
+  font-size:14px; font-weight:800; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--green-deep);
+  margin-bottom:6px;
+}
+.nav-sub{display:flex; flex-direction:column; gap:3px;}
+.nav-sub a{
+  display:flex; align-items:flex-start; gap:8px;
+  text-decoration:none; font-size:16px; font-weight:700;
+  color:var(--soft); padding:7px 10px;
+  border-radius:9px; transition:.18s;
+  line-height:1.45;
+}
+.nav-sub a:hover{
+  background:#dcfce7; color:var(--green-deep);
+  transform:translateX(2px);
+}
+.nav-sub a .num{
+  display:inline-flex; align-items:center; justify-content:center;
+  flex:0 0 auto;
+  min-width:26px; height:26px; padding:0 6px;
+  background:var(--green); color:#fff;
+  border-radius:7px;
+  font-family:'Poppins',sans-serif;
+  font-size:13px; font-weight:800;
+  margin-top:1px;
+}
+.nav-sub.sky a:hover{background:#e0f2fe; color:var(--sky-deep);}
+.nav-sub.sky a .num{background:var(--sky);}
+.nav-sub.earth a:hover{background:#fef3c7; color:var(--earth);}
+.nav-sub.earth a .num{background:var(--earth);}
+.nav-sub.rose a:hover{background:#ffe4e6; color:var(--rose);}
+.nav-sub.rose a .num{background:var(--rose);}
+.nav-note{
+  margin-top:18px; padding:13px 15px;
+  font-size:15px; font-weight:700; line-height:1.65;
+  color:#14532d;
+  background:linear-gradient(135deg,#dcfce7,#fef3c7);
+  border-radius:14px;
+}
+.overlay{
+  position:fixed; inset:0; z-index:70;
+  background:rgba(15,23,42,.48);
+  opacity:0; visibility:hidden; transition:.3s;
+}
+.overlay.show{opacity:1; visibility:visible;}
+
+/* ===================== CARD ===================== */
+.card{
+  --acc:#15803d;
+  --acc-soft:#f0fdf4;
+  background:var(--paper);
+  border:1px solid #eef3f0;
+  border-top:9px solid var(--acc);
+  border-radius:var(--radius);
+  padding:26px 26px 32px;
+  margin-bottom:30px;
+  box-shadow:var(--shadow);
+}
+.card.intro{--acc:#14532d; --acc-soft:#f0fdf4;}
+.card.c1{--acc:#15803d; --acc-soft:#f0fdf4;}
+.card.c2{--acc:#0369a1; --acc-soft:#e0f2fe;}
+.card.c3{--acc:#b45309; --acc-soft:#fffbeb;}
+.card.c4{--acc:#be123c; --acc-soft:#fff1f2;}
+.card.c5{--acc:#6d28d9; --acc-soft:#f5f3ff;}
+
+.card-head{display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:6px;}
+.pill{
+  font-family:'Poppins',sans-serif;
+  font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+  color:#fff; background:var(--acc);
+  padding:6px 15px; border-radius:999px;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+h2{
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:27px; font-weight:800; line-height:1.4;
+  margin:0; color:var(--ink);
+}
+.lead{
+  margin:10px 0 0; font-size:20px; font-weight:600; color:var(--soft);
+  line-height:1.8;
+}
+
+/* ===================== INFO BANNER ===================== */
+.info-banner{
+  background:linear-gradient(135deg,#dcfce7,#e0f2fe);
+  border:1.5px dashed #86efac;
+  border-radius:16px;
+  padding:16px 20px;
+  margin:14px 0 4px;
+  font-size:19px; font-weight:600; color:#14532d;
+  line-height:1.85;
+}
+.info-banner strong{color:var(--green);}
+
+/* ===================== SECTION TITLES ===================== */
+.sect{
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:22px; font-weight:800; line-height:1.55;
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:10px;
+  justify-content:space-between;
+  margin:34px 0 18px;
+  padding:14px 18px;
+  background:linear-gradient(90deg,var(--acc-soft),#ffffff);
+  border:1px solid var(--line);
+  border-left:7px solid var(--acc);
+  border-radius:0 14px 14px 0;
+  color:var(--ink);
+}
+.sect:first-of-type{margin-top:22px;}
+.marks{
+  flex:0 0 auto; font-size:14px; font-weight:800;
+  color:#fff; background:var(--acc);
+  padding:3px 13px; border-radius:999px; white-space:nowrap;
+}
+
+/* ===================== GLOSSARY ===================== */
+.glossary{display:flex; flex-direction:column; gap:12px; margin-top:6px;}
+.gloss-item{
+  display:grid; grid-template-columns:52px 1fr; gap:14px;
+  align-items:start;
+  background:#f6fdf8;
+  border:1px solid #dcfce7;
+  border-radius:15px;
+  padding:14px 16px;
+  transition:.2s;
+}
+.gloss-item:hover{background:#ecfdf5; border-color:#86efac; transform:translateX(3px);}
+.gloss-no{
+  display:flex; align-items:center; justify-content:center;
+  width:52px; height:52px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#14532d,#15803d);
+  color:#fff; font-family:'Poppins',sans-serif;
+  font-size:19px; font-weight:800;
+  box-shadow:0 5px 14px rgba(20,83,45,.3);
+}
+.gloss-term{
+  display:block; font-weight:800; font-size:20px;
+  color:var(--green-deep); margin-bottom:3px;
+}
+.gloss-def{
+  margin:0; font-size:20px; font-weight:600; color:#334155;
+  line-height:1.78;
+}
+
+/* ===================== REGION CARDS ===================== */
+.region{
+  border-radius:16px;
+  border:1px solid #e5eef2;
+  border-left:8px solid var(--racc,#15803d);
+  background:#ffffff;
+  padding:16px 20px 18px;
+  margin:16px 0;
+  box-shadow:0 4px 16px rgba(15,23,42,.05);
+  transition:.2s;
+}
+.region:hover{box-shadow:0 8px 22px rgba(15,23,42,.10);}
+.region:nth-of-type(1){--racc:#0d9488; --rsoft:#ecfdf5;}
+.region:nth-of-type(2){--racc:#0369a1; --rsoft:#e0f2fe;}
+.region:nth-of-type(3){--racc:#b45309; --rsoft:#fffbeb;}
+.region:nth-of-type(4){--racc:#65a30d; --rsoft:#f7fee7;}
+.region:nth-of-type(5){--racc:#be123c; --rsoft:#fff1f2;}
+.region:nth-of-type(6){--racc:#7c3aed; --rsoft:#f5f3ff;}
+.region:nth-of-type(7){--racc:#15803d; --rsoft:#f0fdf4;}
+
+.region-head{
+  display:flex; align-items:flex-start; gap:12px;
+  margin-bottom:10px;
+  padding-bottom:10px;
+  border-bottom:2px dashed var(--rsoft);
+}
+.region-icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  flex:0 0 auto;
+  width:46px; height:46px;
+  background:var(--racc); color:#fff;
+  border-radius:12px;
+  font-size:22px;
+  box-shadow:0 4px 12px rgba(0,0,0,.14);
+}
+.region-title{
+  margin:0; font-family:'Mukta','Poppins',sans-serif;
+  font-size:20px; font-weight:800;
+  color:var(--racc); line-height:1.4;
+  flex:1;
+}
+.region-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:10px 18px;
+}
+.region-row{display:flex; flex-direction:column; padding:4px 0;}
+.region-row .k{
+  font-size:13px; font-weight:800; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--racc); opacity:.9;
+}
+.region-row .v{
+  font-size:18px; font-weight:600;
+  line-height:1.65; color:#334155;
+}
+
+/* ===================== FLOW DIAGRAM ===================== */
+.flow-diagram{
+  background:linear-gradient(135deg,#dcfce7,#e0f2fe);
+  border:1.5px dashed #86efac;
+  border-radius:18px;
+  padding:22px 20px;
+  margin:18px 0;
+}
+.flow-title{
+  text-align:center;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:18px; font-weight:800; color:var(--green-deep);
+  margin-bottom:16px;
+}
+.flow-root{
+  background:#fff;
+  border:2px solid var(--green);
+  border-radius:14px;
+  padding:14px 18px;
+  text-align:center;
+  font-weight:800; font-size:18px;
+  color:var(--green-deep);
+  max-width:400px; margin:0 auto 14px;
+  box-shadow:0 4px 14px rgba(21,128,61,.15);
+}
+.flow-arrow{
+  text-align:center;
+  font-size:24px; color:var(--green);
+  line-height:1; margin:6px 0;
+}
+.flow-mid{
+  background:#fff;
+  border:2px solid var(--sky);
+  border-radius:14px;
+  padding:12px 18px;
+  text-align:center;
+  font-weight:800; font-size:17px;
+  color:var(--sky);
+  max-width:360px; margin:0 auto 14px;
+  box-shadow:0 4px 12px rgba(3,105,161,.15);
+}
+.flow-branches{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:10px;
+}
+.flow-branch{
+  background:#fff;
+  border:1.5px solid #bbf7d0;
+  border-top:5px solid var(--green);
+  border-radius:12px;
+  padding:12px 14px;
+  text-align:center;
+  font-size:16px; font-weight:700; color:#334155;
+  line-height:1.55;
+}
+.flow-branch:nth-child(2){border-top-color:var(--sky); border-color:#bae6fd;}
+.flow-branch:nth-child(3){border-top-color:var(--earth); border-color:#fde68a;}
+
+/* ===================== TABLES ===================== */
+.table-wrap{
+  overflow-x:auto; -webkit-overflow-scrolling:touch;
+  border:1px solid var(--line); border-radius:15px;
+  margin:16px 0; box-shadow:0 4px 16px rgba(15,23,42,.05);
+}
+table{width:100%; border-collapse:collapse; min-width:640px; font-size:18px;}
+th{
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:16px; font-weight:800; text-align:left;
+  color:#fff; background:var(--acc);
+  padding:12px 13px; letter-spacing:.02em;
+  line-height:1.5; vertical-align:middle;
+}
+td{padding:11px 13px; border-top:1px solid #eef1f7; font-weight:600; vertical-align:top; line-height:1.7;}
+tbody tr:nth-child(even){background:#f6fdf8;}
+tbody tr:hover{background:#ecfdf5;}
+
+/* ===================== ACTIVITY / EXERCISE ===================== */
+.activity{
+  background:#ffffff;
+  border:1px solid #e5eef2;
+  border-left:7px solid var(--earth);
+  border-radius:16px;
+  padding:18px 22px 20px;
+  margin:20px 0;
+  box-shadow:0 4px 16px rgba(180,83,9,.06);
+}
+.activity-title{
+  display:flex; align-items:flex-start; gap:12px;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:19px; font-weight:800;
+  color:#0f172a; line-height:1.55;
+  margin:0 0 12px;
+  padding-bottom:12px;
+  border-bottom:2px dashed #fde68a;
+}
+.act-badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  flex:0 0 auto;
+  min-width:48px; height:42px; padding:0 8px;
+  background:linear-gradient(135deg,#78350f,#b45309);
+  color:#fff; font-family:'Poppins',sans-serif;
+  font-size:13px; font-weight:800;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(180,83,9,.28);
+  margin-top:2px;
+}
+.answer-block{
+  background:linear-gradient(135deg,#fffbeb,#ffffff);
+  border-left:5px solid var(--earth);
+  border-radius:0 12px 12px 0;
+  padding:14px 18px;
+  font-size:20px; line-height:1.85; color:#334155;
+}
+.answer-block p{margin:0 0 10px;}
+.answer-block p:last-child{margin-bottom:0;}
+.answer-block ul, .answer-block ol{margin:8px 0 10px 24px; padding:0;}
+.answer-block li{font-size:19px; margin:7px 0; line-height:1.8;}
+.answer-block strong{color:var(--earth);}
+
+/* ===================== QA BLOCKS ===================== */
+.qa{
+  background:#fafbfe;
+  border:1px solid #eef1f7;
+  border-radius:15px;
+  padding:16px 18px;
+  margin:15px 0;
+  transition:.2s;
+}
+.qa:hover{background:#f6f9ff; border-color:#dde6f6;}
+.qa-q{
+  margin:0 0 12px; font-size:21px; font-weight:800;
+  line-height:1.6; color:#111827;
+  display:flex; gap:11px; align-items:flex-start;
+}
+.qnum{
+  display:inline-flex; align-items:center; justify-content:center;
+  flex:0 0 auto; min-width:44px; height:44px; padding:0 8px;
+  background:var(--acc); color:#fff;
+  border-radius:12px; font-size:15px; font-weight:800;
+  margin-top:2px;
+}
+.qa-a{
+  margin:0; padding:14px 18px;
+  background:#ffffff;
+  border-left:5px solid var(--acc);
+  border-radius:0 12px 12px 0;
+  font-size:21px; line-height:1.9;
+  color:#243043;
+}
+.qa-a .lbl{
+  display:block; margin-bottom:6px;
+  font-family:'Poppins',sans-serif;
+  font-size:13px; font-weight:800; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--acc);
+}
+.qa-a p{margin:0 0 10px;}
+.qa-a p:last-child{margin-bottom:0;}
+.qa-a ul, .qa-a ol{margin:8px 0 10px 24px; padding:0;}
+.qa-a li{font-size:20px; margin:6px 0; line-height:1.8;}
+
+/* ===================== LONG ANSWER ===================== */
+.long-q{
+  background:#ffffff;
+  border:1px solid #eef1f7;
+  border-radius:18px;
+  padding:22px 24px 22px;
+  margin:22px 0;
+  box-shadow:0 6px 20px rgba(15,23,42,.06);
+}
+.long-q .q-title{
+  font-size:21px; font-weight:800; color:#0f172a;
+  background:linear-gradient(135deg,var(--acc-soft),#ffffff);
+  border-left:6px solid var(--acc);
+  padding:13px 18px;
+  border-radius:0 12px 12px 0;
+  margin:0 0 18px;
+  line-height:1.65;
+}
+.lead-block{
+  background:linear-gradient(135deg,#f0fdf4,#ffffff);
+  border:1px solid #dcfce7;
+  border-left:5px solid var(--green);
+  border-radius:0 13px 13px 0;
+  padding:14px 18px;
+  margin:14px 0;
+  font-weight:600;
+  font-size:20px;
+  color:#334155;
+  line-height:1.85;
+}
+.lead-block strong{color:var(--green-deep);}
+.block-head{
+  display:inline-block;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:18px; font-weight:800;
+  color:#fff; background:var(--acc);
+  padding:6px 18px; border-radius:22px;
+  margin:22px 0 10px;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+.mini-list{
+  list-style:none; padding:0; margin:12px 0;
+  counter-reset:mini;
+}
+.mini-list li{
+  counter-increment:mini;
+  position:relative;
+  background:#f6fdf8;
+  border:1px solid #dcfce7;
+  border-radius:13px;
+  padding:12px 16px 12px 52px;
+  margin:9px 0;
+  font-size:20px; font-weight:600; line-height:1.78;
+  color:#334155;
+  transition:.2s;
+}
+.mini-list li:hover{background:#ecfdf5; border-color:#a7f3d0;}
+.mini-list li::before{
+  content:counter(mini) ".";
+  position:absolute; left:15px; top:12px;
+  width:28px; height:28px;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--acc); color:#fff;
+  border-radius:8px;
+  font-family:'Poppins',sans-serif;
+  font-size:14px; font-weight:800;
+}
+.mini-list li strong{color:var(--green-deep);}
+.conclusion{
+  background:linear-gradient(90deg,#fef3c7,#fffbeb);
+  border-left:6px solid #d97706;
+  border-radius:0 12px 12px 0;
+  padding:14px 18px;
+  margin:18px 0 6px;
+  font-size:20px; font-weight:700; line-height:1.85;
+  color:#3f2d08;
+}
+.conclusion strong{color:#b45309;}
+
+/* ===================== TIP BOX ===================== */
+.tipbox{
+  background:linear-gradient(135deg,#dcfce7,#e0f2fe);
+  border:1px solid #86efac;
+  border-radius:15px;
+  padding:16px 18px;
+  margin-top:20px;
+}
+.tipbox h4{
+  margin:0 0 8px;
+  font-family:'Mukta','Poppins',sans-serif;
+  font-size:17px; font-weight:800; color:var(--green-deep);
+  letter-spacing:.04em;
+}
+.tipbox p{margin:0; font-size:19px; font-weight:600; color:#334155; line-height:1.8;}
+
+/* ===================== FOOTER ===================== */
+.footer{
+  margin-top:10px;
+  background:linear-gradient(135deg,#14532d,#1e293b);
+  color:#fff; text-align:center;
+  padding:30px 20px;
+  border-radius:22px 22px 0 0;
+}
+.footer .big{font-family:'Mukta','Poppins',sans-serif; font-size:21px; font-weight:800; color:#fcd34d;}
+.footer .small{font-size:16px; opacity:.88; margin-top:6px;}
+
+/* ===================== BACK TO TOP ===================== */
+#toTop{
+  position:fixed; right:20px; bottom:24px; z-index:90;
+  width:56px; height:56px; border-radius:50%;
+  border:none; cursor:pointer;
+  font-size:24px; font-weight:800; color:#fff;
+  background:linear-gradient(135deg,#15803d,#0369a1);
+  box-shadow:0 10px 26px rgba(21,128,61,.42);
+  display:none; align-items:center; justify-content:center;
+  transition:transform .25s, box-shadow .25s;
+}
+#toTop:hover{transform:translateY(-4px) scale(1.06);}
+#toTop.show{display:flex;}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:1023px){
+  .hamburger{display:inline-flex;}
+  .layout{padding:18px 14px 80px; gap:0;}
+  .sidenav{
+    position:fixed; top:0; left:0; z-index:80;
+    width:318px; flex:none; height:100%;
+    max-height:none; border-radius:0 18px 18px 0;
+    padding:78px 14px 40px;
+    transform:translateX(-108%);
+    transition:transform .32s ease;
+    border:none;
+  }
+  .sidenav.open{transform:translateX(0);}
+}
+@media (max-width:640px){
+  body{font-size:20px;}
+  .brand h1{font-size:17px;}
+  .brand-sub{display:none;}
+  .top-link{display:none;}
+  .card{padding:20px 16px 26px; border-top-width:7px;}
+  h2{font-size:22px;}
+  .lead{font-size:18px;}
+  .sect{font-size:18px; padding:11px 13px;}
+  .gloss-item{grid-template-columns:44px 1fr; gap:11px; padding:11px 12px;}
+  .gloss-no{width:44px; height:44px; font-size:17px; border-radius:12px;}
+  .gloss-term,.gloss-def{font-size:18px;}
+  .region{padding:14px 14px 16px;}
+  .region-title{font-size:18px;}
+  .region-icon{width:40px; height:40px; font-size:18px;}
+  .region-row .v{font-size:17px;}
+  .activity{padding:14px 16px;}
+  .activity-title{font-size:17px;}
+  .answer-block{font-size:18px; padding:12px 14px;}
+  .answer-block li{font-size:17px;}
+  .qa{padding:13px 14px;}
+  .qa-q{font-size:19px;}
+  .qa-a{font-size:19px; padding:11px 13px;}
+  .qa-a li{font-size:18px;}
+  .qnum{min-width:38px; height:38px; font-size:13px;}
+  .mini-list li{font-size:18px; padding:11px 13px 11px 46px;}
+  .lead-block{font-size:18px; padding:12px 14px;}
+  .long-q{padding:16px 14px;}
+  .long-q .q-title{font-size:18px; padding:11px 13px;}
+  .pill{font-size:12px;}
+  .flow-branches{grid-template-columns:1fr;}
+}
+@media (max-width:400px){
+  body{font-size:19px;}
+  .qa-q,.mini-list li{font-size:17px;}
+  .qa-a,.answer-block{font-size:17px;}
+}
+
+/* ===================== PRINT ===================== */
+@media print{
+  .topbar,.sidenav,.overlay,#toTop{display:none !important;}
+  .layout{padding:0;}
+  .card{box-shadow:none; border:1px solid #ddd; page-break-inside:avoid;}
+  body{background:#fff; font-size:12pt;}
+  .qa,.gloss-item,.region,.activity,.long-q{break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar" id="top">
+  <button class="hamburger" id="menuBtn" aria-label="खोल्नुहोस्" aria-controls="sidenav" aria-expanded="false">☰</button>
+  <div class="brand">
+    <h1>कक्षा ११ सामाजिक — एकाइ ५ · पाठ ३</h1>
+    <span class="brand-sub">विश्वका भौगोलिक विविधता र जनजीवन</span>
+  </div>
+  <a class="top-link" href="#top">↑ माथि</a>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="layout">
+
+  <!-- ================= SIDE NAVIGATION ================= -->
+  <nav class="sidenav" id="sidenav" aria-label="विषयसूची">
+    <div class="sidenav-head">📑 विषयसूची</div>
+
+    <a class="nav-main" href="#intro">🌍 परिचय</a>
+
+    <a class="nav-main" href="#sec1">📖 खण्ड १ — पारिभाषिक शब्दावली</a>
+
+    <a class="nav-main" href="#sec2">📚 खण्ड २ — विस्तृत नोट</a>
+    <div class="nav-group">
+      <span class="nav-group-title">पर्यावरणीय क्षेत्रहरू</span>
+      <div class="nav-sub sky">
+        <a href="#reg1"><span class="num">क</span>भूमध्यरेखीय</a>
+        <a href="#reg2"><span class="num">ख</span>ध्रुवीय</a>
+        <a href="#reg3"><span class="num">ग</span>मरुभूमि</a>
+        <a href="#reg4"><span class="num">घ</span>समशीतोष्ण मैदान</a>
+        <a href="#reg5"><span class="num">ङ</span>भूमध्यसागरीय</a>
+        <a href="#reg6"><span class="num">च</span>सवाना</a>
+        <a href="#reg7"><span class="num">छ</span>पहाडी/मैदानी</a>
+      </div>
+    </div>
+    <div class="nav-sub sky">
+      <a href="#flow"><span class="num">↻</span>प्रवाहचित्र</a>
+      <a href="#table"><span class="num">≡</span>तुलनात्मक तालिका</a>
+    </div>
+
+    <a class="nav-main" href="#sec3">✍️ खण्ड ३ — क्रियाकलाप</a>
+    <div class="nav-sub earth">
+      <a href="#act1"><span class="num">१</span>स्थान पहिचान</a>
+      <a href="#act2"><span class="num">२</span>विपरीत अवस्था</a>
+      <a href="#act3"><span class="num">३</span>घना बस्ती</a>
+    </div>
+
+    <a class="nav-main" href="#sec4">📝 खण्ड ४ — अभ्यास समाधान</a>
+    <div class="nav-sub rose">
+      <a href="#ex1"><span class="num">१</span>कारण दिनुहोस्</a>
+      <a href="#ex2"><span class="num">२</span>जनजीवन भिन्नता</a>
+      <a href="#ex3"><span class="num">३</span>नेपालको सम्बन्ध</a>
+      <a href="#ex4"><span class="num">४</span>अन्तरसम्बन्ध</a>
+      <a href="#proj"><span class="num">📋</span>परियोजना</a>
+    </div>
+
+    <a class="nav-main" href="#sec5">🎯 खण्ड ५ — परीक्षा प्रश्नोत्तर</a>
+    <div class="nav-sub">
+      <a href="#q1"><span class="num">१</span>१ अङ्क</a>
+      <a href="#q5"><span class="num">५</span>५ अङ्क</a>
+      <a href="#q8"><span class="num">८</span>८ अङ्क</a>
+    </div>
+
+    <div class="nav-note">
+      💡 जुनसुकै शीर्षकमा क्लिक गर्नुहोस् — सिधै त्यही भागमा पुग्नुहुनेछ।
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="content">
+
+    <!-- ================= INTRO ================= -->
+    <article class="card intro" id="intro">
+      <div class="card-head">
+        <span class="pill">Capsule Note</span>
+      </div>
+      <h2>🌍 एकाइ ५: भूगोल र सामाजिक सम्बन्ध — पाठ ३</h2>
+      <p class="lead" style="font-size:22px; color:#14532d; font-weight:800;">विश्वका भौगोलिक विविधता र जनजीवन</p>
+
+      <div class="info-banner">
+        <strong>आदरणीय प्राध्यापक तथा विद्यार्थी वर्गमा विशेष अनुरोध:</strong> यो क्याप्सुल नोट राष्ट्रिय परीक्षा बोर्ड (NEB) को नयाँ पाठ्यक्रम र विशिष्टीकरण तालिका (Specification Grid) लाई ध्यानमा राखी परीक्षामा उत्कृष्ट अङ्क प्राप्त गर्ने (८ अङ्कको लामो उत्तरमा ७.५ सम्म र ५ अङ्कको छोटो उत्तरमा ४.५ सम्म) सुनिश्चितताका लागि तयार पारिएको हो। यस नोटभरि नेपाली व्याकरणको पूर्ण शुद्धता कायम गर्दै <strong>'सीप'</strong> र <strong>'सीपहरू' (दीर्घ)</strong> शब्दको मात्र सही प्रयोग गरिएको छ।
+      </div>
+    </article>
+
+    <!-- ================= SECTION 1: GLOSSARY ================= -->
+    <article class="card c1" id="sec1">
+      <div class="card-head">
+        <span class="pill">खण्ड १</span>
+      </div>
+      <h2>📖 पारिभाषिक शब्दावली (Key Glossary)</h2>
+      <p class="lead">यस पाठमा प्रयोग भएका मुख्य १० प्राविधिक, भौगोलिक तथा वातावरणीय शब्दहरूको परिभाषा।</p>
+
+      <div class="glossary">
+
+        <div class="gloss-item">
+          <div class="gloss-no">१</div>
+          <div>
+            <span class="gloss-term">भौगोलिक विविधता (Geographical Diversity)</span>
+            <p class="gloss-def">पृथ्वीको धरातलीय स्वरूप, हावापानी, तापमान, वर्षा र वनस्पतिमा पाइने भिन्नता वा विविधता जसले मानिसको जनजीवन र आर्थिक गतिविधिलाई प्रत्यक्ष प्रभाव पार्दछ।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">२</div>
+          <div>
+            <span class="gloss-term">सदाबहार वनस्पति (Evergreen Forest)</span>
+            <p class="gloss-def">वर्षैभरि पर्याप्त तापक्रम र वर्षा हुने भूमध्यरेखीय क्षेत्रमा पाइने, पात एकैपटक नझर्ने, अग्ला, मोटा र घना रुखहरू भएको जङ्गल।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">३</div>
+          <div>
+            <span class="gloss-term">मरुद्यान (Oasis)</span>
+            <p class="gloss-def">सुक्खा मरुभूमि क्षेत्रमा प्राकृतिक रूपमा पानी उपलब्ध हुने र त्यसको वरिपरि हरियाली, कृषि तथा सघन मानव बस्ती विकास हुने विशेष स्थान।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">४</div>
+          <div>
+            <span class="gloss-term">विश्वको अन्नको भण्डार (Granary of the World)</span>
+            <p class="gloss-def">उत्तर अमेरिकाको प्रेरिज जस्ता समशीतोष्ण घाँसे मैदान, जहाँ यान्त्रिक प्रविधिको प्रयोग गरी व्यावसायिक रूपमा अत्यधिक गहुँ उत्पादन गरी विश्वभर निर्यात गरिन्छ।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">५</div>
+          <div>
+            <span class="gloss-term">विश्वको बगैँचा (Orchard of the World)</span>
+            <p class="gloss-def">भूमध्यसागरीय हावापानी क्षेत्र (जस्तै: इटाली, ग्रिस, स्पेन), जहाँ हिउँदमा वर्षा र ग्रीष्ममा सुक्खा हुने भएकाले सुन्तला, कागती, अङ्गुर र जुनार जस्ता अमिला जातका फलफूल प्रचुर मात्रामा उत्पादन हुन्छ।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">६</div>
+          <div>
+            <span class="gloss-term">सवाना हावापानी (Savanna Climate)</span>
+            <p class="gloss-def">उष्ण कटिबन्धमा पर्ने कङ्गो र अमेजन बेसिन वरिपरिका अग्ला घाँसका मैदानहरू, जहाँ विभिन्न प्रजातिका वन्यजन्तुहरू पाइने भएकाले यसलाई 'विश्वको चिडियाखाना' पनि भनिन्छ।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">७</div>
+          <div>
+            <span class="gloss-term">इन्गुइट / एस्किमो (Inuit / Eskimo)</span>
+            <p class="gloss-def">ध्रुवीय तथा अत्यधिक चिसो क्षेत्र (जस्तै: ग्रिनल्यान्ड, उत्तरी क्यानाडा) मा बसोबास गर्ने आदिवासी जाति, जसले बरफको घर (इग्लु) बनाई सिल माछा र रेन्डियारको सिकार गरी जीवनयापन गर्छन्।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">८</div>
+          <div>
+            <span class="gloss-term">अनुस्थिति / उल्टो वर्षा प्रणाली (Opposite Rainfall Pattern)</span>
+            <p class="gloss-def">उत्तरी र दक्षिणी गोलार्धमा पर्ने एउटै हावापानी क्षेत्रमा पृथ्वीको वार्षिक गतिका कारण महिना अनुसार तापक्रम र वर्षाको अवस्था ठीक उल्टो हुने प्राकृतिक स्थिति।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">९</div>
+          <div>
+            <span class="gloss-term">जलविद्युत् सम्भाव्यता (Hydropower Potential)</span>
+            <p class="gloss-def">पहाडी तथा भिरालो भूभागबाट तीव्र गतिमा बग्ने नदीहरूबाट बिजुली निकाल्न सकिने प्राकृतिक क्षमता।</p>
+          </div>
+        </div>
+
+        <div class="gloss-item">
+          <div class="gloss-no">१०</div>
+          <div>
+            <span class="gloss-term">अनुकूलन (Adaptation)</span>
+            <p class="gloss-def">विभिन्न भौगोलिक तथा पर्यावरणीय क्षेत्रमा मानिसहरूले आफ्नो खानपान, भेषभूषा, आवास र पेसालाई त्यहाँको हावापानी अनुसार समायोजन गर्ने प्रक्रिया।</p>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ================= SECTION 2: STUDY NOTES ================= -->
+    <article class="card c2" id="sec2">
+      <div class="card-head">
+        <span class="pill">खण्ड २</span>
+      </div>
+      <h2>📚 विस्तृत प्राज्ञिक नोट</h2>
+      <p class="lead">विश्वका प्रमुख पर्यावरणीय क्षेत्रहरू र मानवीय जीवनशैली।</p>
+
+      <!-- Region 1 -->
+      <div class="region" id="reg1">
+        <div class="region-head">
+          <span class="region-icon">🌴</span>
+          <h3 class="region-title">(क) वर्षैभरि गर्मी हुने क्षेत्र (भूमध्यरेखीय क्षेत्र)</h3>
+        </div>
+        <div class="region-grid">
+          <div class="region-row"><span class="k">क्षेत्र</span><span class="v">दक्षिण अमेरिकाको अमेजन बेसिन, अफ्रिकाको कङ्गो बेसिन र पूर्वी द्वीप समूह</span></div>
+          <div class="region-row"><span class="k">विशेषता</span><span class="v">वर्षैभरि उच्च तापक्रम र दैनिक अपरान्हमा भारी वर्षा (Convectional Rainfall)। घना सदाबहार जङ्गल।</span></div>
+          <div class="region-row"><span class="k">जनजीवन</span><span class="v">औलो, कीराफट्याङ्ग्रा र बाढीका कारण जीवन कष्टकर। काठ काट्ने व्यवसाय र फिरन्ते जीवनशैली।</span></div>
+        </div>
+      </div>
+
+      <!-- Region 2 -->
+      <div class="region" id="reg2">
+        <div class="region-head">
+          <span class="region-icon">❄️</span>
+          <h3 class="region-title">(ख) वर्षैभरि धेरै चिसो हुने क्षेत्र (ध्रुवीय / टुन्ड्रा क्षेत्र)</h3>
+        </div>
+        <div class="region-grid">
+          <div class="region-row"><span class="k">क्षेत्र</span><span class="v">अन्टार्क्टिका, ग्रिनल्यान्ड, उत्तरी क्यानाडा र उत्तरी एसिया</span></div>
+          <div class="region-row"><span class="k">विशेषता</span><span class="v">जमिन वर्षैभरि हिउँले ढाकिने, अत्यधिक चिसो हावापानी</span></div>
+          <div class="region-row"><span class="k">जनजीवन</span><span class="v">इन्गुइट (एस्किमो) जातिको बसोबास, सिल माछा र पेन्गुइनको सिकार, काठ, पल्प र खनिज उत्खनन कार्य</span></div>
+        </div>
+      </div>
+
+      <!-- Region 3 -->
+      <div class="region" id="reg3">
+        <div class="region-head">
+          <span class="region-icon">🏜️</span>
+          <h3 class="region-title">(ग) अत्यन्त सुक्खा हावापानीको क्षेत्र (मरुभूमि क्षेत्र)</h3>
+        </div>
+        <div class="region-grid">
+          <div class="region-row"><span class="k">क्षेत्र</span><span class="v">अफ्रिकाको सहारा र कालाहारी, एसियाको अरब र थार, अमेरिकाको क्यालिफोर्निया र अटाकामा, अस्ट्रेलियाको केन्द्रीय मरुभूमि</span></div>
+          <div class="region-row"><span class="k">विशेषता</span><span class="v">पानी नपर्ने वा नगण्य पर्ने, काँडेदार क्याक्टस वनस्पति</span></div>
+          <div class="region-row"><span class="k">जनजीवन</span><span class="v">ऊँटलाई मरुभूमिको जहाजका रूपमा प्रयोग, मरुद्यानमा कृषि, मध्यपूर्वमा खनिज तेल (पेट्रोलियम) उत्खनन र पर्यटन</span></div>
+        </div>
+      </div>
+
+      <!-- Region 4 -->
+      <div class="region" id="reg4">
+        <div class="region-head">
+          <span class="region-icon">🌾</span>
+          <h3 class="region-title">(घ) विश्वको अन्नको भण्डार (समशीतोष्ण घाँसे मैदान)</h3>
+        </div>
+        <div class="region-grid">
+          <div class="region-row"><span class="k">क्षेत्र</span><span class="v">उत्तर अमेरिकाको 'प्रेरिज', अस्ट्रेलियाको 'डाउन्स', युरोप र एसियाको 'स्टेप्स', दक्षिण अमेरिकाको 'पम्पास'</span></div>
+          <div class="region-row"><span class="k">विशेषता</span><span class="v">समशीतोष्ण हावापानी, विशाल घाँसे मैदान</span></div>
+          <div class="region-row"><span class="k">जनजीवन</span><span class="v">मेसिनको प्रयोग गरी गहुँको व्यावसायिक खेती, गाईपालन र दुग्ध उद्योग</span></div>
+        </div>
+      </div>
+
+      <!-- Region 5 -->
+      <div class="region" id="reg5">
+        <div class="region-head">
+          <span class="region-icon">🍊</span>
+          <h3 class="region-title">(ङ) विश्वको बगैँचा (भूमध्यसागरीय क्षेत्र)</h3>
+        </div>
+        <div class="region-grid">
+          <div class="region-row"><span class="k">क्षेत्र</span><span class="v">दक्षिण युरोप (इटाली, ग्रिस), भूमध्यसागर वरपरका क्षेत्र</span></div>
+          <div class="region-row"><span class="k">विशेषता</span><span class="v">हिउँदमा वर्षा र ग्रीष्ममा सुक्खा हावापानी</span></div>
+          <div class="region-row"><span class="k">जनजीवन</span><span class="v">सुन्तला, जुनार र अङ्गुर जस्ता अमिला फलफूलको व्यापक खेती र मदिरा (वाइन) उद्योग</span></div>
+        </div>
+      </div>
+
+      <!-- Region 6 -->
+      <div class="region" id="reg6">
+        <div class="region-head">
+          <span class="region-icon">🦁</span>
+          <h3 class="region-title">(च) उष्ण घाँसे मैदान (सवाना क्षेत्र)</h3>
+        </div>
+        <div class="region-grid">
+          <div class="region-row"><span class="k">विशेषता</span><span class="v">अग्ला घाँस र ठुला फाँटहरू, जङ्गली जनावरहरूको प्रचुरता ('विश्वको चिडियाखाना')</span></div>
+          <div class="region-row"><span class="k">जनजीवन</span><span class="v">पशुपालन, पर्यटन र राष्ट्रिय निकुञ्जहरू</span></div>
+        </div>
+      </div>
+
+      <!-- Region 7 -->
+      <div class="region" id="reg7">
+        <div class="region-head">
+          <span class="region-icon">⛰️</span>
+          <h3 class="region-title">(छ) पहाडी तथा मैदानी क्षेत्रहरू</h3>
+        </div>
+        <div class="region-grid">
+          <div class="region-row"><span class="k">पहाडी क्षेत्र</span><span class="v">भिरालो जमिन, कृषि निर्वाहमुखी (चिया, मकै, फलफूल), जलविद्युत् र पदयात्रा पर्यटनको सम्भावना</span></div>
+          <div class="region-row"><span class="k">मैदानी क्षेत्र</span><span class="v">नदी किनारका उपजाऊ मैदान (नाइल, मेसोपोटामिया, गङ्गा-ब्रह्मपुत्र), सघन जनघनत्व, उद्योग, व्यापार र विकसित सहरहरू</span></div>
+        </div>
+      </div>
+
+      <!-- Flow Diagram -->
+      <h3 class="sect" id="flow">
+        <span>भौगोलिक विविधता र जनजीवनबिचको अन्तरसम्बन्ध</span>
+      </h3>
+
+      <div class="flow-diagram">
+        <div class="flow-title">🌍 भौगोलिक अवस्थाबाट जनजीवनसम्मको प्रवाह</div>
+
+        <div class="flow-root">🌏 भौगोलिक अवस्था र हावापानी</div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-mid">🏞️ प्राकृतिक स्रोत र धरातल</div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-branches">
+          <div class="flow-branch">💼 आर्थिक गतिविधि र पेसा</div>
+          <div class="flow-branch">🏠 आवास र भेषभूषा</div>
+          <div class="flow-branch">🍲 खानपान र जीवनशैली</div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-root" style="border-color:#0369a1; color:#075985;">🌐 क्षेत्रीय र प्रादेशिक अन्तरसम्बन्ध</div>
+      </div>
+
+      <!-- Table -->
+      <h3 class="sect" id="table">
+        <span>विश्वका प्रमुख भौगोलिक क्षेत्रहरूको तुलनात्मक तालिका</span>
+      </h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>क्र.</th>
+              <th>भौगोलिक क्षेत्र</th>
+              <th>हावापानी र तापमान</th>
+              <th>मुख्य आर्थिक गतिविधि</th>
+              <th>जनजीवन र आवास</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>१</td><td><strong>भूमध्यरेखीय</strong></td><td>वर्षैभरि गर्मी र अपरान्हमा दैनिक वर्षा</td><td>काठ काट्ने, फिरन्ते सिकार र सङ्कलन</td><td>पतलो र तितरबितर बस्ती, कष्टकर जीवन</td></tr>
+            <tr><td>२</td><td><strong>ध्रुवीय (टुन्ड्रा)</strong></td><td>वर्षैभरि अत्यधिक चिसो र हिउँ</td><td>सिल माछाको सिकार, खनिज उत्खनन, पर्यटन</td><td>एस्किमो/इन्गुइट जाति, बरफको घर (इग्लु)</td></tr>
+            <tr><td>३</td><td><strong>मरुभूमि</strong></td><td>अत्यन्त सुक्खा, पानीको अभाव</td><td>ऊँट पालन, पेट्रोलियम उत्खनन, मरुद्यान कृषि</td><td>घुमन्ते जीवन, मरुद्यान नजिक सघन बस्ती</td></tr>
+            <tr><td>४</td><td><strong>समशीतोष्ण घाँसे मैदान</strong></td><td>ठन्डा हिउँद, न्यानो ग्रीष्म</td><td>मेसिनद्वारा गहुँ खेती, पशुपालन, दुग्ध उद्योग</td><td>आधुनिक यान्त्रिक कृषि समाज, सम्पन्न जनजीवन</td></tr>
+            <tr><td>५</td><td><strong>भूमध्यसागरीय</strong></td><td>हिउँदमा वर्षा, ग्रीष्ममा सुक्खा</td><td>अमिला फलफूल खेती, वाइन उद्योग, पर्यटन</td><td>सुव्यवस्थित, व्यापारिक र समृद्ध जनजीवन</td></tr>
+            <tr><td>६</td><td><strong>पहाडी</strong></td><td>ठन्डा हावापानी, भिरालो भूभाग</td><td>निर्वाहमुखी कृषि, जडीबुटी, जलविद्युत्, पर्यटन</td><td>छरिएका बस्ती, यातायातमा कठिनाइ</td></tr>
+            <tr><td>७</td><td><strong>मैदानी</strong></td><td>समशीतोष्ण/उष्ण, उपजाऊ माटो</td><td>सघन खेतीपाती, उद्योग, व्यापार, मत्स्यपालन</td><td>सघन जनघनत्व, आधुनिक सहरहरू</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- ================= SECTION 3: ACTIVITIES ================= -->
+    <article class="card c3" id="sec3">
+      <div class="card-head">
+        <span class="pill">खण्ड ३</span>
+      </div>
+      <h2>✍️ क्रियाकलापको पूर्ण समाधान</h2>
+      <p class="lead">पाठ्यपुस्तकका तीन क्रियाकलापको नमुना उत्तर।</p>
+
+      <!-- Act 1 -->
+      <div class="activity" id="act1">
+        <p class="activity-title"><span class="act-badge">क्रि. १</span>पाठमा उल्लिखित स्थानहरू पहिचान गरी तिनका विशेषताहरू लेख्नुहोस्।</p>
+        <div class="answer-block">
+          <ul>
+            <li><strong>अमेजन बेसिन (दक्षिण अमेरिका):</strong> वर्षैभरि गर्मी र वर्षा हुने भूमध्यरेखीय क्षेत्र, घना सदाबहार जङ्गल।</li>
+            <li><strong>साहारा मरुभूमि (अफ्रिका):</strong> विश्वको सबैभन्दा ठुलो सुक्खा उष्ण मरुभूमि, ऊँट पालन र मरुद्यान।</li>
+            <li><strong>प्रेरिज (उत्तर अमेरिका):</strong> विशाल समशीतोष्ण घाँसे मैदान, विश्वको अन्नको भण्डार (गहुँ उत्पादन)।</li>
+            <li><strong>ग्रीस र इटाली (दक्षिण युरोप):</strong> भूमध्यसागरीय हावापानी, सुन्तला र अङ्गुर जस्ता फलफूलको बगैँचा।</li>
+            <li><strong>मृत सागर (Dead Sea):</strong> समुद्र सतहभन्दा ४१८ मिटर तल रहेको विश्वकै सबैभन्दा होचो भूभाग, अत्यधिक नुनिलो पानी।</li>
+            <li><strong>सगरमाथा (नेपाल):</strong> समुद्र सतहबाट ८,८४८.८६ मिटर अग्लो विश्वको सर्वोच्च शिखर।</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Act 2 -->
+      <div class="activity" id="act2">
+        <p class="activity-title"><span class="act-badge">क्रि. २</span>समशीतोष्ण घाँसे क्षेत्रका दुईवटा चित्र (वर्षा र तापक्रम) मा विपरीत अवस्था देखिनुको कारण।</p>
+        <div class="answer-block">
+          <p>उत्तर अमेरिकाको डेनभर (Denver) र अस्ट्रेलियाको साभाना क्षेत्रका रेखाचित्रमा तापक्रम र वर्षाको अवस्था ठीक उल्टो देखिनुको मुख्य कारण <strong>भौगोलिक गोलार्धको भिन्नता</strong> हो। डेनभर उत्तरी गोलार्धमा पर्दछ भने अस्ट्रेलिया दक्षिणी गोलार्धमा पर्दछ। पृथ्वीको वार्षिक गतिका कारण जुन-जुलाईमा उत्तरी गोलार्ध सूर्यतर्फ ढल्किँदा त्यहाँ ग्रीष्म ऋतु (गर्मी) हुन्छ भने सोही समयमा दक्षिणी गोलार्धमा सूर्यको किरण छड्के पर्ने भएकाले हिउँद ऋतु (चिसो) हुन्छ। त्यसैले एउटै हावापानी क्षेत्र भए पनि गोलार्ध फरक हुँदा महिना अनुसार तापक्रम र वर्षाको स्तम्भ उल्टो देखिन्छ।</p>
+        </div>
+      </div>
+
+      <!-- Act 3 -->
+      <div class="activity" id="act3">
+        <p class="activity-title"><span class="act-badge">क्रि. ३</span>विश्वको खाली नक्सामा घना बस्तीहरू हुनुका कारणहरू।</p>
+        <div class="answer-block">
+          <p>विश्वका नदी उपत्यका (जस्तै: गङ्गा, नाइल, मेसोपोटामिया) र समुद्री किनारमा घना बस्ती हुनुका कारणहरू:</p>
+          <ol>
+            <li><strong>सिँचाइ र उपजाऊ माटो:</strong> कृषि उत्पादनका लागि उर्वर भूमि उपलब्ध हुनु।</li>
+            <li><strong>यातायातको सुलभता:</strong> जलमार्ग र समतल सडक निर्माण सहज हुनु।</li>
+            <li><strong>उद्योग र व्यापार:</strong> कच्चा पदार्थ र तयारी वस्तु आयात-निर्यात गर्न सजिलो हुनु।</li>
+            <li><strong>अनुकूल हावापानी:</strong> बसोबासका लागि खानेपानी र अनुकूल जलवायु उपलब्ध हुनु।</li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= SECTION 4: EXERCISES ================= -->
+    <article class="card c4" id="sec4">
+      <div class="card-head">
+        <span class="pill">खण्ड ४</span>
+      </div>
+      <h2>📝 अभ्यास तथा परियोजना कार्यको समाधान</h2>
+      <p class="lead">पाठ्यपुस्तकका अभ्यास प्रश्नहरूको मॉडल उत्तर।</p>
+
+      <!-- Exercise 1 -->
+      <div class="qa" id="ex1">
+        <p class="qa-q"><span class="qnum">१</span>कारण दिनुहोस् (६ वटा उपप्रश्न)</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+
+          <p><strong>(क) मलेसियामा धेरै गर्मी र दैनिक वर्षा हुन्छ।</strong><br>
+          मलेसिया भूमध्यरेखा नजिक (०° देखि १०° अक्षांशबिच) पर्ने भएकाले यहाँ वर्षैभरि सूर्यका किरणहरू सोझो पर्छन्, जसले गर्दा अत्यधिक गर्मी हुन्छ। उच्च तापक्रमका कारण जलवाष्प भई आकाशमा कालो बादल बनी दैनिक अपरान्हमा संवहनीय वर्षा (Convectional Rainfall) हुन्छ।</p>
+
+          <p><strong>(ख) मरुभूमि क्षेत्रमा ऊँट पालन गरिन्छ।</strong><br>
+          ऊँटले मरुभूमिको कडा गर्मी सहन सक्ने, आँधीबाट जोगिन सक्ने परेला र नाकको बनोट भएको, र धेरै दिनसम्म पानी र खाना नखाई हिँड्न सक्ने क्षमता राख्दछ। साथै यसका चौडा खुट्टा बालुवामा भासिँदैनन्। त्यसैले मरुभूमिमा यातायात र सामान ओसार्न ऊँट अति उपयोगी हुने भएकाले ऊँट पालन गरिन्छ।</p>
+
+          <p><strong>(ग) समुद्री किनारमा ठुला सहरहरू रहेका छन्।</strong><br>
+          समुद्री किनारमा समशीतोष्ण र रमणीय हावापानी हुन्छ। साथै, समुद्री जलमार्गबाट अन्तर्राष्ट्रिय व्यापार, वस्तु आयात-निर्यात र मत्स्य व्यवसाय गर्न अत्यन्त सहज र सस्तो हुने भएकाले विश्वका अधिकांश ठुला सहरहरू समुद्री किनारमा रहेका छन्।</p>
+
+          <p><strong>(घ) इटाली र ग्रिसमा फलफूल खेती गरिन्छ।</strong><br>
+          इटाली र ग्रिसमा भूमध्यसागरीय हावापानी पाइन्छ, जहाँ हिउँदमा वर्षा र ग्रीष्ममा सुक्खा तथा न्यानो मौसम हुन्छ। यस्तो मौसम अमिला जातका फलफूल (सुन्तला, कागती, अङ्गुर, जुनार) को उत्पादनका लागि विश्वमै सबैभन्दा उत्तम मानिने भएकाले यहाँ व्यापक फलफूल खेती गरिन्छ।</p>
+
+          <p><strong>(ङ) हिमाली र पहाडी क्षेत्रका मानिसहरू तराई र बेँसीतर्फ सरिरहेका छन्।</strong><br>
+          हिमाली र पहाडी क्षेत्रमा कडा चिसो, भिरालो जमिन, कृषिमा कम उत्पादन र शिक्षा, स्वास्थ्य, रोजगारी तथा यातायात जस्ता पूर्वाधारको अभाव छ। अर्कातिर तराई र बेँसीमा सुगम यातायात, उपजाऊ जमिन र आधुनिक सेवासुविधा उपलब्ध भएकाले मानिसहरू तराईतर्फ बसाइँ सरिरहेका छन्।</p>
+
+          <p><strong>(च) गाउँ र सहरबिच अन्योन्याश्रित सम्बन्ध छ।</strong><br>
+          गाउँले सहरलाई खाद्यान्न, तरकारी, दुग्धजन्य पदार्थ, कच्चा पदार्थ र जनशक्ति उपलब्ध गराउँछ भने सहरले गाउँलाई तयारी वस्तु, प्रविधि, रासायनिक मल, शिक्षा, स्वास्थ्य र बजार सेवासुविधा प्रदान गर्दछ। त्यसैले गाउँ र सहर एकअर्कामा पूर्ण रूपमा निर्भर वा अन्योन्याश्रित छन्।</p>
+        </div>
+      </div>
+
+      <!-- Exercise 2 -->
+      <div class="qa" id="ex2">
+        <p class="qa-q"><span class="qnum">२</span>विश्वमा किन एकै प्रकारको जनजीवन छैन? कारणहरू खोजी गर्नुहोस्।</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>विश्वका विभिन्न भागमा एकै प्रकारको जनजीवन नहुनुका प्रमुख कारणहरू देहाय बमोजिम छन्:</p>
+          <ol>
+            <li><strong>धरातलीय स्वरूपमा भिन्नता:</strong> हिमाल, पहाड, मरुभूमि र मैदानको प्राकृतिक बनावट फरक हुनु।</li>
+            <li><strong>हावापानी र तापमानको भिन्नता:</strong> भूमध्यरेखीय अत्यधिक गर्मी, ध्रुवीय चिसो र मरुभूमिको सुक्खा मौसमले गर्दा खानपान र भेषभूषा फरक हुनु।</li>
+            <li><strong>प्राकृतिक स्रोतको उपलब्धता:</strong> पानी, वनस्पति, माटो र खनिज पदार्थको वितरण असमान हुनु।</li>
+            <li><strong>आधुनिक पूर्वाधार र प्रविधिमा पहुँच:</strong> विकसित र विकासोन्मुख क्षेत्रबिच यातायात, सञ्चार, शिक्षा र स्वास्थ्य सेवासुविधामा भिन्नता हुनु।</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Exercise 3 -->
+      <div class="qa" id="ex3">
+        <p class="qa-q"><span class="qnum">३</span>नेपालको भौगोलिक अवस्था र मानवीय क्रियाकलापबिचको सम्बन्ध उदाहरणसहित पुष्टि गर्नुहोस्।</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>नेपालको भौगोलिक बनावटले यहाँका मानिसको पेसा, खानपान, भेषभूषा र जीवनशैलीलाई प्रत्यक्ष नियन्त्रण र निर्देशन गरेको छ। यसलाई देहायका उदाहरणबाट पुष्टि गर्न सकिन्छ:</p>
+          <ul>
+            <li><strong>हिमाली क्षेत्र:</strong> अत्यधिक चिसो र भिरालो जमिनका कारण मानिसहरू बाक्लो उनी कपडा (बख्खु, दोचा) लगाउँछन्, भेडा-च्याङ्ग्रा पालन र जडीबुटी सङ्कलन गर्छन्, र ल्होसार जस्ता पर्व मनाउँछन्।</li>
+            <li><strong>पहाडी क्षेत्र:</strong> समशीतोष्ण हावापानीका कारण दौरा-सुरुवाल, गुन्यू-चोली लगाउँछन्, गराहा खेती (मकै, चिया, तरकारी) गर्छन्, र दशैँ-तिहार मनाउँछन्।</li>
+            <li><strong>तराई क्षेत्र:</strong> उष्ण हावापानीका कारण पातलो सुती कपडा (धोती, कुर्ता) लगाउँछन्, धान-गहुँको सघन खेती र उद्योग-व्यापारमा संलग्न हुन्छन्, र छठ तथा होली पर्व धूमधामका साथ मनाउँछन्।</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Exercise 4 -->
+      <div class="qa" id="ex4">
+        <p class="qa-q"><span class="qnum">४</span>भौगोलिक विविधताले क्षेत्रीय र प्रादेशिक अन्तरसम्बन्ध एवम् पहुँच र सहजतामा असर गर्दछ, किन?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>भौगोलिक बनावटले कुनै पनि क्षेत्रको विकास र अन्तरसम्बन्धमा निम्नानुसार असर पार्दछ:</p>
+          <ul>
+            <li><strong>पहुँच र सुगमता:</strong> तराई र समतल मैदानमा सडक, रेलमार्ग र विमानस्थल निर्माण गर्न सहज र सस्तो हुन्छ, जसले गर्दा आवतजावत र व्यापार सुगम हुन्छ। तर पहाड र हिमालमा भिरालो धरातलका कारण पूर्वाधार विकास कठिन र खर्चिलो हुन्छ।</li>
+            <li><strong>क्षेत्रीय आत्मनिर्भरता र परिपूरकता:</strong> हिमाली क्षेत्रले जडीबुटी र पशुजन्य उत्पादन दिन्छ, पहाडले फलफूल र जलविद्युत् दिन्छ, र तराईले खाद्यान्न र औद्योगिक उत्पादन दिन्छ। यसरी भौगोलिक विविधताले प्रदेशहरूलाई एकअर्कामा निर्भर र अन्तरसम्बन्धित बनाउँछ।</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project -->
+      <div class="activity" id="proj">
+        <p class="activity-title"><span class="act-badge">परियोजना</span>समुदायको अर्थतन्त्र र जीविकोपार्जनमा भौगोलिक कारणहरूको अध्ययन प्रतिवेदन।</p>
+        <div class="answer-block">
+          <ol>
+            <li><strong>शीर्षक:</strong> काठमाडौँ उपत्यका/तराई/पहाडी क्षेत्रको भौगोलिक अवस्था र स्थानीय जीविकोपार्जन।</li>
+            <li><strong>उद्देश्य:</strong> स्थानीय भौगोलिक धरातलले कृषि र व्यापारमा पारेको प्रभाव पहिचान गर्ने।</li>
+            <li><strong>तथ्याङ्क सङ्कलन विधि:</strong> अवलोकन र स्थानीय बासिन्दासँगको अन्तर्वार्ता।</li>
+            <li><strong>निष्कर्ष:</strong> भौगोलिक अनुकूलताका कारण व्यापार र कृषि सहज भएको तर सहरीकरणले कृषि योग्य जमिन घटेको।</li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= SECTION 5: EXAM Q&A ================= -->
+    <article class="card c5" id="sec5">
+      <div class="card-head">
+        <span class="pill">खण्ड ५</span>
+      </div>
+      <h2>🎯 परीक्षा विशेष सम्भावित प्रश्नोत्तर</h2>
+      <p class="lead">१, ५ र ८ अङ्कका प्रश्नहरू — बोर्ड ढाँचामा उत्तरकुञ्जी सहित।</p>
+
+      <!-- 1 mark -->
+      <h3 class="sect" id="q1">
+        <span>अति संक्षिप्त प्रश्नोत्तरहरू</span>
+        <span class="marks">१ अङ्क</span>
+      </h3>
+
+      <div class="qa">
+        <p class="qa-q"><span class="qnum">१</span>'विश्वको अन्नको भण्डार' (Granary of the World) भन्नाले कुन भौगोलिक क्षेत्रलाई बुझिन्छ?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>उत्तर अमेरिकाको 'प्रेरिज' जस्ता समशीतोष्ण घाँसे मैदानलाई 'विश्वको अन्नको भण्डार' भनिन्छ।</p>
+        </div>
+      </div>
+
+      <div class="qa">
+        <p class="qa-q"><span class="qnum">२</span>इन्गुइट (एस्किमो) जातिले बस्नका लागि बनाउने बरफको घरलाई के भनिन्छ?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>इन्गुइट जातिले बनाउने बरफको घरलाई 'इग्लु' (Igloo) भनिन्छ।</p>
+        </div>
+      </div>
+
+      <div class="qa">
+        <p class="qa-q"><span class="qnum">३</span>मरुभूमिमा जल र हरियाली पाइने विशेष स्थानलाई के भनिन्छ?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>मरुभूमिमा जल र हरियाली पाइने स्थानलाई 'मरुद्यान' (Oasis) भनिन्छ।</p>
+        </div>
+      </div>
+
+      <div class="qa">
+        <p class="qa-q"><span class="qnum">४</span>'विश्वको बगैँचा' भन्नाले कुन हावापानी क्षेत्रलाई चिनिन्छ?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>भूमध्यसागरीय हावापानी क्षेत्रलाई 'विश्वको बगैँचा' भनिन्छ।</p>
+        </div>
+      </div>
+
+      <div class="qa">
+        <p class="qa-q"><span class="qnum">५</span>मृत सागर (Dead Sea) को मुख्य विशेषता के हो?</p>
+        <div class="qa-a">
+          <span class="lbl">उत्तर</span>
+          <p>मृत सागर समुद्र सतहभन्दा ४१८ मिटर तल रहेको विश्वकै सबैभन्दा होचो भूभाग हो र यसको पानी अत्यन्तै नुनिलो हुन्छ।</p>
+        </div>
+      </div>
+
+      <!-- 5 mark -->
+      <h3 class="sect" id="q5">
+        <span>संक्षिप्त प्रश्नोत्तर</span>
+        <span class="marks">५ अङ्क</span>
+      </h3>
+
+      <div class="long-q">
+        <p class="q-title">भौगोलिक विविधताले मानव जीवनमा पार्ने ५ वटा मुख्य प्रभावहरू उदाहरणसहित स्पष्ट पार्नुहोस्।</p>
+
+        <p class="lead-block"><strong>उत्तर:</strong> भौगोलिक विविधताले मानव जीवनका विभिन्न पक्षमा पार्ने ५ मुख्य प्रभावहरू निम्न बमोजिम छन्:</p>
+
+        <ol class="mini-list">
+          <li><strong>खानपान र कृषि:</strong> उपजाऊ तराईमा धान र गहुँ खाइन्छ भने हिमाली क्षेत्रमा फापर, जौ र आलुका परिकार खाइन्छ।</li>
+          <li><strong>भेषभूषा र पहिरन:</strong> चिसो हिमाली क्षेत्रमा बाक्लो उनी कपडा (बख्खु) र गर्मी तराईमा पातलो सुती कपडा (धोती/कुर्ता) लगाइन्छ।</li>
+          <li><strong>आवास र घरको बनावट:</strong> अत्यधिक वर्षा हुने क्षेत्रमा भिरालो छाना भएका घर र सुक्खा मरुभूमिमा समतल वा माटोका घर बनाइन्छ।</li>
+          <li><strong>पेसा र आर्थिक गतिविधि:</strong> नदी किनारमा माछा पालन, समतल भूमिमा खेतीपाती र पहाड-हिमालमा पशुपालन र पर्यटन पेसा अपनाइन्छ।</li>
+          <li><strong>सञ्चार र यातायात पूर्वाधार:</strong> मैदानी भागमा सडक र रेलमार्गको सुगमता हुन्छ भने पहाडी क्षेत्रमा आवतजावत कठिन हुन्छ।</li>
+        </ol>
+      </div>
+
+      <!-- 8 mark -->
+      <h3 class="sect" id="q8">
+        <span>लामो उत्तरात्मक प्रश्न</span>
+        <span class="marks">८ अङ्क · NEB ४-चरण</span>
+      </h3>
+
+      <div class="long-q">
+        <p class="q-title">"मानव जीवन प्रकृति र भूगोलको उत्पादन हो, तर प्रविधिको विकासले मानिसलाई भूगोलमाथि विजय प्राप्त गर्न सक्षम बनाएको छ।" — यस भनाइलाई विश्वका विभिन्न पर्यावरणीय क्षेत्र र नेपालको सन्दर्भ जोडी विश्लेषणात्मक विवेचना गर्नुहोस्।</p>
+
+        <p class="lead-block"><strong>१. परिचय (Introduction):</strong> पृथ्वीको धरातलीय स्वरूप, हावापानी र वातावरणले मानिसको खानपान, आवास, पहिरन र पेसालाई निर्धारण गर्दछ। परम्परागत रूपमा मानिस पूर्णतया प्रकृति र भूगोलको सीमाभित्र बाँधिएको थियो। तर, २१औँ शताब्दीमा <strong>विज्ञान, प्रविधि र मानव बुद्धि</strong>को विकाससँगै मानिसले प्रतिकूल भौगोलिक अवस्थालाई चुनौती दिँदै अनुकूलन गर्न र प्रकृतिमाथि नियन्त्रण कायम गर्न सक्षम भएको छ।</p>
+
+        <span class="block-head">२. मुख्य विश्लेषण तथा तर्क</span>
+        <p class="lead-block">प्रकृति र मानव क्षमताको अन्तरसम्बन्धलाई देहायका दुई पक्षबाट विश्लेषण गर्न सकिन्छ:</p>
+
+        <p style="font-weight:800; color:var(--green-deep); margin-top:14px;">भूगोलले मानवलाई प्रभावित पार्ने पक्षहरू (नियतिवाद):</p>
+        <ol class="mini-list">
+          <li>अत्यधिक चिसो ध्रुवीय क्षेत्रमा मानिसहरू अझै पनि इग्लुमा बस्न र सिकारमा निर्भर हुन बाध्य छन्।</li>
+          <li>मरुभूमि क्षेत्रमा पानीको अभावका कारण जीवन कष्टकर छ र ऊँट नै यातायातको मुख्य साधन हो।</li>
+          <li>नेपालको हिमाली भागमा विकट धरातलका कारण सडक पुर्‍याउन कठिन छ।</li>
+        </ol>
+
+        <p style="font-weight:800; color:var(--sky-deep); margin-top:16px;">मानिसले भूगोललाई रूपान्तरण गरेका पक्षहरू (सम्भववाद):</p>
+        <ol class="mini-list">
+          <li><strong>मरुभूमिमा आधुनिक सहर:</strong> साउदी अरब, युएई (दुबई) र कतारले मरुभूमिमा अत्याधुनिक सहर, गगनचुम्बी भवन र पर्यटकीय गन्तव्य निर्माण गरेका छन्।</li>
+          <li><strong>कृषिमा यान्त्रीकीकरण:</strong> उत्तर अमेरिकाको प्रेरिजमा मेसिनको प्रयोग गरी गहुँको विशाल उत्पादन गरेर 'विश्वको अन्नको भण्डार' बनाइएको छ।</li>
+          <li><strong>टनेल र ब्रिज प्रविधि:</strong> चीन र जापान जस्ता देशहरूले पहाड खनेर टनेल र समुद्रमाथि लामा पुल बनाई यातायात सहज बनाएका छन्।</li>
+        </ol>
+
+        <span class="block-head">३. व्यावहारिक र नेपालको उदाहरण</span>
+        <p class="lead-block">नेपालको सन्दर्भमा, विगतमा विकट मानिएका पहाडी र हिमाली क्षेत्रहरूमा अहिले <strong>पोखरा-जोमसोम सडक, केबुलकार, सुरुङमार्ग (नागढुङ्गा सुरुङमार्ग) र जलविद्युत् आयोजनाहरू</strong> निर्माण गरी भूगोलको सिमानालाई फराकिलो पारिएको छ। विकट हिमाली क्षेत्रमा स्याउ खेती र पदयात्रा पर्यटनको विकास गरेर स्थानीय मानिसको आर्थिक स्तर माथि उठाइएको छ।</p>
+
+        <p class="conclusion"><strong>४. निष्कर्ष (Conclusion):</strong> निष्कर्षमा, भूगोलले मानिसलाई प्रारम्भिक जग र वातावरण प्रदान गर्दछ, तर मानिस केवल भूगोलको दास मात्र होइन। उपयुक्त प्रविधि, लगानी र ज्ञानको प्रयोग गरी मानिसले प्राकृतिक प्रतिकूलतालाई अनुकूलतामा बदल्न सक्छ। तथापि, प्रविधिको प्रयोग गर्दा प्राकृतिक सन्तुलन बिग्रन नदिई <strong>दिगो विकास (Sustainable Development)</strong> को अवधारणा पालना गर्नु अपरिहार्य छ।</p>
+      </div>
+
+      <div class="tipbox">
+        <h4>💡 परीक्षा सुझाव</h4>
+        <p>१ अङ्कमा सिधा एक-दुई वाक्य, ५ अङ्कमा परिचय + ५ बुँदा + निष्कर्ष, र ८ अङ्कमा ४-चरण ढाँचा (परिचय → विश्लेषण → उदाहरण → निष्कर्ष) अनिवार्य पालना गर्नुहोस्। हावापानी क्षेत्रको नाम, विशेषता र उदाहरण सही उल्लेख गर्दा अङ्क बढी पाइन्छ।</p>
+      </div>
+    </article>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="big">✨ कक्षा ११ सामाजिक — एकाइ ५ · पाठ ३ ✨</div>
+      <div class="small">विश्वका भौगोलिक विविधता र जनजीवन</div>
+      <div class="small" style="margin-top:10px; font-size:15px;">
+        हावापानी क्षेत्र चिन्नुहोस् → जनजीवन बुझ्नुहोस् → उत्तर लेख्ने अभ्यास गर्नुहोस्। यही तरिकाले अङ्क स्थिर हुन्छ।
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="माथि जानुहोस्">↑</button>
+
+<script>
+(function () {
+  const menuBtn = document.getElementById('menuBtn');
+  const sidenav  = document.getElementById('sidenav');
+  const overlay  = document.getElementById('overlay');
+
+  function openNav() {
+    sidenav.classList.add('open');
+    overlay.classList.add('show');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    sidenav.classList.remove('open');
+    overlay.classList.remove('show');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  menuBtn.addEventListener('click', function () {
+    sidenav.classList.contains('open') ? closeNav() : openNav();
+  });
+  overlay.addEventListener('click', closeNav);
+
+  document.querySelectorAll('.sidenav a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (window.innerWidth < 1024) closeNav();
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeNav();
+  });
+
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 420) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  });
+
+  const sections = document.querySelectorAll('article[id]');
+  const navLinks = document.querySelectorAll('.nav-main');
+  window.addEventListener('scroll', function () {
+    let current = '';
+    sections.forEach(function (sec) {
+      if (window.scrollY >= sec.offsetTop - 140) current = sec.id;
+    });
+    navLinks.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+})();
+</script>
+</body>
+</html>
